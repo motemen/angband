@@ -720,7 +720,12 @@ void Term_queue_chars(int x, int y, int n, int a, const wchar_t *s)
 		if (x1 < 0) x1 = x;
 		x2 = x;
 
-		if (is_doublewidth(*s)) x++;
+		if (is_doublewidth(*s)) {
+			x++;
+			scr_aa[x] = a;
+			scr_taa[x] = 0;
+			x2 = x;
+		}
 	}
 
 	/* Expand the "change area" as needed */
