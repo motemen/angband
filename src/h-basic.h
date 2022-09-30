@@ -129,6 +129,12 @@
 # include <unistd.h>
 #endif
 
+#ifdef USE_GETTEXT
+#include <libintl.h>
+#define _(text) gettext(text)
+#else
+#define _(text) (text)
+#endif
 
 
 /**

@@ -619,14 +619,14 @@ static void clear_question(void)
 }
 
 
-#define BIRTH_MENU_HELPTEXT \
+#define BIRTH_MENU_HELPTEXT _( \
 	"{light blue}Please select your character traits from the menus below:{/}\n\n" \
-	"Use the {light green}カーソルキー{/} to scroll the menu, " \
+	"Use the {light green}movement keys{/} to scroll the menu, " \
 	"{light green}Enter{/} to select the current menu item, '{light green}*{/}' " \
 	"for a random menu item, '{light green}@{/}' to finish the character with random selections, " \
 	"'{light green}ESC{/}' to step back through the birth process, " \
 	"'{light green}={/}' for the birth options, '{light green}?{/}' " \
-	"for help, or '{light green}Ctrl-X{/}' to quit."
+	"for help, or '{light green}Ctrl-X{/}' to quit.")
 
 /**
  * Show the birth instructions on an otherwise blank screen
