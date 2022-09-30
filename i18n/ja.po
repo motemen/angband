@@ -1,0 +1,38 @@
+# Japanese translations for PACKAGE package.
+# Copyright (C) 2022 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-30 23:01+0900\n"
+"PO-Revision-Date: 2022-09-30 23:01+0900\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../src/ui-birth.c:623
+msgid ""
+"{light blue}Please select your character traits from the menus below:{/}\n"
+"\n"
+"Use the {light green}movement keys{/} to scroll the menu, {light green}"
+"Enter{/} to select the current menu item, '{light green}*{/}' for a random "
+"menu item, '{light green}@{/}' to finish the character with random "
+"selections, '{light green}ESC{/}' to step back through the birth process, "
+"'{light green}={/}' for the birth options, '{light green}?{/}' for help, or "
+"'{light green}Ctrl-X{/}' to quit."
+msgstr ""
+"{light blue}Please select your character traits from the menus below:{/}\n"
+"\n"
+"Use the {light green}カーソルキー{/} to scroll the menu, {light green}"
+"Enter{/} to select the current menu item, '{light green}*{/}' for a random "
+"menu item, '{light green}@{/}' to finish the character with random "
+"selections, '{light green}ESC{/}' to step back through the birth process, "
+"'{light green}={/}' for the birth options, '{light green}?{/}' for help, or "
+"'{light green}Ctrl-X{/}' to quit."

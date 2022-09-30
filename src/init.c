@@ -98,6 +98,7 @@ char *ANGBAND_DIR_SAVE;
 char *ANGBAND_DIR_PANIC;
 char *ANGBAND_DIR_SCORES;
 char *ANGBAND_DIR_ARCHIVE;
+char *ANGBAND_DIR_I18N;
 
 static const char *slots[] = {
 	#define EQUIP(a, b, c, d, e, f) #a,
@@ -349,6 +350,7 @@ void init_file_paths(const char *configpath, const char *libpath, const char *da
 	BUILD_DIRECTORY_PATH(ANGBAND_DIR_TILES, libpath, "tiles");
 	BUILD_DIRECTORY_PATH(ANGBAND_DIR_SOUNDS, libpath, "sounds");
 	BUILD_DIRECTORY_PATH(ANGBAND_DIR_ICONS, libpath, "icons");
+	BUILD_DIRECTORY_PATH(ANGBAND_DIR_I18N, libpath, "i18n");
 
 #ifdef PRIVATE_USER_PATH
 

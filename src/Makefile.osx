@@ -153,6 +153,7 @@ install: $(EXE) $(ICONFILES) $(PLIST) $(LIBFILES)
 	@mkdir -p $(APPRES)/lib/script
 	@mkdir -p $(APPRES)/lib/tiles
 	@mkdir -p $(APPRES)/lib/sounds
+	@mkdir -p $(APPRES)/lib/i18n
 
 	@echo copying files...
 	@cp ../lib/gamedata/*.txt $(APPRES)/lib/gamedata
@@ -160,6 +161,7 @@ install: $(EXE) $(ICONFILES) $(PLIST) $(LIBFILES)
 	@cp ../lib/screens/*.txt $(APPRES)/lib/screens
 	@cp ../lib/help/*.txt $(APPRES)/lib/help
 	@cp ../lib/customize/*.prf $(APPRES)/lib/customize
+	@cp -R ../i18n/* $(APPRES)/lib/i18n
 
 	# 'optionally' install sound and graphics tiles, if present
 	-cp -R ../lib/tiles/ $(APPRES)/lib/tiles

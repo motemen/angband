@@ -131,9 +131,10 @@
 
 #ifdef USE_GETTEXT
 #include <libintl.h>
-#define _(text) gettext(text)
+#include <locale.h>
+#define _(string) gettext(string)
 #else
-#define _(text) (text)
+#define _(string) (string)
 #endif
 
 

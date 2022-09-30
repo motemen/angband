@@ -151,6 +151,7 @@ extern char *ANGBAND_DIR_SAVE;
 extern char *ANGBAND_DIR_PANIC;
 extern char *ANGBAND_DIR_SCORES;
 extern char *ANGBAND_DIR_ARCHIVE;
+extern char *ANGBAND_DIR_I18N;
 
 extern struct parser *init_parse_artifact(void);
 extern struct parser *init_parse_class(void);
