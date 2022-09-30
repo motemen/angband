@@ -340,7 +340,7 @@ void init_file_paths(const char *configpath, const char *libpath, const char *da
 #ifdef GAMEDATA_IN_LIB
 	BUILD_DIRECTORY_PATH(ANGBAND_DIR_GAMEDATA, libpath, "gamedata");
 #else
-	BUILD_DIRECTORY_PATH(ANGBAND_DIR_GAMEDATA, configpath, "gamedata");
+	BUILD_DIRECTORY_PATH(ANGBAND_DIR_GAMEDATA, configpath, "gamedata-ja");
 #endif
 	BUILD_DIRECTORY_PATH(ANGBAND_DIR_CUSTOMIZE, configpath, "customize");
 	BUILD_DIRECTORY_PATH(ANGBAND_DIR_HELP, libpath, "help");
