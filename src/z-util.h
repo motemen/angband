@@ -239,4 +239,6 @@ uint32_t djb2_hash(const char *str);
 int mean(const int *nums, int size);
 int variance(const int *nums, int size);
 
+bool is_doublewidth(wchar_t ch);
+
 #endif /* INCLUDED_Z_UTIL_H */

@@ -251,6 +251,7 @@ struct keypress textui_textblock_show(textblock *tb, region orig_area, const cha
  * This function will correctly handle any width up to the maximum legal
  * value of 256, though it works best for a standard 80 character width.
  */
+ // TODO[doublewidth]
 void text_out_to_screen(uint8_t a, const char *str)
 {
 	int x, y;
@@ -351,7 +352,8 @@ void text_out_to_screen(uint8_t a, const char *str)
 		Term_addch(a, ch);
 
 		/* Advance */
-		if (++x > wrap) x = wrap;
+		x += (is_doublewidth(ch) ? 2 : 1);
+		if (x > wrap) x = wrap;
 	}
 }
 

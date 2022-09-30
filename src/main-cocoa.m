@@ -600,6 +600,7 @@ static int hasSameBackground(const struct TerminalCell* c)
 {
     [self checkForBigStuffOverwriteAtColumn:icol row:irow width:n height:1];
 
+    // TODO[doublewidth]
     struct TerminalCell *cellsRow = self->cells + irow * self.columnCount;
     for (int i = icol; i < icol + n; ++i) {
 	cellsRow[i].v.ch.glyph = *g++;
@@ -2243,6 +2244,8 @@ static int compare_advances(const void *ap, const void *bp)
 	advances, 1);
     CGSize advance = advances[0];
 
+    bool isDoubleWidth = is_doublewidth(wchar);
+
     /*
      * If our font is not monospaced, our tile width is deliberately not big
      * enough for every character. In that event, if our glyph is too wide, we
@@ -2255,6 +2258,11 @@ static int compare_advances(const void *ap, const void *bp)
         /* Our glyph fits, so we can just draw it, possibly with an offset */
         compressionRatio = 1.0;
         tileOffsetX = (NSWidth(tile) - advance.width)/2;
+    }
+    else if (isDoubleWidth)
+    {
+        compressionRatio = 1.0;
+        tileOffsetX = 0;
     }
     else
     {

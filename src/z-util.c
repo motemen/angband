@@ -965,3 +965,8 @@ uint32_t djb2_hash(const char *str)
 	return hash;
 }
 
+bool is_doublewidth(wchar_t ch)
+{
+	return ch > 0xff;
+}
+
