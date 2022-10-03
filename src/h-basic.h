@@ -133,8 +133,12 @@
 #include <libintl.h>
 #include <locale.h>
 #define _(string) gettext(string)
+#define N_(string) gettext_noop(string)
+#define GAMEDATA_(string) dgettext("gamedata", string)
 #else
 #define _(string) (string)
+#define N_(string) (string)
+#define GAMEDATA_(string) (string)
 #endif
 
 

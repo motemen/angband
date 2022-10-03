@@ -561,7 +561,7 @@ static void setup_menus(void)
 
 	for (i = 0, r = races; r; r = r->next, i++)
 		mdata->items[r->ridx] = r->name;
-	mdata->hint = "Race affects stats and skills, and may confer resistances and abilities.";
+	mdata->hint = _("Race affects stats and skills, and may confer resistances and abilities.");
 
 	/* Count the classes */
 	n = 0;
@@ -573,7 +573,7 @@ static void setup_menus(void)
 	mdata = class_menu.menu_data;
 
 	for (i = 0, c = classes; c; c = c->next, i++)
-		mdata->items[c->cidx] = c->name;
+		mdata->items[c->cidx] = GAMEDATA_(c->name);
 	mdata->hint = "Class affects stats, skills, and other character traits.";
 		
 	/* Roller menu straightforward */

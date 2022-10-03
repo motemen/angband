@@ -48,6 +48,7 @@ void textui_init(void)
 #ifdef USE_GETTEXT
 	setlocale(LC_ALL, "ja_JP");
 	bindtextdomain("messages", ANGBAND_DIR_I18N);
+	bindtextdomain("gamedata", ANGBAND_DIR_I18N);
 	textdomain("messages");
 #endif
 

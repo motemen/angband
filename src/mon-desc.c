@@ -193,7 +193,7 @@ void monster_desc(char *desc, size_t max, const struct monster *mon, int mode)
 					(int) (comma_pos - mon->race->name),
 					mon->race->name);
 			} else {
-				my_strcpy(desc, mon->race->name, max);
+				my_strcpy(desc, GAMEDATA_(mon->race->name), max);
 			}
 		} else {
 			if (mode & MDESC_IND_VIS) {

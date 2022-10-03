@@ -1,0 +1,784 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# ../lib/gamedata/class.txt:136
+msgid "Warrior"
+msgstr "戦士"
+
+# ../lib/gamedata/class.txt:172
+msgid "Mage"
+msgstr ""
+
+# ../lib/gamedata/class.txt:220
+msgid ""
+"Fires a magic missile that always hits its target and does unresistable "
+"damage.  Sometimes a beam is fired instead that hurts each monster in its "
+"path.  The chance to get a beam goes up with your character level."
+msgstr ""
+
+# ../lib/gamedata/class.txt:228
+msgid ""
+"Lights up all squares within 2 grids of the player, and hurts all light-"
+"sensitive monsters in the area of effect.  If you are in a room, the entire "
+"room will be lit up as well."
+msgstr ""
+
+# ../lib/gamedata/class.txt:237
+msgid "Detects all traps, doors, and stairs in the immediate area."
+msgstr ""
+
+# ../lib/gamedata/class.txt:242
+msgid "Teleports you randomly up to 10 squares away."
+msgstr ""
+
+# ../lib/gamedata/class.txt:250
+msgid ""
+"Creates an electrical discharge that hurts monsters and destroys vulnerable "
+"items in its path.  Length of the effect increases with player level."
+msgstr ""
+
+# ../lib/gamedata/class.txt:256
+msgid ""
+"Detects all non-invisible monsters in the immediate area, for one turn only."
+msgstr ""
+
+# ../lib/gamedata/class.txt:262
+msgid "Shoots a radius-2 fire ball."
+msgstr ""
+
+# ../lib/gamedata/class.txt:275
+msgid ""
+"Adds charges to a stack of wands or staves.  Chance of success and number of "
+"charges gained increase with your level and decrease with level of wand or "
+"staff and number of charges.  A failed attempt to recharge destroys one wand "
+"or staff from the stack."
+msgstr ""
+
+# ../lib/gamedata/class.txt:279
+msgid "Reveals an unknown rune on an object."
+msgstr ""
+
+# ../lib/gamedata/class.txt:286
+msgid "Detects gold and senses objects in the immediate area."
+msgstr ""
+
+# ../lib/gamedata/class.txt:295
+msgid ""
+"Shoots a bolt of frost that always hits its target.  Sometimes a beam is "
+"fired instead that hurts each monster in its path.  The chance to get a beam "
+"goes up with your character level."
+msgstr ""
+
+# ../lib/gamedata/class.txt:302
+msgid "Detects all monsters in the immediate area, for one turn only."
+msgstr ""
+
+# ../lib/gamedata/class.txt:308
+msgid ""
+"Sprays acid in a 60-degree cone, hitting all monsters up to 10 grids away."
+msgstr ""
+
+# ../lib/gamedata/class.txt:317
+msgid "Disables traps and destroys doors within a 1-square radius of you."
+msgstr ""
+
+# ../lib/gamedata/class.txt:323
+msgid "Teleports you randomly within the current level."
+msgstr ""
+
+# ../lib/gamedata/class.txt:330
+msgid ""
+"Produces a bolt that teleports away the first monster in its path.  Distance "
+"teleported increases with player level."
+msgstr ""
+
+# ../lib/gamedata/class.txt:340
+msgid ""
+"Grants you resistance to acid, cold, fire and lightning for 20+1d20 turns."
+msgstr ""
+
+# ../lib/gamedata/class.txt:344
+msgid "Turns wand or staff energy into mana; tapping stuns the player briefly."
+msgstr ""
+
+# ../lib/gamedata/class.txt:349
+msgid "Increases spellcasting speed by 33% for 5+1d5 turns."
+msgstr ""
+
+# ../lib/gamedata/class.txt:358
+msgid ""
+"A door is created on each empty floor space that is directly adjacent to "
+"you.  These doors are closed, but not locked."
+msgstr ""
+
+# ../lib/gamedata/class.txt:373
+msgid ""
+"Teleports you 1 level up or 1 level down (chosen at random).  This spell may "
+"have no effect when the forced descent option is set."
+msgstr ""
+
+# ../lib/gamedata/class.txt:391
+msgid ""
+"Detects all traps, doors, stairs, treasure, objects and monsters in the "
+"immediate area."
+msgstr ""
+
+# ../lib/gamedata/class.txt:395
+msgid "Teleports you to (or near to) a square of your choice."
+msgstr ""
+
+# ../lib/gamedata/class.txt:401
+msgid "Fires a short range beam of force."
+msgstr ""
+
+# ../lib/gamedata/class.txt:413
+msgid ""
+"Shoots a radius-2 sound ball.  Apart from doing sound damage, this also has "
+"a chance to stun each monster in the area of effect."
+msgstr ""
+
+# ../lib/gamedata/class.txt:423
+msgid ""
+"Shoots a radius-2 shards ball and throws around anything in the area of "
+"effect."
+msgstr ""
+
+# ../lib/gamedata/class.txt:429
+msgid ""
+"Removes all monsters represented by a chosen symbol from the level.  Uniques "
+"are not affected.  You take 1d4 points of damage for every monster removed."
+msgstr ""
+
+# ../lib/gamedata/class.txt:435
+msgid ""
+"Removes all monsters within 20 squares of you.  Uniques are not affected.  "
+"You take 1d3 points of damage for every monster removed."
+msgstr ""
+
+# ../lib/gamedata/class.txt:442
+msgid ""
+"Shoots a radius-3 mana ball that does unresistable damage to each monster in "
+"its area of effect."
+msgstr ""
+
+# ../lib/gamedata/class.txt:445
+msgid "Druid"
+msgstr ""
+
+# ../lib/gamedata/class.txt:488
+msgid "Detects all living monsters in the immediate area, for one turn only."
+msgstr ""
+
+# ../lib/gamedata/class.txt:493
+msgid ""
+"Changes you into the shape of a quick and stealthy fox.  While shapechanged "
+"you cannot use items."
+msgstr ""
+
+# ../lib/gamedata/class.txt:498
+msgid "Magically renders you comfortably fed (but not satiated)."
+msgstr ""
+
+# ../lib/gamedata/class.txt:504
+msgid "Shoots a radius-2 poison ball."
+msgstr ""
+
+# ../lib/gamedata/class.txt:510
+msgid "Confuse a single monster; more effective against animals."
+msgstr ""
+
+# ../lib/gamedata/class.txt:516
+msgid "Slows down a monster; more effective against animals."
+msgstr ""
+
+# ../lib/gamedata/class.txt:524
+msgid "Neutralizes poison."
+msgstr ""
+
+# ../lib/gamedata/class.txt:529
+msgid "Grants you resistance to poison for 20+1d20 turns."
+msgstr ""
+
+# ../lib/gamedata/class.txt:536
+msgid ""
+"Produces a beam that destroys the first section of wall it hits, unless it "
+"is a permanent wall.  Each monster caught in the beam that is susceptible to "
+"rock remover takes 20+1d30 points of damage."
+msgstr ""
+
+# ../lib/gamedata/class.txt:543
+msgid "Maps the nearby area."
+msgstr ""
+
+# ../lib/gamedata/class.txt:554
+msgid ""
+"Strikes a target from above with a lightning bolt, followed by a clap of "
+"thunder.  Target grid must be targetable and known to the player; no target "
+"grid will mean the player grid is hit."
+msgstr ""
+
+# ../lib/gamedata/class.txt:561
+msgid ""
+"Causes shards to explode in a line out of the earth, striking objects and "
+"monsters.  Length of the line increases with player level."
+msgstr ""
+
+# ../lib/gamedata/class.txt:572
+msgid ""
+"Holds every adjacent, non-resistant monster for a level-dependent number of "
+"turns; animals are entranced for longer."
+msgstr ""
+
+# ../lib/gamedata/class.txt:579
+msgid ""
+"Attempts to put to sleep each monster within line of sight.  Monsters that "
+"resist sleep are not affected."
+msgstr ""
+
+# ../lib/gamedata/class.txt:583
+msgid "Gives you the form of a statue of the Drúedain, slow but hard to hurt."
+msgstr ""
+
+# ../lib/gamedata/class.txt:587
+msgid "Gives you the form of one of the great eagles of Manwë."
+msgstr ""
+
+# ../lib/gamedata/class.txt:592
+msgid ""
+"Allows you to take the form of a great bear of the mountains, sweeping aside "
+"your enemies with your mighty paws."
+msgstr ""
+
+# ../lib/gamedata/class.txt:604
+msgid ""
+"Causes a targeted 4-square radius earthquake.  Earthquakes may hurt the "
+"player, damage monsters and destroy items in some squares in the area of "
+"effect.  Artifacts will not be destroyed by this spell.  This spell has no "
+"effect when used in the town."
+msgstr ""
+
+# ../lib/gamedata/class.txt:610
+msgid "Hastes you (+10 to speed) for a level-dependent duration."
+msgstr ""
+
+# ../lib/gamedata/class.txt:619
+msgid "Restores all stats and experience points to maximum."
+msgstr ""
+
+# ../lib/gamedata/class.txt:625
+msgid ""
+"Speed up digestion to increase regeneration of hitpoints for the next 5+1d3 "
+"turns (or until hungry)."
+msgstr ""
+
+# ../lib/gamedata/class.txt:635
+msgid ""
+"Cures all cuts, poison, stunning and black breath, and leaves you well-"
+"nourished."
+msgstr ""
+
+# ../lib/gamedata/class.txt:652
+msgid ""
+"Shoots a swarm of 3 or 4 meteors.  Meteors will travel until hitting a wall, "
+"a monster, or reaching the target location.  Meteors will explode as a "
+"radius-1 ball that does unresistable damage to each monster in its area of "
+"effect.  If this kills the monster that blocked the path to the target "
+"location, the next meteor may continue to find another target."
+msgstr ""
+
+# ../lib/gamedata/class.txt:659
+msgid ""
+"Fires a gravity beam that hurts each monster in its path and has a chance of "
+"teleporting it away."
+msgstr ""
+
+# ../lib/gamedata/class.txt:665
+msgid "Strikes every monster in line of sight with sheets of ice from above."
+msgstr ""
+
+# ../lib/gamedata/class.txt:674
+msgid ""
+"Creates a radius 5 ball of fire, followed by a radius 5 earthquake, around "
+"the player."
+msgstr ""
+
+# ../lib/gamedata/class.txt:680
+msgid "Spews plasma in a long narrow cone from the player."
+msgstr ""
+
+# ../lib/gamedata/class.txt:683
+msgid "Priest"
+msgstr ""
+
+# ../lib/gamedata/class.txt:731
+msgid ""
+"Lights up all squares in a level-dependent area, and hurts all light-"
+"sensitive monsters in the area of effect.  If you are in a room, the entire "
+"room will be lit up as well."
+msgstr ""
+
+# ../lib/gamedata/class.txt:737
+msgid "Detects all evil monsters in the immediate area, for one turn only."
+msgstr ""
+
+# ../lib/gamedata/class.txt:749
+msgid ""
+"Heals a level-dependent amount or percentage of hitpoints, and cures 20 "
+"points worth of cuts and of stunning."
+msgstr ""
+
+# ../lib/gamedata/class.txt:757
+msgid ""
+"Blesses you, giving a bonus of +5 to AC and +10 to-hit, for a level-"
+"dependent number of turns."
+msgstr ""
+
+# ../lib/gamedata/class.txt:762
+msgid "Enables you to see invisible monsters for 24+1d24 turns."
+msgstr ""
+
+# ../lib/gamedata/class.txt:774
+msgid ""
+"Cures 10 points of damage, removes fear and, from character level 20, grants "
+"you heroism (resistance to fear, and a bonus of +12 to-hit) for a level-"
+"dependent duration."
+msgstr ""
+
+# ../lib/gamedata/class.txt:787
+msgid ""
+"Shoots a radius-2 or radius-3 ball that does unresistable damage to each "
+"monster in its area of effect.  Evil monsters take double damage.  The "
+"bigger area of effect is attained at character level 30."
+msgstr ""
+
+# ../lib/gamedata/class.txt:793
+msgid ""
+"Fires a beam that lights up each square and hurts each light-sensitive "
+"monster in its path."
+msgstr ""
+
+# ../lib/gamedata/class.txt:799
+msgid ""
+"Inflicts unresistable damage on each undead monster within line of sight."
+msgstr ""
+
+# ../lib/gamedata/class.txt:805
+msgid "Inflicts unresistable damage on each evil monster within line of sight."
+msgstr ""
+
+# ../lib/gamedata/class.txt:813
+msgid ""
+"Protects you from evil for a level-dependent duration: all melee attacks by "
+"evil monsters have a chance to be repelled, unless the monster's level is "
+"higher than your character level."
+msgstr ""
+
+# ../lib/gamedata/class.txt:821
+msgid ""
+"Attempts to remove a curse from an item, more effective at higher character "
+"levels."
+msgstr ""
+
+# ../lib/gamedata/class.txt:831
+msgid "Teleports you randomly over a short distance."
+msgstr ""
+
+# ../lib/gamedata/class.txt:835
+msgid "Restores experience points to maximum if it is currently below maximum."
+msgstr ""
+
+# ../lib/gamedata/class.txt:845
+msgid ""
+"Teleports you from the dungeon to the town or from the town to the deepest "
+"level you have visited in the dungeon.  The recall effect is not immediate; "
+"it is delayed by 14+1d20 turns.  During that delay, the prayer can be "
+"canceled by invoking the prayer of recall again.  This prayer has no effect "
+"when the option to restrict the use of stairs and recall is set, unless "
+"Morgoth is dead."
+msgstr ""
+
+# ../lib/gamedata/class.txt:855
+msgid ""
+"Heals 2000 points of damage and cures all stunning, cuts, poison and amnesia."
+msgstr ""
+
+# ../lib/gamedata/class.txt:863
+msgid "Restores to maximum all stats that are currently below maximum."
+msgstr ""
+
+# ../lib/gamedata/class.txt:868
+msgid ""
+"Lights up, maps out, and senses all objects on the complete current dungeon "
+"level."
+msgstr ""
+
+# ../lib/gamedata/class.txt:877
+msgid "Attempts to improve the to-hit bonus and the to-dam bonus of a weapon."
+msgstr ""
+
+# ../lib/gamedata/class.txt:882
+msgid "Attempts to improve the armour class bonus of a piece of armour."
+msgstr ""
+
+# ../lib/gamedata/class.txt:887
+msgid "Temporarily makes your melee attacks slay evil creatures."
+msgstr ""
+
+# ../lib/gamedata/class.txt:897
+msgid ""
+"Inscribes a glyph of warding beneath you.  Summoned monsters can't appear on "
+"the glyph.  If a monster attempts to move onto the glyph or melee you while "
+"you are standing on the glyph, it must first succeed in breaking the glyph.  "
+"Higher level monsters are more likely to break the glyph.  The glyph will "
+"remain where it is, until a monster succeeds in breaking it, or until you "
+"leave the level."
+msgstr ""
+
+# ../lib/gamedata/class.txt:902
+msgid "Temporarily makes your melee attacks powerfully slay demons."
+msgstr ""
+
+# ../lib/gamedata/class.txt:911
+msgid "Teleports away each evil monster within line of sight."
+msgstr ""
+
+# ../lib/gamedata/class.txt:920
+msgid ""
+"Destroys everything in a 15-square radius circle around you.  All monsters, "
+"objects, and terrain features in the area of effect are destroyed, except "
+"stairs and permanent walls.  You will also be blinded for 10+1d10 turns, "
+"unless you have resistance to blindness or light.  This prayer has no effect "
+"when used in the town."
+msgstr ""
+
+# ../lib/gamedata/class.txt:934
+msgid ""
+"Inflicts unresistable damage on each evil monster within line of sight, "
+"cures 1000 points of damage, cures all stunning, heals all cut damage, "
+"neutralizes poison, and removes fear."
+msgstr ""
+
+# ../lib/gamedata/class.txt:940
+msgid "Fires a beam of holy magic that does extra damage to evil creatures."
+msgstr ""
+
+# ../lib/gamedata/class.txt:949
+msgid ""
+"Casts a radius 4 ball of strong light, and then bathes the entire area in "
+"light doing 100 damage to every light-sensitive creature."
+msgstr ""
+
+# ../lib/gamedata/class.txt:952
+msgid "Necromancer"
+msgstr ""
+
+# ../lib/gamedata/class.txt:995
+msgid "Fires a bolt of nether magic."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1007
+msgid ""
+"Darkens all squares in a level-dependent area.  If you are in a room, the "
+"entire room will be darkened as well."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1012
+msgid ""
+"Changes you into the shape of a bat, weak but with excellent senses.  While "
+"shapechanged you cannot use items."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1023
+msgid ""
+"Detects all monsters which have a spirit in the immediate area, and then "
+"maps in a region around them, increasing in size with character level."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1033
+msgid "Targets the nearest undead monster and damages it to gain player mana."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1044
+msgid ""
+"Instantly kill any monster in line-of-sight with less than four times the "
+"player's level in hitpoints, also hurting the player.  Other monsters are "
+"unharmed."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1051
+msgid ""
+"Attempts to put to sleep each evil monster within line of sight.  Monsters "
+"that resist confusion are not affected."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1060
+msgid ""
+"Displaces your spirit a short distance, hurting your body as it is dragged "
+"along."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1067
+msgid ""
+"Casts a bolt which wounds, and makes spellcasting monsters less successful "
+"in casting spells."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1078
+msgid ""
+"Attempts to scare a single monster for a level-dependent duration.  Monsters "
+"that resist fear are not affected."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1085
+msgid ""
+"Teleports you to the nearest living monster and drains a level-dependent "
+"number of hitpoints, healing and nourishing the player."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1091
+msgid ""
+"Inflicts unresistable damage on each living monster within line of sight."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1097
+msgid "Fires a beam of darkness."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1102
+msgid ""
+"Changes you into the form of a warg, and gives you temporary berserk "
+"strength, at the cost of some hitpoints."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1112
+msgid "Teleports away each monster with a spirit within line of sight."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1119
+msgid ""
+"Inflicts damage equal to four times player level on a single monster that is "
+"not undead, an elemental, a golem, or a vortex."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1128
+msgid ""
+"Destroys everything in a 15-square radius circle around you.  All monsters, "
+"objects, and terrain features in the area of effect are destroyed, except "
+"stairs and permanent walls.  You will also be blinded for 10+1d10 turns, "
+"unless you have resistance to blindness or dark.  This ritual has no effect "
+"when used in the town."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1147
+msgid ""
+"Fires a chaos beam, arc or ball in the chosen direction, wakes everything in "
+"the area, and attempts to frighten everything in line of sight."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1153
+msgid ""
+"Darkens, maps out, and detects all objects on the complete current dungeon "
+"level."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1159
+msgid "Invokes a radius-4 darkness ball."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1172
+msgid "Exchanges 50 hitpoints for 50 mana."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1179
+msgid ""
+"Produces a zone of disenchantment affecting the player and monsters within "
+"radius 4."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1190
+msgid ""
+"Allows you to assume the form of a vampire at the cost of half your current "
+"hitpoints, than teleports you to the nearest living monster and drains a "
+"level-dependent number of hitpoints, healing and nourishing you.  When first "
+"transformed you will temporarily be able to take hitpoints from living "
+"monsters with your bite attack."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1201
+msgid ""
+"Deals direct damage to a single monster, more the more damaged the monster "
+"is already, at the cost of 100 hitpoints."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1207
+msgid ""
+"Allows you to take control of a monster, and move it instead of yourself.  "
+"Possible actions are move, stand still, 'd'rop, 'm'agic, or 'r'elease."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1209
+msgid "Paladin"
+msgstr ""
+
+# ../lib/gamedata/class.txt:1298
+msgid ""
+"Cures 10 points of damage, removes fear and, from character level 15, grants "
+"you heroism (resistance to fear, and a bonus of +12 to-hit) for a level-"
+"dependent duration."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1368
+msgid ""
+"Encases you and the targeted monster in a stone cell from which only the "
+"winner can emerge."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1371
+msgid "Rogue"
+msgstr ""
+
+# ../lib/gamedata/class.txt:1426
+msgid "Detects all objects in the immediate area."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1431
+msgid "Detects all stairs in a wide area."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1460
+msgid ""
+"Prepares you to teleport a short distance after stealing from a monster."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1475
+msgid "Ranger"
+msgstr ""
+
+# ../lib/gamedata/class.txt:1530
+msgid "Cures all cuts, poison, stunning and black breath."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1559
+msgid ""
+"Prevents you from leaving scent for monsters to track you by for a level-"
+"dependent duration."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1564
+msgid ""
+"Allows the player to turn a staff into a stack of arrows, with quality "
+"depending on staff level and player level."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1574
+msgid "Leaves a magical decoy that looks and sounds like the player."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1582
+msgid ""
+"Brands one stack of ammunition with fire, cold, or poison (selected at "
+"random) and at the same time attempts to improve the to-hit bonus and the to-"
+"dam bonus of the same ammunition.  The spell has no effect if the ammunition "
+"is already branded, has a slay, is broken, or is cursed."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1585
+msgid "Blackguard"
+msgstr ""
+
+# ../lib/gamedata/class.txt:1630
+msgid ""
+"Detects all monsters susceptible to fear in the immediate area, for one turn "
+"only."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1640
+msgid ""
+"Removes fear and grants you berserk strength (resistance to fear, +75 melee "
+"skill, -10 to AC, and prevents healing over time) for a level-dependent "
+"duration."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1648
+msgid ""
+"Deals a level-dependent number of melee blows to each adjacent enemy.  At "
+"level 5 you do one blow and gain an additional blow every 15 levels (2 at "
+"20, 3 at 35, and 4 at 50)."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1654
+msgid ""
+"Destroys an adjacent section of wall or rubble, unless it is a permanent "
+"wall.  Deals 20+1d30 damage to monsters vulnerable to rock remover."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1662
+msgid ""
+"You run up to 4 spaces towards targeted enemy, then perform a melee blow.  "
+"You gain an additional blow at levels 25 and 40.  If you moved, the number "
+"of blows is reduced by 25% for each space, then rounded."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1671
+msgid ""
+"Your mind becomes too focused to be slowed, paralyzed or confused for 12+d12 "
+"turns."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1681
+msgid ""
+"Attempts a level-dependent number of melee blows against the targeted "
+"enemy.  You get 1 blow for every 15 levels.  If any of these blows damage "
+"the enemy, it will be stunned for 6 turns."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1689
+msgid ""
+"Attempts to scare every monster in line of sight for a duration dependent on "
+"player level and monster depth.  Monsters that resist fear are not affected."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1695
+msgid ""
+"Makes any monster that can move more inclined to run toward you, and less "
+"likely to use a ranged attack (including spells and innate abilities)."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1700
+msgid "Coats all your melee weapons with poison for 18+d18 turns."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1705
+msgid ""
+"With a blood-curdling cry you change into a half-man half-wolf!  In this "
+"form you move, attack, and heal faster."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1714
+msgid ""
+"Gives you a powerful desire to kill, increased every time you satisfy it.  "
+"Gives you extra melee damage and extra blows, but comes with dangerous side-"
+"effects."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1723
+msgid "Restores STR, INT, CON, and experience at the cost of 66 HP."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1729
+msgid ""
+"Attempts a melee blow that deals additional force damage when it hits, "
+"knocking the target back with a chance to stun it."
+msgstr ""
+
+# ../lib/gamedata/class.txt:1732
+msgid "Causes a radius 13 earthquake centered around the player."
+msgstr ""

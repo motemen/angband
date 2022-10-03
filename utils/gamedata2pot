@@ -1,0 +1,44 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use File::Spec;
+use File::Spec::Functions qw(abs2rel canonpath catfile updir);
+use File::Basename qw(dirname);
+use Cwd qw(realpath);
+
+# Generates a .pot file from lib/gamedata/* files.
+
+# 'monster', 'class', ...
+my $type = shift or die;
+
+my $file = abs2rel(realpath(catfile(dirname(__FILE__), updir, "lib", "gamedata", "$type.txt")));
+
+open my $fh, "<", $file or die "Can't open $file: $!";
+
+my $seen = {};
+
+while (<$fh>) {
+    if (/^name:(.+)/) {
+        next if $seen->{$1}++;
+        print "# $file:$.\n";
+        print qq(msgid "$1"\n);
+        print qq(msgstr ""\n\n);
+    }
+
+    if (/^desc:(.+)/) {
+        my @msgid = ($1);
+        while (<$fh>) {
+            if (/^desc:(.+)/) {
+                push @msgid, $1;
+            } else {
+                last;
+            }
+        }
+
+        next if $seen->{ join "\n", @msgid }++;
+        print "# $file:$.\n";
+        print qq(msgid ""\n);
+        print qq("$_"\n) for @msgid;
+        print qq(msgstr ""\n\n);
+    }
+}

@@ -1,14 +1,6 @@
-# Japanese translations for PACKAGE package.
-# Copyright (C) 2022 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# Automatically generated, 2022.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-30 23:01+0900\n"
-"PO-Revision-Date: 2022-09-30 23:01+0900\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -16,6 +8,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../src/ui-birth.c:564
+msgid ""
+"Race affects stats and skills, and may confer resistances and abilities."
+msgstr ""
+"種族はステータスやスキルに影響し、抵抗や能力を与えることがあります。"
 
 #: ../src/ui-birth.c:623
 msgid ""
