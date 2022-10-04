@@ -11,7 +11,7 @@ msgstr ""
 
 # ../lib/gamedata/class.txt:136
 msgid "Warrior"
-msgstr ""
+msgstr "戦士"
 
 # ../lib/gamedata/class.txt:172
 msgid "Mage"

@@ -11,7 +11,7 @@ msgstr ""
 
 # ../lib/gamedata/p_race.txt:67
 msgid "Human"
-msgstr ""
+msgstr "人間"
 
 # ../lib/gamedata/p_race.txt:87
 msgid "Half-Elf"

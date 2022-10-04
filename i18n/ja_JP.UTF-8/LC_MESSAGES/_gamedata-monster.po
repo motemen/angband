@@ -1,58 +1,57 @@
 msgid ""
-msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: ja\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 # ../lib/gamedata/monster.txt:233
 msgid "<player>"
 msgstr ""
 
+# #### Town monsters #####
+# J0#
 # ../lib/gamedata/monster.txt:242
 msgid "filthy street urchin"
-msgstr ""
+msgstr "汚いイタズラ小僧"
 
 # ../lib/gamedata/monster.txt:261
 msgid "He looks squalid and thoroughly revolting."
-msgstr ""
+msgstr "彼は汚らしくて本当に頭に来る奴だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:262
 msgid "scrawny cat"
-msgstr ""
+msgstr "やせこけた猫"
 
 # ../lib/gamedata/monster.txt:277
 msgid "A skinny little furball with sharp claws and a menacing look."
-msgstr ""
+msgstr "鋭い爪と哀れな容貌を持ったやせこけた小さなネコだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:278
 msgid "scruffy little dog"
-msgstr ""
+msgstr "みすぼらしい子犬"
 
 # ../lib/gamedata/monster.txt:293
 msgid "A thin flea-ridden mutt, growling as you get close."
-msgstr ""
+msgstr "ノミの住みかのようなやせた犬で、人が近づくと唸る。"
 
+# J0#
+# J0#
 # ../lib/gamedata/monster.txt:294
 msgid "Farmer Maggot"
-msgstr ""
+msgstr "農夫『マゴット』"
 
 # ../lib/gamedata/monster.txt:314
 msgid ""
 "He's lost his dogs.  He's had his mushrooms stolen.  He's not a happy hobbit!"
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:315
 msgid "blubbering idiot"
-msgstr ""
+msgstr "泣きじゃくる白痴"
 
 # ../lib/gamedata/monster.txt:330
 msgid "He tends to blubber a lot."
-msgstr ""
+msgstr "彼はいつも泣いてばかりいる。"
 
 # ../lib/gamedata/monster.txt:331
 msgid "boil-covered wretch"
@@ -60,7 +59,7 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:347
 msgid "Ugly doesn't begin to describe him."
-msgstr ""
+msgstr "醜い男だが、一番の特徴はその醜さではない。"
 
 # ../lib/gamedata/monster.txt:348
 msgid "village idiot"
@@ -69,6 +68,7 @@ msgstr ""
 # ../lib/gamedata/monster.txt:363
 msgid "Drooling and comical, but then, what do you expect?"
 msgstr ""
+"よだれを垂らして楽しそうにしているが、それ以上の何を期待するのだろうか？"
 
 # ../lib/gamedata/monster.txt:364
 msgid "pitiful-looking beggar"
@@ -76,7 +76,7 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:379
 msgid "You just can't help feeling sorry for him."
-msgstr ""
+msgstr "彼を見ると、どうしても哀れだという思いを禁じ得ない。"
 
 # ../lib/gamedata/monster.txt:380
 msgid "mangy-looking leper"
@@ -84,7 +84,7 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:395
 msgid "You feel it isn't safe to touch him."
-msgstr ""
+msgstr "彼に触るのは危険な気がする。"
 
 # ../lib/gamedata/monster.txt:396
 msgid "squint-eyed rogue"
@@ -94,13 +94,14 @@ msgstr ""
 msgid "A hardy, street-wise crook that knows an easy catch when it sees one."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:414
 msgid "singing, happy drunk"
-msgstr ""
+msgstr "歌を口ずさむ幸せな酔っぱらい"
 
 # ../lib/gamedata/monster.txt:431
 msgid "He makes you glad to be sober."
-msgstr ""
+msgstr "誰でも彼に会えば、酔いを覚ましてあげたいような気になる。"
 
 # ../lib/gamedata/monster.txt:432
 msgid "aimless-looking merchant"
@@ -111,6 +112,8 @@ msgid ""
 "The typical ponce around town, with purse jingling, and looking for more "
 "amulets of adornment to buy."
 msgstr ""
+"町をふらつく典型的なクズで、財布をじゃらじゃらさせて、装飾のアミュレットを買"
+"おうと町を探し回っている。"
 
 # ../lib/gamedata/monster.txt:452
 msgid "mean-looking mercenary"
@@ -118,7 +121,7 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:470
 msgid "No job is too low for him."
-msgstr ""
+msgstr "仕事が見つからないことが彼をいっそう貧しくしている。"
 
 # ../lib/gamedata/monster.txt:471
 msgid "battle-scarred veteran"
@@ -126,7 +129,7 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:488
 msgid "He doesn't take to strangers kindly."
-msgstr ""
+msgstr "彼は見知らぬ人に優しく接したりはしない。"
 
 # ../lib/gamedata/monster.txt:489
 msgid "red-hatted elf"
@@ -144,153 +147,193 @@ msgstr ""
 msgid "It's Saint Nick, out delivering presents to the town urchins."
 msgstr ""
 
+# #### Normal monsters #####
+# J0#
 # ../lib/gamedata/monster.txt:529
 msgid "grey mold"
-msgstr ""
+msgstr "グレイ・モルド"
 
 # ../lib/gamedata/monster.txt:544
 msgid "A small strange grey growth."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:545
+# J0#
+# ../lib/gamedata/monster.txt:1944
+#, fuzzy
 msgid "grey mushroom patch"
-msgstr ""
+msgstr "紫おばけキノコ"
 
 # ../lib/gamedata/monster.txt:560
 msgid "Yum!  It looks quite tasty."
-msgstr ""
+msgstr "うーん！それはとてもおいしそうに見える。"
 
-# ../lib/gamedata/monster.txt:561
+# J0#
+# ../lib/gamedata/monster.txt:577
+#, fuzzy
 msgid "giant yellow centipede"
-msgstr ""
+msgstr "巨大白ムカデ"
 
 # ../lib/gamedata/monster.txt:576
 msgid "It is about four feet long and carnivorous."
-msgstr ""
+msgstr "それは長さが 1.5 メートル近くもある肉食生物だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:577
 msgid "giant white centipede"
-msgstr ""
+msgstr "巨大白ムカデ"
 
+# J0#
+# J0#
+# J0#(コメント)
+# J0# ベトベトという訳は結構気に入っている(^_^;
+# J0#
+# J0# 小林健一さんが日本語化したモリアをみたら「ネバネバ」だった(^_^;。
+# J0#
 # ../lib/gamedata/monster.txt:594
 msgid "white icky thing"
-msgstr ""
+msgstr "白ベトベト"
 
 # ../lib/gamedata/monster.txt:609
 msgid "It is a smallish, slimy, icky creature."
-msgstr ""
+msgstr "それはドロドロしてベトベトした小さなモンスターだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:610
 msgid "clear icky thing"
-msgstr ""
+msgstr "透明ベトベト"
 
 # ../lib/gamedata/monster.txt:626
 msgid "It is a smallish, slimy, icky, blobby creature."
-msgstr ""
+msgstr "それは汚らしいドロドロネバネバした小さな塊のようなモンスターだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:627
 msgid "giant white mouse"
-msgstr ""
+msgstr "巨大ハツカネズミ"
 
 # ../lib/gamedata/monster.txt:644
 msgid "It is about three feet long with large teeth."
-msgstr ""
+msgstr "それは長い歯を持った 1 メートル近い大きさのネズミだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:645
 msgid "large white snake"
-msgstr ""
+msgstr "大白ヘビ"
 
 # ../lib/gamedata/monster.txt:660
 msgid "It is about eight feet long."
-msgstr ""
+msgstr "それは長さが 2.5 メートル近くもある。"
 
+# J0#
 # ../lib/gamedata/monster.txt:661
 msgid "small kobold"
-msgstr ""
+msgstr "スモール・コボルド"
 
 # ../lib/gamedata/monster.txt:676
 msgid "It is a squat and ugly humanoid figure with a canine face."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:677
 msgid "white worm mass"
-msgstr ""
+msgstr "白イモムシの大群"
 
 # ../lib/gamedata/monster.txt:693
 msgid "It is a large slimy mass of worms."
-msgstr ""
+msgstr "それはベトベトしたイモムシの大群だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:694
 msgid "floating eye"
-msgstr ""
+msgstr "フローティング・アイ"
 
 # ../lib/gamedata/monster.txt:709
 msgid "A disembodied eye, floating a few feet above the ground."
-msgstr ""
+msgstr "地面から数十センチ上に浮かんでいる体を持たない目玉だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:710
 msgid "rock lizard"
-msgstr ""
+msgstr "岩トカゲ"
 
 # ../lib/gamedata/monster.txt:724
 msgid "It is a small lizard with a hardened hide."
-msgstr ""
+msgstr "それは小さなトカゲで硬い皮を持っている。"
 
-# ../lib/gamedata/monster.txt:725
+# J0#
+# J0# (コメント)
+# J0# 名前の訳は都々目さんによる
+# J0#
+# ../lib/gamedata/monster.txt:1133
+#, fuzzy
 msgid "wild dog"
-msgstr ""
+msgstr "山猫"
 
 # ../lib/gamedata/monster.txt:741
 msgid "It is a yapping snarling dog, dangerous when in a pack."
-msgstr ""
+msgstr "それはやかましく唸る犬型の動物で、群れていると危険だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:742
 msgid "soldier ant"
-msgstr ""
+msgstr "兵隊アリ"
 
 # ../lib/gamedata/monster.txt:756
 msgid "A large ant with powerful mandibles."
-msgstr ""
+msgstr "強い顎を持った大きなアリだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:757
 msgid "fruit bat"
-msgstr ""
+msgstr "フルーツ・コウモリ"
 
 # ../lib/gamedata/monster.txt:771
 msgid "A fast-moving pest."
-msgstr ""
+msgstr "動きの素早い厄介者だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:774
 msgid "kobold"
-msgstr ""
+msgstr "コボルド"
 
 # ../lib/gamedata/monster.txt:789
 msgid "It is a small, dog-headed humanoid."
-msgstr ""
+msgstr "それは犬のような頭をした、小さな人間型のモンスターだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:790
 msgid "shrieker mushroom patch"
-msgstr ""
+msgstr "絶叫おばけキノコ"
 
-# ../lib/gamedata/monster.txt:808
+# ../lib/gamedata/monster.txt:3964
+#, fuzzy
 msgid "Yum!  It looks quite tasty.  It doesn't sound so nice, though..."
 msgstr ""
+"うーん！それはとてもおいしそうに見える。それは奇妙な光に輝いているようだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:809
 msgid "blubbering icky thing"
-msgstr ""
+msgstr "号泣ベトベト"
 
 # ../lib/gamedata/monster.txt:826
 msgid "It is a smallish, slimy, icky, hungry creature."
-msgstr ""
+msgstr "それはドロドロしてベトベトして貪欲な小さいモンスターだ。"
 
+# J0#
+# J0#
+# J0#(コメント)
+# J0# 銀～という色のあらわし方はあまり気に入っていない。
+# J0#
 # ../lib/gamedata/monster.txt:827
 msgid "metallic green centipede"
-msgstr ""
+msgstr "銀緑ムカデ"
 
-# ../lib/gamedata/monster.txt:844
+# J0#
+# ../lib/gamedata/monster.txt:742
+#, fuzzy
 msgid "soldier"
-msgstr ""
+msgstr "兵隊アリ"
 
 # ../lib/gamedata/monster.txt:866
 msgid "An inexperienced but tough warrior."
@@ -302,7 +345,7 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:889
 msgid "A rather shifty individual."
-msgstr ""
+msgstr "彼は多少は策略をめぐらす。"
 
 # ../lib/gamedata/monster.txt:890
 msgid "acolyte"
@@ -311,110 +354,136 @@ msgstr ""
 # ../lib/gamedata/monster.txt:915
 msgid "He is tripping over his priestly robes."
 msgstr ""
+"彼は自分の法衣のすそを踏んづけてはつまづくかもしれないが、仲間が彼を助けてい"
+"る。"
 
-# ../lib/gamedata/monster.txt:916
+# J0#
+# ../lib/gamedata/monster.txt:7138
+#, fuzzy
 msgid "apprentice"
-msgstr ""
+msgstr "マンティコア"
 
 # ../lib/gamedata/monster.txt:941
 msgid "He is leaving behind a trail of dropped spell components."
-msgstr ""
+msgstr "彼らはみな、さっと呪文を唱えるだけ唱えては逃げようとする。"
 
+# J0#
 # ../lib/gamedata/monster.txt:942
 msgid "yellow mushroom patch"
-msgstr ""
+msgstr "黄おばけキノコ"
 
+# J0#
 # ../lib/gamedata/monster.txt:959
 msgid "white jelly"
-msgstr ""
+msgstr "ホワイト・ゼリー"
 
-# ../lib/gamedata/monster.txt:975
+# ../lib/gamedata/monster.txt:1329
+#, fuzzy
 msgid "It's a large pile of white flesh."
-msgstr ""
+msgstr "それは黄色い肉のような物質の塊だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:976
 msgid "giant green frog"
-msgstr ""
+msgstr "巨大アマガエル"
 
 # ../lib/gamedata/monster.txt:991
 msgid "It is as big as a wolf."
-msgstr ""
+msgstr "それは狼と同じくらいの大きさがある。"
 
+# J0#
 # ../lib/gamedata/monster.txt:992
 msgid "giant black ant"
-msgstr ""
+msgstr "巨大黒アリ"
 
 # ../lib/gamedata/monster.txt:1007
 msgid "It is about three feet long."
-msgstr ""
+msgstr "それは大きさが 1 メートル近くもある。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1008
 msgid "salamander"
-msgstr ""
+msgstr "サラマンダー"
 
 # ../lib/gamedata/monster.txt:1024
 msgid "A small black and orange lizard."
-msgstr ""
+msgstr "黒とオレンジ色のまだら模様をした小さなトカゲだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1025
 msgid "white harpy"
-msgstr ""
+msgstr "ホワイト・ハーピー"
 
 # ../lib/gamedata/monster.txt:1044
 msgid "A flying, screeching bird with a woman's face."
-msgstr ""
+msgstr "女性の顔をした鳥で、辺りを飛び回って金切り声を上げている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1045
 msgid "blue yeek"
-msgstr ""
+msgstr "ブルー・イーク"
 
 # ../lib/gamedata/monster.txt:1060
 msgid "A small humanoid figure."
-msgstr ""
+msgstr "人間に近い姿をした小さな生物だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1061
 msgid "Grip, Farmer Maggot's Dog"
-msgstr ""
+msgstr "農夫マゴットの飼犬『くいつき』"
 
 # ../lib/gamedata/monster.txt:1079
 msgid ""
 "A rather vicious dog belonging to Farmer Maggot.  It thinks you are stealing "
 "mushrooms."
 msgstr ""
+"農夫マゴットが飼っている少々凶暴な犬だ。それはあなたがキノコを盗んだと思って"
+"いる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1080
 msgid "Fang, Farmer Maggot's Dog"
-msgstr ""
+msgstr "農夫マゴットの飼犬『きば』"
 
+# J0#
 # ../lib/gamedata/monster.txt:1099
 msgid "green worm mass"
-msgstr ""
+msgstr "緑イモムシの大群"
 
+# J0#
 # ../lib/gamedata/monster.txt:1116
 msgid "cave spider"
-msgstr ""
+msgstr "洞窟蜘蛛"
 
 # ../lib/gamedata/monster.txt:1132
 msgid "It is a black spider that moves in fits and starts."
-msgstr ""
+msgstr "それは黒い蜘蛛で発作的に突如動き出す。"
 
+# J0#
+# J0# (コメント)
+# J0# 名前の訳は都々目さんによる
+# J0#
 # ../lib/gamedata/monster.txt:1133
 msgid "wild cat"
-msgstr ""
+msgstr "山猫"
 
 # ../lib/gamedata/monster.txt:1150
 msgid ""
 "A larger than normal feline, hissing loudly.  Its velvet paws conceal a "
 "fistful of needles."
 msgstr ""
+"通常のネコより体が大きくて大きな声で鳴く。その柔らかく美しい足には鋭い爪が隠"
+"されている。"
 
+# JZ#
+# JZ#(コメント)訳は 紫月閑丸さん
 # ../lib/gamedata/monster.txt:1151
 msgid "crow"
-msgstr ""
+msgstr "カラス"
 
 # ../lib/gamedata/monster.txt:1165
 msgid "It is a hooded crow, gray except for the black wings and head."
-msgstr ""
+msgstr "それは黒い羽と頭を除けば灰色の、群れているカラスだ。"
 
 # ../lib/gamedata/monster.txt:1168
 msgid "Sméagol"
@@ -425,129 +494,151 @@ msgid ""
 "Usually known as Gollum.  He's been sneaking, and he wants his 'precious.'"
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:1186
 msgid "green ooze"
-msgstr ""
+msgstr "グリーン・ウーズ"
 
 # ../lib/gamedata/monster.txt:1202
 msgid "It's green and it's oozing."
-msgstr ""
+msgstr "それは緑色をしたシミのような生物だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1203
 msgid "poltergeist"
-msgstr ""
+msgstr "ポルターガイスト"
 
 # ../lib/gamedata/monster.txt:1221
 msgid "It is a ghastly, ghostly form."
-msgstr ""
+msgstr "それは恐ろしげな幽霊のような姿をしている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1222
 msgid "metallic blue centipede"
-msgstr ""
+msgstr "銀青ムカデ"
 
+# J0#
 # ../lib/gamedata/monster.txt:1239
 msgid "giant white louse"
-msgstr ""
+msgstr "巨大白シラミ"
 
 # ../lib/gamedata/monster.txt:1254
 msgid "It is six inches long."
-msgstr ""
+msgstr "それは 30 センチもの大きさがある。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1255
 msgid "black naga"
-msgstr ""
+msgstr "ブラック・ナーガ"
 
 # ../lib/gamedata/monster.txt:1270
 msgid "A large black serpent's body with a female torso."
-msgstr ""
+msgstr "女性の上半身を持った大きな黒いヘビだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1271
 msgid "spotted mushroom patch"
-msgstr ""
+msgstr "斑点おばけキノコ"
 
+# J0#
 # ../lib/gamedata/monster.txt:1288
 msgid "silver jelly"
-msgstr ""
+msgstr "シルバー・ゼリー"
 
 # ../lib/gamedata/monster.txt:1309
 msgid ""
 "It is a large pile of silver flesh that sucks all light from its "
 "surroundings."
-msgstr ""
+msgstr "それは銀色の肉のような物質の塊で、付近の光を全て吸い取る。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1310
 msgid "yellow jelly"
-msgstr ""
+msgstr "イエロー・ゼリー"
 
 # ../lib/gamedata/monster.txt:1329
 msgid "It's a large pile of yellow flesh."
-msgstr ""
+msgstr "それは黄色い肉のような物質の塊だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1330
 msgid "scruffy looking hobbit"
-msgstr ""
+msgstr "貧弱ホビット"
 
 # ../lib/gamedata/monster.txt:1348
 msgid ""
 "A short little guy, in bedraggled clothes.  He appears to be looking for a "
 "good tavern."
 msgstr ""
+"汚い服に身を包んだ背の低いホビットだ。きっと安い居酒屋を探し回っているのだろ"
+"う。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1349
 msgid "giant white ant"
-msgstr ""
+msgstr "巨大シロアリ"
 
 # ../lib/gamedata/monster.txt:1364
 msgid "It is about two feet long and has sharp pincers."
-msgstr ""
+msgstr "それは大きさが 60 センチ近くあり、さらに鋭い顎も持っている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1365
 msgid "yellow mold"
-msgstr ""
+msgstr "イエロー・モルド"
 
-# ../lib/gamedata/monster.txt:1379
+# ../lib/gamedata/monster.txt:3019
+#, fuzzy
 msgid "It is a strange yellow growth on the dungeon floor."
-msgstr ""
+msgstr "それはダンジョンの床に生えている奇妙な輝くカビだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1380
 msgid "metallic red centipede"
-msgstr ""
+msgstr "銀赤ムカデ"
 
+# J0#
 # ../lib/gamedata/monster.txt:1397
 msgid "yellow worm mass"
-msgstr ""
+msgstr "黄イモムシの大群"
 
+# J0#
 # ../lib/gamedata/monster.txt:1414
 msgid "clear worm mass"
-msgstr ""
+msgstr "透明イモムシの大群"
 
 # ../lib/gamedata/monster.txt:1431
 msgid "It is a disgusting mass of poisonous worms."
-msgstr ""
+msgstr "それは毒を持った汚らわしいイモムシの大群だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1432
 msgid "radiation eye"
-msgstr ""
+msgstr "発光アイ"
 
 # ../lib/gamedata/monster.txt:1449
 msgid "A disembodied eye, crackling with energy."
-msgstr ""
+msgstr "エネルギーを放出してパチパチと輝いている、体を持たない目玉だ。"
 
-# ../lib/gamedata/monster.txt:1450
+# J0#
+# ../lib/gamedata/monster.txt:2600
+#, fuzzy
 msgid "kobold shaman"
-msgstr ""
+msgstr "オーク・シャーマン"
 
-# ../lib/gamedata/monster.txt:1471
+# ../lib/gamedata/monster.txt:2622
+#, fuzzy
 msgid "It is a kobold dressed in skins and gesturing wildly."
-msgstr ""
+msgstr "荒々しい身振りをする、獣の皮を身にまとったオークだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1474
 msgid "cave lizard"
-msgstr ""
+msgstr "洞窟トカゲ"
 
 # ../lib/gamedata/monster.txt:1488
 msgid "It is an armoured lizard with a powerful bite."
-msgstr ""
+msgstr "硬い皮を持ったトカゲで噛む力が強い。"
 
 # ../lib/gamedata/monster.txt:1489
 msgid "scout"
@@ -556,6 +647,8 @@ msgstr ""
 # ../lib/gamedata/monster.txt:1517
 msgid "An agile hunter, ready and relaxed."
 msgstr ""
+"機敏な野伏で、常に戦闘を意識している。そして仲間たちが追跡の手助けをしてい"
+"る。"
 
 # ../lib/gamedata/monster.txt:1518
 msgid "gallant"
@@ -573,53 +666,63 @@ msgstr ""
 msgid "A lover of nature."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:1570
 msgid "blue jelly"
-msgstr ""
+msgstr "ブルー・ゼリー"
 
 # ../lib/gamedata/monster.txt:1587
 msgid "It's a large pile of pulsing blue flesh."
-msgstr ""
+msgstr "それは脈打つ青い肉のような物質の塊だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1588
 msgid "creeping copper coins"
-msgstr ""
+msgstr "銅のクリーピングコイン"
 
 # ../lib/gamedata/monster.txt:1603
 msgid "It appears to be a pile of copper coins."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:1605
 msgid "giant white rat"
-msgstr ""
+msgstr "巨大白ネズミ"
 
 # ../lib/gamedata/monster.txt:1621
 msgid "It is a very vicious rodent."
-msgstr ""
+msgstr "それは非常に凶暴な齧歯類の生物だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1622
 msgid "blue worm mass"
-msgstr ""
+msgstr "青イモムシの大群"
 
+# J0#
 # ../lib/gamedata/monster.txt:1639
 msgid "large grey snake"
-msgstr ""
+msgstr "大灰色ヘビ"
 
 # ../lib/gamedata/monster.txt:1654
 msgid "It is about ten feet long."
-msgstr ""
+msgstr "それは長さが 3 メートル近くもある。"
 
-# ../lib/gamedata/monster.txt:1655
+# J0#
+# ../lib/gamedata/monster.txt:774
+#, fuzzy
 msgid "kobold archer"
-msgstr ""
+msgstr "コボルド"
 
-# ../lib/gamedata/monster.txt:1674
+# ../lib/gamedata/monster.txt:789
+#, fuzzy
 msgid "It is an ugly dog-headed humanoid wielding a bow."
-msgstr ""
+msgstr "それは犬のような頭をした、小さな人間型のモンスターだ。"
 
-# ../lib/gamedata/monster.txt:1675
+# J0#
+# ../lib/gamedata/monster.txt:1288
+#, fuzzy
 msgid "silver mouse"
-msgstr ""
+msgstr "シルバー・ゼリー"
 
 # ../lib/gamedata/monster.txt:1693
 msgid ""
@@ -627,114 +730,134 @@ msgid ""
 "falls on it, it seems to grow stronger."
 msgstr ""
 
+#
+# (コメント)
+# 名前の翻訳は KOHKO-P さんに教えてもらいました
+#
 # ../lib/gamedata/monster.txt:1696
 msgid "Bullroarer the Hobbit"
-msgstr ""
+msgstr "ホビット『牛うなり』"
 
 # ../lib/gamedata/monster.txt:1714
 msgid ""
 "He is a sturdy hobbit who is renowned for his unusual strength and vigour.  "
 "He can prove a troublesome opponent."
 msgstr ""
+"彼はけた外れの力と体の大きさが有名な、屈強なホビットだ。彼がやっかいな強敵で"
+"あることは間違いがない。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1715
 msgid "green naga"
-msgstr ""
+msgstr "グリーン・ナーガ"
 
 # ../lib/gamedata/monster.txt:1733
 msgid ""
 "A large green serpent with a female's torso.  Her green skin glistens with "
 "acid."
-msgstr ""
+msgstr "女性の上半身を持った大きなヘビだ。その緑の肌は酸に満ちている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1734
 msgid "blue ooze"
-msgstr ""
+msgstr "ブルー・ウーズ"
 
 # ../lib/gamedata/monster.txt:1750
 msgid "It's blue and it's oozing."
-msgstr ""
+msgstr "それは青色をしたシミのような生物だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1751
 msgid "green glutton ghost"
-msgstr ""
+msgstr "緑の食いしん坊ゴースト"
 
 # ../lib/gamedata/monster.txt:1767
 msgid "It is a very ugly green ghost with a voracious appetite."
-msgstr ""
+msgstr "それは尽きることのない旺盛な食欲を持った、緑色の醜いゴーストだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1768
 msgid "green jelly"
-msgstr ""
+msgstr "グリーン・ゼリー"
 
 # ../lib/gamedata/monster.txt:1784
 msgid "It is a large pile of pulsing green flesh."
-msgstr ""
+msgstr "それは脈打つ緑色の肉のような物質の塊だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1785
 msgid "large kobold"
-msgstr ""
+msgstr "ラージ・コボルド"
 
 # ../lib/gamedata/monster.txt:1802
 msgid ""
 "It is a man-sized figure with the all too recognizable face of a kobold."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:1803
 msgid "skeleton kobold"
-msgstr ""
+msgstr "スケルトン・コボルド"
 
 # ../lib/gamedata/monster.txt:1818
 msgid "It is a small animated kobold skeleton."
-msgstr ""
+msgstr "それはスモール・コボルドの骸骨に生命が吹き込まれたものだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1819
 msgid "grey icky thing"
-msgstr ""
+msgstr "グレイ・ベトベト"
 
 # ../lib/gamedata/monster.txt:1833
 msgid "It is a smallish, slimy, icky, nasty creature."
-msgstr ""
+msgstr "それはドロドロしてベトベトして不潔な小さいモンスターだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1834
 msgid "disenchanter eye"
-msgstr ""
+msgstr "劣化アイ"
 
 # ../lib/gamedata/monster.txt:1852
 msgid "A disembodied eye, crackling with magic."
-msgstr ""
+msgstr "魔力を放出して火花をあげている、体を持たない目玉だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1853
 msgid "red worm mass"
-msgstr ""
+msgstr "赤イモムシの大群"
 
+# J0#
 # ../lib/gamedata/monster.txt:1870
 msgid "copperhead snake"
-msgstr ""
+msgstr "マムシ"
 
 # ../lib/gamedata/monster.txt:1885
 msgid "It has a copper head and sharp venomous fangs."
-msgstr ""
+msgstr "それは毒のある鋭い牙を持っている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1886
 msgid "giant white dragon fly"
-msgstr ""
+msgstr "巨大白トンボ"
 
 # ../lib/gamedata/monster.txt:1903
 msgid "It is a large fly that drips frost."
-msgstr ""
+msgstr "それは冷気を振りまく大きなトンボだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1904
 msgid "giant green dragon fly"
-msgstr ""
+msgstr "巨大緑トンボ"
 
 # ../lib/gamedata/monster.txt:1922
 msgid "A vast, foul-smelling dragonfly."
-msgstr ""
+msgstr "不快な匂いを発する巨大なトンボだ。"
 
-# ../lib/gamedata/monster.txt:1923
+# JZ#
+# ../lib/gamedata/monster.txt:2184
+#, fuzzy
 msgid "rot jelly"
-msgstr ""
+msgstr "レッド・ゼリー"
 
 # ../lib/gamedata/monster.txt:1941
 msgid ""
@@ -742,71 +865,84 @@ msgid ""
 "terrible smell it exudes is also very hard to get rid of..."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:1944
 msgid "purple mushroom patch"
-msgstr ""
+msgstr "紫おばけキノコ"
 
+# J0#
 # ../lib/gamedata/monster.txt:1962
 msgid "brown mold"
-msgstr ""
+msgstr "ブラウン・モルド"
 
 # ../lib/gamedata/monster.txt:1976
 msgid "A strange brown growth on the dungeon floor."
-msgstr ""
+msgstr "ダンジョンの床に生えている奇妙な茶色のカビだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1977
 msgid "giant brown bat"
-msgstr ""
+msgstr "巨大茶コウモリ"
 
 # ../lib/gamedata/monster.txt:1991
 msgid "It screeches as it attacks."
-msgstr ""
+msgstr "それは攻撃をするときにキーキーと鳴く。"
 
+# J0#
 # ../lib/gamedata/monster.txt:1992
 msgid "creeping silver coins"
-msgstr ""
+msgstr "銀のクリーピングコイン"
 
 # ../lib/gamedata/monster.txt:2007
 msgid "It appears to be a pile of silver coins."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:2009
 msgid "snaga"
-msgstr ""
+msgstr "スナガ"
 
 # ../lib/gamedata/monster.txt:2030
 msgid ""
 "He is one of the many weaker 'slave' orcs, often mistakenly known as a "
 "goblin."
 msgstr ""
+"彼は多くの弱い「奴隷」のオークの一人で、しばしば間違ってゴブリンという名前で"
+"知られている生物だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2031
 msgid "rattlesnake"
-msgstr ""
+msgstr "ガラガラヘビ"
 
 # ../lib/gamedata/monster.txt:2047
 msgid ""
 "It is recognized by the hard-scaled end of its body that is often rattled to "
 "frighten its prey."
 msgstr ""
+"それは尻尾に硬い殻を持ったヘビで、その殻をガラガラとならして獲物を脅かす。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2048
 msgid "giant black dragon fly"
-msgstr ""
+msgstr "巨大黒トンボ"
 
 # ../lib/gamedata/monster.txt:2065
 msgid "The size of a large bird, this fly drips caustic acid."
-msgstr ""
+msgstr "鳥ほどの大きさがあるトンボで、腐食性の酸を滴らせている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2066
 msgid "giant gold dragon fly"
-msgstr ""
+msgstr "巨大ゴールド・トンボ"
 
 # ../lib/gamedata/monster.txt:2085
 msgid ""
 "Large beating wings support this dazzling insect.  A loud buzzing noise "
 "pervades the air."
 msgstr ""
+"激しくはばたく長い羽を持ち、光沢のある体をした昆虫だ。やかましい羽音を部屋中"
+"に響かせている。"
 
 # ../lib/gamedata/monster.txt:2088
 msgid "crow of Durthang"
@@ -818,65 +954,74 @@ msgid ""
 "realise that its scorn can kill."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:2110
 msgid "cave orc"
-msgstr ""
+msgstr "洞窟オーク"
 
 # ../lib/gamedata/monster.txt:2130
 msgid "He is often found in huge numbers in deep caves."
-msgstr ""
+msgstr "彼はしばしば洞窟の深層に大集団で見受けられる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2131
 msgid "wood spider"
-msgstr ""
+msgstr "森蜘蛛"
 
 # ../lib/gamedata/monster.txt:2148
 msgid "It scuttles towards you."
-msgstr ""
+msgstr "それは一目散に冒険者に向かってくる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2149
 msgid "bloodshot eye"
-msgstr ""
+msgstr "充血アイ"
 
 # ../lib/gamedata/monster.txt:2166
 msgid "A disembodied eye, bloodshot and nasty."
-msgstr ""
+msgstr "体を持たない、血走っていて忌まわしい目玉だ。"
 
+# JZ#
 # ../lib/gamedata/monster.txt:2167
 msgid "red naga"
-msgstr ""
+msgstr "レッド・ナーガ"
 
 # ../lib/gamedata/monster.txt:2183
 msgid "A large red snake with a woman's torso."
-msgstr ""
+msgstr "女性の上半身を持った大きなヘビだ。"
 
+# JZ#
 # ../lib/gamedata/monster.txt:2184
 msgid "red jelly"
-msgstr ""
+msgstr "レッド・ゼリー"
 
 # ../lib/gamedata/monster.txt:2200
 msgid "It is a large pulsating mound of red flesh."
-msgstr ""
+msgstr "それは脈打つ赤い肉のような物質の塊だ。"
 
-# ../lib/gamedata/monster.txt:2201
+# J0#
+# ../lib/gamedata/monster.txt:976
+#, fuzzy
 msgid "giant red frog"
-msgstr ""
+msgstr "巨大アマガエル"
 
 # ../lib/gamedata/monster.txt:2216
 msgid "It looks poisonous."
-msgstr ""
+msgstr "それは毒を持っているようだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2217
 msgid "green icky thing"
-msgstr ""
+msgstr "緑ベトベト"
 
 # ../lib/gamedata/monster.txt:2232
 msgid "It is a smallish, slimy, icky, acidic creature."
-msgstr ""
+msgstr "それはドロドロしてベトベトした酸に満ちている小さなモンスターだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2233
 msgid "zombified kobold"
-msgstr ""
+msgstr "ゾンビ・コボルド"
 
 # ../lib/gamedata/monster.txt:2251
 msgid ""
@@ -884,13 +1029,14 @@ msgid ""
 "shambles forward."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:2252
 msgid "lost soul"
-msgstr ""
+msgstr "浮遊霊"
 
 # ../lib/gamedata/monster.txt:2270
 msgid "It is almost insubstantial."
-msgstr ""
+msgstr "それはほとんど実体を持っていない。"
 
 # ../lib/gamedata/monster.txt:2271
 msgid "eastern dwarf"
@@ -902,25 +1048,35 @@ msgid ""
 "Morgoth."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:2293
 msgid "night lizard"
-msgstr ""
+msgstr "暗黒トカゲ"
 
 # ../lib/gamedata/monster.txt:2308
 msgid "It is a black lizard with overlapping scales and a powerful jaw."
-msgstr ""
+msgstr "それは硬い皮と強力な顎を持った黒いトカゲだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2309
 msgid "Mughash the Kobold Lord"
-msgstr ""
+msgstr "コボルド・ロード『ムガッシュ』"
 
 # ../lib/gamedata/monster.txt:2332
 msgid "Strong and powerful, for a kobold."
-msgstr ""
+msgstr "コボルドの中でも、特に屈強で強力だ。"
 
+# J0#
+# J0#(コメント)
+# J0#
+# J0#(都々目)
+# J0# サルマンのスパイ『ヘビの舌』 -> サルマンの間者『蛇の舌』
+# J0#
+# J0# ＊指輪物語に合わせる。『スパイ』と云う言葉は雰囲気的に合わないでしょう。
+# J0#
 # ../lib/gamedata/monster.txt:2335
 msgid "Wormtongue, Agent of Saruman"
-msgstr ""
+msgstr "サルマンの間者『ヘビの舌』"
 
 # ../lib/gamedata/monster.txt:2360
 msgid ""
@@ -928,9 +1084,15 @@ msgid ""
 "disgusting habits."
 msgstr ""
 
+# J0# (コメント)
+# J0#
+# J0# (都々目)
+# J0# スナガ『ラグドフ』 -> スナガ『ラグドゥフ』
+# J0# ＊新版指輪物語ではこのように修正されています。
+# J0#
 # ../lib/gamedata/monster.txt:2361
 msgid "Lagduf, the Snaga"
-msgstr ""
+msgstr "スナガ『ラグドゥフ』"
 
 # ../lib/gamedata/monster.txt:2383
 msgid ""
@@ -938,45 +1100,51 @@ msgid ""
 "displays of excessive violence."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:2384
+# J0#
+# ../lib/gamedata/monster.txt:3371
+#, fuzzy
 msgid "terrified yeek"
-msgstr ""
+msgstr "マスター・イーク"
 
 # ../lib/gamedata/monster.txt:2400
 msgid "It is a strange small humanoid in a constant state of extreme terror."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:2401
 msgid "giant salamander"
-msgstr ""
+msgstr "ジャイアント・サラマンダー"
 
 # ../lib/gamedata/monster.txt:2420
 msgid "A large black and yellow lizard.  You'd better run away!"
-msgstr ""
+msgstr "黒と黄色のまだらの大きなトカゲだ。逃げた方がいいぞ！"
 
+# J0#
 # ../lib/gamedata/monster.txt:2421
 msgid "green mold"
-msgstr ""
+msgstr "グリーン・モルド"
 
 # ../lib/gamedata/monster.txt:2436
 msgid "It is a strange growth on the dungeon floor."
-msgstr ""
+msgstr "それはダンジョンの床に生えている奇妙なカビだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2437
 msgid "skeleton orc"
-msgstr ""
+msgstr "スケルトン・オーク"
 
 # ../lib/gamedata/monster.txt:2452
 msgid "It is an animated orc skeleton."
-msgstr ""
+msgstr "それは生命を吹き込まれたオークの骸骨だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2453
 msgid "lemure"
-msgstr ""
+msgstr "レムレース"
 
 # ../lib/gamedata/monster.txt:2469
 msgid "It is a minor but aggressive demon."
-msgstr ""
+msgstr "それは下級だが攻撃的なデーモンだ。"
 
 # ../lib/gamedata/monster.txt:2470
 msgid "orc tracker"
@@ -994,141 +1162,173 @@ msgstr ""
 msgid "An uncultured brute with a club, a sling and a whip."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:2511
+# J0#
+# ../lib/gamedata/monster.txt:992
+#, fuzzy
 msgid "giant black louse"
-msgstr ""
+msgstr "巨大黒アリ"
 
 # ../lib/gamedata/monster.txt:2525
 msgid "It makes you itch just to look at it."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:2526
 msgid "yeti"
-msgstr ""
+msgstr "イエティ"
 
 # ../lib/gamedata/monster.txt:2543
 msgid "A large white figure covered in shaggy fur."
-msgstr ""
+msgstr "毛むくじゃらの大きな白いモンスターだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2544
 msgid "bloodshot icky thing"
-msgstr ""
+msgstr "充血ベトベト"
 
 # ../lib/gamedata/monster.txt:2562
 msgid "It is a strange, slimy, icky creature."
-msgstr ""
+msgstr "それはドロドロしてベトベトした奇妙なモンスターだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2563
 msgid "giant grey rat"
-msgstr ""
+msgstr "巨大ドブネズミ"
 
 # ../lib/gamedata/monster.txt:2579
 msgid "It is a rodent of unusual size."
-msgstr ""
+msgstr "尋常ではない大きさの齧歯類の生物だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2580
 msgid "black harpy"
-msgstr ""
+msgstr "ブラック・ハーピー"
 
 # ../lib/gamedata/monster.txt:2599
 msgid "A woman's face on the body of a vicious black bird."
-msgstr ""
+msgstr "女性の顔をした凶暴な黒い鳥だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2600
 msgid "orc shaman"
-msgstr ""
+msgstr "オーク・シャーマン"
 
 # ../lib/gamedata/monster.txt:2622
 msgid "An orc dressed in skins who gestures wildly."
-msgstr ""
+msgstr "荒々しい身振りをする、獣の皮を身にまとったオークだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2623
 msgid "baby blue dragon"
-msgstr ""
+msgstr "ベビー・ブルー・ドラゴン"
 
 # ../lib/gamedata/monster.txt:2644
 msgid ""
 "This hatchling dragon is still soft, its eyes unaccustomed to light and its "
 "scales a pale blue."
 msgstr ""
+"このドラゴンは生まれたばかりなので、まだそれほど凶暴ではない。その目は光に慣"
+"れておらず、鱗は薄い青色をしてる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2645
 msgid "baby white dragon"
-msgstr ""
+msgstr "ベビー・ホワイト・ドラゴン"
 
 # ../lib/gamedata/monster.txt:2666
 msgid ""
 "This hatchling dragon is still soft, its eyes unaccustomed to light and its "
 "scales a pale white."
 msgstr ""
+"このドラゴンは生まれたばかりなので、まだそれほど凶暴ではない。その目は光に慣"
+"れておらず、鱗は薄い白色をしている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2667
 msgid "baby green dragon"
-msgstr ""
+msgstr "ベビー・グリーン・ドラゴン"
 
 # ../lib/gamedata/monster.txt:2688
 msgid ""
 "This hatchling dragon is still soft, its eyes unaccustomed to light and its "
 "scales a sickly green."
 msgstr ""
+"このドラゴンは生まれたばかりなので、まだそれほど凶暴ではない。その目は光に慣"
+"れておらず、鱗は病的な緑色をしている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2689
 msgid "baby black dragon"
-msgstr ""
+msgstr "ベビー・ブラック・ドラゴン"
 
 # ../lib/gamedata/monster.txt:2710
 msgid ""
 "This hatchling dragon is still soft, its eyes unaccustomed to light and its "
 "scales a dull black."
 msgstr ""
+"このドラゴンは生まれたばかりなので、まだそれほど凶暴ではない。その目は光に慣"
+"れておらず、鱗は鈍い黒色をしている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2711
 msgid "baby red dragon"
-msgstr ""
+msgstr "ベビー・レッド・ドラゴン"
 
 # ../lib/gamedata/monster.txt:2732
 msgid ""
 "This hatchling dragon is still soft, its eyes unaccustomed to light and its "
 "scales a pale red."
 msgstr ""
+"このドラゴンは生まれたばかりなので、まだそれほど凶暴ではない。その目は光に慣"
+"れておらず、鱗は薄い赤色をしている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2733
 msgid "giant red ant"
-msgstr ""
+msgstr "巨大赤アリ"
 
 # ../lib/gamedata/monster.txt:2748
 msgid "It is large and has venomous mandibles."
-msgstr ""
+msgstr "それは大きくて強力な顎を持っている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2749
 msgid "Brodda, the Easterling"
-msgstr ""
+msgstr "東夷『ブロッダ』"
 
 # ../lib/gamedata/monster.txt:2769
 msgid "A nasty piece of work, Brodda picks on defenseless women and children."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:2770
 msgid "king cobra"
-msgstr ""
+msgstr "キング・コブラ"
 
 # ../lib/gamedata/monster.txt:2788
 msgid "It is a large snake with a hooded face."
-msgstr ""
+msgstr "それは頭巾のような頭をした大きなヘビだ。"
 
-# ../lib/gamedata/monster.txt:2789
+# J0#
+# ../lib/gamedata/monster.txt:2711
+#, fuzzy
 msgid "baby gold dragon"
-msgstr ""
+msgstr "ベビー・レッド・ドラゴン"
 
-# ../lib/gamedata/monster.txt:2809
+# ../lib/gamedata/monster.txt:2732
+#, fuzzy
 msgid ""
 "This hatchling dragon is still soft, its eyes unaccustomed to light and its "
 "scales a pale gold."
 msgstr ""
+"このドラゴンは生まれたばかりなので、まだそれほど凶暴ではない。その目は光に慣"
+"れておらず、鱗は薄い赤色をしている。"
 
-# ../lib/gamedata/monster.txt:2810
+# J0#
+# ../lib/gamedata/monster.txt:2110
+#, fuzzy
 msgid "cave bear"
-msgstr ""
+msgstr "洞窟オーク"
 
 # ../lib/gamedata/monster.txt:2829
 msgid ""
@@ -1136,17 +1336,20 @@ msgid ""
 "you are trespassing in its territory."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:2838
 msgid "giant spider"
-msgstr ""
+msgstr "大蜘蛛"
 
 # ../lib/gamedata/monster.txt:2858
 msgid "It is a vast black spider whose bulbous body is bloated with poison."
-msgstr ""
+msgstr "それは巨大な黒い蜘蛛で、その膨れた腹には毒が充満している。"
 
-# ../lib/gamedata/monster.txt:2859
+# J0#
+# ../lib/gamedata/monster.txt:1255
+#, fuzzy
 msgid "blacklock mage"
-msgstr ""
+msgstr "ブラック・ナーガ"
 
 # ../lib/gamedata/monster.txt:2882
 msgid ""
@@ -1154,9 +1357,10 @@ msgid ""
 "you."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:2883
 msgid "Orfax, Son of Boldor"
-msgstr ""
+msgstr "ボルドールの息子『オルファックス』"
 
 # ../lib/gamedata/monster.txt:2910
 msgid ""
@@ -1172,41 +1376,47 @@ msgstr ""
 msgid "A dwarf of the east in a coat of iron rings and wielding an axe."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:2928
 msgid "clear mushroom patch"
-msgstr ""
+msgstr "透明おばけキノコ"
 
-# ../lib/gamedata/monster.txt:2946
+# J0#
+# ../lib/gamedata/monster.txt:3345
+#, fuzzy
 msgid "Grishnákh, the Hill Orc"
-msgstr ""
+msgstr "丘オークの隊長『ゴルフィンブール』"
 
 # ../lib/gamedata/monster.txt:2968
 msgid "He is a cunning and devious orc with a chaotic nature."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:2969
 msgid "giant white tick"
-msgstr ""
+msgstr "巨大白ダニ"
 
 # ../lib/gamedata/monster.txt:2985
 msgid "It is moving slowly towards you."
-msgstr ""
+msgstr "それはゆっくりと冒険者の方に向かってくる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:2986
 msgid "hairy mold"
-msgstr ""
+msgstr "毛むくじゃらモルド"
 
 # ../lib/gamedata/monster.txt:3000
 msgid "It is a strange hairy growth on the dungeon floor."
-msgstr ""
+msgstr "それはダンジョンの床に生えている奇妙なカビで毛が生えている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3001
 msgid "disenchanter mold"
-msgstr ""
+msgstr "劣化モルド"
 
 # ../lib/gamedata/monster.txt:3019
 msgid "It is a strange glowing growth on the dungeon floor."
-msgstr ""
+msgstr "それはダンジョンの床に生えている奇妙な輝くカビだ。"
 
 # ../lib/gamedata/monster.txt:3020
 msgid "pseudo-dragon"
@@ -1214,21 +1424,25 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:3042
 msgid "A small relative of the dragon that inhabits dark caves."
-msgstr ""
+msgstr "暗い洞窟に生息するドラゴンの小型の近隣種だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3043
 msgid "tengu"
-msgstr ""
+msgstr "テング"
 
 # ../lib/gamedata/monster.txt:3062
 msgid ""
 "It is a fast-moving demon that blinks quickly in and out of existence; no "
 "other demon matches its teleporting mastery."
 msgstr ""
+"それは動きの素早いデーモンで、瞬時に消えたり現れたりする。このテレポートの技"
+"術はデーモンの中でも秀でている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3063
 msgid "creeping gold coins"
-msgstr ""
+msgstr "金のクリーピングコイン"
 
 # ../lib/gamedata/monster.txt:3080
 msgid ""
@@ -1236,30 +1450,35 @@ msgid ""
 "on tiny legs."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:3082
 msgid "wolf"
-msgstr ""
+msgstr "狼"
 
 # ../lib/gamedata/monster.txt:3100
 msgid "It howls and snaps at you."
-msgstr ""
+msgstr "それは冒険者に吠えたてては、飛びかかってくる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3101
 msgid "giant fruit fly"
-msgstr ""
+msgstr "巨大フルーツ・バエ"
 
 # ../lib/gamedata/monster.txt:3115
 msgid "A fast-breeding, annoying pest."
-msgstr ""
+msgstr "素早く増殖するやっかいな奴だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3116
 msgid "panther"
-msgstr ""
+msgstr "黒豹"
 
 # ../lib/gamedata/monster.txt:3133
 msgid ""
 "A large black cat, stalking you with intent.  It thinks you're its next meal."
 msgstr ""
+"欲望を持って忍び寄る大きな黒いネコ科の生物だ。それは冒険者を食料ぐらいにしか"
+"考えていない。"
 
 # ../lib/gamedata/monster.txt:3134
 msgid "witch"
@@ -1269,31 +1488,41 @@ msgstr ""
 msgid "She is dressed in black and smells of decay."
 msgstr ""
 
+# J0#
+# J0#
+# J0#(コメント)
+# J0# 「万色」という訳語は小林さんに教わりました。
+# J0#
 # ../lib/gamedata/monster.txt:3163
 msgid "baby multi-hued dragon"
-msgstr ""
+msgstr "ベビー万色ドラゴン"
 
-# ../lib/gamedata/monster.txt:3185
+# ../lib/gamedata/monster.txt:2666
+#, fuzzy
 msgid ""
 "This hatchling dragon is still soft, its eyes unaccustomed to light and its "
 "scales shimmering with hints of many different colours."
 msgstr ""
+"このドラゴンは生まれたばかりなので、まだそれほど凶暴ではない。その目は光に慣"
+"れておらず、鱗は薄い白色をしている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3186
 msgid "hippogriff"
-msgstr ""
+msgstr "ヒポグリフ"
 
 # ../lib/gamedata/monster.txt:3203
 msgid "A strange hybrid of eagle and horse.  It looks weird."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:3204
 msgid "zombified orc"
-msgstr ""
+msgstr "ゾンビ・オーク"
 
 # ../lib/gamedata/monster.txt:3221
 msgid "It is a shambling orcish corpse leaving behind a trail of flesh."
-msgstr ""
+msgstr "それはオークの死骸で、新鮮な肉の痕跡を追ってよろめき歩く。"
 
 # ../lib/gamedata/monster.txt:3222
 msgid "drúadan mage"
@@ -1303,25 +1532,30 @@ msgstr ""
 msgid "A mage of short stature with stumpy legs and a wispy beard."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:3246
+# J0#
+# ../lib/gamedata/monster.txt:4394
+#, fuzzy
 msgid "old forest tree"
-msgstr ""
+msgstr "森トロル"
 
 # ../lib/gamedata/monster.txt:3264
 msgid "An ancient tree that seems to be watching you."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:3267
 msgid "black mamba"
-msgstr ""
+msgstr "ブラック・マンバ"
 
 # ../lib/gamedata/monster.txt:3284
 msgid "It has glistening black skin, a sleek body and highly venomous fangs."
 msgstr ""
+"それはキラキラと光る黒い皮膚、つやつやした体、長く巨大な牙を持っている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3285
 msgid "white wolf"
-msgstr ""
+msgstr "白狼"
 
 # ../lib/gamedata/monster.txt:3305
 msgid ""
@@ -1329,17 +1563,26 @@ msgid ""
 "icy and its fur coated in frost."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:3306
 msgid "grape jelly"
-msgstr ""
+msgstr "グレープ・ゼリー"
 
-# ../lib/gamedata/monster.txt:3326
+# ../lib/gamedata/monster.txt:3964
+#, fuzzy
 msgid "Yum!  It looks quite tasty.  It is a pulsing mound of glowing flesh."
 msgstr ""
+"うーん！それはとてもおいしそうに見える。それは奇妙な光に輝いているようだ。"
 
+# J0#
+# J0#
+# J0# (コメント)
+# J0#
+# J0# nether の「冥界」という訳は monoTone さんのアイデア
+# J0#
 # ../lib/gamedata/monster.txt:3327
 msgid "nether worm mass"
-msgstr ""
+msgstr "冥界イモムシの大群"
 
 # ../lib/gamedata/monster.txt:3344
 msgid ""
@@ -1347,80 +1590,98 @@ msgid ""
 "air, you...."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:3345
 msgid "Golfimbul, the Hill Orc Chief"
-msgstr ""
+msgstr "丘オークの隊長『ゴルフィンブール』"
 
 # ../lib/gamedata/monster.txt:3370
 msgid "A leader of a band of raiding orcs, he picks on hobbits."
-msgstr ""
+msgstr "オークの襲撃隊の隊長で、ホビットをつけ狙っている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3371
 msgid "master yeek"
-msgstr ""
+msgstr "マスター・イーク"
 
 # ../lib/gamedata/monster.txt:3394
 msgid "A small humanoid that radiates some power."
-msgstr ""
+msgstr "何らかの力を放射する人間型のモンスターだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3395
 msgid "priest"
-msgstr ""
+msgstr "プリースト"
 
 # ../lib/gamedata/monster.txt:3425
 msgid "A robed man, dedicated to his god."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:3426
+# J0#
+# ../lib/gamedata/monster.txt:8005
+#, fuzzy
 msgid "ironfist priest"
-msgstr ""
+msgstr "トロル・プリースト"
 
 # ../lib/gamedata/monster.txt:3447
 msgid ""
 "A dwarf of the east, dressed all in black, chanting words of dark sorcery."
 msgstr ""
 
+# J0#
+# J0#
+# J0#(コメント)
+# J0# スピリットについてもエレメンタルと同様に「土水火風」の部分を日本語に
+# J0# 訳してある。四大元素の「土水火風」というのは日本語の方がなじみがあると
+# J0# いう判断です。
+# J0#
 # ../lib/gamedata/monster.txt:3448
 msgid "air spirit"
-msgstr ""
+msgstr "風のスピリット"
 
 # ../lib/gamedata/monster.txt:3464
 msgid "A whirlwind of sentient air."
-msgstr ""
+msgstr "知能を持った旋風だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3465
 msgid "skeleton human"
-msgstr ""
+msgstr "スケルトン"
 
 # ../lib/gamedata/monster.txt:3480
 msgid "It is an animated human skeleton."
-msgstr ""
+msgstr "生命を吹き込まれた人間の骸骨だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3481
 msgid "zombified human"
-msgstr ""
+msgstr "ゾンビ"
 
 # ../lib/gamedata/monster.txt:3497
 msgid "It is a shambling human corpse dropping chunks of flesh behind it."
-msgstr ""
+msgstr "肉を落としながらよろめき歩く人間の死骸だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3498
 msgid "tiger"
-msgstr ""
+msgstr "トラ"
 
 # ../lib/gamedata/monster.txt:3516
 msgid ""
 "One of the largest of its species, a sleek orange and black shape creeps "
 "towards you, ready to pounce."
 msgstr ""
+"その種の中で最も大きなものの一つで、オレンジと黒のまだらのなめらかな毛皮を持"
+"ち、冒険者に飛びかかろうと忍び寄ってくる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3517
 msgid "moaning spirit"
-msgstr ""
+msgstr "唸るスピリット"
 
 # ../lib/gamedata/monster.txt:3536
 msgid "A ghostly apparition that shrieks horribly."
-msgstr ""
+msgstr "恐ろしげに唸る幽霊だ。"
 
 # ../lib/gamedata/monster.txt:3537
 msgid "warrior"
@@ -1428,62 +1689,72 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:3561
 msgid "A warrior of considerable skill."
-msgstr ""
+msgstr "かなりの戦闘技術を持った戦士だ。"
 
-# ../lib/gamedata/monster.txt:3562
+# J0#
+# ../lib/gamedata/monster.txt:577
+#, fuzzy
 msgid "stegocentipede"
-msgstr ""
+msgstr "巨大白ムカデ"
 
 # ../lib/gamedata/monster.txt:3579
 msgid ""
 "It is a vast armoured centipede with massive mandibles and a spiked tail."
-msgstr ""
+msgstr "それは頑丈な顎と尖った尻尾を持った、防御力の高い巨大なムカデだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3580
 msgid "spotted jelly"
-msgstr ""
+msgstr "斑点ゼリー"
 
 # ../lib/gamedata/monster.txt:3599
 msgid "A strange jelly thing, covered in discoloured blotches."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:3602
 msgid "killer brown beetle"
-msgstr ""
+msgstr "ブラウン・キラービートル"
 
 # ../lib/gamedata/monster.txt:3615
 msgid "It is a vicious insect with a tough carapace."
-msgstr ""
+msgstr "それは頑丈な甲羅を持った凶暴な昆虫だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3616
 msgid "ochre jelly"
-msgstr ""
+msgstr "オーカー・ゼリー"
 
 # ../lib/gamedata/monster.txt:3636
 msgid ""
 "A fast moving highly acidic jelly thing, that is eating away the floor it "
 "rests on."
 msgstr ""
+"動きの素早い、酸に満ちあふれたゼリーのような物体で、周りの床をも腐食させてい"
+"る。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3637
 msgid "Boldor, King of the Yeeks"
-msgstr ""
+msgstr "イークの大王『ボルドール』"
 
 # ../lib/gamedata/monster.txt:3663
 msgid "A great yeek, powerful in magic and sorcery, but a yeek all the same."
-msgstr ""
+msgstr "偉大なイークで魔法を得意としているが、やっぱりイークだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3664
 msgid "ogre"
-msgstr ""
+msgstr "オーガ"
 
 # ../lib/gamedata/monster.txt:3681
 msgid "A hideous, smallish giant that is often found near or with orcs."
-msgstr ""
+msgstr "醜怪な小型のジャイアントで、しばしばオークと共に見受けられる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3682
 msgid "creeping mithril coins"
-msgstr ""
+msgstr "ミスリルのクリーピングコイン"
 
 # ../lib/gamedata/monster.txt:3699
 msgid ""
@@ -1491,17 +1762,28 @@ msgid ""
 "picked up."
 msgstr ""
 
+# J0#
+# J0#
+# J0# (コメント)
+# J0# 名前の翻訳は 立花えりりん さんから教わりました。
+# J0#
 # ../lib/gamedata/monster.txt:3701
 msgid "illusionist"
-msgstr ""
+msgstr "幻術師"
 
 # ../lib/gamedata/monster.txt:3728
 msgid "A deceptive spell caster."
-msgstr ""
+msgstr "彼はまやかしを得意とする呪術師だ。"
 
+# J0#
+# J0#
+# J0# (コメント)
+# J0# "Om" を「うむ」と適当に訳していましたが、わるつまん さんから正しい訳を
+# J0# 教わりました。
+# J0#
 # ../lib/gamedata/monster.txt:3729
 msgid "druid"
-msgstr ""
+msgstr "ドルイド僧"
 
 # ../lib/gamedata/monster.txt:3754
 msgid "A priest devoted to Nature."
@@ -1515,112 +1797,148 @@ msgstr ""
 msgid "He has a bow of horn and a quiver full of black-feathered arrows."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:3779
 msgid "giant flea"
-msgstr ""
+msgstr "巨大ノミ"
 
+# J0#
 # ../lib/gamedata/monster.txt:3794
 msgid "Ufthak of Cirith Ungol"
-msgstr ""
+msgstr "キリス・ウンゴルの『ウフサク』"
 
 # ../lib/gamedata/monster.txt:3818
 msgid ""
 "A strong orc guarding the pass of Cirith Ungol.  He is mortally afraid of "
 "spiders."
 msgstr ""
+"キリス・ウンゴルの通り道を守る力の強いオークだ。彼は極度に蜘蛛を恐れている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3819
 msgid "blue icky thing"
-msgstr ""
+msgstr "青ベトベト"
 
 # ../lib/gamedata/monster.txt:3843
 msgid ""
 "It is a strange, slimy, icky creature, with rudimentary intelligence, but "
 "evil cunning.  It hungers for food, and you look tasty."
 msgstr ""
+"原始的な知能を持ったネバネバした奇妙な生物だ。しかしその知能とは邪悪なずる賢"
+"さでしかない。それは常に食料に飢えていて、冒険者をとてもおいしそうに見つめて"
+"いる。"
 
+# Note! Flesh golem's CAN_SWIM is a tribute to Shelley...
+# J0#
+# J0#
+# J0#(コメント)
+# J0# ゴーレムについてはイメージしやすいように日本語に訳してある。
+# J0#
 # ../lib/gamedata/monster.txt:3844
 msgid "flesh golem"
-msgstr ""
+msgstr "肉ゴーレム"
 
 # ../lib/gamedata/monster.txt:3859
 msgid "A shambling humanoid monster with long scars."
-msgstr ""
+msgstr "よろめき歩く、体中傷だらけの人間型モンスターだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3860
 msgid "warg"
-msgstr ""
+msgstr "ワーグ"
 
 # ../lib/gamedata/monster.txt:3877
 msgid "It is a large wolf with eyes full of cunning."
-msgstr ""
+msgstr "それはずる賢そうな目をした大きな狼だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3878
 msgid "lurker"
-msgstr ""
+msgstr "ラーカー"
 
 # ../lib/gamedata/monster.txt:3893
 msgid ""
 "A strange creature that merges with the dungeon floor, trapping its victims "
 "by enveloping them within its perfectly disguised form."
 msgstr ""
+"ダンジョンの床と混じり合うことのできる奇妙な生物で、その完璧なる変装能力に"
+"よって、犠牲者を包み込んでしまおうと隠れて待ちかまえている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3896
 msgid "wererat"
-msgstr ""
+msgstr "ワーラット"
 
 # ../lib/gamedata/monster.txt:3921
 msgid ""
 "A large rat with glowing red eyes.  The wererat is a disgusting creature, "
 "relishing in filth and disease."
 msgstr ""
+"赤い目を輝かせる大きなネズミだ。ワーラットは汚物と病気の中にいるのを好む忌む"
+"べき生物だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3922
 msgid "black ogre"
-msgstr ""
+msgstr "ブラック・オーガ"
 
 # ../lib/gamedata/monster.txt:3941
 msgid "A massive orc-like figure with black skin and powerful arms."
-msgstr ""
+msgstr "強力なオーク型の生物で、黒い肌と強い腕力を持っている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3942
 msgid "magic mushroom patch"
-msgstr ""
+msgstr "魔法おばけキノコ"
 
 # ../lib/gamedata/monster.txt:3964
 msgid "Yum!  It looks quite tasty.  It seems to glow with an unusual light."
 msgstr ""
+"うーん！それはとてもおいしそうに見える。それは奇妙な光に輝いているようだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:3965
 msgid "guardian naga"
-msgstr ""
+msgstr "ガーディアン・ナーガ"
 
 # ../lib/gamedata/monster.txt:3982
 msgid "A giant snake-like figure with a woman's torso."
-msgstr ""
+msgstr "女性の上半身を持ったヘビのような巨大な生物だ。"
 
+# J0#
+# J0#
+# J0#(コメント)
+# J0# ハウンドについては「土水火風」がすべて含まれているのだが、日本語に訳すと
+# J0# 雰囲気が悪くなりそうなものが多いので、それとの統一からカタカナにしてある。
+# J0# ただ、カタカナでまったく理解できそうもないものは日本語にしてある。
+# J0# エレメンタル、スピリットとの統一がとれていないのは問題があるかもしれない。
+# J0#
 # ../lib/gamedata/monster.txt:3983
 msgid "light hound"
-msgstr ""
+msgstr "ライト・ハウンド"
 
 # ../lib/gamedata/monster.txt:4005
 msgid ""
 "A brilliant canine form whose light hurts your eyes, even at this distance."
-msgstr ""
+msgstr "光を発する犬型の生物で、その光は離れた所からでも冒険者の目を傷つける。"
 
-# ../lib/gamedata/monster.txt:4006
+# J0#
+# ../lib/gamedata/monster.txt:5008
+#, fuzzy
 msgid "dark hound"
-msgstr ""
+msgstr "エア・ハウンド"
 
 # ../lib/gamedata/monster.txt:4029
 msgid ""
 "A hole in the air in the shape of a huge hound.  No light falls upon its "
 "form."
 msgstr ""
+"巨大な犬の形をした空気の穴だ。どんな光もその姿を照らし出すことはできない。"
 
+# J0#
 # ../lib/gamedata/monster.txt:4030
 msgid "half-orc"
-msgstr ""
+msgstr "ハーフオーク"
 
 # ../lib/gamedata/monster.txt:4053
 msgid ""
@@ -1629,25 +1947,29 @@ msgid ""
 "generally believed to be responsible for this abomination."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:4054
 msgid "giant tarantula"
-msgstr ""
+msgstr "巨大タランチュラ"
 
 # ../lib/gamedata/monster.txt:4071
 msgid "A giant, fast-moving spider with hairy black and red legs."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:4072
 msgid "giant clear centipede"
-msgstr ""
+msgstr "巨大透明ムカデ"
 
+# J0#
 # ../lib/gamedata/monster.txt:4091
 msgid "griffon"
-msgstr ""
+msgstr "グリフォン"
 
 # ../lib/gamedata/monster.txt:4108
 msgid "It is half lion, half eagle.  It flies menacingly towards you."
 msgstr ""
+"その体は半分がライオンで、半分が鷲だ。それは冒険者の方へ威嚇的に飛んでくる。"
 
 # ../lib/gamedata/monster.txt:4109
 msgid "homunculus"
@@ -1655,46 +1977,52 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:4126
 msgid "It is a small demonic spirit full of malevolence."
-msgstr ""
+msgstr "それは悪意に満ちあふれた小さなデーモンの精霊だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:4127
 msgid "clear hound"
-msgstr ""
+msgstr "クリア・ハウンド"
 
 # ../lib/gamedata/monster.txt:4147
 msgid "A completely translucent hound."
-msgstr ""
+msgstr "完全に半透明の犬だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:4148
 msgid "clay golem"
-msgstr ""
+msgstr "土ゴーレム"
 
 # ../lib/gamedata/monster.txt:4165
 msgid "It is a massive animated statue made out of hardened clay."
-msgstr ""
+msgstr "それは生命を吹き込まれた堂々たる巨像で、硬い土でできている。"
 
-# ../lib/gamedata/monster.txt:4166
+# J0#
+# ../lib/gamedata/monster.txt:1977
+#, fuzzy
 msgid "giant tan bat"
-msgstr ""
+msgstr "巨大茶コウモリ"
 
 # ../lib/gamedata/monster.txt:4185
 msgid ""
 "A giant bat, the beating of whose wings produces a strangely unnerving noise."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:4188
 msgid "umber hulk"
-msgstr ""
+msgstr "アンバーハルク"
 
 # ../lib/gamedata/monster.txt:4207
 msgid ""
 "This bizarre creature has glaring eyes and large mandibles capable of "
 "slicing through rock."
-msgstr ""
+msgstr "この奇怪な生物はギラギラ光る目と、岩をも切り裂く巨大な顎を持っている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:4208
 msgid "gelatinous cube"
-msgstr ""
+msgstr "ゼラチナス・キューブ"
 
 # ../lib/gamedata/monster.txt:4232
 msgid ""
@@ -1703,6 +2031,9 @@ msgid ""
 "transparent jelly structure you can see treasures it has engulfed, and a few "
 "corpses as well."
 msgstr ""
+"それは立方体の形をした奇妙で巨大なゼリー状の構造物で、部屋の四方の壁に沿って"
+"並んでいる。その透明な体の中には、飲み込まれた財宝といくらかの死骸を見て取る"
+"ことができる。"
 
 # ../lib/gamedata/monster.txt:4233
 msgid "rogue"
@@ -1712,34 +2043,43 @@ msgstr ""
 msgid "He is eyeing your backpack."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:4259
 msgid "Ulfast, Son of Ulfang"
-msgstr ""
+msgstr "ウルファングの息子『ウルファスト』"
 
 # ../lib/gamedata/monster.txt:4281
 msgid "A short and swarthy Easterling."
-msgstr ""
+msgstr "背が低くて浅黒い肌をした東夷だ。"
 
+# J0#
+# J0#
+# J0#(コメント)
+# J0#「クァジット」とも読むという指摘を受けたが、私は jnethack で「クアシト」
+# J0# という呼び名に親しんでいたので、こうしてある。
+# J0#
 # ../lib/gamedata/monster.txt:4282
 msgid "quasit"
-msgstr ""
+msgstr "クアシト"
 
 # ../lib/gamedata/monster.txt:4304
 msgid "A demon of small stature with an annoying bite."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:4305
 msgid "uruk"
-msgstr ""
+msgstr "ウルク"
 
 # ../lib/gamedata/monster.txt:4328
 msgid ""
 "A cunning orc of power, as tall as a man, and stronger.  It fears little."
 msgstr ""
 
+# JZ#
 # ../lib/gamedata/monster.txt:4329
 msgid "grizzly bear"
-msgstr ""
+msgstr "グリズリー"
 
 # ../lib/gamedata/monster.txt:4347
 msgid "A huge, beastly bear, more savage than most of its kind."
@@ -1756,17 +2096,19 @@ msgid ""
 "now they seek to alert other evil creatures to your presence."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:4372
 msgid "imp"
-msgstr ""
+msgstr "インプ"
 
 # ../lib/gamedata/monster.txt:4393
 msgid "A poisonous little mischief-maker."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:4394
 msgid "forest troll"
-msgstr ""
+msgstr "森トロル"
 
 # ../lib/gamedata/monster.txt:4414
 msgid "He is green skinned, ugly and stupid."
@@ -1784,57 +2126,65 @@ msgid ""
 "his anger."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:4441
 msgid "2-headed hydra"
-msgstr ""
+msgstr "双頭ヒドラ"
 
 # ../lib/gamedata/monster.txt:4459
 msgid "A strange reptilian hybrid with two heads, guarding its hoard."
-msgstr ""
+msgstr "二つの首を持った奇妙な雑種の爬虫類で、蓄えた財宝を守っている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:4460
 msgid "water spirit"
-msgstr ""
+msgstr "水のスピリット"
 
 # ../lib/gamedata/monster.txt:4477
 msgid "A whirlpool of sentient liquid."
-msgstr ""
+msgstr "知能を持った液体の渦巻きだ。"
 
+# JZ#
 # ../lib/gamedata/monster.txt:4478
 msgid "giant red scorpion"
-msgstr ""
+msgstr "巨大赤サソリ"
 
 # ../lib/gamedata/monster.txt:4495
 msgid "It is fast and poisonous."
-msgstr ""
+msgstr "その動きは素早く、毒を持っている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:4496
 msgid "earth spirit"
-msgstr ""
+msgstr "地のスピリット"
 
 # ../lib/gamedata/monster.txt:4513
 msgid "A whirling form of sentient rock."
-msgstr ""
+msgstr "知能を持った岩が渦巻いたような姿をしている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:4516
 msgid "hummerhorn"
-msgstr ""
+msgstr "ハマーホーン"
 
 # ../lib/gamedata/monster.txt:4530
 msgid "A giant buzzing wasp, its stinger drips venom."
-msgstr ""
+msgstr "羽音をたてる巨大な昆虫で、その刺には毒がある。"
 
+# J0#
 # ../lib/gamedata/monster.txt:4531
 msgid "orc captain"
-msgstr ""
+msgstr "オーク・キャプテン"
 
 # ../lib/gamedata/monster.txt:4557
 msgid "An armoured orc with an air of authority."
-msgstr ""
+msgstr "鎧を着たオークで、威厳のある雰囲気を漂わせている。"
 
-# ../lib/gamedata/monster.txt:4558
+# J0#
+# ../lib/gamedata/monster.txt:1255
+#, fuzzy
 msgid "blackguard"
-msgstr ""
+msgstr "ブラック・ナーガ"
 
 # ../lib/gamedata/monster.txt:4587
 msgid ""
@@ -1842,47 +2192,58 @@ msgid ""
 "menacingly."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:4588
 msgid "fire spirit"
-msgstr ""
+msgstr "火のスピリット"
 
 # ../lib/gamedata/monster.txt:4605
 msgid "A whirlwind of sentient flame."
-msgstr ""
+msgstr "知能を持った火炎の渦巻きだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:4606
 msgid "fire hound"
-msgstr ""
+msgstr "ファイア・ハウンド"
 
 # ../lib/gamedata/monster.txt:4630
 msgid ""
 "Flames lick at its feet and its tongue is a blade of fire.  You can feel a "
 "furnace heat radiating from the creature."
 msgstr ""
+"火炎がその足下から立ちのぼり、その舌はまるで炎の剣のようだ。この生物が発散す"
+"る熱気を浴びると、まるで溶鉱炉に投げ込まれたかのような感じがする。"
 
+# J0#
 # ../lib/gamedata/monster.txt:4631
 msgid "cold hound"
-msgstr ""
+msgstr "コールド・ハウンド"
 
 # ../lib/gamedata/monster.txt:4654
 msgid ""
 "A hound as tall as a man, this creature appears to be composed of angular "
 "planes of ice.  Cold radiates from it and freezes your breath in the air."
 msgstr ""
+"人間ほどの大きさのある犬で、角張った氷でできているような生物だ。体からは冷気"
+"が放射され、吐く息すらも凍ってしまう。"
 
+# J0#
 # ../lib/gamedata/monster.txt:4655
 msgid "energy hound"
-msgstr ""
+msgstr "エナジー・ハウンド"
 
 # ../lib/gamedata/monster.txt:4679
 msgid ""
 "Saint Elmo's Fire forms a ghostly halo around this hound, and sparks sting "
 "your fingers as energy builds up in the air around you."
 msgstr ""
+"セントエルモの炎のような幽玄な後光がこの犬を包み込んでいる。辺りに満ちたエネ"
+"ルギーが冒険者の周りに立ちのぼり、火花が指を突き刺す。"
 
+# JZ#
 # ../lib/gamedata/monster.txt:4680
 msgid "potion mimic"
-msgstr ""
+msgstr "ミミック(薬)"
 
 # ../lib/gamedata/monster.txt:4701
 msgid ""
@@ -1890,25 +2251,30 @@ msgid ""
 "lure unsuspecting adventurers within reach of its venomous claws."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:4708
 msgid "blink dog"
-msgstr ""
+msgstr "ブリンク・ドッグ"
 
 # ../lib/gamedata/monster.txt:4728
 msgid ""
 "A strange magical member of the canine race, its form seems to shimmer and "
 "fade in front of your very eyes."
 msgstr ""
+"犬科に属する奇妙な魔法の生物だ。その姿は点滅していて、目の前から瞬時に消え失"
+"せたりする。"
 
+# J0#
 # ../lib/gamedata/monster.txt:4729
 msgid "shambling mound"
-msgstr ""
+msgstr "よろめき歩く塊"
 
 # ../lib/gamedata/monster.txt:4750
 msgid ""
 "A pile of rotting vegetation that slides towards you with a disgusting "
 "stench, waking all it nears."
 msgstr ""
+"悪臭を振りまいて付近のものを目覚めさせながら這いずり回る、腐った植物の塊だ。"
 
 # ../lib/gamedata/monster.txt:4751
 msgid "evil eye"
@@ -1921,9 +2287,10 @@ msgid ""
 "anything except approach it in horrified fascination."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:4775
 msgid "Shagrat, the Orc Captain"
-msgstr ""
+msgstr "オークの隊長『シャグラト』"
 
 # ../lib/gamedata/monster.txt:4800
 msgid ""
@@ -1931,9 +2298,10 @@ msgid ""
 "Ungol."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:4801
 msgid "Gorbag, the Orc Captain"
-msgstr ""
+msgstr "オークの隊長『ゴルバグ』"
 
 # ../lib/gamedata/monster.txt:4826
 msgid ""
@@ -1941,26 +2309,31 @@ msgid ""
 "Morgul."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:4827
 msgid "stone golem"
-msgstr ""
+msgstr "石ゴーレム"
 
 # ../lib/gamedata/monster.txt:4844
 msgid "It is a massive animated statue."
-msgstr ""
+msgstr "それは生命を吹き込まれた堂々たる石像だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:4845
 msgid "red mold"
-msgstr ""
+msgstr "レッド・モルド"
 
 # ../lib/gamedata/monster.txt:4863
 msgid ""
 "It is a strange red growth on the dungeon floor; it seems to burn with flame."
 msgstr ""
+"それはダンジョンの床に生えている奇妙な赤いカビで、炎に燃えているようだ。"
 
+# JZ#
+# JZ#It looks very cute, except for the razor sharp teeth. It moans 
 # ../lib/gamedata/monster.txt:4864
 msgid "Old Man Willow"
-msgstr ""
+msgstr "『柳じじい』"
 
 # ../lib/gamedata/monster.txt:4889
 msgid ""
@@ -1982,19 +2355,23 @@ msgid ""
 "ferocity."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:4915
 msgid "Mirkwood spider"
-msgstr ""
+msgstr "闇の森蜘蛛"
 
 # ../lib/gamedata/monster.txt:4936
 msgid ""
 "A strong and powerful spider from Mirkwood forest.  Cunning and evil, it "
 "seeks to taste your juicy insides."
 msgstr ""
+"闇の森に生息する強力な蜘蛛だ。ずる賢く邪悪で、冒険者の肉体内部の水分を賞味し"
+"ようとしている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:4937
 msgid "Bolg, Son of Azog"
-msgstr ""
+msgstr "アゾグの息子『ボルグ』"
 
 # ../lib/gamedata/monster.txt:4962
 msgid ""
@@ -2002,37 +2379,46 @@ msgid ""
 "fast, but fortunately blessed with orcish brains."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:4963
+# J0#
+# ../lib/gamedata/monster.txt:4441
+#, fuzzy
 msgid "3-headed hydra"
-msgstr ""
+msgstr "双頭ヒドラ"
 
 # ../lib/gamedata/monster.txt:4983
 msgid "A 2-headed hydra with an extra head, its mouth dripping venom."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:4984
 msgid "earth hound"
-msgstr ""
+msgstr "アース・ハウンド"
 
 # ../lib/gamedata/monster.txt:5007
 msgid ""
 "A beautiful crystalline shape does not disguise the danger this hound "
 "clearly presents.  Your flesh tingles as it approaches."
 msgstr ""
+"水晶のような美しい姿をしているが、一目見ればこのハウンドが危険な存在であるこ"
+"とは明らかだ。それが近づいてくると、冒険者の体は興奮でゾクゾクとしてくる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:5008
 msgid "air hound"
-msgstr ""
+msgstr "エア・ハウンド"
 
 # ../lib/gamedata/monster.txt:5032
 msgid ""
 "Swirling vapours surround this beast as it floats towards you, seemingly "
 "walking on air.  Noxious gases sting your throat."
 msgstr ""
+"渦巻く蒸気を体にまといながら、まるで空気の上を歩くかのように、宙を浮いて近づ"
+"いてくる野獣だ。有害なガスが冒険者の喉を刺激する。"
 
+# J0#
 # ../lib/gamedata/monster.txt:5033
 msgid "sabre-tooth tiger"
-msgstr ""
+msgstr "サーベル・タイガー"
 
 # ../lib/gamedata/monster.txt:5052
 msgid ""
@@ -2040,19 +2426,22 @@ msgid ""
 "even the strongest armour."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:5053
 msgid "water hound"
-msgstr ""
+msgstr "ウォーター・ハウンド"
 
 # ../lib/gamedata/monster.txt:5077
 msgid ""
 "Liquid footprints follow this hound as it pads around the dungeon.  An acrid "
 "smell of acid rises from the dog's pelt."
 msgstr ""
+"しめった足跡を残しながらダンジョンを徘徊する犬だ。その毛皮からは刺激的な酸の"
+"匂いが立ち昇っている。"
 
 # ../lib/gamedata/monster.txt:5078
 msgid "chimaera"
-msgstr ""
+msgstr "ギンザメ"
 
 # ../lib/gamedata/monster.txt:5100
 msgid ""
@@ -2060,29 +2449,45 @@ msgid ""
 "three beasts."
 msgstr ""
 
+# J0#
+# J0#
+# J0#(コメント)
+# J0# "Quylthulg" に関してはまったく調べがつかなかった。このモンスターを
+# J0# 知っているという人も私の知る限りでは一人もいなかった。一体「クイルスルグ」
+# J0# で読み方が良いのかどうか、いまだに判断がつかない。
+# J0#
 # ../lib/gamedata/monster.txt:5101
 msgid "quylthulg"
-msgstr ""
+msgstr "クイルスルグ"
 
 # ../lib/gamedata/monster.txt:5117
 msgid "It is a strange pulsing mound of flesh."
-msgstr ""
+msgstr "それは脈打つ奇妙な肉の塊だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:5118
 msgid "sasquatch"
-msgstr ""
+msgstr "サスカッチ"
 
 # ../lib/gamedata/monster.txt:5135
 msgid "A tall shaggy, furry humanoid, it could call the yeti brother."
 msgstr ""
+"背が高く毛深い人間型の生物だ。それは兄弟であるイエティを呼ぶことがある。"
 
+# J0#
+# J0#
+# J0#(コメント)
+# J0# ワーウルフについては p.263 で「人狼」という訳語が用いられている。
+# J0# しかし、そうするとワーラットがなんとも訳し難くなるので、ここでは
+# J0# 「ワーウルフ」と「ワー～」で統一してある。
+# J0#
 # ../lib/gamedata/monster.txt:5136
 msgid "werewolf"
-msgstr ""
+msgstr "ワーウルフ"
 
 # ../lib/gamedata/monster.txt:5155
 msgid "It is a huge wolf with eyes that glow with manly intelligence."
-msgstr ""
+msgstr "それは人間の知性を宿した、輝く目をした巨大な狼だ。"
 
 # ../lib/gamedata/monster.txt:5156
 msgid "dark dwarven lord"
@@ -2096,7 +2501,7 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:5184
 msgid "ranger"
-msgstr ""
+msgstr "レンジャー"
 
 # ../lib/gamedata/monster.txt:5215
 msgid ""
@@ -2106,7 +2511,7 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:5216
 msgid "paladin"
-msgstr ""
+msgstr "パラディン"
 
 # ../lib/gamedata/monster.txt:5245
 msgid ""
@@ -2114,25 +2519,28 @@ msgid ""
 "is rivalry even between the various gods of Good, so he is your enemy."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:5248
 msgid "Lugdush, the Uruk"
-msgstr ""
+msgstr "ウルク『ルグドゥシュ』"
 
 # ../lib/gamedata/monster.txt:5271
 msgid "A large and powerful orc, captain of one of Saruman's orcish regiments."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:5272
 msgid "blue dragon bat"
-msgstr ""
+msgstr "ブルー・ドラゴンバット"
 
 # ../lib/gamedata/monster.txt:5290
 msgid "It is a glowing blue bat with a sharp tail."
-msgstr ""
+msgstr "それは鋭い尻尾を持った青く輝くコウモリだ。"
 
+# JZ#
 # ../lib/gamedata/monster.txt:5291
 msgid "scroll mimic"
-msgstr ""
+msgstr "ミミック(巻物)"
 
 # ../lib/gamedata/monster.txt:5314
 msgid ""
@@ -2140,37 +2548,41 @@ msgid ""
 "unsuspecting adventurers within reach of its venomous claws."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:5321
 msgid "fire vortex"
-msgstr ""
+msgstr "ファイア・ボルテックス"
 
 # ../lib/gamedata/monster.txt:5339
 msgid "A whirling maelstrom of fire."
-msgstr ""
+msgstr "グルグルと回って燃えさかる火炎の渦巻きだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:5340
 msgid "water vortex"
-msgstr ""
+msgstr "ウォーター・ボルテックス"
 
 # ../lib/gamedata/monster.txt:5357
 msgid "A caustic spinning whirlpool of water."
-msgstr ""
+msgstr "回転する腐食性の水の渦巻きだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:5358
 msgid "cold vortex"
-msgstr ""
+msgstr "コールド・ボルテックス"
 
 # ../lib/gamedata/monster.txt:5375
 msgid "A twisting whirlpool of frost."
-msgstr ""
+msgstr "回転する冷気の渦巻きだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:5376
 msgid "mummified orc"
-msgstr ""
+msgstr "ミイラ・オーク"
 
 # ../lib/gamedata/monster.txt:5393
 msgid "It is an orcish figure covered in wrappings."
-msgstr ""
+msgstr "体中を包帯で覆われたオーク型のモンスターだ。"
 
 # ../lib/gamedata/monster.txt:5396
 msgid "neekerbreeker"
@@ -2184,68 +2596,81 @@ msgid ""
 "heard for quite some distance, alerting other monsters to your presence."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:5416
+# J0#
+# ../lib/gamedata/monster.txt:5248
+#, fuzzy
 msgid "Uglúk, the Uruk"
-msgstr ""
+msgstr "ウルク『ルグドゥシュ』"
 
 # ../lib/gamedata/monster.txt:5441
 msgid ""
 "A strong and cunning orc warrior, the commander of Saruman's orcish horde."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:5442
 msgid "killer stag beetle"
-msgstr ""
+msgstr "殺人クワガタ"
 
 # ../lib/gamedata/monster.txt:5457
 msgid "It is a giant beetle with vicious claws."
-msgstr ""
+msgstr "それは恐ろしげなハサミを持った巨大なクワガタだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:5458
 msgid "iron golem"
-msgstr ""
+msgstr "鉄ゴーレム"
 
 # ../lib/gamedata/monster.txt:5477
 msgid "It is a massive metal statue that moves steadily towards you."
-msgstr ""
+msgstr "それは堂々たる金属の巨像で、大きな足音を響かせて近づいてくる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:5478
 msgid "giant yellow scorpion"
-msgstr ""
+msgstr "巨大黄サソリ"
 
 # ../lib/gamedata/monster.txt:5495
 msgid "It is a giant scorpion with a sharp stinger."
-msgstr ""
+msgstr "それは鋭い刺を持った巨大なサソリだ。"
 
+# JZ#
+# JZ#(コメント)訳は 紫月閑丸さん
 # ../lib/gamedata/monster.txt:5496
 msgid "wyvern"
-msgstr ""
+msgstr "ワイバーン"
 
 # ../lib/gamedata/monster.txt:5515
 msgid "A fast-moving and deadly draconian animal.  Beware its poisonous sting!"
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:5520
 msgid "phase spider"
-msgstr ""
+msgstr "フェイズ・スパイダー"
 
 # ../lib/gamedata/monster.txt:5543
 msgid ""
 "A spider that never seems quite there.  Everywhere you look it is just half-"
 "seen in the corner of one eye."
 msgstr ""
+"一カ所に見定めることのできない蜘蛛だ。姿を一瞬見たかと思うと、次の瞬間には消"
+"え失せていて、はっきりと姿を捉えることができない。"
 
+# J0#
 # ../lib/gamedata/monster.txt:5544
 msgid "black ooze"
-msgstr ""
+msgstr "ブラック・ウーズ"
 
 # ../lib/gamedata/monster.txt:5564
 msgid "It is a strangely moving puddle."
-msgstr ""
+msgstr "それは奇妙に動く泥のようなものだ。"
 
-# ../lib/gamedata/monster.txt:5565
+# J0#
+# ../lib/gamedata/monster.txt:8587
+#, fuzzy
 msgid "Easterling champion"
-msgstr ""
+msgstr "マスター・バンパイア"
 
 # ../lib/gamedata/monster.txt:5589
 msgid "A scarred warrior who wields an axe and moves with confidence."
@@ -2267,31 +2692,36 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:5643
 msgid "A thief of great power and shifty speed."
-msgstr ""
+msgstr "強い力を持った泥棒で、すばしっこく動く。"
 
+# J0#
 # ../lib/gamedata/monster.txt:5644
 msgid "red dragon bat"
-msgstr ""
+msgstr "レッド・ドラゴンバット"
 
 # ../lib/gamedata/monster.txt:5663
 msgid "It is a sharp-tailed bat, wreathed in fire."
-msgstr ""
+msgstr "鋭い尻尾を持ったコウモリで、体の周りには火炎が渦巻いている。"
 
-# ../lib/gamedata/monster.txt:5664
+# J0#
+# ../lib/gamedata/monster.txt:7162
+#, fuzzy
 msgid "giant silver ant"
-msgstr ""
+msgstr "巨大青アリ"
 
 # ../lib/gamedata/monster.txt:5682
 msgid "A giant silver ant with a caustic bite and hard scales."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:5685
+# J0#
+# ../lib/gamedata/monster.txt:7201
+#, fuzzy
 msgid "forest wight"
-msgstr ""
+msgstr "墓ワイト"
 
 # ../lib/gamedata/monster.txt:5705
 msgid "It is a ghostly apparition with a humanoid form."
-msgstr ""
+msgstr "それは人間のような姿をした幽霊だ。"
 
 # ../lib/gamedata/monster.txt:5706
 msgid "Ibun, Son of Mîm"
@@ -2313,57 +2743,66 @@ msgid ""
 "being, full of mischief."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:5756
 msgid "4-headed hydra"
-msgstr ""
+msgstr "四首ヒドラ"
 
 # ../lib/gamedata/monster.txt:5777
 msgid "A 3-headed hydra with an extra, smouldering, head."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:5778
 msgid "mummified human"
-msgstr ""
+msgstr "ミイラ"
 
 # ../lib/gamedata/monster.txt:5795
 msgid "It is a human form encased in mouldy wrappings."
-msgstr ""
+msgstr "それは黴びた包帯に包まれている人間型のモンスターだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:5796
 msgid "vampire bat"
-msgstr ""
+msgstr "バンパイア・バット"
 
 # ../lib/gamedata/monster.txt:5813
 msgid "A blood-sucking bat that flies at your neck hungrily."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:5814
 msgid "Sangahyando of Umbar"
-msgstr ""
+msgstr "ウンバールの『サンガハイアンド』"
 
 # ../lib/gamedata/monster.txt:5839
 msgid "A Black Númenórean with a blacker heart."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:5840
+# J0#
+# ../lib/gamedata/monster.txt:5814
+#, fuzzy
 msgid "Angamaitë of Umbar"
-msgstr ""
+msgstr "ウンバールの『サンガハイアンド』"
 
 # ../lib/gamedata/monster.txt:5865
 msgid "A Black Númenórean who hates the men of the west."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:5866
 msgid "banshee"
-msgstr ""
+msgstr "バンシー"
 
 # ../lib/gamedata/monster.txt:5885
 msgid "It is a ghostly woman's form that wails mournfully."
-msgstr ""
+msgstr "それは悲しげに泣き叫ぶ、女性の姿をしたゴーストだ。"
 
-# ../lib/gamedata/monster.txt:5886
+# J0#
+# ../lib/gamedata/monster.txt:3896
+#, fuzzy
 msgid "werebear"
-msgstr ""
+msgstr "ワーラット"
 
 # ../lib/gamedata/monster.txt:5909
 msgid ""
@@ -2390,18 +2829,23 @@ msgstr ""
 # ../lib/gamedata/monster.txt:5961
 msgid "A gaunt figure, clothed in black robes."
 msgstr ""
+"黒いローブに身を包んだやつれた姿をした人間だ。死霊術を操る高位の魔法使い。"
+"（デニス・ホイートリー、『黒魔団』、「デニス・ホイートリー黒魔術小説傑作選」"
+"国書刊行会ほか）"
 
+# J0#
 # ../lib/gamedata/monster.txt:5962
 msgid "hill giant"
-msgstr ""
+msgstr "丘ジャイアント"
 
 # ../lib/gamedata/monster.txt:5982
 msgid "A ten foot tall humanoid with powerful muscles."
-msgstr ""
+msgstr "それは背の高さが 3 メートルもある、非常に屈強な人間型のモンスターだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:5983
 msgid "pukelman"
-msgstr ""
+msgstr "プーケル人"
 
 # ../lib/gamedata/monster.txt:6006
 msgid ""
@@ -2409,35 +2853,42 @@ msgid ""
 "strides towards you with deadly intent."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:6007
 msgid "stone troll"
-msgstr ""
+msgstr "岩トロル"
 
 # ../lib/gamedata/monster.txt:6028
 msgid "He is a large, lumpish troll with scabrous black skin."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:6029
 msgid "carrion crawler"
-msgstr ""
+msgstr "キャリオン・クローラー"
 
 # ../lib/gamedata/monster.txt:6048
 msgid ""
 "A hideous centipede covered in slime and with glowing tentacles around its "
 "head."
 msgstr ""
+"ベトベトした粘膜に覆われた巨大なムカデで、頭の周りには光を発する触手が突いて"
+"いる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:6049
 msgid "killer red beetle"
-msgstr ""
+msgstr "レッド・キラービートル"
 
-# ../lib/gamedata/monster.txt:6064
+# ../lib/gamedata/monster.txt:5457
+#, fuzzy
 msgid "It is a giant beetle with poisonous mandibles."
-msgstr ""
+msgstr "それは恐ろしげなハサミを持った巨大なクワガタだ。"
 
+# JZ#
 # ../lib/gamedata/monster.txt:6067
 msgid "abyss worm mass"
-msgstr ""
+msgstr "深淵イモムシの大群"
 
 # ../lib/gamedata/monster.txt:6085
 msgid ""
@@ -2445,9 +2896,11 @@ msgid ""
 "through air and walls with equal facility, leaving void in its wake."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:6086
+# J0#
+# ../lib/gamedata/monster.txt:3101
+#, fuzzy
 msgid "giant firefly"
-msgstr ""
+msgstr "巨大フルーツ・バエ"
 
 # ../lib/gamedata/monster.txt:6102
 msgid ""
@@ -2455,54 +2908,68 @@ msgid ""
 "barely see through them."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:6103
 msgid "giant grey ant"
-msgstr ""
+msgstr "巨大灰色アリ"
 
-# ../lib/gamedata/monster.txt:6119
+# ../lib/gamedata/monster.txt:3480
+#, fuzzy
 msgid "It is an ant encased in an impenetrable exoskeleton."
-msgstr ""
+msgstr "生命を吹き込まれた人間の骸骨だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:6120
 msgid "Ulwarth, Son of Ulfang"
-msgstr ""
+msgstr "ウルファングの息子『ウルワルス』"
 
+# J0#
+# J0#
+# J0#(コメント)
+# J0# うまく日本語に訳せないものだろうか・・・
+# J0#
 # ../lib/gamedata/monster.txt:6142
 msgid "displacer beast"
-msgstr ""
+msgstr "ディスプレイサー・ビースト"
 
 # ../lib/gamedata/monster.txt:6161
 msgid ""
 "It is a huge black panther, clubbed tentacles sprouting from its shoulders."
-msgstr ""
+msgstr "それは巨大な豹で、その肩からはハサミの付いた触手が生えている。"
 
-# ../lib/gamedata/monster.txt:6162
+# J0#
+# ../lib/gamedata/monster.txt:2969
+#, fuzzy
 msgid "giant fire tick"
-msgstr ""
+msgstr "巨大白ダニ"
 
 # ../lib/gamedata/monster.txt:6181
 msgid "It is smoking and burning with great heat."
-msgstr ""
+msgstr "それは高熱で燃えて、煙を立ち昇らせている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:6182
 msgid "cave ogre"
-msgstr ""
+msgstr "洞窟オーガ"
 
 # ../lib/gamedata/monster.txt:6201
 msgid "A giant orc-like figure with an awesomely muscled frame."
-msgstr ""
+msgstr "筋骨隆々たる体格をした巨大なオーク型の生物だ。"
 
-# ../lib/gamedata/monster.txt:6202
+# J0#
+# ../lib/gamedata/monster.txt:1834
+#, fuzzy
 msgid "disenchanter bat"
-msgstr ""
+msgstr "劣化アイ"
 
-# ../lib/gamedata/monster.txt:6218
+# ../lib/gamedata/monster.txt:8982
+#, fuzzy
 msgid "A giant bat which feeds on raw magical energy."
-msgstr ""
+msgstr "生命を持った魔法のエネルギーの竜巻だ。"
 
 # ../lib/gamedata/monster.txt:6219
 msgid "wolf chieftain"
-msgstr ""
+msgstr "狼の族長"
 
 # ../lib/gamedata/monster.txt:6247
 msgid ""
@@ -2510,17 +2977,30 @@ msgid ""
 "whose howls strike fear into even the boldest heart."
 msgstr ""
 
+# JZ#
+# JZ#グール（食屍鬼）
+# JZ#Ｈ・Ｐ・ラヴクラフトの「ピックマンのモデル」などに登場。
+# JZ#顔は犬に似ており、肌は灰色のゴムのようです。人間の子を浚って
+# JZ#自分たちの子と取り替える事も有ります。 by 久留さん
+# JZ#解説は NeSYS さん
 # ../lib/gamedata/monster.txt:6248
 msgid "ghoul"
-msgstr ""
+msgstr "食屍鬼"
 
 # ../lib/gamedata/monster.txt:6268
 msgid "Flesh is falling off in chunks from this decaying abomination."
 msgstr ""
+"この腐敗した凶々しい者の体からは腐肉の塊が滴り落ちている。完全な人間の形をし"
+"ているわけではないが、限りなく人間に良く似ている場合もある。前かがみの姿勢で"
+"２本足で歩き、何処となく犬に似ている。皮膚はゴムのような感じでカビがこびりつ"
+"いており、耳はぴんと立っている。半分に割れた蹄と、穴を掘るのに使う鱗のある鉤"
+"爪を持つ。夜行性で、人間のたくさん住む場所の近くにおり、腐肉を好んで食らう。"
+"泣くように、或いはとてつもない早口で話す。"
 
-# ../lib/gamedata/monster.txt:6271
+# ../lib/gamedata/monster.txt:9937
+#, fuzzy
 msgid "Mîm, Betrayer of Turin"
-msgstr ""
+msgstr "バラヒアを裏切りし『ゴルリム』"
 
 # ../lib/gamedata/monster.txt:6300
 msgid ""
@@ -2529,17 +3009,20 @@ msgid ""
 "hunted nearly to extinction by the High Elves."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:6301
+# J0#
+# ../lib/gamedata/monster.txt:6049
+#, fuzzy
 msgid "killer fire beetle"
-msgstr ""
+msgstr "レッド・キラービートル"
 
 # ../lib/gamedata/monster.txt:6319
 msgid "It is a giant beetle wreathed in flames."
-msgstr ""
+msgstr "それは火炎に取り巻かれた巨大な甲虫だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:6320
 msgid "creeping adamantite coins"
-msgstr ""
+msgstr "アダマンタイトのクリーピングコイン"
 
 # ../lib/gamedata/monster.txt:6339
 msgid ""
@@ -2557,39 +3040,49 @@ msgid ""
 "kill."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:6363
 msgid "vibration hound"
-msgstr ""
+msgstr "バイブレーション・ハウンド"
 
 # ../lib/gamedata/monster.txt:6387
 msgid ""
 "A blurry canine form which seems to be moving as fast as the eye can "
 "follow.  You can feel the earth resonating beneath your feet."
 msgstr ""
+"ぼんやりとした犬のような姿をしているが、その動きはあまりにも速くて目でとらえ"
+"ることができない。足下の大地が共鳴して震えているような気がする。"
 
+# J0#
 # ../lib/gamedata/monster.txt:6388
 msgid "nexus hound"
-msgstr ""
+msgstr "ネクサス・ハウンド"
 
 # ../lib/gamedata/monster.txt:6412
 msgid ""
 "A locus of conflicting points coalesce to form the vague shape of a huge "
 "hound.  Or is it just your imagination?"
 msgstr ""
+"歪んだ空間を繋ぎ合わせると、ぼんやりと犬のような姿が見える。それともただの気"
+"のせいだろうか？"
 
+# J0#
 # ../lib/gamedata/monster.txt:6413
 msgid "vampire"
-msgstr ""
+msgstr "バンパイア"
 
 # ../lib/gamedata/monster.txt:6435
 msgid ""
 "It is a humanoid with an aura of power.  You notice a sharp set of front "
 "teeth."
 msgstr ""
+"それは力のオーラをまとった人間型のモンスターだ。鋭い二本の前歯にすぐに気が付"
+"くだろう。"
 
-# ../lib/gamedata/monster.txt:6436
+# ../lib/gamedata/monster.txt:5078
+#, fuzzy
 msgid "gorgimaera"
-msgstr ""
+msgstr "ギンザメ"
 
 # ../lib/gamedata/monster.txt:6459
 msgid ""
@@ -2598,51 +3091,60 @@ msgid ""
 "lion's body."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:6460
 msgid "ogre shaman"
-msgstr ""
+msgstr "オーガ・シャーマン"
 
 # ../lib/gamedata/monster.txt:6484
 msgid "It is an ogre wrapped in furs and covered in grotesque body paints."
-msgstr ""
+msgstr "それは毛皮を着たオーガで、体にはグロテスクな彩色を施している。"
 
-# ../lib/gamedata/monster.txt:6485
+# J0#
+# ../lib/gamedata/monster.txt:9204
+#, fuzzy
 msgid "shimmering mold"
-msgstr ""
+msgstr "発光ボルテックス"
 
-# ../lib/gamedata/monster.txt:6503
+# ../lib/gamedata/monster.txt:4863
+#, fuzzy
 msgid ""
 "It is a strange growth on the dungeon floor, glowing and crackling with "
 "sparks."
 msgstr ""
+"それはダンジョンの床に生えている奇妙な赤いカビで、炎に燃えているようだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:6506
 msgid "frost giant"
-msgstr ""
+msgstr "フロスト・ジャイアント"
 
 # ../lib/gamedata/monster.txt:6527
 msgid "A twelve foot tall giant covered in furs."
-msgstr ""
+msgstr "大きさが 3 メートルもある毛皮で覆われた巨人だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:6528
 msgid "spirit naga"
-msgstr ""
+msgstr "スピリット・ナーガ"
 
 # ../lib/gamedata/monster.txt:6553
 msgid "A wraithly snake-like form with the torso of a beautiful woman."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:6554
 msgid "5-headed hydra"
-msgstr ""
+msgstr "五首ヒドラ"
 
 # ../lib/gamedata/monster.txt:6576
 msgid "A 4-headed hydra with an extra head, steaming with acidic vapor."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:6577
 msgid "black knight"
-msgstr ""
+msgstr "黒騎士"
 
 # ../lib/gamedata/monster.txt:6607
 msgid "Uldor the Accursed"
@@ -2655,23 +3157,27 @@ msgid ""
 "of Unnumbered Tears in Morgoth's favour."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:6632
 msgid "mage"
-msgstr ""
+msgstr "メイジ"
 
 # ../lib/gamedata/monster.txt:6658
 msgid "A mage of some power - you can tell by the size of his hat."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:6659
 msgid "mind flayer"
-msgstr ""
+msgstr "マインド・フレイヤー"
 
 # ../lib/gamedata/monster.txt:6680
 msgid ""
 "A humanoid form with a gruesome head, tentacular mouth, and piercing eyes.  "
 "Claws reach out for you and you feel a presence invade your mind."
 msgstr ""
+"巨大な頭部と触手のついた口、そして突き刺すように見つめる目をした人間型の生物"
+"だ。その爪に触られると精神がかき乱されるような気がする。"
 
 # ../lib/gamedata/monster.txt:6681
 msgid "Draebor, the Imp"
@@ -2681,9 +3187,10 @@ msgstr ""
 msgid "An intensely irritating git of a monster."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:6710
 msgid "basilisk"
-msgstr ""
+msgstr "バシリスク"
 
 # ../lib/gamedata/monster.txt:6733
 msgid ""
@@ -2691,9 +3198,11 @@ msgid ""
 "at you and your soul starts to wilt!"
 msgstr ""
 
-# ../lib/gamedata/monster.txt:6734
+# J0#
+# ../lib/gamedata/monster.txt:6007
+#, fuzzy
 msgid "snow troll"
-msgstr ""
+msgstr "岩トロル"
 
 # ../lib/gamedata/monster.txt:6757
 msgid "He is a white troll with shaggy fur and powerfully clawed hands."
@@ -2701,17 +3210,20 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:6758
 msgid "bat of Gorgoroth"
-msgstr ""
+msgstr "ゴルゴロスの蝙蝠"
 
 # ../lib/gamedata/monster.txt:6783
 msgid ""
 "Fed with horrid meats and grown to enormous size, this slavering creature "
 "seeks livelier prey."
 msgstr ""
+"忌まわしい腐肉を食らい巨大な大きさに成長したこのモルゴスの奴隷は常に活きのい"
+"い獲物を求めている。"
 
+# JZ#デイブスペクターではないよ
 # ../lib/gamedata/monster.txt:6784
 msgid "spectator"
-msgstr ""
+msgstr "スペクテイター"
 
 # ../lib/gamedata/monster.txt:6805
 msgid ""
@@ -2753,9 +3265,11 @@ msgid ""
 "stranger might pass through their land from end to end and see none of them."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:6886
+# JZ#
+# ../lib/gamedata/monster.txt:4478
+#, fuzzy
 msgid "giant black scorpion"
-msgstr ""
+msgstr "巨大赤サソリ"
 
 # ../lib/gamedata/monster.txt:6905
 msgid ""
@@ -2763,29 +3277,36 @@ msgid ""
 "two great deadly claws."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:6906
+# J0#
+# ../lib/gamedata/monster.txt:8253
+#, fuzzy
 msgid "purple worm"
-msgstr ""
+msgstr "大長虫"
 
 # ../lib/gamedata/monster.txt:6924
 msgid ""
 "It is a massive worm form, many feet in length.  Its vast maw drips acid and "
 "poison."
 msgstr ""
+"それはたくさんの足を持ったイモムシだ。その巨大な胃袋は酸と毒に満ちている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:6925
 msgid "catoblepas"
-msgstr ""
+msgstr "カトブレパス"
 
 # ../lib/gamedata/monster.txt:6947
 msgid ""
 "A strange ox-like form with a huge head but a thin, weak neck, it looks like "
 "the creation of some deranged alchemist."
 msgstr ""
+"牛に似ているが頭は巨大で首は細くて折れそうだ。錯乱した錬金術師により作られた"
+"生物のようだ。"
 
+# JZ#
 # ../lib/gamedata/monster.txt:6948
 msgid "ring mimic"
-msgstr ""
+msgstr "ミミック(指輪)"
 
 # ../lib/gamedata/monster.txt:6970
 msgid ""
@@ -2793,116 +3314,144 @@ msgid ""
 "unsuspecting adventurers within reach of its venomous claws."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:6977
 msgid "young blue dragon"
-msgstr ""
+msgstr "ヤング・ブルー・ドラゴン"
 
 # ../lib/gamedata/monster.txt:7000
 msgid ""
 "It has a form that legends are made of.  Its still-tender scales are a deep "
 "blue in hue.  Sparks crackle along its length."
 msgstr ""
+"それはまさにこれから伝説を作らんとするかのような活力に満ちた姿をしている。ま"
+"だ柔らかいその鱗は深い青色をしていて、全身から火花を発している。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7001
 msgid "young white dragon"
-msgstr ""
+msgstr "ヤング・ホワイト・ドラゴン"
 
 # ../lib/gamedata/monster.txt:7024
 msgid ""
 "It has a form that legends are made of.  Its still-tender scales are a "
 "frosty white in hue.  Icy blasts of cold air come from it as it breathes."
 msgstr ""
+"それはまさにこれから伝説を作らんとするかのような活力に満ちた姿をしている。ま"
+"だ柔らかいその鱗は青白い色をしている。それが息を吐くと突き刺すような冷気が"
+"やってくる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7025
 msgid "young green dragon"
-msgstr ""
+msgstr "ヤング・グリーン・ドラゴン"
 
 # ../lib/gamedata/monster.txt:7048
 msgid ""
 "It has a form that legends are made of.  Its still-tender scales are a deep "
 "green in hue.  Foul gas seeps through its scales."
 msgstr ""
+"それはまさにこれから伝説を作らんとするかのような活力に満ちた姿をしている。ま"
+"だ柔らかいその鱗は深い緑色をしている。不潔なガスがその鱗からしみ出ている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7049
 msgid "energy vortex"
-msgstr ""
+msgstr "エナジー・ボルテックス"
 
 # ../lib/gamedata/monster.txt:7069
 msgid "A shimmering tornado of air, sparks crackle along its length."
-msgstr ""
+msgstr "光を放つ空気の竜巻で、その周りには火花が閃光を発している。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7076
 msgid "fire giant"
-msgstr ""
+msgstr "ファイアー・ジャイアント"
 
 # ../lib/gamedata/monster.txt:7098
 msgid "A glowing fourteen foot tall giant.  Flames drip from its red skin."
 msgstr ""
+"背の高さが 4 メートル以上もある輝く巨人だ。その赤い肌からは炎がにじみでてい"
+"る。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7099
 msgid "mithril golem"
-msgstr ""
+msgstr "ミスリル・ゴーレム"
 
 # ../lib/gamedata/monster.txt:7119
 msgid "It is a massive statue of purest mithril.  It looks expensive!"
 msgstr ""
+"それは純粋なミスリルでできた堂々たる巨像だ。それは値段にしたら相当高価だろ"
+"う！"
 
+# J0#
 # ../lib/gamedata/monster.txt:7120
 msgid "skeleton troll"
-msgstr ""
+msgstr "スケルトン・トロル"
 
 # ../lib/gamedata/monster.txt:7137
 msgid "It is a troll skeleton animated by dark dweomers."
-msgstr ""
+msgstr "それは暗黒の魔術師によって生命を吹き込まれたトロルの骸骨だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7138
 msgid "manticore"
-msgstr ""
+msgstr "マンティコア"
 
 # ../lib/gamedata/monster.txt:7161
 msgid ""
 "It is a winged lion's body with a human torso and a tail covered in vicious "
 "spikes."
 msgstr ""
+"それは羽の生えたライオンの体と、人間の上半身と、邪悪な刺に覆われた尻尾を持っ"
+"た生物だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7162
 msgid "giant blue ant"
-msgstr ""
+msgstr "巨大青アリ"
 
 # ../lib/gamedata/monster.txt:7181
 msgid "It is a giant ant that crackles with energy."
-msgstr ""
+msgstr "それはエネルギーが火花をたてている巨大なアリだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7182
 msgid "giant army ant"
-msgstr ""
+msgstr "巨大軍隊アリ"
 
 # ../lib/gamedata/monster.txt:7200
 msgid ""
 "An armoured form moving with purpose.  Powerful on its own, flee when hordes "
 "of them march."
 msgstr ""
+"硬い甲羅を持ったアリで、一定の指揮に従って行動している。単独でも強いが、集団"
+"で行進してくると恐怖ですらある。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7201
 msgid "grave wight"
-msgstr ""
+msgstr "墓ワイト"
 
 # ../lib/gamedata/monster.txt:7221
 msgid "It is a ghostly form with eyes that haunt you."
-msgstr ""
+msgstr "それは幽霊のような存在で、その目はいつまでも冒険者を睨みつけている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7222
 msgid "killer slicer beetle"
-msgstr ""
+msgstr "キラー・スライス・ビートル"
 
 # ../lib/gamedata/monster.txt:7237
 msgid ""
 "It is a beetle with deadly sharp cutting mandibles and a rock-hard carapace."
-msgstr ""
+msgstr "それは恐ろしく鋭い切れ味の顎と、岩のように硬い甲羅を持った甲虫だ。"
 
-# ../lib/gamedata/monster.txt:7238
+# ../lib/gamedata/monster.txt:6219
+#, fuzzy
 msgid "ogre chieftain"
-msgstr ""
+msgstr "狼の族長"
 
 # ../lib/gamedata/monster.txt:7265
 msgid ""
@@ -2910,9 +3459,13 @@ msgid ""
 "you, wielding a huge club and pushing his own followers rudely aside."
 msgstr ""
 
+# JZ#
+# JZ#ガースト
+# JZ#Ｈ・Ｐ・ラヴクラフトの「幻夢境カダスを求めて」に登場。
+# JZ#カンガルーのように長い後脚で跳ねる生物です。 by 久留さん
 # ../lib/gamedata/monster.txt:7266
 msgid "ghast"
-msgstr ""
+msgstr "ガースト"
 
 # ../lib/gamedata/monster.txt:7293
 msgid ""
@@ -2920,85 +3473,111 @@ msgid ""
 "them.  It smells foul, and its bite carries a rotting disease."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:7294
 msgid "Bert the Stone Troll"
-msgstr ""
+msgstr "岩トロル『バート』"
 
 # ../lib/gamedata/monster.txt:7319
 msgid ""
 "Big, brawny, powerful and with a taste for hobbit.  He has friends called "
 "Bill and Tom."
 msgstr ""
+"巨大で、筋骨逞しくて、強力で、ホビットを大好物にしている。彼にはビルとトムと"
+"いう友達がいる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7320
 msgid "Bill the Stone Troll"
-msgstr ""
+msgstr "岩トロル『ビル』"
 
 # ../lib/gamedata/monster.txt:7345
 msgid ""
 "Big, brawny, powerful and with a taste for hobbit.  He has friends called "
 "Bert and Tom."
 msgstr ""
+"巨大で、筋骨逞しくて、強力で、ホビットを大好物にしている。彼にはバートとトム"
+"という友達がいる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7346
 msgid "Tom the Stone Troll"
-msgstr ""
+msgstr "岩トロル『トム』"
 
 # ../lib/gamedata/monster.txt:7371
 msgid ""
 "Big, brawny, powerful and with a taste for hobbit.  He has friends called "
 "Bert and Bill."
 msgstr ""
+"巨大で、筋骨逞しくて、強力で、ホビットを大好物にしている。彼にはバートとビル"
+"という友達がいる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7374
 msgid "ghost"
-msgstr ""
+msgstr "ゴースト"
 
 # ../lib/gamedata/monster.txt:7395
 msgid "You don't believe in it.  But it believes in you..."
 msgstr ""
 
+# J0#
+# J0#
+# J0#(コメント)
+# J0# (英和辞典より) Death watch beetle
+# J0# シバンムシ科の昆虫の総称；木を食うときの音が死の前触れと考えられた
+# J0#
 # ../lib/gamedata/monster.txt:7396
 msgid "death watch beetle"
-msgstr ""
+msgstr "死番虫"
 
 # ../lib/gamedata/monster.txt:7411
 msgid "It is a giant beetle that produces a chilling sound."
-msgstr ""
+msgstr "それは寒気を催すような羽音を立てる巨大な甲虫だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7412
 msgid "young black dragon"
-msgstr ""
+msgstr "ヤング・ブラック・ドラゴン"
 
 # ../lib/gamedata/monster.txt:7435
 msgid ""
 "It has a form that legends are made of.  Its still-tender scales are a "
 "darkest black hue.  Acid drips from its body."
 msgstr ""
+"それはまさにこれから伝説を作らんとするかのような活力に満ちた姿をしている。ま"
+"だ柔らかいその鱗は深い黒色をしている。体からは酸が滴り落ちている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7436
 msgid "young gold dragon"
-msgstr ""
+msgstr "ヤング・ゴールド・ドラゴン"
 
 # ../lib/gamedata/monster.txt:7458
 msgid ""
 "It has a form that legends are made of.  Its still-tender scales are a "
 "tarnished gold hue, and light is reflected from its form."
 msgstr ""
+"それはまさにこれから伝説を作らんとするかのような活力に満ちた姿をしている。ま"
+"だ柔らかいその鱗は曇った金色をしていて、全身で光を反射している。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7459
 msgid "young red dragon"
-msgstr ""
+msgstr "ヤング・レッド・ドラゴン"
 
 # ../lib/gamedata/monster.txt:7483
 msgid ""
 "It has a form that legends are made of.  Its still-tender scales are a "
 "deepest red hue.  Heat radiates from its form."
 msgstr ""
+"それはまさにこれから伝説を作らんとするかのような活力に満ちた姿をしている。ま"
+"だ柔らかいその鱗は深い赤色をしていて、全身から熱を発している。"
 
+# JZ#
 # ../lib/gamedata/monster.txt:7484
 msgid "huorn"
-msgstr ""
+msgstr "フオルン"
 
 # ../lib/gamedata/monster.txt:7506
 msgid ""
@@ -3015,21 +3594,23 @@ msgid ""
 "and fangs that drip with acidic poison.  Its eyes are mesmerizing."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:7534
 msgid "ogre mage"
-msgstr ""
+msgstr "オーガ・メイジ"
 
 # ../lib/gamedata/monster.txt:7559
 msgid "A hideous ogre wrapped in black sorcerous robes."
-msgstr ""
+msgstr "ソーサラーの着る黒いローブに身を包んだ、ぞっとするようなオーガだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7560
 msgid "nexus quylthulg"
-msgstr ""
+msgstr "ネクサス・クイルスルグ"
 
 # ../lib/gamedata/monster.txt:7576
 msgid "It is a very unstable, strange pulsing mound of flesh."
-msgstr ""
+msgstr "それは非常に不安定で奇妙な脈打つ肉の塊だ。"
 
 # ../lib/gamedata/monster.txt:7577
 msgid "southron assassin"
@@ -3039,35 +3620,42 @@ msgstr ""
 msgid "A man of Harad clothed in black who moves with blinding speed."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:7600
 msgid "memory moss"
-msgstr ""
+msgstr "記憶苔"
 
 # ../lib/gamedata/monster.txt:7619
 msgid ""
 "A mass of green vegetation.  You don't remember seeing anything like it "
 "before."
 msgstr ""
+"緑の苔の大集団だ。以前にも出会ったことがあるような気がするが、どうしても思い"
+"出せない。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7620
 msgid "young multi-hued dragon"
-msgstr ""
+msgstr "ヤング万色ドラゴン"
 
 # ../lib/gamedata/monster.txt:7644
 msgid ""
 "It has a form that legends are made of.  Beautiful scales of shimmering and "
 "magical colours cover it."
 msgstr ""
+"それはまさにこれから伝説を作らんとするかのような活力に満ちた姿をしている。全"
+"身が魔法のように美しく輝く鱗に覆われている。"
 
+# JZ#
 # ../lib/gamedata/monster.txt:7645
 msgid "doombat"
-msgstr ""
+msgstr "ドゥームバット"
 
 # ../lib/gamedata/monster.txt:7665
 msgid ""
 "It is a fast moving creature of chaos, a gigantic black bat surrounded by "
 "flickering bright red flames."
-msgstr ""
+msgstr "素早いカオスの怪物で、ゆらめく真紅の炎に包まれた巨大なコウモリだ。"
 
 # ../lib/gamedata/monster.txt:7668
 msgid "drúadan druid"
@@ -3077,17 +3665,19 @@ msgstr ""
 msgid "A short, stocky man with an uncanny connection with nature."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:7695
 msgid "stone giant"
-msgstr ""
+msgstr "ストーン・ジャイアント"
 
 # ../lib/gamedata/monster.txt:7715
 msgid "It is eighteen feet tall and looking at you."
-msgstr ""
+msgstr "それは背丈が 5 メートル以上もあって、冒険者を見下ろしている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7716
 msgid "shadow drake"
-msgstr ""
+msgstr "シャドウ・ドレイク"
 
 # ../lib/gamedata/monster.txt:7742
 msgid ""
@@ -3096,13 +3686,14 @@ msgid ""
 "soul rather than the body."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:7743
 msgid "cave troll"
-msgstr ""
+msgstr "洞窟トロル"
 
 # ../lib/gamedata/monster.txt:7766
 msgid "He is a vicious monster, feared for his ferocity."
-msgstr ""
+msgstr "彼は恐ろしい残忍さを持った邪悪なモンスターだ。"
 
 # ../lib/gamedata/monster.txt:7767
 msgid "mystic"
@@ -3113,56 +3704,79 @@ msgid ""
 "An adept at unarmed combat, the mystic strikes with stunning power.  He can "
 "summon help from nature and is able to focus his power to ease any pain."
 msgstr ""
+"素手での戦いに習熟した修験者は、一撃で敵を気絶させることができる。彼にとって"
+"自然は味方であり、自然界の生物を召喚することもできる。またその鍛えられた精神"
+"力によって容易に自分の傷を治癒する。"
 
+# J0#
+# J0#
+# J0#(コメント)
+# J0# これについては他のワイト(grave wight, forest wight, emperor wight) との統一
+# J0# から塚ワイトとしている。塚人とすると他を「墓人」「森人」などとしなければ
+# J0# 統一がとれなくなるから。
+# J0#
 # ../lib/gamedata/monster.txt:7796
 msgid "barrow wight"
-msgstr ""
+msgstr "塚ワイト"
 
 # ../lib/gamedata/monster.txt:7817
 msgid "It is a ghostly nightmare of an entity."
-msgstr ""
+msgstr "それは実体を持った悪夢のような幽霊だ。"
 
-# ../lib/gamedata/monster.txt:7818
+# J0#
+# ../lib/gamedata/monster.txt:3465
+#, fuzzy
 msgid "skeleton etten"
-msgstr ""
+msgstr "スケルトン"
 
 # ../lib/gamedata/monster.txt:7836
 msgid "It is the animated form of a massive two-headed troll."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:7837
 msgid "chaos drake"
-msgstr ""
+msgstr "カオス・ドレイク"
 
 # ../lib/gamedata/monster.txt:7861
 msgid ""
 "A dragon twisted by the forces of chaos.  It seems first ugly, then fair, as "
 "its form shimmers and changes in front of your eyes."
 msgstr ""
+"カオスの力で歪んだドラゴンだ。それは一見すると醜いようだが、眼前で刻々と輝き"
+"ながら変化する姿は独特の美しさを持っている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7862
 msgid "law drake"
-msgstr ""
+msgstr "ロー・ドレイク"
 
 # ../lib/gamedata/monster.txt:7885
 msgid ""
 "This dragon is clever and cunning.  It laughs at your puny efforts to "
 "disturb it."
 msgstr ""
+"このドラゴンは頭が良くてずる賢い。攻撃をされても、ものともせずにせせら笑って"
+"いる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7886
 msgid "balance drake"
-msgstr ""
+msgstr "バランス・ドレイク"
 
 # ../lib/gamedata/monster.txt:7909
 msgid ""
 "A mighty dragon, the balance drake seeks to maintain the Cosmic Balance, and "
 "despises your feeble efforts to destroy evil."
 msgstr ""
+"強力なドラゴンであるバランス・ドレイクは、宇宙のバランスを維持することを求め"
+"続けている。そのため邪悪を滅ぼそうとする冒険者の微弱な努力を軽蔑しきってい"
+"る。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7910
 msgid "ethereal drake"
-msgstr ""
+msgstr "天上界ドレイク"
 
 # ../lib/gamedata/monster.txt:7934
 msgid ""
@@ -3170,25 +3784,33 @@ msgid ""
 "drake's eyes glare with white hatred from the shadows."
 msgstr ""
 
+# J0#
+# J0#
+# J0#(コメント)
+# J0# エレメンタルの翻訳については「土水火風」の部分を日本語に訳している。
+# J0# それとの統一のため、その他(煙など)も日本語に訳してある。
+# J0#
 # ../lib/gamedata/monster.txt:7935
 msgid "fire elemental"
-msgstr ""
+msgstr "火のエレメンタル"
 
 # ../lib/gamedata/monster.txt:7955
 msgid "It is a towering inferno of flames."
-msgstr ""
+msgstr "それは高くそびえ立つような火炎地獄だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7956
 msgid "water elemental"
-msgstr ""
+msgstr "水のエレメンタル"
 
 # ../lib/gamedata/monster.txt:7977
 msgid "It is a towering tempest of water."
-msgstr ""
+msgstr "それは高くそびえ立つ水の竜巻だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:7978
 msgid "crystal drake"
-msgstr ""
+msgstr "クリスタル・ドレイク"
 
 # ../lib/gamedata/monster.txt:8002
 msgid ""
@@ -3196,13 +3818,14 @@ msgid ""
 "your eyes with spectra of colour."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:8005
 msgid "troll priest"
-msgstr ""
+msgstr "トロル・プリースト"
 
 # ../lib/gamedata/monster.txt:8030
 msgid "A troll who is so bright he knows how to read."
-msgstr ""
+msgstr "字の読み方を知っているという非常に賢いトロルだ。"
 
 # ../lib/gamedata/monster.txt:8031
 msgid "Maia"
@@ -3237,17 +3860,22 @@ msgid ""
 "creature with a deadly touch."
 msgstr ""
 
+# J0#
+# J0#
+# J0#(コメント)
+# J0# この呼び名は felicia.x さんの考案
+# J0#
 # ../lib/gamedata/monster.txt:8104
 msgid "master thief"
-msgstr ""
+msgstr "大泥棒"
 
 # ../lib/gamedata/monster.txt:8130
 msgid "Cool and confident, fast and lithe; protect your possessions quickly!"
-msgstr ""
+msgstr "冷静で大胆、素早くて柔軟。持ち物を素早く守れ！"
 
 # ../lib/gamedata/monster.txt:8131
 msgid "Ulfang the Black"
-msgstr ""
+msgstr "黒色王『ウルファング』"
 
 # ../lib/gamedata/monster.txt:8159
 msgid ""
@@ -3256,53 +3884,72 @@ msgid ""
 "Morgoth."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:8160
 msgid "lich"
-msgstr ""
+msgstr "リッチ"
 
 # ../lib/gamedata/monster.txt:8183
 msgid "It is a skeletal form dressed in robes.  It radiates vastly evil power."
 msgstr ""
+"それはローブに身を包んだ骸骨のようだ。それは邪悪な力を広範囲に渡って放射して"
+"いる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:8184
 msgid "earth elemental"
-msgstr ""
+msgstr "地のエレメンタル"
 
 # ../lib/gamedata/monster.txt:8205
 msgid "It is a towering form composed of rock with fists of awesome power."
 msgstr ""
+"それは岩でできたそびえ立つような姿をしていて、凄まじい力を持った拳が付いてい"
+"る。"
 
+# J0#
 # ../lib/gamedata/monster.txt:8206
 msgid "air elemental"
-msgstr ""
+msgstr "風のエレメンタル"
 
 # ../lib/gamedata/monster.txt:8227
 msgid "It is a towering tornado of winds."
-msgstr ""
+msgstr "それはそびえ立つような風の竜巻だ。"
 
+# J0#
+# J0# (コメント)
+# J0# 名前の訳は小林さんによる
+# J0#
 # ../lib/gamedata/monster.txt:8228
 msgid "Eog golem"
-msgstr ""
+msgstr "エオグ・ゴーレム"
 
 # ../lib/gamedata/monster.txt:8250
 msgid ""
 "It is a massive deep brown statue, striding towards you with an all-too-"
 "familiar purpose.  Your magic surprisingly feels much less powerful now."
 msgstr ""
+"それは深い茶色の堂々たる巨像で、誰にも明らかなありふれた目的――侵入者を殺す"
+"事！――を果たす為にあなたに向って大股で歩み寄ってくる。このモンスターに対して"
+"はあまりの魔法の無力さに呆然とするであろう。"
 
+# J0#
 # ../lib/gamedata/monster.txt:8253
 msgid "wereworm"
-msgstr ""
+msgstr "大長虫"
 
 # ../lib/gamedata/monster.txt:8272
 msgid ""
 "A huge wormlike shape dripping acid, twisted by evil sorcery into a foul "
 "monster that breeds on death."
 msgstr ""
+"酸に満ちたイモムシのような姿をした大変巨大なモンスターだ。それは邪悪な魔法に"
+"よって、死の世界に生きるように堕落させられた。"
 
-# ../lib/gamedata/monster.txt:8273
+# J0#
+# ../lib/gamedata/monster.txt:4801
+#, fuzzy
 msgid "Lokkak, the Ogre Chieftain"
-msgstr ""
+msgstr "オークの隊長『ゴルバグ』"
 
 # ../lib/gamedata/monster.txt:8298
 msgid ""
@@ -3310,9 +3957,11 @@ msgid ""
 "leader of a large band of violent ogres."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:8299
+# J0#
+# ../lib/gamedata/monster.txt:9502
+#, fuzzy
 msgid "hill troll"
-msgstr ""
+msgstr "スピリット・トロル"
 
 # ../lib/gamedata/monster.txt:8321
 msgid ""
@@ -3327,11 +3976,12 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:8340
 msgid "It is impossible to define its form but its violence is legendary."
-msgstr ""
+msgstr "その姿を定義するのは不可能なことだが、その残忍さは伝説的ですらある。"
 
+# J0#
 # ../lib/gamedata/monster.txt:8341
 msgid "gravity hound"
-msgstr ""
+msgstr "重力ハウンド"
 
 # ../lib/gamedata/monster.txt:8366
 msgid ""
@@ -3339,10 +3989,14 @@ msgid ""
 "are walking on the walls and even the ceiling!  The earth suddenly feels "
 "rather less solid as you see gravity warp all round the monsters."
 msgstr ""
+"重力の束縛から解放されたこの異常な生物は、壁や天井でさえもまるで床のように歩"
+"くことができる。このモンスターの周りで重力が歪んでいるのを見ると、大地も突然"
+"不安定なものに思えてくる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:8367
 msgid "inertia hound"
-msgstr ""
+msgstr "遅鈍ハウンド"
 
 # ../lib/gamedata/monster.txt:8391
 msgid ""
@@ -3350,9 +4004,10 @@ msgid ""
 "you with deadly menace.  It makes you tired just to look at it."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:8392
 msgid "impact hound"
-msgstr ""
+msgstr "インパクト・ハウンド"
 
 # ../lib/gamedata/monster.txt:8417
 msgid ""
@@ -3360,6 +4015,9 @@ msgid ""
 "an almost physical force.  The dungeon floor buckles as if struck by a "
 "powerful blow as it stalks towards you."
 msgstr ""
+"深い褐色の何かの形が目の前に浮かんでいる。その犬のような形があなたに触れると"
+"あたかも物体が当たったかのような衝撃を受ける。それが\"歩く\"時、ダンジョンの"
+"床がまるで強い打撃を受けたようにへこむのが見える。"
 
 # ../lib/gamedata/monster.txt:8418
 msgid "mûmak"
@@ -3367,19 +4025,21 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:8437
 msgid "A massive elephantine form with eyes twisted by madness."
-msgstr ""
+msgstr "巨大な象のような姿で、その目は狂気に歪んでいる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:8438
 msgid "giant fire ant"
-msgstr ""
+msgstr "巨大火アリ"
 
 # ../lib/gamedata/monster.txt:8459
 msgid "A giant ant covered in shaggy fur.  Its powerful jaws glow with heat."
-msgstr ""
+msgstr "全身が毛で覆われた巨大なアリだ。その強力な顎は熱に輝いている。"
 
+# JZ#
 # ../lib/gamedata/monster.txt:8460
 msgid "chest mimic"
-msgstr ""
+msgstr "ミミック(箱)"
 
 # ../lib/gamedata/monster.txt:8486
 msgid ""
@@ -3390,9 +4050,10 @@ msgid ""
 "adventurer's hand..."
 msgstr ""
 
+# JZ#
 # ../lib/gamedata/monster.txt:8493
 msgid "silent watcher"
-msgstr ""
+msgstr "キリス・ウンゴルの番人"
 
 # ../lib/gamedata/monster.txt:8517
 msgid ""
@@ -3400,17 +4061,19 @@ msgid ""
 "malevolent light."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:8520
 msgid "olog"
-msgstr ""
+msgstr "オログ"
 
 # ../lib/gamedata/monster.txt:8540
 msgid "It is a massive intelligent troll with needle-sharp fangs."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:8541
 msgid "colbran"
-msgstr ""
+msgstr "コルブラン"
 
 # ../lib/gamedata/monster.txt:8564
 msgid ""
@@ -3418,53 +4081,63 @@ msgid ""
 "this madly capering figure, as it leaps and whirls around and about you."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:8565
 msgid "cloud giant"
-msgstr ""
+msgstr "クラウド・ジャイアント"
 
 # ../lib/gamedata/monster.txt:8586
 msgid "It is a twenty foot tall giant wreathed in clouds."
-msgstr ""
+msgstr "それは背丈が 6 メートル以上もある巨人で、雲が周りに渦巻いている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:8587
 msgid "master vampire"
-msgstr ""
+msgstr "マスター・バンパイア"
 
 # ../lib/gamedata/monster.txt:8611
 msgid ""
 "It is a humanoid form dressed in robes.  Power emanates from its chilling "
 "frame."
 msgstr ""
+"それはローブに身を包んだ人間のような姿をしている。冷気を持ったその体からは力"
+"のオーラが放射されている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:8612
 msgid "ooze elemental"
-msgstr ""
+msgstr "汚物エレメンタル"
 
 # ../lib/gamedata/monster.txt:8634
 msgid "It is a towering mass of filth, an eyesore of ooze."
-msgstr ""
+msgstr "それはそびえ立つような汚物の塊で、見るも汚らわしいウーズだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:8635
 msgid "smoke elemental"
-msgstr ""
+msgstr "煙のエレメンタル"
 
 # ../lib/gamedata/monster.txt:8655
 msgid "It is a towering blackened form, crackling with heat."
-msgstr ""
+msgstr "それはそびえ立つような漆黒の塊で、熱で火花を上げている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:8656
 msgid "xorn"
-msgstr ""
+msgstr "ゾーン"
 
 # ../lib/gamedata/monster.txt:8675
 msgid ""
 "A huge creature of the element Earth.  Able to merge with its element, it "
 "has four huge arms protruding from its enormous torso."
 msgstr ""
+"巨大な体に四つの長い腕を持った、地の元素でできた巨大なモンスターだ。それは大"
+"地と完全に一体化することができる性質を持っている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:8676
 msgid "colossus"
-msgstr ""
+msgstr "巨像"
 
 # ../lib/gamedata/monster.txt:8698
 msgid ""
@@ -3472,10 +4145,13 @@ msgid ""
 "purposefully towards you, swinging its slow fists with earth-shattering "
 "power."
 msgstr ""
+"タイタンに似たような姿をした、石でできた巨大な構造物だ。わき目もふらずに冒険"
+"者の方に大股で歩み寄ってきて、その拳を大地も揺るがすかのように振り回す。"
 
+# J0#
 # ../lib/gamedata/monster.txt:8699
 msgid "trapper"
-msgstr ""
+msgstr "トラッパー"
 
 # ../lib/gamedata/monster.txt:8716
 msgid ""
@@ -3483,13 +4159,14 @@ msgid ""
 "paralyzes them, to be slowly digested later."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:8717
 msgid "bodak"
-msgstr ""
+msgstr "ボダック"
 
 # ../lib/gamedata/monster.txt:8740
 msgid "It is a humanoid form composed of flames and hatred."
-msgstr ""
+msgstr "それは火炎と憎悪によって作られた人間のような姿をしたモンスターだ。"
 
 # ../lib/gamedata/monster.txt:8741
 msgid "dúnadan of Angmar"
@@ -3501,9 +4178,11 @@ msgid ""
 "the North Kingdom."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:8770
+# J0#
+# ../lib/gamedata/monster.txt:2749
+#, fuzzy
 msgid "Lorgan, Chief of the Easterlings"
-msgstr ""
+msgstr "東夷『ブロッダ』"
 
 # ../lib/gamedata/monster.txt:8799
 msgid ""
@@ -3513,11 +4192,11 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:8800
 msgid "demonologist"
-msgstr ""
+msgstr "悪魔崇拝者"
 
 # ../lib/gamedata/monster.txt:8828
 msgid "A figure twisted by evil standing in robes of deepest crimson."
-msgstr ""
+msgstr "深紅のローブを身にまとってたたずむ、邪悪に歪んだ人間だ。"
 
 # ../lib/gamedata/monster.txt:8829
 msgid "gauth"
@@ -3529,69 +4208,81 @@ msgid ""
 "magic."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:8856
 msgid "ice elemental"
-msgstr ""
+msgstr "氷のエレメンタル"
 
 # ../lib/gamedata/monster.txt:8878
 msgid "It is a towering glacier of ice."
-msgstr ""
+msgstr "それはそびえ立つような氷河だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:8879
 msgid "mummified troll"
-msgstr ""
+msgstr "ミイラ・トロル"
 
 # ../lib/gamedata/monster.txt:8897
 msgid ""
 "It is a massive figure clothed in wrappings.  You are wary of its massive "
 "fists."
 msgstr ""
+"それは包帯に包まれた屈強なモンスターだ。強力な拳には注意しなければならない。"
 
+# J0#
 # ../lib/gamedata/monster.txt:8898
 msgid "spectre"
-msgstr ""
+msgstr "スペクター"
 
 # ../lib/gamedata/monster.txt:8919
 msgid ""
 "A phantasmal shrieking spirit.  Its wail drives the intense cold of pure "
 "evil deep within your body."
 msgstr ""
+"幻のような泣き叫ぶ魂だ。その悲鳴を聞くと、純粋な邪悪がもたらす強烈な冷気が体"
+"の芯まで入り込んでくる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:8920
 msgid "magma elemental"
-msgstr ""
+msgstr "マグマのエレメンタル"
 
 # ../lib/gamedata/monster.txt:8943
 msgid "It is a towering glowing form of molten hate."
-msgstr ""
+msgstr "それは憎悪が溶けてできたような塊で光を発している。"
 
+# JZ#
 # ../lib/gamedata/monster.txt:8944
 msgid "killer iridescent beetle"
-msgstr ""
+msgstr "殺人タマムシ"
 
 # ../lib/gamedata/monster.txt:8963
 msgid "It is a giant beetle, whose carapace shimmers with vibrant energies."
-msgstr ""
+msgstr "それは巨大な甲虫で、その甲羅は充満したエネルギーで輝いている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:8964
 msgid "nexus vortex"
-msgstr ""
+msgstr "ネクサス・ボルテックス"
 
 # ../lib/gamedata/monster.txt:8982
 msgid "A maelstrom of potent magical energy."
-msgstr ""
+msgstr "生命を持った魔法のエネルギーの竜巻だ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:8983
 msgid "plasma vortex"
-msgstr ""
+msgstr "プラズマ・ボルテックス"
 
 # ../lib/gamedata/monster.txt:9003
 msgid "A whirlpool of intense flame, charring the stones at your feet."
-msgstr ""
+msgstr "強烈な火炎の渦巻きで、冒険者の足下の床を焦がしている。"
 
-# ../lib/gamedata/monster.txt:9004
+# J0#
+# ../lib/gamedata/monster.txt:6007
+#, fuzzy
 msgid "mountain troll"
-msgstr ""
+msgstr "岩トロル"
 
 # ../lib/gamedata/monster.txt:9025
 msgid ""
@@ -3608,20 +4299,26 @@ msgid ""
 "A howling blast of razor-sharp mountain fragments, kept intact by perilous "
 "magics."
 msgstr ""
+"凄まじい音を立てて吹き付ける剃刀のように鋭い破片の塊だ。魔法によってその形を"
+"維持されている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:9043
 msgid "emperor wight"
-msgstr ""
+msgstr "エンペラー・ワイト"
 
 # ../lib/gamedata/monster.txt:9067
 msgid ""
 "Your life force is torn from your body as this powerful unearthly being "
 "approaches."
 msgstr ""
+"この強力なあの世の者が近づいてくると、自分の魂が肉体から引き裂かれるようだ。"
 
-# ../lib/gamedata/monster.txt:9070
+# J0#
+# ../lib/gamedata/monster.txt:5778
+#, fuzzy
 msgid "mummified chieftain"
-msgstr ""
+msgstr "ミイラ"
 
 # ../lib/gamedata/monster.txt:9104
 msgid ""
@@ -3630,9 +4327,10 @@ msgid ""
 "subjects with unearthly shrieks."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:9105
 msgid "will o' the wisp"
-msgstr ""
+msgstr "ウィル・オー・ウィスプ"
 
 # ../lib/gamedata/monster.txt:9129
 msgid ""
@@ -3640,10 +4338,14 @@ msgid ""
 "draw you to it.  You seem somehow compelled to stand still and watch its "
 "strange dancing motion."
 msgstr ""
+"発光する奇妙な光球だ。それは消えたり現れたりしながら、冒険者を少しずつ引き寄"
+"せているようだ。その踊るような奇妙な動きをみていると、何故かじっとしていられ"
+"なくなる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:9130
 msgid "death knight"
-msgstr ""
+msgstr "死の騎士"
 
 # ../lib/gamedata/monster.txt:9159
 msgid ""
@@ -3662,17 +4364,19 @@ msgid ""
 "evil."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:9186
 msgid "time vortex"
-msgstr ""
+msgstr "タイム・ボルテックス"
 
 # ../lib/gamedata/monster.txt:9203
 msgid "You haven't seen it yet."
-msgstr ""
+msgstr "かつてそれに会ったことはない。"
 
+# J0#
 # ../lib/gamedata/monster.txt:9204
 msgid "shimmering vortex"
-msgstr ""
+msgstr "発光ボルテックス"
 
 # ../lib/gamedata/monster.txt:9227
 msgid ""
@@ -3680,14 +4384,19 @@ msgid ""
 "constantly as it cuts through the air towards you.  It is like a beacon, "
 "waking monsters from their slumber."
 msgstr ""
+"輝く光が柱状になったモンスターで、その眩しさは目にダメージを与える。風を切り"
+"裂いて動き回るにつれて、刻々と姿を変化させている。それはのろし火のように辺り"
+"のモンスターを眠りから目覚めさせる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:9228
 msgid "white wraith"
-msgstr ""
+msgstr "ホワイト・レイス"
 
 # ../lib/gamedata/monster.txt:9249
 msgid "It is a tangible but ghostly form made of white fog."
 msgstr ""
+"それは実体があるように見えるが、実際は白い霧でできた幽霊のようなものだ。"
 
 # ../lib/gamedata/monster.txt:9250
 msgid "etten"
@@ -3700,9 +4409,11 @@ msgid ""
 "one..."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:9272
+# J0#
+# ../lib/gamedata/monster.txt:5520
+#, fuzzy
 msgid "abyss spider"
-msgstr ""
+msgstr "フェイズ・スパイダー"
 
 # ../lib/gamedata/monster.txt:9296
 msgid ""
@@ -3720,33 +4431,38 @@ msgid ""
 "full of red feathered arrows, and carries an insignia of a black serpent."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:9324
 msgid "mature white dragon"
-msgstr ""
+msgstr "ホワイト・ドラゴン"
 
 # ../lib/gamedata/monster.txt:9348
 msgid "A large dragon, scales gleaming bright white."
-msgstr ""
+msgstr "大きなドラゴンで、微かにきらめく白色の鱗を持っている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:9349
 msgid "mature blue dragon"
-msgstr ""
+msgstr "ブルー・ドラゴン"
 
 # ../lib/gamedata/monster.txt:9373
 msgid "A large dragon, scales tinted deep blue."
-msgstr ""
+msgstr "大きなドラゴンで、深く淡い青色の鱗を持っている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:9374
 msgid "mature green dragon"
-msgstr ""
+msgstr "グリーン・ドラゴン"
 
 # ../lib/gamedata/monster.txt:9398
 msgid "A large dragon, scales tinted deep green."
-msgstr ""
+msgstr "大きなドラゴンで、深く淡い緑色の鱗を持っている。"
 
-# ../lib/gamedata/monster.txt:9399
+# J0#
+# ../lib/gamedata/monster.txt:4441
+#, fuzzy
 msgid "6-headed hydra"
-msgstr ""
+msgstr "双頭ヒドラ"
 
 # ../lib/gamedata/monster.txt:9426
 msgid ""
@@ -3754,9 +4470,10 @@ msgid ""
 "properly."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:9427
 msgid "night mare"
-msgstr ""
+msgstr "ナイトメア"
 
 # ../lib/gamedata/monster.txt:9449
 msgid ""
@@ -3764,9 +4481,10 @@ msgid ""
 "than a hatred of all that lives."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:9457
 msgid "beholder"
-msgstr ""
+msgstr "ビホルダー"
 
 # ../lib/gamedata/monster.txt:9482
 msgid ""
@@ -3774,19 +4492,23 @@ msgid ""
 "and a huge mouth filled with sharp teeth."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:9483
 msgid "disenchanter worm mass"
-msgstr ""
+msgstr "劣化イモムシの大群"
 
 # ../lib/gamedata/monster.txt:9501
 msgid ""
 "It is a strange mass of squirming worms.  Magical energy crackles around its "
 "disgusting form."
 msgstr ""
+"それはのたくる奇妙なイモムシの大群だ。この忌まわしい生物の周りでは、魔法のエ"
+"ネルギーがパチパチと音を立てている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:9502
 msgid "spirit troll"
-msgstr ""
+msgstr "スピリット・トロル"
 
 # ../lib/gamedata/monster.txt:9520
 msgid "A weird ghostly troll-like being."
@@ -3802,60 +4524,82 @@ msgid ""
 "your very soul."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:9543
 msgid "7-headed hydra"
-msgstr ""
+msgstr "七首ヒドラ"
 
 # ../lib/gamedata/monster.txt:9570
 msgid "A 6-headed hydra with an extra head that waves mesmerisingly at you."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:9571
 msgid "enchantress"
-msgstr ""
+msgstr "エンチャントレス"
 
 # ../lib/gamedata/monster.txt:9601
 msgid ""
 "This elusive female spellcaster has a special affinity for dragons, whom she "
 "rarely fights without."
 msgstr ""
+"この逃げ足の速い女性の魔術師はドラゴンに特別に好かれており、常にドラゴンと一"
+"緒に戦う。"
 
+# J0#
+# J0#
+# J0# (コメント)
+# J0#
+# J0# 解説文中の "ablur" という単語は辞書にないので適当に訳している。
+# J0#
+# J0# その後 わるつまん さんから適切な訳を教わりました。
+# J0#
 # ../lib/gamedata/monster.txt:9602
 msgid "sorcerer"
-msgstr ""
+msgstr "ソーサラー"
 
 # ../lib/gamedata/monster.txt:9635
 msgid ""
 "A human figure in robes, he moves with magically improved speed, and his "
 "hands are ablur with spell casting."
 msgstr ""
+"ローブに身を包んだ人間で、魔法で高められたスピードで動く。その手は常に魔法を"
+"唱えられるように浄められている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:9636
 msgid "xaren"
-msgstr ""
+msgstr "ザレン"
 
 # ../lib/gamedata/monster.txt:9655
 msgid ""
 "It is a tougher relative of the Xorn.  Its hide glitters with metal ores."
 msgstr ""
+"ザレンはゾーンの近隣種だがよりタフである。その表皮は金属質の輝きを発してい"
+"る。"
 
-# ../lib/gamedata/monster.txt:9656
+# J0#
+# ../lib/gamedata/monster.txt:1977
+#, fuzzy
 msgid "giant roc"
-msgstr ""
+msgstr "巨大茶コウモリ"
 
 # ../lib/gamedata/monster.txt:9675
 msgid ""
 "A vast legendary bird, its iron talons rake the most impenetrable of "
 "surfaces and its screech echoes through the many winding dungeon corridors."
 msgstr ""
+"巨大な伝説の鳥であり、その鉄の爪はどんな硬いものでも引き裂き、その鳴き声はど"
+"んな入り組んだ通路でも通り抜けてダンジョン中に響き渡る。"
 
+# J0#
 # ../lib/gamedata/monster.txt:9676
 msgid "minotaur"
-msgstr ""
+msgstr "ミノタウロス"
 
 # ../lib/gamedata/monster.txt:9695
 msgid "It is a cross between a human and a bull."
-msgstr ""
+msgstr "それは人間と雄牛の混血したモンスターだ。"
 
 # ../lib/gamedata/monster.txt:9696
 msgid "vrock"
@@ -3865,15 +4609,18 @@ msgstr ""
 msgid "It is a demon with a long neck and raking claws."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:9717
 msgid "death quasit"
-msgstr ""
+msgstr "デス・クアシト"
 
 # ../lib/gamedata/monster.txt:9741
 msgid ""
 "It is a demon of small stature, but its armoured frame moves with lightning "
 "speed and its powers make it a tornado of death and destruction."
 msgstr ""
+"それは小さな背丈のデーモンだ。その動きは硬い体からは想像もつかない電光石火の"
+"スピードで、その力は死と破壊の竜巻を巻き起こす。"
 
 # ../lib/gamedata/monster.txt:9742
 msgid "patriarch"
@@ -3885,9 +4632,10 @@ msgid ""
 "beliefs.  Stand in his way at your peril."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:9775
+# ../lib/gamedata/monster.txt:6219
+#, fuzzy
 msgid "troll chieftain"
-msgstr ""
+msgstr "狼の族長"
 
 # ../lib/gamedata/monster.txt:9803
 msgid ""
@@ -3895,29 +4643,32 @@ msgid ""
 "its tribe.  It fears nothing."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:9806
 msgid "mature red dragon"
-msgstr ""
+msgstr "レッド・ドラゴン"
 
 # ../lib/gamedata/monster.txt:9831
 msgid "A large dragon, scales tinted deep red."
-msgstr ""
+msgstr "大きなドラゴンで、深く淡い赤色の鱗を持っている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:9832
 msgid "mature gold dragon"
-msgstr ""
+msgstr "ゴールド・ドラゴン"
 
 # ../lib/gamedata/monster.txt:9856
 msgid "A large dragon with scales of gleaming gold."
-msgstr ""
+msgstr "大きなドラゴンで、微かに金色に輝く鱗を持っている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:9857
 msgid "mature black dragon"
-msgstr ""
+msgstr "ブラック・ドラゴン"
 
 # ../lib/gamedata/monster.txt:9881
 msgid "A large dragon, with scales of deepest black."
-msgstr ""
+msgstr "大きなドラゴンで、漆黒の鱗を持っている。"
 
 # ../lib/gamedata/monster.txt:9882
 msgid "stiffbeard sorcerer"
@@ -3929,19 +4680,21 @@ msgid ""
 "Power seems to crackle from his stocky frame."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:9911
 msgid "master lich"
-msgstr ""
+msgstr "マスターリッチ"
 
 # ../lib/gamedata/monster.txt:9936
 msgid ""
 "A skeletal form wrapped in robes.  Powerful magic crackles along its bony "
 "fingers."
 msgstr ""
+"ローブに身を包んだ骸骨だ。骨ばった指の先には強力な魔力が火花をあげている。"
 
 # ../lib/gamedata/monster.txt:9937
 msgid "Gorlim, Betrayer of Barahir"
-msgstr ""
+msgstr "バラヒアを裏切りし『ゴルリム』"
 
 # ../lib/gamedata/monster.txt:9966
 msgid ""
@@ -3951,9 +4704,10 @@ msgid ""
 "servant of evil, even though the other side of his \"bargain\" was not kept."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:9967
+# ../lib/gamedata/monster.txt:6219
+#, fuzzy
 msgid "ranger chieftain"
-msgstr ""
+msgstr "狼の族長"
 
 # ../lib/gamedata/monster.txt:10000
 msgid ""
@@ -3972,10 +4726,15 @@ msgid ""
 "A large dragon with a selection of heads, all shouting and arguing as they "
 "look for prey, but each with its own deadly breath weapon."
 msgstr ""
+"多くの首を使い分ける巨大なドラゴンだ。獲物を探しているときは首同士が叫んだり"
+"言い争いをしたりしているが、ひとたび攻撃になれば、どの首も恐るべきブレスを吐"
+"いてくる。"
 
-# ../lib/gamedata/monster.txt:10029
+# J0#
+# ../lib/gamedata/monster.txt:11261
+#, fuzzy
 msgid "hellhound"
-msgstr ""
+msgstr "冥界ハウンド"
 
 # ../lib/gamedata/monster.txt:10053
 msgid ""
@@ -3990,23 +4749,27 @@ msgstr ""
 msgid "A huorn with a bad heart."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:10078
 msgid "The Queen Ant"
-msgstr ""
+msgstr "『女王アリ』"
 
 # ../lib/gamedata/monster.txt:10108
 msgid "She's upset because you hurt her children."
-msgstr ""
+msgstr "彼女は激怒しているが、それはあなたが彼女の子供を傷つけたからだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:10109
 msgid "Rogrog the Black Troll"
-msgstr ""
+msgstr "ブラック・トロル『ログログ』"
 
 # ../lib/gamedata/monster.txt:10138
 msgid ""
 "A massive and cruel troll of great power, drool slides caustically down his "
 "muscular frame.  Despite his bulk, he strikes with stunning speed."
 msgstr ""
+"狂気の心を持った異常に屈強なトロルで、体からは腐食性の体液を滴らせている。体"
+"の大きさにも関わらず、あっけにとられるようなスピードで攻撃をしてくる。"
 
 # ../lib/gamedata/monster.txt:10141
 msgid "Maia of Nienna"
@@ -4026,13 +4789,14 @@ msgstr ""
 msgid "A servant of Mandos, the summoner of the spirits of the slain."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:10194
 msgid "mature multi-hued dragon"
-msgstr ""
+msgstr "万色ドラゴン"
 
 # ../lib/gamedata/monster.txt:10220
 msgid "A large dragon, scales shimmering many colours."
-msgstr ""
+msgstr "大きなドラゴンで、鱗が様々な色に輝いている。"
 
 # ../lib/gamedata/monster.txt:10221
 msgid "Vargo, Tyrant of Fire"
@@ -4042,9 +4806,11 @@ msgstr ""
 msgid "A towering fire elemental, Vargo burns everything beyond recognition."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:10246
+# J0#
+# ../lib/gamedata/monster.txt:3637
+#, fuzzy
 msgid "Waldern, King of Water"
-msgstr ""
+msgstr "イークの大王『ボルドール』"
 
 # ../lib/gamedata/monster.txt:10270
 msgid ""
@@ -4060,45 +4826,62 @@ msgstr ""
 msgid "It is demon with arms and pincers, its form a true mockery of life."
 msgstr ""
 
+# J0#
+# J0# (コメント)
+# J0# 名前の訳は小林さんによる
+# J0#
 # ../lib/gamedata/monster.txt:10292
 msgid "Quaker, Master of Earth"
-msgstr ""
+msgstr "大地の主『クェイカー』"
 
 # ../lib/gamedata/monster.txt:10316
 msgid ""
 "A towering stone elemental stands before you.  The walls and ceiling are "
 "reduced to rubble as Quaker advances."
 msgstr ""
+"塔のように眼前に立ちふさがる石の精霊だ。クェイカーが近づくと壁や天井は砕けて"
+"岩石となってしまう。"
 
+# J0#
 # ../lib/gamedata/monster.txt:10317
 msgid "Ariel, Queen of Air"
-msgstr ""
+msgstr "風の女王『アリエル』"
 
 # ../lib/gamedata/monster.txt:10341
 msgid ""
 "A towering air elemental, Ariel, the sorceress, avoids your blows with her "
 "extreme speed."
 msgstr ""
+"そびえ立つような風の精霊である魔法使いアリエルは、その卓越したスピードで冒険"
+"者の攻撃を巧みにかわす。"
 
+# JZ#
 # ../lib/gamedata/monster.txt:10342
 msgid "multi-hued hound"
-msgstr ""
+msgstr "万色ハウンド"
 
 # ../lib/gamedata/monster.txt:10366
 msgid "Shimmering in rainbow hues, this hound is beautiful and deadly."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:10369
+# J0#
+# ../lib/gamedata/monster.txt:4441
+#, fuzzy
 msgid "8-headed hydra"
-msgstr ""
+msgstr "双頭ヒドラ"
 
 # ../lib/gamedata/monster.txt:10396
 msgid "A 7-headed hydra with an extra head which reeks of death."
 msgstr ""
 
+# J0#
+# J0#
+# J0#(コメント)
+# J0# 「ドレッド」という読み方も聞きました。根拠もなく「ドリード」を選択しました
+# J0#
 # ../lib/gamedata/monster.txt:10397
 msgid "dread"
-msgstr ""
+msgstr "ドリード"
 
 # ../lib/gamedata/monster.txt:10421
 msgid ""
@@ -4106,10 +4889,14 @@ msgid ""
 "its hideous black body seems to struggle against reality as the universe "
 "itself struggles to banish it."
 msgstr ""
+"それを見れば誰でも叫び声をあげたくなるような存在感を持っている。その恐ろしげ"
+"な黒い体はまるで死が実体を持ったかのような姿で、この世の全ての秩序に反して無"
+"理矢理に存在しているかのようだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:10424
 msgid "killer white beetle"
-msgstr ""
+msgstr "ホワイト・キラービートル"
 
 # ../lib/gamedata/monster.txt:10443
 msgid ""
@@ -4117,13 +4904,14 @@ msgid ""
 "mandibles as it scuttles toward you."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:10444
 msgid "rotting quylthulg"
-msgstr ""
+msgstr "腐乱クイルスルグ"
 
 # ../lib/gamedata/monster.txt:10460
 msgid "It is a pulsing flesh mound that reeks of death and putrefaction."
-msgstr ""
+msgstr "それは死と退廃の悪臭を振りまく、脈動する肉塊だ。"
 
 # ../lib/gamedata/monster.txt:10461
 msgid "nalfeshnee"
@@ -4135,9 +4923,10 @@ msgid ""
 "its length."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:10487
 msgid "undead beholder"
-msgstr ""
+msgstr "アンデッド・ビホルダー"
 
 # ../lib/gamedata/monster.txt:10517
 msgid ""
@@ -4147,37 +4936,44 @@ msgid ""
 "your vitality for its evil enchantments."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:10518
 msgid "demonic quylthulg"
-msgstr ""
+msgstr "デーモン・クイルスルグ"
 
 # ../lib/gamedata/monster.txt:10535
 msgid ""
 "A pile of pulsing flesh that glows with an inner hellish fire.  The world "
 "itself seems to cry out against it."
 msgstr ""
+"脈動する肉の塊で、その内部は地獄の業火に輝いている。この世界そのものがこのモ"
+"ンスターの存在を嫌悪しているように感じる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:10536
 msgid "draconic quylthulg"
-msgstr ""
+msgstr "ドラゴン・クイルスルグ"
 
 # ../lib/gamedata/monster.txt:10553
 msgid ""
 "It looks like it was once a dragon corpse, now deeply infected with magical "
 "bacteria that make it pulse in a foul and degrading way."
 msgstr ""
+"それはかつてはドラゴンの死骸だったようだが、今は魔法のバクテリアによって汚ら"
+"しい堕落した方法で生を与えられている。"
 
 # ../lib/gamedata/monster.txt:10554
 msgid "greater basilisk"
-msgstr ""
+msgstr "巨大バシリスク"
 
 # ../lib/gamedata/monster.txt:10577
 msgid "A large basilisk, whose shape resembles that of a great wyrm."
 msgstr ""
 
+# JZ#
 # ../lib/gamedata/monster.txt:10578
 msgid "berserker"
-msgstr ""
+msgstr "バーサーカー"
 
 # ../lib/gamedata/monster.txt:10608
 msgid ""
@@ -4188,23 +4984,27 @@ msgid ""
 "his battle-cry strikes terror into his foes."
 msgstr ""
 
+# JZ#
 # ../lib/gamedata/monster.txt:10609
 msgid "cyclops"
-msgstr ""
+msgstr "サイクロプス"
 
 # ../lib/gamedata/monster.txt:10630
 msgid "A gigantic ugly humanoid with but one eye and very thick skin."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:10631
 msgid "grey wraith"
-msgstr ""
+msgstr "グレイ・レイス"
 
 # ../lib/gamedata/monster.txt:10653
 msgid ""
 "A tangible but ghostly form, made of grey fog.  The air around it feels "
 "deathly cold."
 msgstr ""
+"それは実体があるように見えるが、実際は灰色の霧でできた幽霊のようなものだ。そ"
+"の周りには死のような冷たさの大気が充満している。"
 
 # ../lib/gamedata/monster.txt:10656
 msgid "lord of Carn Dûm"
@@ -4216,14 +5016,18 @@ msgid ""
 "rate as his black spiked mace rains down blow after blow on your pitiful "
 "frame."
 msgstr ""
+"黒装束に身を包んだ邪悪なプリーストだ。哀れな冒険者の体に刺の付いたメイスを"
+"狂ったように打ちつけながらも、強力な効果を持った恐ろしい祈りを唱えてくる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:10689
 msgid "vampire lord"
-msgstr ""
+msgstr "バンパイア・ロード"
 
 # ../lib/gamedata/monster.txt:10712
 msgid "A foul wind chills your bones as this ghastly figure approaches."
 msgstr ""
+"この死人のような存在が近づいてくると、汚れた風が冒険者の背筋を震わせる。"
 
 # ../lib/gamedata/monster.txt:10715
 msgid "marilith"
@@ -4234,9 +5038,10 @@ msgid ""
 "She is a demon of female form with many arms, each bearing deadly weapons."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:10738
 msgid "death mold"
-msgstr ""
+msgstr "デス・モルド"
 
 # ../lib/gamedata/monster.txt:10760
 msgid ""
@@ -4244,10 +5049,15 @@ msgid ""
 "power from sucking the souls of those that approach it, a nimbus of pure "
 "evil surrounds it.  Luckily for you, it can't move."
 msgstr ""
+"それはカビに包まれた全ての邪悪の権化だ。この魂のないモンスターは近づいた者の"
+"生命力を吸い取って力を得る。それは生々しい邪悪の雰囲気に覆われている。冒険者"
+"にとって幸運なことに、それは動くことができない。"
 
-# ../lib/gamedata/monster.txt:10763
+# J0#
+# ../lib/gamedata/monster.txt:2838
+#, fuzzy
 msgid "ancient spider"
-msgstr ""
+msgstr "大蜘蛛"
 
 # ../lib/gamedata/monster.txt:10789
 msgid "A foul creature of spider form, older even than the pits of Angband."
@@ -4265,9 +5075,10 @@ msgid ""
 "steed for his Ringwraiths."
 msgstr ""
 
+# JZ#
 # ../lib/gamedata/monster.txt:10813
 msgid "gorgon"
-msgstr ""
+msgstr "ゴーゴン"
 
 # ../lib/gamedata/monster.txt:10842
 msgid ""
@@ -4276,25 +5087,28 @@ msgid ""
 "from her ghastly mouth."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:10845
 msgid "storm giant"
-msgstr ""
+msgstr "ストーム・ジャイアント"
 
-# ../lib/gamedata/monster.txt:10871
+# ../lib/gamedata/monster.txt:8586
+#, fuzzy
 msgid "It is a twenty-five foot tall giant wreathed in lightning."
-msgstr ""
+msgstr "それは背丈が 6 メートル以上もある巨人で、雲が周りに渦巻いている。"
 
 # ../lib/gamedata/monster.txt:10872
 msgid "lesser Balrog"
-msgstr ""
+msgstr "レッサー・バルログ"
 
 # ../lib/gamedata/monster.txt:10898
 msgid "It is a massive humanoid demon wreathed in flames."
-msgstr ""
+msgstr "それは全身が炎で覆われた屈強な人間型のモンスターだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:10899
 msgid "black wraith"
-msgstr ""
+msgstr "ブラック・レイス"
 
 # ../lib/gamedata/monster.txt:10922
 msgid ""
@@ -4313,53 +5127,64 @@ msgid ""
 "fleeing their wrath, following the murder of Princess Aredhel of Gondolin."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:10959
 msgid "ancient blue dragon"
-msgstr ""
+msgstr "古代ブルー・ドラゴン"
 
 # ../lib/gamedata/monster.txt:10980
 msgid "A huge draconic form.  Lightning crackles along its length."
-msgstr ""
+msgstr "巨大なドラゴンで、全身が稲妻で覆われている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:10981
 msgid "ancient white dragon"
-msgstr ""
+msgstr "古代ホワイト・ドラゴン"
 
 # ../lib/gamedata/monster.txt:11002
 msgid "A huge draconic form.  Frost covers it from head to tail."
-msgstr ""
+msgstr "巨大なドラゴンで、頭の先から爪の先まで冷気に覆われている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:11003
 msgid "ancient green dragon"
-msgstr ""
+msgstr "古代グリーン・ドラゴン"
 
 # ../lib/gamedata/monster.txt:11024
 msgid "A huge draconic form enveloped in clouds of poisonous vapour."
-msgstr ""
+msgstr "毒の霧に身を包んだ巨大なドラゴンだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:11025
 msgid "death drake"
-msgstr ""
+msgstr "デス・ドレイク"
 
 # ../lib/gamedata/monster.txt:11050
 msgid ""
 "It is a dragon-like form wrapped in darkness.  You cannot make out its true "
 "form but you sense its evil."
 msgstr ""
+"それは暗黒に包まれたドラゴンのようなモンスターだ。その真の姿を把握することは"
+"できないが、その邪悪な気は感じとることができる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:11051
 msgid "great crystal drake"
-msgstr ""
+msgstr "グレート・クリスタル・ドレイク"
 
 # ../lib/gamedata/monster.txt:11078
 msgid ""
 "A huge crystalline dragon.  Its claws could cut you to shreds and its teeth "
 "are razor sharp.  Strange colours ripple through it as it moves in the light."
 msgstr ""
+"巨大な水晶のようなドラゴンだ。冒険者の体をバラバラに切り刻むことができる爪"
+"と、剃刀のように鋭い歯を持っている。それが動くと光が反射して体中が奇妙な色に"
+"きらめく。"
 
+# J0#
 # ../lib/gamedata/monster.txt:11079
 msgid "ethereal dragon"
-msgstr ""
+msgstr "天上界ドラゴン"
 
 # ../lib/gamedata/monster.txt:11103
 msgid ""
@@ -4367,9 +5192,10 @@ msgid ""
 "from sight as it cloaks itself in unearthly shadows."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:11104
+# ../lib/gamedata/monster.txt:11856
+#, fuzzy
 msgid "master mystic"
-msgstr ""
+msgstr "修験道免許皆伝者"
 
 # ../lib/gamedata/monster.txt:11134
 msgid ""
@@ -4378,9 +5204,11 @@ msgid ""
 "if need be."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:11135
+# J0#
+# ../lib/gamedata/monster.txt:7716
+#, fuzzy
 msgid "shadow"
-msgstr ""
+msgstr "シャドウ・ドレイク"
 
 # ../lib/gamedata/monster.txt:11159
 msgid ""
@@ -4388,6 +5216,8 @@ msgid ""
 "reach out to end your life as it glides towards you, seeking to suck the "
 "energy from your soul to feed its power."
 msgstr ""
+"ぼんやりとした人間のような姿をした強力な暗黒の精霊だ。滑るように近づいては、"
+"その剃刀のような爪で冒険者の生命を奪い、力を得るためにその魂を吸い取る。"
 
 # ../lib/gamedata/monster.txt:11160
 msgid "The Balrog of Moria"
@@ -4400,47 +5230,57 @@ msgid ""
 "fury blisters your skin and melts your flesh!"
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:11193
 msgid "ancient black dragon"
-msgstr ""
+msgstr "古代ブラック・ドラゴン"
 
 # ../lib/gamedata/monster.txt:11214
 msgid "A huge draconic form.  Pools of acid melt the floor around it."
-msgstr ""
+msgstr "巨大なドラゴンで、滴る酸が池のようになって周りの床を溶かしている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:11215
 msgid "ancient red dragon"
-msgstr ""
+msgstr "古代レッド・ドラゴン"
 
 # ../lib/gamedata/monster.txt:11238
 msgid ""
 "A huge draconic form.  Wisps of smoke steam from its nostrils and the "
 "extreme heat surrounding it makes you gasp for breath."
 msgstr ""
+"巨大なドラゴンで、その鼻孔から立ち昇る幾筋もの煙と、辺りに充満する高熱で息が"
+"苦しくなる。"
 
+# J0#
 # ../lib/gamedata/monster.txt:11239
 msgid "ancient gold dragon"
-msgstr ""
+msgstr "古代ゴールド・ドラゴン"
 
-# ../lib/gamedata/monster.txt:11260
+# ../lib/gamedata/monster.txt:11024
+#, fuzzy
 msgid ""
 "A huge draconic form wreathed in a nimbus of light.  Its roar stuns and "
 "deafens you."
-msgstr ""
+msgstr "毒の霧に身を包んだ巨大なドラゴンだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:11261
 msgid "nether hound"
-msgstr ""
+msgstr "冥界ハウンド"
 
 # ../lib/gamedata/monster.txt:11285
 msgid ""
 "You feel a soul-tearing chill upon viewing this beast, a ghostly form of "
 "darkness in the shape of a large dog."
 msgstr ""
+"この野獣に相対すると魂が引き裂かれるような冷気を感じる。この暗黒のゴーストの"
+"ようなモンスターは大きな犬の姿をしている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:11286
 msgid "time hound"
-msgstr ""
+msgstr "タイム・ハウンド"
 
 # ../lib/gamedata/monster.txt:11312
 msgid ""
@@ -4448,10 +5288,13 @@ msgid ""
 "you see a little puppy and a toothless old dog.  Perhaps you should give up "
 "and go to bed."
 msgstr ""
+"デジャヴのような感じを覚えるが、気のせいなのだろうか？一見すると小さな子犬か"
+"歯の抜けた老犬のようだ。それと戦うのは諦めてとっとと寝るべきだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:11313
 msgid "plasma hound"
-msgstr ""
+msgstr "プラズマ・ハウンド"
 
 # ../lib/gamedata/monster.txt:11340
 msgid ""
@@ -4459,10 +5302,15 @@ msgid ""
 "of a giant hound.  Your hair stands on end and your palms itch as you sense "
 "trouble."
 msgstr ""
+"巨大な犬の姿をした純粋なエネルギーの塊だ。このモンスターが近づいてくると辺り"
+"の大気が歪みはじめる。冒険者の肉体は恐怖を察知して、髪の毛は逆立ち、手は汗ば"
+"んでくる。"
 
-# ../lib/gamedata/monster.txt:11341
+# J0#
+# ../lib/gamedata/monster.txt:14316
+#, fuzzy
 msgid "Harowen the Black Hand"
-msgstr ""
+msgstr "黒竜『アンカラゴン』"
 
 # ../lib/gamedata/monster.txt:11365
 msgid ""
@@ -4489,15 +5337,19 @@ msgid ""
 "side."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:11420
 msgid "Itangast the Fire Drake"
-msgstr ""
+msgstr "ファイア・ドレイク『イタンガスト』"
 
 # ../lib/gamedata/monster.txt:11446
 msgid ""
 "A mighty ancient dragon, Itangast's form scorches your flesh.  Wisps of "
 "smoke curl up from his nostrils as he regards you with disdain."
 msgstr ""
+"古代の屈強なドラゴンであるイタンガストは、そこに立っているだけでも冒険者の肉"
+"体を焦がしてしまうほどの熱気を帯びている。彼が冒険者を軽蔑的な眼差しで見つめ"
+"るとき、その鼻孔からは幾筋もの煙が吹き上がる。"
 
 # ../lib/gamedata/monster.txt:11449
 msgid "hezrou"
@@ -4510,27 +5362,32 @@ msgid ""
 "froth and sizzle."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:11474
 msgid "ancient multi-hued dragon"
-msgstr ""
+msgstr "古代万色ドラゴン"
 
 # ../lib/gamedata/monster.txt:11498
 msgid ""
 "A huge draconic form.  Many colours ripple down its massive frame.  Few live "
 "to see another."
 msgstr ""
+"巨大なドラゴンで、その体の上では様々な色が波打つように変化している。その姿を"
+"見て命を永らえた者はほとんどいない。"
 
+# J0#
 # ../lib/gamedata/monster.txt:11499
 msgid "chaos vortex"
-msgstr ""
+msgstr "カオス・ボルテックス"
 
 # ../lib/gamedata/monster.txt:11520
 msgid "Void, nothingness, spinning destructively."
-msgstr ""
+msgstr "空虚で実体を持たない破壊的な渦巻きだ。"
 
+# J0#
 # ../lib/gamedata/monster.txt:11521
 msgid "Scatha the Worm"
-msgstr ""
+msgstr "長虫『スカサ』"
 
 # ../lib/gamedata/monster.txt:11547
 msgid ""
@@ -4538,20 +5395,34 @@ msgid ""
 "His scales are covered with frost, and his breath sends a shower of ice into "
 "the air."
 msgstr ""
+"太古の賢明なるドラゴンであるスカサは、長い年月を通してその知能に磨きをかけて"
+"きた。彼の鱗は冷気で覆われていて、そのブレスは空気中に氷のシャワーをまき散ら"
+"す。"
 
+# J0#
+# J0#
+# J0#(コメント)
+# J0# フェニックスという読み方も捨てがたいですが、ま、思い入れのあるこちらを。
+# J0#
 # ../lib/gamedata/monster.txt:11550
 msgid "The Phoenix"
-msgstr ""
+msgstr "『火の鳥』"
 
 # ../lib/gamedata/monster.txt:11580
 msgid ""
 "A massive glowing eagle bathed in flames.  The searing heat chars your skin "
 "and melts your armour."
 msgstr ""
+"炎の中に住む強力な輝く鷲だ。焦がすような熱気は冒険者の鎧を溶かし、皮膚を炭の"
+"ようにしてしまう。"
 
+# J0#(コメント)
+# J0# 「ドロレム」という読み方も聞きました
+# JZ#(コメント) GPS さん
+# JZ#ドラゴン型のゴーレムなので、読みはドローレムがいいかと思います。
 # ../lib/gamedata/monster.txt:11581
 msgid "drolem"
-msgstr ""
+msgstr "ドローレム"
 
 # ../lib/gamedata/monster.txt:11607
 msgid ""
@@ -4559,18 +5430,24 @@ msgid ""
 "weaved during its creation make it a fearsome adversary.  Its eyes show "
 "little intelligence, but it has been instructed to destroy all it meets."
 msgstr ""
+"人工的に作られたドラゴンであるドローレムは屈強な力強さを持っている。その創造"
+"に際しては強力な呪文が用いられ、それがこのモンスターを恐るべき強敵に仕立て上"
+"げているのだ。その目には知性のかけらも見いだすことはできず、唯一知っているこ"
+"とは、出会ったもの全てを倒すということだけだ。"
 
+# JZ#
 # ../lib/gamedata/monster.txt:11608
 msgid "demilich"
-msgstr ""
+msgstr "デミリッチ"
 
 # ../lib/gamedata/monster.txt:11631
 msgid "A lich who is partially immaterial, on its way to a new, ethereal form."
-msgstr ""
+msgstr "部分的に非物質化したリッチで、霊的な存在に生まれ変わる過程にある。"
 
+# J0#
 # ../lib/gamedata/monster.txt:11632
 msgid "dreadmaster"
-msgstr ""
+msgstr "ドリードマスター"
 
 # ../lib/gamedata/monster.txt:11658
 msgid ""
@@ -4578,20 +5455,27 @@ msgid ""
 "very touch abuses and disrupts the flow of life, and its unearthly limbs, of "
 "purest black, crush rock and flesh with ease."
 msgstr ""
+"それは比類なき強力さを誇る魂のないモンスターで、存在自体がこの世界に対する侮"
+"辱だ。それに触れられると生命の流れが狂わされて引き裂かれる。その非現実的な漆"
+"黒の腕は岩でも肉でも容易に打ち砕く。"
 
+# J0#
 # ../lib/gamedata/monster.txt:11659
 msgid "nether wraith"
-msgstr ""
+msgstr "冥界レイス"
 
 # ../lib/gamedata/monster.txt:11683
 msgid ""
 "A form that hurts the eye, death permeates the air around it.  As it nears "
 "you, a coldness saps your soul."
 msgstr ""
+"それは目の毒になるような姿をしていて、死の予感を辺りの空気に振りまいている。"
+"それが近づいてくると冷気によって魂が徐々に弱っていく。"
 
+# J0#
 # ../lib/gamedata/monster.txt:11686
 msgid "Shelob, Spider of Darkness"
-msgstr ""
+msgstr "闇の蜘蛛『シェロブ』"
 
 # ../lib/gamedata/monster.txt:11718
 msgid ""
@@ -4601,9 +5485,10 @@ msgid ""
 "feed her voracious appetite."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:11719
 msgid "dracolich"
-msgstr ""
+msgstr "ドラコリッチ"
 
 # ../lib/gamedata/monster.txt:11745
 msgid ""
@@ -4611,20 +5496,27 @@ msgid ""
 "Its animated form strikes with speed and drains life from its prey to "
 "satisfy its hunger."
 msgstr ""
+"古代の偉大なドラゴンの骸骨に、最も危険な魔法によって生命を吹き込んだものだ。"
+"餌食に素早い一撃を食らわせ、その生命を吸い取っては空腹を満たしている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:11746
 msgid "dracolisk"
-msgstr ""
+msgstr "ドラコリスク"
 
 # ../lib/gamedata/monster.txt:11771
 msgid ""
 "A mixture of dragon and basilisk, the dracolisk stares at you with deep "
 "piercing eyes, its evil breath burning the ground where it stands."
 msgstr ""
+"ドラゴンとバシリスクの混血であるドラコリスクは、深く突き刺すような視線で冒険"
+"者を睨みつける。その邪悪なブレスは、自分の足下の大地ですら燃え上がらせる。"
 
-# ../lib/gamedata/monster.txt:11772
+# J0#
+# ../lib/gamedata/monster.txt:12297
+#, fuzzy
 msgid "Ar-Pharazôn the Golden"
-msgstr ""
+msgstr "黄金竜『スマウグ』"
 
 # ../lib/gamedata/monster.txt:11799
 msgid ""
@@ -4644,19 +5536,22 @@ msgid ""
 "hells, capable of a terrifying berserk fury."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:11828
 msgid "lesser titan"
-msgstr ""
+msgstr "レッサー・タイタン"
 
 # ../lib/gamedata/monster.txt:11853
 msgid ""
 "It is a humanoid figure thirty feet tall that gives off an aura of power and "
 "hate."
 msgstr ""
+"それは力と憎悪のオーラを発散する、背丈が 10 メートル近くある人間型のモンス"
+"ターだ。"
 
 # ../lib/gamedata/monster.txt:11856
 msgid "grand master mystic"
-msgstr ""
+msgstr "修験道免許皆伝者"
 
 # ../lib/gamedata/monster.txt:11886
 msgid ""
@@ -4664,20 +5559,27 @@ msgid ""
 "all forms of unarmed combat and controlling the world's natural creatures "
 "with disdainful ease."
 msgstr ""
+"彼は修験道を真に極めた数少ない者であり、全ての種類の肉弾戦をマスターしてい"
+"る。そしてこの世界の自然界の生物に顎で命令を与えることができる。"
 
+# J0#
+# J0#(コメント)
+# J0# 「ダルージ」という読み方も聞きました。これは字数から「ドルジ」に。
+# J0#
 # ../lib/gamedata/monster.txt:11887
 msgid "hand druj"
-msgstr ""
+msgstr "手のドルジ"
 
 # ../lib/gamedata/monster.txt:11907
 msgid ""
 "A skeletal hand floating in the air, motionless except for its flexing "
 "fingers."
-msgstr ""
+msgstr "それは宙に浮かぶ手の骨で、指が滑らかに動く他には身動きをしない。"
 
+# J0#
 # ../lib/gamedata/monster.txt:11908
 msgid "9-headed hydra"
-msgstr ""
+msgstr "九首ヒドラ"
 
 # ../lib/gamedata/monster.txt:11942
 msgid ""
@@ -4687,9 +5589,13 @@ msgid ""
 "fast as you chop them off."
 msgstr ""
 
+# J0#
+# J0# (コメント)
+# J0# 名前の訳は小林さんのものです
+# J0#
 # ../lib/gamedata/monster.txt:11945
 msgid "Baphomet the Minotaur Lord"
-msgstr ""
+msgstr "ミノタウロスの王『バフォメット』"
 
 # ../lib/gamedata/monster.txt:11974
 msgid ""
@@ -4699,7 +5605,7 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:11977
 msgid "elder vampire"
-msgstr ""
+msgstr "エルダー・バンパイア"
 
 # ../lib/gamedata/monster.txt:12005
 msgid ""
@@ -4708,9 +5614,13 @@ msgid ""
 "shades of its victims from beyond the grave to come enslaved to its aid."
 msgstr ""
 
+# J0#
+# J0# (コメント)
+# J0# 名前の訳は小林さんのものです
+# J0#
 # ../lib/gamedata/monster.txt:12006
 msgid "Fundin Bluecloak"
-msgstr ""
+msgstr "青き衣の『フンディン』"
 
 # ../lib/gamedata/monster.txt:12034
 msgid ""
@@ -4719,6 +5629,10 @@ msgid ""
 "spell only justify his position further.  His combination of both dwarven "
 "strength and priestly wisdom are a true match for any adventurer."
 msgstr ""
+"彼は最も偉大なドワーフ族のプリーストの一人である。フンディンは教会で高い地位"
+"を持ち、武器の扱いも祈りの習熟度も、その地位相応のものを持っている。彼はド"
+"ワーフの強さとプリーストの賢さを合わせ持ち、どんな冒険者にとっても恐るべき強"
+"敵である。"
 
 # ../lib/gamedata/monster.txt:12042
 msgid "Gilim, the Giant of Eruman"
@@ -4750,9 +5664,11 @@ msgid ""
 "of the Noldor."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:12126
+# J0#
+# ../lib/gamedata/monster.txt:8184
+#, fuzzy
 msgid "great earth elemental"
-msgstr ""
+msgstr "地のエレメンタル"
 
 # ../lib/gamedata/monster.txt:12147
 msgid ""
@@ -4760,17 +5676,19 @@ msgid ""
 "from the very fabric of the dungeon."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:12148
 msgid "aether vortex"
-msgstr ""
+msgstr "エーテル・ボルテックス"
 
 # ../lib/gamedata/monster.txt:12173
 msgid "An awesome vortex of pure magic, power radiates from its frame."
-msgstr ""
+msgstr "純粋に魔力のみでできた恐るべき渦巻きで、辺りに魔力を発散している。"
 
+# J0#
 # ../lib/gamedata/monster.txt:12174
 msgid "Saruman of Many Colours"
-msgstr ""
+msgstr "万色の『サルマン』"
 
 # ../lib/gamedata/monster.txt:12205
 msgid ""
@@ -4780,9 +5698,10 @@ msgid ""
 "world."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:12208
 msgid "nightwing"
-msgstr ""
+msgstr "ナイトウィング"
 
 # ../lib/gamedata/monster.txt:12237
 msgid ""
@@ -4804,9 +5723,15 @@ msgid ""
 "ever experienced."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:12267
+# J0#
+# J0#
+# J0#(コメント)
+# J0# 「ドレッド」という読み方も聞きました。根拠もなく「ドリード」を選択しました
+# J0#
+# ../lib/gamedata/monster.txt:10397
+#, fuzzy
 msgid "dreadlord"
-msgstr ""
+msgstr "ドリード"
 
 # ../lib/gamedata/monster.txt:12296
 msgid ""
@@ -4816,9 +5741,10 @@ msgid ""
 "the stench of death.  Flee its hunger!"
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:12297
 msgid "Smaug the Golden"
-msgstr ""
+msgstr "黄金竜『スマウグ』"
 
 # ../lib/gamedata/monster.txt:12325
 msgid ""
@@ -4828,9 +5754,11 @@ msgid ""
 "the greatest dragon still surviving into the Third Age."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:12328
+# J0#
+# ../lib/gamedata/monster.txt:12499
+#, fuzzy
 msgid "werewolf of Sauron"
-msgstr ""
+msgstr "『サウロンの口』"
 
 # ../lib/gamedata/monster.txt:12357
 msgid ""
@@ -4838,9 +5766,10 @@ msgid ""
 "malevolently as it defends its evil master's fortress."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:12358
+# ../lib/gamedata/monster.txt:6758
+#, fuzzy
 msgid "spider of Gorgoroth"
-msgstr ""
+msgstr "ゴルゴロスの蝙蝠"
 
 # ../lib/gamedata/monster.txt:12388
 msgid ""
@@ -4848,9 +5777,10 @@ msgid ""
 "Dungortheb beneath the mountains of Ered Gorgoroth."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:12391
 msgid "chaos hound"
-msgstr ""
+msgstr "カオス・ハウンド"
 
 # ../lib/gamedata/monster.txt:12416
 msgid ""
@@ -4858,16 +5788,20 @@ msgid ""
 "expecting mayhem and chaos ahead.  It appears to have an almost kamikaze "
 "relish for combat.  You suspect all may not be as it seems."
 msgstr ""
+"絶えずその姿を変化させる犬のようなモンスターで、争乱と混乱を渇望しているかの"
+"ように冒険者に突進してくる。それは戦闘に関してカミカゼ精神を持っていることは"
+"明らかだ。目に見えるその姿は常に疑わしいものがある。"
 
+# JZ#
 # ../lib/gamedata/monster.txt:12417
 msgid "archlich"
-msgstr ""
+msgstr "アーチリッチ"
 
 # ../lib/gamedata/monster.txt:12442
 msgid ""
 "A lich who has reached its ultimate evolutionary stage: a completely "
 "immaterial state."
-msgstr ""
+msgstr "進化の最終段階に達したリッチで、完全に非物質化している。"
 
 # ../lib/gamedata/monster.txt:12445
 msgid "Maia of Ulmo"
@@ -4879,9 +5813,11 @@ msgid ""
 "earth with voices that are heard only as the music of water."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:12475
+# J0#
+# ../lib/gamedata/monster.txt:7956
+#, fuzzy
 msgid "great water elemental"
-msgstr ""
+msgstr "水のエレメンタル"
 
 # ../lib/gamedata/monster.txt:12498
 msgid ""
@@ -4889,9 +5825,10 @@ msgid ""
 "land."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:12499
 msgid "The Mouth of Sauron"
-msgstr ""
+msgstr "『サウロンの口』"
 
 # ../lib/gamedata/monster.txt:12528
 msgid ""
@@ -4921,19 +5858,21 @@ msgid ""
 "Silmarils, he attacks you with agility, power and cruelty."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:12583
 msgid "eye druj"
-msgstr ""
+msgstr "目のドルジ"
 
 # ../lib/gamedata/monster.txt:12605
 msgid ""
 "A bloodshot eyeball floating in the air, you'd be forgiven for assuming it "
 "harmless."
-msgstr ""
+msgstr "それは宙に浮かぶ血走った目玉だ。無害だと思ったのも無理はないが…。"
 
+# J0#
 # ../lib/gamedata/monster.txt:12606
 msgid "greater titan"
-msgstr ""
+msgstr "グレーター・タイタン"
 
 # ../lib/gamedata/monster.txt:12632
 msgid ""
@@ -4953,9 +5892,10 @@ msgid ""
 "bats you about."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:12666
 msgid "Thuringwethil, the Vampire Messenger"
-msgstr ""
+msgstr "吸血鬼の使者『スリングウェシル』"
 
 # ../lib/gamedata/monster.txt:12693
 msgid ""
@@ -4963,6 +5903,9 @@ msgid ""
 "her vampire race.  At first she is charming to meet, but her wings and eyes "
 "give away her true form."
 msgstr ""
+"サウロンとモルゴスの間を取り持つ使者達の隊長であるスリングウェシルは、バンパ"
+"イア族の中で最も恐るべき存在だ。一見したところ彼女はかわいらしい女性だが、そ"
+"の羽と瞳を見ればそんな思いはどこかに吹き飛んでしまうだろう。"
 
 # ../lib/gamedata/monster.txt:12694
 msgid "beholder hive-mother"
@@ -4974,9 +5917,10 @@ msgid ""
 "whenever she wishes."
 msgstr ""
 
+# JZ#
 # ../lib/gamedata/monster.txt:12723
 msgid "jabberwock"
-msgstr ""
+msgstr "ジャバーウォック"
 
 # ../lib/gamedata/monster.txt:12749
 msgid ""
@@ -4984,9 +5928,10 @@ msgid ""
 "\"  Run and run quickly, for death incarnate chases behind you!"
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:12750
 msgid "Tselakus, the Dreadlord"
-msgstr ""
+msgstr "ドリードロード『ツエラクス』"
 
 # ../lib/gamedata/monster.txt:12778
 msgid ""
@@ -4998,9 +5943,11 @@ msgid ""
 "all in his path to your soul!"
 msgstr ""
 
-# ../lib/gamedata/monster.txt:12779
+# J0#
+# ../lib/gamedata/monster.txt:4827
+#, fuzzy
 msgid "bone golem"
-msgstr ""
+msgstr "石ゴーレム"
 
 # ../lib/gamedata/monster.txt:12804
 msgid ""
@@ -5008,9 +5955,14 @@ msgid ""
 "victims."
 msgstr ""
 
+# JZ#
+# JZ#ティンダロスの猟犬
+# JZ#フランク・ベルナップ・ロングの「ティンダロスの猟犬」に登場。
+# JZ#時空の果ての「角」に潜んで獲物を狙う存在です。 by 久留さん
+# JZ#引用は久留さん、解説は NeSYS さんによる
 # ../lib/gamedata/monster.txt:12807
 msgid "hound of Tindalos"
-msgstr ""
+msgstr "ティンダロスの猟犬"
 
 # ../lib/gamedata/monster.txt:12833
 msgid ""
@@ -5018,9 +5970,11 @@ msgid ""
 "the angles of time, ravenous and snarling and unsatisfied."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:12834
+# J0#
+# ../lib/gamedata/monster.txt:1349
+#, fuzzy
 msgid "Nan, the Giant"
-msgstr ""
+msgstr "巨大シロアリ"
 
 # ../lib/gamedata/monster.txt:12862
 msgid ""
@@ -5028,9 +5982,10 @@ msgid ""
 "elm.  In his right hand, he holds the longest sword you have ever beheld."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:12863
 msgid "nightcrawler"
-msgstr ""
+msgstr "ナイトクローラー"
 
 # ../lib/gamedata/monster.txt:12897
 msgid ""
@@ -5039,6 +5994,9 @@ msgid ""
 "like nothing you have ever seen before, and a terrible chill runs down your "
 "spine as you face it."
 msgstr ""
+"この極度に邪悪な生物は巨大なイモムシのような姿をしている。その胃袋は暗黒の空"
+"間のようで、鋼鉄の皮膚からは酸がしたたり落ちている。このような存在にはかつて"
+"出会ったことはない。それは背筋に響くような恐ろしげな叫び声をあげる。"
 
 # ../lib/gamedata/monster.txt:12898
 msgid "gelugon"
@@ -5054,7 +6012,7 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:12935
 msgid "great storm wyrm"
-msgstr ""
+msgstr "グレート・ストーム・ワイアーム"
 
 # ../lib/gamedata/monster.txt:12963
 msgid ""
@@ -5062,10 +6020,14 @@ msgid ""
 "form.  Deep blue scales reflect the flashes and highlight the creature's "
 "great muscles.  It regards you with contempt."
 msgstr ""
+"力に満ちた巨大なドラゴンだ。その山のような体の周りには嵐が巻き起こり、稲妻が"
+"光っている。深い青色の鱗が光を反射して、この生物の隆々たる筋肉を浮き彫りにし"
+"ている。それは冒険者を軽蔑すべき者とみなしている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:12964
 msgid "great ice wyrm"
-msgstr ""
+msgstr "グレート・アイス・ワイアーム"
 
 # ../lib/gamedata/monster.txt:12991
 msgid ""
@@ -5073,10 +6035,14 @@ msgid ""
 "extreme cold, or witnessed such an icy stare.  Begone quickly or feel its "
 "wrath!"
 msgstr ""
+"恐るべき破壊能力を持った巨大なドラゴンだ。このような冷気はかつて感じたことが"
+"ないし、このような冷たい眼差しはかつて見たことがない。素早く逃げないと恐るべ"
+"き怒りを呼び覚ましてしまうだろう！"
 
-# ../lib/gamedata/monster.txt:12992
+# ../lib/gamedata/monster.txt:12935
+#, fuzzy
 msgid "great swamp wyrm"
-msgstr ""
+msgstr "グレート・ストーム・ワイアーム"
 
 # ../lib/gamedata/monster.txt:13019
 msgid ""
@@ -5105,33 +6071,42 @@ msgid ""
 "above all the Valar."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:13081
+# J0#
+# ../lib/gamedata/monster.txt:13099
+#, fuzzy
 msgid "greater demonic quylthulg"
-msgstr ""
+msgstr "グレーター・ドラゴン・クイルスルグ"
 
-# ../lib/gamedata/monster.txt:13098
+# ../lib/gamedata/monster.txt:13117
+#, fuzzy
 msgid "A massive pulsating mound of flesh, glowing with a hellish light."
 msgstr ""
+"鱗が付いた強力な肉塊だ。それは脈動し、鼓動しながら様々な色に変化している。"
 
+# J0#
 # ../lib/gamedata/monster.txt:13099
 msgid "greater draconic quylthulg"
-msgstr ""
+msgstr "グレーター・ドラゴン・クイルスルグ"
 
 # ../lib/gamedata/monster.txt:13117
 msgid ""
 "A massive mound of scaled flesh, throbbing and pulsating with multi-hued "
 "light."
 msgstr ""
+"鱗が付いた強力な肉塊だ。それは脈動し、鼓動しながら様々な色に変化している。"
 
+# J0#
 # ../lib/gamedata/monster.txt:13118
 msgid "greater rotting quylthulg"
-msgstr ""
+msgstr "腐乱グレーター・クイルスルグ"
 
 # ../lib/gamedata/monster.txt:13136
 msgid ""
 "A massive pile of rotting flesh.  A disgusting stench fills the air as it "
 "throbs and writhes."
 msgstr ""
+"強力な腐った肉の塊だ。それが脈動し、身もだえすると吐き気を催すような悪臭が辺"
+"りに充満する。"
 
 # ../lib/gamedata/monster.txt:13139
 msgid "horned reaper"
@@ -5160,7 +6135,7 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:13201
 msgid "great hell wyrm"
-msgstr ""
+msgstr "グレート・ヘル・ワイアーム"
 
 # ../lib/gamedata/monster.txt:13229
 msgid ""
@@ -5168,10 +6143,14 @@ msgid ""
 "form.  The air around it scalds you.  Its slightest glance burns you, and "
 "you truly realize how insignificant you are."
 msgstr ""
+"それは信じ難たい程の力を持った巨大なドラゴンで、その体からは常に炎が吹き上"
+"がっている。その周りに立ちこめる熱気だけでも冒険者を火傷させるのには充分であ"
+"り、そのほんの一瞥だけでも冒険者を燃え上がらせるには十分だ。冒険者はこの生物"
+"の前では自分がなんと無力であるのかを痛感するだろう。"
 
 # ../lib/gamedata/monster.txt:13230
 msgid "great bile wyrm"
-msgstr ""
+msgstr "グレート・バイル・ワイアーム"
 
 # ../lib/gamedata/monster.txt:13257
 msgid ""
@@ -5180,9 +6159,11 @@ msgid ""
 "very stones of the dungeon - what could it do to you?"
 msgstr ""
 
-# ../lib/gamedata/monster.txt:13258
+# J0#
+# ../lib/gamedata/monster.txt:14020
+#, fuzzy
 msgid "great wyrm of thunder"
-msgstr ""
+msgstr "バランス・ワイアーム"
 
 # ../lib/gamedata/monster.txt:13286
 msgid ""
@@ -5191,9 +6172,10 @@ msgid ""
 "enough to defend yourself adequately."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:13287
 msgid "nightwalker"
-msgstr ""
+msgstr "ナイトウォーカー"
 
 # ../lib/gamedata/monster.txt:13316
 msgid ""
@@ -5214,9 +6196,10 @@ msgid ""
 "steeped in forgotten evils, his atrocities numerous and sickening."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:13347
 msgid "skull druj"
-msgstr ""
+msgstr "頭蓋のドルジ"
 
 # ../lib/gamedata/monster.txt:13369
 msgid ""
@@ -5224,9 +6207,14 @@ msgid ""
 "blast you with mighty magic as it speaks the words of power."
 msgstr ""
 
+# J0#
+# J0#
+# J0#(コメント)
+# J0# 名前は monotone さんの考案です。
+# J0#
 # ../lib/gamedata/monster.txt:13370
 msgid "black reaver"
-msgstr ""
+msgstr "黒き掠奪者"
 
 # ../lib/gamedata/monster.txt:13395
 msgid ""
@@ -5234,9 +6222,10 @@ msgid ""
 "the very rock of the dungeon cannot prevent it reaching you."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:13396
 msgid "aether hound"
-msgstr ""
+msgstr "エーテル・ハウンド"
 
 # ../lib/gamedata/monster.txt:13425
 msgid ""
@@ -5244,10 +6233,14 @@ msgid ""
 "though the dominant form is that of a huge dog.  You feel very uncertain all "
 "of a sudden."
 msgstr ""
+"素早く動く渦のような存在だ。それは色も大きさも形も常に変化しているが、大体は"
+"犬のような姿をしている。それと戦っていると突如何がなんだか分からなくなってく"
+"る。"
 
+# J0#
 # ../lib/gamedata/monster.txt:13428
 msgid "great wyrm of chaos"
-msgstr ""
+msgstr "カオス・ワイアーム"
 
 # ../lib/gamedata/monster.txt:13456
 msgid ""
@@ -5255,10 +6248,14 @@ msgid ""
 "then foul.  Its body is twisted by chaotic forces as it strives to stay "
 "real.  Its very existence distorts the universe around it."
 msgstr ""
+"刻々とその姿を変化させる屈強なドラゴンだ。見る度に、美しかったり汚らわしかっ"
+"たりする。なんとか現実の姿を現そうとしているが、その体はカオスの力で歪んでい"
+"る。正にその存在自体が周りの世界を歪めている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:13457
 msgid "great wyrm of law"
-msgstr ""
+msgstr "ロー・ワイアーム"
 
 # ../lib/gamedata/monster.txt:13486
 msgid ""
@@ -5266,10 +6263,14 @@ msgid ""
 "and despises all other life.  It sees all who do not obey it as mere insects "
 "to be crushed underfoot."
 msgstr ""
+"高い知性を持った屈強なドラゴンだ。それは全世界を支配することを望んでおり、他"
+"の生命体を軽蔑しきっている。それは自分に従わない者はすべて足下に踏みつぶされ"
+"るべき単なる虫けらだと思っている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:13488
 msgid "Ungoliant, the Unlight"
-msgstr ""
+msgstr "光なき闇の大蜘蛛『ウンゴリアント』"
 
 # ../lib/gamedata/monster.txt:13519
 msgid ""
@@ -5280,9 +6281,11 @@ msgid ""
 "avoid starvation."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:13520
+# J0#
+# ../lib/gamedata/monster.txt:5458
+#, fuzzy
 msgid "bronze golem"
-msgstr ""
+msgstr "鉄ゴーレム"
 
 # ../lib/gamedata/monster.txt:13549
 msgid ""
@@ -5290,9 +6293,10 @@ msgid ""
 "great heat."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:13550
 msgid "Glaurung, Father of the Dragons"
-msgstr ""
+msgstr "ドラゴン族の祖『グラウルング』"
 
 # ../lib/gamedata/monster.txt:13579
 msgid ""
@@ -5302,18 +6306,21 @@ msgid ""
 "definition of dragonfire."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:13582
 msgid "master quylthulg"
-msgstr ""
+msgstr "マスター・クイルスルグ"
 
 # ../lib/gamedata/monster.txt:13600
 msgid ""
 "A giant seething mass of flesh, overwhelming you with monster after monster."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:13601
+# J0#
+# ../lib/gamedata/monster.txt:11521
+#, fuzzy
 msgid "Makar, the Warrior"
-msgstr ""
+msgstr "長虫『スカサ』"
 
 # ../lib/gamedata/monster.txt:13623
 msgid ""
@@ -5322,9 +6329,12 @@ msgid ""
 "sister Meássë hunt and seek out the turmoils caused by Morgoth."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:13626
+# Sauron is no longer a quest monster (in Zangband), just a "normal" one.
+# J0#
+# ../lib/gamedata/monster.txt:14615
+#, fuzzy
 msgid "Feagwath, the Undead Sorcerer"
-msgstr ""
+msgstr "妖術師『サウロン』"
 
 # ../lib/gamedata/monster.txt:13657
 msgid ""
@@ -5332,9 +6342,11 @@ msgid ""
 "risen from the dead to continue his foul plots and schemes."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:13658
+# J0#
+# ../lib/gamedata/monster.txt:8438
+#, fuzzy
 msgid "pit fiend"
-msgstr ""
+msgstr "巨大火アリ"
 
 # ../lib/gamedata/monster.txt:13687
 msgid ""
@@ -5344,9 +6356,11 @@ msgid ""
 "vast demon armies."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:13688
+# J0#
+# ../lib/gamedata/monster.txt:11521
+#, fuzzy
 msgid "Uvatha the Horseman"
-msgstr ""
+msgstr "長虫『スカサ』"
 
 # ../lib/gamedata/monster.txt:13713
 msgid ""
@@ -5354,9 +6368,11 @@ msgid ""
 "to taste your blood."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:13716
+# J0#
+# ../lib/gamedata/monster.txt:13428
+#, fuzzy
 msgid "serpent of chaos"
-msgstr ""
+msgstr "カオス・ワイアーム"
 
 # ../lib/gamedata/monster.txt:13739
 msgid ""
@@ -5406,20 +6422,28 @@ msgid ""
 "A female embodiment of rage, intent on tearing your mind and body apart."
 msgstr ""
 
-# ../lib/gamedata/monster.txt:13849
+# J0#
+# ../lib/gamedata/monster.txt:14020
+#, fuzzy
 msgid "great wyrm of annihilation"
-msgstr ""
+msgstr "バランス・ワイアーム"
 
-# ../lib/gamedata/monster.txt:13877
+# ../lib/gamedata/monster.txt:13456
+#, fuzzy
 msgid ""
 "A massive dragon of hideous form.  From its shadowy aura comes the stench of "
 "the underworld.  Its body is twisted by chaotic forces as it strives to stay "
 "real.  Its very existence distorts the universe around it."
 msgstr ""
+"刻々とその姿を変化させる屈強なドラゴンだ。見る度に、美しかったり汚らわしかっ"
+"たりする。なんとか現実の姿を現そうとしているが、その体はカオスの力で歪んでい"
+"る。正にその存在自体が周りの世界を歪めている。"
 
-# ../lib/gamedata/monster.txt:13878
+# J0#
+# ../lib/gamedata/monster.txt:2711
+#, fuzzy
 msgid "sky dragon"
-msgstr ""
+msgstr "ベビー・レッド・ドラゴン"
 
 # ../lib/gamedata/monster.txt:13905
 msgid ""
@@ -5472,9 +6496,10 @@ msgid ""
 "Sauron's power."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:14020
 msgid "great wyrm of balance"
-msgstr ""
+msgstr "バランス・ワイアーム"
 
 # ../lib/gamedata/monster.txt:14050
 msgid ""
@@ -5486,15 +6511,17 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:14051
 msgid "great wyrm of many colours"
-msgstr ""
+msgstr "グレート・万色ワイアーム"
 
-# ../lib/gamedata/monster.txt:14077
+# ../lib/gamedata/monster.txt:10220
+#, fuzzy
 msgid "A gigantic dragon whose scales shimmer in myriad hues."
-msgstr ""
+msgstr "大きなドラゴンで、鱗が様々な色に輝いている。"
 
+# J0#
 # ../lib/gamedata/monster.txt:14078
 msgid "Pazuzu, Lord of Air"
-msgstr ""
+msgstr "風の帝王『パズズ』"
 
 # ../lib/gamedata/monster.txt:14104
 msgid ""
@@ -5504,7 +6531,7 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:14105
 msgid "Dwar, Dog Lord of Waw"
-msgstr ""
+msgstr "ウォウズの犬王『ドワール』"
 
 # ../lib/gamedata/monster.txt:14131
 msgid ""
@@ -5514,7 +6541,7 @@ msgstr ""
 
 # ../lib/gamedata/monster.txt:14134
 msgid "Hoarmurath of Dir"
-msgstr ""
+msgstr "ディアの『ホアルムラス』"
 
 # ../lib/gamedata/monster.txt:14161
 msgid ""
@@ -5522,19 +6549,24 @@ msgid ""
 "for an unlife of everlasting torment."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:14162
 msgid "Draugluin, Sire of All Werewolves"
-msgstr ""
+msgstr "巨狼の帝王『ドラウグルイン』"
 
 # ../lib/gamedata/monster.txt:14190
 msgid ""
 "Draugluin provides Sauron with a fearsome personal guard.  He is an enormous "
 "wolf inhabited with a human spirit.  He is chief of all his kind."
 msgstr ""
+"ドラウグルインはサウロンの恐るべき専属護衛だ。彼は人間の精神を持った恐ろしく"
+"巨大な狼であり、全ての狼の首領でもある。"
 
-# ../lib/gamedata/monster.txt:14193
+# J0#
+# ../lib/gamedata/monster.txt:2749
+#, fuzzy
 msgid "Khamûl, the Black Easterling"
-msgstr ""
+msgstr "東夷『ブロッダ』"
 
 # ../lib/gamedata/monster.txt:14221
 msgid ""
@@ -5542,9 +6574,10 @@ msgid ""
 "combat awesome and his form twisted by evil cunning."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:14222
 msgid "Cantoras, the Skeletal Lord"
-msgstr ""
+msgstr "骸骨の帝王『カントラス』"
 
 # ../lib/gamedata/monster.txt:14251
 msgid ""
@@ -5552,10 +6585,20 @@ msgid ""
 "sorcerer.  His power is devastating and his speed unmatched in the "
 "underworld.  Flee his wrath!"
 msgstr ""
+"かつて偉大なソーサラーだった者の骸骨に生命を吹き込んでできた、邪悪のアンデッ"
+"ド・ドルジである。冥界においても彼の力は比類なく、そのスピードは匹敵するもの"
+"がない。彼の怒りを恐れよ！"
 
+# JZ#
+# JZ#バルログ
+# JZ#Ｊ・Ｒ・Ｒ・トールキンの「指輪物語」に登場。
+# JZ#メルコールの召使いになったマイアールが悪鬼と化したもので、中つ
+# JZ#国の言葉で「力強き悪鬼」を意味します。メルコールの支配が終わる
+# JZ#とともにほとんど絶滅しましたが、一部がモリヤで復活していました。 by 久留さん
+# JZ#Jangband にはいなかったんですね。意外。 by 板倉
 # ../lib/gamedata/monster.txt:14254
 msgid "greater Balrog"
-msgstr ""
+msgstr "グレーター・バルログ"
 
 # ../lib/gamedata/monster.txt:14283
 msgid ""
@@ -5564,9 +6607,10 @@ msgid ""
 "servants.  With its flaming whip and sword it seeks to destroy you."
 msgstr ""
 
+# JZ#
 # ../lib/gamedata/monster.txt:14284
 msgid "The Witch-King of Angmar"
-msgstr ""
+msgstr "『アングマールの魔王』"
 
 # ../lib/gamedata/monster.txt:14315
 msgid ""
@@ -5577,9 +6621,10 @@ msgid ""
 "It is said that he is fated never to die by the hand of mortal man."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:14316
 msgid "Ancalagon the Black"
-msgstr ""
+msgstr "黒竜『アンカラゴン』"
 
 # ../lib/gamedata/monster.txt:14346
 msgid ""
@@ -5587,15 +6632,19 @@ msgid ""
 "terrible of all dragonkind, his power dismayed even the Valar for a time."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:14349
 msgid "The Tarrasque"
-msgstr ""
+msgstr "『タラスク』"
 
 # ../lib/gamedata/monster.txt:14375
 msgid ""
 "The Tarrasque is a massive reptile of legend, rumoured to be unkillable and "
 "immune to magic.  Fear its anger, for its devastation is unmatched!"
 msgstr ""
+"巨大な伝説の爬虫類であるタラスクは、魔法に対する免疫を持ち、殺すことができな"
+"いと噂されている。その怒りを恐れよ。彼のもたらす破壊は何人も止めることはでき"
+"ない。"
 
 # ../lib/gamedata/monster.txt:14378
 msgid "Meássë, the Bloody"
@@ -5609,9 +6658,10 @@ msgid ""
 "recruits any beings of like abilities to her service."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:14416
 msgid "Lungorthin, the Balrog of White Fire"
-msgstr ""
+msgstr "白炎のバルログ『ルンゴルシン』"
 
 # ../lib/gamedata/monster.txt:14447
 msgid ""
@@ -5619,6 +6669,9 @@ msgid ""
 "eyes that smoulder red.  The dungeon floor where he stands is scorched by "
 "the heat of his body."
 msgstr ""
+"彼はその身に炎をまとった堂々たる姿をしている。ルンゴルシンは赤く煙ったその瞳"
+"で悪意を持って冒険者を睨む。彼の足下の床はその体から発する熱で焦げてしまって"
+"いる。"
 
 # ../lib/gamedata/monster.txt:14454
 msgid "Huan, Wolfhound of the Valar"
@@ -5632,9 +6685,10 @@ msgid ""
 "Carcharoth, the terrible wolf of Angband."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:14482
 msgid "Carcharoth, the Jaws of Thirst"
-msgstr ""
+msgstr "赤顎狼『カルハロス』"
 
 # ../lib/gamedata/monster.txt:14511
 msgid ""
@@ -5643,9 +6697,10 @@ msgid ""
 "opponent in combat."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:14514
 msgid "Vecna, the Emperor Lich"
-msgstr ""
+msgstr "エンペラー・リッチ『ベクナ』"
 
 # ../lib/gamedata/monster.txt:14549
 msgid ""
@@ -5663,9 +6718,10 @@ msgid ""
 "the enchantments from everything it touches."
 msgstr ""
 
+# J0#
 # ../lib/gamedata/monster.txt:14576
 msgid "Gothmog, the High Captain of Balrogs"
-msgstr ""
+msgstr "バルログの長『ゴスモグ』"
 
 # ../lib/gamedata/monster.txt:14612
 msgid ""
@@ -5675,9 +6731,11 @@ msgid ""
 "breath he saved his master from Ungoliant's rage."
 msgstr ""
 
+# Sauron is no longer a quest monster (in Zangband), just a "normal" one.
+# J0#
 # ../lib/gamedata/monster.txt:14615
 msgid "Sauron, the Sorcerer"
-msgstr ""
+msgstr "妖術師『サウロン』"
 
 # ../lib/gamedata/monster.txt:14652
 msgid ""
@@ -5714,9 +6772,24 @@ msgstr ""
 msgid "Sauron's form as a vampire, great as a dark cloud across the moon."
 msgstr ""
 
+# Morgoth, mr normal monster!
+# J0#(コメント)
+# J0#
+# J0#(都々目)
+# J0#冥王『サウロン』			妖術師『サウロン』
+# J0#暗黒の帝王『モルゴス』			冥王『モルゴス』
+# J0#
+# J0#＊angbandは基本的に第一紀の話です。モルゴスが存在するのですから。この時
+# J0#『冥王』と言うとモルゴスを指し、サウロンは飽くまで冥王モルゴスの部下に過ぎ
+# J0#ませんでした。モルゴスが滅んだ後、サウロンが『冥王』の名で呼ばれるよう
+# J0#になっ
+# J0#た訳です。ですからこの訳はこうすべきですし、シルマリルの物語でもこのように
+# J0#なっています。第一紀(シルマリルの物語)ではサウロンは『妖術師』と書かれてい
+# J0#ますし。
+# J0#
 # ../lib/gamedata/monster.txt:14737
 msgid "Morgoth, Lord of Darkness"
-msgstr ""
+msgstr "冥王『モルゴス』"
 
 # ../lib/gamedata/monster.txt:14773
 msgid ""
@@ -5731,3 +6804,14 @@ msgid ""
 "remaining Silmarils forever burning him.  Grond, the mighty Hammer of the "
 "Underworld, cries defiance as he strides towards you to crush you to a pulp!"
 msgstr ""
+"彼はアングバンドの洞窟の主であり、さながら稲妻に覆われた暗黒の山のような姿を"
+"している。彼の体にはフィンゴルフィンによってつけられた 8 つの深い傷があり、そ"
+"れが彼の心を尽きることのない怒りに燃やしている。彼は絶えず傷の痛みに苦しんで"
+"いるが、その苦しみをこの世の全ての光や善を支配することで癒そうとしている。彼"
+"は人間の暗黒に対する恐怖の根源であり、邪悪な力で忌まわしい生物を日夜生み出し"
+"続けている。オークやドラゴンやトロルは彼の邪悪な贈り物であり、それらが痛みや"
+"苦しみをこの世に及ぼしていることが彼を無上に喜ばせる。彼はその邪悪に歪んだ忌"
+"まわしき相貌に、恐るべき鉄の冠を戴いている。冠に今も二つ残されたシルマリルは"
+"その聖なる光で彼を永遠に焼き続けている。冒険者を挽き肉にすべく彼が真一文字に"
+"歩み寄ってくるとき、その手に握られた冥界の大鉄杖『グロンド』が挑発するかのよ"
+"うに震える！"

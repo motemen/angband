@@ -1,0 +1,85 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use Encode;
+use Data::Dumper;
+
+# usage: applytrans <path/to/hengband/r_info.txt>
+
+my $ja_monster_txt = shift or die;
+
+open my $fh, '<', $ja_monster_txt or die $!;
+
+my ($name_en, $name_ja, @desc_en, @desc_ja, @comments);
+
+my $translation = {};
+my $comments = {};
+
+# TODO: comments
+while (<$fh>) {
+  /^#/ and push @comments, $_;
+  /^N:\d+:(.+)/ and $name_ja = $1;
+  /^E:(.+)/     and $name_en = $1;
+  if (my ($desc) = /^D:(.+)/) {
+    if ($desc =~ /^\$(.+)/) {
+      push @desc_en, $1;
+    } else {
+      push @desc_ja, $desc;
+    }
+  }
+
+  if (/^$/ && $name_en) {
+    warn "conflict: $name_en" if $translation->{$name_en};
+
+    $translation->{uc $name_en} = $name_ja;
+    $translation->{ uc join "", @desc_en } = join "", @desc_ja;
+    $comments->{uc $name_en} = [ @comments ];
+
+    undef $name_en;
+    undef $name_ja;
+    undef @desc_en;
+    undef @desc_ja;
+    undef @comments;
+  }
+}
+
+print <<'__HEADER__';
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+
+__HEADER__
+
+my @comment_lines;
+while (<STDIN>) {
+  my @msgid_lines;
+  my $msgid;
+  if (/^#/) {
+    push @comment_lines, $_;
+  } elsif (/^msgid "(.+)"$/) {
+    $msgid = $1;
+    push @msgid_lines, $_;
+  } elsif (/^msgid ""$/) {
+    $msgid = "";
+    push @msgid_lines, $_;
+    while (<STDIN>) {
+      if (/^"(.+)"$/) {
+        $msgid .= $1;
+        push @msgid_lines, $_;
+      } else {
+        # should be a "msgstr" line
+        last;
+      }
+    }
+  } elsif (/^$/)  {
+      undef @comment_lines;
+  }
+
+  if ($msgid && (my $trans = $translation->{uc $msgid})) {
+    print $_ for @{ $comments->{uc $msgid} || [] };
+    print $_ for @comment_lines;
+    print $_ for @msgid_lines;
+    $trans =~ s/"/\\"/g;
+    print qq(msgstr "$trans"\n\n);
+  }
+}
