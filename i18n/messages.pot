@@ -1,3 +1,20 @@
+#: ../src/mon-attack.c:635
+msgid "."
+msgstr ""
+
+#: ../src/mon-attack.c:645
+#, c-format
+msgid "%s %s%s"
+msgstr ""
+
+#: ../src/mon-blows.c:130
+msgid "you"
+msgstr ""
+
+#: ../src/mon-desc.c:205
+msgid "the "
+msgstr ""
+
 #: ../src/mon-lore.c:887
 #, c-format
 msgid "%s has slain %d of your ancestors"
@@ -48,6 +65,11 @@ msgstr ""
 
 #: ../src/mon-lore.c:928
 msgid "No battles to the death are recalled.  "
+msgstr ""
+
+#: ../src/mon-msg.c:254
+#, c-format
+msgid "The %s"
 msgstr ""
 
 #: ../src/ui-birth.c:564

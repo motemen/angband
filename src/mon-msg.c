@@ -249,9 +249,9 @@ static void get_subject(char *buf, size_t buflen,
 	} else {
 		/* Uniques, multiple monsters, or just one */
 		if (rf_has(race->flags, RF_UNIQUE)) {
-			my_strcpy(buf, race->name, buflen);
+			my_strcpy(buf, GAMEDATA_(race->name), buflen);
 		} else if (count == 1) {
-			strnfmt(buf, buflen, "The %s", race->name);
+			strnfmt(buf, buflen, _("The %s"), GAMEDATA_(race->name));
 		} else {
 			/* Get the plural of the race name */
 			if (race->plural != NULL) {

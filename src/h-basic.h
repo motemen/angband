@@ -132,7 +132,8 @@
 #ifdef USE_GETTEXT
 #include <libintl.h>
 #include <locale.h>
-#define _(string) gettext(string)
+// temporary fix for gettext not handling empty msgstr
+#define _(string) ({ char *t = gettext(string); t[0] == ' ' && t[1] == '\0' ? "" : t; })
 #define N_(string) gettext_noop(string)
 #define GAMEDATA_(string) dgettext("gamedata", string)
 #else

@@ -202,7 +202,7 @@ void monster_desc(char *desc, size_t max, const struct monster *mon, int mode)
 				my_strcpy(desc, is_a_vowel(mon->race->name[0]) ? "an " : "a ", max);
 			} else {
 				/* Definite monsters need a definite article */
-				my_strcpy(desc, "the ", max);
+				my_strcpy(desc, _("the "), max);
 			}
 
 			/*
