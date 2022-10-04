@@ -19,6 +19,15 @@ my $seen = {};
 
 while (<$fh>) {
     if (/^name:(.+)/) {
+        next if $type eq 'blow_methods';
+
+        next if $seen->{$1}++;
+        print "# $file:$.\n";
+        print qq(msgid "$1"\n);
+        print qq(msgstr ""\n\n);
+    }
+
+    if (/^act:(.+)/) {
         next if $seen->{$1}++;
         print "# $file:$.\n";
         print qq(msgid "$1"\n);
@@ -26,6 +35,8 @@ while (<$fh>) {
     }
 
     if (/^desc:(.+)/) {
+        next if $type eq 'blow_methods';
+
         my @msgid = ($1);
         while (<$fh>) {
             if (/^desc:(.+)/) {

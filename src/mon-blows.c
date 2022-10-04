@@ -94,7 +94,7 @@ char *monster_blow_method_action(struct blow_method *method, int midx)
 	while (choice--) {
 		msg = msg->next;
 	}
-	in_cursor = msg->act_msg;
+	in_cursor = GAMEDATA_(msg->act_msg);
 
 	/* Add info to the message */
 	next = strchr(in_cursor, '{');
@@ -127,7 +127,7 @@ char *monster_blow_method_action(struct blow_method *method, int midx)
 						strnfcat(buf, sizeof(buf),
 							&end, "%s", m_name);
 					} else {
-						strnfcat(buf, sizeof(buf), &end, "you");
+						strnfcat(buf, sizeof(buf), &end, _("you"));
 					}
 					break;
 				}

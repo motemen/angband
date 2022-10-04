@@ -217,7 +217,7 @@ void monster_desc(char *desc, size_t max, const struct monster *mon, int mode)
 					(int) (comma_pos - mon->race->name),
 					mon->race->name), max);
 			} else {
-				my_strcat(desc, mon->race->name, max);
+				my_strcat(desc, GAMEDATA_(mon->race->name), max);
 			}
 		}
 

@@ -826,6 +826,7 @@ bool py_attack_real(struct player *p, struct loc grid, bool *fear)
 		if (OPT(p, show_damage))
 			dmg_text = format(" (%d)", dmg);
 
+		// TODO[locale]: difficult to handle in gettext
 		if (melee_hit_types[i].text)
 			msgt(msg_type, "You %s %s%s. %s", verb, m_name, dmg_text,
 					melee_hit_types[i].text);

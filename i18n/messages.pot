@@ -1,3 +1,55 @@
+#: ../src/mon-lore.c:887
+#, c-format
+msgid "%s has slain %d of your ancestors"
+msgstr ""
+
+#: ../src/mon-lore.c:892
+msgid ", but you have taken revenge!  "
+msgstr ""
+
+#: ../src/mon-lore.c:896
+#, c-format
+msgid ", who %s unavenged.  "
+msgstr ""
+
+#: ../src/mon-lore.c:900
+msgid "You have slain this foe.  "
+msgstr ""
+
+#: ../src/mon-lore.c:907
+#, c-format
+msgid "%d of your ancestors %s been killed by this creature, "
+msgstr ""
+
+#: ../src/mon-lore.c:911
+#, c-format
+msgid "and you have exterminated at least %d of the creatures.  "
+msgstr ""
+
+#: ../src/mon-lore.c:914
+#, c-format
+msgid "and your ancestors have exterminated at least %d of the creatures.  "
+msgstr ""
+
+#: ../src/mon-lore.c:917
+#, c-format
+msgid "and %s is not ever known to have been defeated.  "
+msgstr ""
+
+#: ../src/mon-lore.c:922
+#, c-format
+msgid "You have killed at least %d of these creatures.  "
+msgstr ""
+
+#: ../src/mon-lore.c:925
+#, c-format
+msgid "Your ancestors have killed at least %d of these creatures.  "
+msgstr ""
+
+#: ../src/mon-lore.c:928
+msgid "No battles to the death are recalled.  "
+msgstr ""
+
 #: ../src/ui-birth.c:564
 msgid ""
 "Race affects stats and skills, and may confer resistances and abilities."
@@ -17,4 +69,8 @@ msgid ""
 "selections, '{light green}ESC{/}' to step back through the birth process, "
 "'{light green}={/}' for the birth options, '{light green}?{/}' for help, or "
 "'{light green}Ctrl-X{/}' to quit."
+msgstr ""
+
+#: ../src/ui-mon-lore.c:55
+msgid "The "
 msgstr ""
