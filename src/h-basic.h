@@ -129,7 +129,7 @@
 # include <unistd.h>
 #endif
 
-#ifdef USE_GETTEXT
+#ifdef USE_LOCALE
 #include <libintl.h>
 #include <locale.h>
 // temporary fix for gettext not handling empty msgstr

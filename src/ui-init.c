@@ -45,8 +45,10 @@ void textui_init(void)
 {
 	uint32_t default_window_flag[ANGBAND_TERM_MAX];
 
-#ifdef USE_GETTEXT
-	setlocale(LC_ALL, "ja_JP");
+#ifdef USE_LOCALE
+#define __THIS_LOCALE(l) #l
+#define ___THIS_LOCALE(l) __THIS_LOCALE(l)
+	setlocale(LC_ALL, ___THIS_LOCALE(USE_LOCALE));
 	bindtextdomain("messages", ANGBAND_DIR_I18N);
 	bindtextdomain("gamedata", ANGBAND_DIR_I18N);
 	textdomain("messages");

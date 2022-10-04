@@ -29,8 +29,8 @@ LIBS = -framework Cocoa
 # or http://stackoverflow.com/questions/5509885/creating-app-for-old-mac-from-new-mac-machine
 DEPLOYMENT_TARGET = MACOSX_DEPLOYMENT_TARGET=10.9
 
-ifneq ($(GETTEXT),)
-CFLAGS += -DUSE_GETTEXT
+ifneq ($(LOCALE),)
+CFLAGS += -DUSE_LOCALE=$(LOCALE)
 LIBS += -lintl
 endif
 

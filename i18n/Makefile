@@ -1,4 +1,4 @@
-LOCALE = ja_JP.UTF-8
+LOCALE = ja_JP
 
 all: $(LOCALE)/LC_MESSAGES/messages.mo $(LOCALE)/LC_MESSAGES/gamedata.mo
 

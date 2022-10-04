@@ -1,0 +1,142 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# ../lib/gamedata/blow_methods.txt:20
+msgid "hits {target}"
+msgstr "{target}を攻撃した"
+
+# ../lib/gamedata/blow_methods.txt:29
+msgid "touches {target}"
+msgstr "{target}に触れた"
+
+# ../lib/gamedata/blow_methods.txt:38
+msgid "punches {target}"
+msgstr "{target}を殴った"
+
+# ../lib/gamedata/blow_methods.txt:47
+msgid "kicks {target}"
+msgstr "{target}を蹴った"
+
+# ../lib/gamedata/blow_methods.txt:56
+msgid "claws {target}"
+msgstr "{target}をひっかいた"
+
+# ../lib/gamedata/blow_methods.txt:65
+msgid "bites {target}"
+msgstr "{target}に噛みついた"
+
+# ../lib/gamedata/blow_methods.txt:74
+msgid "stings {target}"
+msgstr "{target}を刺した"
+
+# ../lib/gamedata/blow_methods.txt:83
+msgid "butts {target}"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:92
+msgid "crushes {target}"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:101
+msgid "engulfs {target}"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:110
+msgid "crawls on {target}"
+msgstr "{target}の上を這い回った"
+
+# ../lib/gamedata/blow_methods.txt:119
+msgid "drools on {target}"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:128
+msgid "spits on {target}"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:137
+msgid "gazes at {target}"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:146
+msgid "wails at {target}"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:155
+msgid "releases spores at {target}"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:164
+msgid "begs {target} for money"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:173
+msgid "insults {target}!"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:174
+msgid "insults {oftarget} mother!"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:175
+msgid "gives {target} the finger!"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:176
+msgid "humiliates {target}!"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:177
+msgid "defiles {target}!"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:178
+msgid "dances around {target}!"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:179
+msgid "makes obscene gestures!"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:180
+msgid "moons {target}!!!"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:189
+msgid "wants his mushrooms back"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:190
+msgid "tells {target} to get off his land"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:191
+msgid "looks for his dogs"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:192
+msgid "says 'Did you kill my Fang?'"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:193
+msgid "asks 'Do you want to buy any mushrooms?'"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:194
+msgid "seems sad about something"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:195
+msgid "asks if {target} {has} seen his dogs"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:196
+msgid "mumbles something about mushrooms"
+msgstr ""
