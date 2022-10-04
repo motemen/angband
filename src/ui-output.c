@@ -21,6 +21,7 @@
 #include "ui-input.h"
 #include "ui-output.h"
 #include "z-textblock.h"
+#include "z-util.h"
 
 int16_t screen_save_depth;
 
@@ -106,16 +107,17 @@ static void display_area(const wchar_t *text, const uint8_t *attrs,
 		size_t n_lines,
 		region area, size_t line_from)
 {
-	size_t i, j;
+	size_t i, j, c;
 
 	n_lines = MIN(n_lines, (size_t) area.page_rows);
 
 	for (i = 0; i < n_lines; i++) {
 		Term_erase(area.col, area.row + i, area.width);
-		for (j = 0; j < line_lengths[line_from + i]; j++) {
-			Term_putch(area.col + j, area.row + i,
+		for (j = 0, c = 0; j < line_lengths[line_from + i]; j++) {
+			Term_putch(area.col + c, area.row + i,
 					attrs[line_starts[line_from + i] + j],
 					text[line_starts[line_from + i] + j]);
+			c += is_doublewidth(text[line_starts[line_from + i] + j]) ? 2 : 1;
 		}
 	}
 }
