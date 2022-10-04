@@ -884,48 +884,48 @@ void lore_append_kills(textblock *tb, const struct monster_race *race,
 		/* We've been killed... */
 		if (lore->deaths) {
 			/* Killed ancestors */
-			textblock_append(tb, "%s has slain %d of your ancestors",
+			textblock_append(tb, _("%s has slain %d of your ancestors"),
 							 lore_pronoun_nominative(msex, true), lore->deaths);
 
 			/* But we've also killed it */
 			if (dead)
-				textblock_append(tb, ", but you have taken revenge!  ");
+				textblock_append(tb, _(", but you have taken revenge!  "));
 
 			/* Unavenged (ever) */
 			else
-				textblock_append(tb, ", who %s unavenged.  ",
+				textblock_append(tb, _(", who %s unavenged.  "),
 								 VERB_AGREEMENT(lore->deaths, "remains",
 												"remain"));
 		} else if (dead) { /* Dead unique who never hurt us */
-			textblock_append(tb, "You have slain this foe.  ");
+			textblock_append(tb, _("You have slain this foe.  "));
 		} else {
 			/* Alive and never killed us */
 			out = false;
 		}
 	} else if (lore->deaths) {
 		/* Dead ancestors */
-		textblock_append(tb, "%d of your ancestors %s been killed by this creature, ", lore->deaths, VERB_AGREEMENT(lore->deaths, "has", "have"));
+		textblock_append(tb, _("%d of your ancestors %s been killed by this creature, "), lore->deaths, VERB_AGREEMENT(lore->deaths, "has", "have"));
 
 		if (lore->pkills) {
 			/* Some kills this life */
-			textblock_append(tb, "and you have exterminated at least %d of the creatures.  ", lore->pkills);
+			textblock_append(tb, _("and you have exterminated at least %d of the creatures.  "), lore->pkills);
 		} else if (lore->tkills) {
 			/* Some kills past lives */
-			textblock_append(tb, "and your ancestors have exterminated at least %d of the creatures.  ", lore->tkills);
+			textblock_append(tb, _("and your ancestors have exterminated at least %d of the creatures.  "), lore->tkills);
 		} else {
 			/* No kills */
-			textblock_append_c(tb, COLOUR_RED, "and %s is not ever known to have been defeated.  ", lore_pronoun_nominative(msex, false));
+			textblock_append_c(tb, COLOUR_RED, _("and %s is not ever known to have been defeated.  "), lore_pronoun_nominative(msex, false));
 		}
 	} else {
 		if (lore->pkills) {
 			/* Killed some this life */
-			textblock_append(tb, "You have killed at least %d of these creatures.  ", lore->pkills);
+			textblock_append(tb, _("You have killed at least %d of these creatures.  "), lore->pkills);
 		} else if (lore->tkills) {
 			/* Killed some last life */
-			textblock_append(tb, "Your ancestors have killed at least %d of these creatures.  ", lore->tkills);
+			textblock_append(tb, _("Your ancestors have killed at least %d of these creatures.  "), lore->tkills);
 		} else {
 			/* Killed none */
-			textblock_append(tb, "No battles to the death are recalled.  ");
+			textblock_append(tb, _("No battles to the death are recalled.  "));
 		}
 	}
 
