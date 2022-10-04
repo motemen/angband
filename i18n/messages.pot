@@ -3,6 +3,10 @@ msgid ""
 "Race affects stats and skills, and may confer resistances and abilities."
 msgstr ""
 
+#: ../src/ui-birth.c:577
+msgid "Class affects stats, skills, and other character traits."
+msgstr ""
+
 #: ../src/ui-birth.c:623
 msgid ""
 "{light blue}Please select your character traits from the menus below:{/}\n"

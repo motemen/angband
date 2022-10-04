@@ -12,8 +12,12 @@ msgstr ""
 #: ../src/ui-birth.c:564
 msgid ""
 "Race affects stats and skills, and may confer resistances and abilities."
-msgstr ""
-"種族はステータスやスキルに影響し、抵抗や能力を与えることがあります。"
+msgstr "種族はステータスやスキルに影響し、抵抗や能力を与えることがあります。"
+
+#: ../src/ui-birth.c:577
+#, fuzzy
+msgid "Class affects stats, skills, and other character traits."
+msgstr "種族はステータスやスキルに影響し、抵抗や能力を与えることがあります。"
 
 #: ../src/ui-birth.c:623
 msgid ""

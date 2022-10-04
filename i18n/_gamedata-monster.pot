@@ -1,0 +1,6018 @@
+# ../lib/gamedata/monster.txt:233
+msgid "<player>"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:242
+msgid "filthy street urchin"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:261
+msgid ""
+"He looks squalid and thoroughly revolting."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:262
+msgid "scrawny cat"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:277
+msgid ""
+"A skinny little furball with sharp claws and a menacing look."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:278
+msgid "scruffy little dog"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:293
+msgid ""
+"A thin flea-ridden mutt, growling as you get close."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:294
+msgid "Farmer Maggot"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:314
+msgid ""
+"He's lost his dogs.  He's had his mushrooms stolen.  He's not a happy"
+" hobbit!"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:315
+msgid "blubbering idiot"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:330
+msgid ""
+"He tends to blubber a lot."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:331
+msgid "boil-covered wretch"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:347
+msgid ""
+"Ugly doesn't begin to describe him."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:348
+msgid "village idiot"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:363
+msgid ""
+"Drooling and comical, but then, what do you expect?"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:364
+msgid "pitiful-looking beggar"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:379
+msgid ""
+"You just can't help feeling sorry for him."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:380
+msgid "mangy-looking leper"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:395
+msgid ""
+"You feel it isn't safe to touch him."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:396
+msgid "squint-eyed rogue"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:413
+msgid ""
+"A hardy, street-wise crook that knows an easy catch when it sees one."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:414
+msgid "singing, happy drunk"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:431
+msgid ""
+"He makes you glad to be sober."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:432
+msgid "aimless-looking merchant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:451
+msgid ""
+"The typical ponce around town, with purse jingling, and looking for more"
+" amulets of adornment to buy."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:452
+msgid "mean-looking mercenary"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:470
+msgid ""
+"No job is too low for him."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:471
+msgid "battle-scarred veteran"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:488
+msgid ""
+"He doesn't take to strangers kindly."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:489
+msgid "red-hatted elf"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:506
+msgid ""
+"It's Yuletide and this elf has had a few too many."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:507
+msgid "Father Christmas"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:526
+msgid ""
+"It's Saint Nick, out delivering presents to the town urchins."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:529
+msgid "grey mold"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:544
+msgid ""
+"A small strange grey growth."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:545
+msgid "grey mushroom patch"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:560
+msgid ""
+"Yum!  It looks quite tasty."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:561
+msgid "giant yellow centipede"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:576
+msgid ""
+"It is about four feet long and carnivorous."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:577
+msgid "giant white centipede"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:594
+msgid "white icky thing"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:609
+msgid ""
+"It is a smallish, slimy, icky creature."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:610
+msgid "clear icky thing"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:626
+msgid ""
+"It is a smallish, slimy, icky, blobby creature."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:627
+msgid "giant white mouse"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:644
+msgid ""
+"It is about three feet long with large teeth."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:645
+msgid "large white snake"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:660
+msgid ""
+"It is about eight feet long."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:661
+msgid "small kobold"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:676
+msgid ""
+"It is a squat and ugly humanoid figure with a canine face."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:677
+msgid "white worm mass"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:693
+msgid ""
+"It is a large slimy mass of worms."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:694
+msgid "floating eye"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:709
+msgid ""
+"A disembodied eye, floating a few feet above the ground."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:710
+msgid "rock lizard"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:724
+msgid ""
+"It is a small lizard with a hardened hide."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:725
+msgid "wild dog"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:741
+msgid ""
+"It is a yapping snarling dog, dangerous when in a pack."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:742
+msgid "soldier ant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:756
+msgid ""
+"A large ant with powerful mandibles."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:757
+msgid "fruit bat"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:771
+msgid ""
+"A fast-moving pest."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:774
+msgid "kobold"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:789
+msgid ""
+"It is a small, dog-headed humanoid."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:790
+msgid "shrieker mushroom patch"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:808
+msgid ""
+"Yum!  It looks quite tasty.  It doesn't sound so nice, though..."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:809
+msgid "blubbering icky thing"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:826
+msgid ""
+"It is a smallish, slimy, icky, hungry creature."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:827
+msgid "metallic green centipede"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:844
+msgid "soldier"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:866
+msgid ""
+"An inexperienced but tough warrior."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:867
+msgid "cutpurse"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:889
+msgid ""
+"A rather shifty individual."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:890
+msgid "acolyte"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:915
+msgid ""
+"He is tripping over his priestly robes."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:916
+msgid "apprentice"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:941
+msgid ""
+"He is leaving behind a trail of dropped spell components."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:942
+msgid "yellow mushroom patch"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:959
+msgid "white jelly"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:975
+msgid ""
+"It's a large pile of white flesh."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:976
+msgid "giant green frog"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:991
+msgid ""
+"It is as big as a wolf."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:992
+msgid "giant black ant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1007
+msgid ""
+"It is about three feet long."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1008
+msgid "salamander"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1024
+msgid ""
+"A small black and orange lizard."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1025
+msgid "white harpy"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1044
+msgid ""
+"A flying, screeching bird with a woman's face."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1045
+msgid "blue yeek"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1060
+msgid ""
+"A small humanoid figure."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1061
+msgid "Grip, Farmer Maggot's Dog"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1079
+msgid ""
+"A rather vicious dog belonging to Farmer Maggot.  It thinks you are"
+" stealing mushrooms."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1080
+msgid "Fang, Farmer Maggot's Dog"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1099
+msgid "green worm mass"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1116
+msgid "cave spider"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1132
+msgid ""
+"It is a black spider that moves in fits and starts."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1133
+msgid "wild cat"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1150
+msgid ""
+"A larger than normal feline, hissing loudly.  Its velvet paws conceal a"
+" fistful of needles."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1151
+msgid "crow"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1165
+msgid ""
+"It is a hooded crow, gray except for the black wings and head."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1168
+msgid "Sméagol"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1185
+msgid ""
+"Usually known as Gollum.  He's been sneaking, and he wants his 'precious.'"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1186
+msgid "green ooze"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1202
+msgid ""
+"It's green and it's oozing."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1203
+msgid "poltergeist"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1221
+msgid ""
+"It is a ghastly, ghostly form."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1222
+msgid "metallic blue centipede"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1239
+msgid "giant white louse"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1254
+msgid ""
+"It is six inches long."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1255
+msgid "black naga"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1270
+msgid ""
+"A large black serpent's body with a female torso."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1271
+msgid "spotted mushroom patch"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1288
+msgid "silver jelly"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1309
+msgid ""
+"It is a large pile of silver flesh that sucks all light from its"
+" surroundings."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1310
+msgid "yellow jelly"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1329
+msgid ""
+"It's a large pile of yellow flesh."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1330
+msgid "scruffy looking hobbit"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1348
+msgid ""
+"A short little guy, in bedraggled clothes.  He appears to be looking for a"
+" good tavern."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1349
+msgid "giant white ant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1364
+msgid ""
+"It is about two feet long and has sharp pincers."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1365
+msgid "yellow mold"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1379
+msgid ""
+"It is a strange yellow growth on the dungeon floor."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1380
+msgid "metallic red centipede"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1397
+msgid "yellow worm mass"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1414
+msgid "clear worm mass"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1431
+msgid ""
+"It is a disgusting mass of poisonous worms."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1432
+msgid "radiation eye"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1449
+msgid ""
+"A disembodied eye, crackling with energy."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1450
+msgid "kobold shaman"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1471
+msgid ""
+"It is a kobold dressed in skins and gesturing wildly."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1474
+msgid "cave lizard"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1488
+msgid ""
+"It is an armoured lizard with a powerful bite."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1489
+msgid "scout"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1517
+msgid ""
+"An agile hunter, ready and relaxed."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1518
+msgid "gallant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1544
+msgid ""
+"An adventurer both devoutly religious and skillful in combat."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1545
+msgid "tamer"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1569
+msgid ""
+"A lover of nature."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1570
+msgid "blue jelly"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1587
+msgid ""
+"It's a large pile of pulsing blue flesh."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1588
+msgid "creeping copper coins"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1603
+msgid ""
+"It appears to be a pile of copper coins."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1605
+msgid "giant white rat"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1621
+msgid ""
+"It is a very vicious rodent."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1622
+msgid "blue worm mass"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1639
+msgid "large grey snake"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1654
+msgid ""
+"It is about ten feet long."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1655
+msgid "kobold archer"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1674
+msgid ""
+"It is an ugly dog-headed humanoid wielding a bow."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1675
+msgid "silver mouse"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1693
+msgid ""
+"It is about three feet long with large teeth.  As the light of your lamp"
+" falls on it, it seems to grow stronger."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1696
+msgid "Bullroarer the Hobbit"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1714
+msgid ""
+"He is a sturdy hobbit who is renowned for his unusual strength and vigour."
+"  He can prove a troublesome opponent."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1715
+msgid "green naga"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1733
+msgid ""
+"A large green serpent with a female's torso.  Her green skin glistens with"
+" acid."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1734
+msgid "blue ooze"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1750
+msgid ""
+"It's blue and it's oozing."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1751
+msgid "green glutton ghost"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1767
+msgid ""
+"It is a very ugly green ghost with a voracious appetite."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1768
+msgid "green jelly"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1784
+msgid ""
+"It is a large pile of pulsing green flesh."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1785
+msgid "large kobold"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1802
+msgid ""
+"It is a man-sized figure with the all too recognizable face of a kobold."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1803
+msgid "skeleton kobold"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1818
+msgid ""
+"It is a small animated kobold skeleton."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1819
+msgid "grey icky thing"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1833
+msgid ""
+"It is a smallish, slimy, icky, nasty creature."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1834
+msgid "disenchanter eye"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1852
+msgid ""
+"A disembodied eye, crackling with magic."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1853
+msgid "red worm mass"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1870
+msgid "copperhead snake"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1885
+msgid ""
+"It has a copper head and sharp venomous fangs."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1886
+msgid "giant white dragon fly"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1903
+msgid ""
+"It is a large fly that drips frost."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1904
+msgid "giant green dragon fly"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1922
+msgid ""
+"A vast, foul-smelling dragonfly."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1923
+msgid "rot jelly"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1941
+msgid ""
+"It is a large pile of rotting flesh, whose touch spoils your food.  The"
+" terrible smell it exudes is also very hard to get rid of..."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1944
+msgid "purple mushroom patch"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1962
+msgid "brown mold"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1976
+msgid ""
+"A strange brown growth on the dungeon floor."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1977
+msgid "giant brown bat"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1991
+msgid ""
+"It screeches as it attacks."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:1992
+msgid "creeping silver coins"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2007
+msgid ""
+"It appears to be a pile of silver coins."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2009
+msgid "snaga"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2030
+msgid ""
+"He is one of the many weaker 'slave' orcs, often mistakenly known as a"
+" goblin."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2031
+msgid "rattlesnake"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2047
+msgid ""
+"It is recognized by the hard-scaled end of its body that is often rattled"
+" to frighten its prey."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2048
+msgid "giant black dragon fly"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2065
+msgid ""
+"The size of a large bird, this fly drips caustic acid."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2066
+msgid "giant gold dragon fly"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2085
+msgid ""
+"Large beating wings support this dazzling insect.  A loud buzzing noise"
+" pervades the air."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2088
+msgid "crow of Durthang"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2109
+msgid ""
+"A crook-beaked bird with bedraggled black feathers.  It mocks you, and you"
+" realise that its scorn can kill."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2110
+msgid "cave orc"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2130
+msgid ""
+"He is often found in huge numbers in deep caves."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2131
+msgid "wood spider"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2148
+msgid ""
+"It scuttles towards you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2149
+msgid "bloodshot eye"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2166
+msgid ""
+"A disembodied eye, bloodshot and nasty."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2167
+msgid "red naga"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2183
+msgid ""
+"A large red snake with a woman's torso."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2184
+msgid "red jelly"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2200
+msgid ""
+"It is a large pulsating mound of red flesh."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2201
+msgid "giant red frog"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2216
+msgid ""
+"It looks poisonous."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2217
+msgid "green icky thing"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2232
+msgid ""
+"It is a smallish, slimy, icky, acidic creature."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2233
+msgid "zombified kobold"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2251
+msgid ""
+"It is an animated kobold corpse.  Flesh falls off in large chunks as it"
+" shambles forward."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2252
+msgid "lost soul"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2270
+msgid ""
+"It is almost insubstantial."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2271
+msgid "eastern dwarf"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2292
+msgid ""
+"A dwarf of one of the eastern kindreds who has fallen under the sway of"
+" Morgoth."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2293
+msgid "night lizard"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2308
+msgid ""
+"It is a black lizard with overlapping scales and a powerful jaw."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2309
+msgid "Mughash the Kobold Lord"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2332
+msgid ""
+"Strong and powerful, for a kobold."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2335
+msgid "Wormtongue, Agent of Saruman"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2360
+msgid ""
+"He's been spying for Saruman.  He is a snivelling wretch with no morals and"
+" disgusting habits."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2361
+msgid "Lagduf, the Snaga"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2383
+msgid ""
+"A captain of a regiment of weaker orcs, Lagduf keeps his troop in order"
+" with displays of excessive violence."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2384
+msgid "terrified yeek"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2400
+msgid ""
+"It is a strange small humanoid in a constant state of extreme terror."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2401
+msgid "giant salamander"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2420
+msgid ""
+"A large black and yellow lizard.  You'd better run away!"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2421
+msgid "green mold"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2436
+msgid ""
+"It is a strange growth on the dungeon floor."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2437
+msgid "skeleton orc"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2452
+msgid ""
+"It is an animated orc skeleton."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2453
+msgid "lemure"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2469
+msgid ""
+"It is a minor but aggressive demon."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2470
+msgid "orc tracker"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2488
+msgid ""
+"A small orc with wide and snuffling nostrils."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2489
+msgid "ruffian"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2508
+msgid ""
+"An uncultured brute with a club, a sling and a whip."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2511
+msgid "giant black louse"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2525
+msgid ""
+"It makes you itch just to look at it."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2526
+msgid "yeti"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2543
+msgid ""
+"A large white figure covered in shaggy fur."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2544
+msgid "bloodshot icky thing"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2562
+msgid ""
+"It is a strange, slimy, icky creature."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2563
+msgid "giant grey rat"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2579
+msgid ""
+"It is a rodent of unusual size."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2580
+msgid "black harpy"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2599
+msgid ""
+"A woman's face on the body of a vicious black bird."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2600
+msgid "orc shaman"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2622
+msgid ""
+"An orc dressed in skins who gestures wildly."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2623
+msgid "baby blue dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2644
+msgid ""
+"This hatchling dragon is still soft, its eyes unaccustomed to light and its"
+" scales a pale blue."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2645
+msgid "baby white dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2666
+msgid ""
+"This hatchling dragon is still soft, its eyes unaccustomed to light and its"
+" scales a pale white."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2667
+msgid "baby green dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2688
+msgid ""
+"This hatchling dragon is still soft, its eyes unaccustomed to light and its"
+" scales a sickly green."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2689
+msgid "baby black dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2710
+msgid ""
+"This hatchling dragon is still soft, its eyes unaccustomed to light and its"
+" scales a dull black."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2711
+msgid "baby red dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2732
+msgid ""
+"This hatchling dragon is still soft, its eyes unaccustomed to light and its"
+" scales a pale red."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2733
+msgid "giant red ant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2748
+msgid ""
+"It is large and has venomous mandibles."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2749
+msgid "Brodda, the Easterling"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2769
+msgid ""
+"A nasty piece of work, Brodda picks on defenseless women and children."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2770
+msgid "king cobra"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2788
+msgid ""
+"It is a large snake with a hooded face."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2789
+msgid "baby gold dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2809
+msgid ""
+"This hatchling dragon is still soft, its eyes unaccustomed to light and its"
+" scales a pale gold."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2810
+msgid "cave bear"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2829
+msgid ""
+"A large bear appears to have made its home in this cave.  It is hungry, and"
+" you are trespassing in its territory."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2838
+msgid "giant spider"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2858
+msgid ""
+"It is a vast black spider whose bulbous body is bloated with poison."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2859
+msgid "blacklock mage"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2882
+msgid ""
+"A corrupted dwarf from the east, dressed in black mail, hurling spells"
+" at you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2883
+msgid "Orfax, Son of Boldor"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2910
+msgid ""
+"He's just like his daddy!  He knows mighty spells, but fortunately he is a"
+" yeek."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2911
+msgid "stonefoot warrior"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2927
+msgid ""
+"A dwarf of the east in a coat of iron rings and wielding an axe."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2928
+msgid "clear mushroom patch"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2946
+msgid "Grishnákh, the Hill Orc"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2968
+msgid ""
+"He is a cunning and devious orc with a chaotic nature."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2969
+msgid "giant white tick"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2985
+msgid ""
+"It is moving slowly towards you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:2986
+msgid "hairy mold"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3000
+msgid ""
+"It is a strange hairy growth on the dungeon floor."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3001
+msgid "disenchanter mold"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3019
+msgid ""
+"It is a strange glowing growth on the dungeon floor."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3020
+msgid "pseudo-dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3042
+msgid ""
+"A small relative of the dragon that inhabits dark caves."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3043
+msgid "tengu"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3062
+msgid ""
+"It is a fast-moving demon that blinks quickly in and out of existence; no"
+" other demon matches its teleporting mastery."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3063
+msgid "creeping gold coins"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3080
+msgid ""
+"It appears to be a pile of gold coins, until it starts crawling towards"
+" you on tiny legs."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3082
+msgid "wolf"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3100
+msgid ""
+"It howls and snaps at you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3101
+msgid "giant fruit fly"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3115
+msgid ""
+"A fast-breeding, annoying pest."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3116
+msgid "panther"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3133
+msgid ""
+"A large black cat, stalking you with intent.  It thinks you're its next"
+" meal."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3134
+msgid "witch"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3160
+msgid ""
+"She is dressed in black and smells of decay."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3163
+msgid "baby multi-hued dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3185
+msgid ""
+"This hatchling dragon is still soft, its eyes unaccustomed to light and its"
+" scales shimmering with hints of many different colours."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3186
+msgid "hippogriff"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3203
+msgid ""
+"A strange hybrid of eagle and horse.  It looks weird."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3204
+msgid "zombified orc"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3221
+msgid ""
+"It is a shambling orcish corpse leaving behind a trail of flesh."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3222
+msgid "drúadan mage"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3245
+msgid ""
+"A mage of short stature with stumpy legs and a wispy beard."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3246
+msgid "old forest tree"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3264
+msgid ""
+"An ancient tree that seems to be watching you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3267
+msgid "black mamba"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3284
+msgid ""
+"It has glistening black skin, a sleek body and highly venomous fangs."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3285
+msgid "white wolf"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3305
+msgid ""
+"A large and muscled wolf from the northern wastes.  Its breath is cold and"
+" icy and its fur coated in frost."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3306
+msgid "grape jelly"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3326
+msgid ""
+"Yum!  It looks quite tasty.  It is a pulsing mound of glowing flesh."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3327
+msgid "nether worm mass"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3344
+msgid ""
+"It is a disgusting mass of dark worms, eating each other, the floor, the"
+" air, you...."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3345
+msgid "Golfimbul, the Hill Orc Chief"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3370
+msgid ""
+"A leader of a band of raiding orcs, he picks on hobbits."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3371
+msgid "master yeek"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3394
+msgid ""
+"A small humanoid that radiates some power."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3395
+msgid "priest"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3425
+msgid ""
+"A robed man, dedicated to his god."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3426
+msgid "ironfist priest"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3447
+msgid ""
+"A dwarf of the east, dressed all in black, chanting words of dark sorcery."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3448
+msgid "air spirit"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3464
+msgid ""
+"A whirlwind of sentient air."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3465
+msgid "skeleton human"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3480
+msgid ""
+"It is an animated human skeleton."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3481
+msgid "zombified human"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3497
+msgid ""
+"It is a shambling human corpse dropping chunks of flesh behind it."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3498
+msgid "tiger"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3516
+msgid ""
+"One of the largest of its species, a sleek orange and black shape creeps"
+" towards you, ready to pounce."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3517
+msgid "moaning spirit"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3536
+msgid ""
+"A ghostly apparition that shrieks horribly."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3537
+msgid "warrior"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3561
+msgid ""
+"A warrior of considerable skill."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3562
+msgid "stegocentipede"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3579
+msgid ""
+"It is a vast armoured centipede with massive mandibles and a spiked tail."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3580
+msgid "spotted jelly"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3599
+msgid ""
+"A strange jelly thing, covered in discoloured blotches."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3602
+msgid "killer brown beetle"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3615
+msgid ""
+"It is a vicious insect with a tough carapace."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3616
+msgid "ochre jelly"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3636
+msgid ""
+"A fast moving highly acidic jelly thing, that is eating away the floor it"
+" rests on."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3637
+msgid "Boldor, King of the Yeeks"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3663
+msgid ""
+"A great yeek, powerful in magic and sorcery, but a yeek all the same."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3664
+msgid "ogre"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3681
+msgid ""
+"A hideous, smallish giant that is often found near or with orcs."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3682
+msgid "creeping mithril coins"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3699
+msgid ""
+"It appears to be a pile of sentient mithril coins that doesn't like being"
+" picked up."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3701
+msgid "illusionist"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3728
+msgid ""
+"A deceptive spell caster."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3729
+msgid "druid"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3754
+msgid ""
+"A priest devoted to Nature."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3755
+msgid "orc archer"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3776
+msgid ""
+"He has a bow of horn and a quiver full of black-feathered arrows."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3779
+msgid "giant flea"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3794
+msgid "Ufthak of Cirith Ungol"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3818
+msgid ""
+"A strong orc guarding the pass of Cirith Ungol.  He is mortally afraid of"
+" spiders."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3819
+msgid "blue icky thing"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3843
+msgid ""
+"It is a strange, slimy, icky creature, with rudimentary intelligence, but"
+" evil cunning.  It hungers for food, and you look tasty."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3844
+msgid "flesh golem"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3859
+msgid ""
+"A shambling humanoid monster with long scars."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3860
+msgid "warg"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3877
+msgid ""
+"It is a large wolf with eyes full of cunning."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3878
+msgid "lurker"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3893
+msgid ""
+"A strange creature that merges with the dungeon floor, trapping its"
+" victims by enveloping them within its perfectly disguised form."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3896
+msgid "wererat"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3921
+msgid ""
+"A large rat with glowing red eyes.  The wererat is a disgusting creature,"
+" relishing in filth and disease."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3922
+msgid "black ogre"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3941
+msgid ""
+"A massive orc-like figure with black skin and powerful arms."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3942
+msgid "magic mushroom patch"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3964
+msgid ""
+"Yum!  It looks quite tasty.  It seems to glow with an unusual light."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3965
+msgid "guardian naga"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3982
+msgid ""
+"A giant snake-like figure with a woman's torso."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:3983
+msgid "light hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4005
+msgid ""
+"A brilliant canine form whose light hurts your eyes, even at this distance."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4006
+msgid "dark hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4029
+msgid ""
+"A hole in the air in the shape of a huge hound.  No light falls upon its"
+" form."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4030
+msgid "half-orc"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4053
+msgid ""
+"He is a hideous deformed cross-breed with man and orc, combining man's"
+" strength and cunning with orcish evil.  The traitorous wizard Saruman is"
+" generally believed to be responsible for this abomination."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4054
+msgid "giant tarantula"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4071
+msgid ""
+"A giant, fast-moving spider with hairy black and red legs."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4072
+msgid "giant clear centipede"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4091
+msgid "griffon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4108
+msgid ""
+"It is half lion, half eagle.  It flies menacingly towards you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4109
+msgid "homunculus"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4126
+msgid ""
+"It is a small demonic spirit full of malevolence."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4127
+msgid "clear hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4147
+msgid ""
+"A completely translucent hound."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4148
+msgid "clay golem"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4165
+msgid ""
+"It is a massive animated statue made out of hardened clay."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4166
+msgid "giant tan bat"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4185
+msgid ""
+"A giant bat, the beating of whose wings produces a strangely unnerving"
+" noise."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4188
+msgid "umber hulk"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4207
+msgid ""
+"This bizarre creature has glaring eyes and large mandibles capable of"
+" slicing through rock."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4208
+msgid "gelatinous cube"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4232
+msgid ""
+"It is a strange, vast gelatinous structure that assumes cubic proportions"
+" as it lines all four walls of the corridors it patrols.  Through its"
+" transparent jelly structure you can see treasures it has engulfed, and a"
+" few corpses as well."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4233
+msgid "rogue"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4258
+msgid ""
+"He is eyeing your backpack."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4259
+msgid "Ulfast, Son of Ulfang"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4281
+msgid ""
+"A short and swarthy Easterling."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4282
+msgid "quasit"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4304
+msgid ""
+"A demon of small stature with an annoying bite."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4305
+msgid "uruk"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4328
+msgid ""
+"A cunning orc of power, as tall as a man, and stronger.  It fears little."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4329
+msgid "grizzly bear"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4347
+msgid ""
+"A huge, beastly bear, more savage than most of its kind."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4348
+msgid "craban"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4369
+msgid ""
+"A type of crow, specially bred by the forces of evil as spies; their"
+" rudimentary intelligence guided by an evil mind has tracked you down, and"
+" now they seek to alert other evil creatures to your presence."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4372
+msgid "imp"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4393
+msgid ""
+"A poisonous little mischief-maker."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4394
+msgid "forest troll"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4414
+msgid ""
+"He is green skinned, ugly and stupid."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4415
+msgid "Nár, the Dwarf"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4440
+msgid ""
+"The friend and companion of the dwarven king Thrór, he went mad with grief"
+" after Thrór's death at the hands of Azog the Orc.  With torn beard and"
+" ragged clothes, he seems to have fixed on you as a convenient target to"
+" vent his anger."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4441
+msgid "2-headed hydra"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4459
+msgid ""
+"A strange reptilian hybrid with two heads, guarding its hoard."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4460
+msgid "water spirit"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4477
+msgid ""
+"A whirlpool of sentient liquid."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4478
+msgid "giant red scorpion"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4495
+msgid ""
+"It is fast and poisonous."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4496
+msgid "earth spirit"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4513
+msgid ""
+"A whirling form of sentient rock."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4516
+msgid "hummerhorn"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4530
+msgid ""
+"A giant buzzing wasp, its stinger drips venom."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4531
+msgid "orc captain"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4557
+msgid ""
+"An armoured orc with an air of authority."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4558
+msgid "blackguard"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4587
+msgid ""
+"A hulking figure encased in deep black plate armour; he looks at you"
+" menacingly."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4588
+msgid "fire spirit"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4605
+msgid ""
+"A whirlwind of sentient flame."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4606
+msgid "fire hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4630
+msgid ""
+"Flames lick at its feet and its tongue is a blade of fire.  You can feel a"
+" furnace heat radiating from the creature."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4631
+msgid "cold hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4654
+msgid ""
+"A hound as tall as a man, this creature appears to be composed of angular"
+" planes of ice.  Cold radiates from it and freezes your breath in the air."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4655
+msgid "energy hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4679
+msgid ""
+"Saint Elmo's Fire forms a ghostly halo around this hound, and sparks sting"
+" your fingers as energy builds up in the air around you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4680
+msgid "potion mimic"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4701
+msgid ""
+"A strange creature that disguises itself as a discarded potion bottle to"
+" lure unsuspecting adventurers within reach of its venomous claws."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4708
+msgid "blink dog"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4728
+msgid ""
+"A strange magical member of the canine race, its form seems to shimmer and"
+" fade in front of your very eyes."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4729
+msgid "shambling mound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4750
+msgid ""
+"A pile of rotting vegetation that slides towards you with a disgusting"
+" stench, waking all it nears."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4751
+msgid "evil eye"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4772
+msgid ""
+"A huge disembodied eye.  As you stare into the black nothingness of its"
+" pupil, you feel your will and vitality draining away, and are unable to"
+" do anything except approach it in horrified fascination."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4775
+msgid "Shagrat, the Orc Captain"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4800
+msgid ""
+"He is an orc of power and great cunning, leader of the garrison at Cirith"
+" Ungol."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4801
+msgid "Gorbag, the Orc Captain"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4826
+msgid ""
+"He is an orc of power and great cunning, leader of the garrison at Minas"
+" Morgul."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4827
+msgid "stone golem"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4844
+msgid ""
+"It is a massive animated statue."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4845
+msgid "red mold"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4863
+msgid ""
+"It is a strange red growth on the dungeon floor; it seems to burn with"
+" flame."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4864
+msgid "Old Man Willow"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4889
+msgid ""
+"The ancient grey willow tree, ruler of the Old Forest.  He despises"
+" trespassers in his territory.  \"...a huge willow-tree, old and hoary."
+"  Enormous it looked, its sprawling branches going up like racing arms"
+" with many long-fingered hands, its knotted and twisted trunk gaping in"
+" wide fissures that creaked faintly as the boughs moved.\""
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4895
+msgid "blood falcon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4914
+msgid ""
+"A blinding whirlwind of fear and feathers.  Its razor sharp beak and"
+" talons fill its foes with terror as it seeks to rend flesh from bone"
+" with unbridled ferocity."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4915
+msgid "Mirkwood spider"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4936
+msgid ""
+"A strong and powerful spider from Mirkwood forest.  Cunning and evil, it"
+" seeks to taste your juicy insides."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4937
+msgid "Bolg, Son of Azog"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4962
+msgid ""
+"A large and powerful orc, he looks just like his father.  He is tall and"
+" fast, but fortunately blessed with orcish brains."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4963
+msgid "3-headed hydra"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4983
+msgid ""
+"A 2-headed hydra with an extra head, its mouth dripping venom."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:4984
+msgid "earth hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5007
+msgid ""
+"A beautiful crystalline shape does not disguise the danger this hound"
+" clearly presents.  Your flesh tingles as it approaches."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5008
+msgid "air hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5032
+msgid ""
+"Swirling vapours surround this beast as it floats towards you, seemingly"
+" walking on air.  Noxious gases sting your throat."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5033
+msgid "sabre-tooth tiger"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5052
+msgid ""
+"A fierce and dangerous cat, its huge tusks and sharp claws would lacerate"
+" even the strongest armour."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5053
+msgid "water hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5077
+msgid ""
+"Liquid footprints follow this hound as it pads around the dungeon.  An"
+" acrid smell of acid rises from the dog's pelt."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5078
+msgid "chimaera"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5100
+msgid ""
+"It is a strange concoction of goat, lion and dragon, with the heads of all"
+" three beasts."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5101
+msgid "quylthulg"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5117
+msgid ""
+"It is a strange pulsing mound of flesh."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5118
+msgid "sasquatch"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5135
+msgid ""
+"A tall shaggy, furry humanoid, it could call the yeti brother."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5136
+msgid "werewolf"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5155
+msgid ""
+"It is a huge wolf with eyes that glow with manly intelligence."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5156
+msgid "dark dwarven lord"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5183
+msgid ""
+"A leader of Morgoth's eastern dwarf recruits, dressed in black chainmail"
+" and radiating evil power."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5184
+msgid "ranger"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5215
+msgid ""
+"A warrior who is at one with nature.  A master of both bow and sword, with"
+" minor spellcasting skills, and animals come to do his bidding."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5216
+msgid "paladin"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5245
+msgid ""
+"A warrior for a holy cause.  Unfortunately, his god is not yours, and"
+" there is rivalry even between the various gods of Good, so he is your"
+" enemy."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5248
+msgid "Lugdush, the Uruk"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5271
+msgid ""
+"A large and powerful orc, captain of one of Saruman's orcish regiments."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5272
+msgid "blue dragon bat"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5290
+msgid ""
+"It is a glowing blue bat with a sharp tail."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5291
+msgid "scroll mimic"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5314
+msgid ""
+"A strange creature that disguises itself as a discarded scroll to lure"
+" unsuspecting adventurers within reach of its venomous claws."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5321
+msgid "fire vortex"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5339
+msgid ""
+"A whirling maelstrom of fire."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5340
+msgid "water vortex"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5357
+msgid ""
+"A caustic spinning whirlpool of water."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5358
+msgid "cold vortex"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5375
+msgid ""
+"A twisting whirlpool of frost."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5376
+msgid "mummified orc"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5393
+msgid ""
+"It is an orcish figure covered in wrappings."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5396
+msgid "neekerbreeker"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5415
+msgid ""
+"Believed to be an evil relative of the cricket, this creature gets its name"
+" from its incessant squeaking, which can best be described as \"neek-breek,"
+" neek-breek\".  The noise can drive people frantic, and worse still, can be"
+" heard for quite some distance, alerting other monsters to your presence."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5416
+msgid "Uglúk, the Uruk"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5441
+msgid ""
+"A strong and cunning orc warrior, the commander of Saruman's orcish horde."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5442
+msgid "killer stag beetle"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5457
+msgid ""
+"It is a giant beetle with vicious claws."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5458
+msgid "iron golem"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5477
+msgid ""
+"It is a massive metal statue that moves steadily towards you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5478
+msgid "giant yellow scorpion"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5495
+msgid ""
+"It is a giant scorpion with a sharp stinger."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5496
+msgid "wyvern"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5515
+msgid ""
+"A fast-moving and deadly draconian animal.  Beware its poisonous sting!"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5520
+msgid "phase spider"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5543
+msgid ""
+"A spider that never seems quite there.  Everywhere you look it is just"
+" half-seen in the corner of one eye."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5544
+msgid "black ooze"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5564
+msgid ""
+"It is a strangely moving puddle."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5565
+msgid "Easterling champion"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5589
+msgid ""
+"A scarred warrior who wields an axe and moves with confidence."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5590
+msgid "Azog, Enemy of the Dwarves"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5617
+msgid ""
+"A great orc with a huge iron-clad head, agile and strong.  He is notorious"
+" for starting the War of the Dwarves and Orcs by killing Durin's heir,"
+" Thrór."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5618
+msgid "brigand"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5643
+msgid ""
+"A thief of great power and shifty speed."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5644
+msgid "red dragon bat"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5663
+msgid ""
+"It is a sharp-tailed bat, wreathed in fire."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5664
+msgid "giant silver ant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5682
+msgid ""
+"A giant silver ant with a caustic bite and hard scales."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5685
+msgid "forest wight"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5705
+msgid ""
+"It is a ghostly apparition with a humanoid form."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5706
+msgid "Ibun, Son of Mîm"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5730
+msgid ""
+"One of the last of the Petty-Dwarves.  Ibun is a tricky sorcerous little"
+" being, full of mischief."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5731
+msgid "Khîm, Son of Mîm"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5755
+msgid ""
+"One of the last of the Petty-Dwarves.  Khîm is a tricky sorcerous little"
+" being, full of mischief."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5756
+msgid "4-headed hydra"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5777
+msgid ""
+"A 3-headed hydra with an extra, smouldering, head."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5778
+msgid "mummified human"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5795
+msgid ""
+"It is a human form encased in mouldy wrappings."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5796
+msgid "vampire bat"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5813
+msgid ""
+"A blood-sucking bat that flies at your neck hungrily."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5814
+msgid "Sangahyando of Umbar"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5839
+msgid ""
+"A Black Númenórean with a blacker heart."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5840
+msgid "Angamaitë of Umbar"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5865
+msgid ""
+"A Black Númenórean who hates the men of the west."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5866
+msgid "banshee"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5885
+msgid ""
+"It is a ghostly woman's form that wails mournfully."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5886
+msgid "werebear"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5909
+msgid ""
+"In the eyes of this bear, there glimmers the faintest light of"
+" intelligence.  And then its form begins to change...  The combination of"
+" animal cunning, human intelligence and the great physical strength of the"
+" bear makes for a dangerous enemy."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5912
+msgid "nruling"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5935
+msgid ""
+"Little sparks of flame that dance around you, lashing whips and cursing"
+" horribly."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5936
+msgid "necromancer"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5961
+msgid ""
+"A gaunt figure, clothed in black robes."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5962
+msgid "hill giant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5982
+msgid ""
+"A ten foot tall humanoid with powerful muscles."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:5983
+msgid "pukelman"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6006
+msgid ""
+"A stumpy figure carved from stone, with glittering eyes, this sentinel"
+" strides towards you with deadly intent."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6007
+msgid "stone troll"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6028
+msgid ""
+"He is a large, lumpish troll with scabrous black skin."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6029
+msgid "carrion crawler"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6048
+msgid ""
+"A hideous centipede covered in slime and with glowing tentacles around its"
+" head."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6049
+msgid "killer red beetle"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6064
+msgid ""
+"It is a giant beetle with poisonous mandibles."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6067
+msgid "abyss worm mass"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6085
+msgid ""
+"A writhing wormlike shimmer of blackness, large as your arm.  It squirms"
+" through air and walls with equal facility, leaving void in its wake."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6086
+msgid "giant firefly"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6102
+msgid ""
+"Clouds of these monsters light up the dungeon - so brightly that you can"
+" barely see through them."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6103
+msgid "giant grey ant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6119
+msgid ""
+"It is an ant encased in an impenetrable exoskeleton."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6120
+msgid "Ulwarth, Son of Ulfang"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6142
+msgid "displacer beast"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6161
+msgid ""
+"It is a huge black panther, clubbed tentacles sprouting from its shoulders."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6162
+msgid "giant fire tick"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6181
+msgid ""
+"It is smoking and burning with great heat."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6182
+msgid "cave ogre"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6201
+msgid ""
+"A giant orc-like figure with an awesomely muscled frame."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6202
+msgid "disenchanter bat"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6218
+msgid ""
+"A giant bat which feeds on raw magical energy."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6219
+msgid "wolf chieftain"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6247
+msgid ""
+"A great wolf-chieftain whose pack is in the service of the Dark Lord, and"
+" whose howls strike fear into even the boldest heart."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6248
+msgid "ghoul"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6268
+msgid ""
+"Flesh is falling off in chunks from this decaying abomination."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6271
+msgid "Mîm, Betrayer of Turin"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6300
+msgid ""
+"The last of his race, Mîm is a Petty-Dwarf.  Petty-Dwarves are strange"
+" creatures, powerful in sorcery and originating in the East.  They have"
+" been hunted nearly to extinction by the High Elves."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6301
+msgid "killer fire beetle"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6319
+msgid ""
+"It is a giant beetle wreathed in flames."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6320
+msgid "creeping adamantite coins"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6339
+msgid ""
+"It appears to be a pile of coins made of precious adamant, slithering"
+" toward you on lots of tiny legs."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6341
+msgid "troll scavenger"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6362
+msgid ""
+"A powerful, man-eating troll, its claws foul with the traces of its last"
+" kill."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6363
+msgid "vibration hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6387
+msgid ""
+"A blurry canine form which seems to be moving as fast as the eye can"
+" follow.  You can feel the earth resonating beneath your feet."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6388
+msgid "nexus hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6412
+msgid ""
+"A locus of conflicting points coalesce to form the vague shape of a huge"
+" hound.  Or is it just your imagination?"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6413
+msgid "vampire"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6435
+msgid ""
+"It is a humanoid with an aura of power.  You notice a sharp set of front"
+" teeth."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6436
+msgid "gorgimaera"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6459
+msgid ""
+"The result of evil experiments, this travesty of nature should never be"
+" alive.  It has three heads - goat, dragon and gorgon - all attached to a"
+" lion's body."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6460
+msgid "ogre shaman"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6484
+msgid ""
+"It is an ogre wrapped in furs and covered in grotesque body paints."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6485
+msgid "shimmering mold"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6503
+msgid ""
+"It is a strange growth on the dungeon floor, glowing and crackling with"
+" sparks."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6506
+msgid "frost giant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6527
+msgid ""
+"A twelve foot tall giant covered in furs."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6528
+msgid "spirit naga"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6553
+msgid ""
+"A wraithly snake-like form with the torso of a beautiful woman."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6554
+msgid "5-headed hydra"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6576
+msgid ""
+"A 4-headed hydra with an extra head, steaming with acidic vapor."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6577
+msgid "black knight"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6607
+msgid "Uldor the Accursed"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6631
+msgid ""
+"An evil and cunning man from the East.  Having once sworn allegiance to the"
+" sons of Fëanor, it was Uldor's treachery that turned the tide of the"
+" Battle of Unnumbered Tears in Morgoth's favour."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6632
+msgid "mage"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6658
+msgid ""
+"A mage of some power - you can tell by the size of his hat."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6659
+msgid "mind flayer"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6680
+msgid ""
+"A humanoid form with a gruesome head, tentacular mouth, and piercing eyes."
+"  Claws reach out for you and you feel a presence invade your mind."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6681
+msgid "Draebor, the Imp"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6709
+msgid ""
+"An intensely irritating git of a monster."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6710
+msgid "basilisk"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6733
+msgid ""
+"A vile reptile that preys on unsuspecting travellers.  Its eyes stare"
+" deeply at you and your soul starts to wilt!"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6734
+msgid "snow troll"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6757
+msgid ""
+"He is a white troll with shaggy fur and powerfully clawed hands."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6758
+msgid "bat of Gorgoroth"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6783
+msgid ""
+"Fed with horrid meats and grown to enormous size, this slavering creature"
+" seeks livelier prey."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6784
+msgid "spectator"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6805
+msgid ""
+"A lesser relative of the beholder: a globular body with a large toothy"
+" mouth, a large central eye, and four smaller eyes on stalks protruding"
+" from the top of its body."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6806
+msgid "Beorn, the Shape-Changer"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6835
+msgid ""
+"Beorn is only occasionally seen in human form these days, preferring to"
+" appear in the shape of a giant black bear: he also prefers the company of"
+" beasts to that of humans.  He has never taken kindly to strangers, even"
+" in human form."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6836
+msgid "Beorn, the Mountain Bear"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6856
+msgid ""
+"Beorn in his form as a great black bear of the mountains, grown to"
+" giant-size in wrath.  The roar of his voice is like drums, and no weapon"
+" seems to bite upon him."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6859
+msgid "green elf archer"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6885
+msgid ""
+"An elf of the Land of the Seven Rivers, whose woodcraft was such that a"
+" stranger might pass through their land from end to end and see none of"
+" them."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6886
+msgid "giant black scorpion"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6905
+msgid ""
+"A gleaming black scorpion as large as a lion, with a pulsating stinger"
+" and two great deadly claws."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6906
+msgid "purple worm"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6924
+msgid ""
+"It is a massive worm form, many feet in length.  Its vast maw drips acid"
+" and poison."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6925
+msgid "catoblepas"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6947
+msgid ""
+"A strange ox-like form with a huge head but a thin, weak neck, it looks"
+" like the creation of some deranged alchemist."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6948
+msgid "ring mimic"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6970
+msgid ""
+"A strange creature that disguises itself as a discarded ring to lure"
+" unsuspecting adventurers within reach of its venomous claws."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:6977
+msgid "young blue dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7000
+msgid ""
+"It has a form that legends are made of.  Its still-tender scales are a deep"
+" blue in hue.  Sparks crackle along its length."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7001
+msgid "young white dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7024
+msgid ""
+"It has a form that legends are made of.  Its still-tender scales are a"
+" frosty white in hue.  Icy blasts of cold air come from it as it breathes."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7025
+msgid "young green dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7048
+msgid ""
+"It has a form that legends are made of.  Its still-tender scales are a deep"
+" green in hue.  Foul gas seeps through its scales."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7049
+msgid "energy vortex"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7069
+msgid ""
+"A shimmering tornado of air, sparks crackle along its length."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7076
+msgid "fire giant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7098
+msgid ""
+"A glowing fourteen foot tall giant.  Flames drip from its red skin."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7099
+msgid "mithril golem"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7119
+msgid ""
+"It is a massive statue of purest mithril.  It looks expensive!"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7120
+msgid "skeleton troll"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7137
+msgid ""
+"It is a troll skeleton animated by dark dweomers."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7138
+msgid "manticore"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7161
+msgid ""
+"It is a winged lion's body with a human torso and a tail covered in vicious"
+" spikes."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7162
+msgid "giant blue ant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7181
+msgid ""
+"It is a giant ant that crackles with energy."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7182
+msgid "giant army ant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7200
+msgid ""
+"An armoured form moving with purpose.  Powerful on its own, flee when"
+" hordes of them march."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7201
+msgid "grave wight"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7221
+msgid ""
+"It is a ghostly form with eyes that haunt you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7222
+msgid "killer slicer beetle"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7237
+msgid ""
+"It is a beetle with deadly sharp cutting mandibles and a rock-hard"
+" carapace."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7238
+msgid "ogre chieftain"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7265
+msgid ""
+"This ogre is leader of his tribe.  He sneers at you as he advances towards"
+" you, wielding a huge club and pushing his own followers rudely aside."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7266
+msgid "ghast"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7293
+msgid ""
+"This vile abomination is a relative of ghouls, and often leads packs of"
+" them.  It smells foul, and its bite carries a rotting disease."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7294
+msgid "Bert the Stone Troll"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7319
+msgid ""
+"Big, brawny, powerful and with a taste for hobbit.  He has friends called"
+" Bill and Tom."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7320
+msgid "Bill the Stone Troll"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7345
+msgid ""
+"Big, brawny, powerful and with a taste for hobbit.  He has friends called"
+" Bert and Tom."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7346
+msgid "Tom the Stone Troll"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7371
+msgid ""
+"Big, brawny, powerful and with a taste for hobbit.  He has friends called"
+" Bert and Bill."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7374
+msgid "ghost"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7395
+msgid ""
+"You don't believe in it.  But it believes in you..."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7396
+msgid "death watch beetle"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7411
+msgid ""
+"It is a giant beetle that produces a chilling sound."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7412
+msgid "young black dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7435
+msgid ""
+"It has a form that legends are made of.  Its still-tender scales are a"
+" darkest black hue.  Acid drips from its body."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7436
+msgid "young gold dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7458
+msgid ""
+"It has a form that legends are made of.  Its still-tender scales are a"
+" tarnished gold hue, and light is reflected from its form."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7459
+msgid "young red dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7483
+msgid ""
+"It has a form that legends are made of.  Its still-tender scales are a"
+" deepest red hue.  Heat radiates from its form."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7484
+msgid "huorn"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7506
+msgid ""
+"A tree which has become entish, or maybe an ent which has become tree-ish."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7510
+msgid "serpent of the brownlands"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7533
+msgid ""
+"A great serpent, with coils of steel, a lunge faster than the eye can see,"
+" and fangs that drip with acidic poison.  Its eyes are mesmerizing."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7534
+msgid "ogre mage"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7559
+msgid ""
+"A hideous ogre wrapped in black sorcerous robes."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7560
+msgid "nexus quylthulg"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7576
+msgid ""
+"It is a very unstable, strange pulsing mound of flesh."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7577
+msgid "southron assassin"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7599
+msgid ""
+"A man of Harad clothed in black who moves with blinding speed."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7600
+msgid "memory moss"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7619
+msgid ""
+"A mass of green vegetation.  You don't remember seeing anything like it"
+" before."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7620
+msgid "young multi-hued dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7644
+msgid ""
+"It has a form that legends are made of.  Beautiful scales of shimmering and"
+" magical colours cover it."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7645
+msgid "doombat"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7665
+msgid ""
+"It is a fast moving creature of chaos, a gigantic black bat surrounded by"
+" flickering bright red flames."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7668
+msgid "drúadan druid"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7694
+msgid ""
+"A short, stocky man with an uncanny connection with nature."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7695
+msgid "stone giant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7715
+msgid ""
+"It is eighteen feet tall and looking at you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7716
+msgid "shadow drake"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7742
+msgid ""
+"It is a dragon-like form wrapped in shadow.  Glowing red eyes shine out in"
+" the dark, and it is surrounded by an aura of unearthly cold that chills"
+" the soul rather than the body."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7743
+msgid "cave troll"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7766
+msgid ""
+"He is a vicious monster, feared for his ferocity."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7767
+msgid "mystic"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7795
+msgid ""
+"An adept at unarmed combat, the mystic strikes with stunning power.  He can"
+" summon help from nature and is able to focus his power to ease any pain."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7796
+msgid "barrow wight"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7817
+msgid ""
+"It is a ghostly nightmare of an entity."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7818
+msgid "skeleton etten"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7836
+msgid ""
+"It is the animated form of a massive two-headed troll."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7837
+msgid "chaos drake"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7861
+msgid ""
+"A dragon twisted by the forces of chaos.  It seems first ugly, then fair,"
+" as its form shimmers and changes in front of your eyes."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7862
+msgid "law drake"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7885
+msgid ""
+"This dragon is clever and cunning.  It laughs at your puny efforts to"
+" disturb it."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7886
+msgid "balance drake"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7909
+msgid ""
+"A mighty dragon, the balance drake seeks to maintain the Cosmic Balance,"
+" and despises your feeble efforts to destroy evil."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7910
+msgid "ethereal drake"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7934
+msgid ""
+"A dragon of great power, with control over light and dark, the ethereal"
+" drake's eyes glare with white hatred from the shadows."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7935
+msgid "fire elemental"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7955
+msgid ""
+"It is a towering inferno of flames."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7956
+msgid "water elemental"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7977
+msgid ""
+"It is a towering tempest of water."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:7978
+msgid "crystal drake"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8002
+msgid ""
+"A dragon of strange crystalline form.  Light shines through it, dazzling"
+" your eyes with spectra of colour."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8005
+msgid "troll priest"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8030
+msgid ""
+"A troll who is so bright he knows how to read."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8031
+msgid "Maia"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8056
+msgid ""
+"One of the first children of Eru, currently human-like in form, its body"
+" shining with glorious light.  Whether this being has taken allegiance to"
+" Morgoth or faces you in combat for some other reason is not clear; all"
+" you know is that it stands before you, its eyes ablaze as it prepares its"
+" next volley of spells."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8057
+msgid "troll blackguard"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8080
+msgid ""
+"A half-smart, vicious troll with some rudimentary magic and a love of"
+" violence."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8081
+msgid "shade"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8103
+msgid ""
+"A shadowy form clutches at you from the darkness.  A powerful undead"
+" creature with a deadly touch."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8104
+msgid "master thief"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8130
+msgid ""
+"Cool and confident, fast and lithe; protect your possessions quickly!"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8131
+msgid "Ulfang the Black"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8159
+msgid ""
+"A short and swarthy Easterling dressed in black.  He and his three sons"
+" once openly swore allegiance to the High Elves, but were secretly in the"
+" pay of Morgoth."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8160
+msgid "lich"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8183
+msgid ""
+"It is a skeletal form dressed in robes.  It radiates vastly evil power."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8184
+msgid "earth elemental"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8205
+msgid ""
+"It is a towering form composed of rock with fists of awesome power."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8206
+msgid "air elemental"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8227
+msgid ""
+"It is a towering tornado of winds."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8228
+msgid "Eog golem"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8250
+msgid ""
+"It is a massive deep brown statue, striding towards you with an"
+" all-too-familiar purpose.  Your magic surprisingly feels much less"
+" powerful now."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8253
+msgid "wereworm"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8272
+msgid ""
+"A huge wormlike shape dripping acid, twisted by evil sorcery into a foul"
+" monster that breeds on death."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8273
+msgid "Lokkak, the Ogre Chieftain"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8298
+msgid ""
+"An ogre renowned for acts of surpassing cruelty, Lokkak quickly became the"
+" leader of a large band of violent ogres."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8299
+msgid "hill troll"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8321
+msgid ""
+"Clad only in close-fitting mesh of horny scales (unless that is his skin)"
+" this troll strides toward you roaring like a beast, wielding a heavy"
+" hammer in his knotted hand."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8322
+msgid "invisible stalker"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8340
+msgid ""
+"It is impossible to define its form but its violence is legendary."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8341
+msgid "gravity hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8366
+msgid ""
+"Unfettered by the usual constraints of gravity, these unnatural creatures"
+" are walking on the walls and even the ceiling!  The earth suddenly feels"
+" rather less solid as you see gravity warp all round the monsters."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8367
+msgid "inertia hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8391
+msgid ""
+"Bizarrely, this hound seems to be hardly moving at all, yet it approaches"
+" you with deadly menace.  It makes you tired just to look at it."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8392
+msgid "impact hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8417
+msgid ""
+"A deep brown shape is visible before you, its canine form strikes you with"
+" an almost physical force.  The dungeon floor buckles as if struck by a"
+" powerful blow as it stalks towards you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8418
+msgid "mûmak"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8437
+msgid ""
+"A massive elephantine form with eyes twisted by madness."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8438
+msgid "giant fire ant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8459
+msgid ""
+"A giant ant covered in shaggy fur.  Its powerful jaws glow with heat."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8460
+msgid "chest mimic"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8486
+msgid ""
+"A strange creature that disguises itself as a chest to lure unsuspecting"
+" adventurers within reach of its venomous claws.  The first that most"
+" adventurers realise of the deception is when the seemingly invitingly open"
+" lid of the chest suddenly grows teeth and then slams shut on the"
+" adventurer's hand..."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8493
+msgid "silent watcher"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8517
+msgid ""
+"A figure carved from stone, with three vulture faces whose eyes glow with a"
+" malevolent light."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8520
+msgid "olog"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8540
+msgid ""
+"It is a massive intelligent troll with needle-sharp fangs."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8541
+msgid "colbran"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8564
+msgid ""
+"A man-shaped form of living lightning.  Sparks and shocks crackle all over"
+" this madly capering figure, as it leaps and whirls around and about you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8565
+msgid "cloud giant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8586
+msgid ""
+"It is a twenty foot tall giant wreathed in clouds."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8587
+msgid "master vampire"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8611
+msgid ""
+"It is a humanoid form dressed in robes.  Power emanates from its chilling"
+" frame."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8612
+msgid "ooze elemental"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8634
+msgid ""
+"It is a towering mass of filth, an eyesore of ooze."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8635
+msgid "smoke elemental"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8655
+msgid ""
+"It is a towering blackened form, crackling with heat."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8656
+msgid "xorn"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8675
+msgid ""
+"A huge creature of the element Earth.  Able to merge with its element, it"
+" has four huge arms protruding from its enormous torso."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8676
+msgid "colossus"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8698
+msgid ""
+"An enormous construct resembling a titan made from stone.  It strides"
+" purposefully towards you, swinging its slow fists with earth-shattering"
+" power."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8699
+msgid "trapper"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8716
+msgid ""
+"A larger cousin of the lurker, this creature traps unsuspecting victims and"
+" paralyzes them, to be slowly digested later."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8717
+msgid "bodak"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8740
+msgid ""
+"It is a humanoid form composed of flames and hatred."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8741
+msgid "dúnadan of Angmar"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8769
+msgid ""
+"A necromancer recruited to the evil realm of Angmar during the decline of"
+" the North Kingdom."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8770
+msgid "Lorgan, Chief of the Easterlings"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8799
+msgid ""
+"A mighty warrior from the east, Lorgan hates everything that he cannot"
+" control."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8800
+msgid "demonologist"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8828
+msgid ""
+"A figure twisted by evil standing in robes of deepest crimson."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8829
+msgid "gauth"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8853
+msgid ""
+"Another lesser relative of the beholder, this six-eyed creature feeds on"
+" magic."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8856
+msgid "ice elemental"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8878
+msgid ""
+"It is a towering glacier of ice."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8879
+msgid "mummified troll"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8897
+msgid ""
+"It is a massive figure clothed in wrappings.  You are wary of its massive"
+" fists."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8898
+msgid "spectre"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8919
+msgid ""
+"A phantasmal shrieking spirit.  Its wail drives the intense cold of pure"
+" evil deep within your body."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8920
+msgid "magma elemental"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8943
+msgid ""
+"It is a towering glowing form of molten hate."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8944
+msgid "killer iridescent beetle"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8963
+msgid ""
+"It is a giant beetle, whose carapace shimmers with vibrant energies."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8964
+msgid "nexus vortex"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8982
+msgid ""
+"A maelstrom of potent magical energy."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:8983
+msgid "plasma vortex"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9003
+msgid ""
+"A whirlpool of intense flame, charring the stones at your feet."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9004
+msgid "mountain troll"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9025
+msgid ""
+"A massive troll, larger and stronger than many men together.  It needs no"
+" weapons aside from its massive hands and feet."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9026
+msgid "shardstorm"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9042
+msgid ""
+"A howling blast of razor-sharp mountain fragments, kept intact by perilous"
+" magics."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9043
+msgid "emperor wight"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9067
+msgid ""
+"Your life force is torn from your body as this powerful unearthly being"
+" approaches."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9070
+msgid "mummified chieftain"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9104
+msgid ""
+"A powerful ruler who refused the summons of Mandos on death, preferring"
+" to re-occupy his now embalmed body.  He commands a legion of his former"
+" subjects with unearthly shrieks."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9105
+msgid "will o' the wisp"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9129
+msgid ""
+"A strange ball of glowing light.  It disappears and reappears and seems to"
+" draw you to it.  You seem somehow compelled to stand still and watch its"
+" strange dancing motion."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9130
+msgid "death knight"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9159
+msgid ""
+"It is a humanoid figure dressed in armour of an ancient form.  From beneath"
+" its helmet, eyes glow a baleful red and seem to pierce you like lances of"
+" fire."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9160
+msgid "Castamir the Usurper"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9185
+msgid ""
+"A Black Númenórean who usurped the throne of Gondor, he is treacherous and"
+" evil."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9186
+msgid "time vortex"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9203
+msgid ""
+"You haven't seen it yet."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9204
+msgid "shimmering vortex"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9227
+msgid ""
+"A strange pillar of shining light that hurts your eyes.  Its shape changes"
+" constantly as it cuts through the air towards you.  It is like a beacon,"
+" waking monsters from their slumber."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9228
+msgid "white wraith"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9249
+msgid ""
+"It is a tangible but ghostly form made of white fog."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9250
+msgid "etten"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9271
+msgid ""
+"A massive two-headed troll of huge strength, ettens are stupid but violent."
+"  They are also living proof that two heads are not more intelligent than"
+" one..."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9272
+msgid "abyss spider"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9296
+msgid ""
+"A massive spider, heaving the bloated bag of its body between great"
+" spined legs."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9299
+msgid "southron archer"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9323
+msgid ""
+"A man of Harad clad in black and red and carrying a longbow.  His quiver is"
+" full of red feathered arrows, and carries an insignia of a black serpent."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9324
+msgid "mature white dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9348
+msgid ""
+"A large dragon, scales gleaming bright white."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9349
+msgid "mature blue dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9373
+msgid ""
+"A large dragon, scales tinted deep blue."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9374
+msgid "mature green dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9398
+msgid ""
+"A large dragon, scales tinted deep green."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9399
+msgid "6-headed hydra"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9426
+msgid ""
+"A 5-headed hydra which seems to have an extra head, if you could just see"
+" it properly."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9427
+msgid "night mare"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9449
+msgid ""
+"A fearsome skeletal horse with glowing eyes, that watch you with little"
+" more than a hatred of all that lives."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9457
+msgid "beholder"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9482
+msgid ""
+"A vile creature with one huge central eye, twelve smaller eyes on stalks,"
+" and a huge mouth filled with sharp teeth."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9483
+msgid "disenchanter worm mass"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9501
+msgid ""
+"It is a strange mass of squirming worms.  Magical energy crackles around"
+" its disgusting form."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9502
+msgid "spirit troll"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9520
+msgid ""
+"A weird ghostly troll-like being."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9521
+msgid "phantom"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9542
+msgid ""
+"An unholy creature of darkness, the aura emanating from this evil being"
+" saps your very soul."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9543
+msgid "7-headed hydra"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9570
+msgid ""
+"A 6-headed hydra with an extra head that waves mesmerisingly at you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9571
+msgid "enchantress"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9601
+msgid ""
+"This elusive female spellcaster has a special affinity for dragons, whom"
+" she rarely fights without."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9602
+msgid "sorcerer"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9635
+msgid ""
+"A human figure in robes, he moves with magically improved speed, and his"
+" hands are ablur with spell casting."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9636
+msgid "xaren"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9655
+msgid ""
+"It is a tougher relative of the Xorn.  Its hide glitters with metal ores."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9656
+msgid "giant roc"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9675
+msgid ""
+"A vast legendary bird, its iron talons rake the most impenetrable of"
+" surfaces and its screech echoes through the many winding dungeon"
+" corridors."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9676
+msgid "minotaur"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9695
+msgid ""
+"It is a cross between a human and a bull."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9696
+msgid "vrock"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9716
+msgid ""
+"It is a demon with a long neck and raking claws."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9717
+msgid "death quasit"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9741
+msgid ""
+"It is a demon of small stature, but its armoured frame moves with lightning"
+" speed and its powers make it a tornado of death and destruction."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9742
+msgid "patriarch"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9774
+msgid ""
+"A priest of great power, he is convinced of the righteousness of his"
+" beliefs.  Stand in his way at your peril."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9775
+msgid "troll chieftain"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9803
+msgid ""
+"This troll's great strength and size have won it the place of chieftain of"
+" its tribe.  It fears nothing."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9806
+msgid "mature red dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9831
+msgid ""
+"A large dragon, scales tinted deep red."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9832
+msgid "mature gold dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9856
+msgid ""
+"A large dragon with scales of gleaming gold."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9857
+msgid "mature black dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9881
+msgid ""
+"A large dragon, with scales of deepest black."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9882
+msgid "stiffbeard sorcerer"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9910
+msgid ""
+"A dwarf with plaited beard and painted face, dressed in deepest black."
+"  Power seems to crackle from his stocky frame."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9911
+msgid "master lich"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9936
+msgid ""
+"A skeletal form wrapped in robes.  Powerful magic crackles along its bony"
+" fingers."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9937
+msgid "Gorlim, Betrayer of Barahir"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9966
+msgid ""
+"This sad creature - once a mighty warrior - betrayed his former friends to"
+" Morgoth's army in return for, he thought, safety for himself and his"
+" wife.  And so he fell under Morgoth's power and became little more than"
+" a mindless servant of evil, even though the other side of his \"bargain\""
+" was not kept."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:9967
+msgid "ranger chieftain"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10000
+msgid ""
+"A chieftain among the Rangers.  His understanding of nature gives him"
+" powerful elemental spells to use against you, in addition to his skills"
+" as an archer and a warrior.  Furthermore, he is a master of camouflage,"
+" so you will need magically enhanced seeing to spot him."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10001
+msgid "Kavlax the Many-Headed"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10026
+msgid ""
+"A large dragon with a selection of heads, all shouting and arguing as they"
+" look for prey, but each with its own deadly breath weapon."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10029
+msgid "hellhound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10053
+msgid ""
+"It is a giant wolf that glows with heat.  Flames pour from its nostrils."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10054
+msgid "black-hearted huorn"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10077
+msgid ""
+"A huorn with a bad heart."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10078
+msgid "The Queen Ant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10108
+msgid ""
+"She's upset because you hurt her children."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10109
+msgid "Rogrog the Black Troll"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10138
+msgid ""
+"A massive and cruel troll of great power, drool slides caustically down his"
+" muscular frame.  Despite his bulk, he strikes with stunning speed."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10141
+msgid "Maia of Nienna"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10168
+msgid ""
+"A servant of Nienna, who grieves for the hurts to the world caused by"
+" Morgoth."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10169
+msgid "Maia of Mandos"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10193
+msgid ""
+"A servant of Mandos, the summoner of the spirits of the slain."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10194
+msgid "mature multi-hued dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10220
+msgid ""
+"A large dragon, scales shimmering many colours."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10221
+msgid "Vargo, Tyrant of Fire"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10245
+msgid ""
+"A towering fire elemental, Vargo burns everything beyond recognition."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10246
+msgid "Waldern, King of Water"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10270
+msgid ""
+"A towering water elemental, Waldern is master of all things liquid.  Wave"
+" after wave drowns your frail body."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10271
+msgid "glabrezu"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10291
+msgid ""
+"It is demon with arms and pincers, its form a true mockery of life."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10292
+msgid "Quaker, Master of Earth"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10316
+msgid ""
+"A towering stone elemental stands before you.  The walls and ceiling are"
+" reduced to rubble as Quaker advances."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10317
+msgid "Ariel, Queen of Air"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10341
+msgid ""
+"A towering air elemental, Ariel, the sorceress, avoids your blows with her"
+" extreme speed."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10342
+msgid "multi-hued hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10366
+msgid ""
+"Shimmering in rainbow hues, this hound is beautiful and deadly."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10369
+msgid "8-headed hydra"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10396
+msgid ""
+"A 7-headed hydra with an extra head which reeks of death."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10397
+msgid "dread"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10421
+msgid ""
+"It is a form that screams its presence against the eye.  Death incarnate,"
+" its hideous black body seems to struggle against reality as the universe"
+" itself struggles to banish it."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10424
+msgid "killer white beetle"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10443
+msgid ""
+"A giant beetle with a gleaming white carapace.  The air condenses around"
+" its mandibles as it scuttles toward you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10444
+msgid "rotting quylthulg"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10460
+msgid ""
+"It is a pulsing flesh mound that reeks of death and putrefaction."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10461
+msgid "nalfeshnee"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10486
+msgid ""
+"It is a large demon with the head of a giant boar.  Flames run up and down"
+" its length."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10487
+msgid "undead beholder"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10517
+msgid ""
+"A beholder which has cheated death.  Black nether storms rage around the"
+" bloodshot pupil of its central giant eye, and light seems to bend as it"
+" sucks its power from the very air around it.  Your soul chills as it"
+" drains your vitality for its evil enchantments."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10518
+msgid "demonic quylthulg"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10535
+msgid ""
+"A pile of pulsing flesh that glows with an inner hellish fire.  The world"
+" itself seems to cry out against it."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10536
+msgid "draconic quylthulg"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10553
+msgid ""
+"It looks like it was once a dragon corpse, now deeply infected with magical"
+" bacteria that make it pulse in a foul and degrading way."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10554
+msgid "greater basilisk"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10577
+msgid ""
+"A large basilisk, whose shape resembles that of a great wyrm."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10578
+msgid "berserker"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10608
+msgid ""
+"Even the strongest of normal human warriors fears the Berserker - the one"
+" who can drive himself into such a terrible battle-frenzy that he can"
+" survive blows which should kill him, and still apparently feel no pain."
+"  He tramples weaker creatures underfoot in his eagerness to get to his"
+" real enemy, and his battle-cry strikes terror into his foes."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10609
+msgid "cyclops"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10630
+msgid ""
+"A gigantic ugly humanoid with but one eye and very thick skin."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10631
+msgid "grey wraith"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10653
+msgid ""
+"A tangible but ghostly form, made of grey fog.  The air around it feels"
+" deathly cold."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10656
+msgid "lord of Carn Dûm"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10688
+msgid ""
+"An evil priest, dressed all in black.  Deadly spells hit you at an alarming"
+" rate as his black spiked mace rains down blow after blow on your pitiful"
+" frame."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10689
+msgid "vampire lord"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10712
+msgid ""
+"A foul wind chills your bones as this ghastly figure approaches."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10715
+msgid "marilith"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10737
+msgid ""
+"She is a demon of female form with many arms, each bearing deadly weapons."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10738
+msgid "death mold"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10760
+msgid ""
+"It is the epitome of all that is evil, in a mold.  Its lifeless form draws"
+" power from sucking the souls of those that approach it, a nimbus of pure"
+" evil surrounds it.  Luckily for you, it can't move."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10763
+msgid "ancient spider"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10789
+msgid ""
+"A foul creature of spider form, older even than the pits of Angband."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10790
+msgid "winged horror"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10812
+msgid ""
+"A terrifying sight: a winged creature greater than any bird you have ever"
+" seen, and with no feathers on its horrid black leathery wings.  Descended"
+" from a creature of an older world perhaps, bred by Sauron to be a winged"
+" steed for his Ringwraiths."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10813
+msgid "gorgon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10842
+msgid ""
+"This creature of legend has not just a serpent's body, but snakes for"
+" hair.  Her scales rattle as she slithers towards you, eyes blazing,"
+" venom dripping from her ghastly mouth."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10845
+msgid "storm giant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10871
+msgid ""
+"It is a twenty-five foot tall giant wreathed in lightning."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10872
+msgid "lesser Balrog"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10898
+msgid ""
+"It is a massive humanoid demon wreathed in flames."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10899
+msgid "black wraith"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10922
+msgid ""
+"A figure that seems made of void, its strangely human shape is cloaked in"
+" shadow.  It reaches out at you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10923
+msgid "Eöl, the Dark Elf"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10951
+msgid ""
+"A lord of the Teleri, Eöl is a mighty metalsmith, the only one to ever"
+" forge weapons of meteorite iron.  The mortal enemy of the Eldar, he is"
+" currently fleeing their wrath, following the murder of Princess Aredhel of"
+" Gondolin."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10959
+msgid "ancient blue dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10980
+msgid ""
+"A huge draconic form.  Lightning crackles along its length."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:10981
+msgid "ancient white dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11002
+msgid ""
+"A huge draconic form.  Frost covers it from head to tail."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11003
+msgid "ancient green dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11024
+msgid ""
+"A huge draconic form enveloped in clouds of poisonous vapour."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11025
+msgid "death drake"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11050
+msgid ""
+"It is a dragon-like form wrapped in darkness.  You cannot make out its true"
+" form but you sense its evil."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11051
+msgid "great crystal drake"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11078
+msgid ""
+"A huge crystalline dragon.  Its claws could cut you to shreds and its teeth"
+" are razor sharp.  Strange colours ripple through it as it moves in the"
+" light."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11079
+msgid "ethereal dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11103
+msgid ""
+"This terrible dragon is a master of light and dark.  Its form disappears"
+" from sight as it cloaks itself in unearthly shadows."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11104
+msgid "master mystic"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11134
+msgid ""
+"A lord of all that is natural, skilled in the mystic ways.  He is a master"
+" of martial arts and is at one with nature, able to summon help from the"
+" wild if need be."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11135
+msgid "shadow"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11159
+msgid ""
+"A mighty spirit of darkness of vaguely humanoid form.  Razor-edged claws"
+" reach out to end your life as it glides towards you, seeking to suck the"
+" energy from your soul to feed its power."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11160
+msgid "The Balrog of Moria"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11190
+msgid ""
+"A huge Balrog surrounded by raging pillars of fire, this is indeed a"
+" terrible opponent.  Wielding a great whip of fire and a blazing sword,"
+" his fury blisters your skin and melts your flesh!"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11193
+msgid "ancient black dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11214
+msgid ""
+"A huge draconic form.  Pools of acid melt the floor around it."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11215
+msgid "ancient red dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11238
+msgid ""
+"A huge draconic form.  Wisps of smoke steam from its nostrils and the"
+" extreme heat surrounding it makes you gasp for breath."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11239
+msgid "ancient gold dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11260
+msgid ""
+"A huge draconic form wreathed in a nimbus of light.  Its roar stuns and"
+" deafens you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11261
+msgid "nether hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11285
+msgid ""
+"You feel a soul-tearing chill upon viewing this beast, a ghostly form of"
+" darkness in the shape of a large dog."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11286
+msgid "time hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11312
+msgid ""
+"You get a terrible sense of deja vu, or is it a premonition?  All at once"
+" you see a little puppy and a toothless old dog.  Perhaps you should give"
+" up and go to bed."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11313
+msgid "plasma hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11340
+msgid ""
+"The very air warps as pure elemental energy stalks towards you in the"
+" shape of a giant hound.  Your hair stands on end and your palms itch as"
+" you sense trouble."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11341
+msgid "Harowen the Black Hand"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11365
+msgid ""
+"He is a master of disguise, an expert of stealth, a genius at traps, and"
+" moves with blinding speed.  Check your pockets!"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11368
+msgid "Maia of Oromë"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11396
+msgid ""
+"A servant of Oromë, hunter of monsters and fell beasts."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11397
+msgid "hasty ent"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11419
+msgid ""
+"Ents are not altogether on anybody's side, because nobody is altogether on"
+" their side.  This one seems quite roused, and does not seem to be on"
+" your side."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11420
+msgid "Itangast the Fire Drake"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11446
+msgid ""
+"A mighty ancient dragon, Itangast's form scorches your flesh.  Wisps of"
+" smoke curl up from his nostrils as he regards you with disdain."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11449
+msgid "hezrou"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11473
+msgid ""
+"A sluggish demon of lizard form, firing powerful missiles.  From the"
+" terribly oversized jaws to the stumpy lashing tail, pools of burning"
+" acid froth and sizzle."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11474
+msgid "ancient multi-hued dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11498
+msgid ""
+"A huge draconic form.  Many colours ripple down its massive frame.  Few"
+" live to see another."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11499
+msgid "chaos vortex"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11520
+msgid ""
+"Void, nothingness, spinning destructively."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11521
+msgid "Scatha the Worm"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11547
+msgid ""
+"An ancient and wise Dragon.  Scatha has grown clever over the long years."
+"  His scales are covered with frost, and his breath sends a shower of ice"
+" into the air."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11550
+msgid "The Phoenix"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11580
+msgid ""
+"A massive glowing eagle bathed in flames.  The searing heat chars your skin"
+" and melts your armour."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11581
+msgid "drolem"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11607
+msgid ""
+"A constructed dragon, the drolem has massive strength.  Powerful spells"
+" weaved during its creation make it a fearsome adversary.  Its eyes show"
+" little intelligence, but it has been instructed to destroy all it meets."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11608
+msgid "demilich"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11631
+msgid ""
+"A lich who is partially immaterial, on its way to a new, ethereal form."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11632
+msgid "dreadmaster"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11658
+msgid ""
+"It is an unlife of power almost unequaled.  An affront to existence, its"
+" very touch abuses and disrupts the flow of life, and its unearthly limbs,"
+" of purest black, crush rock and flesh with ease."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11659
+msgid "nether wraith"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11683
+msgid ""
+"A form that hurts the eye, death permeates the air around it.  As it nears"
+" you, a coldness saps your soul."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11686
+msgid "Shelob, Spider of Darkness"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11718
+msgid ""
+"Shelob is an enormous bloated spider, the last daughter of Ungoliant the"
+" Unlight.  Her poison is legendary, as is her ego.  She normally guards the"
+" pass through Cirith Ungol, but occasionally goes out foraging for food to"
+" feed her voracious appetite."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11719
+msgid "dracolich"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11745
+msgid ""
+"The skeletal form of a once-great dragon, enchanted by magic most"
+" perilous.  Its animated form strikes with speed and drains life from its"
+" prey to satisfy its hunger."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11746
+msgid "dracolisk"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11771
+msgid ""
+"A mixture of dragon and basilisk, the dracolisk stares at you with deep"
+" piercing eyes, its evil breath burning the ground where it stands."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11772
+msgid "Ar-Pharazôn the Golden"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11799
+msgid ""
+"Last and proudest king of ancient Númenor.  Corrupted by power and avarice,"
+" he fell victim to Sauron's wiles, tried to fight the Valar themselves, and"
+" condemned Númenor to oblivion."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11800
+msgid "barbazu"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11825
+msgid ""
+"A foul, humanoid creature with a long tail, clawed hands and feet, and a"
+" disgusting, wiry, snaky beard.  They are the elite shock troops of the"
+" hells, capable of a terrifying berserk fury."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11828
+msgid "lesser titan"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11853
+msgid ""
+"It is a humanoid figure thirty feet tall that gives off an aura of power"
+" and hate."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11856
+msgid "grand master mystic"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11886
+msgid ""
+"He is one of the few true masters of the art, being extremely skillful in"
+" all forms of unarmed combat and controlling the world's natural creatures"
+" with disdainful ease."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11887
+msgid "hand druj"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11907
+msgid ""
+"A skeletal hand floating in the air, motionless except for its flexing"
+" fingers."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11908
+msgid "9-headed hydra"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11942
+msgid ""
+"A massive legendary hydra, like an 8-headed hydra, but with a massive"
+" extra head that opens its mighty jaws at you.  Its many eyes"
+" stare at you as clouds of vapour rise from its seething form.  And it"
+" grows new heads as fast as you chop them off."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11945
+msgid "Baphomet the Minotaur Lord"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11974
+msgid ""
+"A fearsome bull-headed monster, Baphomet swings a mighty axe as he curses"
+" all that defy him."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:11977
+msgid "elder vampire"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12005
+msgid ""
+"A terrible robed undead figure, this creature has existed in its unlife for"
+" many centuries by stealing the life of others.  It can summon the very"
+" shades of its victims from beyond the grave to come enslaved to its aid."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12006
+msgid "Fundin Bluecloak"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12034
+msgid ""
+"He is one of the greatest dwarven priests to walk the earth.  Fundin has"
+" earned a high position in the church, and his skill with both weapon and"
+" spell only justify his position further.  His combination of both dwarven"
+" strength and priestly wisdom are a true match for any adventurer."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12042
+msgid "Gilim, the Giant of Eruman"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12068
+msgid ""
+"Known as the giant of winter and the northern reaches,"
+" he is tall even among giants, and his name is cursed in many lands."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12069
+msgid "Maia of Yavanna"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12096
+msgid ""
+"A servant of Yavanna Kementári, Queen of the Earth, the Giver of Fruits"
+" and lover of all things that grow."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12097
+msgid "Maia of Aulë"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12125
+msgid ""
+"A servant of Aulë the Smith, lord of all the substances of Arda and friend"
+" of the Noldor."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12126
+msgid "great earth elemental"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12147
+msgid ""
+"Appearing as a giant of stone, this mighty elemental seems to draw its"
+" power from the very fabric of the dungeon."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12148
+msgid "aether vortex"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12173
+msgid ""
+"An awesome vortex of pure magic, power radiates from its frame."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12174
+msgid "Saruman of Many Colours"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12205
+msgid ""
+"Originally known as the White, Saruman fell prey to Sauron's wiles.  He"
+" seeks to emulate him and breeds orcs and trolls to fight for him.  He"
+" searches forever for the One Ring, to become a mighty Sorcerer-King of"
+" the world."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12208
+msgid "nightwing"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12237
+msgid ""
+"Everywhere colours seem paler and the air chillier.  At the centre of the"
+" cold stands a mighty figure.  Its wings envelop you in the chill of death"
+" as the nightwing reaches out to draw you into oblivion.  Your muscles sag"
+" and your mind loses all will to fight as you stand in awe of this mighty"
+" being."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12238
+msgid "bile demon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12264
+msgid ""
+"It's big.  It's fat.  It's red.  It's ugly.  It's got a severe attack of"
+" highly poisonous flatulence.  And its insides are corrosive.  All of"
+" which go together to make the single most repulsive sight - and smell -"
+" you have ever experienced."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12267
+msgid "dreadlord"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12296
+msgid ""
+"It is a massive form of animated death, its colour deeper than black.  It"
+" drinks in light, and space around it is twisted and torn by the weight of"
+" its evil.  It is unlife and it knows nothing but the stealing of souls"
+" and the stench of death.  Flee its hunger!"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12297
+msgid "Smaug the Golden"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12325
+msgid ""
+"Smaug is one of the Urulóki that still survive, a fire-drake of immense"
+" cunning and intelligence.  His speed through air is matched by few other"
+" dragons and his dragonfire is what legends are made of; he is believed to"
+" be the greatest dragon still surviving into the Third Age."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12328
+msgid "werewolf of Sauron"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12357
+msgid ""
+"A massive wolf, appearing like a mighty shadow.  Its glowing red eyes"
+" glare malevolently as it defends its evil master's fortress."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12358
+msgid "spider of Gorgoroth"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12388
+msgid ""
+"One of the hideous brood of Ungoliant, spawned in the endless shadow of"
+" Nan Dungortheb beneath the mountains of Ered Gorgoroth."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12391
+msgid "chaos hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12416
+msgid ""
+"A constantly changing canine form, this hound rushes towards you as if"
+" expecting mayhem and chaos ahead.  It appears to have an almost kamikaze"
+" relish for combat.  You suspect all may not be as it seems."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12417
+msgid "archlich"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12442
+msgid ""
+"A lich who has reached its ultimate evolutionary stage: a completely"
+" immaterial state."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12445
+msgid "Maia of Ulmo"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12474
+msgid ""
+"A servant of Ulmo, Lord of Waters, who speaks to those who dwell in"
+" Middle-earth with voices that are heard only as the music of water."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12475
+msgid "great water elemental"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12498
+msgid ""
+"A mighty column of water, terrible as a mounting wave that strides to the"
+" land."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12499
+msgid "The Mouth of Sauron"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12528
+msgid ""
+"The Mouth of Sauron is a mighty spell caster.  So old that even he cannot"
+" remember his own name, his power and evil are undeniable.  He believes"
+" unshakably that he is unbeatable and laughs as he weaves his awesome"
+" spells."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12529
+msgid "osyluth"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12556
+msgid ""
+"It is a demon made almost entirely out of bones.  It is humanoid, but with"
+" a large tail similar to that of a giant scorpion, and emits a foul smell"
+" of decay and rot.  They are despised even in the hells."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12557
+msgid "Fëanorian raider"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12580
+msgid ""
+"A veteran of the battles waged by Fëanor and his sons in pursuit of the"
+" Silmarils, he attacks you with agility, power and cruelty."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12583
+msgid "eye druj"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12605
+msgid ""
+"A bloodshot eyeball floating in the air, you'd be forgiven for assuming it"
+" harmless."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12606
+msgid "greater titan"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12632
+msgid ""
+"A forty foot tall humanoid that shakes the ground as it walks.  The power"
+" radiating from its frame shakes your courage, its hatred inspired by your"
+" defiance."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12633
+msgid "Tevildo, Prince of Cats"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12663
+msgid ""
+"Master of all things feline, Tevildo serves his master Morgoth well."
+"  He delights in small torments and cunning stratagems, and laughs merrily"
+" as he bats you about."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12666
+msgid "Thuringwethil, the Vampire Messenger"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12693
+msgid ""
+"Chief messenger between Sauron and Morgoth, she is surely the most deadly"
+" of her vampire race.  At first she is charming to meet, but her wings and"
+" eyes give away her true form."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12694
+msgid "beholder hive-mother"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12720
+msgid ""
+"A hive mother of the race of beholders, she can summon her brood to her aid"
+" whenever she wishes."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12723
+msgid "jabberwock"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12749
+msgid ""
+"\"Beware the Jabberwock, my son!  The jaws that bite, the claws that catch!\""
+"  Run and run quickly, for death incarnate chases behind you!"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12750
+msgid "Tselakus, the Dreadlord"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12778
+msgid ""
+"This huge affront to existence twists and tears at the fabric of space.  A"
+" master of mighty magic, Tselakus hungers for your tender flesh.  Darkness"
+" itself recoils from the touch of Tselakus as he leaves a trail of death"
+" and destruction.  Tselakus is a being of sneering contempt, laughing at"
+" your pitiful efforts to defy him.  Mighty claws rend reality as he"
+" annihilates all in his path to your soul!"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12779
+msgid "bone golem"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12804
+msgid ""
+"A skeletal form, black as night, constructed from the bones of its previous"
+" victims."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12807
+msgid "hound of Tindalos"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12833
+msgid ""
+"Bodies of death, receptacles of all foulness, they emerge like smoke from"
+" the angles of time, ravenous and snarling and unsatisfied."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12834
+msgid "Nan, the Giant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12862
+msgid ""
+"Known as the giant of summer and the south, he towers above you"
+" like a great elm.  In his right hand, he holds the longest"
+" sword you have ever beheld."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12863
+msgid "nightcrawler"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12897
+msgid ""
+"This intensely evil creature bears the form of a gargantuan black worm."
+"  Its gaping maw is a void of blackness, acid drips from its steely hide."
+"  It is like nothing you have ever seen before, and a terrible chill runs"
+" down your spine as you face it."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12898
+msgid "gelugon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12928
+msgid ""
+"This demon from the icy regions is a truly terrifying sight.  It has an"
+" extremely large, insect-like body towering a full twelve feet tall, with"
+" great claws on its hands and pincers on its mouth, and its head bulges"
+" with great multi-faceted eyes.  Its tail is covered with razor-sharp"
+" spikes."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12935
+msgid "great storm wyrm"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12963
+msgid ""
+"A vast dragon of power.  Storms and lightning crash around its titanic"
+" form.  Deep blue scales reflect the flashes and highlight the creature's"
+" great muscles.  It regards you with contempt."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12964
+msgid "great ice wyrm"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12991
+msgid ""
+"An immense dragon capable of awesome destruction.  You have never felt such"
+" extreme cold, or witnessed such an icy stare.  Begone quickly or feel its"
+" wrath!"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:12992
+msgid "great swamp wyrm"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13019
+msgid ""
+"A truly enormous dragon with great powers.  The foul gases issuing from the"
+" beast nearly make you vomit; and while you may try to hold your breath as"
+" you fight it, it sees no reason to do likewise."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13022
+msgid "Maia of Manwë"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13050
+msgid ""
+"A servant of Manwë Súlimo, the first of all Kings, lord of the realm of"
+" Arda and ruler of all that dwell therein."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13051
+msgid "Maia of Varda"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13080
+msgid ""
+"A servant of Varda, Lady of the Stars, who the elves call Elbereth and"
+" love above all the Valar."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13081
+msgid "greater demonic quylthulg"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13098
+msgid ""
+"A massive pulsating mound of flesh, glowing with a hellish light."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13099
+msgid "greater draconic quylthulg"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13117
+msgid ""
+"A massive mound of scaled flesh, throbbing and pulsating with multi-hued"
+" light."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13118
+msgid "greater rotting quylthulg"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13136
+msgid ""
+"A massive pile of rotting flesh.  A disgusting stench fills the air as it"
+" throbs and writhes."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13139
+msgid "horned reaper"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13165
+msgid ""
+"A giant humanoid demon wielding a massive, heavy and sharp scythe."
+"  Feared by foes and friends alike when it flies into one of its berserk"
+" rages, the Horned Reaper will cut down anything in its path between it"
+" and you - even the minions it has just summoned."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13166
+msgid "Ossë, Herald of Ulmo"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13197
+msgid ""
+"Encrusted with barnacles, slimy and dripping, the Maia of the untamed"
+" sea has dragged himself down into Angband to send you to a watery grave."
+" Ossë is the most powerful and heartless of Ulmo's servants and embodies"
+" the untamed power of the ocean.  Terror grows in your heart with each"
+" squelching step of his approach."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13201
+msgid "great hell wyrm"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13229
+msgid ""
+"A vast dragon of immense power.  Fire leaps continuously from its huge"
+" form.  The air around it scalds you.  Its slightest glance burns you, and"
+" you truly realize how insignificant you are."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13230
+msgid "great bile wyrm"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13257
+msgid ""
+"A huge and very powerful dragon.  Great steaming pools of acid drip from"
+" its form onto the ground.  You shudder when you see the acid eating away"
+" the very stones of the dungeon - what could it do to you?"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13258
+msgid "great wyrm of thunder"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13286
+msgid ""
+"A dragon of gigantic proportions, with destructive abilities to match.  The"
+" sheer loudness of its roar leaves you stunned and unable to think clearly"
+" enough to defend yourself adequately."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13287
+msgid "nightwalker"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13316
+msgid ""
+"A huge giant garbed in black, it breaks your armour from your back,"
+" leaving you defenseless against its evil wrath.  It can smell your fear,"
+" and you in turn smell the awful stench of death as this ghastly figure"
+" strides towards you menacingly."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13317
+msgid "Omarax, the Eye Tyrant"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13344
+msgid ""
+"A beholder of great size and age, floating in the air.  His gaze seems to"
+" shred your soul and his spells crush your will.  He is ancient, his"
+" history steeped in forgotten evils, his atrocities numerous and sickening."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13347
+msgid "skull druj"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13369
+msgid ""
+"A glowing skull possessed by sorcerous power.  It need not move, but merely"
+" blast you with mighty magic as it speaks the words of power."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13370
+msgid "black reaver"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13395
+msgid ""
+"A humanoid form, black as night, advancing steadily and unstoppably, even"
+" the very rock of the dungeon cannot prevent it reaching you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13396
+msgid "aether hound"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13425
+msgid ""
+"A shifting, swirling form.  It seems to be all colours and sizes and"
+" shapes, though the dominant form is that of a huge dog.  You feel very"
+" uncertain all of a sudden."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13428
+msgid "great wyrm of chaos"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13456
+msgid ""
+"A massive dragon of changing form.  As you watch, it appears first fair and"
+" then foul.  Its body is twisted by chaotic forces as it strives to stay"
+" real.  Its very existence distorts the universe around it."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13457
+msgid "great wyrm of law"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13486
+msgid ""
+"A massive dragon of powerful intellect.  It seeks to dominate the universe"
+" and despises all other life.  It sees all who do not obey it as mere"
+" insects to be crushed underfoot."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13488
+msgid "Ungoliant, the Unlight"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13519
+msgid ""
+"This enormous, hideous spirit of void is in the form of a spider of immense"
+" proportions.  She is surrounded by a cloud of Unlight as she sucks in all"
+" living light into her bloated body, and breathes out the blackest of"
+" darkness.  She is always ravenously hungry and would even eat herself to"
+" avoid starvation."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13520
+msgid "bronze golem"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13549
+msgid ""
+"A gigantic four-armed animated bronze statue of demonic shape, glowing with"
+" great heat."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13550
+msgid "Glaurung, Father of the Dragons"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13579
+msgid ""
+"Glaurung is the father of all dragons, and was for a long time the most"
+" powerful.  Though this is no longer so, he still has full command over his"
+" brood and can command them to appear whenever he so wishes.  He is the"
+" definition of dragonfire."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13582
+msgid "master quylthulg"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13600
+msgid ""
+"A giant seething mass of flesh, overwhelming you with monster after"
+" monster."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13601
+msgid "Makar, the Warrior"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13623
+msgid ""
+"A battle-hungry spirit from amongst the Ainur, who built a grim hall in"
+" the early days of Arda to host endless battles.  When not at home, he"
+" and his sister Meássë hunt and seek out the turmoils caused by Morgoth."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13626
+msgid "Feagwath, the Undead Sorcerer"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13657
+msgid ""
+"A stench of corruption and decay surrounds this sorcerer, who has clearly"
+" risen from the dead to continue his foul plots and schemes."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13658
+msgid "pit fiend"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13687
+msgid ""
+"Appearing as a giant, clawed and winged humanoid with a scaly red body and"
+" massive fangs dripping a foul green liquid, the pit fiend is a dreadful"
+" enemy from the lowest depths of the hells.  They are often the commanders"
+" of vast demon armies."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13688
+msgid "Uvatha the Horseman"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13713
+msgid ""
+"A tall black cloaked Ringwraith, he is a master of horsemanship.  He longs"
+" to taste your blood."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13716
+msgid "serpent of chaos"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13739
+msgid ""
+"Writhing coil upon coil, this mighty spawn of chaos constantly"
+" disintegrates and reforms before your dazzled eyes.  It seeks to"
+" obliterate you utterly; beware!"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13740
+msgid "Adunaphel the Quiet"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13766
+msgid ""
+"A sorceress in life, Adunaphel quickly fell under Sauron's sway and the"
+" power of the rings."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13769
+msgid "Qlzqqlzuup, the Emperor Quylthulg"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13789
+msgid ""
+"A gigantic seething mass of flesh, Qlzqqlzuup changes colours in front of"
+" your eyes.  Pulsating first one colour then the next, it knows only it"
+" must bring help to protect itself."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13790
+msgid "Akhorahil the Blind"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13817
+msgid ""
+"A mighty sorcerer King, Akhorahil was blind in life.  With powerful"
+" enchantments, he created jewelled eyes that enabled him to see better than"
+" any ordinary man ever could."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13824
+msgid "fury"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13848
+msgid ""
+"A female embodiment of rage, intent on tearing your mind and body apart."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13849
+msgid "great wyrm of annihilation"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13877
+msgid ""
+"A massive dragon of hideous form.  From its shadowy aura comes the stench"
+" of the underworld.  Its body is twisted by chaotic forces as it strives"
+" to stay real.  Its very existence distorts the universe around it."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13878
+msgid "sky dragon"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13905
+msgid ""
+"A wrathful dragon, of a breed that even legends do not mention,"
+" rushing towards you like a thunderbolt.  Few ever face the wyrms"
+" of the exotic airs; fewer live to tell the tale."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13906
+msgid "Wiruin, the Maelstrom"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13930
+msgid ""
+"A violent icy whirlpool, brought from the frozen wastes of the Helcaraxë"
+" by Morgoth as guard and entertainment.  Smaller vortices arise on its"
+" edges, and you feel as if you will never be free of its deafening roar."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13931
+msgid "Ren the Unclean"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13960
+msgid ""
+"Ren was an insane eastern king who believed himself to be the son of a"
+" volcano god.  At an early age his sanity was destroyed by a plague that"
+" wiped out his family, and he never recovered."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13963
+msgid "Maeglin, the Traitor of Gondolin"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13989
+msgid ""
+"The son of Eöl the Dark Elf, Maeglin is every bit as evil as his father and"
+" more.  His greed for gold led him to betray the Hidden Kingdom of"
+" Gondolin to Morgoth's forces.  He is a mighty warrior himself, and some of"
+" Morgoth's greatest servants answer to his call."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:13990
+msgid "Ji Indur Dawndeath"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14017
+msgid ""
+"This Ringwraith was a weak-minded sorcerer-king who fell easily under"
+" Sauron's power."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14020
+msgid "great wyrm of balance"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14050
+msgid ""
+"A massive dragon, one of the mightiest of dragonkind.  It is thousands of"
+" years old and seeks to maintain the Cosmic Balance.  It sees you as an"
+" upstart troublemaker without the wisdom to control your actions.  It will"
+" destroy you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14051
+msgid "great wyrm of many colours"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14077
+msgid ""
+"A gigantic dragon whose scales shimmer in myriad hues."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14078
+msgid "Pazuzu, Lord of Air"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14104
+msgid ""
+"A winged humanoid demon, Pazuzu grins inhumanely at you as he decides"
+" your fate."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14105
+msgid "Dwar, Dog Lord of Waw"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14131
+msgid ""
+"Dwar had a special affinity for dogs in life, and can still command them at"
+" will.  He howls maniacally as he reaches out to destroy you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14134
+msgid "Hoarmurath of Dir"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14161
+msgid ""
+"A Ringwraith powerful in fell sorcery, he yearns for the life he has lost"
+" for an unlife of everlasting torment."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14162
+msgid "Draugluin, Sire of All Werewolves"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14190
+msgid ""
+"Draugluin provides Sauron with a fearsome personal guard.  He is an"
+" enormous wolf inhabited with a human spirit.  He is chief of all his kind."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14193
+msgid "Khamûl, the Black Easterling"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14221
+msgid ""
+"A warrior-king of the East.  Khamûl is a powerful opponent, his skill in"
+" combat awesome and his form twisted by evil cunning."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14222
+msgid "Cantoras, the Skeletal Lord"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14251
+msgid ""
+"A legion of evil undead druj animating the skeleton of a once mighty"
+" sorcerer.  His power is devastating and his speed unmatched in the"
+" underworld.  Flee his wrath!"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14254
+msgid "greater Balrog"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14283
+msgid ""
+"Originally of the semi-divine Maiar, this evil spirit swore allegiance to"
+" Morgoth at the beginning of time and is now one of his most terrible"
+" demonic servants.  With its flaming whip and sword it seeks to destroy"
+" you."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14284
+msgid "The Witch-King of Angmar"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14315
+msgid ""
+"The most fell of all Sauron's captains: King of Angmar, Sorcerer,"
+" Ringwraith, Lord of the Nazgûl, a spear of terror in the hand of Sauron,"
+" shadow of despair.  His spells are lethal and his combat blows crushingly"
+" hard.  He moves at speed, and commands legions of evil to do his bidding."
+"  It is said that he is fated never to die by the hand of mortal man."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14316
+msgid "Ancalagon the Black"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14346
+msgid ""
+"\"Rushing Jaws\" is his name, and death is his game; the greatest and most"
+" terrible of all dragonkind, his power dismayed even the Valar for a time."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14349
+msgid "The Tarrasque"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14375
+msgid ""
+"The Tarrasque is a massive reptile of legend, rumoured to be unkillable and"
+" immune to magic.  Fear its anger, for its devastation is unmatched!"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14378
+msgid "Meássë, the Bloody"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14412
+msgid ""
+"Sister of Makar the Warrior, she would shout encouragement to the"
+" warriors of their hall and heal their wounds so they could battle on,"
+" until her arms were reddened to the elbow.  Meássë is delighted by"
+" all violence, and recruits any beings of like abilities to her service."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14416
+msgid "Lungorthin, the Balrog of White Fire"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14447
+msgid ""
+"A massive form cloaked in flame.  Lungorthin stares balefully at you with"
+" eyes that smoulder red.  The dungeon floor where he stands is scorched by"
+" the heat of his body."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14454
+msgid "Huan, Wolfhound of the Valar"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14481
+msgid ""
+"The wolfhound of the Valar, Huan has served many masters in his time, from"
+" Celegorm son of Fëanor to Beren son of Barahir: but now he runs wild and"
+" acknowledges no master save himself, as he hunts alone for his nemesis -"
+" Carcharoth, the terrible wolf of Angband."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14482
+msgid "Carcharoth, the Jaws of Thirst"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14511
+msgid ""
+"The first guard of Angband, Carcharoth, also known as 'The Red Maw', is the"
+" greatest wolf to ever walk the earth.  He is highly intelligent and a"
+" deadly opponent in combat."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14514
+msgid "Vecna, the Emperor Lich"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14549
+msgid ""
+"The greatest of all undead sorcerers, even the gods once feared him.  This"
+" ancient shadow of death wilts every living thing it passes."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14552
+msgid "storm of Unmagic"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14575
+msgid ""
+"Howling through the disintegrating dungeon, this whirlpool of Unmagic rips"
+" the enchantments from everything it touches."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14576
+msgid "Gothmog, the High Captain of Balrogs"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14612
+msgid ""
+"Gothmog is the Chief Balrog in Morgoth's personal guard.  He is renowned"
+" for slaying Fëanor and Fingon, two of the High Kings of the Noldor,"
+" and has never been defeated in combat.  With his whip of flame and"
+" awesome fiery breath he saved his master from Ungoliant's rage."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14615
+msgid "Sauron, the Sorcerer"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14652
+msgid ""
+"Greatest and most terrible of the servants of Morgoth, creator of the One"
+" Ring.  A sorcerer of dreadful powers, master of shadows and of phantoms,"
+" foul in wisdom, cruel in strength, misshaping what he rules, lord of"
+" werewolves; his dominion is torment.  He has many servants, and rarely"
+" fights without them."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14653
+msgid "Wolf-Sauron"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14679
+msgid ""
+"Sauron's form as the mightiest wolf to walk the world."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14680
+msgid "Serpent-Sauron"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14708
+msgid ""
+"Sauron's form as a serpent: poisonous, biting, spitting, and threatening"
+" to crush you in its mighty coils."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14709
+msgid "Vampire-Sauron"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14734
+msgid ""
+"Sauron's form as a vampire, great as a dark cloud across the moon."
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14737
+msgid "Morgoth, Lord of Darkness"
+msgstr ""
+
+# ../lib/gamedata/monster.txt:14773
+msgid ""
+"He is the Master of the Pits of Angband.  His figure is like a black"
+" mountain crowned with lightning.  He rages with everlasting anger, his"
+" body scarred by Fingolfin's eight mighty wounds.  He can never rest from"
+" his pain, but seeks forever to dominate all that is light and good in the"
+" world.  He is the origin of man's fear of darkness and created many foul"
+" creatures with his evil powers.  Orcs, Dragons, and Trolls are his most"
+" foul corruptions, causing much pain and suffering in the world to please"
+" him.  His disgusting visage, twisted with evil, is crowned with iron, the"
+" two remaining Silmarils forever burning him.  Grond, the mighty Hammer of"
+" the Underworld, cries defiance as he strides towards you to crush you to"
+" a pulp!"
+msgstr ""
+

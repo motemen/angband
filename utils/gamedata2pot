@@ -36,9 +36,13 @@ while (<$fh>) {
         }
 
         next if $seen->{ join "\n", @msgid }++;
+
         print "# $file:$.\n";
         print qq(msgid ""\n);
-        print qq("$_"\n) for @msgid;
+        for (@msgid) {
+            s/"/\\"/g;
+            print qq("$_"\n);
+        }
         print qq(msgstr ""\n\n);
     }
 }

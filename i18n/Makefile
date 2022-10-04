@@ -1,28 +1,27 @@
-all: ja_JP.UTF-8/LC_MESSAGES/messages.mo ja_JP.UTF-8/LC_MESSAGES/gamedata.mo
+LOCALE = ja_JP.UTF-8
 
-messages.pot: always
-	xgettext --omit-header -k_ -o $@ ../src/*.c
-
-gamedata-class.pot:
-	../utils/gamedata2pot class > $@
-
-gamedata-p_race.pot:
-	../utils/gamedata2pot p_race > $@
-
-gamedata.pot: $(wildcard gamedata-*.pot)
-	xgettext $^ -o $@
-
-ja_JP.UTF-8/LC_MESSAGES/messages.po: messages.pot
-	msgmerge --update $@ $<
-
-ja_JP.UTF-8/LC_MESSAGES/gamedata.po: gamedata.pot
-	if [ -f "$@" ]; then \
-		msgmerge --update $@ $<; \
-	else \
-		msginit --no-translator --locale ja_JP.UTF-8 --input $< --output-file $@; \
-	fi
+all: $(LOCALE)/LC_MESSAGES/messages.mo $(LOCALE)/LC_MESSAGES/gamedata.mo
 
 %.mo: %.po
 	msgfmt $< -o $@
 
-always:
+$(LOCALE)/LC_MESSAGES/gamedata.po: \
+		$(LOCALE)/LC_MESSAGES/_gamedata-class.po \
+		$(LOCALE)/LC_MESSAGES/_gamedata-monster.po \
+		$(LOCALE)/LC_MESSAGES/_gamedata-p_race.po
+	xgettext $^ -o - | grep -v POT-Creation-Date: > $@
+	chmod -w $@
+
+$(LOCALE)/LC_MESSAGES/%.po: %.pot
+	\
+if [ -f "$@" ]; then \
+  msgmerge --update $@ $<; \
+else \
+  msginit --no-translator --locale ja_JP.UTF-8 --input $< --output-file $@; \
+fi
+
+messages.pot:
+	xgettext --omit-header -k_ -o $@ ../src/*.c
+
+_gamedata-%.pot:
+	../utils/gamedata2pot $* > $@

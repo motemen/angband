@@ -944,7 +944,7 @@ void lore_append_flavor(textblock *tb, const struct monster_race *race)
 {
 	assert(tb && race);
 
-	textblock_append(tb, "%s\n", race->text);
+	textblock_append(tb, "%s\n", GAMEDATA_(race->text));
 }
 
 /**
