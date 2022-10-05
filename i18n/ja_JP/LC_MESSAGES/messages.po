@@ -26,57 +26,98 @@ msgstr "あなた"
 msgid "the "
 msgstr " "
 
-#: ../src/mon-lore.c:887
+#: ../src/mon-lore.c:611
+msgid "incredibly quickly"
+msgstr ""
+
+#: ../src/mon-lore.c:612
+msgid "very quickly"
+msgstr ""
+
+#: ../src/mon-lore.c:613
+msgid "quickly"
+msgstr ""
+
+#: ../src/mon-lore.c:614
+msgid "fairly quickly"
+msgstr ""
+
+#: ../src/mon-lore.c:615
+msgid "normal speed"
+msgstr "通常のスピード"
+
+#: ../src/mon-lore.c:616
+msgid "slowly"
+msgstr "ゆっくりと"
+
+#: ../src/mon-lore.c:617
+msgid "very slowly"
+msgstr "非常にゆっくりと"
+
+#: ../src/mon-lore.c:618
+msgid "incredibly slowly"
+msgstr ""
+
+#: ../src/mon-lore.c:891
 #, c-format
 msgid "%s has slain %d of your ancestors"
 msgstr ""
 
-#: ../src/mon-lore.c:892
+#: ../src/mon-lore.c:896
 msgid ", but you have taken revenge!  "
 msgstr ""
 
-#: ../src/mon-lore.c:896
+#: ../src/mon-lore.c:900
 #, c-format
 msgid ", who %s unavenged.  "
 msgstr ""
 
-#: ../src/mon-lore.c:900
+#: ../src/mon-lore.c:904
 msgid "You have slain this foe.  "
-msgstr ""
-
-#: ../src/mon-lore.c:907
-#, c-format
-msgid "%d of your ancestors %s been killed by this creature, "
 msgstr ""
 
 #: ../src/mon-lore.c:911
 #, c-format
+msgid "%d of your ancestors %s been killed by this creature, "
+msgstr ""
+
+#: ../src/mon-lore.c:915
+#, c-format
 msgid "and you have exterminated at least %d of the creatures.  "
 msgstr ""
 
-#: ../src/mon-lore.c:914
+#: ../src/mon-lore.c:918
 #, c-format
 msgid "and your ancestors have exterminated at least %d of the creatures.  "
 msgstr ""
 
-#: ../src/mon-lore.c:917
+#: ../src/mon-lore.c:921
 #, c-format
 msgid "and %s is not ever known to have been defeated.  "
 msgstr ""
 
-#: ../src/mon-lore.c:922
+#: ../src/mon-lore.c:926
 #, c-format
 msgid "You have killed at least %d of these creatures.  "
 msgstr ""
 
-#: ../src/mon-lore.c:925
+#: ../src/mon-lore.c:929
 #, c-format
 msgid "Your ancestors have killed at least %d of these creatures.  "
 msgstr ""
 
-#: ../src/mon-lore.c:928
+#: ../src/mon-lore.c:932
 msgid "No battles to the death are recalled.  "
 msgstr "戦いの記録は残されていない。"
+
+#: ../src/mon-lore.c:980 ../src/mon-lore.c:989
+#, fuzzy, c-format
+msgid " %s"
+msgstr "%s"
+
+#: ../src/mon-lore.c:991
+msgid " creature"
+msgstr "モンスター"
 
 #: ../src/mon-msg.c:254
 #, c-format

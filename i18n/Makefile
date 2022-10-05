@@ -11,7 +11,8 @@ $(LOCALE)/LC_MESSAGES/gamedata.po: \
 		$(LOCALE)/LC_MESSAGES/_gamedata-class.po \
 		$(LOCALE)/LC_MESSAGES/_gamedata-monster.po \
 		$(LOCALE)/LC_MESSAGES/_gamedata-p_race.po \
-		$(LOCALE)/LC_MESSAGES/_gamedata-blow_methods.po
+		$(LOCALE)/LC_MESSAGES/_gamedata-blow_methods.po \
+		$(LOCALE)/LC_MESSAGES/_gamedata-source.po
 
 	chmod +w $@
 	xgettext $^ -o - | grep -v POT-Creation-Date: > $@
@@ -26,7 +27,10 @@ else \
 fi
 
 messages.pot: $(wildcard ../src/*.c)
-	xgettext --omit-header -k_ -o $@ ../src/*.c
+	xgettext --omit-header -k_ -o $@ ../src/*.[ch]
 
 _gamedata-%.pot:
 	../utils/gamedata2pot $* > $@
+
+_gamedata-source.pot:
+	xgettext --omit-header -kGAMEDATA_ -kGAMEDATA_N_ -o $@ ../src/*.[ch]

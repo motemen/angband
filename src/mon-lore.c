@@ -600,18 +600,22 @@ static const char *lore_describe_speed(uint8_t speed)
 {
 	/* Value table ordered descending, for priority. Terminator is
 	 * {UCHAR_MAX, NULL}. */
-	static const struct lore_speed {
+	#ifdef USE_LOCALE
+	#else
+	static
+	#endif
+	const struct lore_speed {
 		uint8_t threshold;
 		const char *description;
 	} lore_speed_description[] = {
-		{130,	"incredibly quickly"},
-		{120,	"very quickly"},
-		{115,	"quickly"},
-		{110,	"fairly quickly"},
-		{109,	"normal speed"}, /* 110 is normal speed */
-		{99,	"slowly"},
-		{89,	"very slowly"},
-		{0,		"incredibly slowly"},
+		{130,	_("incredibly quickly")},
+		{120,	_("very quickly")},
+		{115,	_("quickly")},
+		{110,	_("fairly quickly")},
+		{109,	_("normal speed")}, /* 110 is normal speed */
+		{99,	_("slowly")},
+		{89,	_("very slowly")},
+		{0,		_("incredibly slowly")},
 		{UCHAR_MAX,	NULL},
 	};
 	const struct lore_speed *current = lore_speed_description;
@@ -973,7 +977,7 @@ void lore_append_movement(textblock *tb, const struct monster_race *race,
 	create_mon_flag_mask(flags, RFT_RACE_A, RFT_MAX);
 	rf_inter(flags, race->flags);
 	for (f = rf_next(flags, FLAG_START); f; f = rf_next(flags, f + 1)) {
-		textblock_append_c(tb, COLOUR_L_BLUE, " %s", describe_race_flag(f));
+		textblock_append_c(tb, COLOUR_L_BLUE, _(" %s"), describe_race_flag(f));
 	}
 
 	/* Get noun */
@@ -981,9 +985,10 @@ void lore_append_movement(textblock *tb, const struct monster_race *race,
 	rf_inter(flags, race->flags);
 	f = rf_next(flags, FLAG_START);
 	if (f) {
-		textblock_append_c(tb, COLOUR_L_BLUE, " %s", describe_race_flag(f));
+		// TODO[locale]: May use context
+		textblock_append_c(tb, COLOUR_L_BLUE, _(" %s"), describe_race_flag(f));
 	} else {
-		textblock_append_c(tb, COLOUR_L_BLUE, " creature");
+		textblock_append_c(tb, COLOUR_L_BLUE, _(" creature"));
 	}
 
 	/* Describe location */

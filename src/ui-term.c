@@ -687,7 +687,6 @@ void Term_big_queue_char(term *t, int x, int y, int clipy,
  * a valid location, so the first "n" characters of "s" can all be added
  * starting at (x,y) without causing any illegal operations.
  */
- // TODO[doublewidth] check valid position if s contains double-width chars
 void Term_queue_chars(int x, int y, int n, int a, const wchar_t *s)
 {
 	int x1 = -1, x2 = -1;
@@ -2136,7 +2135,6 @@ errr Term_addch(int a, wchar_t c)
  * positive value, future calls to either function will
  * return negative ones.
  */
-// TODO[doublewidth]
 errr Term_addstr(int n, int a, const char *buf)
 {
 	int k;

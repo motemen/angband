@@ -74,7 +74,7 @@ const char *describe_race_flag(int flag)
 	if (flag <= RF_NONE || flag >= RF_MAX)
 		return "";
 
-	return rf->desc;
+	return GAMEDATA_(rf->desc);
 }
 
 /**

@@ -17,6 +17,7 @@
  */
 
 #include <stdlib.h>
+#include <string.h>
 
 #include "z-util.h"
 
@@ -528,8 +529,16 @@ size_t my_strcat(char *buf, const char *src, size_t bufsize)
  */
 void my_strcap(char *buf)
 {
+	if (!buf) {
+		return;
+	}
+
 	#ifdef USE_LOCALE
 		// TODO[locale]: some non-jp locale may have capitalization
+		wchar_t wbuf[1024];
+		text_mbstowcs(wbuf, buf, 1024);
+		wbuf[0] = towupper(wbuf[0]);
+		wcstombs(buf, wbuf, strlen(buf));
 	#else
 	if (buf && buf[0])
 		buf[0] = toupper((unsigned char) buf[0]);

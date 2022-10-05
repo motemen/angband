@@ -355,6 +355,7 @@ void text_out_to_screen(uint8_t a, const char *str)
 
 		/* Advance */
 		x += (is_doublewidth(ch) ? 2 : 1);
+		// TODO overwrite skiped char
 		if (x > wrap) x = wrap;
 	}
 }

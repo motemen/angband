@@ -1,0 +1,182 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Angband 4.2.4\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../src/list-mon-race-flags.h:47
+msgid "invisible"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:48
+msgid "cold blooded"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:49
+msgid "not detected by telepathy"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:50
+msgid "rarely detected by telepathy"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:51
+msgid "open doors"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:52
+msgid "bash down doors"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:53
+msgid "pass through walls"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:54
+msgid "bore through walls"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:55
+msgid "smash walls"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:56
+msgid "push past weaker monsters"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:57
+msgid "destroy weaker monsters"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:58
+msgid "pick up objects"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:59
+msgid "destroy objects"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:60
+msgid "clear webs"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:61
+msgid "pass through webs"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:62
+msgid "orc"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:63
+msgid "troll"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:64
+msgid "giant"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:65
+msgid "dragon"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:66
+msgid "demon"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:67
+msgid "natural"
+msgstr "自然の"
+
+#: ../src/list-mon-race-flags.h:68
+msgid "evil"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:69
+msgid "undead"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:70
+msgid "nonliving"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:71
+msgid "metal"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:72
+msgid "bright light"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:73
+msgid "rock remover"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:74 ../src/list-mon-race-flags.h:78
+msgid "fire"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:75 ../src/list-mon-race-flags.h:79
+msgid "cold"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:76
+msgid "acid"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:77
+msgid "lightning"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:80
+msgid "poison"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:81
+msgid "nether"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:82
+msgid "water"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:83
+msgid "plasma"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:84
+msgid "nexus"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:85
+msgid "disenchantment"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:86
+msgid "frightened"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:87
+msgid "stunned"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:88
+msgid "confused"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:89
+msgid "slept"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:90
+msgid "held"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:91
+msgid "slowed"
+msgstr ""
