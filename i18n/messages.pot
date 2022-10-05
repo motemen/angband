@@ -15,97 +15,150 @@ msgstr ""
 msgid "the "
 msgstr ""
 
-#: ../src/mon-lore.c:611
+#: ../src/mon-lore.c:607
 msgid "incredibly quickly"
 msgstr ""
 
-#: ../src/mon-lore.c:612
+#: ../src/mon-lore.c:608
 msgid "very quickly"
 msgstr ""
 
-#: ../src/mon-lore.c:613
+#: ../src/mon-lore.c:609
 msgid "quickly"
 msgstr ""
 
-#: ../src/mon-lore.c:614
+#: ../src/mon-lore.c:610
 msgid "fairly quickly"
 msgstr ""
 
-#: ../src/mon-lore.c:615
+#: ../src/mon-lore.c:611
 msgid "normal speed"
 msgstr ""
 
-#: ../src/mon-lore.c:616
+#: ../src/mon-lore.c:612
 msgid "slowly"
 msgstr ""
 
-#: ../src/mon-lore.c:617
+#: ../src/mon-lore.c:613
 msgid "very slowly"
 msgstr ""
 
-#: ../src/mon-lore.c:618
+#: ../src/mon-lore.c:614
 msgid "incredibly slowly"
 msgstr ""
 
-#: ../src/mon-lore.c:891
+#: ../src/mon-lore.c:718
+msgid "it"
+msgstr ""
+
+#: ../src/mon-lore.c:718
+msgid "It"
+msgstr ""
+
+#: ../src/mon-lore.c:719
+msgid "he"
+msgstr ""
+
+#: ../src/mon-lore.c:719
+msgid "He"
+msgstr ""
+
+#: ../src/mon-lore.c:720
+msgid "she"
+msgstr ""
+
+#: ../src/mon-lore.c:720
+msgid "She"
+msgstr ""
+
+#: ../src/mon-lore.c:887
 #, c-format
 msgid "%s has slain %d of your ancestors"
 msgstr ""
 
-#: ../src/mon-lore.c:896
+#: ../src/mon-lore.c:892
 msgid ", but you have taken revenge!  "
 msgstr ""
 
-#: ../src/mon-lore.c:900
+#: ../src/mon-lore.c:896
 #, c-format
 msgid ", who %s unavenged.  "
 msgstr ""
 
-#: ../src/mon-lore.c:904
+#: ../src/mon-lore.c:900
 msgid "You have slain this foe.  "
 msgstr ""
 
-#: ../src/mon-lore.c:911
+#: ../src/mon-lore.c:907
 #, c-format
 msgid "%d of your ancestors %s been killed by this creature, "
 msgstr ""
 
-#: ../src/mon-lore.c:915
+#: ../src/mon-lore.c:911
 #, c-format
 msgid "and you have exterminated at least %d of the creatures.  "
 msgstr ""
 
-#: ../src/mon-lore.c:918
+#: ../src/mon-lore.c:914
 #, c-format
 msgid "and your ancestors have exterminated at least %d of the creatures.  "
 msgstr ""
 
-#: ../src/mon-lore.c:921
+#: ../src/mon-lore.c:917
 #, c-format
 msgid "and %s is not ever known to have been defeated.  "
 msgstr ""
 
-#: ../src/mon-lore.c:926
+#: ../src/mon-lore.c:922
 #, c-format
 msgid "You have killed at least %d of these creatures.  "
 msgstr ""
 
-#: ../src/mon-lore.c:929
+#: ../src/mon-lore.c:925
 #, c-format
 msgid "Your ancestors have killed at least %d of these creatures.  "
 msgstr ""
 
-#: ../src/mon-lore.c:932
+#: ../src/mon-lore.c:928
 msgid "No battles to the death are recalled.  "
 msgstr ""
 
-#: ../src/mon-lore.c:980 ../src/mon-lore.c:989
+#: ../src/mon-lore.c:970
+msgid "This"
+msgstr ""
+
+#: ../src/mon-lore.c:976 ../src/mon-lore.c:985
 #, c-format
 msgid " %s"
 msgstr ""
 
-#: ../src/mon-lore.c:991
+#: ../src/mon-lore.c:987
 msgid " creature"
+msgstr ""
+
+#: ../src/mon-lore.c:1038
+msgid ", but "
+msgstr ""
+
+#: ../src/mon-lore.c:1040
+msgid "does not deign to chase intruders"
+msgstr ""
+
+#: ../src/mon-lore.c:1670
+#, c-format
+msgid "%s can "
+msgstr ""
+
+#: ../src/mon-lore.c:1673
+msgid ", "
+msgstr ""
+
+#: ../src/mon-lore.c:1675
+msgid ", and "
+msgstr ""
+
+#: ../src/mon-lore.c:1685
+msgid " to "
 msgstr ""
 
 #: ../src/mon-msg.c:254

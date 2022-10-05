@@ -600,11 +600,7 @@ static const char *lore_describe_speed(uint8_t speed)
 {
 	/* Value table ordered descending, for priority. Terminator is
 	 * {UCHAR_MAX, NULL}. */
-	#ifdef USE_LOCALE
-	#else
-	static
-	#endif
-	const struct lore_speed {
+	STATIC_CONST_ struct lore_speed {
 		uint8_t threshold;
 		const char *description;
 	} lore_speed_description[] = {
@@ -718,10 +714,10 @@ static monster_sex_t lore_monster_sex(const struct monster_race *race)
  */
 static const char *lore_pronoun_nominative(monster_sex_t sex, bool title_case)
 {
-	static const char *lore_pronouns[MON_SEX_MAX][2] = {
-		{"it", "It"},
-		{"he", "He"},
-		{"she", "She"},
+	STATIC_CONST_ char *lore_pronouns[MON_SEX_MAX][2] = {
+		{_("it"), _("It")},
+		{_("he"), _("He")},
+		{_("she"), _("She")},
 	};
 
 	int pronoun_index = MON_SEX_NEUTER, case_index = 0;
@@ -971,7 +967,7 @@ void lore_append_movement(textblock *tb, const struct monster_race *race,
 
 	assert(tb && race && lore);
 
-	textblock_append(tb, "This");
+	textblock_append(tb, _("This"));
 
 	/* Get adjectives */
 	create_mon_flag_mask(flags, RFT_RACE_A, RFT_MAX);
@@ -993,7 +989,7 @@ void lore_append_movement(textblock *tb, const struct monster_race *race,
 
 	/* Describe location */
 	if (race->level == 0) {
-		textblock_append(tb, " lives in the town");
+		textblock_append(tb, _(" lives in the town"));
 	} else {
 		uint8_t colour = (race->level > player->max_depth) ?
 			COLOUR_RED : COLOUR_L_BLUE;
@@ -1039,9 +1035,9 @@ void lore_append_movement(textblock *tb, const struct monster_race *race,
 
 	/* The speed description also describes "attack speed" */
 	if (rf_has(known_flags, RF_NEVER_MOVE)) {
-		textblock_append(tb, ", but ");
+		textblock_append(tb, _(", but "));
 		textblock_append_c(tb, COLOUR_L_GREEN,
-						   "does not deign to chase intruders");
+						   _("does not deign to chase intruders"));
 	}
 
 	/* End this sentence */
@@ -1671,22 +1667,23 @@ void lore_append_attack(textblock *tb, const struct monster_race *race,
 
 		/* Introduce the attack description */
 		if (described_count == 0)
-			textblock_append(tb, "%s can ",
+			textblock_append(tb, _("%s can "),
 							 lore_pronoun_nominative(msex, true));
 		else if (described_count < known_attacks - 1)
-			textblock_append(tb, ", ");
+			textblock_append(tb, _(", "));
 		else
-			textblock_append(tb, ", and ");
+			textblock_append(tb, _(", and "));
 
 		/* Describe the method */
-		textblock_append(tb, "%s", race->blow[i].method->desc);
+		textblock_append(tb, "%s", GAMEDATA_(race->blow[i].method->desc));
 
 		/* Describe the effect (if any) */
 		if (effect_str && strlen(effect_str) > 0) {
 			int index = blow_index(race->blow[i].effect->name);
 			/* Describe the attack type */
-			textblock_append(tb, " to ");
-			textblock_append_c(tb, blow_color(player, index), "%s", effect_str);
+			// XXX[locale]: " to " usage differs to describe_effect() in obj-info.c
+			textblock_append(tb, _(" to "));
+			textblock_append_c(tb, blow_color(player, index), "%s", GAMEDATA_(effect_str));
 
 			textblock_append(tb, " (");
 			/* Describe damage (if known) */

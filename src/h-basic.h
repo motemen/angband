@@ -138,11 +138,13 @@
 #define N_(string) gettext_noop(string)
 #define GAMEDATA_(string) dgettext("gamedata", string)
 #define GAMEDATA_N_(string) gettext_noop(string)
+#define STATIC_CONST_ const
 #else
 #define _(string) (string)
 #define N_(string) (string)
 #define GAMEDATA_(string) (string)
 #define GAMEDATA_N_(string) (string)
+#define STATIC_CONST_ static const
 #endif
 
 

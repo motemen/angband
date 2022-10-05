@@ -13,68 +13,137 @@ msgstr ""
 msgid "hits {target}"
 msgstr "{target}を攻撃した"
 
+# ../lib/gamedata/blow_methods.txt:22
+msgid "hit"
+msgstr "殴る"
+
 # ../lib/gamedata/blow_methods.txt:29
 msgid "touches {target}"
 msgstr "{target}に触れた"
+
+# ../lib/gamedata/blow_methods.txt:31
+msgid "touch"
+msgstr "触れる"
 
 # ../lib/gamedata/blow_methods.txt:38
 msgid "punches {target}"
 msgstr "{target}を殴った"
 
+# ../lib/gamedata/blow_methods.txt:40
+msgid "punch"
+msgstr "拳で殴る"
+
 # ../lib/gamedata/blow_methods.txt:47
 msgid "kicks {target}"
 msgstr "{target}を蹴った"
+
+# ../lib/gamedata/blow_methods.txt:49
+msgid "kick"
+msgstr "蹴る"
 
 # ../lib/gamedata/blow_methods.txt:56
 msgid "claws {target}"
 msgstr "{target}をひっかいた"
 
+# ../lib/gamedata/blow_methods.txt:58
+msgid "claw"
+msgstr ""
+
 # ../lib/gamedata/blow_methods.txt:65
 msgid "bites {target}"
 msgstr "{target}に噛みついた"
+
+# ../lib/gamedata/blow_methods.txt:67
+msgid "bite"
+msgstr ""
 
 # ../lib/gamedata/blow_methods.txt:74
 msgid "stings {target}"
 msgstr "{target}を刺した"
 
+# ../lib/gamedata/blow_methods.txt:76
+msgid "sting"
+msgstr "刺す"
+
 # ../lib/gamedata/blow_methods.txt:83
 msgid "butts {target}"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:85
+msgid "butt"
 msgstr ""
 
 # ../lib/gamedata/blow_methods.txt:92
 msgid "crushes {target}"
 msgstr ""
 
+# ../lib/gamedata/blow_methods.txt:94
+msgid "crush"
+msgstr ""
+
 # ../lib/gamedata/blow_methods.txt:101
 msgid "engulfs {target}"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:103
+msgid "engulf"
 msgstr ""
 
 # ../lib/gamedata/blow_methods.txt:110
 msgid "crawls on {target}"
 msgstr "{target}の上を這い回った"
 
+# ../lib/gamedata/blow_methods.txt:110
+#, fuzzy
+msgid "crawl on you"
+msgstr "体を這い回る"
+
 # ../lib/gamedata/blow_methods.txt:119
 msgid "drools on {target}"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:121
+msgid "drool on you"
 msgstr ""
 
 # ../lib/gamedata/blow_methods.txt:128
 msgid "spits on {target}"
 msgstr ""
 
+# ../lib/gamedata/blow_methods.txt:130
+msgid "spit"
+msgstr ""
+
 # ../lib/gamedata/blow_methods.txt:137
 msgid "gazes at {target}"
 msgstr "{target}を見つめた"
 
+# ../lib/gamedata/blow_methods.txt:139
+msgid "gaze"
+msgstr "見つめる"
+
 # ../lib/gamedata/blow_methods.txt:146
 msgid "wails at {target}"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:148
+msgid "wail"
 msgstr ""
 
 # ../lib/gamedata/blow_methods.txt:155
 msgid "releases spores at {target}"
 msgstr ""
 
+# ../lib/gamedata/blow_methods.txt:157
+msgid "release spores"
+msgstr ""
+
 # ../lib/gamedata/blow_methods.txt:164
 msgid "begs {target} for money"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:166
+msgid "beg"
 msgstr ""
 
 # ../lib/gamedata/blow_methods.txt:173
@@ -109,6 +178,10 @@ msgstr ""
 msgid "moons {target}!!!"
 msgstr ""
 
+# ../lib/gamedata/blow_methods.txt:182
+msgid "insult"
+msgstr ""
+
 # ../lib/gamedata/blow_methods.txt:189
 msgid "wants his mushrooms back"
 msgstr ""
@@ -139,4 +212,8 @@ msgstr ""
 
 # ../lib/gamedata/blow_methods.txt:196
 msgid "mumbles something about mushrooms"
+msgstr ""
+
+# ../lib/gamedata/blow_methods.txt:198
+msgid "moan"
 msgstr ""

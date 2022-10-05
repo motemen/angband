@@ -1758,6 +1758,7 @@ static bool describe_effect(textblock *tb, const struct object *obj,
 		textblock_append_c(tb, COLOUR_L_GREEN, "%d", min_time);
 
 		if (min_time != max_time) {
+			// XXX[locale]: " to " usage differs to lore_append_attack() in mon-lore.c
 			textblock_append(tb, " to ");
 			textblock_append_c(tb, COLOUR_L_GREEN, "%d", max_time);
 		}
