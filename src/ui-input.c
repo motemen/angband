@@ -432,9 +432,9 @@ void display_message(game_event_type unused, game_event_data *data, void *user)
 	/* Message Length */
 	#ifdef USE_LOCALE
 	if (msg) {
-		wchar_t buf[1024];
-		mbstowcs(buf, msg, 1024);
-		n = text_visualwidth(buf);
+		wchar_t wbuf[1024];
+		mbstowcs(wbuf, msg, 1024);
+		n = text_visualwidth(wbuf);
 	} else {
 		n = 0;
 	}

@@ -994,3 +994,14 @@ int text_visualwidth(wchar_t *s)
 	}
 	return w;
 }
+
+bool text_split(const char *s, const char *sep, char *pre, char *post) {
+	char *p = strstr(s, sep);
+	if (!p) return false;
+
+	strncpy(pre, s, p - s);
+	*(pre + (p - s)) = '\0';
+	strcpy(post, p + strlen(sep));
+
+	return true;
+}

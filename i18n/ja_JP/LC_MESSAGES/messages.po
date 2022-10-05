@@ -148,28 +148,36 @@ msgstr "%s"
 msgid " creature"
 msgstr "モンスター"
 
-#: ../src/mon-lore.c:1038
+#: ../src/mon-lore.c:992
+msgid " lives in the town"
+msgstr "町に住んでいる"
+
+#: ../src/mon-lore.c:1011
+msgid ", and moves%s"
+msgstr "、そして%s動いている"
+
+#: ../src/mon-lore.c:1048
 msgid ", but "
 msgstr "、しかし"
 
-#: ../src/mon-lore.c:1040
+#: ../src/mon-lore.c:1050
 msgid "does not deign to chase intruders"
 msgstr "侵入者を追わない"
 
-#: ../src/mon-lore.c:1670
+#: ../src/mon-lore.c:1680
 #, c-format
 msgid "%s can "
 msgstr "%sは"
 
-#: ../src/mon-lore.c:1673
+#: ../src/mon-lore.c:1683
 msgid ", "
 msgstr "、"
 
-#: ../src/mon-lore.c:1675
+#: ../src/mon-lore.c:1685
 msgid ", and "
 msgstr "、"
 
-#: ../src/mon-lore.c:1685
+#: ../src/mon-lore.c:1695
 msgid " to "
 msgstr ""
 

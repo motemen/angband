@@ -1006,7 +1006,15 @@ void lore_append_movement(textblock *tb, const struct monster_race *race,
 		textblock_append(tb, ")");
 	}
 
-	textblock_append(tb, ", and moves");
+ 	#ifdef USE_LOCALE
+	char movement_pre[64], movement_post[64];
+	text_split(_(", and moves%s"), "%s", movement_pre, movement_post);
+	#else
+	static const char *movement_pre = ", and moves";
+	static const char *movement_post = "";
+	#endif
+
+	textblock_append(tb, movement_pre);
 
 	/* Random-ness */
 	if (flags_test(known_flags, RF_SIZE, RF_RAND_50, RF_RAND_25, FLAG_END)) {
@@ -1026,12 +1034,14 @@ void lore_append_movement(textblock *tb, const struct monster_race *race,
 	}
 
 	/* Speed */
-	textblock_append(tb, " ");
+	textblock_append(tb, _(" "));
 
 	if (OPT(player, effective_speed))
 		lore_multiplier_speed(tb, race);
 	else
 		lore_adjective_speed(tb, race);
+
+	textblock_append(tb, movement_post);
 
 	/* The speed description also describes "attack speed" */
 	if (rf_has(known_flags, RF_NEVER_MOVE)) {

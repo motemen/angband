@@ -241,5 +241,6 @@ int variance(const int *nums, int size);
 
 bool is_doublewidth(wchar_t ch);
 int text_visualwidth(wchar_t *s);
+bool text_split(const char *s, const char *sep, char *pre, char *post);
 
 #endif /* INCLUDED_Z_UTIL_H */

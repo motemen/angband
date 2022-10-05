@@ -136,28 +136,37 @@ msgstr ""
 msgid " creature"
 msgstr ""
 
-#: ../src/mon-lore.c:1038
+#: ../src/mon-lore.c:992
+msgid " lives in the town"
+msgstr ""
+
+#: ../src/mon-lore.c:1011
+#, c-format
+msgid ", and moves%s"
+msgstr ""
+
+#: ../src/mon-lore.c:1048
 msgid ", but "
 msgstr ""
 
-#: ../src/mon-lore.c:1040
+#: ../src/mon-lore.c:1050
 msgid "does not deign to chase intruders"
 msgstr ""
 
-#: ../src/mon-lore.c:1670
+#: ../src/mon-lore.c:1680
 #, c-format
 msgid "%s can "
 msgstr ""
 
-#: ../src/mon-lore.c:1673
+#: ../src/mon-lore.c:1683
 msgid ", "
 msgstr ""
 
-#: ../src/mon-lore.c:1675
+#: ../src/mon-lore.c:1685
 msgid ", and "
 msgstr ""
 
-#: ../src/mon-lore.c:1685
+#: ../src/mon-lore.c:1695
 msgid " to "
 msgstr ""
 
