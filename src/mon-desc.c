@@ -239,6 +239,7 @@ void monster_desc(char *desc, size_t max, const struct monster *mon, int mode)
 	}
 
 	if (mode & MDESC_CAPITAL) {
+		// TODO[locale]: use wide char
 		my_strcap(desc);
 	}
 }

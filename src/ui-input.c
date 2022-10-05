@@ -430,7 +430,18 @@ void display_message(game_event_type unused, game_event_data *data, void *user)
 	if (!msg_flag) message_column = 0;
 
 	/* Message Length */
+	#ifdef USE_LOCALE
+	if (msg) {
+		wchar_t buf[1024];
+		mbstowcs(buf, msg, 1024);
+		n = text_visualwidth(buf);
+	} else {
+		n = 0;
+	}
+	#else
 	n = (msg ? strlen(msg) : 0);
+	#endif
+
 
 	/* Hack -- flush when requested or needed */
 	if (message_column && (!msg || ((message_column + n) > (w - 8)))) {

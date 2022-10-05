@@ -37,7 +37,6 @@
 #include "player-timed.h"
 #include "player-util.h"
 #include "project.h"
-#include <libintl.h>
 
 /**
  * This file deals with monster attacks (including spells) as follows:

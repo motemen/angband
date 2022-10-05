@@ -7703,7 +7703,7 @@ msgstr ""
 
 # ../lib/gamedata/blow_methods.txt:137
 msgid "gazes at {target}"
-msgstr ""
+msgstr "{target}を見つめた"
 
 # ../lib/gamedata/blow_methods.txt:146
 msgid "wails at {target}"

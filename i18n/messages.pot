@@ -1,8 +1,8 @@
-#: ../src/mon-attack.c:635
+#: ../src/mon-attack.c:634
 msgid "."
 msgstr ""
 
-#: ../src/mon-attack.c:645
+#: ../src/mon-attack.c:644
 #, c-format
 msgid "%s %s%s"
 msgstr ""

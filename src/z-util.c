@@ -528,8 +528,12 @@ size_t my_strcat(char *buf, const char *src, size_t bufsize)
  */
 void my_strcap(char *buf)
 {
+	#ifdef USE_LOCALE
+		// TODO[locale]: some non-jp locale may have capitalization
+	#else
 	if (buf && buf[0])
 		buf[0] = toupper((unsigned char) buf[0]);
+	#endif
 }
 
 
@@ -965,8 +969,19 @@ uint32_t djb2_hash(const char *str)
 	return hash;
 }
 
+// NOTE[locale]
 bool is_doublewidth(wchar_t ch)
 {
 	return ch > 0xff;
 }
 
+// NOTE[locale]
+int text_visualwidth(wchar_t *s)
+{
+	int w = 0;
+	for (wchar_t c = *s; c; c = *++s)
+	{
+		w += is_doublewidth(c) ? 2 : 1;
+	}
+	return w;
+}

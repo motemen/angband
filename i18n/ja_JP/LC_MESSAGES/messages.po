@@ -9,11 +9,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../src/mon-attack.c:635
+#: ../src/mon-attack.c:634
 msgid "."
 msgstr "。"
 
-#: ../src/mon-attack.c:645
+#: ../src/mon-attack.c:644
 #, c-format
 msgid "%s %s%s"
 msgstr "%sは%s%s"
@@ -106,12 +106,11 @@ msgid ""
 msgstr ""
 "{light blue}Please select your character traits from the menus below:{/}\n"
 "\n"
-"{light green}カーソルキー{/}でメニューを選択し、{light green}"
-"Enter{/}で決定します。'{light green}*{/}'でランダムに選択します。"
-"'{light green}@{/}'でキャラクターをランダムな選択で作成します。'{light "
-"green}ESC{/}'でひとつ戻ります。'{light green}={/}'"
-"でキャラクター作成のオプションを、'{light green}?{/}'でヘルプを表示します。'{light green}Ctrl-"
-"X{/}'で終了します。"
+"{light green}カーソルキー{/}でメニューを選択し、{light green}Enter{/}で決定し"
+"ます。'{light green}*{/}'でランダムに選択します。'{light green}@{/}'でキャラ"
+"クターをランダムな選択で作成します。'{light green}ESC{/}'でひとつ戻りま"
+"す。'{light green}={/}'でキャラクター作成のオプションを、'{light green}?"
+"{/}'でヘルプを表示します。'{light green}Ctrl-X{/}'で終了します。"
 
 #: ../src/ui-mon-lore.c:55
 msgid "The "
