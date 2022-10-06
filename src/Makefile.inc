@@ -1634,3 +1634,4 @@ depgen:
 ./z-type.o: z-type.c z-rand.h h-basic.h z-type.h z-virt.h
 ./z-util.o: z-util.c z-util.h h-basic.h
 ./z-virt.o: z-virt.c z-virt.h h-basic.h z-util.h
+./i18n.o: i18n.c z-util.h h-basic.h

@@ -129,32 +129,6 @@
 # include <unistd.h>
 #endif
 
-#ifdef USE_LOCALE
-#include <libintl.h>
-#include <locale.h>
-// NOTE[locale] temporary fix for gettext not handling empty msgstr
-#define _(string) ({ const char *t = gettext(string); t[0] == ' ' && t[1] == '\0' ? "" : t; })
-#define _C(ctx, msgid) ({ const char *t = gettext(ctx "\004" msgid); strcmp(t, ctx "\004" msgid) == 0 ? msgid : t; })
-#define gettext_noop(string) string
-#define N_(string) gettext_noop(string)
-#define GAMEDATA_(string) dgettext("gamedata", string)
-#define GAMEDATA_N_(string) gettext_noop(string)
-#define GAMEDATA_C_(ctx, msgid) ({ \
-  char buf[256]; \
-  strcpy(buf, ctx "\004"); \
-  strcat(buf, (msgid)); \
-  const char *t = dgettext("gamedata", buf); \
-  strcmp(t, buf) == 0 ? (msgid) : t; \
-})
-#define STATIC_CONST_ const
-#else
-#define _(string) (string)
-#define N_(string) (string)
-#define GAMEDATA_(string) (string)
-#define GAMEDATA_N_(string) (string)
-#define GAMEDATA_C_(ctx, string) (string)
-#define STATIC_CONST_ static const
-#endif
 
 
 /**

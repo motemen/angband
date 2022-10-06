@@ -434,7 +434,7 @@ void display_message(game_event_type unused, game_event_data *data, void *user)
 	if (msg) {
 		wchar_t wbuf[1024];
 		mbstowcs(wbuf, msg, 1024);
-		n = text_visualwidth(wbuf);
+		n = i18n_text_visualwidth(wbuf);
 	} else {
 		n = 0;
 	}

@@ -21,6 +21,7 @@
 #include "z-color.h"
 #include "z-util.h"
 #include "z-virt.h"
+#include "i18n.h"
 
 /**
  * This file provides a generic, efficient, terminal window package,
@@ -719,7 +720,7 @@ void Term_queue_chars(int x, int y, int n, int a, const wchar_t *s)
 		if (x1 < 0) x1 = x;
 		x2 = x;
 
-		if (is_doublewidth(*s)) {
+		if (i18n_is_doublewidth(*s)) {
 			x++;
 			scr_aa[x] = a;
 			scr_taa[x] = 0;
@@ -2102,7 +2103,7 @@ errr Term_addch(int a, wchar_t c)
 	Term_queue_char(Term, Term->scr->cx, Term->scr->cy, a, c, 0, 0);
 
 	/* Advance the cursor */
-	Term->scr->cx += is_doublewidth(c) ? 2 : 1;
+	Term->scr->cx += i18n_is_doublewidth(c) ? 2 : 1;
 	// TODO[doublewidth]: or text_hook???
 
 	/* Success */

@@ -2244,7 +2244,7 @@ static int compare_advances(const void *ap, const void *bp)
 	advances, 1);
     CGSize advance = advances[0];
 
-    bool isDoubleWidth = is_doublewidth(wchar);
+    bool isDoubleWidth = i18n_is_doublewidth(wchar);
 
     /*
      * If our font is not monospaced, our tile width is deliberately not big

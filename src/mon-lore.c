@@ -1000,7 +1000,7 @@ void lore_append_movement(textblock *tb, const struct monster_race *race,
 			textblock_append(tb, _(" is normally found "));
 
 		char depth_pre[64], depth_post[64];
-		text_split(_("at depths of %s"), "%s", depth_pre, depth_post);
+		i18n_text_split(_("at depths of %s"), "%s", depth_pre, depth_post);
 
 		textblock_append(tb, depth_pre);
 		textblock_append_c(tb, colour, "%d", race->level * 50);
@@ -1011,7 +1011,7 @@ void lore_append_movement(textblock *tb, const struct monster_race *race,
 	}
 
 	char movement_pre[64], movement_post[64];
-	text_split(_(", and moves%s"), "%s", movement_pre, movement_post);
+	i18n_text_split(_(", and moves%s"), "%s", movement_pre, movement_post);
 
 	textblock_append(tb, movement_pre);
 

@@ -117,7 +117,7 @@ static void display_area(const wchar_t *text, const uint8_t *attrs,
 			Term_putch(area.col + c, area.row + i,
 					attrs[line_starts[line_from + i] + j],
 					text[line_starts[line_from + i] + j]);
-			c += is_doublewidth(text[line_starts[line_from + i] + j]) ? 2 : 1;
+			c += i18n_is_doublewidth(text[line_starts[line_from + i] + j]) ? 2 : 1;
 		}
 	}
 }
@@ -354,7 +354,7 @@ void text_out_to_screen(uint8_t a, const char *str)
 		Term_addch(a, ch);
 
 		/* Advance */
-		x += (is_doublewidth(ch) ? 2 : 1);
+		x += (i18n_is_doublewidth(ch) ? 2 : 1);
 		// TODO overwrite skiped char
 		if (x > wrap) x = wrap;
 	}
