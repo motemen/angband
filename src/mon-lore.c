@@ -559,20 +559,20 @@ static const char *lore_describe_awareness(int16_t awareness)
 {
 	/* Value table ordered descending, for priority. Terminator is
 	 * {SHRT_MAX, NULL}. */
-	static const struct lore_awareness {
+	STATIC_CONST_ struct lore_awareness {
 		int16_t threshold;
 		const char *description;
 	} lore_awareness_description[] = {
-		{200,	"prefers to ignore"},
-		{95,	"pays very little attention to"},
-		{75,	"pays little attention to"},
-		{45,	"tends to overlook"},
-		{25,	"takes quite a while to see"},
-		{10,	"takes a while to see"},
-		{5,		"is fairly observant of"},
-		{3,		"is observant of"},
-		{1,		"is very observant of"},
-		{0,		"is vigilant for"},
+		{200,	_("prefers to ignore")},
+		{95,	_("pays very little attention to")},
+		{75,	_("pays little attention to")},
+		{45,	_("tends to overlook")},
+		{25,	_("takes quite a while to see")},
+		{10,	_("takes a while to see")},
+		{5,		_("is fairly observant of")},
+		{3,		_("is observant of")},
+		{1,		_("is very observant of")},
+		{0,		_("is vigilant for")},
 		{SHRT_MAX,	NULL},
 	};
 	const struct lore_awareness *current = lore_awareness_description;
@@ -585,7 +585,7 @@ static const char *lore_describe_awareness(int16_t awareness)
 	}
 
 	/* Values zero and less are the most vigilant */
-	return "is ever vigilant for";
+	return _("is ever vigilant for");
 }
 
 /**
@@ -663,7 +663,7 @@ static void lore_multiplier_speed(textblock *tb, const struct monster_race *race
 	strnfmt(buf, sizeof(buf), "%d.%dx", int_mul, dec_mul);
 	textblock_append_c(tb, COLOUR_L_BLUE, "%s", buf);
 
-	textblock_append(tb, " normal speed, which is ");
+	textblock_append(tb, _(" normal speed, which is "));
 	multiplier = 100 * extract_energy[race->speed]
 		/ extract_energy[player->state.speed];
 	int_mul = multiplier / 100;
@@ -682,10 +682,10 @@ static void lore_multiplier_speed(textblock *tb, const struct monster_race *race
 		attr = COLOUR_RED;
 	}
 	if (player->state.speed == race->speed) {
-		textblock_append(tb, "the same as you");
+		textblock_append(tb, _("the same as you"));
 	} else {
 		textblock_append_c(tb, attr, "%s", buf);
-		textblock_append(tb, " your speed");
+		textblock_append(tb, _(" your speed"));
 	}
 }
 
@@ -743,10 +743,10 @@ static const char *lore_pronoun_nominative(monster_sex_t sex, bool title_case)
  */
 static const char *lore_pronoun_possessive(monster_sex_t sex, bool title_case)
 {
-	static const char *lore_pronouns[MON_SEX_MAX][2] = {
-		{"its", "Its"},
-		{"his", "His"},
-		{"her", "Her"},
+	STATIC_CONST_ char *lore_pronouns[MON_SEX_MAX][2] = {
+		{_("its"), _("Its")},
+		{_("his"), _("His")},
+		{_("her"), _("Her")},
 	};
 
 	int pronoun_index = MON_SEX_NEUTER, case_index = 0;
@@ -792,10 +792,10 @@ static void lore_append_clause(textblock *tb, bitflag *f, uint8_t attr,
 				}
 				/* Last entry */
 				if (rf_next(f, flag + 1) == FLAG_END) {
-					textblock_append(tb, " ");
+					textblock_append(tb, _(" "));
 					textblock_append(tb, "%s", conjunction);
 				}
-				textblock_append(tb, " ");
+				textblock_append(tb, _(" "));
 			}
 			textblock_append_c(tb, attr, "%s", describe_race_flag(flag));
 		}
@@ -838,10 +838,10 @@ static void lore_append_spell_clause(textblock *tb, bitflag *f, bool know_hp,
 				}
 				/* Last entry */
 				if (rsf_next(f, spell + 1) == FLAG_END) {
-					textblock_append(tb, " ");
+					textblock_append(tb, _(" "));
 					textblock_append(tb, "%s", conjunction);
 				}
-				textblock_append(tb, " ");
+				textblock_append(tb, _(" "));
 			}
 			textblock_append_c(tb, color, "%s",
 							   mon_spell_lore_description(spell, race));
@@ -995,24 +995,23 @@ void lore_append_movement(textblock *tb, const struct monster_race *race,
 			COLOUR_RED : COLOUR_L_BLUE;
 
 		if (rf_has(known_flags, RF_FORCE_DEPTH))
-			textblock_append(tb, " is found ");
+			textblock_append(tb, _(" is found "));
 		else
-			textblock_append(tb, " is normally found ");
+			textblock_append(tb, _(" is normally found "));
 
-		textblock_append(tb, "at depths of ");
+		char depth_pre[64], depth_post[64];
+		text_split(_("at depths of %s"), "%s", depth_pre, depth_post);
+
+		textblock_append(tb, depth_pre);
 		textblock_append_c(tb, colour, "%d", race->level * 50);
-		textblock_append(tb, " feet (level ");
+		textblock_append(tb, _(" feet (level "));
 		textblock_append_c(tb, colour, "%d", race->level);
-		textblock_append(tb, ")");
+		textblock_append(tb, _(")"));
+		textblock_append(tb, depth_post);
 	}
 
- 	#ifdef USE_LOCALE
 	char movement_pre[64], movement_post[64];
 	text_split(_(", and moves%s"), "%s", movement_pre, movement_post);
-	#else
-	static const char *movement_pre = ", and moves";
-	static const char *movement_post = "";
-	#endif
 
 	textblock_append(tb, movement_pre);
 
@@ -1020,14 +1019,14 @@ void lore_append_movement(textblock *tb, const struct monster_race *race,
 	if (flags_test(known_flags, RF_SIZE, RF_RAND_50, RF_RAND_25, FLAG_END)) {
 		/* Adverb */
 		if (rf_has(known_flags, RF_RAND_50) && rf_has(known_flags, RF_RAND_25))
-			textblock_append(tb, " extremely");
+			textblock_append(tb, _(" extremely"));
 		else if (rf_has(known_flags, RF_RAND_50))
-			textblock_append(tb, " somewhat");
+			textblock_append(tb, _(" somewhat"));
 		else if (rf_has(known_flags, RF_RAND_25))
-			textblock_append(tb, " a bit");
+			textblock_append(tb, _(" a bit"));
 
 		/* Adjective */
-		textblock_append(tb, " erratically");
+		textblock_append(tb, _(" erratically"));
 
 		/* Hack -- Occasional conjunction */
 		if (race->speed != 110) textblock_append(tb, ", and");
@@ -1051,7 +1050,7 @@ void lore_append_movement(textblock *tb, const struct monster_race *race,
 	}
 
 	/* End this sentence */
-	textblock_append(tb, ".  ");
+	textblock_append(tb, _(".  "));
 }
 
 /**
@@ -1080,16 +1079,16 @@ void lore_append_toughness(textblock *tb, const struct monster_race *race,
 	/* Describe monster "toughness" */
 	if (lore->armour_known) {
 		/* Hitpoints */
-		textblock_append(tb, "%s has a", lore_pronoun_nominative(msex, true));
+		textblock_append(tb, _("%s has a"), lore_pronoun_nominative(msex, true));
 
 		if (!rf_has(known_flags, RF_UNIQUE))
-			textblock_append(tb, "n average");
+			textblock_append(tb, _("n average"));
 
-		textblock_append(tb, " life rating of ");
+		textblock_append(tb, _(" life rating of "));
 		textblock_append_c(tb, COLOUR_L_BLUE, "%d", race->avg_hp);
 
 		/* Armor */
-		textblock_append(tb, ", and an armor rating of ");
+		textblock_append(tb, _(", and an armor rating of "));
 		textblock_append_c(tb, COLOUR_L_BLUE, "%d", race->ac);
 		textblock_append(tb, ".  ");
 
@@ -1098,11 +1097,11 @@ void lore_append_toughness(textblock *tb, const struct monster_race *race,
 		hit_chance(&c, chance_of_melee_hit_base(player, weapon), race->ac);
 		int percent = random_chance_scaled(c, 100);
 
-		textblock_append(tb, "You have a");
+		textblock_append(tb, _("You have a"));
 		if (percent == 8 || percent / 10 == 8)
-			textblock_append(tb, "n");
+			textblock_append(tb, _("n"));
 		textblock_append_c(tb, COLOUR_L_BLUE, " %d", percent);
-		textblock_append(tb, "%% chance to hit such a creature in melee (if you can see it).  ");
+		textblock_append(tb, _("%% chance to hit such a creature in melee (if you can see it).  "));
 	}
 }
 
@@ -1685,14 +1684,14 @@ void lore_append_attack(textblock *tb, const struct monster_race *race,
 			textblock_append(tb, _(", and "));
 
 		/* Describe the method */
-		textblock_append(tb, "%s", GAMEDATA_(race->blow[i].method->desc));
+		textblock_append(tb, "%s", GAMEDATA_C_("blow_effects", race->blow[i].method->desc));
 
 		/* Describe the effect (if any) */
 		if (effect_str && strlen(effect_str) > 0) {
 			int index = blow_index(race->blow[i].effect->name);
 			/* Describe the attack type */
 			// XXX[locale]: " to " usage differs to describe_effect() in obj-info.c
-			textblock_append(tb, _(" to "));
+			textblock_append(tb, _C("mon-lore", " to "));
 			textblock_append_c(tb, blow_color(player, index), "%s", GAMEDATA_(effect_str));
 
 			textblock_append(tb, " (");

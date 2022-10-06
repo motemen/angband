@@ -510,7 +510,7 @@ msgstr "それは黒い羽と頭を除けば灰色の、群れているカラス
 
 # ../lib/gamedata/monster.txt:1168
 msgid "Sméagol"
-msgstr ""
+msgstr "『スメアゴル』"
 
 # ../lib/gamedata/monster.txt:1185
 msgid ""
@@ -2621,9 +2621,8 @@ msgstr ""
 
 # J0#
 # ../lib/gamedata/monster.txt:5248
-#, fuzzy
 msgid "Uglúk, the Uruk"
-msgstr "ウルク『ルグドゥシュ』"
+msgstr "ウルク『ウグルク』"
 
 # ../lib/gamedata/monster.txt:5441
 msgid ""

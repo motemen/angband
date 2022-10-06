@@ -26,6 +26,50 @@ msgstr "あなた"
 msgid "the "
 msgstr " "
 
+#: ../src/mon-lore.c:566
+msgid "prefers to ignore"
+msgstr ""
+
+#: ../src/mon-lore.c:567
+msgid "pays very little attention to"
+msgstr ""
+
+#: ../src/mon-lore.c:568
+msgid "pays little attention to"
+msgstr ""
+
+#: ../src/mon-lore.c:569
+msgid "tends to overlook"
+msgstr ""
+
+#: ../src/mon-lore.c:570
+msgid "takes quite a while to see"
+msgstr ""
+
+#: ../src/mon-lore.c:571
+msgid "takes a while to see"
+msgstr ""
+
+#: ../src/mon-lore.c:572
+msgid "is fairly observant of"
+msgstr ""
+
+#: ../src/mon-lore.c:573
+msgid "is observant of"
+msgstr ""
+
+#: ../src/mon-lore.c:574
+msgid "is very observant of"
+msgstr ""
+
+#: ../src/mon-lore.c:575
+msgid "is vigilant for"
+msgstr ""
+
+#: ../src/mon-lore.c:588
+msgid "is ever vigilant for"
+msgstr ""
+
 #: ../src/mon-lore.c:607
 msgid "incredibly quickly"
 msgstr "信じ難いほど素早く"
@@ -58,6 +102,20 @@ msgstr "非常にゆっくりと"
 msgid "incredibly slowly"
 msgstr "信じ難いほどゆっくりと"
 
+#: ../src/mon-lore.c:666
+#, fuzzy
+msgid " normal speed, which is "
+msgstr "通常のスピードで"
+
+#: ../src/mon-lore.c:685
+msgid "the same as you"
+msgstr ""
+
+#: ../src/mon-lore.c:688
+#, fuzzy
+msgid " your speed"
+msgstr "通常のスピードで"
+
 #: ../src/mon-lore.c:718
 msgid "it"
 msgstr "それ"
@@ -82,6 +140,41 @@ msgstr "彼女"
 #: ../src/mon-lore.c:720
 msgid "She"
 msgstr "彼女"
+
+#: ../src/mon-lore.c:747
+#, fuzzy
+msgid "its"
+msgstr "それ"
+
+#: ../src/mon-lore.c:747
+#, fuzzy
+msgid "Its"
+msgstr "それ"
+
+#: ../src/mon-lore.c:748
+#, fuzzy
+msgid "his"
+msgstr "この"
+
+#: ../src/mon-lore.c:748
+msgid "His"
+msgstr ""
+
+#: ../src/mon-lore.c:749
+#, fuzzy
+msgid "her"
+msgstr "彼"
+
+#: ../src/mon-lore.c:749
+#, fuzzy
+msgid "Her"
+msgstr "彼"
+
+#: ../src/mon-lore.c:795 ../src/mon-lore.c:798 ../src/mon-lore.c:841
+#: ../src/mon-lore.c:844 ../src/mon-lore.c:1036
+#, fuzzy
+msgid " "
+msgstr "、"
 
 #: ../src/mon-lore.c:887
 #, c-format
@@ -140,7 +233,7 @@ msgid "This"
 msgstr "この"
 
 #: ../src/mon-lore.c:976 ../src/mon-lore.c:985
-#, fuzzy, c-format
+#, c-format
 msgid " %s"
 msgstr "%s"
 
@@ -150,36 +243,109 @@ msgstr "モンスター"
 
 #: ../src/mon-lore.c:992
 msgid " lives in the town"
-msgstr "町に住んでいる"
+msgstr "は町に住んでいる"
 
-#: ../src/mon-lore.c:1011
+#: ../src/mon-lore.c:998
+msgid " is found "
+msgstr "は"
+
+#: ../src/mon-lore.c:1000
+msgid " is normally found "
+msgstr "は通常"
+
+#: ../src/mon-lore.c:1003
+#, c-format
+msgid "at depths of %s"
+msgstr "地下%sで出現する"
+
+#: ../src/mon-lore.c:1007
+msgid " feet (level "
+msgstr "フィート ("
+
+#: ../src/mon-lore.c:1009
+msgid ")"
+msgstr "階)"
+
+#: ../src/mon-lore.c:1014
+#, c-format
 msgid ", and moves%s"
 msgstr "、そして%s動いている"
 
-#: ../src/mon-lore.c:1048
+#: ../src/mon-lore.c:1022
+msgid " extremely"
+msgstr ""
+
+#: ../src/mon-lore.c:1024
+msgid " somewhat"
+msgstr ""
+
+#: ../src/mon-lore.c:1026
+msgid " a bit"
+msgstr ""
+
+#: ../src/mon-lore.c:1029
+msgid " erratically"
+msgstr ""
+
+#: ../src/mon-lore.c:1047
 msgid ", but "
 msgstr "、しかし"
 
-#: ../src/mon-lore.c:1050
+#: ../src/mon-lore.c:1049
 msgid "does not deign to chase intruders"
 msgstr "侵入者を追わない"
 
-#: ../src/mon-lore.c:1680
+#: ../src/mon-lore.c:1053
+msgid ".  "
+msgstr ""
+
+#: ../src/mon-lore.c:1082
+#, c-format
+msgid "%s has a"
+msgstr ""
+
+#: ../src/mon-lore.c:1085
+msgid "n average"
+msgstr ""
+
+#: ../src/mon-lore.c:1087
+msgid " life rating of "
+msgstr ""
+
+#: ../src/mon-lore.c:1091
+msgid ", and an armor rating of "
+msgstr ""
+
+#: ../src/mon-lore.c:1100
+msgid "You have a"
+msgstr ""
+
+#: ../src/mon-lore.c:1102
+msgid "n"
+msgstr ""
+
+#: ../src/mon-lore.c:1104
+#, c-format
+msgid "%% chance to hit such a creature in melee (if you can see it).  "
+msgstr ""
+
+#: ../src/mon-lore.c:1679
 #, c-format
 msgid "%s can "
 msgstr "%sは"
 
-#: ../src/mon-lore.c:1683
+#: ../src/mon-lore.c:1682
 msgid ", "
 msgstr "、"
 
-#: ../src/mon-lore.c:1685
+#: ../src/mon-lore.c:1684
 msgid ", and "
 msgstr "、"
 
-#: ../src/mon-lore.c:1695
+#: ../src/mon-lore.c:1694
+msgctxt "mon-lore"
 msgid " to "
-msgstr ""
+msgstr "ことで"
 
 #: ../src/mon-msg.c:254
 #, c-format

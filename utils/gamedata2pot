@@ -11,6 +11,9 @@ use Cwd qw(realpath);
 # 'monster', 'class', ...
 my $type = shift or die;
 
+# for "poison" conflicting 
+my $context = { blow_effects => 'blow_effects' }->{$type};
+
 my $file = abs2rel(realpath(catfile(dirname(__FILE__), updir, "lib", "gamedata", "$type.txt")));
 
 open my $fh, "<", $file or die "Can't open $file: $!";
@@ -48,6 +51,7 @@ while (<$fh>) {
         next if $seen->{ join "\n", @msgid }++;
 
         print "# $file:$.\n";
+        print qq(msgctxt "$context"\n) if $context;
         print qq(msgid ""\n);
         for (@msgid) {
             s/"/\\"/g;

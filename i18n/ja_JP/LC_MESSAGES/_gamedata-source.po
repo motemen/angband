@@ -11,55 +11,55 @@ msgstr ""
 
 #: ../src/list-mon-race-flags.h:47
 msgid "invisible"
-msgstr ""
+msgstr "不可視"
 
 #: ../src/list-mon-race-flags.h:48
 msgid "cold blooded"
-msgstr ""
+msgstr "冷血"
 
 #: ../src/list-mon-race-flags.h:49
 msgid "not detected by telepathy"
-msgstr ""
+msgstr "テレパシーで感知できない"
 
 #: ../src/list-mon-race-flags.h:50
 msgid "rarely detected by telepathy"
-msgstr ""
+msgstr "めったにテレパシーで感知できない"
 
 #: ../src/list-mon-race-flags.h:51
 msgid "open doors"
-msgstr ""
+msgstr "ドアを開ける"
 
 #: ../src/list-mon-race-flags.h:52
 msgid "bash down doors"
-msgstr ""
+msgstr "ドアを打ち破る"
 
 #: ../src/list-mon-race-flags.h:53
 msgid "pass through walls"
-msgstr ""
+msgstr "壁を通り抜ける"
 
 #: ../src/list-mon-race-flags.h:54
 msgid "bore through walls"
-msgstr ""
+msgstr "壁を掘り進む"
 
 #: ../src/list-mon-race-flags.h:55
 msgid "smash walls"
-msgstr ""
+msgstr "壁を破壊する"
 
 #: ../src/list-mon-race-flags.h:56
 msgid "push past weaker monsters"
-msgstr ""
+msgstr "弱いモンスターを押しのける"
 
 #: ../src/list-mon-race-flags.h:57
 msgid "destroy weaker monsters"
-msgstr ""
+msgstr "弱いモンスターを倒す"
 
 #: ../src/list-mon-race-flags.h:58
 msgid "pick up objects"
-msgstr ""
+msgstr "アイテムを拾う"
 
 #: ../src/list-mon-race-flags.h:59
 msgid "destroy objects"
-msgstr ""
+msgstr "アイテムを破壊する"
 
 #: ../src/list-mon-race-flags.h:60
 msgid "clear webs"
@@ -71,23 +71,23 @@ msgstr ""
 
 #: ../src/list-mon-race-flags.h:62
 msgid "orc"
-msgstr ""
+msgstr "オーク"
 
 #: ../src/list-mon-race-flags.h:63
 msgid "troll"
-msgstr ""
+msgstr "トロル"
 
 #: ../src/list-mon-race-flags.h:64
 msgid "giant"
-msgstr ""
+msgstr "巨人"
 
 #: ../src/list-mon-race-flags.h:65
 msgid "dragon"
-msgstr ""
+msgstr "ドラゴン"
 
 #: ../src/list-mon-race-flags.h:66
 msgid "demon"
-msgstr ""
+msgstr "悪魔"
 
 #: ../src/list-mon-race-flags.h:67
 msgid "natural"
@@ -95,83 +95,83 @@ msgstr "自然の"
 
 #: ../src/list-mon-race-flags.h:68
 msgid "evil"
-msgstr ""
+msgstr "邪悪な"
 
 #: ../src/list-mon-race-flags.h:69
 msgid "undead"
-msgstr ""
+msgstr "アンデッド"
 
 #: ../src/list-mon-race-flags.h:70
 msgid "nonliving"
-msgstr ""
+msgstr "非生物"
 
 #: ../src/list-mon-race-flags.h:71
 msgid "metal"
-msgstr ""
+msgstr "金属"
 
 #: ../src/list-mon-race-flags.h:72
 msgid "bright light"
-msgstr ""
+msgstr "閃光"
 
 #: ../src/list-mon-race-flags.h:73
 msgid "rock remover"
-msgstr ""
+msgstr "岩石除去"
 
 #: ../src/list-mon-race-flags.h:74 ../src/list-mon-race-flags.h:78
 msgid "fire"
-msgstr ""
+msgstr "火炎"
 
 #: ../src/list-mon-race-flags.h:75 ../src/list-mon-race-flags.h:79
 msgid "cold"
-msgstr ""
+msgstr "冷気"
 
 #: ../src/list-mon-race-flags.h:76
 msgid "acid"
-msgstr ""
+msgstr "酸"
 
 #: ../src/list-mon-race-flags.h:77
 msgid "lightning"
-msgstr ""
+msgstr "稲妻"
 
 #: ../src/list-mon-race-flags.h:80
 msgid "poison"
-msgstr ""
+msgstr "毒"
 
 #: ../src/list-mon-race-flags.h:81
 msgid "nether"
-msgstr ""
+msgstr "地獄"
 
 #: ../src/list-mon-race-flags.h:82
 msgid "water"
-msgstr ""
+msgstr "水"
 
 #: ../src/list-mon-race-flags.h:83
 msgid "plasma"
-msgstr ""
+msgstr "プラズマ"
 
 #: ../src/list-mon-race-flags.h:84
 msgid "nexus"
-msgstr ""
+msgstr "因果混乱"
 
 #: ../src/list-mon-race-flags.h:85
 msgid "disenchantment"
-msgstr ""
+msgstr "劣化"
 
 #: ../src/list-mon-race-flags.h:86
 msgid "frightened"
-msgstr ""
+msgstr "恐怖"
 
 #: ../src/list-mon-race-flags.h:87
 msgid "stunned"
-msgstr ""
+msgstr "朦朧"
 
 #: ../src/list-mon-race-flags.h:88
 msgid "confused"
-msgstr ""
+msgstr "混乱"
 
 #: ../src/list-mon-race-flags.h:89
 msgid "slept"
-msgstr ""
+msgstr "睡眠"
 
 #: ../src/list-mon-race-flags.h:90
 msgid "held"

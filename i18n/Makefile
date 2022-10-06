@@ -28,10 +28,16 @@ else \
 fi
 
 messages.pot: $(wildcard ../src/*.c)
-	xgettext --omit-header -k_ -o $@ ../src/*.[ch]
+	chmod +w $@ || true
+	xgettext --omit-header -k_ -k_C:1c,2 -o $@ ../src/*.c
+	chmod -w $@
 
 _gamedata-%.pot:
+	chmod +w $@ || true
 	../utils/gamedata2pot $* > $@
+	chmod -w $@
 
 _gamedata-source.pot:
-	xgettext --omit-header -kGAMEDATA_ -kGAMEDATA_N_ -o $@ ../src/*.[ch]
+	chmod +w $@ || true
+	xgettext --omit-header -kGAMEDATA_ -kGAMEDATA_N_ -o $@ ../src/list-mon-race-flags.h
+	chmod -w $@
