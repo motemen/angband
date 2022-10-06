@@ -10,7 +10,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 # ../lib/gamedata/blow_effects.txt:25
-#, fuzzy
 msgctxt "blow_effects"
 msgid "attack"
 msgstr "攻撃する"

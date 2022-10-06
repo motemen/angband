@@ -7694,7 +7694,7 @@ msgstr "{target}に噛みついた"
 
 # ../lib/gamedata/blow_methods.txt:67
 msgid "bite"
-msgstr ""
+msgstr "噛みつく"
 
 # ../lib/gamedata/blow_methods.txt:74
 msgid "stings {target}"
@@ -7706,34 +7706,33 @@ msgstr "刺す"
 
 # ../lib/gamedata/blow_methods.txt:83
 msgid "butts {target}"
-msgstr ""
+msgstr "{target}を角で突いた"
 
 # ../lib/gamedata/blow_methods.txt:85
 msgid "butt"
-msgstr ""
+msgstr "角で突く"
 
 # ../lib/gamedata/blow_methods.txt:92
 msgid "crushes {target}"
-msgstr ""
+msgstr "{target}に体当たりした"
 
 # ../lib/gamedata/blow_methods.txt:94
 msgid "crush"
-msgstr ""
+msgstr "体当たりする"
 
 # ../lib/gamedata/blow_methods.txt:101
 msgid "engulfs {target}"
-msgstr ""
+msgstr "{target}を飲み込んだ"
 
 # ../lib/gamedata/blow_methods.txt:103
 msgid "engulf"
-msgstr ""
+msgstr "飲み込む"
 
 # ../lib/gamedata/blow_methods.txt:110
 msgid "crawls on {target}"
 msgstr "{target}の上を這い回った"
 
 # ../lib/gamedata/blow_methods.txt:110
-#, fuzzy
 msgid "crawl on you"
 msgstr "体を這い回る"
 
@@ -7855,10 +7854,9 @@ msgstr ""
 
 # ../lib/gamedata/blow_methods.txt:198
 msgid "moan"
-msgstr ""
+msgstr "うめく"
 
 # ../lib/gamedata/blow_effects.txt:25
-#, fuzzy
 msgctxt "blow_effects"
 msgid "attack"
 msgstr "攻撃する"

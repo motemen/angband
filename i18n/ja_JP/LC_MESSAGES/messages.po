@@ -26,323 +26,355 @@ msgstr "あなた"
 msgid "the "
 msgstr " "
 
-#: ../src/mon-lore.c:566
+#: ../src/mon-lore.c:567
 msgid "prefers to ignore"
 msgstr ""
 
-#: ../src/mon-lore.c:567
+#: ../src/mon-lore.c:568
 msgid "pays very little attention to"
 msgstr ""
 
-#: ../src/mon-lore.c:568
+#: ../src/mon-lore.c:569
 msgid "pays little attention to"
 msgstr ""
 
-#: ../src/mon-lore.c:569
+#: ../src/mon-lore.c:570
 msgid "tends to overlook"
 msgstr ""
 
-#: ../src/mon-lore.c:570
+#: ../src/mon-lore.c:571
 msgid "takes quite a while to see"
 msgstr ""
 
-#: ../src/mon-lore.c:571
+#: ../src/mon-lore.c:572
 msgid "takes a while to see"
 msgstr ""
 
-#: ../src/mon-lore.c:572
+#: ../src/mon-lore.c:573
 msgid "is fairly observant of"
 msgstr ""
 
-#: ../src/mon-lore.c:573
+#: ../src/mon-lore.c:574
 msgid "is observant of"
 msgstr ""
 
-#: ../src/mon-lore.c:574
+#: ../src/mon-lore.c:575
 msgid "is very observant of"
 msgstr ""
 
-#: ../src/mon-lore.c:575
+#: ../src/mon-lore.c:576
 msgid "is vigilant for"
 msgstr ""
 
-#: ../src/mon-lore.c:588
+#: ../src/mon-lore.c:589
 msgid "is ever vigilant for"
 msgstr ""
 
-#: ../src/mon-lore.c:607
+#: ../src/mon-lore.c:608
 msgid "incredibly quickly"
 msgstr "信じ難いほど素早く"
 
-#: ../src/mon-lore.c:608
+#: ../src/mon-lore.c:609
 msgid "very quickly"
 msgstr "非常に素早く"
 
-#: ../src/mon-lore.c:609
+#: ../src/mon-lore.c:610
 msgid "quickly"
 msgstr "素早く"
 
-#: ../src/mon-lore.c:610
+#: ../src/mon-lore.c:611
 msgid "fairly quickly"
 msgstr "かなり素早く"
 
-#: ../src/mon-lore.c:611
+#: ../src/mon-lore.c:612
 msgid "normal speed"
 msgstr "通常のスピードで"
 
-#: ../src/mon-lore.c:612
+#: ../src/mon-lore.c:613
 msgid "slowly"
 msgstr "ゆっくりと"
 
-#: ../src/mon-lore.c:613
+#: ../src/mon-lore.c:614
 msgid "very slowly"
 msgstr "非常にゆっくりと"
 
-#: ../src/mon-lore.c:614
+#: ../src/mon-lore.c:615
 msgid "incredibly slowly"
 msgstr "信じ難いほどゆっくりと"
 
-#: ../src/mon-lore.c:666
-#, fuzzy
+#: ../src/mon-lore.c:642
+msgid "at "
+msgstr " "
+
+#: ../src/mon-lore.c:667
 msgid " normal speed, which is "
-msgstr "通常のスピードで"
+msgstr "通常のスピード ("
 
-#: ../src/mon-lore.c:685
+#: ../src/mon-lore.c:686
 msgid "the same as you"
-msgstr ""
+msgstr "あなたと同じ) で"
 
-#: ../src/mon-lore.c:688
-#, fuzzy
+#: ../src/mon-lore.c:689
 msgid " your speed"
-msgstr "通常のスピードで"
+msgstr "あなたのスピード) で"
 
-#: ../src/mon-lore.c:718
+#: ../src/mon-lore.c:719
 msgid "it"
 msgstr "それ"
 
-#: ../src/mon-lore.c:718
+#: ../src/mon-lore.c:719
 msgid "It"
 msgstr "それ"
 
-#: ../src/mon-lore.c:719
-#, fuzzy
+#: ../src/mon-lore.c:720
 msgid "he"
 msgstr "彼"
 
-#: ../src/mon-lore.c:719
+#: ../src/mon-lore.c:720
 msgid "He"
 msgstr "彼"
 
-#: ../src/mon-lore.c:720
+#: ../src/mon-lore.c:721
 msgid "she"
 msgstr "彼女"
 
-#: ../src/mon-lore.c:720
+#: ../src/mon-lore.c:721
 msgid "She"
 msgstr "彼女"
 
-#: ../src/mon-lore.c:747
-#, fuzzy
+#: ../src/mon-lore.c:748
 msgid "its"
-msgstr "それ"
+msgstr "その"
 
-#: ../src/mon-lore.c:747
-#, fuzzy
+#: ../src/mon-lore.c:748
 msgid "Its"
-msgstr "それ"
+msgstr "その"
 
-#: ../src/mon-lore.c:748
-#, fuzzy
+#: ../src/mon-lore.c:749
 msgid "his"
-msgstr "この"
+msgstr "彼の"
 
-#: ../src/mon-lore.c:748
+#: ../src/mon-lore.c:749
 msgid "His"
-msgstr ""
+msgstr "彼の"
 
-#: ../src/mon-lore.c:749
-#, fuzzy
+#: ../src/mon-lore.c:750
 msgid "her"
-msgstr "彼"
+msgstr "彼女"
 
-#: ../src/mon-lore.c:749
-#, fuzzy
+#: ../src/mon-lore.c:750
 msgid "Her"
-msgstr "彼"
+msgstr "彼女"
 
-#: ../src/mon-lore.c:795 ../src/mon-lore.c:798 ../src/mon-lore.c:841
-#: ../src/mon-lore.c:844 ../src/mon-lore.c:1036
-#, fuzzy
+#: ../src/mon-lore.c:792
+msgid ","
+msgstr "・"
+
+#: ../src/mon-lore.c:796 ../src/mon-lore.c:799 ../src/mon-lore.c:842
+#: ../src/mon-lore.c:845 ../src/mon-lore.c:1037
 msgid " "
-msgstr "、"
+msgstr " "
 
-#: ../src/mon-lore.c:887
+#: ../src/mon-lore.c:888
 #, c-format
 msgid "%s has slain %d of your ancestors"
 msgstr ""
 
-#: ../src/mon-lore.c:892
+#: ../src/mon-lore.c:893
 msgid ", but you have taken revenge!  "
 msgstr ""
 
-#: ../src/mon-lore.c:896
+#: ../src/mon-lore.c:897
 #, c-format
 msgid ", who %s unavenged.  "
 msgstr ""
 
-#: ../src/mon-lore.c:900
+#: ../src/mon-lore.c:901
 msgid "You have slain this foe.  "
 msgstr ""
 
-#: ../src/mon-lore.c:907
+#: ../src/mon-lore.c:908
 #, c-format
 msgid "%d of your ancestors %s been killed by this creature, "
 msgstr ""
 
-#: ../src/mon-lore.c:911
+#: ../src/mon-lore.c:912
 #, c-format
 msgid "and you have exterminated at least %d of the creatures.  "
 msgstr ""
 
-#: ../src/mon-lore.c:914
+#: ../src/mon-lore.c:915
 #, c-format
 msgid "and your ancestors have exterminated at least %d of the creatures.  "
 msgstr ""
 
-#: ../src/mon-lore.c:917
+#: ../src/mon-lore.c:918
 #, c-format
 msgid "and %s is not ever known to have been defeated.  "
 msgstr ""
 
-#: ../src/mon-lore.c:922
+#: ../src/mon-lore.c:923
 #, c-format
 msgid "You have killed at least %d of these creatures.  "
 msgstr "あなたはこのモンスターを少なくとも%d体倒している。"
 
-#: ../src/mon-lore.c:925
+#: ../src/mon-lore.c:926
 #, c-format
 msgid "Your ancestors have killed at least %d of these creatures.  "
 msgstr "あなたの先祖はこのモンスターを少なくとも%d体倒している。"
 
-#: ../src/mon-lore.c:928
+#: ../src/mon-lore.c:929
 msgid "No battles to the death are recalled.  "
 msgstr "戦いの記録は残されていない。"
 
-#: ../src/mon-lore.c:970
+#: ../src/mon-lore.c:971
 msgid "This"
 msgstr "この"
 
-#: ../src/mon-lore.c:976 ../src/mon-lore.c:985
+#: ../src/mon-lore.c:977 ../src/mon-lore.c:986
 #, c-format
 msgid " %s"
 msgstr "%s"
 
-#: ../src/mon-lore.c:987
+#: ../src/mon-lore.c:988
 msgid " creature"
 msgstr "モンスター"
 
-#: ../src/mon-lore.c:992
+#: ../src/mon-lore.c:993
 msgid " lives in the town"
 msgstr "は町に住んでいる"
 
-#: ../src/mon-lore.c:998
+#: ../src/mon-lore.c:999
 msgid " is found "
 msgstr "は"
 
-#: ../src/mon-lore.c:1000
+#: ../src/mon-lore.c:1001
 msgid " is normally found "
 msgstr "は通常"
 
-#: ../src/mon-lore.c:1003
-#, c-format
-msgid "at depths of %s"
-msgstr "地下%sで出現する"
+#: ../src/mon-lore.c:1004
+msgid "at depths of {}"
+msgstr "地下{}で出現する"
 
-#: ../src/mon-lore.c:1007
+#: ../src/mon-lore.c:1008
 msgid " feet (level "
 msgstr "フィート ("
 
-#: ../src/mon-lore.c:1009
+#: ../src/mon-lore.c:1010
 msgid ")"
 msgstr "階)"
 
-#: ../src/mon-lore.c:1014
-#, c-format
-msgid ", and moves%s"
-msgstr "、そして%s動いている"
+#: ../src/mon-lore.c:1015
+msgid ", and moves{}"
+msgstr "、そして{}動いている"
 
-#: ../src/mon-lore.c:1022
+#: ../src/mon-lore.c:1023
 msgid " extremely"
-msgstr ""
+msgstr "非常に"
 
-#: ../src/mon-lore.c:1024
+#: ../src/mon-lore.c:1025
 msgid " somewhat"
-msgstr ""
+msgstr "いくらか"
 
-#: ../src/mon-lore.c:1026
+#: ../src/mon-lore.c:1027
 msgid " a bit"
-msgstr ""
+msgstr "少し"
 
-#: ../src/mon-lore.c:1029
+#: ../src/mon-lore.c:1030
 msgid " erratically"
-msgstr ""
+msgstr "不規則に"
 
-#: ../src/mon-lore.c:1047
+#: ../src/mon-lore.c:1048
 msgid ", but "
 msgstr "、しかし"
 
-#: ../src/mon-lore.c:1049
+#: ../src/mon-lore.c:1050
 msgid "does not deign to chase intruders"
 msgstr "侵入者を追わない"
 
-#: ../src/mon-lore.c:1053
+#: ../src/mon-lore.c:1054 ../src/mon-lore.c:1100 ../src/mon-lore.c:1450
 msgid ".  "
-msgstr ""
+msgstr "。"
 
-#: ../src/mon-lore.c:1082
+#: ../src/mon-lore.c:1083
 #, c-format
 msgid "%s has a"
-msgstr ""
+msgstr "%sは"
 
-#: ../src/mon-lore.c:1085
+#: ../src/mon-lore.c:1086
 msgid "n average"
-msgstr ""
+msgstr "平均して"
 
-#: ../src/mon-lore.c:1087
-msgid " life rating of "
-msgstr ""
+#: ../src/mon-lore.c:1089
+msgid " life rating of {}"
+msgstr "{}の体力と"
 
-#: ../src/mon-lore.c:1091
-msgid ", and an armor rating of "
-msgstr ""
+#: ../src/mon-lore.c:1096
+msgid ", and an armor rating of {}"
+msgstr "、{}の防御力がある"
 
-#: ../src/mon-lore.c:1100
+#: ../src/mon-lore.c:1107
 msgid "You have a"
-msgstr ""
+msgstr "あなたは"
 
-#: ../src/mon-lore.c:1102
+#: ../src/mon-lore.c:1109
 msgid "n"
-msgstr ""
+msgstr " "
 
-#: ../src/mon-lore.c:1104
+#: ../src/mon-lore.c:1111
 #, c-format
 msgid "%% chance to hit such a creature in melee (if you can see it).  "
-msgstr ""
+msgstr "%%の確率で直接攻撃を当てられる (視認できる場合)。"
 
-#: ../src/mon-lore.c:1679
+#: ../src/mon-lore.c:1350 ../src/mon-lore.c:1378
+msgid "and"
+msgstr " "
+
+#: ../src/mon-lore.c:1370
+msgid ", but resists {}"
+msgstr "が、{}に対して耐性がある"
+
+#: ../src/mon-lore.c:1375
+#, c-format
+msgid "%s resists {}"
+msgstr "%sは{}に対して耐性がある"
+
+#: ../src/mon-lore.c:1409
+msgid ", and does not resist {}"
+msgstr "、そして{}に対する耐性を持っていない"
+
+#: ../src/mon-lore.c:1414
+#, fuzzy, c-format
+msgid "%s does not resist {}"
+msgstr "%sは{}の耐性を持っていない"
+
+#: ../src/mon-lore.c:1424 ../src/mon-lore.c:1444
+msgid "or"
+msgstr " "
+
+#: ../src/mon-lore.c:1435
+msgid ", and cannot be {}"
+msgstr "、そして{}状態にならない"
+
+#: ../src/mon-lore.c:1440
+#, fuzzy, c-format
+msgid "%s cannot be {}"
+msgstr "%sは{}状態にならない"
+
+#: ../src/mon-lore.c:1708
 #, c-format
 msgid "%s can "
 msgstr "%sは"
 
-#: ../src/mon-lore.c:1682
+#: ../src/mon-lore.c:1711
 msgid ", "
 msgstr "、"
 
-#: ../src/mon-lore.c:1684
+#: ../src/mon-lore.c:1713
 msgid ", and "
 msgstr "、"
 
-#: ../src/mon-lore.c:1694
+#: ../src/mon-lore.c:1723
 msgctxt "mon-lore"
 msgid " to "
 msgstr "ことで"
@@ -355,12 +387,12 @@ msgstr "%s"
 #: ../src/ui-birth.c:564
 msgid ""
 "Race affects stats and skills, and may confer resistances and abilities."
-msgstr "種族はステータスやスキルに影響し、抵抗や能力を与えることがあります。"
+msgstr "種族はステータスやスキルに影響し、耐性や能力を与えることがあります。"
 
 #: ../src/ui-birth.c:577
 #, fuzzy
 msgid "Class affects stats, skills, and other character traits."
-msgstr "種族はステータスやスキルに影響し、抵抗や能力を与えることがあります。"
+msgstr "職業はステータス、スキル、その他の特性に影響します。"
 
 #: ../src/ui-birth.c:623
 msgid ""

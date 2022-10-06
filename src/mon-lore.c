@@ -19,6 +19,7 @@
 #include "angband.h"
 #include "effects.h"
 #include "game-world.h"
+#include "i18n.h"
 #include "init.h"
 #include "mon-attack.h"
 #include "mon-blows.h"
@@ -638,7 +639,7 @@ static void lore_adjective_speed(textblock *tb, const struct monster_race *race)
 	/* "at" is separate from the normal speed description in order to use the
 	 * normal text colour */
 	if (race->speed == 110)
-		textblock_append(tb, "at ");
+		textblock_append(tb, _("at "));
 
 	textblock_append_c(tb, COLOUR_GREEN, "%s", lore_describe_speed(race->speed));
 }
@@ -788,7 +789,7 @@ static void lore_append_clause(textblock *tb, bitflag *f, uint8_t attr,
 			/* First entry starts immediately */
 			if (flag != rf_next(f, FLAG_START)) {
 				if (comma) {
-					textblock_append(tb, ",");
+					textblock_append(tb, _(","));
 				}
 				/* Last entry */
 				if (rf_next(f, flag + 1) == FLAG_END) {
@@ -1000,7 +1001,7 @@ void lore_append_movement(textblock *tb, const struct monster_race *race,
 			textblock_append(tb, _(" is normally found "));
 
 		char depth_pre[64], depth_post[64];
-		i18n_text_split(_("at depths of %s"), "%s", depth_pre, depth_post);
+		i18n_text_split(_("at depths of {}"), depth_pre, depth_post);
 
 		textblock_append(tb, depth_pre);
 		textblock_append_c(tb, colour, "%d", race->level * 50);
@@ -1011,7 +1012,7 @@ void lore_append_movement(textblock *tb, const struct monster_race *race,
 	}
 
 	char movement_pre[64], movement_post[64];
-	i18n_text_split(_(", and moves%s"), "%s", movement_pre, movement_post);
+	i18n_text_split(_(", and moves{}"), movement_pre, movement_post);
 
 	textblock_append(tb, movement_pre);
 
@@ -1084,13 +1085,19 @@ void lore_append_toughness(textblock *tb, const struct monster_race *race,
 		if (!rf_has(known_flags, RF_UNIQUE))
 			textblock_append(tb, _("n average"));
 
-		textblock_append(tb, _(" life rating of "));
+		char life_pre[64], life_post[64];
+		i18n_text_split(_(" life rating of {}"), life_pre, life_post);
+		textblock_append(tb, life_pre);
 		textblock_append_c(tb, COLOUR_L_BLUE, "%d", race->avg_hp);
+		textblock_append(tb, life_post);
 
 		/* Armor */
-		textblock_append(tb, _(", and an armor rating of "));
+		char armor_pre[64], armor_post[64];
+		i18n_text_split(_(", and an armor rating of {}"), armor_pre, armor_post);
+		textblock_append(tb, armor_pre);
 		textblock_append_c(tb, COLOUR_L_BLUE, "%d", race->ac);
-		textblock_append(tb, ".  ");
+		textblock_append(tb, armor_post);
+		textblock_append(tb, _(".  "));
 
 		/* Player's base chance to hit */
 		random_chance c;
@@ -1340,7 +1347,7 @@ void lore_append_abilities(textblock *tb, const struct monster_race *race,
 	create_mon_flag_mask(current_flags, RFT_VULN, RFT_VULN_I, RFT_MAX);
 	rf_inter(current_flags, known_flags);
 	my_strcpy(start, format("%s is hurt by ", initial_pronoun), sizeof(start));
-	lore_append_clause(tb, current_flags, COLOUR_VIOLET, start, "and", "");
+	lore_append_clause(tb, current_flags, COLOUR_VIOLET, start, _("and"), "");
 	if (!rf_is_empty(current_flags)) {
 		prev = true;
 	}
@@ -1357,11 +1364,18 @@ void lore_append_abilities(textblock *tb, const struct monster_race *race,
 			rf_on(current_flags, flag);
 		}
 	}
+	char resist_pre[64], resist_post[64];
 	if (prev)
-		my_strcpy(start, ", but resists ", sizeof(start));
+	{
+		i18n_text_split(_(", but resists {}"), resist_pre, resist_post);
+		my_strcpy(start, resist_pre, sizeof(start));
+	}
 	else
-		my_strcpy(start, format("%s resists ", initial_pronoun), sizeof(start));
-	lore_append_clause(tb, current_flags, COLOUR_L_UMBER, start, "and", "");
+	{
+		i18n_text_split(_("%s resists {}"), resist_pre, resist_post);
+		my_strcpy(start, format(resist_pre, initial_pronoun), sizeof(start));
+	}
+	lore_append_clause(tb, current_flags, COLOUR_L_UMBER, start, _("and"), resist_post);
 	if (!rf_is_empty(current_flags)) {
 		prev = true;
 	}
@@ -1388,18 +1402,26 @@ void lore_append_abilities(textblock *tb, const struct monster_race *race,
 				rf_off(current_flags, susc_flag);
 		}
 	}
+
+	char noresist_pre[64], noresist_post[64];
 	if (prev)
-		my_strcpy(start, ", and does not resist ", sizeof(start));
+	{
+		i18n_text_split(_(", and does not resist {}"), noresist_pre, noresist_post);
+		my_strcpy(start,noresist_pre, sizeof(start));
+	}
 	else
-		my_strcpy(start, format("%s does not resist ", initial_pronoun),
+	{
+		i18n_text_split(_("%s does not resist {}"), noresist_pre, noresist_post);
+		my_strcpy(start, format(noresist_pre, initial_pronoun),
 				  sizeof(start));
+	}
 
 	/* Special case for undead */
 	if (rf_has(known_flags, RF_UNDEAD)) {
 		rf_off(current_flags, RF_IM_NETHER);
 	}
 
-	lore_append_clause(tb, current_flags, COLOUR_L_UMBER, start, "or", "");
+	lore_append_clause(tb, current_flags, COLOUR_L_UMBER, start, _("or"), noresist_post);
 	if (!rf_is_empty(current_flags)) {
 		prev = true;
 	}
@@ -1407,18 +1429,25 @@ void lore_append_abilities(textblock *tb, const struct monster_race *race,
 	/* Collect non-effects */
 	create_mon_flag_mask(current_flags, RFT_PROT, RFT_MAX);
 	rf_inter(current_flags, known_flags);
+	char noneffect_pre[64], noneffect_post[64];
 	if (prev)
-		my_strcpy(start, ", and cannot be ", sizeof(start));
+	{
+		i18n_text_split(_(", and cannot be {}"), noneffect_pre, noneffect_post);
+		my_strcpy(start, noneffect_pre, sizeof(start));
+	}
 	else
-		my_strcpy(start, format("%s cannot be ", initial_pronoun),
+	{
+		i18n_text_split(_("%s cannot be {}"), noneffect_pre, noneffect_post);
+		my_strcpy(start, format(noneffect_pre, initial_pronoun),
 				  sizeof(start));
-	lore_append_clause(tb, current_flags, COLOUR_L_UMBER, start, "or", "");
+	}
+	lore_append_clause(tb, current_flags, COLOUR_L_UMBER, start, _("or"), noneffect_post);
 	if (!rf_is_empty(current_flags)) {
 		prev = true;
 	}
 
 	if (prev)
-		textblock_append(tb, ".  ");
+		textblock_append(tb, _(".  "));
 }
 
 /**
@@ -1684,7 +1713,7 @@ void lore_append_attack(textblock *tb, const struct monster_race *race,
 			textblock_append(tb, _(", and "));
 
 		/* Describe the method */
-		textblock_append(tb, "%s", GAMEDATA_C_("blow_effects", race->blow[i].method->desc));
+		textblock_append(tb, "%s", GAMEDATA_(race->blow[i].method->desc));
 
 		/* Describe the effect (if any) */
 		if (effect_str && strlen(effect_str) > 0) {
@@ -1692,7 +1721,7 @@ void lore_append_attack(textblock *tb, const struct monster_race *race,
 			/* Describe the attack type */
 			// XXX[locale]: " to " usage differs to describe_effect() in obj-info.c
 			textblock_append(tb, _C("mon-lore", " to "));
-			textblock_append_c(tb, blow_color(player, index), "%s", GAMEDATA_(effect_str));
+			textblock_append_c(tb, blow_color(player, index), "%s", GAMEDATA_C_("blow_effects", effect_str));
 
 			textblock_append(tb, " (");
 			/* Describe damage (if known) */

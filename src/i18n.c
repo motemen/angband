@@ -24,7 +24,8 @@ int i18n_text_visualwidth(wchar_t *s)
 	return w;
 }
 
-bool i18n_text_split(const char *s, const char *sep, char *pre, char *post) {
+bool i18n_text_split(const char *s, char *pre, char *post) {
+	static const char *sep = "{}";
 	char *p = strstr(s, sep);
 	if (!p) return false;
 

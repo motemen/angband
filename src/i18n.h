@@ -24,6 +24,7 @@
 #define MAX_CHAR_VISUAL_WIDTH 2
 #else
 #define _(string) (string)
+#define _C(ctx, msgid) (msgid)
 #define N_(string) (string)
 #define GAMEDATA_(string) (string)
 #define GAMEDATA_N_(string) (string)
@@ -35,6 +36,6 @@
 bool i18n_is_doublewidth(wchar_t ch);
 int i18n_wchar_visualwidth(wchar_t ch);
 int i18n_text_visualwidth(wchar_t *s);
-bool i18n_text_split(const char *s, const char *sep, char *pre, char *post);
+bool i18n_text_split(const char *s, char *pre, char *post);
 
 #endif /* INCLUDED_I18N_H */
