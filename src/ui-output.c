@@ -17,6 +17,7 @@
  */
 #include "angband.h"
 #include "cave.h"
+#include "i18n.h"
 #include "player-calcs.h"
 #include "ui-input.h"
 #include "ui-output.h"
@@ -117,7 +118,7 @@ static void display_area(const wchar_t *text, const uint8_t *attrs,
 			Term_putch(area.col + c, area.row + i,
 					attrs[line_starts[line_from + i] + j],
 					text[line_starts[line_from + i] + j]);
-			c += i18n_is_doublewidth(text[line_starts[line_from + i] + j]) ? 2 : 1;
+			c += i18n_wchar_visualwidth(text[line_starts[line_from + i] + j]);
 		}
 	}
 }

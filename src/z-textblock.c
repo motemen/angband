@@ -27,6 +27,7 @@
 #include "z-virt.h"
 #include "z-form.h"
 #include "z-file.h"
+#include "i18n.h"
 
 #define TEXTBLOCK_LEN_INITIAL		128
 #define TEXTBLOCK_LEN_INCR(x)		((x) + 128)
@@ -233,6 +234,7 @@ size_t textblock_calculate_lines(textblock *tb, size_t **line_starts, size_t **l
 	size_t total_lines = 0;
 	size_t current_line_index = 0;
 	size_t current_line_length = 0;
+	size_t current_line_width = 0;
 	size_t breaking_char_offset = 0;
 
 	if (tb == NULL || line_starts == NULL || line_lengths == NULL || width == 0)
@@ -252,16 +254,19 @@ size_t textblock_calculate_lines(textblock *tb, size_t **line_starts, size_t **l
 			new_line(line_starts, line_lengths, &alloc_lines, &total_lines, text_offset + 1, 0);
 			current_line_index++;
 			current_line_length = 0;
+			current_line_width = 0;
 		}
 		else if (text[text_offset] == L' ') {
 			breaking_char_offset = text_offset;
 			current_line_length++;
+			current_line_width++;
 		}
 		else {
 			current_line_length++;
+			current_line_width += i18n_wchar_visualwidth(text[text_offset]);
 		}
 
-		if (current_line_length == width) {
+		if (current_line_width + (MAX_CHAR_VISUAL_WIDTH-1) >= width) {
 			/* We're out of space on the line and need to break it. */
 
 			size_t const current_line_start = (*line_starts)[current_line_index];
@@ -281,7 +286,7 @@ size_t textblock_calculate_lines(textblock *tb, size_t **line_starts, size_t **l
 				/* There was no breaking character on the current line, so we
 				 * just break at the current character. This can happen with a 
 				 * word that takes up the whole line, for example. */
-				adjusted_line_length = width;
+				adjusted_line_length = current_line_length;
 				next_line_start_offset = text_offset + 1;
 				text_offset++;
 			}
@@ -290,6 +295,7 @@ size_t textblock_calculate_lines(textblock *tb, size_t **line_starts, size_t **l
 			new_line(line_starts, line_lengths, &alloc_lines, &total_lines, next_line_start_offset, 0);
 			current_line_index++;
 			current_line_length = 0;
+			current_line_width = 0;
 		}
 		else {
 			/* There is still space on the line, so just add the character. */

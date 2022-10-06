@@ -21,6 +21,7 @@
   strcmp(t, buf) == 0 ? (msgid) : t; \
 })
 #define STATIC_CONST_ const
+#define MAX_CHAR_VISUAL_WIDTH 2
 #else
 #define _(string) (string)
 #define N_(string) (string)
@@ -28,6 +29,7 @@
 #define GAMEDATA_N_(string) (string)
 #define GAMEDATA_C_(ctx, string) (string)
 #define STATIC_CONST_ static const
+#define MAX_CHAR_VISUAL_WIDTH 1
 #endif
 
 bool i18n_is_doublewidth(wchar_t ch);
