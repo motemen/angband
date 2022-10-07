@@ -155,217 +155,311 @@ msgstr ""
 msgid "Her"
 msgstr ""
 
-#: ../src/mon-lore.c:792
+#: ../src/mon-lore.c:793
 msgid ","
 msgstr ""
 
-#: ../src/mon-lore.c:796 ../src/mon-lore.c:799 ../src/mon-lore.c:842
-#: ../src/mon-lore.c:845 ../src/mon-lore.c:1037
+#: ../src/mon-lore.c:797 ../src/mon-lore.c:800 ../src/mon-lore.c:843
+#: ../src/mon-lore.c:846 ../src/mon-lore.c:1038
 msgid " "
 msgstr ""
 
-#: ../src/mon-lore.c:888
+#: ../src/mon-lore.c:889
 #, c-format
 msgid "%s has slain %d of your ancestors"
 msgstr ""
 
-#: ../src/mon-lore.c:893
+#: ../src/mon-lore.c:894
 msgid ", but you have taken revenge!  "
 msgstr ""
 
-#: ../src/mon-lore.c:897
+#: ../src/mon-lore.c:898
 #, c-format
 msgid ", who %s unavenged.  "
 msgstr ""
 
-#: ../src/mon-lore.c:901
+#: ../src/mon-lore.c:902
 msgid "You have slain this foe.  "
 msgstr ""
 
-#: ../src/mon-lore.c:908
+#: ../src/mon-lore.c:909
 #, c-format
 msgid "%d of your ancestors %s been killed by this creature, "
 msgstr ""
 
-#: ../src/mon-lore.c:912
+#: ../src/mon-lore.c:913
 #, c-format
 msgid "and you have exterminated at least %d of the creatures.  "
 msgstr ""
 
-#: ../src/mon-lore.c:915
+#: ../src/mon-lore.c:916
 #, c-format
 msgid "and your ancestors have exterminated at least %d of the creatures.  "
 msgstr ""
 
-#: ../src/mon-lore.c:918
+#: ../src/mon-lore.c:919
 #, c-format
 msgid "and %s is not ever known to have been defeated.  "
 msgstr ""
 
-#: ../src/mon-lore.c:923
+#: ../src/mon-lore.c:924
 #, c-format
 msgid "You have killed at least %d of these creatures.  "
 msgstr ""
 
-#: ../src/mon-lore.c:926
+#: ../src/mon-lore.c:927
 #, c-format
 msgid "Your ancestors have killed at least %d of these creatures.  "
 msgstr ""
 
-#: ../src/mon-lore.c:929
+#: ../src/mon-lore.c:930
 msgid "No battles to the death are recalled.  "
 msgstr ""
 
-#: ../src/mon-lore.c:971
+#: ../src/mon-lore.c:972
 msgid "This"
 msgstr ""
 
-#: ../src/mon-lore.c:977 ../src/mon-lore.c:986
+#: ../src/mon-lore.c:978 ../src/mon-lore.c:987
 #, c-format
 msgid " %s"
 msgstr ""
 
-#: ../src/mon-lore.c:988
+#: ../src/mon-lore.c:989
 msgid " creature"
 msgstr ""
 
-#: ../src/mon-lore.c:993
+#: ../src/mon-lore.c:994
 msgid " lives in the town"
 msgstr ""
 
-#: ../src/mon-lore.c:999
+#: ../src/mon-lore.c:1000
 msgid " is found "
 msgstr ""
 
-#: ../src/mon-lore.c:1001
+#: ../src/mon-lore.c:1002
 msgid " is normally found "
 msgstr ""
 
-#: ../src/mon-lore.c:1004
+#: ../src/mon-lore.c:1005
 msgid "at depths of {}"
 msgstr ""
 
-#: ../src/mon-lore.c:1008
+#: ../src/mon-lore.c:1009
 msgid " feet (level "
 msgstr ""
 
-#: ../src/mon-lore.c:1010
+#: ../src/mon-lore.c:1011
 msgid ")"
 msgstr ""
 
-#: ../src/mon-lore.c:1015
+#: ../src/mon-lore.c:1016
 msgid ", and moves{}"
 msgstr ""
 
-#: ../src/mon-lore.c:1023
+#: ../src/mon-lore.c:1024
 msgid " extremely"
 msgstr ""
 
-#: ../src/mon-lore.c:1025
+#: ../src/mon-lore.c:1026
 msgid " somewhat"
 msgstr ""
 
-#: ../src/mon-lore.c:1027
+#: ../src/mon-lore.c:1028
 msgid " a bit"
 msgstr ""
 
-#: ../src/mon-lore.c:1030
+#: ../src/mon-lore.c:1031
 msgid " erratically"
 msgstr ""
 
-#: ../src/mon-lore.c:1048
+#: ../src/mon-lore.c:1049
 msgid ", but "
 msgstr ""
 
-#: ../src/mon-lore.c:1050
+#: ../src/mon-lore.c:1051
 msgid "does not deign to chase intruders"
 msgstr ""
 
-#: ../src/mon-lore.c:1054 ../src/mon-lore.c:1100 ../src/mon-lore.c:1450
+#: ../src/mon-lore.c:1055 ../src/mon-lore.c:1101 ../src/mon-lore.c:1457
+#: ../src/mon-lore.c:1640
 msgid ".  "
 msgstr ""
 
-#: ../src/mon-lore.c:1083
+#: ../src/mon-lore.c:1084
 #, c-format
 msgid "%s has a"
 msgstr ""
 
-#: ../src/mon-lore.c:1086
+#: ../src/mon-lore.c:1087
 msgid "n average"
 msgstr ""
 
-#: ../src/mon-lore.c:1089
+#: ../src/mon-lore.c:1090
 msgid " life rating of {}"
 msgstr ""
 
-#: ../src/mon-lore.c:1096
+#: ../src/mon-lore.c:1097
 msgid ", and an armor rating of {}"
 msgstr ""
 
-#: ../src/mon-lore.c:1107
+#: ../src/mon-lore.c:1108
 msgid "You have a"
 msgstr ""
 
-#: ../src/mon-lore.c:1109
+#: ../src/mon-lore.c:1110
 msgid "n"
 msgstr ""
 
-#: ../src/mon-lore.c:1111
+#: ../src/mon-lore.c:1112
 #, c-format
 msgid "%% chance to hit such a creature in melee (if you can see it).  "
 msgstr ""
 
-#: ../src/mon-lore.c:1350 ../src/mon-lore.c:1378
+#: ../src/mon-lore.c:1316
+#, c-format
+msgid "%s can {}.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1318 ../src/mon-lore.c:1326 ../src/mon-lore.c:1357
+#: ../src/mon-lore.c:1385
 msgid "and"
 msgstr ""
 
-#: ../src/mon-lore.c:1370
+#: ../src/mon-lore.c:1324
+#, c-format
+msgid "%s is {}.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1330
+#, c-format
+msgid "%s disguises itself as something else.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1333
+#, c-format
+msgid "%s breeds explosively.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1336
+#, c-format
+msgid "%s regenerates quickly.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1340
+#, c-format
+msgid "%s illuminates %s surroundings.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1343
+#, c-format
+msgid "%s is illuminated.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1345
+#, c-format
+msgid "%s is darkened.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1347
+#, c-format
+msgid "%s shrouds %s surroundings in darkness.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1355
+#, c-format
+msgid "%s is hurt by {}"
+msgstr ""
+
+#: ../src/mon-lore.c:1377
 msgid ", but resists {}"
 msgstr ""
 
-#: ../src/mon-lore.c:1375
+#: ../src/mon-lore.c:1382
 #, c-format
 msgid "%s resists {}"
 msgstr ""
 
-#: ../src/mon-lore.c:1409
+#: ../src/mon-lore.c:1416
 msgid ", and does not resist {}"
 msgstr ""
 
-#: ../src/mon-lore.c:1414
+#: ../src/mon-lore.c:1421
 #, c-format
 msgid "%s does not resist {}"
 msgstr ""
 
-#: ../src/mon-lore.c:1424 ../src/mon-lore.c:1444
+#: ../src/mon-lore.c:1431 ../src/mon-lore.c:1451 ../src/mon-lore.c:1617
 msgid "or"
 msgstr ""
 
-#: ../src/mon-lore.c:1435
+#: ../src/mon-lore.c:1442
 msgid ", and cannot be {}"
 msgstr ""
 
-#: ../src/mon-lore.c:1440
+#: ../src/mon-lore.c:1447
 #, c-format
 msgid "%s cannot be {}"
 msgstr ""
 
-#: ../src/mon-lore.c:1708
+#: ../src/mon-lore.c:1484
+#, c-format
+msgid "%s %s intruders, which %s may notice from "
+msgstr ""
+
+#: ../src/mon-lore.c:1608
+#, c-format
+msgid "%s may {red}cast spells{/}%s which {}"
+msgstr ""
+
+#: ../src/mon-lore.c:1612
+msgid " intelligently"
+msgstr ""
+
+#: ../src/mon-lore.c:1671
+#, c-format
+msgid "%s has no physical attacks.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1691
+#, c-format
+msgid "Nothing is known about %s attack.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1713
 #, c-format
 msgid "%s can "
 msgstr ""
 
-#: ../src/mon-lore.c:1711
+#: ../src/mon-lore.c:1716
 msgid ", "
 msgstr ""
 
-#: ../src/mon-lore.c:1713
+#: ../src/mon-lore.c:1718
 msgid ", and "
 msgstr ""
 
-#: ../src/mon-lore.c:1723
+#: ../src/mon-lore.c:1728
 msgctxt "mon-lore"
 msgid " to "
+msgstr ""
+
+#: ../src/mon-lore.c:1760
+msgid ", averaging"
+msgstr ""
+
+#: ../src/mon-lore.c:1762
+msgid " at least"
+msgstr ""
+
+#: ../src/mon-lore.c:1764
+#, c-format
+msgid " %d"
+msgstr ""
+
+#: ../src/mon-lore.c:1765
+#, c-format
+msgid " damage on each of %s turns.  "
 msgstr ""
 
 #: ../src/mon-msg.c:254

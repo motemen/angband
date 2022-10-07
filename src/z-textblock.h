@@ -43,6 +43,9 @@ void textblock_append_c(textblock *tb, uint8_t attr, const char *fmt, ...)
 	__attribute ((format (printf, 3, 4)))
 #endif
 ;
+
+void textblock_append_e(textblock *tb, const char *fmt, ...);
+
 void textblock_append_pict(textblock *tb, uint8_t attr, int c);
 void textblock_append_textblock(textblock *tb, const textblock *tba);
 

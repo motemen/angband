@@ -12,7 +12,7 @@ msgstr ""
 # ../lib/gamedata/blow_effects.txt:25
 msgctxt "blow_effects"
 msgid "attack"
-msgstr "攻撃する"
+msgstr "ダメージを与える"
 
 # ../lib/gamedata/blow_effects.txt:32
 msgctxt "blow_effects"

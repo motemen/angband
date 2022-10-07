@@ -775,6 +775,7 @@ static const char *lore_pronoun_possessive(monster_sex_t sex, bool title_case)
  * \param conjunction is a string that is added before the last item.
  * \param end is a string that is added after the last item.
  */
+// TODO[locale]: totally rewrite function for i18n
 static void lore_append_clause(textblock *tb, bitflag *f, uint8_t attr,
 							   const char *start, const char *conjunction,
 							   const char *end)
@@ -1311,43 +1312,49 @@ void lore_append_abilities(textblock *tb, const struct monster_race *race,
 	/* Describe environment-shaping abilities. */
 	create_mon_flag_mask(current_flags, RFT_ALTER, RFT_MAX);
 	rf_inter(current_flags, known_flags);
-	my_strcpy(start, format("%s can ", initial_pronoun), sizeof(start));
-	lore_append_clause(tb, current_flags, COLOUR_WHITE, start, "and", ".  ");
+	char abilities_pre[64], abilities_post[64];
+	i18n_text_split(_("%s can {}.  "), abilities_pre, abilities_post);
+	my_strcpy(start, format(abilities_pre, initial_pronoun), sizeof(start));
+	lore_append_clause(tb, current_flags, COLOUR_WHITE, start, _("and"), abilities_post);
 
 	/* Describe detection traits */
 	create_mon_flag_mask(current_flags, RFT_DET, RFT_MAX);
 	rf_inter(current_flags, known_flags);
-	my_strcpy(start, format("%s is ", initial_pronoun), sizeof(start));
-	lore_append_clause(tb, current_flags, COLOUR_WHITE, start, "and", ".  ");
+	char detection_pre[64], detection_post[64];
+	i18n_text_split(_("%s is {}.  "), detection_pre, detection_post);
+	my_strcpy(start, format(detection_pre, initial_pronoun), sizeof(start));
+	lore_append_clause(tb, current_flags, COLOUR_WHITE, start, _("and"), detection_post);
 
 	/* Describe special things */
 	if (rf_has(known_flags, RF_UNAWARE))
-		textblock_append(tb, "%s disguises itself as something else.  ",
+		textblock_append(tb, _("%s disguises itself as something else.  "),
 						 initial_pronoun);
 	if (rf_has(known_flags, RF_MULTIPLY))
-		textblock_append_c(tb, COLOUR_ORANGE, "%s breeds explosively.  ",
+		textblock_append_c(tb, COLOUR_ORANGE, _("%s breeds explosively.  "),
 						   initial_pronoun);
 	if (rf_has(known_flags, RF_REGENERATE))
-		textblock_append(tb, "%s regenerates quickly.  ", initial_pronoun);
+		textblock_append(tb, _("%s regenerates quickly.  "), initial_pronoun);
 
 	/* Describe light */
 	if (race->light > 1) {
-		textblock_append(tb, "%s illuminates %s surroundings.  ",
+		textblock_append(tb, _("%s illuminates %s surroundings.  "),
 						 initial_pronoun, lore_pronoun_possessive(msex, false));
 	} else if (race->light == 1) {
-		textblock_append(tb, "%s is illuminated.  ", initial_pronoun);
+		textblock_append(tb, _("%s is illuminated.  "), initial_pronoun);
 	} else if (race->light == -1) {
-		textblock_append(tb, "%s is darkened.  ", initial_pronoun);
+		textblock_append(tb, _("%s is darkened.  "), initial_pronoun);
 	} else if (race->light < -1) {
-		textblock_append(tb, "%s shrouds %s surroundings in darkness.  ",
+		textblock_append(tb, _("%s shrouds %s surroundings in darkness.  "),
 						 initial_pronoun, lore_pronoun_possessive(msex, false));
 	}
 
 	/* Collect susceptibilities */
 	create_mon_flag_mask(current_flags, RFT_VULN, RFT_VULN_I, RFT_MAX);
 	rf_inter(current_flags, known_flags);
-	my_strcpy(start, format("%s is hurt by ", initial_pronoun), sizeof(start));
-	lore_append_clause(tb, current_flags, COLOUR_VIOLET, start, _("and"), "");
+	char susc_pre[64], susc_post[64];
+	i18n_text_split(_("%s is hurt by {}"), susc_pre, susc_post);
+	my_strcpy(start, format(susc_pre, initial_pronoun), sizeof(start));
+	lore_append_clause(tb, current_flags, COLOUR_VIOLET, start, _("and"), susc_post);
 	if (!rf_is_empty(current_flags)) {
 		prev = true;
 	}
@@ -1474,7 +1481,7 @@ void lore_append_awareness(textblock *tb, const struct monster_race *race,
 	if (lore->sleep_known)
 	{
 		const char *aware = lore_describe_awareness(race->sleep);
-		textblock_append(tb, "%s %s intruders, which %s may notice from ",
+		textblock_append(tb, _("%s %s intruders, which %s may notice from "),
 						 lore_pronoun_nominative(msex, true), aware,
 						 lore_pronoun_nominative(msex, false));
 		textblock_append_c(tb, COLOUR_L_BLUE, "%d", 10 * race->hearing);
@@ -1597,19 +1604,17 @@ void lore_append_spells(textblock *tb, const struct monster_race *race,
 	create_mon_spell_mask(test_flags, RST_BREATH, RST_INNATE, RST_NONE);
 	rsf_diff(current_flags, test_flags);
 	if (!rsf_is_empty(current_flags)) {
-		/* Intro */
-		textblock_append(tb, "%s may ", initial_pronoun);
+		char spell_pre[64], spell_post[64];
+		i18n_text_split(_("%s may {red}cast spells{/}%s which {}"), spell_pre, spell_post);
 
-		/* Verb Phrase */
-		textblock_append_c(tb, COLOUR_L_RED, "cast spells");
-
-		/* Adverb */
+		const char *intelligent_adverb = "";
 		if (rf_has(known_flags, RF_SMART))
-			textblock_append(tb, " intelligently");
+			intelligent_adverb = _(" intelligently");
+
+		textblock_append_e(tb, spell_pre, initial_pronoun, intelligent_adverb);
 
 		/* List */
-		textblock_append(tb, " which ");
-		lore_append_spell_clause(tb, current_flags, know_hp, race, "or", "");
+		lore_append_spell_clause(tb, current_flags, know_hp, race, _("or"), spell_post);
 
 		/* End the sentence about innate/other spells */
 		if (race->freq_spell) {
@@ -1632,7 +1637,7 @@ void lore_append_spells(textblock *tb, const struct monster_race *race,
 			}
 		}
 
-		textblock_append(tb, ".  ");
+		textblock_append(tb, _(".  "));
 	}
 }
 
@@ -1663,7 +1668,7 @@ void lore_append_attack(textblock *tb, const struct monster_race *race,
 
 	/* Notice lack of attacks */
 	if (rf_has(known_flags, RF_NEVER_BLOW)) {
-		textblock_append(tb, "%s has no physical attacks.  ",
+		textblock_append(tb, _("%s has no physical attacks.  "),
 						 lore_pronoun_nominative(msex, true));
 		return;
 	}
@@ -1683,7 +1688,7 @@ void lore_append_attack(textblock *tb, const struct monster_race *race,
 
 	/* Describe the lack of knowledge */
 	if (known_attacks == 0) {
-		textblock_append_c(tb, COLOUR_ORANGE, "Nothing is known about %s attack.  ",
+		textblock_append_c(tb, COLOUR_ORANGE, _("Nothing is known about %s attack.  "),
 						 lore_pronoun_possessive(msex, false));
 		return;
 	}
@@ -1752,12 +1757,12 @@ void lore_append_attack(textblock *tb, const struct monster_race *race,
 		described_count++;
 	}
 
-	textblock_append(tb, ", averaging");
+	textblock_append(tb, _(", averaging"));
 	if (known_attacks < total_attacks) {
-		textblock_append_c(tb, COLOUR_ORANGE, " at least");
+		textblock_append_c(tb, COLOUR_ORANGE, _(" at least"));
 	}
-	textblock_append_c(tb, COLOUR_L_GREEN, " %d", total_centidamage/100);
-	textblock_append(tb, " damage on each of %s turns.  ",
+	textblock_append_c(tb, COLOUR_L_GREEN, _(" %d"), total_centidamage/100);
+	textblock_append(tb, _(" damage on each of %s turns.  "),
 					 lore_pronoun_possessive(msex, false));
 }
 

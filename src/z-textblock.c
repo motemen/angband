@@ -28,6 +28,7 @@
 #include "z-form.h"
 #include "z-file.h"
 #include "i18n.h"
+#include <stdarg.h>
 
 #define TEXTBLOCK_LEN_INITIAL		128
 #define TEXTBLOCK_LEN_INCR(x)		((x) + 128)
@@ -85,12 +86,9 @@ static void textblock_resize_if_needed(textblock *tb, size_t additional_size)
 	}
 }
 
-static void textblock_vappend_c(textblock *tb, uint8_t attr, const char *fmt,
-		va_list vp)
-{
+char *alloc_fmt_v(const char *fmt, va_list vp) {
 	size_t temp_len = TEXTBLOCK_LEN_INITIAL;
 	char *temp_space = mem_zalloc(temp_len);
-	int new_length;
 
 	/* We have to format the incoming string in native (external) format
 	 * re-allocating the temporary space as necessary. Once it's been
@@ -111,6 +109,15 @@ static void textblock_vappend_c(textblock *tb, uint8_t attr, const char *fmt,
 		temp_len = TEXTBLOCK_LEN_INCR(temp_len);
 		temp_space = mem_realloc(temp_space, temp_len * sizeof *temp_space);
 	}
+
+	return temp_space;
+}
+
+static void textblock_vappend_c(textblock *tb, uint8_t attr, const char *fmt,
+		va_list vp)
+{
+	char *temp_space = alloc_fmt_v(fmt, vp);
+	int new_length;
 
 	/* Get extent of addition in wide chars */
 	new_length = text_mbstowcs(NULL, temp_space, 0);
@@ -732,3 +739,52 @@ errr text_lines_to_file(const char *path, text_writer writer)
 	return 0;
 }
 
+/**
+ * Add text to a text block, formatted
+ * and takes "embedded formatting" same as text_out_e() does
+ */
+void textblock_append_e(textblock *tb, const char *fmt, ...) {
+	va_list vp;
+	va_start(vp, fmt);
+	char *temp_space = alloc_fmt_v(fmt, vp);
+	va_end(vp);
+
+	char smallbuf[1024];
+	const char *start, *next, *text, *tag;
+	size_t textlen, taglen = 0;
+	start = temp_space;
+	while (next_section(start, 0, &text, &textlen, &tag, &taglen, &next)) {
+		int a = -1;
+
+		memcpy(smallbuf, text, textlen);
+		smallbuf[textlen] = 0;
+
+		if (tag) {
+			char tagbuffer[16];
+
+			/* Colour names are less than 16 characters long. */
+			assert(taglen < 16);
+
+			memcpy(tagbuffer, tag, taglen);
+			tagbuffer[taglen] = '\0';
+
+			a = color_text_to_attr(tagbuffer);
+		}
+		
+		if (a == -1) 
+			a = COLOUR_WHITE;
+
+		/* Get extent of addition in wide chars */
+		size_t new_length = text_mbstowcs(NULL, smallbuf, 0);
+		assert(new_length >= 0); /* If this fails, the string was badly formed */
+		textblock_resize_if_needed(tb, new_length + 1);
+
+		/* Convert to wide chars, into the text block buffer */
+		text_mbstowcs(tb->text + tb->strlen, smallbuf, tb->size - tb->strlen);
+		memset(tb->attrs + tb->strlen, a, new_length);
+		tb->strlen += new_length;
+
+		start = next;
+	}
+	mem_free(temp_space);
+}

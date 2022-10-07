@@ -15,7 +15,7 @@ msgstr "{target}を攻撃した"
 
 # ../lib/gamedata/blow_methods.txt:22
 msgid "hit"
-msgstr "殴る"
+msgstr "攻撃する"
 
 # ../lib/gamedata/blow_methods.txt:29
 msgid "touches {target}"
