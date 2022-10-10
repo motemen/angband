@@ -1128,7 +1128,6 @@ void lore_append_exp(textblock *tb, const struct monster_race *race,
 					 const struct monster_lore *lore,
 					 bitflag known_flags[RF_SIZE])
 {
-	const char *ordinal, *article;
 	char buf[20] = "";
 	long exp_integer, exp_fraction;
 	int16_t level;
@@ -1138,12 +1137,11 @@ void lore_append_exp(textblock *tb, const struct monster_race *race,
 	if (!race->rarity) return;
 
 	/* Introduction */
+	const char *killof_part;
 	if (rf_has(known_flags, RF_UNIQUE))
-		textblock_append(tb, "Killing");
+		killof_part = _("Killing");
 	else
-		textblock_append(tb, "A kill of");
-
-	textblock_append(tb, " this creature");
+		killof_part = _("A kill of");
 
 	/* calculate the integer exp part */
 	exp_integer = (long)race->mexp * race->level / player->lev;
@@ -1159,13 +1157,20 @@ void lore_append_exp(textblock *tb, const struct monster_race *race,
 		my_strcat(buf, format(".%02ld", exp_fraction), sizeof(buf));
 
 	/* Mention the experience */
-	textblock_append(tb, " is worth ");
-	textblock_append_c(tb, COLOUR_BLUE, "%s point%s", buf,
-		PLURAL((exp_integer == 1) && (exp_fraction == 0)));
+	char points_part[64];
+	strnfmt(points_part, sizeof(points_part),
+		ngettext("%s point", "%s points", (exp_integer == 1) && (exp_fraction == 0) ? 1 : 2),
+		buf);
 
+	/* Mention the dependance on the player's level */
+	char level_part[64];
+	level = player->lev % 10;
+	#ifdef USE_LOCALE
+	strnfmt(level_part, sizeof(level_part), "%u", level);
+	#else
+	const char *ordinal, *article;
 	/* Take account of annoying English */
 	ordinal = "th";
-	level = player->lev % 10;
 	if ((player->lev / 10) == 1) /* nothing */;
 	else if (level == 1) ordinal = "st";
 	else if (level == 2) ordinal = "nd";
@@ -1176,9 +1181,17 @@ void lore_append_exp(textblock *tb, const struct monster_race *race,
 	level = player->lev;
 	if ((level == 8) || (level == 11) || (level == 18)) article = "an";
 
-	/* Mention the dependance on the player's level */
-	textblock_append(tb, " for %s %u%s level character.  ", article,
-					 level, ordinal);
+	strnfmt(level_part, sizeof(level_part), "%s %u%s", article, level, ordinal);
+	#endif
+
+	// NOTE[i18n]: Here we need to use snprintf(), as specifying argument order by %1$s, %2$s, etc.
+	// is not supported by strnfmt().
+	// TODO: check if snprintf() is POSIX compliant.
+	char buf_sentence[192];
+	snprintf(buf_sentence, sizeof(buf_sentence),
+		_("%s this character is worth {blue}%s{/} for %s level character.  "),
+		killof_part, points_part, level_part);
+	textblock_append_e(tb, buf_sentence);
 }
 
 /**
@@ -1485,7 +1498,7 @@ void lore_append_awareness(textblock *tb, const struct monster_race *race,
 						 lore_pronoun_nominative(msex, true), aware,
 						 lore_pronoun_nominative(msex, false));
 		textblock_append_c(tb, COLOUR_L_BLUE, "%d", 10 * race->hearing);
-		textblock_append(tb, " feet.  ");
+		textblock_append(tb, _(" feet.  "));
 	}
 }
 
@@ -1558,8 +1571,10 @@ void lore_append_spells(textblock *tb, const struct monster_race *race,
 	create_mon_spell_mask(test_flags, RST_BREATH, RST_NONE);
 	rsf_diff(current_flags, test_flags);
 	if (!rsf_is_empty(current_flags)) {
-		textblock_append(tb, "%s may ", initial_pronoun);
-		lore_append_spell_clause(tb, current_flags, know_hp, race, "or", "");
+		char innate_pre[64], innate_post[64];
+		i18n_text_split(_("%s may {}"), innate_pre, innate_post);
+		textblock_append(tb, innate_pre, initial_pronoun);
+		lore_append_spell_clause(tb, current_flags, know_hp, race, _("or"), innate_post);
 		innate = true;
 	}
 
@@ -1567,13 +1582,15 @@ void lore_append_spells(textblock *tb, const struct monster_race *race,
 	create_mon_spell_mask(current_flags, RST_BREATH, RST_NONE);
 	rsf_inter(current_flags, lore->spell_flags);
 	if (!rsf_is_empty(current_flags)) {
+		char breath_pre[64], breath_post[64];
 		if (innate) {
-			textblock_append(tb, ", and may ");
+			i18n_text_split(_(", and may {red}breathe {/}{}"), breath_pre, breath_post);
+			textblock_append(tb, breath_pre);
 		} else {
-			textblock_append(tb, "%s may ", initial_pronoun);
+			i18n_text_split(_("%s may {red}breathe {/}{}"), breath_pre, breath_post);
+			textblock_append(tb, breath_pre, initial_pronoun);
 		}
-		textblock_append_c(tb, COLOUR_L_RED, "breathe ");
-		lore_append_spell_clause(tb, current_flags, know_hp, race, "or", "");
+		lore_append_spell_clause(tb, current_flags, know_hp, race, _("or"), breath_post);
 		breath = true;
 	}
 
