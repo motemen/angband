@@ -1,3 +1,16 @@
+#: ../src/cmd-cave.c:1150 ../src/player-attack.c:729
+#, c-format
+msgid "You are too afraid to attack %s!"
+msgstr ""
+
+#: ../src/cmd-cave.c:1168
+msgid "There is a pile of rubble in the way!"
+msgstr ""
+
+#: ../src/cmd-cave.c:1174
+msgid "There is a wall in the way!"
+msgstr ""
+
 #: ../src/mon-attack.c:634
 msgid "."
 msgstr ""
@@ -504,6 +517,52 @@ msgstr ""
 #: ../src/mon-msg.c:254
 #, c-format
 msgid "The %s"
+msgstr ""
+
+#: ../src/mon-util.c:1060
+#, c-format
+msgid "You have killed %s."
+msgstr ""
+
+#: ../src/mon-util.c:1063
+#, c-format
+msgid "You have destroyed %s."
+msgstr ""
+
+#: ../src/mon-util.c:1066
+#, c-format
+msgid "You have slain %s."
+msgstr ""
+
+#: ../src/player-attack.c:715
+msgid "punch"
+msgstr ""
+
+#: ../src/player-attack.c:742
+#, c-format
+msgid "You miss %s."
+msgstr ""
+
+#: ../src/player-attack.c:746
+msgid "You feel strange..."
+msgstr ""
+
+#: ../src/player-attack.c:756
+msgid "hit"
+msgstr ""
+
+#: ../src/player-attack.c:817
+msgid "fail to harm"
+msgstr ""
+
+#: ../src/player-attack.c:831
+#, c-format
+msgid "You %s %s%s. %s"
+msgstr ""
+
+#: ../src/player-attack.c:834
+#, c-format
+msgid "You %s %s%s."
 msgstr ""
 
 #: ../src/ui-birth.c:564

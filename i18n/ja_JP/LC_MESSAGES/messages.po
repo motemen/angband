@@ -9,6 +9,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: ../src/cmd-cave.c:1150 ../src/player-attack.c:729
+#, c-format
+msgid "You are too afraid to attack %s!"
+msgstr "恐ろしくて%sを攻撃できない！"
+
+#: ../src/cmd-cave.c:1168
+msgid "There is a pile of rubble in the way!"
+msgstr ""
+
+#: ../src/cmd-cave.c:1174
+msgid "There is a wall in the way!"
+msgstr ""
+
 #: ../src/mon-attack.c:634
 msgid "."
 msgstr "。"
@@ -518,6 +531,52 @@ msgstr ""
 #, c-format
 msgid "The %s"
 msgstr "%s"
+
+#: ../src/mon-util.c:1060
+#, c-format
+msgid "You have killed %s."
+msgstr "%sを倒した。"
+
+#: ../src/mon-util.c:1063
+#, c-format
+msgid "You have destroyed %s."
+msgstr "%sを破壊した。"
+
+#: ../src/mon-util.c:1066
+#, c-format
+msgid "You have slain %s."
+msgstr "%sを倒した。"
+
+#: ../src/player-attack.c:715
+msgid "punch"
+msgstr "を素手で殴った"
+
+#: ../src/player-attack.c:742
+#, c-format
+msgid "You miss %s."
+msgstr "%sへの攻撃を外した。"
+
+#: ../src/player-attack.c:746
+msgid "You feel strange..."
+msgstr ""
+
+#: ../src/player-attack.c:756
+msgid "hit"
+msgstr "を攻撃した"
+
+#: ../src/player-attack.c:817
+msgid "fail to harm"
+msgstr "にダメージを与えられなかった"
+
+#: ../src/player-attack.c:831
+#, c-format
+msgid "You %s %s%s. %s"
+msgstr "%2$s%1$s%3$s。%4$s"
+
+#: ../src/player-attack.c:834
+#, c-format
+msgid "You %s %s%s."
+msgstr "%2$s%1$s%3$s。"
 
 #: ../src/ui-birth.c:564
 msgid ""

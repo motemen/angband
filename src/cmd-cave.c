@@ -1147,7 +1147,7 @@ static bool do_cmd_walk_test(struct loc grid)
 			monster_desc(m_name, sizeof(m_name), mon, MDESC_DEFAULT);
 
 			/* Message */
-			msgt(MSG_AFRAID, "You are too afraid to attack %s!", m_name);
+			msgt(MSG_AFRAID, _("You are too afraid to attack %s!"), m_name);
 			equip_learn_flag(player, OF_AFRAID);
 
 			/* Nope */
@@ -1165,13 +1165,13 @@ static bool do_cmd_walk_test(struct loc grid)
 	if (!square_ispassable(cave, grid)) {
 		if (square_isrubble(cave, grid)) {
 			/* Rubble */
-			msgt(MSG_HITWALL, "There is a pile of rubble in the way!");
+			msgt(MSG_HITWALL, _("There is a pile of rubble in the way!"));
 		} else if (square_iscloseddoor(cave, grid)) {
 			/* Door */
 			return true;
 		} else {
 			/* Wall */
-			msgt(MSG_HITWALL, "There is a wall in the way!");
+			msgt(MSG_HITWALL, _("There is a wall in the way!"));
 		}
 
 		/* Cancel repeat */

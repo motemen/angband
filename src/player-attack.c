@@ -712,7 +712,7 @@ bool py_attack_real(struct player *p, struct loc grid, bool *fear)
 	int j, b, s, weight, dmg;
 
 	/* Default to punching */
-	my_strcpy(verb, "punch", sizeof(verb));
+	my_strcpy(verb, _("punch"), sizeof(verb));
 
 	/* Extract monster name (or "it") */
 	monster_desc(m_name, sizeof(m_name), mon, MDESC_TARG);
@@ -726,7 +726,7 @@ bool py_attack_real(struct player *p, struct loc grid, bool *fear)
 	/* Handle player fear (only for invisible monsters) */
 	if (player_of_has(p, OF_AFRAID)) {
 		equip_learn_flag(p, OF_AFRAID);
-		msgt(MSG_AFRAID, "You are too afraid to attack %s!", m_name);
+		msgt(MSG_AFRAID, _("You are too afraid to attack %s!"), m_name);
 		return false;
 	}
 
@@ -739,11 +739,11 @@ bool py_attack_real(struct player *p, struct loc grid, bool *fear)
 
 	/* If a miss, skip this hit */
 	if (!success) {
-		msgt(MSG_MISS, "You miss %s.", m_name);
+		msgt(MSG_MISS, _("You miss %s."), m_name);
 
 		/* Small chance of bloodlust side-effects */
 		if (p->timed[TMD_BLOODLUST] && one_in_(50)) {
-			msg("You feel strange...");
+			msg(_("You feel strange..."));
 			player_over_exert(p, PY_EXERT_SCRAMBLE, 20, 20);
 		}
 
@@ -753,7 +753,7 @@ bool py_attack_real(struct player *p, struct loc grid, bool *fear)
 	if (obj) {
 		/* Handle normal weapon */
 		weight = obj->weight;
-		my_strcpy(verb, "hit", sizeof(verb));
+		my_strcpy(verb, _("hit"), sizeof(verb));
 	} else {
 		weight = 0;
 	}
@@ -814,7 +814,7 @@ bool py_attack_real(struct player *p, struct loc grid, bool *fear)
 	if (dmg <= 0) {
 		dmg = 0;
 		msg_type = MSG_MISS;
-		my_strcpy(verb, "fail to harm", sizeof(verb));
+		my_strcpy(verb, _("fail to harm"), sizeof(verb));
 	}
 
 	for (i = 0; i < N_ELEMENTS(melee_hit_types); i++) {
@@ -826,12 +826,13 @@ bool py_attack_real(struct player *p, struct loc grid, bool *fear)
 		if (OPT(p, show_damage))
 			dmg_text = format(" (%d)", dmg);
 
-		// TODO[locale]: difficult to handle in gettext
+		char buf[128];
 		if (melee_hit_types[i].text)
-			msgt(msg_type, "You %s %s%s. %s", verb, m_name, dmg_text,
+			snprintf(buf, sizeof(buf), _("You %s %s%s. %s"), verb, m_name, dmg_text,
 					melee_hit_types[i].text);
 		else
-			msgt(msg_type, "You %s %s%s.", verb, m_name, dmg_text);
+			snprintf(buf, sizeof(buf), _("You %s %s%s."), verb, m_name, dmg_text);
+		msgt(msg_type, "%s", buf);
 	}
 
 	/* Pre-damage side effects */
