@@ -229,7 +229,7 @@ void monster_desc(char *desc, size_t max, const struct monster *mon, int mode)
 		/* Handle the possessive */
 		/* XXX Check for trailing "s" */
 		if (mode & MDESC_POSS) {
-			my_strcat(desc, "'s", max);
+			my_strcat(desc, _("'s"), max);
 		}
 
 		/* Mention "offscreen" monsters */

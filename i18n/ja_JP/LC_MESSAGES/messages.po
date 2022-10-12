@@ -31,13 +31,102 @@ msgstr "。"
 msgid "%s %s%s"
 msgstr "%sは%s%s"
 
-#: ../src/mon-blows.c:130
+#: ../src/mon-blows.c:131
 msgid "you"
 msgstr "あなた"
+
+#: ../src/mon-blows.c:143
+msgid "your"
+msgstr ""
+
+#: ../src/mon-blows.c:229
+#, c-format
+msgid "%s tries to steal %syour %s, but fails."
+msgstr ""
+
+#: ../src/mon-blows.c:230 ../src/mon-blows.c:235
+msgid "one of "
+msgstr ""
+
+#: ../src/mon-blows.c:234
+#, c-format
+msgid "%syour %s (%c) was stolen!"
+msgstr ""
+
+#: ../src/mon-blows.c:366
+msgid "You are covered in acid!"
+msgstr ""
+
+#: ../src/mon-blows.c:368
+msgid "You are struck by electricity!"
+msgstr ""
+
+#: ../src/mon-blows.c:370
+msgid "You are enveloped in flames!"
+msgstr ""
+
+#: ../src/mon-blows.c:372
+msgid "You are covered with frost!"
+msgstr ""
+
+#: ../src/mon-blows.c:530
+msgid "You keep hold of your life force!"
+msgstr ""
+
+#: ../src/mon-blows.c:535
+msgid "You feel your life slipping away!"
+msgstr ""
+
+#: ../src/mon-blows.c:538
+msgid "You feel your life draining away!"
+msgstr ""
+
+#: ../src/mon-blows.c:653
+msgid "Energy drains from your pack!"
+msgstr ""
+
+#: ../src/mon-blows.c:697
+msgid "You quickly protect your money pouch!"
+msgstr ""
+
+#: ../src/mon-blows.c:708
+msgid "Nothing was stolen."
+msgstr ""
+
+#: ../src/mon-blows.c:713
+msgid "Your purse feels lighter."
+msgstr ""
+
+#: ../src/mon-blows.c:715
+#, c-format
+msgid "%d coins were stolen!"
+msgstr ""
+
+#: ../src/mon-blows.c:717
+msgid "All of your coins were stolen!"
+msgstr ""
+
+#: ../src/mon-blows.c:765
+msgid "You grab hold of your backpack!"
+msgstr ""
+
+#: ../src/mon-blows.c:816
+#, c-format
+msgid "Your %s (%c) was eaten!"
+msgstr "%s (%c) が食べられてしまった!"
+
+#: ../src/mon-blows.c:821
+#, c-format
+msgid "One of your %s (%c) was eaten!"
+msgstr "%s (%c) が一つ食べられてしまった!"
 
 #: ../src/mon-desc.c:205
 msgid "the "
 msgstr " "
+
+#: ../src/mon-desc.c:232
+msgid "'s"
+msgstr "の"
 
 #: ../src/mon-lore.c:567
 msgid "prefers to ignore"
@@ -566,7 +655,7 @@ msgstr "を攻撃した"
 
 #: ../src/player-attack.c:817
 msgid "fail to harm"
-msgstr "にダメージを与えられなかった"
+msgstr "は無傷だ"
 
 #: ../src/player-attack.c:831
 #, c-format
