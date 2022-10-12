@@ -1,5 +1,5 @@
 /*
-** $Id: llex.c,v 1.2 2003/08/10 11:43:29 rr9 Exp $
+** $Id: llex.c,v 1.2 2004/04/11 15:23:19 tooru Exp $
 ** Lexical Analyzer
 ** See Copyright Notice in lua.h
 */
@@ -302,6 +302,9 @@ static void read_string (LexState *LS, int del, SemInfo *seminfo) {
         }
         break;
       default:
+#ifdef SJIS
+        if (iskanji(LS->current)) save_and_next(LS, l);
+#endif /* SJIS */
         save_and_next(LS, l);
     }
   }

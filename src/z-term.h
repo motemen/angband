@@ -13,6 +13,17 @@
 
 #include "h-basic.h"
 
+#ifdef	JP
+/*
+ * 全角文字対応。
+ * 属性に全角文字の１バイト目、２バイト目も記憶。
+ * By FIRST
+ */
+#define	KANJI1	0x10
+#define	KANJI2	0x20
+#define	KANJIC	0x0f
+#endif
+
 
 
 /*
@@ -277,7 +288,11 @@ extern errr Term_user(int n);
 extern errr Term_xtra(int n, int v);
 
 extern void Term_queue_char(term *t, int x, int y, byte a, char c, byte ta, char tc);
+#ifdef JP
+extern void Term_queue_chars(term *t, int x, int y, int n, byte a, cptr s); /* mada */
+#else /* JP */
 extern void Term_queue_chars(int x, int y, int n, byte a, cptr s);
+#endif /* JP */
 
 extern errr Term_fresh(void);
 extern errr Term_set_cursor(bool v);

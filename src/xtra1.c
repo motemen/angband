@@ -8,6 +8,17 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3-v6 日本語版製作: しとしん
+ * 2.8.0      対応        : sayu, しとしん
+ * 2.8.1      対応        : FIRST
+ * 2.8.3      対応        : FIRST, しとしん
+ *
+ * 日本語版機能追加 レベルアップ時の HP/MP 増加量表示
+ *                  英日切り替え機能
+ * 日本語版機能変更 AC/HP/MP の表示方法
+ */
+
 #include "angband.h"
 
 #include "script.h"
@@ -24,6 +35,12 @@ void cnv_stat(int val, char *out_val)
 	{
 		int bonus = (val - 18);
 
+#ifdef JP
+		/* ステータスがすごく高い時に何故かうまく表示されないので変更している */
+		if (bonus >= 1000)
+			sprintf(out_val, "18/%3s", "***");
+		else
+#endif /* JP */
 		if (bonus >= 100)
 		{
 			sprintf(out_val, "18/%03d", bonus);
@@ -134,7 +151,12 @@ static void prt_stat(int stat, int row, int col)
 	/* Indicate natural maximum */
 	if (p_ptr->stat_max[stat] == 18+100)
 	{
+#ifdef JP
+		/* 日本語にかぶらないように表示位置を変更 */
+		put_str("!", row, col + 5);
+#else /* JP */
 		put_str("!", row, col + 3);
+#endif /* JP */
 	}
 }
 
@@ -151,19 +173,33 @@ static void prt_title(int row, int col)
 	/* Wizard */
 	if (p_ptr->wizard)
 	{
+#ifdef JP
+		/* 英日切り替え機能 称号 */
+		p = X_others("[=-WIZARD-=]", "[ウィザード]");
+#else /* JP */
 		p = "[=-WIZARD-=]";
+#endif /* JP */
 	}
 
 	/* Winner */
 	else if (p_ptr->total_winner || (p_ptr->lev > PY_MAX_LEVEL))
 	{
+#ifdef JP
+		/* 英日切り替え機能 称号 */
+		p = X_others("***WINNER***", "***勝利者***");
+#else /* JP */
 		p = "***WINNER***";
+#endif /* JP */
 	}
 
 	/* Normal */
 	else
 	{
+#ifdef JP
+		p = c_text + X_c_title(cp_ptr)[(p_ptr->lev - 1) / 5];
+#else /* JP */
 		p = c_text + cp_ptr->title[(p_ptr->lev - 1) / 5];
+#endif /* JP */
 	}
 
 	prt_field(p, row, col);
@@ -177,17 +213,31 @@ static void prt_level(int row, int col)
 {
 	char tmp[32];
 
+#ifdef JP
+	sprintf(tmp, "%5d", p_ptr->lev);
+#else /* JP */
 	sprintf(tmp, "%6d", p_ptr->lev);
+#endif /* JP */
 
 	if (p_ptr->lev >= p_ptr->max_lev)
 	{
+#ifdef JP
+		put_str("レベル ", row, col);
+		c_put_str(TERM_L_GREEN, tmp, row, col + 7);
+#else /* JP */
 		put_str("LEVEL ", row, col);
 		c_put_str(TERM_L_GREEN, tmp, row, col + 6);
+#endif /* JP */
 	}
 	else
 	{
+#ifdef JP
+		put_str("レベルx", row, col);
+		c_put_str(TERM_YELLOW, tmp, row, col + 7);
+#else /* JP */
 		put_str("Level ", row, col);
 		c_put_str(TERM_YELLOW, tmp, row, col + 6);
+#endif /* JP */
 	}
 }
 
@@ -199,17 +249,31 @@ static void prt_exp(int row, int col)
 {
 	char out_val[32];
 
+#ifdef JP
+	sprintf(out_val, "%7ld", (long)p_ptr->exp);
+#else /* JP */
 	sprintf(out_val, "%8ld", (long)p_ptr->exp);
+#endif /* JP */
 
 	if (p_ptr->exp >= p_ptr->max_exp)
 	{
+#ifdef JP
+		put_str("経験 ", row, col);
+		c_put_str(TERM_L_GREEN, out_val, row, col + 5);
+#else /* JP */
 		put_str("EXP ", row, col);
 		c_put_str(TERM_L_GREEN, out_val, row, col + 4);
+#endif /* JP */
 	}
 	else
 	{
+#ifdef JP
+		put_str("経験x", row, col);
+		c_put_str(TERM_YELLOW, out_val, row, col + 5);
+#else /* JP */
 		put_str("Exp ", row, col);
 		c_put_str(TERM_YELLOW, out_val, row, col + 4);
+#endif /* JP */
 	}
 }
 
@@ -221,7 +285,11 @@ static void prt_gold(int row, int col)
 {
 	char tmp[32];
 
+#ifdef JP
+	put_str("＄ ", row, col); /* mada */
+#else /* JP */
 	put_str("AU ", row, col);
+#endif /* JP */
 	sprintf(tmp, "%9ld", (long)p_ptr->au);
 	c_put_str(TERM_L_GREEN, tmp, row, col + 3);
 }
@@ -271,9 +339,16 @@ static void prt_ac(int row, int col)
 {
 	char tmp[32];
 
+#ifdef JP
+	/* AC の表示方式を変更している */
+	put_str(" ＡＣ(     )", row, col);
+	sprintf(tmp, "%5d", p_ptr->dis_ac + p_ptr->dis_to_a);
+	c_put_str(TERM_L_GREEN, tmp, row, col + 6);
+#else /* JP */
 	put_str("Cur AC ", row, col);
 	sprintf(tmp, "%5d", p_ptr->dis_ac + p_ptr->dis_to_a);
 	c_put_str(TERM_L_GREEN, tmp, row, col + 7);
+#endif /* JP */
 }
 
 
@@ -287,7 +362,11 @@ static void prt_cur_hp(int row, int col)
 	byte color;
 
 
+#ifdef JP
+	put_str("    HP ", row, col);
+#else /* JP */
 	put_str("Cur HP ", row, col);
+#endif /* JP */
 
 	sprintf(tmp, "%5d", p_ptr->chp);
 
@@ -315,7 +394,11 @@ static void prt_max_hp(int row, int col)
 {
 	char tmp[32];
 
+#ifdef JP
+	put_str("最大HP ", row, col);
+#else /* JP */
 	put_str("Max HP ", row, col);
+#endif /* JP */
 
 	sprintf(tmp, "%5d", p_ptr->mhp);
 
@@ -335,7 +418,11 @@ static void prt_cur_sp(int row, int col)
 	/* Do not show mana unless it matters */
 	if (!cp_ptr->spell_book) return;
 
+#ifdef JP
+	put_str("    MP ", row, col);
+#else /* JP */
 	put_str("Cur SP ", row, col);
+#endif /* JP */
 
 	sprintf(tmp, "%5d", p_ptr->csp);
 
@@ -367,7 +454,11 @@ static void prt_max_sp(int row, int col)
 	/* Do not show mana unless it matters */
 	if (!cp_ptr->spell_book) return;
 
+#ifdef JP
+	put_str("最大MP ", row, col);
+#else /* JP */
 	put_str("Max SP ", row, col);
+#endif /* JP */
 
 	sprintf(tmp, "%5d", p_ptr->msp);
 
@@ -384,7 +475,11 @@ static void prt_depth(int row, int col)
 
 	if (!p_ptr->depth)
 	{
+#ifdef JP
+		strcpy(depths, "町");
+#else /* JP */
 		strcpy(depths, "Town");
+#endif /* JP */
 	}
 	else if (depth_in_feet)
 	{
@@ -392,7 +487,11 @@ static void prt_depth(int row, int col)
 	}
 	else
 	{
+#ifdef JP
+		sprintf(depths, "%d 階", p_ptr->depth);
+#else /* JP */
 		sprintf(depths, "Lev %d", p_ptr->depth);
+#endif /* JP */
 	}
 
 	/* Right-Adjust the "depth", and clear old values */
@@ -408,19 +507,31 @@ static void prt_hunger(int row, int col)
 	/* Fainting / Starving */
 	if (p_ptr->food < PY_FOOD_FAINT)
 	{
+#ifdef JP
+		c_put_str(TERM_RED, "衰弱  ", row, col);
+#else /* JP */
 		c_put_str(TERM_RED, "Weak  ", row, col);
+#endif /* JP */
 	}
 
 	/* Weak */
 	else if (p_ptr->food < PY_FOOD_WEAK)
 	{
+#ifdef JP
+		c_put_str(TERM_ORANGE, "衰弱  ", row, col);
+#else /* JP */
 		c_put_str(TERM_ORANGE, "Weak  ", row, col);
+#endif /* JP */
 	}
 
 	/* Hungry */
 	else if (p_ptr->food < PY_FOOD_ALERT)
 	{
+#ifdef JP
+		c_put_str(TERM_YELLOW, "空腹  ", row, col);
+#else /* JP */
 		c_put_str(TERM_YELLOW, "Hungry", row, col);
+#endif /* JP */
 	}
 
 	/* Normal */
@@ -432,13 +543,21 @@ static void prt_hunger(int row, int col)
 	/* Full */
 	else if (p_ptr->food < PY_FOOD_MAX)
 	{
+#ifdef JP
+		c_put_str(TERM_L_GREEN, "満腹  ", row, col);
+#else /* JP */
 		c_put_str(TERM_L_GREEN, "Full  ", row, col);
+#endif /* JP */
 	}
 
 	/* Gorged */
 	else
 	{
+#ifdef JP
+		c_put_str(TERM_GREEN, "食過ぎ", row, col);
+#else /* JP */
 		c_put_str(TERM_GREEN, "Gorged", row, col);
+#endif /* JP */
 	}
 }
 
@@ -450,7 +569,11 @@ static void prt_blind(int row, int col)
 {
 	if (p_ptr->blind)
 	{
+#ifdef JP
+		c_put_str(TERM_ORANGE, "盲目 ", row, col);
+#else /* JP */
 		c_put_str(TERM_ORANGE, "Blind", row, col);
+#endif /* JP */
 	}
 	else
 	{
@@ -466,7 +589,11 @@ static void prt_confused(int row, int col)
 {
 	if (p_ptr->confused)
 	{
+#ifdef JP
+		c_put_str(TERM_ORANGE, "混乱状態", row, col);
+#else /* JP */
 		c_put_str(TERM_ORANGE, "Confused", row, col);
+#endif /* JP */
 	}
 	else
 	{
@@ -482,7 +609,11 @@ static void prt_afraid(int row, int col)
 {
 	if (p_ptr->afraid)
 	{
+#ifdef JP
+		c_put_str(TERM_ORANGE, "恐怖  ", row, col);
+#else /* JP */
 		c_put_str(TERM_ORANGE, "Afraid", row, col);
+#endif /* JP */
 	}
 	else
 	{
@@ -498,7 +629,11 @@ static void prt_poisoned(int row, int col)
 {
 	if (p_ptr->poisoned)
 	{
+#ifdef JP
+		c_put_str(TERM_ORANGE, "毒      ", row, col);
+#else /* JP */
 		c_put_str(TERM_ORANGE, "Poisoned", row, col);
+#endif /* JP */
 	}
 	else
 	{
@@ -526,7 +661,11 @@ static void prt_state(int row, int col)
 	{
 		attr = TERM_RED;
 
+#ifdef JP
+		strcpy(text, "麻痺状態！");
+#else /* JP */
 		strcpy(text, "Paralyzed!");
+#endif /* JP */
 	}
 
 	/* Resting */
@@ -536,7 +675,11 @@ static void prt_state(int row, int col)
 		int n = p_ptr->resting;
 
 		/* Start with "Rest" */
+#ifdef JP
+		strcpy(text, "休息      ");
+#else /* JP */
 		strcpy(text, "Rest      ");
+#endif /* JP */
 
 		/* Extensive (timed) rest */
 		if (n >= 1000)
@@ -599,18 +742,30 @@ static void prt_state(int row, int col)
 	{
 		if (p_ptr->command_rep > 999)
 		{
+#ifdef JP
+			sprintf(text, "回数 %3d00", p_ptr->command_rep / 100);
+#else /* JP */
 			sprintf(text, "Rep. %3d00", p_ptr->command_rep / 100);
+#endif /* JP */
 		}
 		else
 		{
+#ifdef JP
+			sprintf(text, "回数   %3d", p_ptr->command_rep);
+#else /* JP */
 			sprintf(text, "Repeat %3d", p_ptr->command_rep);
+#endif /* JP */
 		}
 	}
 
 	/* Searching */
 	else if (p_ptr->searching)
 	{
+#ifdef JP
+		strcpy(text, "探索中    ");
+#else /* JP */
 		strcpy(text, "Searching ");
+#endif /* JP */
 	}
 
 	/* Nothing interesting */
@@ -641,14 +796,22 @@ static void prt_speed(int row, int col)
 	if (i > 110)
 	{
 		attr = TERM_L_GREEN;
+#ifdef JP
+		sprintf(buf, "加速 (+%d)", (i - 110));
+#else /* JP */
 		sprintf(buf, "Fast (+%d)", (i - 110));
+#endif /* JP */
 	}
 
 	/* Slow */
 	else if (i < 110)
 	{
 		attr = TERM_L_UMBER;
+#ifdef JP
+		sprintf(buf, "減速 (-%d)", (110 - i));
+#else /* JP */
 		sprintf(buf, "Slow (-%d)", (110 - i));
+#endif /* JP */
 	}
 
 	/* Display the speed */
@@ -660,7 +823,11 @@ static void prt_study(int row, int col)
 {
 	if (p_ptr->new_spells)
 	{
+#ifdef JP
+		put_str("学習 ", row, col);
+#else /* JP */
 		put_str("Study", row, col);
+#endif /* JP */
 	}
 	else
 	{
@@ -675,31 +842,59 @@ static void prt_cut(int row, int col)
 
 	if (c > 1000)
 	{
+#ifdef JP
+		c_put_str(TERM_L_RED, "致命傷      ", row, col);
+#else /* JP */
 		c_put_str(TERM_L_RED, "Mortal wound", row, col);
+#endif /* JP */
 	}
 	else if (c > 200)
 	{
+#ifdef JP
+		c_put_str(TERM_RED, "ひどい深手  ", row, col);
+#else /* JP */
 		c_put_str(TERM_RED, "Deep gash   ", row, col);
+#endif /* JP */
 	}
 	else if (c > 100)
 	{
+#ifdef JP
+		c_put_str(TERM_RED, "重傷        ", row, col);
+#else /* JP */
 		c_put_str(TERM_RED, "Severe cut  ", row, col);
+#endif /* JP */
 	}
 	else if (c > 50)
 	{
+#ifdef JP
+		c_put_str(TERM_ORANGE, "大変な傷    ", row, col);
+#else /* JP */
 		c_put_str(TERM_ORANGE, "Nasty cut   ", row, col);
+#endif /* JP */
 	}
 	else if (c > 25)
 	{
+#ifdef JP
+		c_put_str(TERM_ORANGE, "ひどい傷    ", row, col);
+#else /* JP */
 		c_put_str(TERM_ORANGE, "Bad cut     ", row, col);
+#endif /* JP */
 	}
 	else if (c > 10)
 	{
+#ifdef JP
+		c_put_str(TERM_YELLOW, "軽傷        ", row, col);
+#else /* JP */
 		c_put_str(TERM_YELLOW, "Light cut   ", row, col);
+#endif /* JP */
 	}
 	else if (c)
 	{
+#ifdef JP
+		c_put_str(TERM_YELLOW, "かすり傷    ", row, col);
+#else /* JP */
 		c_put_str(TERM_YELLOW, "Graze       ", row, col);
+#endif /* JP */
 	}
 	else
 	{
@@ -715,15 +910,27 @@ static void prt_stun(int row, int col)
 
 	if (s > 100)
 	{
+#ifdef JP
+		c_put_str(TERM_RED, "意識不明瞭  ", row, col);
+#else /* JP */
 		c_put_str(TERM_RED, "Knocked out ", row, col);
+#endif /* JP */
 	}
 	else if (s > 50)
 	{
+#ifdef JP
+		c_put_str(TERM_ORANGE, "ひどく朦朧  ", row, col);
+#else /* JP */
 		c_put_str(TERM_ORANGE, "Heavy stun  ", row, col);
+#endif /* JP */
 	}
 	else if (s)
 	{
+#ifdef JP
+		c_put_str(TERM_ORANGE, "朦朧        ", row, col);
+#else /* JP */
 		c_put_str(TERM_ORANGE, "Stun        ", row, col);
+#endif /* JP */
 	}
 	else
 	{
@@ -1410,7 +1617,11 @@ static void calc_spells(void)
 
 	s16b old_spells;
 
+#ifdef JP
+	cptr p = ((cp_ptr->spell_book == TV_MAGIC_BOOK) ? "呪文" : "祈り");
+#else /* JP */
 	cptr p = ((cp_ptr->spell_book == TV_MAGIC_BOOK) ? "spell" : "prayer");
+#endif /* JP */
 
 
 	/* Hack -- must be literate */
@@ -1481,8 +1692,13 @@ static void calc_spells(void)
 			p_ptr->spell_flags[j] &= ~PY_SPELL_LEARNED;
 
 			/* Message */
+#ifdef JP
+			msg_format("%sの%sを忘れてしまった。",
+			           get_spell_name(cp_ptr->spell_book, j), p);
+#else /* JP */
 			msg_format("You have forgotten the %s of %s.", p,
 			           get_spell_name(cp_ptr->spell_book, j));
+#endif /* JP */
 
 			/* One more can be learned */
 			p_ptr->new_spells++;
@@ -1512,8 +1728,13 @@ static void calc_spells(void)
 			p_ptr->spell_flags[j] &= ~PY_SPELL_LEARNED;
 
 			/* Message */
+#ifdef JP
+			msg_format("%sの%sを忘れてしまった。",
+			           get_spell_name(cp_ptr->spell_book, j), p);
+#else /* JP */
 			msg_format("You have forgotten the %s of %s.", p,
 			           get_spell_name(cp_ptr->spell_book, j));
+#endif /* JP */
 
 			/* One more can be learned */
 			p_ptr->new_spells++;
@@ -1549,8 +1770,13 @@ static void calc_spells(void)
 			p_ptr->spell_flags[j] |= PY_SPELL_LEARNED;
 
 			/* Message */
+#ifdef JP
+			msg_format("%sの%sを思い出した。",
+			           get_spell_name(cp_ptr->spell_book, j), p);
+#else /* JP */
 			msg_format("You have remembered the %s of %s.",
 			           p, get_spell_name(cp_ptr->spell_book, j));
+#endif /* JP */
 
 			/* One less can be learned */
 			p_ptr->new_spells--;
@@ -1590,9 +1816,16 @@ static void calc_spells(void)
 		if (p_ptr->new_spells)
 		{
 			/* Message */
+#ifdef JP
+			msg_format("あと %d %sの%sを学べる。",
+			           p_ptr->new_spells, 
+			           simple_counter_suffix(p_ptr->new_spells),
+			           p);
+#else /* JP */
 			msg_format("You can learn %d more %s%s.",
 			           p_ptr->new_spells, p,
 			           (p_ptr->new_spells != 1) ? "s" : "");
+#endif /* JP */
 		}
 
 		/* Redraw Study Status */
@@ -1696,6 +1929,13 @@ static void calc_mana(void)
 	/* Maximum mana has changed */
 	if (p_ptr->msp != msp)
 	{
+#ifdef JP
+		/* レベルアップの時は上昇量を表示する */
+		if ((level_up == 1) && (msp > p_ptr->msp))
+			msg_format("最大マジック・ポイントが %d 増加した！",
+			           (msp - p_ptr->msp));
+#endif /* JP */
+
 		/* Save new limit */
 		p_ptr->msp = msp;
 
@@ -1723,11 +1963,19 @@ static void calc_mana(void)
 		/* Message */
 		if (p_ptr->cumber_glove)
 		{
+#ifdef JP
+			msg_print("手が覆われて呪文が唱えにくい感じがする。");
+#else /* JP */
 			msg_print("Your covered hands feel unsuitable for spellcasting.");
+#endif /* JP */
 		}
 		else
 		{
+#ifdef JP
+			msg_print("この手の状態なら、ぐっと呪文が唱えやすい感じだ。");
+#else /* JP */
 			msg_print("Your hands feel more suitable for spellcasting.");
+#endif /* JP */
 		}
 	}
 
@@ -1738,11 +1986,19 @@ static void calc_mana(void)
 		/* Message */
 		if (p_ptr->cumber_armor)
 		{
+#ifdef JP
+			msg_print("防具の重さで動きが鈍くなってしまっている。");
+#else /* JP */
 			msg_print("The weight of your armor encumbers your movement.");
+#endif /* JP */
 		}
 		else
 		{
+#ifdef JP
+			msg_print("ぐっと楽に体を動かせるようになった。");
+#else /* JP */
 			msg_print("You feel able to move more freely.");
+#endif /* JP */
 		}
 	}
 }
@@ -1771,6 +2027,13 @@ static void calc_hitpoints(void)
 	/* New maximum hitpoints */
 	if (p_ptr->mhp != mhp)
 	{
+#ifdef JP
+		/* レベルアップの時は上昇量を表示する */
+		if ((level_up == 1) && (mhp > p_ptr->mhp))
+			msg_format("最大ヒット・ポイントが %d 増加した！",
+			           (mhp - p_ptr->mhp) );
+#endif
+
 		/* Save new limit */
 		p_ptr->mhp = mhp;
 
@@ -2744,15 +3007,27 @@ static void calc_bonuses(void)
 		/* Message */
 		if (p_ptr->heavy_shoot)
 		{
+#ifdef JP
+			msg_print("こんな重い弓を装備しているのは大変だ。");
+#else /* JP */
 			msg_print("You have trouble wielding such a heavy bow.");
+#endif /* JP */
 		}
 		else if (inventory[INVEN_BOW].k_idx)
 		{
+#ifdef JP
+			msg_print("この弓なら装備していても辛くない。");
+#else /* JP */
 			msg_print("You have no trouble wielding your bow.");
+#endif /* JP */
 		}
 		else
 		{
+#ifdef JP
+			msg_print("重い弓を装備からはずして体が楽になった。");
+#else /* JP */
 			msg_print("You feel relieved to put down your heavy bow.");
+#endif /* JP */
 		}
 	}
 
@@ -2762,15 +3037,27 @@ static void calc_bonuses(void)
 		/* Message */
 		if (p_ptr->heavy_wield)
 		{
+#ifdef JP
+			msg_print("こんな重い武器を装備しているのは大変だ。");
+#else /* JP */
 			msg_print("You have trouble wielding such a heavy weapon.");
+#endif /* JP */
 		}
 		else if (inventory[INVEN_WIELD].k_idx)
 		{
+#ifdef JP
+			msg_print("この武器なら装備していても辛くない。");
+#else /* JP */
 			msg_print("You have no trouble wielding your weapon.");
+#endif /* JP */
 		}
 		else
 		{
+#ifdef JP
+			msg_print("重い武器を装備からはずして体が楽になった。");
+#else /* JP */
 			msg_print("You feel relieved to put down your heavy weapon.");	
+#endif /* JP */
 		}
 	}
 
@@ -2780,15 +3067,27 @@ static void calc_bonuses(void)
 		/* Message */
 		if (p_ptr->icky_wield)
 		{
+#ifdef JP
+			msg_print("今の武器はどうも自分にふさわしくない気がする。");
+#else /* JP */
 			msg_print("You do not feel comfortable with your weapon.");
+#endif /* JP */
 		}
 		else if (inventory[INVEN_WIELD].k_idx)
 		{
+#ifdef JP
+			msg_print("今の武器は自分にふさわしい気がする。");
+#else /* JP */
 			msg_print("You feel comfortable with your weapon.");
+#endif /* JP */
 		}
 		else
 		{
+#ifdef JP
+			msg_print("武器を装備からはずしたら随分と気が楽になった。");
+#else /* JP */
 			msg_print("You feel more comfortable after removing your weapon.");
+#endif /* JP */
 		}
 	}
 }
@@ -2959,8 +3258,14 @@ void redraw_stuff(void)
 	if (p_ptr->redraw & (PR_MISC))
 	{
 		p_ptr->redraw &= ~(PR_MISC);
+#ifdef JP
+		/* 英日切り替え機能 */
+		prt_field(X_p_name(rp_ptr), ROW_RACE, COL_RACE);
+		prt_field(X_c_name(cp_ptr), ROW_CLASS, COL_CLASS);
+#else /* JP */
 		prt_field(p_name + rp_ptr->name, ROW_RACE, COL_RACE);
 		prt_field(c_name + cp_ptr->name, ROW_CLASS, COL_CLASS);
+#endif /* JP */
 	}
 
 	if (p_ptr->redraw & (PR_TITLE))

@@ -8,6 +8,12 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3-v6 日本語版製作: しとしん
+ * 2.8.1      対応        : FIRST, しとしん
+ * 2.8.3      対応        : FIRST, しとしん
+ */
+
 #include "angband.h"
 
 
@@ -311,7 +317,11 @@ void compact_objects(int size)
 	if (size)
 	{
 		/* Message */
+#ifdef JP
+		msg_print("アイテム情報を圧縮しています...");
+#else /* JP */
 		msg_print("Compacting objects...");
+#endif /* JP */
 
 		/* Redraw map */
 		p_ptr->redraw |= (PR_MAP);
@@ -524,7 +534,11 @@ s16b o_pop(void)
 
 
 	/* Warn the player (except during dungeon creation) */
+#ifdef JP
+	if (character_dungeon) msg_print("アイテムが多すぎる！");
+#else /* JP */
 	if (character_dungeon) msg_print("Too many objects!");
+#endif /* JP */
 
 	/* Oops */
 	return (0);
@@ -1430,7 +1444,11 @@ s16b lookup_kind(int tval, int sval)
 	}
 
 	/* Oops */
+#ifdef JP
+	msg_format("アイテムがない (%d,%d)", tval, sval);
+#else /* JP */
 	msg_format("No object (%d,%d)", tval, sval);
+#endif /* JP */
 
 	/* Oops */
 	return (0);
@@ -1599,21 +1617,33 @@ static void object_mention(const object_type *o_ptr)
 	if (artifact_p(o_ptr))
 	{
 		/* Silly message */
+#ifdef JP
+		msg_format("伝説のアイテム (%s)", o_name);
+#else /* JP */
 		msg_format("Artifact (%s)", o_name);
+#endif /* JP */
 	}
 
 	/* Ego-item */
 	else if (ego_item_p(o_ptr))
 	{
 		/* Silly message */
+#ifdef JP
+		msg_format("名のあるアイテム (%s)", o_name);
+#else /* JP */
 		msg_format("Ego-item (%s)", o_name);
+#endif /* JP */
 	}
 
 	/* Normal item */
 	else
 	{
 		/* Silly message */
+#ifdef JP
+		msg_format("アイテム (%s)", o_name);
+#else /* JP */
 		msg_format("Object (%s)", o_name);
+#endif /* JP */
 	}
 }
 
@@ -3228,11 +3258,19 @@ void drop_near(object_type *j_ptr, int chance, int y, int x)
 	if (!artifact_p(j_ptr) && (rand_int(100) < chance))
 	{
 		/* Message */
+#ifdef JP
+		msg_format("%sは消えた。", o_name);
+#else /* JP */
 		msg_format("The %s disappear%s.",
 		           o_name, (plural ? "" : "s"));
+#endif /* JP */
 
 		/* Debug */
+#ifdef JP
+		if (p_ptr->wizard) msg_print("破損(破損)");
+#else /* JP */
 		if (p_ptr->wizard) msg_print("Breakage (breakage).");
+#endif /* JP */
 
 		/* Failure */
 		return;
@@ -3327,11 +3365,19 @@ void drop_near(object_type *j_ptr, int chance, int y, int x)
 	if (!flag && !artifact_p(j_ptr))
 	{
 		/* Message */
+#ifdef JP
+		msg_format("%sは消えた。", o_name);
+#else /* JP */
 		msg_format("The %s disappear%s.",
 		           o_name, (plural ? "" : "s"));
+#endif /* JP */
 
 		/* Debug */
+#ifdef JP
+		if (p_ptr->wizard) msg_print("破損(床上に隙間がない)");
+#else /* JP */
 		if (p_ptr->wizard) msg_print("Breakage (no floor space).");
+#endif /* JP */
 
 		/* Failure */
 		return;
@@ -3374,11 +3420,19 @@ void drop_near(object_type *j_ptr, int chance, int y, int x)
 	if (!floor_carry(by, bx, j_ptr))
 	{
 		/* Message */
+#ifdef JP
+		msg_format("%sは消えた。", o_name);
+#else /* JP */
 		msg_format("The %s disappear%s.",
 		           o_name, (plural ? "" : "s"));
+#endif /* JP */
 
 		/* Debug */
+#ifdef JP
+		if (p_ptr->wizard) msg_print("破損(アイテムが多すぎ)");
+#else /* JP */
 		if (p_ptr->wizard) msg_print("Breakage (too many objects).");
+#endif /* JP */
 
 		/* Hack -- Preserve artifacts */
 		a_info[j_ptr->name1].cur_num = 0;
@@ -3395,7 +3449,11 @@ void drop_near(object_type *j_ptr, int chance, int y, int x)
 	/* Message when an object falls under the player */
 	if (chance && (cave_m_idx[by][bx] < 0))
 	{
+#ifdef JP
+		msg_print("何かが足下に転がってきた。");
+#else /* JP */
 		msg_print("You feel something roll beneath your feet.");
+#endif /* JP */
 	}
 }
 
@@ -3645,8 +3703,15 @@ void inven_item_charges(int item)
 	if (!object_known_p(o_ptr)) return;
 
 	/* Print a message */
+#ifdef JP
+	if (o_ptr->pval <= 0)
+		msg_print("もう魔力が残っていない。");
+	else
+		msg_format("あと %d 回分の魔力が残っている。", o_ptr->pval);
+#else /* JP */
 	msg_format("You have %d charge%s remaining.", o_ptr->pval,
 	           (o_ptr->pval != 1) ? "s" : "");
+#endif /* JP */
 }
 
 
@@ -3659,6 +3724,23 @@ void inven_item_describe(int item)
 
 	char o_name[80];
 
+#ifdef JP
+	/* Get a description */
+	object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
+
+	/* "no more" の場合はこちらで表示する */
+	if (o_ptr->number <= 0)
+	{
+		/* FIRST ここはもう通らないかも */
+		msg_format("もう%sを持っていない。", o_name);
+	}
+	else
+	{
+		/* アイテム名を英日切り替え機能対応 */
+		msg_format("まだ%s(%c)を持っている。",
+		           o_name, index_to_label(item));
+	}
+#else /* JP */
 	if (artifact_p(o_ptr) && object_known_p(o_ptr))
 	{
 		/* Get a description */
@@ -3675,6 +3757,7 @@ void inven_item_describe(int item)
 		/* Print a message */
 		msg_format("You have %s (%c).", o_name, index_to_label(item));
 	}
+#endif /* JP */
 }
 
 
@@ -3793,9 +3876,24 @@ void floor_item_charges(int item)
 	/* Require known item */
 	if (!object_known_p(o_ptr)) return;
 
+#ifdef JP
+	/* Zero charges */
+	if (o_ptr->pval <= 0)
+	{
+		msg_print("この床上のアイテムは、もう魔力が残っていない。");
+	}
+
+	/* Non-zero charges */
+	else
+	{
+		msg_format("この床上のアイテムは、あと %d 回分の魔力が残っている。", 
+		           o_ptr->pval);
+	}
+#else /* JP */
 	/* Print a message */
 	msg_format("There are %d charge%s remaining.", o_ptr->pval,
 	           (o_ptr->pval != 1) ? "s" : "");
+#endif /* JP */
 }
 
 
@@ -3813,7 +3911,19 @@ void floor_item_describe(int item)
 	object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
 
 	/* Print a message */
+#ifdef JP
+	/* "no more" の場合はこちらで表示を分ける */
+	if (o_ptr->number <= 0)
+	{
+		msg_format("床上には、もう%sはない。", o_name);
+	}
+	else
+	{
+		msg_format("床上には、まだ %sがある。", o_name);
+	}
+#else /* JP */
 	msg_format("You see %s.", o_name);
+#endif /* JP */
 }
 
 
@@ -4112,25 +4222,41 @@ s16b inven_takeoff(int item, int amt)
 	/* Took off weapon */
 	if (item == INVEN_WIELD)
 	{
+#ifdef JP
+		act = "を装備からはずした";
+#else
 		act = "You were wielding";
+#endif
 	}
 
 	/* Took off bow */
 	else if (item == INVEN_BOW)
 	{
+#ifdef JP
+		act = "を装備からはずした";
+#else
 		act = "You were holding";
+#endif
 	}
 
 	/* Took off light */
 	else if (item == INVEN_LITE)
 	{
+#ifdef JP
+		act = "を光源からはずした";
+#else
 		act = "You were holding";
+#endif
 	}
 
 	/* Took off something */
 	else
 	{
+#ifdef JP
+		act = "を装備からはずした";
+#else
 		act = "You were wearing";
+#endif
 	}
 
 	/* Modify, Optimize */
@@ -4142,7 +4268,11 @@ s16b inven_takeoff(int item, int amt)
 
 	/* Message */
 	sound(MSG_WIELD);
+#ifdef JP
+	msg_format("%s(%c)%s。", o_name, index_to_label(slot), act);
+#else
 	msg_format("%s %s (%c).", act, o_name, index_to_label(slot));
+#endif
 
 	/* Return slot */
 	return (slot);
@@ -4204,7 +4334,11 @@ void inven_drop(int item, int amt)
 	object_desc(o_name, sizeof(o_name), i_ptr, TRUE, 3);
 
 	/* Message */
+#ifdef JP
+	msg_format("%s(%c)を落とした。", o_name, index_to_label(item));
+#else
 	msg_format("You drop %s (%c).", o_name, index_to_label(item));
+#endif
 
 	/* Drop it near the player */
 	drop_near(i_ptr, 0, py, px);
@@ -4282,7 +4416,11 @@ void combine_pack(void)
 	}
 
 	/* Message */
+#ifdef JP
+	if (flag) msg_print("ザックの中のアイテムをまとめ直した。");
+#else
 	if (flag) msg_print("You combine some items in your pack.");
+#endif
 }
 
 
@@ -4395,7 +4533,11 @@ void reorder_pack(void)
 	}
 
 	/* Message */
+#ifdef JP
+	if (flag) msg_print("ザックの中のアイテムを並べ直した。");
+#else /* JP */
 	if (flag) msg_print("You reorder some items in your pack.");
+#endif /* JP */
 }
 
 

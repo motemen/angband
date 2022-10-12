@@ -218,6 +218,10 @@ static void rd_string(char *str, int max)
 
 	/* Terminate */
 	str[max-1] = '\0';
+
+#ifdef JP
+	codeconv(str);
+#endif
 }
 
 
@@ -605,7 +609,11 @@ static errr rd_store(int n)
 	/* Paranoia */
 	if (own >= z_info->b_max)
 	{
+#ifdef JP
+		note("店主情報が異常です！");
+#else
 		note("Illegal store owner!");
+#endif
 		return (-1);
 	}
 
@@ -626,7 +634,11 @@ static errr rd_store(int n)
 		/* Read the item */
 		if (rd_item(i_ptr))
 		{
+#ifdef JP
+			note("アイテム情報読み込みエラー");
+#else
 			note("Error reading item");
+#endif
 			return (-1);
 		}
 
@@ -637,7 +649,14 @@ static errr rd_store(int n)
 		}
 
 		/* Accept any valid items */
+#ifdef JP
+		/*
+		 * 我が家が 20 ページになる隠し機能
+		 */
+		if (st_ptr->stock_num < (n == STORE_HOME ? (STORE_INVEN_MAX) * 10 : STORE_INVEN_MAX))
+#else /* JP */
 		if (st_ptr->stock_num < STORE_INVEN_MAX)
+#endif /* JP */
 		{
 			int k = st_ptr->stock_num++;
 
@@ -895,7 +914,11 @@ static errr rd_player_spells(void)
 		rd_u16b(&tmp16u);
 		if (tmp16u > PY_MAX_SPELLS)
 		{
+#ifdef JP
+			note(format("プレイヤーの呪文が多すぎる(%d)。", tmp16u));
+#else
 			note(format("Too many player spells (%d).", tmp16u));
+#endif
 			return (-1);
 		}
 
@@ -963,7 +986,11 @@ static errr rd_extra(void)
 	/* Verify player race */
 	if (p_ptr->prace >= z_info->p_max)
 	{
+#ifdef JP
+		note(format("無効なプレイヤーの種族(%d)です。", p_ptr->prace));
+#else
 		note(format("Invalid player race (%d).", p_ptr->prace));
+#endif
 		return (-1);
 	}
 
@@ -973,7 +1000,11 @@ static errr rd_extra(void)
 	/* Verify player class */
 	if (p_ptr->pclass >= z_info->c_max)
 	{
+#ifdef JP
+		note(format("無効なプレイヤーの職業(%d)です。", p_ptr->pclass));
+#else
 		note(format("Invalid player class (%d).", p_ptr->pclass));
+#endif
 		return (-1);
 	}
 
@@ -1008,7 +1039,11 @@ static errr rd_extra(void)
 	/* Verify player level */
 	if ((p_ptr->lev < 1) || (p_ptr->lev > PY_MAX_LEVEL))
 	{
+#ifdef JP
+		note(format("無効なプレイヤーのレベル(%d)です。", p_ptr->lev));
+#else
 		note(format("Invalid player level (%d).", p_ptr->lev));
+#endif
 		return (-1);
 	}
 
@@ -1119,7 +1154,11 @@ static errr rd_extra(void)
 	/* Incompatible save files */
 	if (tmp16u > PY_MAX_LEVEL)
 	{
+#ifdef JP
+		note(format("ヒットポイント配列が大きすぎる(%u)！", tmp16u));
+#else
 		note(format("Too many (%u) hitpoint entries!", tmp16u));
+#endif
 		return (-1);
 	}
 
@@ -1168,7 +1207,11 @@ static errr rd_randarts(void)
 		/* Check for incompatible randart version */
 		if (randart_version != RANDART_VERSION)
 		{
+#ifdef JP
+			note(format("互換性のないランダムな伝説のアイテムのバージョンです！"));
+#else
 			note(format("Incompatible random artifacts version!"));
+#endif
 			return (-1);
 		}
 
@@ -1186,7 +1229,11 @@ static errr rd_randarts(void)
 			/* Incompatible save files */
 			if (artifact_count > z_info->a_max)
 			{
+#ifdef JP
+				note(format("ランダムな伝説のアイテムが多すぎる(%u)！", artifact_count));
+#else
 				note(format("Too many (%u) random artifacts!", artifact_count));
+#endif
 				return (-1);
 			}
 
@@ -1274,7 +1321,11 @@ static errr rd_randarts(void)
 
 #else /* GJW_RANDART */
 
+#ifdef JP
+	note("この実行ファイルはランダムな伝説のアイテムが使用できません。");
+#else
 	note("Random artifacts are disabled in this binary.");
+#endif
 	return (-1);
 
 #endif /* GJW_RANDART */
@@ -1316,7 +1367,11 @@ static errr rd_inventory(void)
 		/* Read the item */
 		if (rd_item(i_ptr))
 		{
+#ifdef JP
+			note("アイテム情報読み込みエラー");
+#else
 			note("Error reading item");
+#endif
 			return (-1);
 		}
 
@@ -1343,7 +1398,11 @@ static errr rd_inventory(void)
 		else if (p_ptr->inven_cnt == INVEN_PACK)
 		{
 			/* Oops */
+#ifdef JP
+			note("持ち物の中のアイテムが多すぎる！");
+#else
 			note("Too many items in the inventory!");
+#endif
 
 			/* Fail */
 			return (-1);
@@ -1453,7 +1512,11 @@ static errr rd_dungeon(void)
 	/* Ignore illegal dungeons */
 	if ((depth < 0) || (depth >= MAX_DEPTH))
 	{
+#ifdef JP
+		note(format("不正なダンジョンの深さ(%d)を無視します", depth));
+#else
 		note(format("Ignoring illegal dungeon depth (%d)", depth));
+#endif
 		return (0);
 	}
 
@@ -1461,7 +1524,11 @@ static errr rd_dungeon(void)
 	if ((ymax != DUNGEON_HGT) || (xmax != DUNGEON_WID))
 	{
 		/* XXX XXX XXX */
+#ifdef JP
+		note(format("不正なダンジョンのサイズ(%d,%d)を無視します", xmax, ymax));
+#else
 		note(format("Ignoring illegal dungeon size (%d,%d).", ymax, xmax));
+#endif
 		return (0);
 	}
 
@@ -1469,7 +1536,11 @@ static errr rd_dungeon(void)
 	if ((px < 0) || (px >= DUNGEON_WID) ||
 	    (py < 0) || (py >= DUNGEON_HGT))
 	{
+#ifdef JP
+		note(format("不正なプレイヤーの場所(%d)を無視します", px, py));
+#else
 		note(format("Ignoring illegal player location (%d,%d).", py, px));
+#endif
 		return (1);
 	}
 
@@ -1539,7 +1610,11 @@ static errr rd_dungeon(void)
 	/* Place player in dungeon */
 	if (!player_place(py, px))
 	{
+#ifdef JP
+		note(format("プレイヤーを配置できない(%d,%d) !", py, px));
+#else
 		note(format("Cannot place player (%d,%d)!", py, px));
+#endif
 		return (-1);
 	}
 
@@ -1552,7 +1627,11 @@ static errr rd_dungeon(void)
 	/* Verify maximum */
 	if (limit > z_info->o_max)
 	{
+#ifdef JP
+		note(format("アイテムの配列が大きすぎる(%d)！", limit));
+#else
 		note(format("Too many (%d) object entries!", limit));
+#endif
 		return (-1);
 	}
 
@@ -1575,7 +1654,11 @@ static errr rd_dungeon(void)
 		/* Read the item */
 		if (rd_item(i_ptr))
 		{
+#ifdef JP
+			note("アイテム情報読み込みエラー");
+#else
 			note("Error reading item");
+#endif
 			return (-1);
 		}
 
@@ -1585,7 +1668,11 @@ static errr rd_dungeon(void)
 		/* Paranoia */
 		if (o_idx != i)
 		{
+#ifdef JP
+			note(format("アイテムを配置できない(%d)！", o_max));
+#else
 			note(format("Cannot place object %d!", i));
+#endif
 			return (-1);
 		}
 
@@ -1620,7 +1707,11 @@ static errr rd_dungeon(void)
 	/* Hack -- verify */
 	if (limit > z_info->m_max)
 	{
+#ifdef JP
+		note(format("モンスターの配列が大きすぎる(%d)！", limit));
+#else
 		note(format("Too many (%d) monster entries!", limit));
+#endif
 		return (-1);
 	}
 
@@ -1644,7 +1735,11 @@ static errr rd_dungeon(void)
 		/* Place monster in dungeon */
 		if (monster_place(n_ptr->fy, n_ptr->fx, n_ptr) != i)
 		{
+#ifdef JP
+			note(format("モンスターを配置できない(%d)！", i));
+#else
 			note(format("Cannot place monster %d", i));
+#endif
 			return (-1);
 		}
 	}
@@ -1668,7 +1763,11 @@ static errr rd_dungeon(void)
 		/* Verify monster index */
 		if (o_ptr->held_m_idx > z_info->m_max)
 		{
+#ifdef JP
+			note("無効なモンスターのインデックスです！");
+#else
 			note("Invalid monster index");
+#endif
 			return (-1);
 		}
 
@@ -1714,8 +1813,13 @@ static errr rd_savefile_new_aux(void)
 
 
 	/* Mention the savefile version */
+#ifdef JP
+	note(format("バージョン %d.%d.%d のセーブ・ファイルをロード中...",
+	            sf_major, sf_minor, sf_patch));
+#else
 	note(format("Loading a %d.%d.%d savefile...",
 	            sf_major, sf_minor, sf_patch));
+#endif
 
 	/* Strip the version bytes */
 	strip_bytes(4);
@@ -1751,17 +1855,29 @@ static errr rd_savefile_new_aux(void)
 
 	/* Read RNG state */
 	rd_randomizer();
+#ifdef JP
+	if (arg_fiddle) note("乱数情報をロードしました");
+#else
 	if (arg_fiddle) note("Loaded Randomizer Info");
+#endif
 
 
 	/* Then the options */
 	rd_options();
+#ifdef JP
+	if (arg_fiddle) note("オプションをロードしました");
+#else
 	if (arg_fiddle) note("Loaded Option Flags");
+#endif
 
 
 	/* Then the "messages" */
 	rd_messages();
+#ifdef JP
+	if (arg_fiddle) note("メッセージをロードしました");
+#else
 	if (arg_fiddle) note("Loaded Messages");
+#endif
 
 
 	/* Monster Memory */
@@ -1770,7 +1886,11 @@ static errr rd_savefile_new_aux(void)
 	/* Incompatible save files */
 	if (tmp16u > z_info->r_max)
 	{
+#ifdef JP
+		note(format("モンスターの種族が多すぎる(%u)！", tmp16u));
+#else
 		note(format("Too many (%u) monster races!", tmp16u));
+#endif
 		return (-1);
 	}
 
@@ -1780,7 +1900,11 @@ static errr rd_savefile_new_aux(void)
 		/* Read the lore */
 		rd_lore(i);
 	}
+#ifdef JP
+	if (arg_fiddle) note("モンスターの思い出をロードしました");
+#else
 	if (arg_fiddle) note("Loaded Monster Memory");
+#endif
 
 
 	/* Object Memory */
@@ -1789,7 +1913,11 @@ static errr rd_savefile_new_aux(void)
 	/* Incompatible save files */
 	if (tmp16u > z_info->k_max)
 	{
+#ifdef JP
+		note(format("アイテムの種類が多すぎる(%u)！", tmp16u));
+#else
 		note(format("Too many (%u) object kinds!", tmp16u));
+#endif
 		return (-1);
 	}
 
@@ -1805,7 +1933,11 @@ static errr rd_savefile_new_aux(void)
 		k_ptr->aware = (tmp8u & 0x01) ? TRUE: FALSE;
 		k_ptr->tried = (tmp8u & 0x02) ? TRUE: FALSE;
 	}
+#ifdef JP
+	if (arg_fiddle) note("アイテムの記録をロードしました");
+#else
 	if (arg_fiddle) note("Loaded Object Memory");
+#endif
 
 
 	/* Load the Quests */
@@ -1814,7 +1946,11 @@ static errr rd_savefile_new_aux(void)
 	/* Incompatible save files */
 	if (tmp16u > MAX_Q_IDX)
 	{
+#ifdef JP
+		note(format("クエストが多すぎる(%u)！", tmp16u));
+#else
 		note(format("Too many (%u) quests!", tmp16u));
+#endif
 		return (-1);
 	}
 
@@ -1827,7 +1963,11 @@ static errr rd_savefile_new_aux(void)
 		rd_byte(&tmp8u);
 		rd_byte(&tmp8u);
 	}
+#ifdef JP
+	if (arg_fiddle) note("クエスト情報をロードしました");
+#else
 	if (arg_fiddle) note("Loaded Quests");
+#endif
 
 
 	/* Load the Artifacts */
@@ -1836,7 +1976,11 @@ static errr rd_savefile_new_aux(void)
 	/* Incompatible save files */
 	if (tmp16u > z_info->a_max)
 	{
+#ifdef JP
+		note(format("伝説のアイテムが多すぎる(%u)！", tmp16u));
+#else
 		note(format("Too many (%u) artifacts!", tmp16u));
+#endif
 		return (-1);
 	}
 
@@ -1849,19 +1993,31 @@ static errr rd_savefile_new_aux(void)
 		rd_byte(&tmp8u);
 		rd_byte(&tmp8u);
 	}
+#ifdef JP
+	if (arg_fiddle) note("伝説のアイテムをロードしました");
+#else
 	if (arg_fiddle) note("Loaded Artifacts");
+#endif
 
 
 	/* Read the extra stuff */
 	if (rd_extra()) return (-1);
+#ifdef JP
+	if (arg_fiddle) note("特別情報をロードしました");
+#else
 	if (arg_fiddle) note("Loaded extra information");
+#endif
 
 
 	/* Read random artifacts */
 	if (adult_rand_artifacts)
 	{
 		if (rd_randarts()) return (-1);
+#ifdef JP
+		if (arg_fiddle) note("ランダムな伝説のアイテムをロードしました");
+#else
 		if (arg_fiddle) note("Loaded Random Artifacts");
+#endif
 	}
 
 
@@ -1879,7 +2035,11 @@ static errr rd_savefile_new_aux(void)
 	/* Read the inventory */
 	if (rd_inventory())
 	{
+#ifdef JP
+		note("持ち物情報を読み込むことができません");
+#else
 		note("Unable to read inventory");
+#endif
 		return (-1);
 	}
 
@@ -1896,10 +2056,18 @@ static errr rd_savefile_new_aux(void)
 	if (!p_ptr->is_dead)
 	{
 		/* Dead players have no dungeon */
+#ifdef JP
+		note("ダンジョン復元中...");
+#else
 		note("Restoring Dungeon...");
+#endif
 		if (rd_dungeon())
 		{
+#ifdef JP
+			note("ダンジョンデータ読み込み失敗");
+#else
 			note("Error reading dungeon data");
+#endif
 			return (-1);
 		}
 
@@ -1917,7 +2085,11 @@ static errr rd_savefile_new_aux(void)
 	/* Verify */
 	if (o_v_check != n_v_check)
 	{
+#ifdef JP
+		note("チェックサムがおかしい");
+#else
 		note("Invalid checksum");
+#endif
 		return (-1);
 	}
 
@@ -1930,7 +2102,11 @@ static errr rd_savefile_new_aux(void)
 	/* Verify */
 	if (o_x_check != n_x_check)
 	{
+#ifdef JP
+		note("エンコードされたチェックサムがおかしい");
+#else
 		note("Invalid encoded checksum");
+#endif
 		return (-1);
 	}
 
@@ -2029,7 +2205,11 @@ bool load_player(void)
 	if (fd < 0)
 	{
 		/* Give a message */
+#ifdef JP
+		msg_print("セーブ・ファイルがありません。");
+#else
 		msg_print("Savefile does not exist.");
+#endif
 		message_flush();
 
 		/* Allow this */
@@ -2069,7 +2249,11 @@ bool load_player(void)
 			my_fclose(fkk);
 
 			/* Message */
+#ifdef JP
+			msg_print("セーブ・ファイルは現在使用中です。");
+#else
 			msg_print("Savefile is currently in use.");
+#endif
 			message_flush();
 
 			/* Oops */
@@ -2086,7 +2270,11 @@ bool load_player(void)
 		safe_setuid_drop();
 
 		/* Dump a line of info */
+#ifdef JP
+		fprintf(fkk, "セーブ・ファイル '%s' 用のロック・ファイル\n", savefile);
+#else
 		fprintf(fkk, "Lock file for savefile '%s'\n", savefile);
+#endif
 
 		/* Close the lock file */
 		my_fclose(fkk);
@@ -2111,7 +2299,11 @@ bool load_player(void)
 		if (fd < 0) err = -1;
 
 		/* Message (below) */
+#ifdef JP
+		if (err) what = "セーブ・ファイルをオープンできません";
+#else
 		if (err) what = "Cannot open savefile";
+#endif
 	}
 
 	/* Process file */
@@ -2135,7 +2327,11 @@ bool load_player(void)
 		if (fd_read(fd, (char*)(vvv), sizeof(vvv))) err = -1;
 
 		/* What */
+#ifdef JP
+		if (err) what = "セーブ・ファイルを読めません";
+#else
 		if (err) what = "Cannot read savefile";
+#endif
 
 		/* Close the file */
 		fd_close(fd);
@@ -2156,12 +2352,20 @@ bool load_player(void)
 		if (older_than(OLD_VERSION_MAJOR, OLD_VERSION_MINOR, OLD_VERSION_PATCH))
 		{
 			err = -1;
+#ifdef JP
+			what = "セーブ・ファイルが古すぎます";
+#else
 			what = "Savefile is too old";
+#endif
 		}
 		else if (!older_than(VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH + 1))
 		{
 			err = -1;
+#ifdef JP
+			what = "未来のバージョンのセーブ・ファイルです";
+#else
 			what = "Savefile is from the future";
+#endif
 		}
 		else
 		{
@@ -2169,7 +2373,11 @@ bool load_player(void)
 			err = rd_savefile();
 
 			/* Message (below) */
+#ifdef JP
+		if (err) what = "セーブ・ファイルを解析できません";
+#else
 			if (err) what = "Cannot parse savefile";
+#endif
 		}
 	}
 
@@ -2180,7 +2388,11 @@ bool load_player(void)
 		if (!turn) err = -1;
 
 		/* Message (below) */
+#ifdef JP
+		if (err) what = "セーブ・ファイルが壊れています";
+#else
 		if (err) what = "Broken savefile";
+#endif
 	}
 
 #ifdef VERIFY_TIMESTAMP
@@ -2192,7 +2404,11 @@ bool load_player(void)
 		    sf_when < (statbuf.st_ctime - 100))
 		{
 			/* Message */
+#ifdef JP
+			what = "無効なタイム・スタンプです";
+#else
 			what = "Invalid timestamp";
+#endif
 
 			/* Oops */
 			err = -1;
@@ -2210,8 +2426,13 @@ bool load_player(void)
 		    (version_patch != sf_patch))
 		{
 			/* Message */
+#ifdef JP
+			msg_format("バージョン %d.%d.%d 用のセーブ・ファイルを変換しました。",
+			           sf_major, sf_minor, sf_patch);
+#else
 			msg_format("Converted a %d.%d.%d savefile.",
 			           sf_major, sf_minor, sf_patch);
+#endif
 			message_flush();
 		}
 
@@ -2248,7 +2469,11 @@ bool load_player(void)
 		if (p_ptr->chp >= 0)
 		{
 			/* Reset cause of death */
+#ifdef JP
+			strcpy(p_ptr->died_from, "(元気に生きている)");
+#else
 			strcpy(p_ptr->died_from, "(alive and well)");
+#endif
 		}
 
 		/* Success */
@@ -2281,8 +2506,13 @@ bool load_player(void)
 
 
 	/* Message */
+#ifdef JP
+	msg_format("%d.%d.%d 用のセーブ・ファイル読み込み中にエラー発生(%s)",
+	           sf_major, sf_minor, sf_patch, what);
+#else
 	msg_format("Error (%s) reading %d.%d.%d savefile.",
 	           what, sf_major, sf_minor, sf_patch);
+#endif
 	message_flush();
 
 	/* Oops */

@@ -71,6 +71,11 @@
  * Additional code by Robert Ruehlmann <rr9@thangorodrim.net>.
  */
 
+/*
+ * 2.8.3 日本語版対応: TeO
+ * 2.9.0 日本語版対応: 楠瀬
+ */
+
 #include "angband.h"
 
 
@@ -192,6 +197,8 @@
 #define IDM_OPTIONS_LOW_PRIORITY    420
 #define IDM_OPTIONS_SAVER           430
 #define IDM_OPTIONS_MAP             440
+#define IDM_OPTIONS_BG              450
+#define IDM_OPTIONS_OPEN_BG         451
 
 #define IDM_HELP_GENERAL		901
 #define IDM_HELP_SPOILERS		902
@@ -400,6 +407,10 @@ struct _term_data
 	uint map_tile_hgt;
 
 	bool map_active;
+
+#ifdef JP  /* フォントの情報 */
+	LOGFONT lf;
+#endif
 };
 
 
@@ -460,6 +471,28 @@ static HICON hIcon;
  * A palette
  */
 static HPALETTE hPal;
+
+#ifdef JP
+
+/*
+ * Tofu
+ */
+static HBITMAP WALL;
+static HBRUSH myBrush;
+
+#endif /* JP */
+
+
+#ifdef USE_BACKGROUND
+
+/* 
+ * Background
+ */
+static HBITMAP hBG = NULL;
+static int use_background = 0;
+static char bg_bitmap_file[1024] = "backgrnd.bmp";
+
+#endif /* USE_BACKGROUND */
 
 
 #ifdef USE_SAVER
@@ -538,7 +571,9 @@ static cptr AngList = "AngList";
 /*
  * Directory names
  */
+#ifndef JP
 static cptr ANGBAND_DIR_XTRA_FONT;
+#endif /* JP */
 static cptr ANGBAND_DIR_XTRA_GRAF;
 static cptr ANGBAND_DIR_XTRA_SOUND;
 static cptr ANGBAND_DIR_XTRA_HELP;
@@ -669,6 +704,97 @@ static const byte special_key_list[] =
 	0
 };
 
+#ifdef USE_BACKGROUND
+
+static void delete_background()
+{
+	if (hBG != NULL)
+	{
+		DeleteObject(hBG);
+		hBG = NULL;
+	}
+}
+
+static int init_background()
+{
+	char * bmfile = bg_bitmap_file;
+
+	delete_background();
+	if (use_background == 0) return 0;
+
+	hBG = LoadImage(NULL, bmfile,  IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+	if (!hBG)
+	{
+#ifdef JP
+		plog_fmt("壁紙用ビットマップ '%s' を読み込めません。", bmfile);
+#else
+		plog_fmt("Cannot read bitmap file '%s' for background", bmfile);
+#endif
+		use_background = 0;
+		return 0;
+	}
+#if 0 /* gomi */
+	HDC wnddc, dcimage, dcbg;
+	HBITMAP bmimage, bmimage_old, bmbg_old;
+	int i, j;
+
+	delete_background();
+
+	wnddc = GetDC(hwnd);
+	dcimage = CreateCompatibleDC(wnddc);
+	dcbg = CreateCompatibleDC(wnddc);
+	
+	bmimage = LoadImage(NULL, "backgrnd.bmp", LR_LOADFROMFILE, 0, 0, 0);
+	if (!bmimage) quit("backgrnd.bmpが読みこめない！");
+	bmimage_old = SelectObject(dcimage, bmimage);
+	
+	CreateCompatibleBitmap();
+
+	ReleaseDC(hwnd, wnddc);
+#endif
+	use_background = 1;
+	return 1;
+}
+
+static void DrawBG(HDC hdc, RECT *r)
+{
+	HDC hdcSrc;
+	HBITMAP hOld;
+	BITMAP bm;
+	int x = r->left, y = r->top;
+	int nx, ny, sx, sy, swid, shgt, cwid, chgt;
+
+	if (!use_background || !hBG)
+		return;
+
+	nx = x; ny = y;
+	GetObject(hBG, sizeof(bm), &bm);
+	swid = bm.bmWidth; shgt = bm.bmHeight;
+
+	hdcSrc = CreateCompatibleDC(hdc);
+	hOld = SelectObject(hdcSrc, hBG);
+
+	do
+	{
+		sx = nx % swid;
+		cwid = MIN(swid - sx, r->right - nx);
+		do
+		{
+			sy = ny % shgt;
+			chgt = MIN(shgt - sy, r->bottom - ny);
+				BitBlt(hdc, nx, ny, cwid, chgt, hdcSrc, sx, sy, SRCCOPY);
+			ny += chgt;
+		} while (ny < r->bottom);
+		ny = y;
+		nx += cwid;
+	} while (nx < r->right);
+	
+	SelectObject(hdcSrc, hOld);
+	DeleteDC(hdcSrc);
+}
+
+#endif /* USE_BACKGROUND */
+
 #if 0
 /*
  * Hack -- given a pathname, point at the filename
@@ -709,6 +835,7 @@ static void show_win_error(void)
  *
  * Return a pointer to a static buffer holding the capitalized base name.
  */
+#ifndef JP
 static char *analyze_font(char *path, int *wp, int *hp)
 {
 	int wid, hgt;
@@ -747,6 +874,7 @@ static char *analyze_font(char *path, int *wp, int *hp)
 	/* Result */
 	return (p);
 }
+#endif
 
 
 /*
@@ -863,7 +991,11 @@ static void validate_file(cptr s)
 	/* Verify or fail */
 	if (!check_file(s))
 	{
+#ifdef JP
+		quit_fmt("必要なファイル[%s]が見あたりません。", s);
+#else
 		quit_fmt("Cannot find required file:\n%s", s);
+#endif
 	}
 }
 
@@ -876,7 +1008,11 @@ static void validate_dir(cptr s)
 	/* Verify or fail */
 	if (!check_dir(s))
 	{
+#ifdef JP
+		quit_fmt("必要なディレクトリ[%s]が見あたりません。", s);
+#else
 		quit_fmt("Cannot find required directory:\n%s", s);
+#endif
 	}
 }
 
@@ -946,8 +1082,24 @@ static void save_prefs_aux(term_data *td, cptr sec_name)
 	WritePrivateProfileString(sec_name, "Visible", buf, ini_file);
 
 	/* Font */
+#ifdef JP
+	strcpy(buf, td->lf.lfFaceName[0] != '\0' ? td->lf.lfFaceName : "ＭＳ ゴシック");
+#ifdef EUC
+	codeconv_euc2sjis(buf);
+#endif /* EUC */
+#else
 	strcpy(buf, td->font_file ? td->font_file : "8X13.FON");
+#endif
 	WritePrivateProfileString(sec_name, "Font", buf, ini_file);
+
+#ifdef JP
+	wsprintf(buf, "%d", td->lf.lfWidth);
+	WritePrivateProfileString(sec_name, "FontWid", buf, ini_file);
+	wsprintf(buf, "%d", td->lf.lfHeight);
+	WritePrivateProfileString(sec_name, "FontHgt", buf, ini_file);
+	wsprintf(buf, "%d", td->lf.lfWeight);
+	WritePrivateProfileString(sec_name, "FontWgt", buf, ini_file);
+#endif
 
 	/* Bizarre */
 	strcpy(buf, td->bizarre ? "1" : "0");
@@ -1019,6 +1171,15 @@ static void save_prefs(void)
 	strcpy(buf, arg_sound ? "1" : "0");
 	WritePrivateProfileString("Angband", "Sound", buf, ini_file);
 
+#ifdef USE_BACKGROUND
+
+	strcpy(buf, use_background ? "1" : "0");
+	WritePrivateProfileString("Angband", "BackGround", buf, ini_file);
+	WritePrivateProfileString("Angband", "BackGroundBitmap", 
+		bg_bitmap_file[0] != '\0' ? bg_bitmap_file : "backgrnd.bmp", ini_file);
+
+#endif /* USE_BACKGROUND */
+
 	/* Save window prefs */
 	for (i = 0; i < MAX_TERM_DATA; i++)
 	{
@@ -1047,17 +1208,37 @@ static void load_prefs_aux(term_data *td, cptr sec_name)
 	td->maximized = (GetPrivateProfileInt(sec_name, "Maximized", td->maximized, ini_file) != 0);
 
 	/* Desired font, with default */
+#ifdef JP
+	GetPrivateProfileString(sec_name, "Font", "ＭＳ ゴシック", tmp, 127, ini_file);
+#ifdef EUC
+	codeconv_euc2sjis(tmp);
+#endif /* EUC */
+#else
 	GetPrivateProfileString(sec_name, "Font", "8X13.FON", tmp, 127, ini_file);
+#endif
 
 	/* Bizarre */
 	td->bizarre = (GetPrivateProfileInt(sec_name, "Bizarre", TRUE, ini_file) != 0);
 
 	/* Analyze font, save desired font name */
+#ifdef JP
+	td->font_want = string_make(tmp);
+	hgt = 15; wid = 0;
+	td->lf.lfWidth  = GetPrivateProfileInt(sec_name, "FontWid", wid, ini_file);
+	td->lf.lfHeight = GetPrivateProfileInt(sec_name, "FontHgt", hgt, ini_file);
+	td->lf.lfWeight = GetPrivateProfileInt(sec_name, "FontWgt", 0, ini_file);
+#else
 	td->font_want = string_make(analyze_font(tmp, &wid, &hgt));
+#endif
 
 	/* Tile size */
+#ifdef JP
+	td->tile_wid = GetPrivateProfileInt(sec_name, "TileWid", 8, ini_file);
+	td->tile_hgt = GetPrivateProfileInt(sec_name, "TileHgt", 15, ini_file);
+#else
 	td->tile_wid = GetPrivateProfileInt(sec_name, "TileWid", wid, ini_file);
 	td->tile_hgt = GetPrivateProfileInt(sec_name, "TileHgt", hgt, ini_file);
+#endif
 
 	/* Window size */
 	td->cols = GetPrivateProfileInt(sec_name, "NumCols", td->cols, ini_file);
@@ -1079,7 +1260,11 @@ static void load_prefs(void)
 	char buf[1024];
 
 	/* Extract the "arg_graphics" flag */
+#ifdef JP
+	arg_graphics = GetPrivateProfileInt("Angband", "Graphics", GRAPHICS_ADAM_BOLT, ini_file);
+#else
 	arg_graphics = GetPrivateProfileInt("Angband", "Graphics", GRAPHICS_NONE, ini_file);
+#endif
 
 	/* Extract the "use_bigtile" flag */
 	use_bigtile = GetPrivateProfileInt("Angband", "Bigtile", FALSE, ini_file);
@@ -1105,6 +1290,17 @@ static void load_prefs(void)
 	gamma_correction = GetPrivateProfileInt("Angband", "Gamma", 0, ini_file);
 
 #endif /* SUPPORT_GAMMA */
+
+#ifdef USE_BACKGROUND
+
+	/* Extract the the "use_bg" flag  */
+	use_background = GetPrivateProfileInt("Angband", "BackGround", 0, ini_file);
+
+	/* Extract the the "bg_bitmap_file" */
+	path_build(buf, 1024, ANGBAND_DIR_XTRA_GRAF, "backgrnd.bmp");
+	GetPrivateProfileString("Angband", "BackGroundBitmap", buf, bg_bitmap_file, 1023, ini_file);
+
+#endif /* USE_BACKGROUND */
 
 	/* Load window prefs */
 	for (i = 0; i < MAX_TERM_DATA; i++)
@@ -1257,7 +1453,11 @@ static int new_palette(void)
 		if ((nEntries == 0) || (nEntries > 220))
 		{
 			/* Warn the user */
+#ifdef JP
+			plog("画面をHigh ColorもしくはTrue Colorに変更してください。");
+#else
 			plog("Please switch to high- or true-color mode.");
+#endif
 
 			/* Cleanup */
 			free(lppe);
@@ -1320,7 +1520,11 @@ static int new_palette(void)
 
 	/* Create a new palette, or fail */
 	hNewPal = CreatePalette(pLogPal);
+#ifdef JP
+	if (!hNewPal) quit("パレットを作成できません！");
+#else
 	if (!hNewPal) quit("Cannot create palette!");
+#endif
 
 	/* Free the palette */
 	free(pLogPal);
@@ -1333,7 +1537,11 @@ static int new_palette(void)
 	SelectPalette(hdc, hNewPal, 0);
 	i = RealizePalette(hdc);
 	ReleaseDC(td->w, hdc);
+#ifdef JP
+	if (i == 0) quit("パレットをシステムエントリにマップできません！");
+#else
 	if (i == 0) quit("Cannot realize palette!");
+#endif
 
 	/* Sub-windows */
 	for (i = 1; i < MAX_TERM_DATA; i++)
@@ -1409,7 +1617,11 @@ static bool init_graphics(void)
 		/* Load the bitmap or quit */
 		if (!ReadDIB(data[0].w, buf, &infGraph))
 		{
+#ifdef JP
+			plog_fmt("ビットマップ '%s' を読み込めません。", name);
+#else
 			plog_fmt("Cannot read bitmap file '%s'", name);
+#endif
 			return (FALSE);
 		}
 
@@ -1425,7 +1637,11 @@ static bool init_graphics(void)
 			/* Load the bitmap or quit */
 			if (!ReadDIB(data[0].w, buf, &infMask))
 			{
+#ifdef JP
+				plog_fmt("ビットマップ '%s' を読み込めません。", buf);
+#else
 				plog_fmt("Cannot read bitmap file '%s'", buf);
+#endif
 				return (FALSE);
 			}
 		}
@@ -1436,7 +1652,11 @@ static bool init_graphics(void)
 			/* Free bitmap XXX XXX XXX */
 
 			/* Oops */
+#ifdef JP
+			plog("パレットを実現できません！");
+#else
 			plog("Cannot activate palette!");
+#endif
 			return (FALSE);
 		}
 
@@ -1501,18 +1721,26 @@ static void term_window_resize(const term_data *td)
  */
 static errr term_force_font(term_data *td, cptr path)
 {
+#ifndef JP
 	int i;
+#endif /* JP */
 
 	int wid, hgt;
 
+#ifndef JP
 	char *base;
 
 	char buf[1024];
+#endif /* JP */
 
 
 	/* Forget the old font (if needed) */
 	if (td->font_id) DeleteObject(td->font_id);
 
+#ifdef JP
+	/* Unused */
+	(void)path;
+#else
 	/* Forget old font */
 	if (td->font_file)
 	{
@@ -1568,12 +1796,20 @@ static errr term_force_font(term_data *td, cptr path)
 
 	/* Remove the "suffix" */
 	base[strlen(base)-4] = '\0';
+#endif
 
 	/* Create the font (using the 'base' of the font file name!) */
+#ifdef JP
+	td->font_id = CreateFontIndirect(&(td->lf));
+	wid = td->lf.lfWidth;
+	hgt = td->lf.lfHeight;
+	if (!td->font_id) return (1);
+#else
 	td->font_id = CreateFont(hgt, wid, 0, 0, FW_DONTCARE, 0, 0, 0,
 	                         ANSI_CHARSET, OUT_DEFAULT_PRECIS,
 	                         CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY,
 	                         FIXED_PITCH | FF_DONTCARE, base);
+#endif
 
 	/* Hack -- Unknown size */
 	if (!wid || !hgt)
@@ -1609,6 +1845,35 @@ static errr term_force_font(term_data *td, cptr path)
  */
 static void term_change_font(term_data *td)
 {
+#ifdef JP
+	CHOOSEFONT cf;
+
+	memset(&cf, 0, sizeof(cf));
+	cf.lStructSize = sizeof(cf);
+	cf.Flags = CF_SCREENFONTS | CF_FIXEDPITCHONLY |
+	           CF_NOVERTFONTS | CF_INITTOLOGFONTSTRUCT;
+	cf.lpLogFont = &(td->lf);
+
+	if (ChooseFont(&cf))
+	{
+		/* Force the font */
+		term_force_font(td, NULL);
+
+		/* Assume not bizarre */
+		td->bizarre = TRUE;
+
+		/* Reset the tile info */
+		td->tile_wid = td->font_wid;
+		td->tile_hgt = td->font_hgt;
+
+		/* Analyze the font */
+		term_getsize(td);
+
+		/* Resize the window */
+		term_window_resize(td);
+	}
+
+#else
 	OPENFILENAME ofn;
 
 	char tmp[1024] = "";
@@ -1654,6 +1919,7 @@ static void term_change_font(term_data *td)
 		/* Resize the window */
 		term_window_resize(td);
 	}
+#endif
 }
 
 
@@ -1814,7 +2080,11 @@ static errr Term_xtra_win_react(void)
 		if (arg_sound && !init_sound())
 		{
 			/* Warning */
+#ifdef JP
+			plog("サウンドを初期化できません！");
+#else
 			plog("Cannot initialize sound!");
+#endif
 
 			/* Cannot enable */
 			arg_sound = FALSE;
@@ -1843,7 +2113,11 @@ static errr Term_xtra_win_react(void)
 		if (arg_graphics && !init_graphics())
 		{
 			/* Warning */
+#ifdef JP
+			plog("グラフィックスを初期化できません!");
+#else
 			plog("Cannot initialize graphics!");
+#endif
 
 			/* Cannot enable */
 			arg_graphics = GRAPHICS_NONE;
@@ -1969,6 +2243,17 @@ static errr Term_xtra_win_clear(void)
 	SetBkColor(hdc, RGB(0, 0, 0));
 	SelectObject(hdc, td->font_id);
 	ExtTextOut(hdc, 0, 0, ETO_OPAQUE, &rc, NULL, 0, NULL);
+
+#ifdef USE_BACKGROUND
+
+	if (use_background)
+	{
+		rc.left = 0; rc.top = 0;
+		DrawBG(hdc, &rc);
+	}
+
+#endif /* USE_BACKGROUND */
+
 	ReleaseDC(td->w, hdc);
 
 	/* Success */
@@ -2241,7 +2526,14 @@ static errr Term_wipe_win(int x, int y, int n)
 	hdc = GetDC(td->w);
 	SetBkColor(hdc, RGB(0, 0, 0));
 	SelectObject(hdc, td->font_id);
+#ifdef USE_BACKGROUND
+	if (use_background)
+		DrawBG(hdc, &rc);
+	else
+		ExtTextOut(hdc, 0, 0, ETO_OPAQUE, &rc, NULL, 0, NULL);
+#else  /* USE_BACKGROUND */
 	ExtTextOut(hdc, 0, 0, ETO_OPAQUE, &rc, NULL, 0, NULL);
+#endif  /* USE_BACKGROUND */
 	ReleaseDC(td->w, hdc);
 
 	/* Success */
@@ -2296,6 +2588,12 @@ static errr Term_text_win(int x, int y, int n, byte a, cptr s)
 	/* Use the font */
 	SelectObject(hdc, td->font_id);
 
+#ifdef USE_BACKGROUND
+
+	if (use_background) SetBkMode(hdc, TRANSPARENT);
+
+#endif  /* USE_BACKGROUND */
+
 	/* Bizarre size */
 	if (td->bizarre ||
 	    (td->tile_hgt != td->font_hgt) ||
@@ -2306,6 +2604,12 @@ static errr Term_text_win(int x, int y, int n, byte a, cptr s)
 		/* Erase complete rectangle */
 		ExtTextOut(hdc, 0, 0, ETO_OPAQUE, &rc, NULL, 0, NULL);
 
+#ifdef USE_BACKGROUND
+
+		if (use_background) DrawBG(hdc, &rc);
+
+#endif /* USE_BACKGROUND */
+
 		/* New rectangle */
 		rc.left += ((td->tile_wid - td->font_wid) / 2);
 		rc.right = rc.left + td->font_wid;
@@ -2315,6 +2619,80 @@ static errr Term_text_win(int x, int y, int n, byte a, cptr s)
 		/* Dump each character */
 		for (i = 0; i < n; i++)
 		{
+#ifdef JP
+			if (use_bigtile && *(s+i)=="■"[0] && *(s+i+1)=="■"[1])
+			{
+				HBRUSH   oldBrush;
+				HPEN     oldPen;
+
+				rc.right += td->font_wid;
+
+				oldBrush = SelectObject(hdc, myBrush);
+				oldPen = SelectObject(hdc, GetStockObject(NULL_PEN) );
+
+				/* Dump the wall */
+				Rectangle(hdc, rc.left, rc.top, rc.right+1, rc.bottom+1);
+
+				SelectObject(hdc, oldBrush);
+				SelectObject(hdc, oldPen);
+				rc.right -= td->font_wid;
+
+				/* Advance */
+				i++;
+				rc.left += 2 * td->tile_wid;
+				rc.right += 2 * td->tile_wid;
+			}
+			else if (iskanji(*(s+i)))  /*  ２バイト文字  */
+			{
+				char kanji[] = "　";
+
+				rc.right += td->font_wid;
+
+				strncpy(kanji, s+i, 2);
+
+#ifdef EUC
+				/* Convert EUC to SJIS */
+				codeconv_euc2sjis(kanji);
+#endif
+
+				/* Dump the text */
+				ExtTextOut(hdc, rc.left, rc.top, ETO_CLIPPED, &rc,
+		    		       kanji, 2, NULL);
+
+				/* Advance */
+				i++;
+				rc.left += 2 * td->tile_wid;
+				rc.right += 2 * td->tile_wid;
+			}
+			else if (*(s+i) == 127)
+			{
+				HBRUSH   oldBrush;
+				HPEN     oldPen;
+
+				oldBrush = SelectObject(hdc, myBrush);
+				oldPen = SelectObject(hdc, GetStockObject(NULL_PEN) );
+
+				/* Dump the wall */
+				Rectangle(hdc, rc.left, rc.top, rc.right+1, rc.bottom+1);
+
+				SelectObject(hdc, oldBrush);
+				SelectObject(hdc, oldPen);
+
+				/* Advance */
+				rc.left += td->tile_wid;
+				rc.right += td->tile_wid;
+			}
+			else
+			{
+				/* Dump the text */
+				ExtTextOut(hdc, rc.left, rc.top, ETO_CLIPPED, &rc,
+		    		       s+i, 1, NULL);
+
+				/* Advance */
+				rc.left += td->tile_wid;
+				rc.right += td->tile_wid;
+			}
+#else
 			/* Dump the text */
 			ExtTextOut(hdc, rc.left, rc.top, 0, &rc,
 			           s+i, 1, NULL);
@@ -2322,6 +2700,7 @@ static errr Term_text_win(int x, int y, int n, byte a, cptr s)
 			/* Advance */
 			rc.left += td->tile_wid;
 			rc.right += td->tile_wid;
+#endif
 		}
 	}
 
@@ -2678,13 +3057,26 @@ static void init_windows(void)
 
 	term_data *td;
 
+#ifdef JP
+	static char title[] = JVERSION_NAME;
+#endif
+
+#ifndef JP
 	char buf[1024];
+#endif /* JP */
 
 
 	/* Main window */
 	td = &data[0];
 	WIPE(td, term_data);
+#ifdef JP
+#ifdef EUC
+	codeconv_euc2sjis(title);
+#endif
+	td->s = title;
+#else
 	td->s = angband_term_name[0];
+#endif
 	td->keys = 1024;
 	td->rows = 24;
 	td->cols = 80;
@@ -2695,6 +3087,9 @@ static void init_windows(void)
 	td->size_oh2 = 2;
 	td->pos_x = 30;
 	td->pos_y = 20;
+#ifdef JP
+	td->bizarre = TRUE;
+#endif
 
 	/* Sub windows */
 	for (i = 1; i < MAX_TERM_DATA; i++)
@@ -2712,6 +3107,9 @@ static void init_windows(void)
 		td->size_oh2 = 1;
 		td->pos_x = (7 - i) * 30;
 		td->pos_y = (7 - i) * 20;
+#ifdef JP
+		td->bizarre = TRUE;
+#endif
 	}
 
 
@@ -2742,6 +3140,13 @@ static void init_windows(void)
 	{
 		td = &data[i];
 
+#ifdef JP
+		strncpy(td->lf.lfFaceName, td->font_want, LF_FACESIZE);
+		td->lf.lfCharSet = SHIFTJIS_CHARSET;
+		td->lf.lfPitchAndFamily = FIXED_PITCH | FF_DONTCARE;
+		/* Activate the chosen font */
+		term_force_font(td, NULL);
+#else
 		/* Access the standard font file */
 		path_build(buf, sizeof(buf), ANGBAND_DIR_XTRA_FONT, td->font_want);
 
@@ -2761,6 +3166,7 @@ static void init_windows(void)
 			/* HACK - Assume bizarre */
 			td->bizarre = TRUE;
 		}
+#endif
 
 		/* Analyze the font */
 		term_getsize(td);
@@ -2782,7 +3188,11 @@ static void init_windows(void)
 		                       td->size_wid, td->size_hgt,
 		                       HWND_DESKTOP, NULL, hInstance, NULL);
 		my_td = NULL;
+#ifdef JP
+		if (!td->w) quit("サブウィンドウに作成に失敗しました");
+#else
 		if (!td->w) quit("Failed to create sub-window");
+#endif
 
 		if (td->visible)
 		{
@@ -2816,7 +3226,11 @@ static void init_windows(void)
 	                       td->size_wid, td->size_hgt,
 	                       HWND_DESKTOP, NULL, hInstance, NULL);
 	my_td = NULL;
+#ifdef JP
+	if (!td->w) quit("メインウィンドウの作成に失敗しました");
+#else
 	if (!td->w) quit_fmt("Failed to create %s window", VERSION_NAME);
+#endif
 
 	term_data_link(td);
 	term_screen = &td->t;
@@ -2858,6 +3272,11 @@ static void init_windows(void)
 	/* Create a "brush" for drawing the "cursor" */
 	hbrYellow = CreateSolidBrush(win_clr[TERM_YELLOW]);
 
+#ifdef JP
+	/* Tofu */
+	WALL = LoadBitmap(hInstance, AppName);
+	myBrush = CreatePatternBrush(WALL);
+#endif
 
 	/* Process pending messages */
 	(void)Term_xtra_win_flush();
@@ -3039,6 +3458,10 @@ static void setup_menus(void)
 	               MF_BYCOMMAND | MF_DISABLED | MF_GRAYED);
 	EnableMenuItem(hm, IDM_OPTIONS_LOW_PRIORITY,
 	               MF_BYCOMMAND | MF_DISABLED | MF_GRAYED);
+	EnableMenuItem(hm, IDM_OPTIONS_BG,
+	               MF_BYCOMMAND | MF_DISABLED | MF_GRAYED);
+	EnableMenuItem(hm, IDM_OPTIONS_OPEN_BG,
+	               MF_BYCOMMAND | MF_DISABLED | MF_GRAYED);
 
 	/* Menu "Options", Item "Map" */
 	if (inkey_flag && initialized && (use_graphics != GRAPHICS_NONE))
@@ -3069,6 +3492,11 @@ static void setup_menus(void)
 	CheckMenuItem(hm, IDM_OPTIONS_LOW_PRIORITY,
 	              (low_priority ? MF_CHECKED : MF_UNCHECKED));
 
+#ifdef USE_BACKGROUND
+	CheckMenuItem(hm, IDM_OPTIONS_BG,
+	              (use_background ? MF_CHECKED : MF_UNCHECKED));
+#endif /* USE_BACKGROUND */
+
 #ifdef USE_GRAPHICS
 	if (inkey_flag && initialized)
 	{
@@ -3097,6 +3525,16 @@ static void setup_menus(void)
 
 	EnableMenuItem(hm, IDM_OPTIONS_LOW_PRIORITY,
 	               MF_BYCOMMAND | MF_ENABLED);
+
+#ifdef USE_BACKGROUND
+	/* Menu "Options", Item "Use Background" */
+	EnableMenuItem(hm, IDM_OPTIONS_BG,
+	               MF_BYCOMMAND | MF_ENABLED);
+
+	/* Menu "Options", Item "Select Background" */
+	EnableMenuItem(hm, IDM_OPTIONS_OPEN_BG,
+	               MF_BYCOMMAND | MF_ENABLED);
+#endif /* USE_BACKGROUND */
 }
 
 
@@ -3308,8 +3746,13 @@ static void display_help(cptr filename)
 	}
 	else
 	{
+#ifdef JP
+		plog_fmt("ヘルプファイル[%s]が見付かりません。", tmp);
+		plog("代わりにオンラインヘルプを使用してください。");
+#else
 		plog_fmt("Cannot find help file: %s", tmp);
 		plog("Use the online help files instead.");
+#endif
 	}
 }
 
@@ -3333,11 +3776,19 @@ static void process_menus(WORD wCmd)
 		{
 			if (!initialized)
 			{
+#ifdef JP
+				plog("まだ初期化中です...");
+#else
 				plog("You cannot do that yet...");
+#endif
 			}
 			else if (game_in_progress)
 			{
+#ifdef JP
+				plog("プレイ中は新しいゲームを始めることができません！");
+#else
 				plog("You can't start a new game while you're still playing!");
+#endif
 			}
 			else
 			{
@@ -3354,11 +3805,19 @@ static void process_menus(WORD wCmd)
 		{
 			if (!initialized)
 			{
+#ifdef JP
+				plog("まだ初期化中です...");
+#else
 				plog("You cannot do that yet...");
+#endif
 			}
 			else if (game_in_progress)
 			{
+#ifdef JP
+				plog("プレイ中はゲームをロードすることができません！");
+#else
 				plog("You can't open a new game while you're still playing!");
+#endif
 			}
 			else
 			{
@@ -3403,7 +3862,11 @@ static void process_menus(WORD wCmd)
 			else
 			{
 				/* Paranoia */
+#ifdef JP
+				plog("今、セーブすることは出来ません。");
+#else
 				plog("You may not do that right now.");
+#endif
 			}
 			break;
 		}
@@ -3416,7 +3879,11 @@ static void process_menus(WORD wCmd)
 				/* Paranoia */
 				if (!inkey_flag)
 				{
+#ifdef JP
+					plog("今、終了することは出来ません。");
+#else /* JP */
 					plog("You may not do that right now.");
+#endif /* JP */
 					break;
 				}
 
@@ -3436,7 +3903,11 @@ static void process_menus(WORD wCmd)
 
 		case IDM_WINDOW_VIS_0:
 		{
+#ifdef JP
+			plog("メインウィンドウは非表示にできません！");
+#else /* JP */
 			plog("You are not allowed to do that!");
+#endif /* JP */
 
 			break;
 		}
@@ -3622,7 +4093,11 @@ static void process_menus(WORD wCmd)
 			/* Paranoia */
 			if (!inkey_flag || !initialized)
 			{
+#ifdef JP
+				plog("キー入力待ちのときに切り替えることは出来ません。");
+#else /* JP */
 				plog("You may not do that right now.");
+#endif /* JP */
 				break;
 			}
 
@@ -3646,7 +4121,11 @@ static void process_menus(WORD wCmd)
 			/* Paranoia */
 			if (!inkey_flag || !initialized)
 			{
+#ifdef JP
+				plog("キー入力待ちのときに切り替えることは出来ません。");
+#else /* JP */
 				plog("You may not do that right now.");
+#endif /* JP */
 				break;
 			}
 
@@ -3670,7 +4149,11 @@ static void process_menus(WORD wCmd)
 			/* Paranoia */
 			if (!inkey_flag || !initialized)
 			{
+#ifdef JP
+				plog("キー入力待ちのときに切り替えることは出来ません。");
+#else /* JP */
 				plog("You may not do that right now.");
+#endif /* JP */
 				break;
 			}
 
@@ -3694,7 +4177,11 @@ static void process_menus(WORD wCmd)
 			/* Paranoia */
 			if (!inkey_flag || !initialized)
 			{
+#ifdef JP
+				plog("キー入力待ちのときに切り替えることは出来ません。");
+#else /* JP */
 				plog("You may not do that right now.");
+#endif /* JP */
 				break;
 			}
 
@@ -3718,7 +4205,11 @@ static void process_menus(WORD wCmd)
 			/* Paranoia */
 			if (!inkey_flag || !initialized)
 			{
+#ifdef JP
+				plog("キー入力待ちのときに切り替えることは出来ません。");
+#else /* JP */
 				plog("You may not do that right now.");
+#endif /* JP */
 				break;
 			}
 
@@ -3736,7 +4227,11 @@ static void process_menus(WORD wCmd)
 			/* Paranoia */
 			if (!inkey_flag || !initialized)
 			{
+#ifdef JP
+				plog("キー入力待ちのときに切り替えることは出来ません。");
+#else /* JP */
 				plog("You may not do that right now.");
+#endif /* JP */
 				break;
 			}
 
@@ -3818,7 +4313,11 @@ static void process_menus(WORD wCmd)
 				}
 				else
 				{
+#ifdef JP
+					plog("ウィンドウを作成出来ません");
+#else /* JP */
 					plog("Failed to create saver window");
+#endif /* JP */
 				}
 			}
 
@@ -3846,13 +4345,97 @@ static void process_menus(WORD wCmd)
 			/* Paranoia */
 			if (!inkey_flag || !initialized)
 			{
+#ifdef JP
+				plog("キー入力待ちのときに切り替ることは出来ません。");
+#else
 				plog("You may not do that right now.");
+#endif
 				break;
 			}
 
 			windows_map();
 			break;
 		}
+
+#ifdef USE_BACKGROUND
+		case IDM_OPTIONS_BG:
+		{
+			/* Paranoia */
+			if (!inkey_flag)
+			{
+#ifdef JP
+				plog("キー入力待ちのときに切り替えることは出来ません。");
+#else
+				plog("You may not do that right now.");
+#endif
+				break;
+			}
+
+			/* Toggle "use_background" */
+			use_background = !use_background;
+
+			init_background();
+
+			/* React to changes */
+			Term_xtra_win_react();
+
+			/* Hack -- Force redraw */
+			Term_key_push(KTRL('R'));
+
+			break;
+		}
+
+		case IDM_OPTIONS_OPEN_BG:
+		{
+			/* Paranoia */
+			if (!inkey_flag)
+			{
+#ifdef JP
+				plog("キー入力待ちのときに切り替えることは出来ません。");
+#else
+				plog("You may not do that right now.");
+#endif
+				break;
+			}
+			else
+			{
+#ifdef JP
+				char title[] = "壁紙を選んでね。";
+#else
+				char title[] = "Choose background graphic.";
+#endif
+				memset(&ofn, 0, sizeof(ofn));
+				ofn.lStructSize = sizeof(ofn);
+				ofn.hwndOwner = data[0].w;
+				ofn.lpstrFilter = "Bitmap Files (*.bmp)\0*.bmp\0";
+				ofn.nFilterIndex = 1;
+				ofn.lpstrFile = bg_bitmap_file;
+				ofn.nMaxFile = 1023;
+				ofn.lpstrInitialDir = NULL;
+#ifdef EUC
+				codeconv_euc2sjis(title);
+#endif
+				ofn.lpstrTitle = title;
+				ofn.Flags = OFN_FILEMUSTEXIST |
+				            OFN_HIDEREADONLY;
+
+				if (GetOpenFileName(&ofn))
+				{
+					/* Load 'savefile' */
+					use_background = 1;
+					init_background();
+				}
+
+				/* React to changes */
+				Term_xtra_win_react();
+
+				/* Hack -- Force redraw */
+				Term_key_push(KTRL('R'));
+			}
+			break;
+		}
+
+#endif /* USE_BACKGROUND */
 
 		case IDM_HELP_GENERAL:
 		{
@@ -4082,7 +4665,11 @@ static LRESULT FAR PASCAL AngbandWndProc(HWND hWnd, UINT uMsg,
 			{
 				if (!inkey_flag)
 				{
+#ifdef JP
+					plog("キー入力待ちのときに終了することは出来ません。");
+#else
 					plog("You may not do that right now.");
+#endif
 					return 0;
 				}
 
@@ -4611,8 +5198,24 @@ static void hack_plog(cptr str)
 	/* Give a warning */
 	if (str)
 	{
+#ifdef JP
+		char title[] = "警告！";
+		char buf[1024];
+
+		strcpy(buf, str);
+
+#ifdef EUC
+		/* Convert kanji code */
+		codeconv_euc2sjis(title);
+		codeconv_euc2sjis(buf);
+#endif
+
+		MessageBox(data[0].w, buf, title,
+		           MB_ICONEXCLAMATION | MB_OK);
+#else
 		MessageBox(NULL, str, "Warning",
 		           MB_ICONEXCLAMATION | MB_OK);
+#endif
 	}
 }
 
@@ -4625,8 +5228,24 @@ static void hack_quit(cptr str)
 	/* Give a warning */
 	if (str)
 	{
+#ifdef JP
+		char title[] = "エラー！";
+		char buf[1024];
+
+		strcpy(buf, str);
+
+#ifdef EUC
+		/* Convert kanji code */
+		codeconv_euc2sjis(title);
+		codeconv_euc2sjis(buf);
+#endif
+
+		MessageBox(data[0].w, buf, title,
+		           MB_ICONEXCLAMATION | MB_OK | MB_ICONSTOP);
+#else
 		MessageBox(NULL, str, "Error",
 		           MB_ICONEXCLAMATION | MB_OK | MB_ICONSTOP);
+#endif
 	}
 
 	/* Unregister the classes */
@@ -4660,8 +5279,24 @@ static void hook_plog(cptr str)
 	/* Warning */
 	if (str)
 	{
+#ifdef JP
+		char title[] = "警告！";
+		char buf[1024];
+
+		strcpy(buf, str);
+
+#ifdef EUC
+		/* Convert kanji code */
+		codeconv_euc2sjis(title);
+		codeconv_euc2sjis(buf);
+#endif
+
+		MessageBox(data[0].w, buf, title,
+		           MB_ICONEXCLAMATION | MB_OK);
+#else
 		MessageBox(data[0].w, str, "Warning",
 		           MB_ICONEXCLAMATION | MB_OK);
+#endif
 	}
 }
 
@@ -4685,8 +5320,24 @@ static void hook_quit(cptr str)
 		/* Give a warning */
 		if (str)
 		{
+#ifdef JP
+			char title[] = "エラー！";
+			char buf[1024];
+
+			strcpy(buf, str);
+
+#ifdef EUC
+			/* Convert kanji code */
+			codeconv_euc2sjis(title);
+			codeconv_euc2sjis(buf);
+#endif /* EUC */
+
+			MessageBox(data[0].w, buf, title,
+			           MB_ICONEXCLAMATION | MB_OK | MB_ICONSTOP);
+#else /* !JP */
 			MessageBox(data[0].w, str, "Error",
 			           MB_ICONEXCLAMATION | MB_OK | MB_ICONSTOP);
+#endif /* !JP */
 		}
 
 		/* Save the preferences */
@@ -4729,7 +5380,17 @@ static void hook_quit(cptr str)
 
 	DeleteObject(hbrYellow);
 
+#ifdef JP
+	/* Tofu */
+	DeleteObject(WALL);
+	DeleteObject(myBrush);
+#endif
+
 	if (hPal) DeleteObject(hPal);
+
+#ifdef USE_BACKGROUND
+	delete_background();
+#endif /* USE_BACKGROUND */
 
 	UnregisterClass(AppName, hInstance);
 
@@ -4738,7 +5399,9 @@ static void hook_quit(cptr str)
 	/* Free strings */
 	string_free(ini_file);
 	string_free(argv0);
+#ifndef JP
 	string_free(ANGBAND_DIR_XTRA_FONT);
+#endif /* JP */
 	string_free(ANGBAND_DIR_XTRA_GRAF);
 	string_free(ANGBAND_DIR_XTRA_SOUND);
 	string_free(ANGBAND_DIR_XTRA_HELP);
@@ -4845,6 +5508,7 @@ static void init_stuff(void)
 	validate_file(path);
 
 
+#ifndef JP
 	/* Build the "font" path */
 	path_build(path, sizeof(path), ANGBAND_DIR_XTRA, "font");
 
@@ -4859,6 +5523,7 @@ static void init_stuff(void)
 
 	/* Hack -- Validate the basic font */
 	validate_file(path);
+#endif
 
 
 #ifdef USE_GRAPHICS
@@ -5036,6 +5701,13 @@ int FAR PASCAL WinMain(HINSTANCE hInst, HINSTANCE hPrevInst,
 	/* Prepare the windows */
 	init_windows();
 
+#ifdef USE_BACKGROUND
+
+	/* Prepare the backgroud graphic */
+	init_background();
+
+#endif /* USE_BACKGROUND */
+
 	/* Activate hooks */
 	plog_aux = hook_plog;
 	quit_aux = hook_quit;
@@ -5065,7 +5737,11 @@ int FAR PASCAL WinMain(HINSTANCE hInst, HINSTANCE hPrevInst,
 	check_for_save_file(lpCmdLine);
 
 	/* Prompt the user */
+#ifdef JP
+	prt("[ファイル] メニューの [新規] または [開く] を選択してください。", 23, 8);
+#else
 	prt("[Choose 'New' or 'Open' from the 'File' menu]", 23, 17);
+#endif
 	Term_fresh();
 
 	/* Process messages forever */

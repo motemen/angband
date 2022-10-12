@@ -94,7 +94,11 @@ static bool eat_food(object_type *o_ptr, bool *ident)
 
 		case SV_FOOD_WEAKNESS:
 		{
+#ifdef JP
+			take_hit(damroll(6, 6), "毒入り食料");
+#else /* JP */
 			take_hit(damroll(6, 6), "poisonous food");
+#endif /* JP */
 			(void)do_dec_stat(A_STR);
 			*ident = TRUE;
 			break;
@@ -102,7 +106,11 @@ static bool eat_food(object_type *o_ptr, bool *ident)
 
 		case SV_FOOD_SICKNESS:
 		{
+#ifdef JP
+			take_hit(damroll(6, 6), "毒入り食料");
+#else /* JP */
 			take_hit(damroll(6, 6), "poisonous food");
+#endif /* JP */
 			(void)do_dec_stat(A_CON);
 			*ident = TRUE;
 			break;
@@ -110,7 +118,11 @@ static bool eat_food(object_type *o_ptr, bool *ident)
 
 		case SV_FOOD_STUPIDITY:
 		{
+#ifdef JP
+			take_hit(damroll(8, 8), "毒入り食料");
+#else /* JP */
 			take_hit(damroll(8, 8), "poisonous food");
+#endif /* JP */
 			(void)do_dec_stat(A_INT);
 			*ident = TRUE;
 			break;
@@ -118,7 +130,11 @@ static bool eat_food(object_type *o_ptr, bool *ident)
 
 		case SV_FOOD_NAIVETY:
 		{
+#ifdef JP
+			take_hit(damroll(8, 8), "毒入り食料");
+#else /* JP */
 			take_hit(damroll(8, 8), "poisonous food");
+#endif /* JP */
 			(void)do_dec_stat(A_WIS);
 			*ident = TRUE;
 			break;
@@ -126,7 +142,11 @@ static bool eat_food(object_type *o_ptr, bool *ident)
 
 		case SV_FOOD_UNHEALTH:
 		{
+#ifdef JP
+			take_hit(damroll(10, 10), "毒入り食料");
+#else /* JP */
 			take_hit(damroll(10, 10), "poisonous food");
+#endif /* JP */
 			(void)do_dec_stat(A_CON);
 			*ident = TRUE;
 			break;
@@ -134,7 +154,11 @@ static bool eat_food(object_type *o_ptr, bool *ident)
 
 		case SV_FOOD_DISEASE:
 		{
+#ifdef JP
+			take_hit(damroll(10, 10), "毒入り食料");
+#else /* JP */
 			take_hit(damroll(10, 10), "poisonous food");
+#endif /* JP */
 			(void)do_dec_stat(A_STR);
 			*ident = TRUE;
 			break;
@@ -194,19 +218,49 @@ static bool eat_food(object_type *o_ptr, bool *ident)
 		}
 
 
+		/* それぞれの食べ物の感想をオリジナルより細かく表現 */
 		case SV_FOOD_RATION:
+#ifdef JP
+		{
+			msg_print("これはおいしい。");
+			*ident = TRUE;
+			break;
+		}
+#endif /* JP */
 		case SV_FOOD_BISCUIT:
+#ifdef JP
+		{
+			msg_print("甘くてサクサクしてとてもおいしい。");
+			*ident = TRUE;
+			break;
+		}
+#endif /* JP */
 		case SV_FOOD_JERKY:
+#ifdef JP
+		{
+			msg_print("歯ごたえがあっておいしい。");
+			*ident = TRUE;
+			break;
+		}
+#endif /* JP */
 		case SV_FOOD_SLIME_MOLD:
 		{
+#ifdef JP
+			msg_print("これはなんとも形容しがたい味だ。");
+#else /* JP */
 			msg_print("That tastes good.");
+#endif /* JP */
 			*ident = TRUE;
 			break;
 		}
 
 		case SV_FOOD_WAYBREAD:
 		{
+#ifdef JP
+			msg_print("これはひじょうに美味だ。");
+#else /* JP */
 			msg_print("That tastes good.");
+#endif /* JP */
 			(void)set_poisoned(0);
 			(void)hp_player(damroll(4, 8));
 			*ident = TRUE;
@@ -214,9 +268,20 @@ static bool eat_food(object_type *o_ptr, bool *ident)
 		}
 
 		case SV_FOOD_PINT_OF_ALE:
+#ifdef JP
+		{
+			msg_print("のどごし爽やかだ。");
+			*ident = TRUE;
+			break;
+		}
+#endif /* JP */
 		case SV_FOOD_PINT_OF_WINE:
 		{
+#ifdef JP
+			msg_print("これはいける。");
+#else /* JP */
 			msg_print("That tastes good.");
+#endif /* JP */
 			*ident = TRUE;
 			break;
 		}
@@ -235,10 +300,31 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 	switch (o_ptr->sval)
 	{
 		case SV_POTION_WATER:
+#ifdef JP
+		{
+			msg_print("口の中がさっぱりした。");
+			msg_print("のどの渇きが少しおさまった。");
+			*ident = TRUE;
+			break;
+		}
+#endif /* JP */
 		case SV_POTION_APPLE_JUICE:
+#ifdef JP
+		{
+			msg_print("甘くてサッパリとしていて、とてもおいしい。");
+			msg_print("のどの渇きが少しおさまった。");
+			*ident = TRUE;
+			break;
+		}
+#endif /* JP */
 		case SV_POTION_SLIME_MOLD:
 		{
+#ifdef JP
+			msg_print("なんとも不気味な味だ。");
+			msg_print("のどの渇きが少しおさまった。");
+#else /* JP */
 			msg_print("You feel less thirsty.");
+#endif /* JP */
 			*ident = TRUE;
 			break;
 		}
@@ -251,7 +337,11 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 
 		case SV_POTION_SALT_WATER:
 		{
+#ifdef JP
+			msg_print("うぇ！思わず吐いてしまった。");
+#else /* JP */
 			msg_print("The potion makes you vomit!");
+#endif /* JP */
 			(void)set_food(PY_FOOD_STARVE - 1);
 			(void)set_poisoned(0);
 			(void)set_paralyzed(p_ptr->paralyzed + 4);
@@ -311,7 +401,11 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 		{
 			if (!p_ptr->hold_life && (p_ptr->exp > 0))
 			{
+#ifdef JP
+				msg_print("過去の記憶が薄れていく気がする。");
+#else /* JP */
 				msg_print("You feel your memories fade.");
+#endif /* JP */
 				lose_exp(p_ptr->exp / 4);
 				*ident = TRUE;
 			}
@@ -320,8 +414,13 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 
 		case SV_POTION_RUINATION:
 		{
+#ifdef JP
+			msg_print("身も心も弱ってきて、精気が抜けていくようだ。");
+			take_hit(damroll(10, 10), "破滅の薬");
+#else /* JP */
 			msg_print("Your nerves and muscles feel weak and lifeless!");
 			take_hit(damroll(10, 10), "a potion of Ruination");
+#endif /* JP */
 			(void)dec_stat(A_DEX, 25, TRUE);
 			(void)dec_stat(A_WIS, 25, TRUE);
 			(void)dec_stat(A_CON, 25, TRUE);
@@ -370,8 +469,13 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 
 		case SV_POTION_DETONATIONS:
 		{
+#ifdef JP
+			msg_print("体の中で激しい爆発が起きた！");
+			take_hit(damroll(50, 20), "爆発の薬");
+#else /* JP */
 			msg_print("Massive explosions rupture your body!");
 			take_hit(damroll(50, 20), "a potion of Detonation");
+#endif /* JP */
 			(void)set_stun(p_ptr->stun + 75);
 			(void)set_cut(p_ptr->cut + 5000);
 			*ident = TRUE;
@@ -380,8 +484,13 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 
 		case SV_POTION_DEATH:
 		{
+#ifdef JP
+			msg_print("死の予感が体中を駆けめぐった。");
+			take_hit(5000, "死の薬");
+#else /* JP */
 			msg_print("A feeling of Death flows through your body.");
 			take_hit(5000, "a potion of Death");
+#endif /* JP */
 			*ident = TRUE;
 			break;
 		}
@@ -521,7 +630,11 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 
 		case SV_POTION_LIFE:
 		{
+#ifdef JP
+			msg_print("体中に生命力が満ちあふれてきた！");
+#else /* JP */
 			msg_print("You feel life flow through your body!");
+#endif /* JP */
 			restore_level();
 			(void)set_poisoned(0);
 			(void)set_blind(0);
@@ -551,7 +664,11 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 			{
 				p_ptr->csp = p_ptr->msp;
 				p_ptr->csp_frac = 0;
+#ifdef JP
+				msg_print("頭がハッキリとした。");
+#else /* JP */
 				msg_print("Your feel your head clear.");
+#endif /* JP */
 				p_ptr->redraw |= (PR_MANA);
 				p_ptr->window |= (PW_PLAYER_0 | PW_PLAYER_1);
 				*ident = TRUE;
@@ -650,7 +767,11 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 
 		case SV_POTION_ENLIGHTENMENT:
 		{
+#ifdef JP
+			msg_print("自分の置かれている状況が脳裏に浮かんできた...");
+#else /* JP */
 			msg_print("An image of your surroundings forms in your mind...");
+#endif /* JP */
 			wiz_lite();
 			*ident = TRUE;
 			break;
@@ -658,7 +779,11 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 
 		case SV_POTION_STAR_ENLIGHTENMENT:
 		{
+#ifdef JP
+			msg_print("更なる啓蒙を感じた...");
+#else /* JP */
 			msg_print("You begin to feel more enlightened...");
+#endif /* JP */
 			message_flush();
 			wiz_lite();
 			(void)do_inc_stat(A_INT);
@@ -677,7 +802,11 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 
 		case SV_POTION_SELF_KNOWLEDGE:
 		{
+#ifdef JP
+			msg_print("自分自身のことが少しは分かった気がする...");
+#else /* JP */
 			msg_print("You begin to know yourself a little better...");
+#endif /* JP */
 			message_flush();
 			self_knowledge();
 			*ident = TRUE;
@@ -690,7 +819,11 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 			{
 				s32b ee = (p_ptr->exp / 2) + 10;
 				if (ee > 100000L) ee = 100000L;
+#ifdef JP
+				msg_print("更に経験を積んだような気がする。");
+#else /* JP */
 				msg_print("You feel more experienced.");
+#endif /* JP */
 				gain_exp(ee);
 				*ident = TRUE;
 			}
@@ -727,7 +860,11 @@ static bool read_scroll(object_type *o_ptr, bool *ident)
 
 		case SV_SCROLL_AGGRAVATE_MONSTER:
 		{
+#ifdef JP
+			msg_print("カン高くうなる様な音が辺りを覆った。");
+#else /* JP */
 			msg_print("There is a high pitched humming noise.");
+#endif /* JP */
 			aggravate_monsters(0);
 			*ident = TRUE;
 			break;
@@ -823,7 +960,11 @@ static bool read_scroll(object_type *o_ptr, bool *ident)
 		{
 			if (remove_curse())
 			{
+#ifdef JP
+				msg_print("誰かに見守られているような気がする。");
+#else /* JP */
 				msg_print("You feel as if someone is watching over you.");
+#endif /* JP */
 				*ident = TRUE;
 			}
 			break;
@@ -951,7 +1092,11 @@ static bool read_scroll(object_type *o_ptr, bool *ident)
 		{
 			if (p_ptr->confusing == 0)
 			{
+#ifdef JP
+				msg_print("手が輝き始めた。");
+#else /* JP */
 				msg_print("Your hands begin to glow.");
+#endif /* JP */
 				p_ptr->confusing = TRUE;
 				*ident = TRUE;
 			}
@@ -1091,7 +1236,11 @@ static bool use_staff(object_type *o_ptr, bool *ident)
 			{
 				if (!p_ptr->blind)
 				{
+#ifdef JP
+					msg_print("杖は一瞬ブルーに輝いた...");
+#else /* JP */
 					msg_print("The staff glows blue for a moment...");
+#endif /* JP */
 				}
 				*ident = TRUE;
 			}
@@ -1102,7 +1251,11 @@ static bool use_staff(object_type *o_ptr, bool *ident)
 		{
 			if (!p_ptr->blind)
 			{
+#ifdef JP
+				msg_print("杖の先が明るく輝いた...");
+#else /* JP */
 				msg_print("The end of the staff glows brightly...");
+#endif /* JP */
 			}
 			for (k = 0; k < 8; k++) lite_line(ddd[k]);
 			*ident = TRUE;
@@ -1192,7 +1345,11 @@ static bool use_staff(object_type *o_ptr, bool *ident)
 				p_ptr->csp = p_ptr->msp;
 				p_ptr->csp_frac = 0;
 				*ident = TRUE;
+#ifdef JP
+				msg_print("頭がハッキリとした。");
+#else /* JP */
 				msg_print("Your feel your head clear.");
+#endif /* JP */
 				p_ptr->redraw |= (PR_MANA);
 				p_ptr->window |= (PW_PLAYER_0 | PW_PLAYER_1);
 			}
@@ -1318,7 +1475,11 @@ static bool aim_wand(object_type *o_ptr, bool *ident)
 	if ((chance < USE_DEVICE) || (randint(chance) < USE_DEVICE))
 	{
 		if (flush_failure) flush();
+#ifdef JP
+		msg_print("魔法棒をうまく使えなかった。");
+#else /* JP */
 		msg_print("You failed to use the wand properly.");
+#endif /* JP */
 		return (FALSE);
 	}
 
@@ -1326,7 +1487,11 @@ static bool aim_wand(object_type *o_ptr, bool *ident)
 	if (o_ptr->pval <= 0)
 	{
 		if (flush_failure) flush();
+#ifdef JP
+		msg_print("この魔法棒にはもう魔力が残っていない。");
+#else /* JP */
 		msg_print("The wand has no charges left.");
+#endif /* JP */
 		o_ptr->ident |= (IDENT_EMPTY);
 		p_ptr->notice |= (PN_COMBINE | PN_REORDER);
 		p_ptr->window |= (PW_INVEN);
@@ -1392,7 +1557,11 @@ static bool aim_wand(object_type *o_ptr, bool *ident)
 
 		case SV_WAND_LITE:
 		{
+#ifdef JP
+			msg_print("青く輝く光線が放たれた。");
+#else /* JP */
 			msg_print("A line of blue shimmering light appears.");
+#endif /* JP */
 			lite_line(dir);
 			*ident = TRUE;
 			break;
@@ -1506,7 +1675,11 @@ static bool aim_wand(object_type *o_ptr, bool *ident)
 
 		case SV_WAND_WONDER:
 		{
+#ifdef JP
+			msg_print("おっと、謎の魔法棒を始動させた。");
+#else /* JP */
 			msg_print("Oops.  Wand of wonder activated.");
+#endif /* JP */
 			break;
 		}
 
@@ -1627,9 +1800,17 @@ static bool zap_rod(object_type *o_ptr, bool *ident)
 		if (flush_failure) flush();
 
 		if (o_ptr->number == 1)
-			msg_print("The rod is still charging");
+#ifdef JP
+			msg_print("このロッドはまだ魔力を充填している最中だ。");
+#else /* JP */
+			msg_print("The rod is still charging."); /* BUGFIX - added a period */
+#endif /* JP */
 		else
-			msg_print("The rods are all still charging");
+#ifdef JP
+			msg_print("このロッドはまだ魔力を充填している最中だ。");
+#else /* JP */
+			msg_print("The rods are all still charging."); /* BUGFIX - added a period */
+#endif /* JP */
 
 		return FALSE;
 	}
@@ -1751,7 +1932,11 @@ static bool zap_rod(object_type *o_ptr, bool *ident)
 
 		case SV_ROD_LITE:
 		{
+#ifdef JP
+			msg_print("青く輝く光線が放たれた。");
+#else /* JP */
 			msg_print("A line of blue shimmering light appears.");
+#endif /* JP */
 			lite_line(dir);
 			*ident = TRUE;
 			break;
@@ -1863,12 +2048,20 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 	/* Check the recharge */
 	if (o_ptr->timeout)
 	{
+#ifdef JP
+		msg_print("それは微かに音を立て、輝き、消えた...");
+#else /* JP */
 		msg_print("It whines, glows and fades...");
+#endif /* JP */
 		return FALSE;
 	}
 
 	/* Activate the artifact */
+#ifdef JP
+	message(MSG_ACT_ARTIFACT, 0, "始動させた...");
+#else /* JP */
 	message(MSG_ACT_ARTIFACT, 0, "You activate it...");
+#endif /* JP */
 
 	/* Artifacts */
 	if (o_ptr->name1)
@@ -1883,21 +2076,33 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 		{
 			case ACT_ILLUMINATION:
 			{
+#ifdef JP
+				msg_format("%sから澄んだ光があふれ出た...", o_name);
+#else /* JP */
 				msg_format("The %s wells with clear light...", o_name);
+#endif /* JP */
 				lite_area(damroll(2, 15), 3);
 				break;
 			}
 
 			case ACT_MAGIC_MAP:
 			{
+#ifdef JP
+				msg_format("%sが眩しく輝いた...", o_name);
+#else /* JP */
 				msg_format("The %s shines brightly...", o_name);
+#endif /* JP */
 				map_area();
 				break;
 			}
 
 			case ACT_CLAIRVOYANCE:
 			{
+#ifdef JP
+				msg_format("%sは深いグリーンに輝いた...", o_name);
+#else /* JP */
 				msg_format("The %s glows a deep green...", o_name);
+#endif /* JP */
 				wiz_lite();
 				(void)detect_traps();
 				(void)detect_doors();
@@ -1907,7 +2112,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_PROT_EVIL:
 			{
+#ifdef JP
+				msg_format("%sから鋭い音が流れ出た...", o_name);
+#else /* JP */
 				msg_format("The %s lets out a shrill wail...", o_name);
+#endif /* JP */
 				k = 3 * p_ptr->lev;
 				(void)set_protevil(p_ptr->protevil + randint(25) + k);
 				break;
@@ -1915,14 +2124,22 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_DISP_EVIL:
 			{
+#ifdef JP
+				msg_format("%sは辺りを善のオーラで満たした...", o_name);
+#else /* JP */
 				msg_format("The %s floods the area with goodness...", o_name);
+#endif /* JP */
 				dispel_evil(p_ptr->lev * 5);
 				break;
 			}
 
 			case ACT_HASTE2:
 			{
+#ifdef JP
+				msg_format("%sは明るく輝いた...", o_name);
+#else /* JP */
 				msg_format("The %s glows brightly...", o_name);
+#endif /* JP */
 				if (!p_ptr->fast)
 				{
 					(void)set_fast(randint(75) + 75);
@@ -1936,7 +2153,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_FIRE3:
 			{
+#ifdef JP
+				msg_format("%sは深紅に輝いた...", o_name);
+#else /* JP */
 				msg_format("The %s glows deep red...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_ball(GF_FIRE, dir, 120, 3);
 				break;
@@ -1944,7 +2165,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_FROST5:
 			{
+#ifdef JP
+				msg_format("%sは白く明るく輝いた...", o_name);
+#else /* JP */
 				msg_format("The %s glows bright white...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_ball(GF_COLD, dir, 200, 3);
 				break;
@@ -1952,7 +2177,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_ELEC2:
 			{
+#ifdef JP
+				msg_format("%sは深いブルーに輝いた...", o_name);
+#else /* JP */
 				msg_format("The %s glows deep blue...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_ball(GF_ELEC, dir, 250, 3);
 				break;
@@ -1960,7 +2189,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_BIZZARE:
 			{
+#ifdef JP
+				msg_format("%sは漆黒に輝いた...", o_name);
+#else /* JP */
 				msg_format("The %s glows intensely black...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				ring_of_power(dir);
 				break;
@@ -1969,14 +2202,22 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_STAR_BALL:
 			{
+#ifdef JP
+				msg_format("%sが稲妻で覆われた...", o_name);
+#else /* JP */
 				msg_format("Your %s is surrounded by lightning...", o_name);
+#endif /* JP */
 				for (i = 0; i < 8; i++) fire_ball(GF_ELEC, ddd[i], 150, 3);
 				break;
 			}
 
 			case ACT_RAGE_BLESS_RESIST:
 			{
+#ifdef JP
+				msg_format("%sが様々な色に輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows many colours...", o_name);
+#endif /* JP */
 				(void)hp_player(30);
 				(void)set_afraid(0);
 				(void)set_shero(p_ptr->shero + randint(50) + 50);
@@ -1991,8 +2232,13 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_HEAL2:
 			{
+#ifdef JP
+				msg_format("%sが白く明るく輝いた...", o_name);
+				msg_print("とても気分がよくなった...");
+#else /* JP */
 				msg_format("Your %s glows a bright white...", o_name);
 				msg_print("You feel much better...");
+#endif /* JP */
 				(void)hp_player(1000);
 				(void)set_cut(0);
 				break;
@@ -2000,37 +2246,59 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_PHASE:
 			{
+#ifdef JP
+				msg_format("%sが辺りの空間をゆがませた...", o_name);
+#else /* JP */
 				msg_format("Your %s twists space around you...", o_name);
+#endif /* JP */
 				teleport_player(10);
 				break;
 			}
 
 			case ACT_BANISHMENT:
 			{
+#ifdef JP
+				msg_format("%sが深いブルーに輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows deep blue...", o_name);
+#endif /* JP */
 				if (!banishment()) return FALSE;
 				break;
 			}
 
 			case ACT_TRAP_DOOR_DEST:
 			{
+#ifdef JP
+				msg_format("%sが赤く明るく輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows bright red...", o_name);
+#endif /* JP */
 				destroy_doors_touch();
 				break;
 			}
 
 			case ACT_DETECT:
 			{
+#ifdef JP
+				msg_format("%sが白く明るく輝いた...", o_name);
+				msg_print("心にイメージが浮かんできた...");
+#else /* JP */
 				msg_format("Your %s glows bright white...", o_name);
 				msg_print("An image forms in your mind...");
+#endif /* JP */
 				detect_all();
 				break;
 			}
 
 			case ACT_HEAL1:
 			{
+#ifdef JP
+				msg_format("%sが深いブルーに輝いた...", o_name);
+				msg_print("体内に暖かい鼓動が感じられる...");
+#else /* JP */
 				msg_format("Your %s glows deep blue...", o_name);
 				msg_print("You feel a warm tingling inside...");
+#endif /* JP */
 				(void)hp_player(500);
 				(void)set_cut(0);
 				break;
@@ -2038,7 +2306,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_RESIST:
 			{
+#ifdef JP
+				msg_format("%sが様々な色に輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows many colours...", o_name);
+#endif /* JP */
 				(void)set_oppose_acid(p_ptr->oppose_acid + randint(20) + 20);
 				(void)set_oppose_elec(p_ptr->oppose_elec + randint(20) + 20);
 				(void)set_oppose_fire(p_ptr->oppose_fire + randint(20) + 20);
@@ -2049,35 +2321,55 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_SLEEP:
 			{
+#ifdef JP
+				msg_format("%sが深いブルーに輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows deep blue...", o_name);
+#endif /* JP */
 				sleep_monsters_touch();
 				break;
 			}
 
 			case ACT_RECHARGE1:
 			{
+#ifdef JP
+				msg_format("%sが黄色く明るく輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows bright yellow...", o_name);
+#endif /* JP */
 				if (!recharge(60)) return FALSE;
 				break;
 			}
 
 			case ACT_TELEPORT:
 			{
+#ifdef JP
+				msg_format("%sが辺りの空間をゆがませた...", o_name);
+#else /* JP */
 				msg_format("Your %s twists space around you...", o_name);
+#endif /* JP */
 				teleport_player(100);
 				break;
 			}
 
 			case ACT_RESTORE_LIFE:
 			{
+#ifdef JP
+				msg_format("%sが深紅に輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows a deep red...", o_name);
+#endif /* JP */
 				restore_level();
 				break;
 			}
 
 			case ACT_MISSILE:
 			{
+#ifdef JP
+				msg_format("%sが眩しいくらいに明るく輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows extremely brightly...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_bolt(GF_MISSILE, dir, damroll(2, 6));
 				break;
@@ -2085,7 +2377,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_FIRE1:
 			{
+#ifdef JP
+				msg_format("%sが炎に覆われた...", o_name);
+#else /* JP */
 				msg_format("Your %s is covered in fire...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_bolt(GF_FIRE, dir, damroll(9, 8));
 				break;
@@ -2093,7 +2389,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_FROST1:
 			{
+#ifdef JP
+				msg_format("%sが冷気に覆われた...", o_name);
+#else /* JP */
 				msg_format("Your %s is covered in frost...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_bolt(GF_COLD, dir, damroll(6, 8));
 				break;
@@ -2101,7 +2401,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_LIGHTNING_BOLT:
 			{
+#ifdef JP
+				msg_format("%sが火花に覆われた...", o_name);
+#else /* JP */
 				msg_format("Your %s is covered in sparks...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_bolt(GF_ELEC, dir, damroll(4, 8));
 				break;
@@ -2109,7 +2413,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_ACID1:
 			{
+#ifdef JP
+				msg_format("%sが酸に覆われた...", o_name);
+#else /* JP */
 				msg_format("Your %s is covered in acid...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_bolt(GF_ACID, dir, damroll(5, 8));
 				break;
@@ -2117,7 +2425,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_ARROW:
 			{
+#ifdef JP
+				msg_format("%sに魔法のトゲが現れた...", o_name);
+#else /* JP */
 				msg_format("Your %s grows magical spikes...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_bolt(GF_ARROW, dir, 150);
 				break;
@@ -2125,7 +2437,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_HASTE1:
 			{
+#ifdef JP
+				msg_format("%sがグリーンに明るく輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows bright green...", o_name);
+#endif /* JP */
 				if (!p_ptr->fast)
 				{
 					(void)set_fast(randint(20) + 20);
@@ -2139,7 +2455,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_REM_FEAR_POIS:
 			{
+#ifdef JP
+				msg_format("%sが深いブルーに輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows deep blue...", o_name);
+#endif /* JP */
 				(void)set_afraid(0);
 				(void)set_poisoned(0);
 				break;
@@ -2147,7 +2467,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_STINKING_CLOUD:
 			{
+#ifdef JP
+				msg_format("%sが深い緑色に鼓動している...", o_name);
+#else /* JP */
 				msg_format("Your %s throbs deep green...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_ball(GF_POIS, dir, 12, 3);
 				break;
@@ -2155,7 +2479,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_FROST2:
 			{
+#ifdef JP
+				msg_format("%sが冷気に覆われた...", o_name);
+#else /* JP */
 				msg_format("Your %s is covered in frost...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_ball(GF_COLD, dir, 48, 2);
 				break;
@@ -2163,7 +2491,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_FROST4:
 			{
+#ifdef JP
+				msg_format("%sが淡いブルーに輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows a pale blue...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_bolt(GF_COLD, dir, damroll(12, 8));
 				break;
@@ -2171,7 +2503,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_FROST3:
 			{
+#ifdef JP
+				msg_format("%sが青く激しく輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows a intense blue...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_ball(GF_COLD, dir, 100, 2);
 				break;
@@ -2179,7 +2515,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_FIRE2:
 			{
+#ifdef JP
+				msg_format("%sから炎が吹き出した...", o_name);
+#else /* JP */
 				msg_format("Your %s rages in fire...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_ball(GF_FIRE, dir, 72, 2);
 				break;
@@ -2187,7 +2527,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_DRAIN_LIFE2:
 			{
+#ifdef JP
+				msg_format("%sが黒く輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows black...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				drain_life(dir, 120);
 				break;
@@ -2195,7 +2539,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_STONE_TO_MUD:
 			{
+#ifdef JP
+				msg_format("%sが鼓動した...", o_name);
+#else /* JP */
 				msg_format("Your %s pulsates...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				wall_to_mud(dir);
 				break;
@@ -2203,14 +2551,22 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_MASS_BANISHMENT:
 			{
+#ifdef JP
+				msg_format("%sからひどく鋭い音が流れ出た...", o_name);
+#else /* JP */
 				msg_format("Your %s lets out a long, shrill note...", o_name);
+#endif /* JP */
 				(void)mass_banishment();
 				break;
 			}
 
 			case ACT_CURE_WOUNDS:
 			{
+#ifdef JP
+				msg_format("%sが深紫の光を放射した...", o_name);
+#else /* JP */
 				msg_format("Your %s radiates deep purple...", o_name);
+#endif /* JP */
 				hp_player(damroll(4, 8));
 				(void)set_cut((p_ptr->cut / 2) - 50);
 				break;
@@ -2218,7 +2574,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_TELE_AWAY:
 			{
+#ifdef JP
+				msg_format("%sが深紅に輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows deep red...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				teleport_monster(dir);
 				break;
@@ -2226,14 +2586,22 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_WOR:
 			{
+#ifdef JP
+				msg_format("%sが柔らかく白く輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows soft white...", o_name);
+#endif /* JP */
 				set_recall();
 				break;
 			}
 
 			case ACT_CONFUSE:
 			{
+#ifdef JP
+				msg_format("%sが様々な色の火花を発した...", o_name);
+#else /* JP */
 				msg_format("Your %s glows in scintillating colours...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				confuse_monster(dir, 20);
 				break;
@@ -2241,21 +2609,33 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_IDENTIFY:
 			{
+#ifdef JP
+				msg_format("%sが黄色く輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows yellow...", o_name);
+#endif /* JP */
 				if (!ident_spell()) return FALSE;
 				break;
 			}
 
 			case ACT_PROBE:
 			{
+#ifdef JP
+				msg_format("%sが明るく輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows brightly...", o_name);
+#endif /* JP */
 				probing();
 				break;
 			}
 
 			case ACT_DRAIN_LIFE1:
 			{
+#ifdef JP
+				msg_format("%sが白く輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows white...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				drain_life(dir, 90);
 				break;
@@ -2263,21 +2643,33 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_FIREBRAND:
 			{
+#ifdef JP
+				msg_format("%sが深紅に輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows deep red...", o_name);
+#endif /* JP */
 				if (!brand_bolts()) return FALSE;
 				break;
 			}
 
 			case ACT_STARLIGHT:
 			{
+#ifdef JP
+				msg_format("%sが幾千の星の光で輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows with the light of a thousand stars...", o_name);
+#endif /* JP */
 				for (k = 0; k < 8; k++) strong_lite_line(ddd[k]);
 				break;
 			}
 
 			case ACT_MANA_BOLT:
 			{
+#ifdef JP
+				msg_format("%sが白く輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows white...", o_name);
+#endif /* JP */
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_bolt(GF_MANA, dir, damroll(12, 8));
 				break;
@@ -2285,7 +2677,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_BERSERKER:
 			{
+#ifdef JP
+				msg_format("%sが怒るように輝いた...", o_name);
+#else /* JP */
 				msg_format("Your %s glows in anger...", o_name);
+#endif /* JP */
 				set_shero(p_ptr->shero + randint(50) + 50);
 				break;
 			}
@@ -2317,7 +2713,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 			case SV_DRAGON_BLUE:
 			{
 				sound(MSG_BR_ELEC);
+#ifdef JP
+				msg_print("あなたは稲妻のブレスを吐いた。");
+#else /* JP */
 				msg_print("You breathe lightning.");
+#endif /* JP */
 				fire_ball(GF_ELEC, dir, 100, 2);
 				o_ptr->timeout = rand_int(450) + 450;
 				break;
@@ -2326,7 +2726,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 			case SV_DRAGON_WHITE:
 			{
 				sound(MSG_BR_FROST);
+#ifdef JP
+				msg_print("あなたは冷気のブレスを吐いた。");
+#else /* JP */
 				msg_print("You breathe frost.");
+#endif /* JP */
 				fire_ball(GF_COLD, dir, 110, 2);
 				o_ptr->timeout = rand_int(450) + 450;
 				break;
@@ -2335,7 +2739,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 			case SV_DRAGON_BLACK:
 			{
 				sound(MSG_BR_ACID);
+#ifdef JP
+				msg_print("あなたは酸のブレスを吐いた。");
+#else /* JP */
 				msg_print("You breathe acid.");
+#endif /* JP */
 				fire_ball(GF_ACID, dir, 130, 2);
 				o_ptr->timeout = rand_int(450) + 450;
 				break;
@@ -2344,7 +2752,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 			case SV_DRAGON_GREEN:
 			{
 				sound(MSG_BR_GAS);
+#ifdef JP
+				msg_print("あなたは毒ガスのブレスを吐いた。");
+#else /* JP */
 				msg_print("You breathe poison gas.");
+#endif /* JP */
 				fire_ball(GF_POIS, dir, 150, 2);
 				o_ptr->timeout = rand_int(450) + 450;
 				break;
@@ -2353,7 +2765,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 			case SV_DRAGON_RED:
 			{
 				sound(MSG_BR_FIRE);
+#ifdef JP
+				msg_print("あなたは火炎のブレスを吐いた。");
+#else /* JP */
 				msg_print("You breathe fire.");
+#endif /* JP */
 				fire_ball(GF_FIRE, dir, 200, 2);
 				o_ptr->timeout = rand_int(450) + 450;
 				break;
@@ -2366,11 +2782,19 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 				            ((chance == 2) ? MSG_BR_FROST :
 				             ((chance == 3) ? MSG_BR_ACID :
 				              ((chance == 4) ? MSG_BR_GAS : MSG_BR_FIRE)))));
+#ifdef JP
+				msg_format("あなたは%sのブレスを吐いた。",
+				           ((chance == 1) ? "稲妻" :
+				            ((chance == 2) ? "冷気" :
+				             ((chance == 3) ? "酸" :
+				              ((chance == 4) ? "毒ガス" : "火炎")))));
+#else /* JP */
 				msg_format("You breathe %s.",
 				           ((chance == 1) ? "lightning" :
 				            ((chance == 2) ? "frost" :
 				             ((chance == 3) ? "acid" :
 				              ((chance == 4) ? "poison gas" : "fire")))));
+#endif /* JP */
 				fire_ball(((chance == 1) ? GF_ELEC :
 				           ((chance == 2) ? GF_COLD :
 				            ((chance == 3) ? GF_ACID :
@@ -2383,7 +2807,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 			case SV_DRAGON_BRONZE:
 			{
 				sound(MSG_BR_CONF);
+#ifdef JP
+				msg_print("あなたは混乱のブレスを吐いた。");
+#else /* JP */
 				msg_print("You breathe confusion.");
+#endif /* JP */
 				fire_ball(GF_CONFUSION, dir, 120, 2);
 				o_ptr->timeout = rand_int(450) + 450;
 				break;
@@ -2392,7 +2820,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 			case SV_DRAGON_GOLD:
 			{
 				sound(MSG_BR_SOUND);
+#ifdef JP
+				msg_print("あなたは轟音のブレスを吐いた。");
+#else /* JP */
 				msg_print("You breathe sound.");
+#endif /* JP */
 				fire_ball(GF_SOUND, dir, 130, 2);
 				o_ptr->timeout = rand_int(450) + 450;
 				break;
@@ -2402,8 +2834,13 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 			{
 				chance = rand_int(2);
 				sound(((chance == 1 ? MSG_BR_CHAOS : MSG_BR_DISENCHANT)));
+#ifdef JP
+				msg_format("あなたは%sのブレスを吐いた。",
+				           ((chance == 1 ? "カオス" : "劣化")));
+#else /* JP */
 				msg_format("You breathe %s.",
 				           ((chance == 1 ? "chaos" : "disenchantment")));
+#endif /* JP */
 				fire_ball((chance == 1 ? GF_CHAOS : GF_DISENCHANT),
 				          dir, 220, 2);
 				o_ptr->timeout = rand_int(300) + 300;
@@ -2414,8 +2851,13 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 			{
 				chance = rand_int(2);
 				sound(((chance == 1 ? MSG_BR_SOUND : MSG_BR_SHARDS)));
+#ifdef JP
+				msg_format("あなたは%sのブレスを吐いた。",
+				           ((chance == 1 ? "轟音" : "破片")));
+#else /* JP */
 				msg_format("You breathe %s.",
 				           ((chance == 1 ? "sound" : "shards")));
+#endif /* JP */
 				fire_ball((chance == 1 ? GF_SOUND : GF_SHARD),
 				          dir, 230, 2);
 				o_ptr->timeout = rand_int(300) + 300;
@@ -2425,10 +2867,17 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 			case SV_DRAGON_BALANCE:
 			{
 				chance = rand_int(4);
+#ifdef JP
+				msg_format("あなたは%sのブレスを吐いた。",
+				           ((chance == 1) ? "カオス" :
+				            ((chance == 2) ? "劣化" :
+				             ((chance == 3) ? "轟音" : "破片"))));
+#else /* JP */
 				msg_format("You breathe %s.",
 				           ((chance == 1) ? "chaos" :
 				            ((chance == 2) ? "disenchantment" :
 				             ((chance == 3) ? "sound" : "shards"))));
+#endif /* JP */
 				fire_ball(((chance == 1) ? GF_CHAOS :
 				           ((chance == 2) ? GF_DISENCHANT :
 				            ((chance == 3) ? GF_SOUND : GF_SHARD))),
@@ -2441,8 +2890,13 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 			{
 				chance = rand_int(2);
 				sound(((chance == 0 ? MSG_BR_LIGHT : MSG_BR_DARK)));
+#ifdef JP
+				msg_format("あなたは%sのブレスを吐いた。",
+				           ((chance == 0 ? "閃光" : "暗黒")));
+#else /* JP */
 				msg_format("You breathe %s.",
 				           ((chance == 0 ? "light" : "darkness")));
+#endif /* JP */
 				fire_ball((chance == 0 ? GF_LITE : GF_DARK), dir, 200, 2);
 				o_ptr->timeout = rand_int(300) + 300;
 				break;
@@ -2451,7 +2905,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 			case SV_DRAGON_POWER:
 			{
 				sound(MSG_BR_ELEMENTS);
+#ifdef JP
+				msg_print("あなたはエレメントのブレスを吐いた。");
+#else /* JP */
 				msg_print("You breathe the elements.");
+#endif /* JP */
 				fire_ball(GF_MISSILE, dir, 300, 2);
 				o_ptr->timeout = rand_int(300) + 300;
 				break;
@@ -2515,7 +2973,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 	}
 
 	/* Mistake */
+#ifdef JP
+	msg_print("おっと、このアイテムは始動できない。");
+#else /* JP */
 	msg_print("Oops.  That object cannot be activated.");
+#endif /* JP */
 
 	/* Not used up */
 	return (FALSE);
@@ -2578,6 +3040,58 @@ bool use_object(object_type *o_ptr, bool *ident)
 
 static cptr act_description[ACT_MAX] =
 {
+#ifdef JP
+	"イルミネーション",
+	"魔法の地図",
+	"千里眼",
+	"対邪悪結界",
+	"邪悪退散 (x5)",
+	"体力回復 (500)",
+	"体力回復 (1000)",
+	"傷の治癒 (4d8)",
+	"スピード (20+d20ターン)",
+	"スピード (75+d75ターン)",
+	"ファイア・ボルト (9d8)",
+	"ファイア・ボール (72)",
+	"巨大ファイア・ボール (120)",
+	"アイス・ボルト (6d8)",
+	"アイス・ボール (48)",
+	"アイス・ボール (100)",
+	"アイス・ボルト (12d8)",
+	"巨大アイス・ボール (200)",
+	"アシッド・ボルト (5d8)",
+	"魔力充填(I)",
+	"スリープ(II)",
+	"サンダー・ボルト (4d8)",
+	"巨大サンダー・ボール (250)",
+	"追放",
+	"周辺追放",
+	"鑑定",
+	"生命力吸収 (90)",
+	"生命力吸収 (120)",
+	"信じ難いこと",
+	"スター・ボール (150)",
+	"野獣化/祝福/全耐性",
+	"フェイズ・ドア",
+	"ドア/トラップ粉砕",
+	"全感知",
+	"全耐性 (20+d20 turns)",
+	"テレポート",
+	"生命力復活",
+	"マジック・ミサイル (2d6)",
+	"魔法の矢 (150)",
+	"恐怖除去/毒消し",
+	"悪臭雲 (12)",
+	"岩石溶解",
+	"テレポート・アウェイ",
+	"帰還の詔",
+	"パニック・モンスター",
+	"調査",
+	"刃先のファイア・ボルト",
+	"スターライト (10d8)",
+	"魔力の矢 (12d8)",
+	"野獣化 (50+d50ターン)"
+#else /* JP */
 	"illumination",
 	"magic mapping",
 	"clairvoyance",
@@ -2628,6 +3142,7 @@ static cptr act_description[ACT_MAX] =
 	"starlight (10d8)",
 	"mana bolt (12d8)",
 	"berserk rage (50+d50 turns)"
+#endif /* JP */
 };
 
 
@@ -2658,11 +3173,23 @@ void describe_item_activation(const object_type *o_ptr)
 
 		/* Output the number of turns */
 		if (a_ptr->time && a_ptr->randtime)
+#ifdef JP
+			text_out(format(" : %d+d%d ターン毎", a_ptr->time, a_ptr->randtime));
+#else /* JP */
 			text_out(format(" every %d+d%d turns", a_ptr->time, a_ptr->randtime));
+#endif /* JP */
 		else if (a_ptr->time)
+#ifdef JP
+			text_out(format(" : %d ターン毎", a_ptr->time));
+#else /* JP */
 			text_out(format(" every %d turns", a_ptr->time));
+#endif /* JP */
 		else if (a_ptr->randtime)
+#ifdef JP
+			text_out(format(" : d%d ターン毎", a_ptr->randtime));
+#else /* JP */
 			text_out(format(" every d%d turns", a_ptr->randtime));
+#endif /* JP */
 
 		return;
 	}
@@ -2675,23 +3202,39 @@ void describe_item_activation(const object_type *o_ptr)
 		{
 			case SV_RING_ACID:
 			{
+#ifdef JP
+				text_out("耐酸 (20+d20ターン), アシッド・ボール (70) : 50+d50 ターン毎");
+#else /* JP */
 				text_out("acid resistance (20+d20 turns) and acid ball (70) every 50+d50 turns");
+#endif /* JP */
 				break;
 			}
 			case SV_RING_FLAMES:
 			{
+#ifdef JP
+				text_out("耐火 (20+d20ターン), ファイア・ボール (80) : 50+d50 ターン毎");
+#else /* JP */
 				text_out("fire resistance (20+d20 turns) and fire ball (80) every 50+d50 turns");
+#endif /* JP */
 				break;
 			}
 			case SV_RING_ICE:
 			{
+#ifdef JP
+				text_out("耐冷 (20+d20ターン),  アイス・ボール (75) : 50+d50 ターン毎");
+#else /* JP */
 				text_out("cold resistance (20+d20 turns) and cold ball (75) every 50+d50 turns");
+#endif /* JP */
 				break;
 			}
 
 			case SV_RING_LIGHTNING:
 			{
+#ifdef JP
+				text_out("耐電 (20+d20ターン),  サンダー・ボール (85) : 50+d50 ターン毎");
+#else /* JP */
 				text_out("electricity resistance (20+d20 turns) and electricity ball (85) every 50+d50 turns");
+#endif /* JP */
 				break;
 			}
 		}
@@ -2707,67 +3250,119 @@ void describe_item_activation(const object_type *o_ptr)
 	{
 		case SV_DRAGON_BLUE:
 		{
+#ifdef JP
+			text_out("稲妻のブレス(100) : 450+d450 ターン毎");
+#else /* JP */
 			text_out("breathe lightning (100) every 450+d450 turns");
+#endif /* JP */
 			break;
 		}
 		case SV_DRAGON_WHITE:
 		{
+#ifdef JP
+			text_out("冷気のブレス(110) : 450+d450 ターン毎");
+#else /* JP */
 			text_out("breathe frost (110) every 450+d450 turns");
+#endif /* JP */
 			break;
 		}
 		case SV_DRAGON_BLACK:
 		{
+#ifdef JP
+			text_out("酸のブレス(130) : 450+d450 ターン毎");
+#else /* JP */
 			text_out("breathe acid (130) every 450+d450 turns");
+#endif /* JP */
 			break;
 		}
 		case SV_DRAGON_GREEN:
 		{
+#ifdef JP
+			text_out("毒ガスのブレス(150) : 450+d450 ターン毎");
+#else /* JP */
 			text_out("breathe poison gas (150) every 450+d450 turns");
+#endif /* JP */
 			break;
 		}
 		case SV_DRAGON_RED:
 		{
+#ifdef JP
+			text_out("火炎のブレス(200) : 450+d450 ターン毎");
+#else /* JP */
 			text_out("breathe fire (200) every 450+d450 turns");
+#endif /* JP */
 			break;
 		}
 		case SV_DRAGON_MULTIHUED:
 		{
+#ifdef JP
+			text_out("万色のブレス(250) : 225+d225 ターン毎");
+#else /* JP */
 			text_out("breathe multi-hued (250) every 225+d225 turns");
+#endif /* JP */
 			break;
 		}
 		case SV_DRAGON_BRONZE:
 		{
+#ifdef JP
+			text_out("混乱のブレス(120) : 450+d450 ターン毎");
+#else /* JP */
 			text_out("breathe confusion (120) every 450+d450 turns");
+#endif /* JP */
 			break;
 		}
 		case SV_DRAGON_GOLD:
 		{
+#ifdef JP
+			text_out("轟音のブレス(130) : 450+d450 ターン毎");
+#else /* JP */
 			text_out("breathe sound (130) every 450+d450 turns");
+#endif /* JP */
 			break;
 		}
 		case SV_DRAGON_CHAOS:
 		{
+#ifdef JP
+			text_out("カオス/劣化のブレス(220) : 300+d300 ターン毎");
+#else /* JP */
 			text_out("breathe chaos/disenchant (220) every 300+d300 turns");
+#endif /* JP */
 			break;
 		}
 		case SV_DRAGON_LAW:
 		{
+#ifdef JP
+			text_out("轟音/破片のブレス(230) : 300+d300 ターン毎");
+#else /* JP */
 			text_out("breathe sound/shards (230) every 300+d300 turns");
+#endif /* JP */
 			break;
 		}
 		case SV_DRAGON_BALANCE:
 		{
+#ifdef JP
+			text_out("バランスのブレス(250) : 300+d300 ターン毎");
+#else /* JP */
 			text_out("breathe balance (250) every 300+d300 turns");
+#endif /* JP */
 			break;
 		}
 		case SV_DRAGON_SHINING:
 		{
+#ifdef JP
+			text_out("閃光/暗黒のブレス(200) : 300+d300 ターン毎");
+#else /* JP */
 			text_out("breathe light/darkness (200) every 300+d300 turns");
+#endif /* JP */
 			break;
 		}
 		case SV_DRAGON_POWER:
 		{
+#ifdef JP
+			text_out("エレメントのブレス(300) : 300+d300 ターン毎");
+#else /* JP */
 			text_out("breathe the elements (300) every 300+d300 turns");
+#endif /* JP */
 			break;
 		}
 	}

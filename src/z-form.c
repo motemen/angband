@@ -530,6 +530,16 @@ size_t vstrnfmt(char *buf, size_t max, cptr fmt, va_list vp)
 			}
 		}
 
+#ifdef JP
+		for (q = 0; tmp[q]; q++)
+		{
+			if (iskanji(tmp[q]))
+			{
+				do_xtra = FALSE;
+				break;
+			}
+		}
+#endif
 
 		/* Mega-Hack -- handle "capitalization" */
 		if (do_xtra)

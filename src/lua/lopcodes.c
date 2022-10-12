@@ -1,5 +1,5 @@
 /*
-** $Id: lopcodes.c,v 1.1 2003/08/10 11:43:30 rr9 Exp $
+** $Id: lopcodes.c,v 1.1.1.1 2004/03/28 04:36:05 tooru Exp $
 ** extracted automatically from lopcodes.h by mkprint.lua
 ** DO NOT EDIT
 ** See Copyright Notice in lua.h

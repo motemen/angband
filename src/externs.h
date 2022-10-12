@@ -8,6 +8,7 @@
  * are included in all such copies.
  */
 
+/* 2.8.3 対応 : TeO, FIRST, しとしん */
 
 /*
  * Note that some files have their own header files
@@ -25,6 +26,19 @@ extern cptr macro_modifier_chr;
 extern cptr macro_modifier_name[MAX_MACRO_MOD];
 extern cptr macro_trigger_name[MAX_MACRO_TRIGGER];
 extern cptr macro_trigger_keycode[2][MAX_MACRO_TRIGGER];
+
+/* main-98.c の変数と関数 */
+#ifdef USE_98
+extern int ElrockFontMode;
+extern int ElrockFontModeTemp;
+extern void ElrockChangeFont(void);
+extern void ElrockChangeFontTemp(void);
+#endif
+
+#ifdef JP
+/* 日本語版機能追加で使う */
+extern int level_up;
+#endif
 
 /* tables.c */
 extern const s16b ddd[9];
@@ -68,9 +82,22 @@ extern cptr option_text[OPT_MAX];
 extern cptr option_desc[OPT_MAX];
 extern const bool option_norm[OPT_MAX];
 extern const byte option_page[OPT_PAGE_MAX][OPT_PAGE_PER];
+#ifdef JP
+extern cptr J_inscrip_text[MAX_INSCRIP];
+#endif /* JP */
 extern cptr inscrip_text[MAX_INSCRIP];
 
 /* variable.c */
+#ifdef ALLOW_COMMAND_MENU
+extern special_menu_info_type special_menu_info[MAX_MENU_SPECIAL];
+extern menu_info_type menu_info[MAX_MENU][MAX_MENUITEM];
+extern int max_menu[MAX_MENU];
+extern int max_menu_sp;
+#endif /* ALLOW_COMMAND_MENU */
+#ifdef ALLOW_AUTO_PICKUP
+extern int max_autopick;
+extern autopick_type autopick_list[MAX_AUTOPICK];
+#endif /* ALLOW_AUTO_PICKUP */
 extern cptr copyright;
 extern byte version_major;
 extern byte version_minor;
@@ -224,6 +251,9 @@ extern cptr ANGBAND_DIR_INFO;
 extern cptr ANGBAND_DIR_SAVE;
 extern cptr ANGBAND_DIR_PREF;
 extern cptr ANGBAND_DIR_USER;
+#ifdef ALLOW_AUTO_PICKUP
+extern cptr ANGBAND_DIR_USER_AUTOPICK;
+#endif
 extern cptr ANGBAND_DIR_XTRA;
 extern cptr ANGBAND_DIR_SCRIPT;
 extern bool item_tester_full;
@@ -245,6 +275,12 @@ extern bool use_transparency;
  * Automatically generated "function declarations"
  */
 
+/* autopick.c */
+extern bool make_autopick(autopick_type *ap_ptr, cptr str);
+extern void init_autopicker(void);
+extern bool do_autopick(s16b o_idx);
+void autopick_desc(char *desc, const autopick_type *ap_ptr, bool act, bool insc);
+
 /* birth.c */
 extern void player_birth(void);
 
@@ -256,6 +292,9 @@ extern bool cave_valid_bold(int y, int x);
 extern bool feat_supports_lighting(int feat);
 extern void map_info(int y, int x, byte *ap, char *cp, byte *tap, char *tcp);
 extern void map_info_default(int y, int x, byte *ap, char *cp);
+#ifdef JP
+extern void bigtile_attr(char *cp, byte *ap, char *cp2, byte *ap2);
+#endif /* JP */
 extern void move_cursor_relative(int y, int x);
 extern void print_rel(char c, byte a, int y, int x);
 extern void note_spot(int y, int x);
@@ -289,6 +328,9 @@ extern int critical_shot(int weight, int plus, int dam);
 extern int critical_norm(int weight, int plus, int dam);
 extern int tot_dam_aux(const object_type *o_ptr, int tdam, const monster_type *m_ptr);
 extern void search(void);
+#ifdef ALLOW_AUTO_PICKUP
+extern void py_pickup_aux(int o_idx);
+#endif
 extern void py_pickup(int pickup);
 extern void hit_trap(int y, int x);
 extern void py_attack(int y, int x);
@@ -341,6 +383,9 @@ extern void do_cmd_message_one(void);
 extern void do_cmd_messages(void);
 extern void do_cmd_options(void);
 extern void do_cmd_pref(void);
+#ifdef ALLOW_AUTO_PICKUP
+extern void do_cmd_pickpref(void);
+#endif /* ALLOW_AUTO_PICKUP */
 extern void do_cmd_macros(void);
 extern void do_cmd_visuals(void);
 extern void do_cmd_colors(void);
@@ -377,11 +422,20 @@ extern void safe_setuid_grab(void);
 extern s16b tokenize(char *buf, s16b num, char **tokens);
 extern errr process_pref_file_command(char *buf);
 extern errr process_pref_file(cptr name);
+#ifdef ALLOW_COMMAND_MENU
+extern errr process_menu_file(cptr name);
+#endif /* ALLOW_COMMAND_MENU */
+#ifdef ALLOW_AUTO_PICKUP
+extern errr process_autopick_pref_file(cptr name);
+#endif /* ALLOW_AUTO_PICKUP */
 extern errr check_time(void);
 extern errr check_time_init(void);
 extern void player_flags(u32b *f1, u32b *f2, u32b *f3);
 extern void display_player(int mode);
 extern errr file_character(cptr name, bool full);
+#ifdef JP
+extern void string_lower(char *buf);
+#endif /* JP */
 extern bool show_file(cptr name, cptr what, int line, int mode);
 extern void do_cmd_help(void);
 extern void process_player_name(bool sf);
@@ -460,6 +514,11 @@ extern void flavor_init(void);
 extern void reset_visuals(bool prefs);
 extern void object_flags(const object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3);
 extern void object_flags_known(const object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3);
+#ifdef JP
+extern cptr object_counter_suffix(const object_type *o_ptr);
+extern void J_object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int mode);
+extern void E_object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int mode);
+#endif /* JP */
 extern void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int mode);
 extern void object_desc_spoil(char *buf, size_t max, const object_type *o_ptr, int pref, int mode);
 extern void describe_item_activation(const object_type *o_ptr);

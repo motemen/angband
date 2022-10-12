@@ -8,6 +8,14 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3-v6 “ú–{Œê”Å»ì: ‚µ‚Æ‚µ‚ñ
+ * 2.8.0      ‘Î‰        : sayu, ‚µ‚Æ‚µ‚ñ
+ * 2.8.1      ‘Î‰        : FIRST
+ * 2.8.3      ‘Î‰        : FIRST, ‚µ‚Æ‚µ‚ñ
+ * 2.9.0      ‘Î‰        : “í£
+ */
+
 #include "angband.h"
 
 /*
@@ -1372,6 +1380,51 @@ void map_info_default(int y, int x, byte *ap, char *cp)
 }
 
 
+#ifdef JP
+/*
+ * Table of Ascii-to-Zenkaku
+ * u¡v‚Í“ñ”{•“¤•…‚Ì“à•”ƒR[ƒh‚Ég—pB
+ */
+static char ascii_to_zenkaku_arr[2*128+1] =  
+"@Ih”“•fij–{C|D^"
+"‚O‚P‚Q‚R‚S‚T‚U‚V‚W‚XFGƒ„H"
+"—‚`‚a‚b‚c‚d‚e‚f‚g‚h‚i‚j‚k‚l‚m‚n"
+"‚o‚p‚q‚r‚s‚t‚u‚v‚w‚x‚ym_nOQ"
+"e‚‚‚‚ƒ‚„‚…‚†‚‡‚ˆ‚‰‚Š‚‹‚Œ‚‚‚"
+"‚‚‘‚’‚“‚”‚•‚–‚—‚˜‚™‚šobp`¡";
+
+#define ascii_to_zenkaku(c) \
+	(&ascii_to_zenkaku_arr[((c) - ' ') * 2])
+
+/*
+ * Prepare Bigtile or 2-bytes character attr/char pairs
+ */
+void bigtile_attr(char *cp, byte *ap, char *cp2, byte *ap2)
+{
+	if ((*ap & 0x80) && (*cp & 0x80))
+	{
+		*ap2 = 255;
+		*cp2 = -1;
+		return;
+	}
+
+	if (isprint(*cp) || *cp == 127)
+	{
+		cptr zc = ascii_to_zenkaku(*cp);
+
+		*ap2 = (*ap) | KANJI2;
+		*ap = (*ap) | KANJI1;
+		*cp2 = zc[1];
+		*cp = zc[0];
+		return;
+	}
+
+	*ap2 = TERM_WHITE;
+	*cp2 = ' ';
+}
+#endif /* JP */
+
+
 /*
  * Move the cursor to a given map location.
  */
@@ -1498,6 +1551,16 @@ static void print_rel_map(char c, byte a, int y, int x)
 		/* Verify location */
 		if ((kx < 0) || (kx >= t->wid)) continue;
 
+#ifdef JP
+		if (use_bigtile && !(a & 0x80) && (isprint(c) || c == 127))
+		{
+			Term_queue_char(t, kx, ky, a|KANJI1, ascii_to_zenkaku(c)[0], 0, 0);
+			Term_queue_char(t, kx+1, ky, a|KANJI2, ascii_to_zenkaku(c)[1], 0, 0);
+
+			continue;
+		}
+#endif /* JP */
+
 		/* Hack -- Queue it */
 		Term_queue_char(t, kx, ky, a, c, 0, 0);
 
@@ -1553,6 +1616,16 @@ void print_rel(char c, byte a, int y, int x)
 	vx = kx + COL_MAP;
 
 	if (use_bigtile) vx += kx;
+
+#ifdef JP
+	if (use_bigtile && !(a & 0x80) && (isprint(c) || c == 127))
+	{
+		Term_queue_char(Term, vx, vy, a|KANJI1, ascii_to_zenkaku(c)[0], 0, 0);
+		Term_queue_char(Term, vx+1, vy, a|KANJI2, ascii_to_zenkaku(c)[1], 0, 0);
+
+		return;
+	}
+#endif /* JP */
 
 	/* Hack -- Queue it */
 	Term_queue_char(Term, vx, vy, a, c, 0, 0);
@@ -1682,6 +1755,15 @@ static void lite_spot_map(int y, int x)
 		/* Hack -- redraw the grid */
 		map_info(y, x, &a, &c, &ta, &tc);
 
+#ifdef JP
+		if (use_bigtile && !(a & 0x80) && (isprint(c) || c == 127))
+		{
+			Term_queue_chars(t, kx, ky, 2, a, ascii_to_zenkaku(c));
+
+			continue;
+		}
+#endif /* JP */
+
 		/* Hack -- Queue it */
 		Term_queue_char(t, kx, ky, a, c, ta, tc);
 
@@ -1748,6 +1830,15 @@ void lite_spot(int y, int x)
 	/* Hack -- redraw the grid */
 	map_info(y, x, &a, &c, &ta, &tc);
 
+#ifdef JP
+	if (use_bigtile && !(a & 0x80) && (isprint(c) || c == 127))
+	{
+		Term_queue_chars(Term, vx, vy, 2, a, ascii_to_zenkaku(c));
+
+		return;
+	}
+#endif /* JP */
+
 	/* Hack -- Queue it */
 	Term_queue_char(Term, vx, vy, a, c, ta, tc);
 
@@ -1807,6 +1898,16 @@ static void prt_map_aux(void)
 				/* Determine what is there */
 				map_info(y, x, &a, &c, &ta, &tc);
 
+#ifdef JP
+				if (use_bigtile && !(a & 0x80) && (isprint(c) || c == 127))
+				{
+					Term_queue_chars(t, vx, vy, 2, a, ascii_to_zenkaku(c));
+					vx++;
+
+					continue;
+				}
+#endif /* JP */
+
 				/* Hack -- Queue it */
 				Term_queue_char(t, vx, vy, a, c, ta, tc);
 
@@ -1865,6 +1966,16 @@ void prt_map(void)
 
 			/* Determine what is there */
 			map_info(y, x, &a, &c, &ta, &tc);
+
+#ifdef JP
+			if (use_bigtile && !(a & 0x80) && (isprint(c) || c == 127))
+			{
+				Term_queue_chars(Term, vx, vy, 2, a, ascii_to_zenkaku(c));
+				vx++;
+
+				continue;
+			}
+#endif /* JP */
 
 			/* Hack -- Queue it */
 			Term_queue_char(Term, vx, vy, a, c, ta, tc);
@@ -1993,6 +2104,10 @@ void display_map(int *cy, int *cx)
 
 	byte ta;
 	char tc;
+#ifdef JP
+	char tc2;
+	byte ta2;
+#endif /* JP */
 
 	byte tp;
 
@@ -2091,15 +2206,23 @@ void display_map(int *cy, int *cx)
 			/* Save "best" */
 			if (mp[row][col] < tp)
 			{
+#ifdef JP
+				if (use_bigtile) bigtile_attr(&tc, &ta, &tc2, &ta2);
+#endif /* JP */
+
 				/* Add the character */
 				Term_putch(col + 1, row + 1, ta, tc);
 
 				if (use_bigtile)
 				{
+#ifdef JP
+					Term_putch(col + 2, row + 1, ta2, tc2);
+#else /* JP */
 					if (ta & 0x80)
 						Term_putch(col + 2, row + 1, 255, -1);
 					else
 						Term_putch(col + 2, row + 1, TERM_WHITE, ' ');
+#endif /* JP */
 				}
 
 				/* Save priority */
@@ -2124,8 +2247,24 @@ void display_map(int *cy, int *cx)
 	/* Get the "player" char */
 	tc = r_ptr->x_char;
 
+#ifdef JP
+	if (use_bigtile) bigtile_attr(&tc, &ta, &tc2, &ta2);
+#endif /* JP */
+
 	/* Draw the player */
 	Term_putch(col + 1, row + 1, ta, tc);
+
+	if (use_bigtile) /* BUGFIX ; bigtile‘Î‰ */
+	{
+#ifdef JP
+		Term_putch(col + 2, row + 1, ta2, tc2);
+#else /* JP */
+		if (ta & 0x80)
+			Term_putch(col + 2, row + 1, 255, -1);
+		else
+			Term_putch(col + 2, row + 1, TERM_WHITE, ' ');
+#endif /* JP */
+	}
 
 	/* Return player location */
 	if (cy != NULL) (*cy) = row + 1;
@@ -2146,13 +2285,21 @@ void display_map(int *cy, int *cx)
 void do_cmd_view_map(void)
 {
 	int cy, cx;
+#ifdef JP
+	cptr prompt = "‰½‚©ƒL[‚ğ‰Ÿ‚·‚ÆƒQ[ƒ€‚É–ß‚è‚Ü‚·";
+#else /* JP */
 	cptr prompt = "Hit any key to continue";
+#endif /* JP */
 	
 	/* Save screen */
 	screen_save();
 
 	/* Note */
+#ifdef JP
+	prt("‚¨‘Ò‚¿‰º‚³‚¢...", 0, 0);
+#else /* JP */
 	prt("Please wait...", 0, 0);
+#endif /* JP */
 
 	/* Flush */
 	Term_fresh();
@@ -2800,8 +2947,13 @@ static void vinfo_init_aux(vinfo_hack *hack, int y, int x, long m)
 			/* Paranoia */
 			if (hack->num_slopes >= VINFO_MAX_SLOPES)
 			{
+#ifdef JP
+				quit_fmt("Too many slopes (%d)!", /* mada */
+			         	VINFO_MAX_SLOPES);
+#else /* JP */
 				quit_fmt("Too many slopes (%d)!",
 			         	VINFO_MAX_SLOPES);
+#endif /* JP */
 			}
 
 			/* Save the slope, and advance */
@@ -2865,8 +3017,13 @@ errr vinfo_init(void)
 			/* Paranoia */
 			if (num_grids >= VINFO_MAX_GRIDS)
 			{
+#ifdef JP
+				quit_fmt("êŠ‚ª‘½‚·‚¬‚é(%d >= %d)!",
+				         num_grids, VINFO_MAX_GRIDS);
+#else /* JP */
 				quit_fmt("Too many grids (%d >= %d)!",
 				         num_grids, VINFO_MAX_GRIDS);
+#endif /* JP */
 			}
 
 			/* Count grids */
@@ -2902,15 +3059,25 @@ errr vinfo_init(void)
 	/* Enforce maximal efficiency */
 	if (num_grids < VINFO_MAX_GRIDS)
 	{
+#ifdef JP
+		quit_fmt("êŠ‚ª­‚È‚·‚¬‚é(%d < %d)!",
+		         num_grids, VINFO_MAX_GRIDS);
+#else /* JP */
 		quit_fmt("Too few grids (%d < %d)!",
 		         num_grids, VINFO_MAX_GRIDS);
+#endif /* JP */
 	}
 
 	/* Enforce maximal efficiency */
 	if (hack->num_slopes < VINFO_MAX_SLOPES)
 	{
+#ifdef JP
+		quit_fmt("Too few slopes (%d < %d)!", /* mada */
+		         hack->num_slopes, VINFO_MAX_SLOPES);
+#else /* JP */
 		quit_fmt("Too few slopes (%d < %d)!",
 		         hack->num_slopes, VINFO_MAX_SLOPES);
+#endif /* JP */
 	}
 
 
@@ -3033,7 +3200,11 @@ errr vinfo_init(void)
 	    ((vinfo[1].bits_1 | vinfo[2].bits_1) != VINFO_BITS_1) ||
 	    ((vinfo[1].bits_0 | vinfo[2].bits_0) != VINFO_BITS_0))
 	{
+#ifdef JP
+		quit("•s³‚Èƒrƒbƒgƒ}ƒXƒN‚Å‚·I");
+#else /* JP */
 		quit("Incorrect bit masks!");
+#endif /* JP */
 	}
 
 

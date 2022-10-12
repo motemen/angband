@@ -59,6 +59,20 @@
 #define VERSION_EXTRA	0
 
 
+#ifdef JP
+ /*
+  * 日本語版のバージョン
+  */
+#define JVERSION_NAME	"日本語版 Angband"
+#define JVERSION_STRING	VERSION_STRING "-J1.4.3"
+#define JVERSION_MAJOR	1
+#define JVERSION_MINOR	4
+#define JVERSION_PATCH	3
+#define JVERSION_EXTRA	0
+
+#endif
+
+
 /*
  * Oldest version number that can still be imported
  */
@@ -2476,6 +2490,15 @@
 /* xxx */
 /* xxx */
 /* xxx */
+#ifdef JP	  /* 日本語版で追加されたオプション */
+#define OPT_use_command_menu			121
+#define OPT_old_way_of_kaz			122
+#define OPT_english_others			123
+#define OPT_powerup_home			124
+#define OPT_english_monster			125
+#define OPT_english_object			126
+#define OPT_always_show_list		127
+#endif /* JP */
 /* xxx xxx */
 #define OPT_birth_point_based       (OPT_BIRTH+0)
 #define OPT_birth_auto_roller       (OPT_BIRTH+1)
@@ -2596,6 +2619,16 @@
 /* xxx */
 /* xxx */
 /* xxx */
+#ifdef JP
+/* 日本語版で追加されたオプション */
+#define use_command_menu	op_ptr->opt[OPT_use_command_menu]
+#define always_show_list	op_ptr->opt[OPT_always_show_list]
+#define english_object	    op_ptr->opt[OPT_english_object]
+#define english_monster 	op_ptr->opt[OPT_english_monster]
+#define powerup_home     	op_ptr->opt[OPT_powerup_home]
+#define english_others  	op_ptr->opt[OPT_english_others]
+#define old_way_of_kaz		op_ptr->opt[OPT_old_way_of_kaz]
+#endif
 /* xxx xxx */
 #define birth_point_based		op_ptr->opt[OPT_birth_point_based]
 #define birth_auto_roller		op_ptr->opt[OPT_birth_auto_roller]
@@ -2636,7 +2669,11 @@
 /*
  * Information for "do_cmd_options()".
  */
+#ifdef JP
+#define OPT_PAGE_MAX				8
+#else /* JP */
 #define OPT_PAGE_MAX				7
+#endif /* JP */
 #define OPT_PAGE_PER				20
 
 
@@ -3182,6 +3219,82 @@
 #define ACT_BERSERKER           49
 
 #define ACT_MAX                 50
+
+#ifdef JP
+
+/*
+ * English-Japanese select
+ */
+#define X_ej(flag,e,j)	(flag ? (e) : (j))
+
+#define X_object(e,j)	X_ej(english_object,(e),(j))
+#define X_others(e,j)	X_ej(english_others,(e),(j))
+#define X_monster(e,j)	X_ej(english_monster,(e),(j))
+
+#define X_object_xxxx(xxxx)	X_object(xxxx, J_ ## xxxx)
+#define X_monster_xxxx(xxxx)	X_monster(xxxx, J_ ## xxxx)
+#define X_others_xxxx(xxxx)	X_others(xxxx, J_ ## xxxx)
+#define X_object_ptr_xxxx(ptr, xxxx)	X_object((ptr)->xxxx, (ptr)->J_ ## xxxx)
+#define X_others_ptr_xxxx(ptr, xxxx)	X_others((ptr)->xxxx, (ptr)->J_ ## xxxx)
+#define X_monster_ptr_xxxx(ptr, xxxx)	X_monster((ptr)->xxxx, (ptr)->J_ ## xxxx)
+
+#define X_object_x_name(ptr, x_name)	(x_name + X_object_ptr_xxxx(ptr, name))
+#define X_object_x_text(ptr, x_name)	(x_name + X_object_ptr_xxxx(ptr, text))
+#define X_others_x_name(ptr, x_name)	(x_name + X_others_ptr_xxxx(ptr, name))
+#define X_monster_x_name(ptr, x_name)	(x_name + X_monster_ptr_xxxx(ptr, name))
+
+#define X_c_name(ptr)	X_others_x_name(ptr, c_name)
+#define X_c_title(ptr)	X_others_ptr_xxxx(ptr, title)
+#define X_p_name(ptr)	X_others_x_name(ptr, p_name)
+#define X_f_name(ptr)	X_others_x_name(ptr, f_name)
+#define X_k_name(ptr)	X_object_x_name(ptr, k_name)
+#define X_r_name(ptr)	X_monster_x_name(ptr, r_name)
+#define X_flavor_name(ptr)	X_object_x_name(ptr, flavor_name)
+#define X_owner_name(ptr)	(b_name + X_others_ptr_xxxx(ptr, owner_name))
+#define X_title(ptr)	X_object_ptr_xxxx(ptr, title)
+#define X_inscrip_text	X_object_xxxx(inscrip_text)
+#define X_title_name(ptr)	X_others_ptr_xxxx(ptr, name)
+
+/*
+ * height and weight unit conversion
+ */
+#define inchtocm(x)	(int)(((x)*254)/100)
+#ifdef ACCURATE_LB_TO_KG
+#define lbtokg(x)	((int)(((x)*4536)/1000))
+#define lbtokg1(x)	(lbtokg(x)/100)
+#define lbtokg2(x)	(((lbtokg(x) + 5) % 100) / 10) 
+#else /* ACCURATE_LB_TO_KG */
+#define lbtokg(x)	((int)((x) * 5))
+#define lbtokg1(x)	(lbtokg(x) / 100)
+#define lbtokg2(x)	(lbtokg(x) % 100) 
+#endif /* ACCURATE_LB_TO_KG */
+
+/*
+ * Get simple counter suffix.
+ */
+#define simple_counter_suffix(num) \
+	(((num) < 10) ? "つ" : "個")
+
+#endif /* JP */
+
+/*
+ * command menu
+ */
+#define MAX_MENUITEM	12
+#define MAX_MENU	(MAX_MENUITEM + 1)
+#define MAX_MENU_SPECIAL	256
+#define MENU_CLASS 1
+
+/*
+ * autopick
+ */
+#define MAX_AUTOPICK                    2048
+
+#define AUTOPICK_ACT_PICKUP             0x00000001L
+#define AUTOPICK_ACT_DESTROY            0x00000002L
+#define AUTOPICK_ACT_LEAVE              0x00000004L
+#define AUTOPICK_ACT_DISPLAY            0x00000008L
+#define AUTOPICK_ACT_QUERY              0x00000010L
 
 /*
  * HACK - define if the source contains the cleanup_angband() function.

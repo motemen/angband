@@ -8,6 +8,18 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3 日本語版製作: しとしん
+ * 2.7.9v6 対応        : 岸康司, FIRST, しとしん
+ * 2.8.0   対応        : sayu, しとしん
+ * 2.8.1   対応        : FIRST
+ * 2.8.3   対応        : FIRST, しとしん
+ * 2.9.0   対応        : 楠瀬
+ *
+ * 日本語版機能追加 : 呪文の一覧を常に表示する
+ *                    英日切り替え機能
+ */
+
 #include "angband.h"
 
 #include "script.h"
@@ -126,8 +138,13 @@ void print_spells(const byte *spells, int num, int y, int x)
 
 	/* Title the list */
 	prt("", y, x);
+#ifdef JP
+	put_str("名前", y, x + 5);
+	put_str("Lv   MP 失率 効果", y, x + 35);
+#else /* JP */
 	put_str("Name", y, x + 5);
 	put_str("Lv Mana Fail Info", y, x + 35);
+#endif /* JP */
 
 	/* Dump the spells */
 	for (i = 0; i < num; i++)
@@ -141,7 +158,11 @@ void print_spells(const byte *spells, int num, int y, int x)
 		/* Skip illegible spells */
 		if (s_ptr->slevel >= 99)
 		{
+#ifdef JP
+			strnfmt(out_val, sizeof(out_val), "  %c) %-30s", I2A(i), "(判読不能)");
+#else /* JP */
 			strnfmt(out_val, sizeof(out_val), "  %c) %-30s", I2A(i), "(illegible)");
+#endif /* JP */
 			c_prt(TERM_L_DARK, out_val, y + i + 1, x);
 			continue;
 		}
@@ -155,25 +176,41 @@ void print_spells(const byte *spells, int num, int y, int x)
 		/* Analyze the spell */
 		if (p_ptr->spell_flags[spell] & PY_SPELL_FORGOTTEN)
 		{
+#ifdef JP
+			comment = " 忘却";
+#else /* JP */
 			comment = " forgotten";
+#endif /* JP */
 			line_attr = TERM_YELLOW;
 		}
 		else if (!(p_ptr->spell_flags[spell] & PY_SPELL_LEARNED))
 		{
 			if (s_ptr->slevel <= p_ptr->lev)
 			{
+#ifdef JP
+				comment = " 未知";
+#else /* JP */
 				comment = " unknown";
+#endif /* JP */
 				line_attr = TERM_L_BLUE;
 			}
 			else
 			{
+#ifdef JP
+				comment = " 困難";
+#else /* JP */
 				comment = " difficult";
+#endif /* JP */
 				line_attr = TERM_RED;
 			}
 		}
 		else if (!(p_ptr->spell_flags[spell] & PY_SPELL_WORKED))
 		{
+#ifdef JP
+			comment = " 未経験";
+#else /* JP */
 			comment = " untried";
+#endif /* JP */
 			line_attr = TERM_L_GREEN;
 		}
 
@@ -290,7 +327,12 @@ static int get_spell(const object_type *o_ptr, cptr prompt, bool known)
 
 	char out_val[160];
 
+#ifdef JP
+	char        jverb_buf[80];
+	cptr p = ((cp_ptr->spell_book == TV_MAGIC_BOOK) ? "呪文" : "祈り");
+#else
 	cptr p = ((cp_ptr->spell_book == TV_MAGIC_BOOK) ? "spell" : "prayer");
+#endif
 
 #ifdef ALLOW_REPEAT
 
@@ -344,8 +386,29 @@ static int get_spell(const object_type *o_ptr, cptr prompt, bool known)
 	redraw = FALSE;
 
 	/* Build a prompt (accept all spells) */
+#ifdef JP
+	jverb(prompt, jverb_buf, JVERB_AND);
+	strnfmt(out_val, 78, "(%^s %c-%c, '*'で一覧, ESCで中断) どの%sを%^sますか? ",
+	        p, I2A(0), I2A(num - 1), p, jverb_buf );
+#else
 	strnfmt(out_val, 78, "(%^ss %c-%c, *=List, ESC=exit) %^s which %s? ",
 	        p, I2A(0), I2A(num - 1), prompt, p);
+#endif
+
+#ifdef JP
+	/* Show the list */
+	if (always_show_list)
+	{
+		/* Show list */
+		redraw = TRUE;
+
+		/* Save screen */
+		screen_save();
+
+		/* Display a list of spells */
+		print_spells(spells, num, 1, 20);
+	}
+#endif
 
 	/* Get a spell from the user */
 	while (!flag && get_com(out_val, &choice))
@@ -393,7 +456,11 @@ static int get_spell(const object_type *o_ptr, cptr prompt, bool known)
 		/* Totally Illegal */
 		if ((i < 0) || (i >= num))
 		{
+#ifdef JP
+			bell("無効なキーです！");
+#else
 			bell("Illegal spell choice!");
+#endif
 			continue;
 		}
 
@@ -403,8 +470,13 @@ static int get_spell(const object_type *o_ptr, cptr prompt, bool known)
 		/* Require "okay" spells */
 		if (!spell_okay(spell, known))
 		{
+#ifdef JP
+			bell("無効なキーです！");
+			msg_format("その%sを%sことはできません。", p, prompt);
+#else /* JP */
 			bell("Illegal spell choice!");
 			msg_format("You may not %s that %s.", prompt, p);
+#endif /* JP */
 			continue;
 		}
 
@@ -417,9 +489,16 @@ static int get_spell(const object_type *o_ptr, cptr prompt, bool known)
 			s_ptr = &mp_ptr->info[spell];
 
 			/* Prompt */
+#ifdef JP
+			jverb(prompt, jverb_buf, JVERB_AND);
+			strnfmt(tmp_val, 78, "%s(MP%d, 失敗率%d%%)を%sますか? ",
+			        get_spell_name(cp_ptr->spell_book, spell),
+			        s_ptr->smana, spell_chance(spell), jverb_buf);
+#else /* JP */
 			strnfmt(tmp_val, 78, "%^s %s (%d mana, %d%% fail)? ",
 			        prompt, get_spell_name(cp_ptr->spell_book, spell),
 			        s_ptr->smana, spell_chance(spell));
+#endif /* JP */
 
 			/* Belay that order */
 			if (!get_check(tmp_val)) continue;
@@ -484,7 +563,11 @@ void do_cmd_browse_aux(const object_type *o_ptr)
 	print_spells(spells, num, 1, 20);
 
 	/* Prompt for a command */
+#ifdef JP
+	put_str("(読書) コマンド: ", 0, 0);
+#else /* JP */
 	put_str("(Browsing) Command: ", 0, 0);
+#endif /* JP */
 
 	/* Hack -- Get a new command */
 	p_ptr->command_new = inkey();
@@ -522,7 +605,11 @@ void do_cmd_browse(void)
 	/* Warriors are illiterate */
 	if (!cp_ptr->spell_book)
 	{
+#ifdef JP
+		msg_print("本を読むことができない！");
+#else
 		msg_print("You cannot read books!");
+#endif
 		return;
 	}
 
@@ -531,14 +618,22 @@ void do_cmd_browse(void)
 	/* No lite */
 	if (p_ptr->blind || no_lite())
 	{
+#ifdef JP
+		msg_print("目が見えない！");
+#else
 		msg_print("You cannot see!");
+#endif
 		return;
 	}
 
 	/* Confused */
 	if (p_ptr->confused)
 	{
+#ifdef JP
+		msg_print("混乱して読めない！");
+#else
 		msg_print("You are too confused!");
+#endif
 		return;
 	}
 
@@ -548,8 +643,13 @@ void do_cmd_browse(void)
 	item_tester_tval = cp_ptr->spell_book;
 
 	/* Get an item */
+#ifdef JP
+	q = "どの本を読みますか? ";
+	s = "読める本がない。";
+#else
 	q = "Browse which book? ";
 	s = "You have no books that you can read.";
+#endif
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -580,7 +680,11 @@ void do_cmd_study(void)
 
 	int spell;
 
+#ifdef JP
+	cptr p = ((cp_ptr->spell_book == TV_MAGIC_BOOK) ? "呪文" : "祈り");
+#else
 	cptr p = ((cp_ptr->spell_book == TV_MAGIC_BOOK) ? "spell" : "prayer");
+#endif
 
 	cptr q, s;
 
@@ -589,25 +693,41 @@ void do_cmd_study(void)
 
 	if (!cp_ptr->spell_book)
 	{
+#ifdef JP
+		msg_print("本を読むことができない！");
+#else
 		msg_print("You cannot read books!");
+#endif
 		return;
 	}
 
 	if (p_ptr->blind || no_lite())
 	{
+#ifdef JP
+		msg_print("目が見えない！");
+#else
 		msg_print("You cannot see!");
+#endif
 		return;
 	}
 
 	if (p_ptr->confused)
 	{
+#ifdef JP
+		msg_print("混乱して読めない！");
+#else
 		msg_print("You are too confused!");
+#endif
 		return;
 	}
 
 	if (!(p_ptr->new_spells))
 	{
+#ifdef JP
+		msg_format("新しい%sを覚えることはできない！", p);
+#else
 		msg_format("You cannot learn any new %ss!", p);
+#endif
 		return;
 	}
 
@@ -616,8 +736,13 @@ void do_cmd_study(void)
 	item_tester_tval = cp_ptr->spell_book;
 
 	/* Get an item */
+#ifdef JP
+	q = "どの本から学びますか? ";
+	s = "読める本がない。";
+#else
 	q = "Study which book? ";
 	s = "You have no books that you can read.";
+#endif
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -644,7 +769,11 @@ void do_cmd_study(void)
 	if (cp_ptr->flags & CF_CHOOSE_SPELLS)
 	{
 		/* Ask for a spell */
+#ifdef JP
+		spell = get_spell(o_ptr, "学ぶ", FALSE);
+#else /* JP */
 		spell = get_spell(o_ptr, "study", FALSE);
+#endif /* JP */
 
 		/* Allow cancel */
 		if (spell == -1) return;
@@ -681,7 +810,11 @@ void do_cmd_study(void)
 	if (spell < 0)
 	{
 		/* Message */
+#ifdef JP
+		msg_format("その本には学ぶべき%sがない。", p);
+#else
 		msg_format("You cannot learn any %ss in that book.", p);
+#endif
 
 		/* Abort */
 		return;
@@ -705,8 +838,13 @@ void do_cmd_study(void)
 	p_ptr->spell_order[i] = spell;
 
 	/* Mention the result */
+#ifdef JP
+	message_format(MSG_STUDY, 0, "%sの%sを学んだ。",
+	           get_spell_name(cp_ptr->spell_book, spell), p);
+#else /* JP */
 	message_format(MSG_STUDY, 0, "You have learned the %s of %s.",
 	           p, get_spell_name(cp_ptr->spell_book, spell));
+#endif /* JP */
 
 	/* One less spell available */
 	p_ptr->new_spells--;
@@ -715,9 +853,13 @@ void do_cmd_study(void)
 	if (p_ptr->new_spells)
 	{
 		/* Message */
+#ifdef JP
+		msg_format("まだ %d 個の%sを学べる。", p_ptr->new_spells, p);
+#else
 		msg_format("You can learn %d more %s%s.",
 		           p_ptr->new_spells, p,
 		           (p_ptr->new_spells != 1) ? "s" : "");
+#endif
 	}
 
 	/* Redraw Study Status */
@@ -747,21 +889,33 @@ void do_cmd_cast(void)
 	/* Require spell ability */
 	if (cp_ptr->spell_book != TV_MAGIC_BOOK)
 	{
+#ifdef JP
+		msg_print("呪文を唱えられない！");
+#else
 		msg_print("You cannot cast spells!");
+#endif
 		return;
 	}
 
 	/* Require lite */
 	if (p_ptr->blind || no_lite())
 	{
+#ifdef JP
+		msg_print("目が見えない！");
+#else
 		msg_print("You cannot see!");
+#endif
 		return;
 	}
 
 	/* Not when confused */
 	if (p_ptr->confused)
 	{
+#ifdef JP
+		msg_print("混乱して唱えられない！");
+#else
 		msg_print("You are too confused!");
+#endif
 		return;
 	}
 
@@ -770,8 +924,13 @@ void do_cmd_cast(void)
 	item_tester_tval = cp_ptr->spell_book;
 
 	/* Get an item */
+#ifdef JP
+	q = "どの呪文書を使いますか? ";
+	s = "呪文書がない！";
+#else
 	q = "Use which book? ";
 	s = "You have no spell books!";
+#endif
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -795,11 +954,19 @@ void do_cmd_cast(void)
 
 
 	/* Ask for a spell */
+#ifdef JP
+	spell = get_spell(o_ptr, "唱える", TRUE);
+#else
 	spell = get_spell(o_ptr, "cast", TRUE);
+#endif
 
 	if (spell < 0)
 	{
+#ifdef JP
+		if (spell == -2) msg_print("その呪文書には知っている呪文がない。");
+#else /* JP */
 		if (spell == -2) msg_print("You don't know any spells in that book.");
+#endif /* JP */
 		return;
 	}
 
@@ -812,13 +979,21 @@ void do_cmd_cast(void)
 	if (s_ptr->smana > p_ptr->csp)
 	{
 		/* Warning */
+#ifdef JP
+		msg_print("その呪文を唱えるのに十分なマジックポイントがない。");
+#else
 		msg_print("You do not have enough mana to cast this spell.");
+#endif
 
 		/* Flush input */
 		flush();
 
 		/* Verify */
+#ifdef JP
+		if (!get_check("それでも挑戦しますか? ")) return;
+#else
 		if (!get_check("Attempt it anyway? ")) return;
+#endif
 	}
 
 
@@ -829,7 +1004,11 @@ void do_cmd_cast(void)
 	if (rand_int(100) < chance)
 	{
 		if (flush_failure) flush();
+#ifdef JP
+		msg_print("呪文を唱えるのに失敗した！");
+#else
 		msg_print("You failed to get the spell off!");
+#endif
 	}
 
 	/* Process spell */
@@ -875,7 +1054,11 @@ void do_cmd_cast(void)
 		p_ptr->csp_frac = 0;
 
 		/* Message */
+#ifdef JP
+		msg_print("精神を集中しすぎて気を失ってしまった！");
+#else
 		msg_print("You faint from the effort!");
+#endif
 
 		/* Hack -- Bypass free action */
 		(void)set_paralyzed(p_ptr->paralyzed + randint(5 * oops + 1));
@@ -886,7 +1069,11 @@ void do_cmd_cast(void)
 			bool perm = (rand_int(100) < 25);
 
 			/* Message */
+#ifdef JP
+			msg_print("体を悪くしてしまった！");
+#else
 			msg_print("You have damaged your health!");
+#endif
 
 			/* Reduce constitution */
 			(void)dec_stat(A_CON, 15 + randint(10), perm);
@@ -918,21 +1105,33 @@ void do_cmd_pray(void)
 	/* Must use prayer books */
 	if (cp_ptr->spell_book != TV_PRAYER_BOOK)
 	{
+#ifdef JP
+		msg_print("心から唱えれば、祈りが神に届くこともある。");
+#else
 		msg_print("Pray hard enough and your prayers may be answered.");
+#endif
 		return;
 	}
 
 	/* Must have lite */
 	if (p_ptr->blind || no_lite())
 	{
+#ifdef JP
+		msg_print("目が見えない！");
+#else
 		msg_print("You cannot see!");
+#endif
 		return;
 	}
 
 	/* Must not be confused */
 	if (p_ptr->confused)
 	{
+#ifdef JP
+		msg_print("混乱して唱えられない！");
+#else
 		msg_print("You are too confused!");
+#endif
 		return;
 	}
 
@@ -941,8 +1140,13 @@ void do_cmd_pray(void)
 	item_tester_tval = cp_ptr->spell_book;
 
 	/* Get an item */
+#ifdef JP
+	q = "どの祈祷書を使いますか? ";
+	s = "祈祷書がない！";
+#else
 	q = "Use which book? ";
 	s = "You have no prayer books!";
+#endif
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -965,11 +1169,19 @@ void do_cmd_pray(void)
 
 
 	/* Choose a spell */
+#ifdef JP
+	spell = get_spell(o_ptr, "唱える", TRUE);
+#else /* JP */
 	spell = get_spell(o_ptr, "recite", TRUE);
+#endif
 
 	if (spell < 0)
 	{
+#ifdef JP
+		if (spell == -2) msg_print("その祈祷書には唱えられる祈りがない。");
+#else /* JP */
 		if (spell == -2) msg_print("You don't know any prayers in that book.");
+#endif
 		return;
 	}
 
@@ -982,13 +1194,21 @@ void do_cmd_pray(void)
 	if (s_ptr->smana > p_ptr->csp)
 	{
 		/* Warning */
+#ifdef JP
+		msg_print("その祈りを唱えるのに十分なマジックポイントがない。");
+#else
 		msg_print("You do not have enough mana to recite this prayer.");
+#endif
 
 		/* Flush input */
 		flush();
 
 		/* Verify */
+#ifdef JP
+		if (!get_check("それでも挑戦しますか? ")) return;
+#else
 		if (!get_check("Attempt it anyway? ")) return;
+#endif
 	}
 
 
@@ -999,7 +1219,11 @@ void do_cmd_pray(void)
 	if (rand_int(100) < chance)
 	{
 		if (flush_failure) flush();
+#ifdef JP
+		msg_print("精神の集中に失敗した！");
+#else
 		msg_print("You failed to concentrate hard enough!");
+#endif
 	}
 
 	/* Success */
@@ -1045,7 +1269,11 @@ void do_cmd_pray(void)
 		p_ptr->csp_frac = 0;
 
 		/* Message */
+#ifdef JP
+		msg_print("精神を集中しすぎて気を失ってしまった！");
+#else
 		msg_print("You faint from the effort!");
+#endif
 
 		/* Hack -- Bypass free action */
 		(void)set_paralyzed(p_ptr->paralyzed + randint(5 * oops + 1));
@@ -1056,7 +1284,11 @@ void do_cmd_pray(void)
 			bool perm = (rand_int(100) < 25);
 
 			/* Message */
+#ifdef JP
+			msg_print("体を悪くしてしまった！");
+#else
 			msg_print("You have damaged your health!");
+#endif
 
 			/* Reduce constitution */
 			(void)dec_stat(A_CON, 15 + randint(10), perm);

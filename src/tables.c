@@ -8,6 +8,16 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3-v6 日本語版製作: しとしん
+ * 2.8.0      対応        : sayu, しとしん
+ * 2.8.1      対応        : FIRST, しとしん
+ * 2.8.3      対応        : TeO, FIRST, しとしん
+ *
+ * 日本語版機能追加 : 日本語版特別オプション
+ *                    英日切り替え機能
+ */
+
 #include "angband.h"
 
 
@@ -1206,12 +1216,22 @@ const player_sex sex_info[MAX_SEXES] =
 {
 	{
 		"Female",
+#ifdef JP
+		"女性",
+		"女王"
+#else
 		"Queen"
+#endif
 	},
 
 	{
 		"Male",
+#ifdef JP
+		"男性",
+		"王"
+#else
 		"King"
+#endif
 	}
 };
 
@@ -1297,6 +1317,24 @@ const byte chest_traps[64] =
  */
 cptr color_names[16] =
 {
+#ifdef JP
+	"黒",
+	"白",
+	"青灰色",
+	"オレンジ",
+	"赤",
+	"緑",
+	"青",
+	"琥珀色",
+	"灰色",
+	"明青灰色",
+	"紫",
+	"黄",
+	"明るい赤",
+	"明るい緑",
+	"明るい青",
+	"明琥珀色",
+#else
 	"Dark",
 	"White",
 	"Slate",
@@ -1313,6 +1351,7 @@ cptr color_names[16] =
 	"Light Green",
 	"Light Blue",
 	"Light Umber",
+#endif
 };
 
 
@@ -1321,7 +1360,11 @@ cptr color_names[16] =
  */
 cptr stat_names[A_MAX] =
 {
+#ifdef JP
+	"腕力 :", "知能 :", "賢さ :", "器用 :", "耐久 :", "魅力 :"
+#else
 	"STR: ", "INT: ", "WIS: ", "DEX: ", "CON: ", "CHR: "
+#endif
 };
 
 /*
@@ -1329,7 +1372,11 @@ cptr stat_names[A_MAX] =
  */
 cptr stat_names_reduced[A_MAX] =
 {
+#ifdef JP
+	"腕力x:", "知能x:", "賢さx:", "器用x:", "耐久x:", "魅力x:"
+#else
 	"Str: ", "Int: ", "Wis: ", "Dex: ", "Con: ", "Chr: "
+#endif
 };
 
 /*
@@ -1337,12 +1384,21 @@ cptr stat_names_reduced[A_MAX] =
  */
 cptr stat_names_full[A_MAX] =
 {
+#ifdef JP
+	"腕力",
+	"知能",
+	"賢さ",
+	"器用さ",
+	"耐久力",
+	"魅力"
+#else /* JP */
 	"strength",
 	"intelligence",
 	"wisdom",
 	"dexterity",
 	"constitution",
 	"charisma"
+#endif /* JP */
 };
 
 
@@ -1356,6 +1412,24 @@ cptr stat_names_full[A_MAX] =
  */
 cptr window_flag_desc[32] =
 {
+#ifdef JP
+	"持ち物/装備一覧",
+	"装備/持ち物一覧",
+	"キャラクタ情報(基本)",
+	"キャラクタ情報(特別)",
+	"キャラクタ情報(簡潔)",
+	"マップ",
+	"メッセージ",
+	"ダンジョン全体図",
+	"モンスターの思い出",
+	"アイテムの詳細",
+	"モンスターの一覧",
+	"ステータス",
+	"スクリプト変数",
+	"スクリプト・ソース",
+	"ボーグ・メッセージ",
+	"ボーグ・ステータス",
+#else
 	"Display inven/equip",
 	"Display equip/inven",
 	"Display player (basic)",
@@ -1372,6 +1446,7 @@ cptr window_flag_desc[32] =
 	"Display script source",
 	"Display borg messages",
 	"Display borg status",
+#endif
 	NULL,
 	NULL,
 	NULL,
@@ -1517,6 +1592,15 @@ cptr option_text[OPT_MAX] =
 	NULL,						/* xxx */
 	NULL,						/* xxx */
 	NULL,						/* xxx */
+#ifdef JP
+	"use_command_menu",			/* OPT_use_command_menu */
+	"old_way_of_kaz",	  		/* OPT_old_way_of_kaz */
+	"english_others",  			/* OPT_english_others */
+	"powerup_home",    			/* OPT_powerup_home */
+	"english_monster",	    	/* OPT_english_monster */
+	"english_object", 	    	/* OPT_english_object */
+	"always_show_list",			/* OPT_always_show_list */
+#else
 	NULL,						/* xxx */
 	NULL,						/* xxx */
 	NULL,						/* xxx */
@@ -1524,6 +1608,7 @@ cptr option_text[OPT_MAX] =
 	NULL,						/* xxx */
 	NULL,						/* xxx */
 	NULL,						/* xxx */
+#endif
 	"birth_point_based",		/* OPT_birth_point_based */
 	"birth_auto_roller",		/* OPT_birth_auto_roller */
 	"birth_maximize",			/* OPT_birth_maximize */
@@ -1660,6 +1745,82 @@ cptr option_text[OPT_MAX] =
  */
 cptr option_desc[OPT_MAX] =
 {
+#ifdef JP
+	"ローグ風キー配置を使用する",				/* OPT_rogue_like_commands */
+	"クイック・メッセージを使用する",			/* OPT_quick_messages */
+	"床上のアイテム選択時に確認する",			/* OPT_floor_query_flag */
+	"アイテムを拾う前に確認する",				/* OPT_carry_query_flag */
+	"常に以前のターゲットを指定する",			/* OPT_use_old_target */
+	"常にアイテムを拾う",						/* OPT_always_pickup */
+	"コマンド自動繰り返し",						/* OPT_always_repeat */
+	"ダンジョンの深さをフィートで表示する",		/* OPT_depth_in_feet */
+	"異なる銘のアイテムをまとめる",				/* OPT_stack_force_notes */
+	"異なる割引表示のアイテムをまとめる",		/* OPT_stack_force_costs */
+	"装備一覧で装備場所を表示する",				/* OPT_show_labels */
+	"アイテム一覧で重量を表示する",				/* OPT_show_weights */
+	"持ち物/装備ウィンドウに選択アイテム表示",	/* OPT_show_choices */
+	"モンスターの思い出を詳しく表示する",		/* OPT_show_details */
+	"ビープ音を鳴らす(エラー時など)",			/* OPT_ring_bell */
+	"アイテムの外見も表示する",					/* OPT_show_flacors */
+	"階段を無視して走る",						/* OPT_run_ignore_stairs */
+	"ドアを無視して走る",						/* OPT_run_ignore_doors */
+	"角は斜めに走る",							/* OPT_run_cut_corners */
+	"角を走っていく",							/* OPT_run_use_corners */
+	"どこのモンスターが動いても行動を中止する",	/* OPT_disturb_move */
+	"視界内モンスターが動いたら行動を中止する",	/* OPT_disturb_near */
+	"画面スクロール時に行動を中止する",			/* OPT_disturb_panel */
+	"自分のステータス変化時に行動を中止する",	/* OPT_disturb_state */
+	"些細なことが起きても行動を中止する",		/* OPT_disturb_minor */
+	NULL,										/* xxx disturb_other */
+	NULL,										/* xxx alert_hitpoint */
+	NULL,										/* xxx alert_failure */
+	"アイテムを破壊するときに確認する",			/* OPT_verify_destroy */
+	"特別なコマンドを使うときに確認する",		/* OPT_verify_special */
+	"数量を選べるようにする",					/* OPT_allow_quantity */
+	NULL,										/* xxx */
+	"店で値切り交渉をしない",					/* OPT_auto_haggle */
+	"階の雰囲気自動選り好み",			/* OPT_auto_scum */
+	NULL,										/* OPT_testing_stack */
+	NULL,										/* OPT_testing_carry */
+	"「回りを調べる」コマンドを拡張する",		/* OPT_expand_look */
+	"「一覧」コマンドを拡張する",				/* OPT_expand_list */
+	"明るい場所はそのままにする",				/* OPT_view_perma_grids */
+	"明かりで照らした場所はそのままにする",		/* OPT_view_torch_grids */
+	"ダンジョン生成時に部屋をそろえる",			/* OPT_dungeon_align */
+	"階段をつなげてダンジョンを生成する",		/* OPT_dungeon_stair */
+	"モンスターは現在の位置を追跡する(超重い)",	/* OPT_flow_by_sound */
+	"モンスターは最近の位置を追跡する(超重い)",	/* OPT_flow_by_smell */
+	NULL,										/* xxx */
+	NULL,										/* xxx */
+	"モンスターは失敗を学習する",				/* OPT_smart_learn */
+	"モンスターはプレイヤーの弱みを突く",		/* OPT_smart_cheat */
+	"走っているときは明かりの半径を減少する",	/* OPT_view_reduce_lite */
+	"走っているときはプレイヤーを隠す",			/* OPT_hidden_player */
+	"連続コマンドはキー入力で中断しない",		/* OPT_avoid_abort */
+	"モンスターの特別な色を使用しない",			/* OPT_avoid_other */
+	"様々なミス発生時に入力をクリアする",		/* OPT_flush_failure */
+	"行動中止時に入力をクリアする",				/* OPT_flush_disturb */
+	NULL,										/* xxx */
+	"コマンド前に常に入力をクリアする",			/* OPT_fresh_before */
+	"様々なことの後に画面を再描画する",			/* OPT_fresh_after */
+	NULL,										/* xxx */
+	"セーブ・ファイル中のメッセージを圧縮する",	/* OPT_compress_savefile */
+	"プレイヤーにカーソルを合わせる",			/* OPT_hilite_player */
+	"明かりの範囲を特別な色で表示する",			/* OPT_view_yellow_lite */
+	"視界の範囲を特別な色で表示する",			/* OPT_view_bright_lite */
+	"壁を特別な色で表示する(重い)",				/* OPT_view_granite_lite */
+	"床を特別な色で表示する(重い)",				/* OPT_view_special_lite */
+	"方向の入力なしにドアの開閉/罠の解除を行う",		/* OPT_easy_open */
+	"移動時にドアの開閉/罠の解除を行う",		/* OPT_easy_alter */
+	"床上で重なったアイテムをリストする",  		/* OPT_easy_floor */
+	"重なったアイテム別の文字・色で表示する",	/* OPT_show_piles */
+	"常にプレイヤーを中心に置く(超重い)",		/* OPT_center_player */
+	"走っている時は中心に置かない",				/* OPT_run_avoid_center */
+	NULL,										/* xxx scroll_target */
+	"自動的に '-続く-' を飛ばす",		/* OPT_auto_more */
+	"モンスターはより賢く行動する",		/* OPT_smart_monsters */
+	"集団のモンスターは賢く行動する(超重い)",	/* OPT_smart_packs */
+#else
 	"Rogue-like commands",						/* OPT_rogue_like_commands */
 	"Activate quick messages",					/* OPT_quick_messages */
 	"Prompt for floor item selection",			/* OPT_floor_query_flag */
@@ -1734,6 +1895,7 @@ cptr option_desc[OPT_MAX] =
 	"Automatically clear '-more-' prompts",		/* OPT_auto_more */
 	"Monsters behave more intelligently",		/* OPT_smart_monsters */
 	"Monsters act smarter in groups (v.slow)",	/* OPT_smart_packs */
+#endif
 	NULL,										/* xxx */
 	NULL,										/* xxx */
 	NULL,										/* xxx */
@@ -1781,6 +1943,15 @@ cptr option_desc[OPT_MAX] =
 	NULL,										/* xxx */
 	NULL,										/* xxx */
 	NULL,										/* xxx */
+#ifdef JP
+	"メニューによるコマンド選択を有効にする",		/* OPT_use_command_menu */
+	"複数アイテムの表示を従来の形式にする",		/* OPT_old_way_of_kaz */
+	"種族/職業/称号を英語で表示する",			/* OPT_english_others */
+	"我が家を20ページに拡張する",				/* OPT_powerup_home */
+	"モンスター名を英語で表示する",				/* OPT_english_monster */
+	"アイテム名を英語で表示する",				/* OPT_english_object */
+	"選択時には常に一覧を表示する",				/* OPT_always_show_list */
+#else
 	NULL,										/* xxx */
 	NULL,										/* xxx */
 	NULL,										/* xxx */
@@ -1788,6 +1959,18 @@ cptr option_desc[OPT_MAX] =
 	NULL,										/* xxx */
 	NULL,										/* xxx */
 	NULL,										/* xxx */
+#endif
+#ifdef JP
+	"初期: ポイントによるステータス設定を行う",		/* OPT_birth_point_based */
+	"初期: ステータスの最小値を設定可能にする",		/* OPT_birth_auto_roller */
+	"初期: 種族/職業ボーナスの効果を最大化する",	/* OPT_birth_maximize */
+	"初期: レベル移動時に伝説のアイテムを保存する",	/* OPT_birth_preserve */
+	"初期: [鉄人]帰還と上り階段なし",				/* OPT_birth_ironman */
+	"初期: [鉄人]店/自宅を使用しない",				/* OPT_birth_no_stores */
+	"初期: [鉄人]伝説のアイテムを生成しない",		/* OPT_birth_no_artifacts */
+	"初期: 伝説のアイテムの能力を乱数で決める(beta)",	/* OPT_birth_rand_artifacts */
+	"初期: 床に複数のアイテムをおけないようにする",	/* OPT_birth_no_stacking */
+#else
 	"Birth: Allow purchase of stats using points",	/* OPT_birth_point_based */
 	"Birth: Allow specification of minimal stats",	/* OPT_birth_auto_roller */
 	"Birth: Maximize effect of race/class bonuses",	/* OPT_birth_maximize */
@@ -1797,6 +1980,7 @@ cptr option_desc[OPT_MAX] =
 	"Birth: Restrict creation of artifacts",	/* OPT_birth_no_artifacts */
 	"Birth: Randomize some of the artifacts (beta)",	/* OPT_birth_rand_artifacts */
 	"Birth: Don't stack objects on the floor",	/* OPT_birth_no_stacking */
+#endif
 	NULL,										/* xxx */
 	NULL,										/* xxx */
 	NULL,										/* xxx */
@@ -1820,12 +2004,21 @@ cptr option_desc[OPT_MAX] =
 	NULL,										/* xxx */
 	NULL,										/* xxx */
 	NULL,										/* xxx */
+#ifdef JP
+	"詐欺: アイテムの生成をのぞき見る",			/* OPT_cheat_peek */
+	"詐欺: モンスターの生成をのぞき見る",		/* OPT_cheat_hear */
+	"詐欺: ダンジョンの生成をのぞき見る",		/* OPT_cheat_room */
+	"詐欺: その他の事をのぞき見る",				/* OPT_cheat_xtra */
+	"詐欺: 完全なモンスターの思い出を知る",		/* OPT_cheat_know */
+	"詐欺: 死を回避することを可能にする",		/* OPT_cheat_live */
+#else
 	"Cheat: Peek into object creation",			/* OPT_cheat_peek */
 	"Cheat: Peek into monster creation",		/* OPT_cheat_hear */
 	"Cheat: Peek into dungeon creation",		/* OPT_cheat_room */
 	"Cheat: Peek into something else",			/* OPT_cheat_xtra */
 	"Cheat: Know complete monster info",		/* OPT_cheat_know */
 	"Cheat: Allow player to avoid death",		/* OPT_cheat_live */
+#endif
 	NULL,										/* xxx */
 	NULL,										/* xxx */
 	NULL,										/* xxx */
@@ -1852,6 +2045,17 @@ cptr option_desc[OPT_MAX] =
 	NULL,										/* xxx */
 	NULL,										/* xxx */
 	NULL,										/* xxx */
+#ifdef JP
+	"Adult: ポイントによるステータス設定を行う",	/* OPT_adult_point_based */
+	"Adult: ステータスの最小値を設定可能にする",	/* OPT_adult_auto_roller */
+	"Adult: 種族/職業ボーナスの効果を最大化する",	/* OPT_adult_maximize */
+	"Adult: レベル移動時に伝説のアイテムを保存する",	/* OPT_adult_preserve */
+	"Adult: [鉄人]帰還と上り階段なし",				/* OPT_adult_ironman */
+	"Adult: [鉄人]店/自宅を使用しない",				/* OPT_adult_no_stores */
+	"Adult: [鉄人]伝説のアイテムを生成しない",		/* OPT_adult_no_artifacts */
+	"Adult: 伝説のアイテムの能力を乱数で決める(beta)",	/* OPT_adult_rand_artifacts */
+	"Adult: 床に複数のアイテムをおけないようにする",	/* OPT_adult_no_stacking */
+#else
 	"Adult: Allow purchase of stats using points",	/* OPT_adult_point_based */
 	"Adult: Allow specification of minimal stats",	/* OPT_adult_auto_roller */
 	"Adult: Maximize effect of race/class bonuses",	/* OPT_adult_maximize */
@@ -1860,7 +2064,8 @@ cptr option_desc[OPT_MAX] =
 	"Adult: Restrict the use of stores/home",	/* OPT_adult_no_stores */
 	"Adult: Restrict creation of artifacts",	/* OPT_adult_no_artifacts */
 	"Adult: Randomize some of the artifacts (beta)",	/* OPT_adult_rand_artifacts */
-	"Adult: Don't stack objects on the floor",	/* OPT_adult_adult_no_stacking */
+	"Adult: Don't stack objects on the floor",	/* OPT_adult_no_stacking */
+#endif
 	NULL,										/* xxx */
 	NULL,										/* xxx */
 	NULL,										/* xxx */
@@ -1884,12 +2089,21 @@ cptr option_desc[OPT_MAX] =
 	NULL,										/* xxx */
 	NULL,										/* xxx */
 	NULL,										/* xxx */
+#ifdef JP
+	"得点: アイテムの生成をのぞき見る",			/* OPT_score_peek */
+	"得点: モンスターの生成をのぞき見る",		/* OPT_score_hear */
+	"得点: ダンジョンの生成をのぞき見る",		/* OPT_score_room */
+	"得点: その他の事をのぞき見る",				/* OPT_score_xtra */
+	"得点: 完全なモンスターの思い出を知る",		/* OPT_score_know */
+	"得点: 死を回避することを可能にする",		/* OPT_score_live */
+#else
 	"Score: Peek into object creation",			/* OPT_score_peek */
 	"Score: Peek into monster creation",		/* OPT_score_hear */
 	"Score: Peek into dungeon creation",		/* OPT_score_room */
 	"Score: Peek into something else",			/* OPT_score_xtra */
 	"Score: Know complete monster info",		/* OPT_score_know */
 	"Score: Allow player to avoid death",		/* OPT_score_live */
+#endif
 	NULL,										/* xxx */
 	NULL,										/* xxx */
 	NULL,										/* xxx */
@@ -1929,7 +2143,11 @@ const bool option_norm[OPT_MAX] =
 	FALSE,		/* OPT_floor_query_flag */
 	TRUE,		/* OPT_carry_query_flag */
 	FALSE,		/* OPT_use_old_target */
+#ifdef JP
+	FALSE,		/* OPT_always_pickup */		/* 日本語版は初期値変更 */
+#else
 	TRUE,		/* OPT_always_pickup */
+#endif
 	FALSE,		/* OPT_always_repeat */
 	FALSE,		/* OPT_depth_in_feet */
 	FALSE,		/* OPT_stack_force_notes */
@@ -1939,7 +2157,11 @@ const bool option_norm[OPT_MAX] =
 	TRUE,		/* OPT_show_choices */
 	TRUE,		/* OPT_show_details */
 	TRUE,		/* OPT_ring_bell */
+#ifdef JP
+	FALSE,		/* OPT_show_flavors */		/* 日本語版は初期値変更 */
+#else
 	TRUE,		/* OPT_show_flavors */
+#endif
 	TRUE,		/* OPT_run_ignore_stairs */
 	TRUE,		/* OPT_run_ignore_doors */
 	TRUE,		/* OPT_run_cut_corners */
@@ -1984,10 +2206,19 @@ const bool option_norm[OPT_MAX] =
 	FALSE,		/* xxx */
 	TRUE,		/* OPT_compress_savefile */
 	FALSE,		/* OPT_hilite_player */
+#ifdef JP
+	TRUE,		/* OPT_view_yellow_lite */		/* 日本語版は初期値変更 */
+	TRUE,		/* OPT_view_bright_lite */		/* 16MHz 486SX でも重く */
+	TRUE,		/* OPT_view_granite_lite */		/* ないので大丈夫でしょ */
+	TRUE,		/* OPT_view_special_lite */		/* 重いマシンがあったら */
+								/* いくつかFALSEにして  */
+								/* 下さい。             */
+#else
 	FALSE,		/* OPT_view_yellow_lite */
 	FALSE,		/* OPT_view_bright_lite */
 	FALSE,		/* OPT_view_granite_lite */
 	FALSE,		/* OPT_view_special_lite */
+#endif
 	FALSE,		/* OPT_easy_open */
 	FALSE,		/* OPT_easy_alter */
 	FALSE,		/* OPT_easy_floor */
@@ -2045,6 +2276,15 @@ const bool option_norm[OPT_MAX] =
 	FALSE,		/* xxx */
 	FALSE,		/* xxx */
 	FALSE,		/* xxx */
+#ifdef JP
+	TRUE,		/* OPT_use_command_menu */
+	FALSE,		/* OPT_old_way_of_kaz */
+	FALSE,		/* OPT_english_others */
+	TRUE,		/* OPT_powerup_home */
+	FALSE,		/* OPT_english_monster */
+	FALSE,		/* OPT_english_object */
+	TRUE,		/* OPT_always_show_list */
+#else
 	FALSE,		/* xxx */
 	FALSE,		/* xxx */
 	FALSE,		/* xxx */
@@ -2052,6 +2292,7 @@ const bool option_norm[OPT_MAX] =
 	FALSE,		/* xxx */
 	FALSE,		/* xxx */
 	FALSE,		/* xxx */
+#endif
 	FALSE,		/* OPT_birth_point_based */
 	FALSE,		/* OPT_birth_auto_roller */
 	TRUE,		/* OPT_birth_maximize */
@@ -2361,9 +2602,57 @@ const byte option_page[OPT_PAGE_MAX][OPT_PAGE_PER] =
 		OPT_NONE,
 		OPT_NONE,
 		OPT_NONE
+#ifdef JP
+	},
+
+	/*** 日本語版特別 ***/
+
+	{
+		OPT_always_show_list,
+		OPT_english_object,
+		OPT_english_monster,
+		OPT_powerup_home,
+		OPT_english_others,
+		OPT_old_way_of_kaz,
+#ifdef ALLOW_COMMAND_MENU
+		OPT_use_command_menu,
+#else /* ALLOW_COMMAND_MENU */
+		OPT_NONE,
+#endif /* ALLOW_COMMAND_MENU */
+		OPT_NONE,
+		OPT_NONE,
+		OPT_NONE,
+		OPT_NONE,
+		OPT_NONE,
+		OPT_NONE,
+		OPT_NONE,
+		OPT_NONE,
+		OPT_NONE,
+		OPT_NONE,
+		OPT_NONE,
+		OPT_NONE,
+		OPT_NONE,
+#endif
 	}
 };
 
+
+#ifdef JP
+cptr J_inscrip_text[MAX_INSCRIP] =
+{
+	NULL,
+	"恐ろしい",
+	"無価値",
+	"呪われている",
+	"壊れている",
+	"並",
+	"上質",
+	"高級品",
+	"特別製",
+	"呪われていない",
+	"破壊不可能",
+};
+#endif
 
 cptr inscrip_text[MAX_INSCRIP] =
 {

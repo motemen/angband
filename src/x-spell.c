@@ -573,6 +573,168 @@ static cptr spell_names[2][PY_MAX_SPELLS] =
 	}
 };
 
+#ifdef JP
+cptr J_spell_names[2][PY_MAX_SPELLS] =
+{
+	/*** Mage Spells ***/
+
+	{
+	  "マジック・ミサイル",	/* "Magic Missile" */
+	  "モンスター感知",	/* "Detect Monsters" */
+	  "フェイズ・ドア",	/* "Phase Door" */
+	  "ライト・エリア",	/* "Light Area" */
+	  "トラップ/ドア感知",	/* "Find Hidden Traps/Doors" */
+	  "軽傷の治癒",	/* "Cure Light Wounds" */
+	  "財宝感知",	/* "Detect Treasure" */
+	  "アイテム感知",	/* "Detect Objects" */
+	  "鑑定",	/* "Identify" */
+	  "透明物体感知",	/* "Detect Invisible" */
+	  "魔法アイテム感知",	/* "Detect Enchantment" */
+	  "悪臭雲",	/* "Stinking Cloud" */
+	  "サンダー・ボルト",	/* "Lightning Bolt" */
+	  "パニック・モンスター",	/* "Confuse Monster" */
+	  "スリープ・モンスター",	/* "Sleep Monster" */
+	  "謎",	/* "Wonder" */ /* とりあえずWand of Wonderと同じ訳にしておく */
+	  "アイス・ボルト",	/* "Frost Bolt" */
+	  "アシッド・ボルト",	/* "Acid Bolt" */
+	  "ファイア・ボルト",	/* "Fire Bolt" */
+	  "トラップ/ドア破壊",	/* "Trap/Door Destruction" */
+	  "ライト・スピア",	/* "Spear of Light" */
+	  "岩石溶解",	/* "Turn Stone to Mud" */
+	  "ドア創造",	/* "Door Creation" */
+	  "地震",	/* "Earthquake" */
+	  "階段創造",	/* "Stair Creation" */
+	  "解毒",	/* "Cure Poison" */
+	  "空腹充足",	/* "Satisfy Hunger" */
+	  "ヒーロー",	/* "Heroism" */
+	  "肉体野獣化",	/* "Berserker" */
+	  "スピード",	/* "Haste Self" */
+	  "テレポート",	/* "Teleport Self" */
+	  "スロウ・モンスター",	/* "Slow Monster" */
+	  "テレポート・アウェイ",	/* "Teleport Other" */
+	  "レベル・テレポート",	/* "Teleport Level" */
+	  "帰還の呪文",	/* "Word of Recall" */
+	  "チェンジ・モンスター",	/* "Polymorph Other" */
+	  "衝撃波",	/* "Shock Wave" */
+	  "爆発",	/* "Explosion" */
+	  "死の雲",	/* "Cloudkill" */
+	  "周辺スリープ",	/* "Mass Sleep" */
+	  "混乱",	/* "Bedlam" */
+	  "精神破壊",	/* "Rend Soul" */
+	  "破壊の言葉",	/* "Word of Destruction" */
+	  "カオス・アタック",	/* "Chaos Strike" */
+	  "耐冷",	/* "Resist Cold" */
+	  "耐火",	/* "Resist Fire" */
+	  "耐毒",	/* "Resist Poison" */
+	  "全耐性",	/* "Resistance" */
+	  "シールド",	/* "Shield" */
+	  "守護のルーン",	/* "Rune of Protection" */
+	  "魔力充填",	/* "Lesser Recharging" */
+	  "防具強化",	/* "Enchant Armor" */
+	  "武器強化",	/* "Enchant Weapon" */
+	  "*魔力充填*",	/* "Greater Recharging" */
+	  "精霊の矢",	/* "Elemental Brand" */
+	  "アイス・ボール",	/* "Frost Ball" */
+	  "アシッド・ボール",	/* "Acid Ball" */
+	  "ファイア・ボール",	/* "Fire Ball" */
+	  "アイス・ストーム",	/* "Ice Storm" */
+	  "追放",	/* "Banishment" */
+	  "流星群",	/* "Meteor Swarm" */
+	  "周辺追放",	/* "Mass Banishment" */
+	  "裂け目",	/* "Rift" */
+	  "マナ・ストーム"	/* "Mana Storm" */
+	},
+
+
+	/*** Priest Spells ***/
+
+	{
+		/* Beginners Handbook (sval 0) */
+		"邪悪存在感知",	/* "Detect Evil" */
+		"軽傷の治癒",	/* "Cure Light Wounds" */
+		"祝福",	/* "Bless" */
+		"恐怖除去",	/* "Remove Fear" */
+		"光の召喚",	/* "Call Light" */
+		"トラップ発見",	/* "Find Traps" */
+		"ドア/階段発見",	/* "Detect Doors/Stairs" */
+		"減毒",	/* "Slow Poison" */
+
+		/* Words of Wisdom (sval 1) */
+		"モンスター恐慌",	/* "Scare Monster" */
+		"入口",	/* "Portal" */
+		"重傷の治癒",	/* "Cure Serious Wounds" */
+		"聖歌",	/* "Chant" */
+		"聖域",	/* "Sanctuary" */
+		"空腹充足",	/* "Satisfy Hunger" */
+		"解呪",	/* "Remove Curse" */
+		"耐熱耐寒",	/* "Resist Heat and Cold" */
+
+		/* Chants and Blessings (sval 2) */
+		"毒消し",	/* "Neutralize Poison" */
+		"吸収のオーブ",	/* "Orb of Draining" */
+		"致命傷の治癒",	/* "Cure Critical Wounds" */
+		"透明物体感知",	/* "Sense Invisible" */
+		"対邪悪結界",	/* "Protection from Evil" */
+		"地震",	/* "Earthquake" */
+		"周辺感知",	/* "Sense Surroundings" */
+		"瀕死傷の治癒",	/* "Cure Mortal Wounds" */
+		"パニック・アンデッド",	/* "Turn Undead" */
+
+		/* Exorcism and Dispelling (sval 3) */
+		"祈り",	/* "Prayer" */
+		"アンデッド退散",	/* "Dispel Undead" */
+		"体力回復",	/* "Heal" */
+		"邪悪退散",	/* "Dispel Evil" */
+		"結界の紋章",	/* "Glyph of Warding" */
+		"聖なる御言葉",	/* "Holy Word" */
+
+		/* Godly Insights... (sval 5) */
+		"モンスター感知",	/* "Detect Monsters" */
+		"全感知",	/* "Detection" */
+		"鑑識",	/* "Perception" */
+		"調査",	/* "Probing" */
+		"千里眼",	/* "Clairvoyance" */
+
+		/* Purifications and Healing (sval 6) */
+		"重傷の治癒",	/* "Cure Serious Wounds" */
+		"瀕死傷の治癒",	/* "Cure Mortal Wounds" */
+		"体力回復",	/* "Healing" */
+		"全復活",	/* "Restoration" */
+		"回想",	/* "Remembrance" */
+
+		/* Wrath of God (sval 8) */
+		"アンデッド退散",	/* "Dispel Undead" */
+		"邪悪退散",	/* "Dispel Evil" */
+		"邪悪追放",	/* "Banish Evil" */
+		"破壊の詔",	/* "Word of Destruction" */
+		"全滅",	/* "Annihilation" */
+
+		/* Holy Infusions (sval 7) */
+		"開かれた道",	/* "Unbarring Ways" */
+		"魔力充填",	/* "Recharging" */
+		"呪い退散",	/* "Dispel Curse" */
+		"武器強化",	/* "Enchant Weapon" */
+		"防具強化",	/* "Enchant Armour" */
+		"精霊の剣",	/* "Elemental Brand" */
+
+		/* Ethereal openings (sval 4) */
+		"ショート・テレポート",	/* "Blink" */
+		"テレポート",	/* "Teleport Self" */
+		"テレポート・アウェイ",	/* "Teleport Other" */
+		"レベル・テレポート",	/* "Teleport Level" */
+		"帰還の詔",	/* "Word of Recall" */
+		"現実変容",	/* "Alter Reality" */
+
+		"(空白)",	/* "(blank)" */
+		"(空白)",	/* "(blank)" */
+		"(空白)",	/* "(blank)" */
+		"(空白)",	/* "(blank)" */
+		"(空白)",	/* "(blank)" */
+		"(空白)"	/* "(blank)" */
+	}
+};
+#endif /* JP */
+
 
 int get_spell_index(const object_type *o_ptr, int index)
 {
@@ -598,12 +760,22 @@ int get_spell_index(const object_type *o_ptr, int index)
 }
 
 
+#define X_spell_names	X_object_xxxx(spell_names)
+
 cptr get_spell_name(int tval, int spell)
 {
 	if (tval == TV_MAGIC_BOOK)
+#ifdef JP
+		return X_spell_names[0][spell];
+#else /* JP */
 		return spell_names[0][spell];
+#endif /* JP */
 	else
+#ifdef JP
+		return X_spell_names[1][spell];
+#else /* JP */
 		return spell_names[1][spell];
+#endif /* JP */
 }
 
 
@@ -623,94 +795,214 @@ cptr get_spell_info(int tval, int spell)
 		switch (spell)
 		{
 		case SPELL_MAGIC_MISSILE:
+#ifdef JP
+			sprintf(p, " 損傷:%dd4", 3 + ((plev - 1) / 5));
+#else /* JP */
 			sprintf(p, " dam %dd4", 3 + ((plev - 1) / 5));
+#endif /* JP */
 			break;
 		case SPELL_PHASE_DOOR:
+#ifdef JP
+			sprintf(p, " 範囲:10");
+#else /* JP */
 			sprintf(p, " range 10");
+#endif /* JP */
 			break;
 		case SPELL_CURE_LIGHT_WOUNDS:
+#ifdef JP
+			sprintf(p, " 治癒:2d8");
+#else /* JP */
 			sprintf(p, " heal 2d8");
+#endif /* JP */
 			break;
 		case SPELL_STINKING_CLOUD:
+#ifdef JP
+			sprintf(p, " 損傷:%d", 10 + (plev / 2));
+#else /* JP */
 			sprintf(p, " dam %d", 10 + (plev / 2));
+#endif /* JP */
 			break;
 		case SPELL_LIGHTNING_BOLT:
+#ifdef JP
+			sprintf(p, " 損傷:%dd6", (3 + ((plev - 5) / 6)));
+#else /* JP */
 			sprintf(p, " dam %dd6", (3 + ((plev - 5) / 6)));
+#endif /* JP */
 			break;
 		case SPELL_FROST_BOLT:
+#ifdef JP
+			sprintf(p, " 損傷:%dd8", (5 + ((plev - 5) / 4)));
+#else /* JP */
 			sprintf(p, " dam %dd8", (5 + ((plev - 5) / 4)));
+#endif /* JP */
 			break;
 		case SPELL_ACID_BOLT:
+#ifdef JP
+			sprintf(p, " 損傷:%dd8", (8 + ((plev - 5) / 4)));
+#else /* JP */
 			sprintf(p, " dam %dd8", (8 + ((plev - 5) / 4)));
+#endif /* JP */
 			break;
 		case SPELL_FIRE_BOLT:
+#ifdef JP
+			sprintf(p, " 損傷:%dd8", (6 + ((plev - 5) / 4)));
+#else /* JP */
 			sprintf(p, " dam %dd8", (6 + ((plev - 5) / 4)));
+#endif /* JP */
 			break;
 		case SPELL_SPEAR_OF_LIGHT:
+#ifdef JP
+			sprintf(p, " 損傷:6d8");
+#else /* JP */
 			sprintf(p, " dam 6d8");
+#endif /* JP */
 			break;
 		case SPELL_HEROISM:
+#ifdef JP
+			sprintf(p, " 期間:25+d25");
+#else /* JP */
 			sprintf(p, " dur 25+d25");
+#endif /* JP */
 			break;
 		case SPELL_BERSERKER:
+#ifdef JP
+			sprintf(p, " 期間:25+d25");
+#else /* JP */
 			sprintf(p, " dur 25+d25");
+#endif /* JP */
 			break;
 		case SPELL_HASTE_SELF:
+#ifdef JP
+			sprintf(p, " 期間:%d+d20", plev);
+#else /* JP */
 			sprintf(p, " dur %d+d20", plev);
+#endif /* JP */
 			break;
 		case SPELL_TELEPORT_SELF:
+#ifdef JP
+			sprintf(p, " 範囲:%d", plev * 5);
+#else /* JP */
 			sprintf(p, " range %d", plev * 5);
+#endif /* JP */
 			break;
 		case SPELL_SHOCK_WAVE:
+#ifdef JP
+			sprintf(p, " 損傷:%d", 10 + plev);
+#else /* JP */
 			sprintf(p, " dam %d", 10 + plev);
+#endif /* JP */
 			break;
 		case SPELL_EXPLOSION:
+#ifdef JP
+			sprintf(p, " 損傷:%d", 20 + plev * 2);
+#else /* JP */
 			sprintf(p, " dam %d", 20 + plev * 2);
+#endif /* JP */
 			break;
 		case SPELL_CLOUD_KILL:
+#ifdef JP
+			sprintf(p, " 損傷:%d", 40 + (plev / 2));
+#else /* JP */
 			sprintf(p, " dam %d", 40 + (plev / 2));
+#endif /* JP */
 			break;
 		case SPELL_REND_SOUL:
+#ifdef JP
+			sprintf(p, " 損傷:11d%d", plev);
+#else /* JP */
 			sprintf(p, " dam 11d%d", plev);
+#endif /* JP */
 			break;
 		case SPELL_CHAOS_STRIKE:
+#ifdef JP
+			sprintf(p, " 損傷:13d%d", plev);
+#else /* JP */
 			sprintf(p, " dam 13d%d", plev);
+#endif /* JP */
 			break;
 		case SPELL_RESIST_COLD:
+#ifdef JP
+			sprintf(p, " 期間:20+d20");
+#else /* JP */
 			sprintf(p, " dur 20+d20");
+#endif /* JP */
 			break;
 		case SPELL_RESIST_FIRE:
+#ifdef JP
+			sprintf(p, " 期間:20+d20");
+#else /* JP */
 			sprintf(p, " dur 20+d20");
+#endif /* JP */
 			break;
 		case SPELL_RESIST_POISON:
+#ifdef JP
+			sprintf(p, " 期間:20+d20");
+#else /* JP */
 			sprintf(p, " dur 20+d20");
+#endif /* JP */
 			break;
 		case SPELL_RESISTANCE:
+#ifdef JP
+			sprintf(p, " 期間:20+d20");
+#else /* JP */
 			sprintf(p, " dur 20+d20");
+#endif /* JP */
 			break;
 		case SPELL_SHIELD:
+#ifdef JP
+			sprintf(p, " 期間:30+d20");
+#else /* JP */
 			sprintf(p, " dur 30+d20");
+#endif /* JP */
 			break;
 		case SPELL_FROST_BALL:
+#ifdef JP
+			sprintf(p, " 損傷:%d", 30 + plev);
+#else /* JP */
 			sprintf(p, " dam %d", 30 + plev);
+#endif /* JP */
 			break;
 		case SPELL_ACID_BALL:
+#ifdef JP
+			sprintf(p, " 損傷:%d", 40 + plev);
+#else /* JP */
 			sprintf(p, " dam %d", 40 + plev);
+#endif /* JP */
 			break;
 		case SPELL_FIRE_BALL:
+#ifdef JP
+			sprintf(p, " 損傷:%d", 55 + plev);
+#else /* JP */
 			sprintf(p, " dam %d", 55 + plev);
+#endif /* JP */
 			break;
 		case SPELL_ICE_STORM:
+#ifdef JP
+			sprintf(p, " 損傷:%d", 50 + (plev * 2));
+#else /* JP */
 			sprintf(p, " dam %d", 50 + (plev * 2));
+#endif /* JP */
 			break;
 		case SPELL_METEOR_SWARM:
+#ifdef JP
+			sprintf(p, " 損傷:%dx%d", 30 + plev / 2, 2 + plev / 20);
+#else /* JP */
 			sprintf(p, " dam %dx%d", 30 + plev / 2, 2 + plev / 20);
+#endif /* JP */
 			break;
 		case SPELL_RIFT:
+#ifdef JP
+			sprintf(p, " 損傷:40+%dd7", plev);
+#else /* JP */
 			sprintf(p, " dam 40+%dd7", plev);
+#endif /* JP */
 			break;
 		case SPELL_MANA_STORM:
+#ifdef JP
+			sprintf(p, " 損傷:%d", 300 + plev * 2);
+#else /* JP */
 			sprintf(p, " dam %d", 300 + plev * 2);
+#endif /* JP */
 			break;
 		}
 	}
@@ -724,77 +1016,169 @@ cptr get_spell_info(int tval, int spell)
 		switch (spell)
 		{
 			case PRAYER_CURE_LIGHT_WOUNDS:
+#ifdef JP
+				strcpy(p, " 治癒:2d10");
+#else /* JP */
 				strcpy(p, " heal 2d10");
+#endif /* JP */
 				break;
 			case PRAYER_BLESS:
+#ifdef JP
+				strcpy(p, " 期間:12+d12");
+#else /* JP */
 				strcpy(p, " dur 12+d12");
+#endif /* JP */
 				break;
 			case PRAYER_PORTAL:
+#ifdef JP
+				sprintf(p, " 範囲:%d", 3 * plev);
+#else /* JP */
 				sprintf(p, " range %d", 3 * plev);
+#endif /* JP */
 				break;
 			case PRAYER_CURE_SERIOUS_WOUNDS:
+#ifdef JP
+				strcpy(p, " 治癒:4d10");
+#else /* JP */
 				strcpy(p, " heal 4d10");
+#endif /* JP */
 				break;
 			case PRAYER_CHANT:
+#ifdef JP
+				strcpy(p, " 期間:24+d24");
+#else /* JP */
 				strcpy(p, " dur 24+d24");
+#endif /* JP */
 				break;
 			case PRAYER_RESIST_HEAT_COLD:
+#ifdef JP
+				strcpy(p, " 期間:10+d10");
+#else /* JP */
 				strcpy(p, " dur 10+d10");
+#endif /* JP */
 				break;
 			case PRAYER_ORB_OF_DRAINING:
 				sprintf(p, " %d+3d6", plev +
 				        (plev / ((cp_ptr->flags & CF_BLESS_WEAPON) ? 2 : 4)));
 				break;
 			case PRAYER_CURE_CRITICAL_WOUNDS:
+#ifdef JP
+				strcpy(p, " 治癒:6d10");
+#else /* JP */
 				strcpy(p, " heal 6d10");
+#endif /* JP */
 				break;
 			case PRAYER_SENSE_INVISIBLE:
+#ifdef JP
+				strcpy(p, " 期間:24+d24");
+#else /* JP */
 				strcpy(p, " dur 24+d24");
+#endif /* JP */
 				break;
 			case PRAYER_PROTECTION_FROM_EVIL:
+#ifdef JP
+				sprintf(p, " 期間:%d+d25", 3 * plev);
+#else /* JP */
 				sprintf(p, " dur %d+d25", 3 * plev);
+#endif /* JP */
 				break;
 			case PRAYER_CURE_MORTAL_WOUNDS:
+#ifdef JP
+				strcpy(p, " 治癒:8d10");
+#else /* JP */
 				strcpy(p, " heal 8d10");
+#endif /* JP */
 				break;
 			case PRAYER_PRAYER:
+#ifdef JP
+				strcpy(p, " 期間:48+d48");
+#else /* JP */
 				strcpy(p, " dur 48+d48");
+#endif /* JP */
 				break;
 			case PRAYER_DISPEL_UNDEAD:
+#ifdef JP
+				sprintf(p, " 損傷:d%d", 3 * plev);
+#else /* JP */
 				sprintf(p, " dam d%d", 3 * plev);
+#endif /* JP */
 				break;
 			case PRAYER_HEAL:
+#ifdef JP
+				strcpy(p, " 治癒:300");
+#else /* JP */
 				strcpy(p, " heal 300");
+#endif /* JP */
 				break;
 			case PRAYER_DISPEL_EVIL:
+#ifdef JP
+				sprintf(p, " 損傷:d%d", 3 * plev);
+#else /* JP */
 				sprintf(p, " dam d%d", 3 * plev);
+#endif /* JP */
 				break;
 			case PRAYER_HOLY_WORD:
+#ifdef JP
+				strcpy(p, " 治癒:1000");
+#else /* JP */
 				strcpy(p, " heal 1000");
+#endif /* JP */
 				break;
 			case PRAYER_CURE_SERIOUS_WOUNDS2:
+#ifdef JP
+				strcpy(p, " 治癒:4d10");
+#else /* JP */
 				strcpy(p, " heal 4d10");
+#endif /* JP */
 				break;
 			case PRAYER_CURE_MORTAL_WOUNDS2:
+#ifdef JP
+				strcpy(p, " 治癒:8d10");
+#else /* JP */
 				strcpy(p, " heal 8d10");
+#endif /* JP */
 				break;
 			case PRAYER_HEALING:
+#ifdef JP
+				strcpy(p, " 治癒:2000");
+#else /* JP */
 				strcpy(p, " heal 2000");
+#endif /* JP */
 				break;
 			case PRAYER_DISPEL_UNDEAD2:
+#ifdef JP
+				sprintf(p, " 損傷:d%d", 4 * plev);
+#else /* JP */
 				sprintf(p, " dam d%d", 4 * plev);
+#endif /* JP */
 				break;
 			case PRAYER_DISPEL_EVIL2:
+#ifdef JP
+				sprintf(p, " 損傷:d%d", 4 * plev);
+#else /* JP */
 				sprintf(p, " dam d%d", 4 * plev);
+#endif /* JP */
 				break;
 			case PRAYER_ANNIHILATION:
+#ifdef JP
+				strcpy(p, " 損傷:200");
+#else /* JP */
 				strcpy(p, " dam 200");
+#endif /* JP */
 				break;
 			case PRAYER_BLINK:
+#ifdef JP
+				strcpy(p, " 範囲:10");
+#else /* JP */
 				strcpy(p, " range 10");
+#endif /* JP */
 				break;
 			case PRAYER_TELEPORT_SELF:
+#ifdef JP
+				sprintf(p, " 範囲:%d", 8 * plev);
+#else /* JP */
 				sprintf(p, " range %d", 8 * plev);
+#endif /* JP */
 				break;
 		}
 	}
@@ -826,7 +1210,11 @@ static void spell_wonder(int dir)
 	int beam = beam_chance();
 
 	if (die > 100)
+#ifdef JP
+		msg_print("力があふれ出るのを感じる！");
+#else /* JP */
 		msg_print("You feel a surge of power!");
+#endif /* JP */
 	if (die < 8) clone_monster(dir);
 	else if (die < 14) speed_monster(dir);
 	else if (die < 26) heal_monster(dir);
@@ -989,7 +1377,11 @@ static bool cast_mage_spell(int spell)
 		case SPELL_SPEAR_OF_LIGHT: /* spear of light */
 		{
 			if (!get_aim_dir(&dir)) return (FALSE);
+#ifdef JP
+			msg_print("青く輝く光線が放たれた。");
+#else /* JP */
 			msg_print("A line of blue shimmering light appears.");
+#endif /* JP */
 			lite_line(dir);
 			break;
 		}
@@ -1622,7 +2014,11 @@ static bool cast_priest_spell(int spell)
 		{
 			if (banish_evil(100))
 			{
+#ifdef JP
+				msg_print("神の御力が邪悪を打ち倒した！");
+#else /* JP */
 				msg_print("The power of your god banishes evil!");
+#endif /* JP */
 			}
 			break;
 		}
@@ -1706,7 +2102,11 @@ static bool cast_priest_spell(int spell)
 
 		case PRAYER_ALTER_REALITY:
 		{
+#ifdef JP
+			msg_print("世界が変わった！");
+#else /* JP */
 			msg_print("The world changes!");
+#endif /* JP */
 
 			/* Leaving */
 			p_ptr->leaving = TRUE;

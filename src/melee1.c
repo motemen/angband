@@ -8,6 +8,14 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3 日本語版製作: しとしん
+ * 2.7.9v6 対応        : 岸康司, しとしん
+ * 2.8.0   対応        : sayu, しとしん
+ * 2.8.1   対応        : FIRST
+ * 2.8.1   対応        : FIRST, しとしん
+ */
+
 #include "angband.h"
 
 
@@ -76,6 +84,16 @@ static bool check_hit(int power, int level)
  */
 static cptr desc_insult[MAX_DESC_INSULT] =
 {
+#ifdef JP
+	"があなたを侮辱した！",
+	"があなたの母を侮辱した！",
+	"があなたを軽蔑した！",
+	"があなたを辱めた！",
+	"があなたを汚した！",
+	"があなたの回りで踊った！",
+	"が猥褻な身ぶりをした！",
+	"があなたをぼんやりと見た！！！"
+#else
 	"insults you!",
 	"insults your mother!",
 	"gives you the finger!",
@@ -84,6 +102,7 @@ static cptr desc_insult[MAX_DESC_INSULT] =
 	"dances around you!",
 	"makes obscene gestures!",
 	"moons you!!!"
+#endif
 };
 
 
@@ -95,10 +114,17 @@ static cptr desc_insult[MAX_DESC_INSULT] =
  */
 static cptr desc_moan[MAX_DESC_MOAN] =
 {
+#ifdef JP
+	"は何かを悲しんでいるようだ。",
+	"が彼の飼い犬を見なかったかと尋ねている。",
+	"が縄張りから出て行けと言っている。",
+	"はキノコがどうとか呟いている。"
+#else
 	"seems sad about something.",
 	"asks if you have seen his dogs.",
 	"tells you to get off his land.",
 	"mumbles something about mushrooms."
+#endif
 };
 
 
@@ -241,7 +267,11 @@ bool make_attack_normal(int m_idx)
 				}
 
 				/* Message */
+#ifdef JP
+				msg_format("%^sは撃退された。", m_name);
+#else /* JP */
 				msg_format("%^s is repelled.", m_name);
+#endif /* JP */
 
 				/* Hack -- Next attack */
 				continue;
@@ -259,7 +289,11 @@ bool make_attack_normal(int m_idx)
 			{
 				case RBM_HIT:
 				{
+#ifdef JP
+					act = "に殴られた。";
+#else /* JP */
 					act = "hits you.";
+#endif /* JP */
 					do_cut = do_stun = 1;
 					sound_msg = MSG_MON_HIT;
 					break;
@@ -267,14 +301,22 @@ bool make_attack_normal(int m_idx)
 
 				case RBM_TOUCH:
 				{
+#ifdef JP
+					act = "に触られた。";
+#else /* JP */
 					act = "touches you.";
+#endif /* JP */
 					sound_msg = MSG_MON_TOUCH;
 					break;
 				}
 
 				case RBM_PUNCH:
 				{
+#ifdef JP
+					act = "にパンチされた。";
+#else /* JP */
 					act = "punches you.";
+#endif /* JP */
 					do_stun = 1;
 					sound_msg = MSG_MON_PUNCH;
 					break;
@@ -282,7 +324,11 @@ bool make_attack_normal(int m_idx)
 
 				case RBM_KICK:
 				{
+#ifdef JP
+					act = "に蹴られた。";
+#else /* JP */
 					act = "kicks you.";
+#endif /* JP */
 					do_stun = 1;
 					sound_msg = MSG_MON_KICK;
 					break;
@@ -290,7 +336,11 @@ bool make_attack_normal(int m_idx)
 
 				case RBM_CLAW:
 				{
+#ifdef JP
+					act = "にひっかかれた。";
+#else /* JP */
 					act = "claws you.";
+#endif /* JP */
 					do_cut = 1;
 					sound_msg = MSG_MON_CLAW;
 					break;
@@ -298,7 +348,11 @@ bool make_attack_normal(int m_idx)
 
 				case RBM_BITE:
 				{
+#ifdef JP
+					act = "に噛まれた。";
+#else /* JP */
 					act = "bites you.";
+#endif /* JP */
 					do_cut = 1;
 					sound_msg = MSG_MON_BITE;
 					break;
@@ -306,20 +360,32 @@ bool make_attack_normal(int m_idx)
 
 				case RBM_STING:
 				{
+#ifdef JP
+					act = "に刺された。";
+#else /* JP */
 					act = "stings you.";
+#endif /* JP */
 					sound_msg = MSG_MON_STING;
 					break;
 				}
 
 				case RBM_XXX1:
 				{
+#ifdef JP
+					act = "に XXX1 された。";
+#else /* JP */
 					act = "XXX1's you.";
+#endif /* JP */
 					break;
 				}
 
 				case RBM_BUTT:
 				{
+#ifdef JP
+					act = "に角で突かれた。";
+#else /* JP */
 					act = "butts you.";
+#endif /* JP */
 					do_stun = 1;
 					sound_msg = MSG_MON_BUTT;
 					break;
@@ -327,7 +393,11 @@ bool make_attack_normal(int m_idx)
 
 				case RBM_CRUSH:
 				{
+#ifdef JP
+					act = "に体当たりされた。";
+#else /* JP */
 					act = "crushes you.";
+#endif /* JP */
 					do_stun = 1;
 					sound_msg = MSG_MON_CRUSH;
 					break;
@@ -335,74 +405,118 @@ bool make_attack_normal(int m_idx)
 
 				case RBM_ENGULF:
 				{
+#ifdef JP
+					act = "に飲み込まれた。";
+#else /* JP */
 					act = "engulfs you.";
+#endif /* JP */
 					sound_msg = MSG_MON_ENGULF;
 					break;
 				}
 
 				case RBM_XXX2:
 				{
+#ifdef JP
+					act = "に XXX2 された";
+#else /* JP */
 					act = "XXX2's you.";
+#endif /* JP */
 					break;
 				}
 
 				case RBM_CRAWL:
 				{
+#ifdef JP
+					act = "が体の上を這い回った。";
+#else /* JP */
 					act = "crawls on you.";
+#endif /* JP */
 					sound_msg = MSG_MON_CRAWL;
 					break;
 				}
 
 				case RBM_DROOL:
 				{
+#ifdef JP
+					act = "によだれをたらされた。";
+#else /* JP */
 					act = "drools on you.";
+#endif /* JP */
 					sound_msg = MSG_MON_DROOL;
 					break;
 				}
 
 				case RBM_SPIT:
 				{
+#ifdef JP
+					act = "に唾を吐かれた。";
+#else /* JP */
 					act = "spits on you.";
+#endif /* JP */
 					sound_msg = MSG_MON_SPIT; 
 					break;
 				}
 
 				case RBM_XXX3:
 				{
+#ifdef JP
+					act = "に XXX3 された。";
+#else /* JP */
 					act = "XXX3's on you.";
+#endif /* JP */
 					break;
 				}
 
 				case RBM_GAZE:
 				{
+#ifdef JP
+					act = "ににらまれた。";
+#else /* JP */
 					act = "gazes at you.";
+#endif /* JP */
 					sound_msg = MSG_MON_GAZE; 
 					break;
 				}
 
 				case RBM_WAIL:
 				{
+#ifdef JP
+					act = "に泣き叫ばれた。";
+#else /* JP */
 					act = "wails at you.";
+#endif /* JP */
 					sound_msg = MSG_MON_WAIL; 
 					break;
 				}
 
 				case RBM_SPORE:
 				{
+#ifdef JP
+					act = "に胞子を飛ばされた。";
+#else /* JP */
 					act = "releases spores at you.";
+#endif /* JP */
 					sound_msg = MSG_MON_SPORE; 
 					break;
 				}
 
 				case RBM_XXX4:
 				{
+#ifdef JP
+					act = "が XXX4 を発射した。";
+#else /* JP */
 					act = "projects XXX4's at you.";
+#endif /* JP */
 					break;
 				}
 
 				case RBM_BEG:
 				{
+#ifdef JP
+					act = "に金をせがまれた。";
+#else /* JP */
 					act = "begs you for money.";
+#endif /* JP */
 					sound_msg = MSG_MON_BEG;
 					break;
 				}
@@ -423,13 +537,21 @@ bool make_attack_normal(int m_idx)
 
 				case RBM_XXX5:
 				{
+#ifdef JP
+					act = "に XXX5 された。";
+#else /* JP */
 					act = "XXX5's you.";
+#endif /* JP */
 					break;
 				}
 			}
 
 			/* Message */
+#ifdef JP
+			if (act) message_format(sound_msg, 0, "%^s%s", m_name, act);
+#else /* JP */
 			if (act) message_format(sound_msg, 0, "%^s %s", m_name, act);
+#endif /* JP */
 
 
 			/* Hack -- assume all attacks are obvious */
@@ -541,7 +663,11 @@ bool make_attack_normal(int m_idx)
 						{
 							int heal = rlev * drained;
 
+#ifdef JP
+							msg_print("ザックからエネルギーが吸い取られた！");
+#else /* JP */
 							msg_print("Energy drains from your pack!");
+#endif /* JP */
 
 							obvious = TRUE;
 
@@ -583,7 +709,11 @@ bool make_attack_normal(int m_idx)
 					                      p_ptr->lev)))
 					{
 						/* Saving throw message */
+#ifdef JP
+						msg_print("しかし素早く財布を守った！");
+#else /* JP */
 						msg_print("You quickly protect your money pouch!");
+#endif /* JP */
 
 						/* Occasional blink anyway */
 						if (rand_int(3)) blinked = TRUE;
@@ -599,17 +729,31 @@ bool make_attack_normal(int m_idx)
 						p_ptr->au -= gold;
 						if (gold <= 0)
 						{
+#ifdef JP
+							msg_print("しかし何も盗まれなかった。");
+#else /* JP */
 							msg_print("Nothing was stolen.");
+#endif /* JP */
 						}
 						else if (p_ptr->au)
 						{
+#ifdef JP
+							msg_print("財布が軽くなった気がする。");
+							msg_format("$%ld のお金が盗まれた！", (long)gold);
+#else /* JP */
 							msg_print("Your purse feels lighter.");
 							msg_format("%ld coins were stolen!", (long)gold);
+#endif /* JP */
 						}
 						else
 						{
+#ifdef JP
+							msg_print("財布が軽くなった気がする。");
+							msg_print("お金が全部盗まれた！");
+#else /* JP */
 							msg_print("Your purse feels lighter.");
 							msg_print("All of your coins were stolen!");
+#endif /* JP */
 						}
 
 						/* Redraw gold */
@@ -636,7 +780,11 @@ bool make_attack_normal(int m_idx)
 					                      p_ptr->lev)))
 					{
 						/* Saving throw message */
+#ifdef JP
+						msg_print("しかしあわててザックを取り返した！");
+#else /* JP */
 						msg_print("You grab hold of your backpack!");
+#endif /* JP */
 
 						/* Occasional "blink" anyway */
 						blinked = TRUE;
@@ -670,9 +818,15 @@ bool make_attack_normal(int m_idx)
 						object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 3);
 
 						/* Message */
+#ifdef JP
+						msg_format("%s(%c)を%s盗まれた！",
+						           o_name, index_to_label(i),
+						           ((o_ptr->number > 1) ? "一つ" : ""));
+#else /* JP */
 						msg_format("%sour %s (%c) was stolen!",
 						           ((o_ptr->number > 1) ? "One of y" : "Y"),
 						           o_name, index_to_label(i));
+#endif /* JP */
 
 						/* Get local object */
 						i_ptr = &object_type_body;
@@ -733,9 +887,15 @@ bool make_attack_normal(int m_idx)
 						object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 0);
 
 						/* Message */
+#ifdef JP
+						msg_format("%s(%c)を%s食べられてしまった！",
+						          o_name, index_to_label(i),
+						          ((o_ptr->number > 1) ? "一つ" : ""));
+#else /* JP */
 						msg_format("%sour %s (%c) was eaten!",
 						           ((o_ptr->number > 1) ? "One of y" : "Y"),
 						           o_name, index_to_label(i));
+#endif /* JP */
 
 						/* Steal the items */
 						inven_item_increase(i, -1);
@@ -769,7 +929,11 @@ bool make_attack_normal(int m_idx)
 						/* Notice */
 						if (!p_ptr->blind)
 						{
+#ifdef JP
+							msg_print("明かりが暗くなってしまった。");
+#else /* JP */
 							msg_print("Your light dims.");
+#endif /* JP */
 							obvious = TRUE;
 						}
 
@@ -786,7 +950,11 @@ bool make_attack_normal(int m_idx)
 					obvious = TRUE;
 
 					/* Message */
+#ifdef JP
+					msg_print("酸を浴びせられた！");
+#else /* JP */
 					msg_print("You are covered in acid!");
+#endif /* JP */
 
 					/* Special damage */
 					acid_dam(damage, ddesc);
@@ -803,7 +971,11 @@ bool make_attack_normal(int m_idx)
 					obvious = TRUE;
 
 					/* Message */
+#ifdef JP
+					msg_print("電撃を浴びせられた！");
+#else /* JP */
 					msg_print("You are struck by electricity!");
+#endif /* JP */
 
 					/* Take damage (special) */
 					elec_dam(damage, ddesc);
@@ -820,7 +992,11 @@ bool make_attack_normal(int m_idx)
 					obvious = TRUE;
 
 					/* Message */
+#ifdef JP
+					msg_print("全身が炎に包まれた！");
+#else /* JP */
 					msg_print("You are enveloped in flames!");
+#endif /* JP */
 
 					/* Take damage (special) */
 					fire_dam(damage, ddesc);
@@ -837,7 +1013,11 @@ bool make_attack_normal(int m_idx)
 					obvious = TRUE;
 
 					/* Message */
+#ifdef JP
+					msg_print("全身が冷気で覆われた！");
+#else /* JP */
 					msg_print("You are covered with frost!");
+#endif /* JP */
 
 					/* Take damage (special) */
 					cold_dam(damage, ddesc);
@@ -896,12 +1076,20 @@ bool make_attack_normal(int m_idx)
 					/* Increase "afraid" */
 					if (p_ptr->resist_fear)
 					{
+#ifdef JP
+						msg_print("しかし恐怖に侵されなかった！");
+#else /* JP */
 						msg_print("You stand your ground!");
+#endif /* JP */
 						obvious = TRUE;
 					}
 					else if (rand_int(100) < p_ptr->skill_sav)
 					{
+#ifdef JP
+						msg_print("しかし恐怖に侵されなかった！");
+#else /* JP */
 						msg_print("You stand your ground!");
+#endif /* JP */
 						obvious = TRUE;
 					}
 					else
@@ -929,12 +1117,20 @@ bool make_attack_normal(int m_idx)
 					/* Increase "paralyzed" */
 					if (p_ptr->free_act)
 					{
+#ifdef JP
+						msg_print("しかし効果がなかった！");
+#else /* JP */
 						msg_print("You are unaffected!");
+#endif /* JP */
 						obvious = TRUE;
 					}
 					else if (rand_int(100) < p_ptr->skill_sav)
 					{
+#ifdef JP
+						msg_print("しかし効力を跳ね返した！");
+#else /* JP */
 						msg_print("You resist the effects!");
+#endif /* JP */
 						obvious = TRUE;
 					}
 					else
@@ -1070,19 +1266,31 @@ bool make_attack_normal(int m_idx)
 
 					if (p_ptr->hold_life && (rand_int(100) < 95))
 					{
+#ifdef JP
+						msg_print("しかし自己の生命力を守りきった！");
+#else /* JP */
 						msg_print("You keep hold of your life force!");
+#endif /* JP */
 					}
 					else
 					{
 						s32b d = damroll(10, 6) + (p_ptr->exp/100) * MON_DRAIN_LIFE;
 						if (p_ptr->hold_life)
 						{
+#ifdef JP
+							msg_print("生命力を少し吸い取られた気がする！");
+#else /* JP */
 							msg_print("You feel your life slipping away!");
+#endif /* JP */
 							lose_exp(d/10);
 						}
 						else
 						{
+#ifdef JP
+							msg_print("生命力が体から吸い取られた気がする！");
+#else /* JP */
 							msg_print("You feel your life draining away!");
+#endif /* JP */
 							lose_exp(d);
 						}
 					}
@@ -1099,7 +1307,11 @@ bool make_attack_normal(int m_idx)
 
 					if (p_ptr->hold_life && (rand_int(100) < 90))
 					{
+#ifdef JP
+						msg_print("しかし自己の生命力を守りきった！");
+#else /* JP */
 						msg_print("You keep hold of your life force!");
+#endif /* JP */
 					}
 					else
 					{
@@ -1107,12 +1319,20 @@ bool make_attack_normal(int m_idx)
 
 						if (p_ptr->hold_life)
 						{
+#ifdef JP
+							msg_print("生命力を少し吸い取られた気がする！");
+#else /* JP */
 							msg_print("You feel your life slipping away!");
+#endif /* JP */
 							lose_exp(d / 10);
 						}
 						else
 						{
+#ifdef JP
+							msg_print("生命力が体から吸い取られた気がする！");
+#else /* JP */
 							msg_print("You feel your life draining away!");
+#endif /* JP */
 							lose_exp(d);
 						}
 					}
@@ -1129,7 +1349,11 @@ bool make_attack_normal(int m_idx)
 
 					if (p_ptr->hold_life && (rand_int(100) < 75))
 					{
+#ifdef JP
+						msg_print("しかし自己の生命力を守りきった！");
+#else /* JP */
 						msg_print("You keep hold of your life force!");
+#endif /* JP */
 					}
 					else
 					{
@@ -1137,12 +1361,20 @@ bool make_attack_normal(int m_idx)
 
 						if (p_ptr->hold_life)
 						{
+#ifdef JP
+							msg_print("生命力を少し吸い取られた気がする！");
+#else /* JP */
 							msg_print("You feel your life slipping away!");
+#endif /* JP */
 							lose_exp(d / 10);
 						}
 						else
 						{
+#ifdef JP
+							msg_print("生命力が体から吸い取られた気がする！");
+#else /* JP */
 							msg_print("You feel your life draining away!");
+#endif /* JP */
 							lose_exp(d);
 						}
 					}
@@ -1159,7 +1391,11 @@ bool make_attack_normal(int m_idx)
 
 					if (p_ptr->hold_life && (rand_int(100) < 50))
 					{
+#ifdef JP
+						msg_print("しかし自己の生命力を守りきった！");
+#else /* JP */
 						msg_print("You keep hold of your life force!");
+#endif /* JP */
 					}
 					else
 					{
@@ -1167,12 +1403,20 @@ bool make_attack_normal(int m_idx)
 
 						if (p_ptr->hold_life)
 						{
+#ifdef JP
+							msg_print("生命力を少し吸い取られた気がする！");
+#else /* JP */
 							msg_print("You feel your life slipping away!");
+#endif /* JP */
 							lose_exp(d / 10);
 						}
 						else
 						{
+#ifdef JP
+							msg_print("生命力が体から吸い取られた気がする！");
+#else /* JP */
 							msg_print("You feel your life draining away!");
+#endif /* JP */
 							lose_exp(d);
 						}
 					}
@@ -1294,7 +1538,11 @@ bool make_attack_normal(int m_idx)
 					disturb(1, 0);
 
 					/* Message */
+#ifdef JP
+					msg_format("%^sの攻撃をかわした。", m_name);
+#else /* JP */
 					msg_format("%^s misses you.", m_name);
+#endif /* JP */
 				}
 
 				break;
@@ -1324,7 +1572,11 @@ bool make_attack_normal(int m_idx)
 	/* Blink away */
 	if (blinked)
 	{
+#ifdef JP
+		msg_print("突如、煙が立ち昇った！");
+#else /* JP */
 		msg_print("There is a puff of smoke!");
+#endif /* JP */
 		teleport_away(m_idx, MAX_SIGHT * 2 + 5);
 	}
 

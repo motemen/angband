@@ -94,6 +94,19 @@
 
 
 
+#ifdef JP
+/*
+ * 日本語(EUC-JAPAN)対応 (-DJP)
+ *    ・漢字フォントの扱いを追加
+ *    ・日本語を含む文字列の表示ルーチン XDrawMultiString() の追加
+ *    ・日本語の表示幅は，フォントの情報によらすASCIIフォントの2倍に固定
+ *
+ * 未対応
+ *	EUC半角の扱い
+ *
+ * 1996/6/7  李 晃伸 (ri@kuis.kyoto-u.ac.jp)
+ */
+#endif
 #include "angband.h"
 
 
@@ -346,6 +359,9 @@ struct term_data
 	term t;
 
 	infofnt *fnt;
+#ifdef JP
+	infofnt *kfnt;
+#endif
 
 	infowin *win;
 
@@ -457,7 +473,12 @@ static metadpy metadpy_default;
 static metadpy *Metadpy = &metadpy_default;
 static infowin *Infowin = (infowin*)(NULL);
 static infoclr *Infoclr = (infoclr*)(NULL);
+#ifdef JP
 static infofnt *Infofnt = (infofnt*)(NULL);
+static infofnt *Infokfnt = (infofnt*)(NULL);
+#else
+static infofnt *Infofnt = (infofnt*)(NULL);
+#endif
 
 
 /*
@@ -488,6 +509,10 @@ static errr Metadpy_init_2(Display *dpy, cptr name)
 {
 	metadpy *m = Metadpy;
 
+#ifdef JP
+#define Infokfnt_set(I) \
+        (Infokfnt = (I))
+#endif
 	/*** Open the display if needed ***/
 
 	/* If no Display given, attempt to Create one */
@@ -1225,6 +1250,9 @@ static errr Infofnt_nuke(void)
 {
 	infofnt *ifnt = Infofnt;
 
+#ifdef JP
+	infofnt *ikfnt = Infokfnt;
+#endif
 	/* Deal with 'name' */
 	if (ifnt->name)
 	{
@@ -1232,6 +1260,13 @@ static errr Infofnt_nuke(void)
 		string_free(ifnt->name);
 	}
 
+#ifdef JP
+	if (ikfnt->name)
+	{
+		/* Free the name */
+		string_free(ikfnt->name);
+	}
+#endif
 	/* Nuke info if needed */
 	if (ifnt->nuke)
 	{
@@ -1239,6 +1274,13 @@ static errr Infofnt_nuke(void)
 		XFreeFont(Metadpy->dpy, ifnt->info);
 	}
 
+#ifdef JP
+	if (ikfnt->nuke)
+	{
+		/* Free the font */
+		XFreeFont(Metadpy->dpy, ikfnt->info);
+	}
+#endif
 	/* Success */
 	return (0);
 }
@@ -1249,10 +1291,18 @@ static errr Infofnt_nuke(void)
 /*
  * Prepare a new 'infofnt'
  */
+#ifdef JP
+static errr Infofnt_prepare(XFontStruct *info, XFontStruct *kinfo)
+#else
 static errr Infofnt_prepare(XFontStruct *info)
+#endif
+
 {
 	infofnt *ifnt = Infofnt;
 
+#ifdef JP
+	infofnt *ikfnt = Infokfnt;
+#endif
 	XCharStruct *cs;
 
 	/* Assign the struct */
@@ -1266,6 +1316,18 @@ static errr Infofnt_prepare(XFontStruct *info)
 	ifnt->hgt = info->ascent + info->descent;
 	ifnt->wid = cs->width;
 
+#ifdef JP
+    /* Assign the struct */
+    ikfnt->info = kinfo;
+ 
+    /* Jump into the max bouonds thing */
+    cs = &(kinfo->max_bounds);
+
+    /* Extract default sizing info */
+    ikfnt->asc = kinfo->ascent;
+    ikfnt->hgt = kinfo->ascent + kinfo->descent;
+    ikfnt->wid = cs->width;
+#endif
 #ifdef OBSOLETE_SIZING_METHOD
 	/* Extract default sizing info */
 	ifnt->asc = cs->ascent;
@@ -1285,16 +1347,30 @@ static errr Infofnt_prepare(XFontStruct *info)
 /*
  * Initialize a new 'infofnt'.
  */
+#ifdef JP
+static errr Infofnt_init_real(XFontStruct *info, XFontStruct *kinfo)
+#else
 static errr Infofnt_init_real(XFontStruct *info)
+#endif
 {
 	/* Wipe the thing */
 	(void)WIPE(Infofnt, infofnt);
+#ifdef JP
+	(void)WIPE(Infokfnt, infofnt);
+#endif
 
 	/* No nuking */
 	Infofnt->nuke = 0;
+#ifdef JP
+	Infokfnt->nuke = 0;
+#endif
 
 	/* Attempt to prepare it */
+#ifdef JP
+	return (Infofnt_prepare (info, kinfo));
+#else
 	return (Infofnt_prepare(info));
+#endif
 }
 
 #endif /* IGNORE_UNUSED_FUNCTIONS */
@@ -1306,33 +1382,61 @@ static errr Infofnt_init_real(XFontStruct *info)
  * Inputs:
  *	name: The name of the requested Font
  */
+#ifdef JP
+static errr Infofnt_init_data(cptr name, cptr kname)
+#else
 static errr Infofnt_init_data(cptr name)
+#endif
 {
 	XFontStruct *info;
+#ifdef JP
+	XFontStruct *kinfo;
+#endif
 
 
 	/*** Load the info Fresh, using the name ***/
 
 	/* If the name is not given, report an error */
 	if (!name) return (-1);
+#ifdef JP
+	if (!kname) return (-1);
+#endif
 
 	/* Attempt to load the font */
+#ifdef JP
 	info = XLoadQueryFont(Metadpy->dpy, name);
+	kinfo = XLoadQueryFont(Metadpy->dpy, kname);
+#else
+	info = XLoadQueryFont(Metadpy->dpy, name);
+#endif
 
 	/* The load failed, try to recover */
 	if (!info) return (-1);
+#ifdef JP
+	if (!kinfo) return (-1);
+#endif
 
 
 	/*** Init the font ***/
 
 	/* Wipe the thing */
 	(void)WIPE(Infofnt, infofnt);
+#ifdef JP
+	(void)WIPE(Infokfnt, infofnt);
+#endif
 
 	/* Attempt to prepare it */
+#ifdef JP
+	if (Infofnt_prepare(info, kinfo))
+#else
 	if (Infofnt_prepare(info))
+#endif
 	{
 		/* Free the font */
 		XFreeFont(Metadpy->dpy, info);
+#ifdef JP
+		XFreeFont(Metadpy->dpy, kinfo);
+#endif
 
 		/* Fail */
 		return (-1);
@@ -1341,6 +1445,9 @@ static errr Infofnt_init_data(cptr name)
 	/* Save a copy of the font name */
 	Infofnt->name = string_make(name);
 
+#ifdef JP
+	Infokfnt->name = string_make(kname);
+#endif
 	/* Mark it as nukable */
 	Infofnt->nuke = 1;
 
@@ -1352,6 +1459,76 @@ static errr Infofnt_init_data(cptr name)
 }
 
 
+#ifdef JP
+  
+/*
+ * EUC日本語コードを含む文字列を表示する (Xlib)
+ */
+static void
+XDrawMultiString(display,d,gc, x, y, string, len, afont, afont_width, kfont, kfont_width)
+    Display *display;
+    Drawable d;
+    GC gc;
+    int       x, y;
+    char      *string;
+    int len;
+    XFontStruct *afont;
+    int afont_width;
+    XFontStruct *kfont;
+    int kfont_width;
+{
+    XChar2b       kanji[500];
+    char *p;
+    unsigned char *str;
+    unsigned char *endp;
+    int slen;
+    
+    str = string;
+    endp = string + len;
+    
+    while ( str < endp && *str ) {
+      
+      if ( iskanji(*str) ) {
+          
+          /* UJISの始まり */
+          
+          /* 連続するUJIS文字の長さを検出 */
+          slen = 0;
+          while ( str < endp && *str && iskanji(*str) ) {
+              kanji[slen].byte1 = *str++ & 0x7f;
+              kanji[slen++].byte2 = *str++ & 0x7f;
+          }
+          
+          /* 描画 */
+          XSetFont( display, gc, kfont->fid );
+          XDrawImageString16( display, d, gc, x, y, kanji, slen );
+          
+          /* ポインタを進める */
+          x += kfont_width * slen;
+          
+      } else {
+          
+          /* 非漢字(=ASCIIと仮定)の始まり */
+          
+          /* 連続するASCII文字を検出 */
+          p = str;
+          slen = 0;
+          while ( str < endp && *str && !iskanji(*str) ) {
+              str++;
+              slen++;
+}
+          
+          /* 描画 */
+          XSetFont( display, gc, afont->fid );
+          XDrawImageString( display, d, gc, x, y, p, slen );
+
+          /* ポインタを進める */
+          x += afont_width * slen;
+      }
+    }
+}
+
+#endif
 /*
  * Standard Text
  */
@@ -1396,8 +1573,10 @@ static errr Infofnt_text_std(int x, int y, cptr str, int len)
 
 	/*** Actually draw 'str' onto the infowin ***/
 
+#ifndef JP
 	/* Be sure the correct font is ready */
 	XSetFont(Metadpy->dpy, Infoclr->gc, Infofnt->info->fid);
+#endif
 
 
 	y += Infofnt->asc;
@@ -1408,6 +1587,10 @@ static errr Infofnt_text_std(int x, int y, cptr str, int len)
 	/* Monotize the font */
 	if (Infofnt->mono)
 	{
+#ifdef JP
+		/* Be sure the correct font is ready */
+		XSetFont(Metadpy->dpy, Infoclr->gc, Infofnt->info->fid);
+#endif
 		/* Do each character */
 		for (i = 0; i < len; ++i)
 		{
@@ -1421,8 +1604,17 @@ static errr Infofnt_text_std(int x, int y, cptr str, int len)
 	else
 	{
 		/* Note that the Infoclr is set up to contain the Infofnt */
+#ifdef JP
+		/* 漢字フォントの表示幅は ASCIIフォントの2倍に固定 */
+		XDrawMultiString(Metadpy->dpy, Infowin->win, Infoclr->gc,
+		                 x, y, str, len,
+		                 Infofnt->info, Infofnt->wid,
+		                 Infokfnt->info, Infofnt->wid * 2);
+#else
 		XDrawImageString(Metadpy->dpy, Infowin->win, Infoclr->gc,
 		                 x, y, str, len);
+#endif
+
 	}
 
 	/* Success */
@@ -2178,6 +2370,9 @@ static errr Term_xtra_x11_level(int v)
 
 		/* Activate the font */
 		Infofnt_set(td->fnt);
+#ifdef JP
+		Infokfnt_set(td->kfnt);
+#endif
 	}
 
 	/* Success */
@@ -2742,9 +2937,17 @@ static errr term_data_init(term_data *td, int i)
 	}
 
 	/* Prepare the standard font */
+#ifdef JP
+	MAKE(td->kfnt, infofnt);
+	Infokfnt_set(td->kfnt);
+#endif /* JP */
 	MAKE(td->fnt, infofnt);
 	Infofnt_set(td->fnt);
+#ifdef JP
+	if (Infofnt_init_data(font, kfont)) quit_fmt("Couldn't load the requested font. (%s, %s)", font, kfont);
+#else
 	if (Infofnt_init_data(font)) quit_fmt("Couldn't load the requested font. (%s)", font);
+#endif
 
 	/* Use proper tile size */
 	if (td->tile_wid <= 0) td->tile_wid = td->fnt->twid;

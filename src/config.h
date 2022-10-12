@@ -23,6 +23,22 @@
 
 
 /*
+ * OPTION: 拡張自動拾い＆破壊を許可する。
+ */
+#define ALLOW_AUTO_PICKUP
+
+/*
+ * OPTION: コマンドメニューを許可する。
+ */
+#define ALLOW_COMMAND_MENU
+
+/*
+ * OPTION: 背景へのグラフィック表示を有効にする。
+ */
+#define USE_BACKGROUND
+
+
+/*
  * OPTION: See the Makefile(s), where several options may be declared.
  *
  * Some popular options include "USE_GCU" (allow use with Unix "curses"),

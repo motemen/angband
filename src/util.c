@@ -8,6 +8,14 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3 日本語版製作: エルロック, しとしん
+ * 2.7.9v6 対応        : 岸康司, しとしん
+ * 2.8.0   対応        : sayu, しとしん
+ * 2.8.1   対応        : FIRST
+ * 2.8.3   対応        : FIRST, しとしん, 片山
+ */
+
 #include "angband.h"
 
 
@@ -35,7 +43,11 @@ int usleep(unsigned long usecs)
 
 
 	/* Paranoia -- No excessive sleeping */
+#ifdef JP
+	if (usecs > 4000000L) core("不当な usleep() 呼び出し");
+#else /* JP */
 	if (usecs > 4000000L) core("Illegal usleep() call");
+#endif /* JP */
 
 
 	/* Wait for it */
@@ -469,6 +481,43 @@ errr my_fgets(FILE *fff, char *buf, size_t n)
 				i++;
 			}
 		}
+
+#ifdef JP
+		else if (iskanji(c))
+		{
+			int c2;
+
+			/* Buffer overflow */
+			if (i + 1 >= len)
+			{
+				ungetc(c, fff);
+
+				break;
+			}
+
+			/* Read next character */
+			c2 = fgetc(fff);
+
+			/* End of file */
+			if (c == EOF) break;
+
+			/* Store character in the buffer */
+			*s++ = c;
+			*s++ = c2;
+
+			/* Count number of characters in the buffer */
+			i += 2;
+		}
+
+		else if (ishankana(c))
+		{
+			/* Store character in the buffer */
+			*s++ = c;
+
+			/* Count number of characters in the buffer */
+			i++;
+		}
+#endif /* JP */
 
 		/* Ignore non-printables */
 		else if (isprint(c))
@@ -2864,7 +2913,11 @@ static void msg_flush(int x)
 	byte a = TERM_L_BLUE;
 
 	/* Pause for response */
+#ifdef JP
+	Term_putstr(x, 0, -1, a, "-続く-");
+#else /* JP */
 	Term_putstr(x, 0, -1, a, "-more-");
+#endif /* JP */
 
 	if (!auto_more)
 	{
@@ -2876,7 +2929,11 @@ static void msg_flush(int x)
 			if (quick_messages) break;
 			if ((ch == ESCAPE) || (ch == ' ')) break;
 			if ((ch == '\n') || (ch == '\r')) break;
+#ifdef JP
+			bell("無効なキーです！");
+#else /* JP */
 			bell("Illegal response to a 'more' prompt!");
+#endif /* JP */
 		}
 	}
 
@@ -2975,6 +3032,13 @@ static void msg_print_aux(u16b type, cptr msg)
 
 		int check, split;
 
+#ifdef JP
+		/* Unused */
+		(void)check;
+
+		/* Fine "best" split point */
+		split = find_break(t, w - 8, TRUE);
+#else /* JP */
 		/* Default split */
 		split = (w - 8);
 
@@ -2984,6 +3048,7 @@ static void msg_print_aux(u16b type, cptr msg)
 			/* Found a valid split point */
 			if (t[check] == ' ') split = check;
 		}
+#endif /* JP */
 
 		/* Save the split character */
 		oops = t[split];
@@ -3250,6 +3315,11 @@ void text_out_to_screen(byte a, cptr str)
 	for (s = str; *s; s++)
 	{
 		char ch;
+#ifdef JP
+		char ch2;
+		bool k_flag = iskanji(*s);
+		int kw, xx;
+#endif /* JP */
 
 		/* Force wrap */
 		if (*s == '\n')
@@ -3264,11 +3334,34 @@ void text_out_to_screen(byte a, cptr str)
 			continue;
 		}
 
+#ifdef JP
+		/* Save current cursor position */
+		xx = x;
+
+		/* Clean up the char */
+		if (k_flag)
+		{
+			ch  = *s;
+			ch2 = *++s;
+			kw  = wrap - 1;
+		}
+		else
+		{
+			/* Clean up the char */
+		ch = (isprint((unsigned char)*s) ? *s : ' ');
+			kw = wrap;
+		}
+#else /* JP */
 		/* Clean up the char */
 		ch = (isprint((unsigned char)*s) ? *s : ' ');
+#endif /* JP */
 
 		/* Wrap words as needed */
+#ifdef JP
+		if ((x >= kw - 1) && (ch != ' '))
+#else /* JP */
 		if ((x >= wrap - 1) && (ch != ' '))
+#endif /* JP */
 		{
 			int i, n = 0;
 
@@ -3276,19 +3369,51 @@ void text_out_to_screen(byte a, cptr str)
 			char cv[256];
 
 			/* Wrap word */
+#ifdef JP
+			if ((x < kw) && (!k_flag || iskinsoku(s-1)))
+#else /* JP */
 			if (x < wrap)
+#endif /* JP */
 			{
+#ifdef JP
+				bool tmp_k_flag = k_flag;
+#endif /* JP */
+
 				/* Scan existing text */
+#ifdef JP
+				for (i = xx - 1; i >= 0; i--)
+#else /* JP */
 				for (i = wrap - 2; i >= 0; i--)
+#endif /* JP */
 				{
 					/* Grab existing attr/char */
 					Term_what(i, y, &av[i], &cv[i]);
+
+#ifdef JP
+					if (av[i] & KANJI2)
+					{
+						/* Break between kanji and non-kanji */
+						if (!tmp_k_flag) break;
+
+						/* Skip second byte of kanji */
+						else continue;
+					}
+#endif /* JP */
 
 					/* Break on space */
 					if (cv[i] == ' ') break;
 
 					/* Track current word */
 					n = i;
+#ifdef JP
+					/* Break on opening parenthesis */
+					if (cv[i] == '(') break;
+
+					/* Break on kanji */
+					if ((av[i] & KANJI1) && !iskinsoku(&cv[i])) break;
+
+					tmp_k_flag = (av[i] & KANJI1) ? TRUE : FALSE;
+#endif /* JP */
 				}
 			}
 
@@ -3306,7 +3431,11 @@ void text_out_to_screen(byte a, cptr str)
 			Term_erase(x, y, 255);
 
 			/* Wrap the word (if any) */
+#ifdef JP
+			for (i = n; i < xx; i++)
+#else /* JP */
 			for (i = n; i < wrap - 1; i++)
+#endif /* JP */
 			{
 				/* Dump */
 				Term_addch(av[i], cv[i]);
@@ -3316,8 +3445,23 @@ void text_out_to_screen(byte a, cptr str)
 			}
 		}
 
+#ifdef JP
+		if (k_flag)
+		{
+			/* Dump */
+			Term_addch((byte)(a | KANJI1), ch);
+			Term_addch((byte)(a | KANJI2), ch2);
+			x++;
+		}
+		else
+		{
+			/* Dump */
+			Term_addch(a, ch);
+		}
+#else /* JP */
 		/* Dump */
 		Term_addch(a, ch);
+#endif /* JP */
 
 		/* Advance */
 		if (++x > wrap) x = wrap;
@@ -3338,6 +3482,124 @@ void text_out_to_screen(byte a, cptr str)
  * You must be careful to end all file output with a newline character
  * to "flush" the stored line position.
  */
+#ifdef JP /* 新しい実装では禁則処理を行うのが難しいため古い実装を使用する */
+void text_out_to_file(byte attr, cptr str)
+{
+	cptr r;
+
+#ifdef JP
+	static bool old_k_flag = FALSE;
+#endif /* JP */
+
+	/* Line buffer */
+	static char roff_buf[256];
+
+	/* Current pointer into line roff_buf */
+	static char *roff_p = roff_buf;
+
+	/* Last space saved into roff_buf */
+	static char *roff_s = NULL;
+
+	/* Unused */
+	(void)attr;
+
+	/* Scan the given string, character at a time */
+	for (; *str; str++)
+	{
+		char ch = *str;
+		bool wrap = (ch == '\n');
+#ifdef JP
+		bool k_flag = iskanji(ch);
+#endif /* JP */
+
+#ifdef JP
+		if (!k_flag && !isprint(ch)) ch = ' ';
+#else /* JP */
+		if (!isprint(ch)) ch = ' ';
+#endif /* JP */
+
+		if (roff_p >= roff_buf + 75 - text_out_indent) wrap = TRUE;
+
+		if ((ch == ' ') && (roff_p + 2 >= roff_buf + 75 - text_out_indent)) wrap = TRUE;
+
+		/* Handle line-wrap */
+		if (wrap)
+		{
+#ifdef JP
+			char tmpch = ' ';
+#endif /* JP */
+			int i;
+
+			/* Terminate the current line */
+			*roff_p = '\0';
+
+			r = roff_p;
+
+			/* Wrap the line on the last known space */
+#ifdef JP
+			if (roff_s && ((!k_flag && ch != ' ') || iskinsoku(str)))
+#else /* JP */
+			if (roff_s && (ch != ' '))
+#endif /* JP */
+			{
+#ifdef JP
+				/* Save the character */
+				tmpch = *roff_s;
+#endif /* JP */
+				*roff_s = '\0';
+				r = roff_s + 1;
+			}
+
+			/* Indentation */
+			for (i = 0; i < text_out_indent; i++) fputc(' ', text_out_file);
+
+			/* Output the line */
+			fprintf(text_out_file, "%s\n", roff_buf);
+
+			/* Reset the buffer */
+			roff_s = NULL;
+			roff_p = roff_buf;
+			roff_buf[0] = '\0';
+
+#ifdef JP
+			/* Write the saved character */
+			if (tmpch != ' ') *roff_p++ = tmpch;
+#endif
+
+			/* Copy the remaining line into the buffer */
+			while (*r) *roff_p++ = *r++;
+
+			/* Append the last character */
+			if (ch != ' ') *roff_p++ = ch;
+
+#ifdef JP
+			/* Save second byte of the char */
+			if (k_flag) *roff_p++ = *++str;
+#endif
+			continue;
+		}
+
+		/* Remember the last space character */
+		if (ch == ' ') roff_s = roff_p;
+#ifdef JP
+		/* Remember the last possible break-point */
+		else if (k_flag) roff_s = roff_p;
+		else if (old_k_flag) roff_s = roff_p;
+#endif
+
+		/* Save the char */
+		*roff_p++ = ch;
+
+#ifdef JP
+		/* Save the second byte of the char */
+		if (k_flag) *roff_p++ = *++str;
+
+		/* Save the kanji flag */
+		old_k_flag = k_flag;
+#endif
+	}
+}
+#else /* JP */
 void text_out_to_file(byte a, cptr str)
 {
 	/* Current position on the line */
@@ -3451,6 +3713,7 @@ void text_out_to_file(byte a, cptr str)
 	/* We are done */
 	return;
 }
+#endif /* JP */
 
 
 /*
@@ -3518,6 +3781,10 @@ bool askfor_aux(char *buf, size_t len)
 
 	bool done = FALSE;
 
+#ifdef JP
+	bool k_flag[128];
+#endif /* JP */
+
 
 	/* Locate the cursor */
 	Term_locate(&x, &y);
@@ -3568,12 +3835,47 @@ bool askfor_aux(char *buf, size_t len)
 			case 0x7F:
 			case '\010':
 			{
+#ifdef JP
+				if ((k > 1) && k_flag[k-1]) k--;
+#endif /* JP */
 				if (k > 0) k--;
 				break;
 			}
 
 			default:
 			{
+#ifdef JP
+				/* 片山さん作成 */
+				if (iskanji(ch))
+				{
+		                	int ch2;
+					inkey_base = TRUE;
+					ch2 = inkey();
+					if (k < len-2)
+					{
+						buf[k++] = ch;
+						buf[k] = ch2;
+						k_flag[k++] = TRUE;
+					}
+					else
+					{
+						bell("不当な編集キー!");
+					}
+				}
+				else
+				{
+					if ((k < len-1) && (isprint((unsigned char)ch) || ishankana(ch)))
+					{
+						buf[k] = ch;
+						k_flag[k] = FALSE;
+						k++;
+					}
+					else
+					{
+						bell("不当な編集キー!");
+					}
+				}
+#else /* JP */
 				if ((k < len-1) && (isprint((unsigned char)ch)))
 				{
 					buf[k++] = ch;
@@ -3582,6 +3884,7 @@ bool askfor_aux(char *buf, size_t len)
 				{
 					bell("Illegal edit key!");
 				}
+#endif /* JP */
 				break;
 			}
 		}
@@ -3670,7 +3973,11 @@ s16b get_quantity(cptr prompt, int max)
 		if (!prompt)
 		{
 			/* Build a prompt */
+#ifdef JP
+			sprintf(tmp, "いくつですか (0-%d): ", max);
+#else /* JP */
 			sprintf(tmp, "Quantity (0-%d): ", max);
+#endif
 
 			/* Use that prompt */
 			prompt = tmp;
@@ -3735,7 +4042,11 @@ bool get_check(cptr prompt)
 		if (quick_messages) break;
 		if (ch == ESCAPE) break;
 		if (strchr("YyNn", ch)) break;
+#ifdef JP
+		bell("無効なキーです！");
+#else /* JP */
 		bell("Illegal response to a 'yes/no' question!");
+#endif /* JP */
 	}
 
 	/* Erase the prompt */
@@ -3788,12 +4099,233 @@ bool get_com(cptr prompt, char *command)
 void pause_line(int row)
 {
 	prt("", row, 0);
+#ifdef JP
+	put_str("[ 何かキーを押して下さい ]", row, 26);
+#else /* JP */
 	put_str("[Press any key to continue]", row, 23);
+#endif /* JP */
 	(void)inkey();
 	prt("", row, 0);
 }
 
 
+#ifdef ALLOW_COMMAND_MENU
+
+/*
+ * メニュー選択
+ * ret > 0: 選択番号
+ * ret = -1: キャンセル
+ */
+static int select_manu(int basey, int basex, cptr *names, int max_num, int init_num)
+{
+	char cmd;
+	int i;
+	int num = init_num;
+	int max_left, max_right;
+
+	cptr hline = "+----------------------------------------------------+";
+	cptr vline = "|                                                    |";
+
+	/* Draw command menu */
+	put_str(hline, basey, basex);
+	for(i = 0; i < max_num; i++)
+	{
+		if ((i % 2) == 0) put_str(vline, basey + 1 + (i / 2), basex);
+
+		put_str(names[i], basey + 1 + (i / 2), basex + 4 + (i % 2) * 24);
+	}
+	put_str(hline, basey + 1 + ((max_num + 1) / 2), basex);
+
+	if (max_num % 2)
+	{
+		max_left = max_num - 1;
+		max_right = max_num - 2;
+	}
+	else
+	{
+		max_left = max_num - 2;
+		max_right = max_num - 1;
+	}
+
+
+	while (1)
+	{
+		/* Draw cursor */
+#ifdef JP
+		put_str("》", basey + 1 + (num / 2), basex + 2 + (num % 2) * 24);
+#else
+		put_str(">>", basey + 1 + (num / 2), basex + 2 + (num % 2) * 24);
+#endif
+
+		/* Place the cursor on the player */
+		move_cursor_relative(p_ptr->py, p_ptr->px);
+
+		/* Get a command */
+		cmd = inkey();
+
+		/* Erase cursor */
+		put_str("  ", basey + 1 + (num / 2), basex + 2 + (num % 2) * 24);
+
+		if ((cmd == ' ') || (cmd == 'x') || (cmd == 'X') || (cmd == '\r'))
+		{
+			return num;
+		}
+
+		else if ((cmd == ESCAPE) || (cmd == 'z') || (cmd == 'Z') || (cmd == '0'))
+		{
+			return -1;
+		}
+
+		else if ((cmd == '2') || (cmd == 'j') || (cmd == 'J'))
+		{
+			if (num == max_left) num = 0;
+			else if (num == max_right) num = 1;
+			else num += 2;
+		}
+
+		else if ((cmd == '8') || (cmd == 'k') || (cmd == 'K'))
+		{
+			if (num == 0) num = max_left;
+			else if (num == 1) num = max_right;
+			else num -= 2;
+		}
+
+		else if ((cmd == '4') || (cmd == 'h') || (cmd == 'H') ||
+		         (cmd == '6') || (cmd == 'l') || (cmd == 'L'))
+		{
+			if ((num % 2) || (num == max_num - 1))
+			{
+				num--;
+			}
+			else if (num < max_num - 1)
+			{
+				num++;
+			}
+		}
+	}
+
+	return num;
+}
+
+static cptr menu_name(byte menu_idx, byte submenu_idx)
+{
+	cptr name;
+	int i, cond;
+
+	name = menu_info[menu_idx][submenu_idx].name;
+
+	for(i = 0; i < max_menu_sp; i++)
+	{
+		special_menu_info_type *sm_ptr = &special_menu_info[i];
+
+		if ((sm_ptr->window != menu_idx) ||
+		    (sm_ptr->number != submenu_idx)) continue;
+
+		switch(sm_ptr->type)
+		{
+		case MENU_CLASS:
+			cond = p_ptr->pclass;
+			break;
+
+		default:
+			/* Hack -- always false */
+			cond = !sm_ptr->condition;
+			break;
+		}
+
+		if (sm_ptr->condition == cond)
+		{
+			name = sm_ptr->name;
+			break;
+		}
+	}
+
+	return name;
+}
+
+static char inkey_from_menu(void)
+{
+	char cmd;
+	int i;
+	int basey, basex;
+	int num = 0, max_num = 0, old_num = 0;
+	int menu = 0;
+	cptr names[MAX_MENUITEM];
+
+	if (max_menu[0] == 0) return '\r';
+
+	if (p_ptr->py > 10) basey = 2;
+	else basey = 13;
+	basex = 15;
+
+	/* Clear top line */
+	prt("", 0, 0);
+
+	/* Save the screen */
+	screen_save();
+
+	while(1)
+	{
+		max_num = max_menu[menu];
+
+		/* メニュー名作成 */
+		for (i = 0; i < max_num; i++)
+		{
+			names[i] = menu_name(menu, i);
+		}
+
+		/* メニューから選択 */
+		num = select_manu(basey, basex, names, max_num, num);
+
+		/* selected */
+		if (num > 0)
+		{
+			menu_info_type *m_ptr = &menu_info[menu][num];
+
+			if (m_ptr->fin)
+			{
+				cmd = m_ptr->cmd;
+				break;
+			}
+			else if (max_menu[m_ptr->cmd] > 0)
+			{
+				menu = m_ptr->cmd;
+				old_num = num;
+				num = 0;
+				basey += 2;
+				basex += 8;
+			}
+		}
+
+		/* cancelled */
+		else
+		{
+			if (!menu)
+			{
+				cmd = ESCAPE;
+				break;
+			}
+			else
+			{
+				menu = 0;
+				num = old_num;
+				basey -= 2;
+				basex -= 8;
+				screen_load();
+				screen_save();
+			}
+		}
+	}
+
+	/* Restore the screen */
+	screen_load();
+
+	if (!inkey_next) inkey_next = "";
+
+	return cmd;
+}
+
+#endif /* ALLOW_COMMAND_MENU */
 
 
 /*
@@ -3831,6 +4363,9 @@ void request_command(bool shopping)
 
 	cptr act;
 
+#ifdef JP
+        int caretcmd = 0;
+#endif /* JP */
 
 	/* Roguelike */
 	if (rogue_like_commands)
@@ -3882,6 +4417,18 @@ void request_command(bool shopping)
 
 			/* Get a command */
 			ch = inkey();
+
+#ifdef JP
+#ifdef ALLOW_COMMAND_MENU
+			/* Get a command from menu */
+			if (use_command_menu && !shopping &&
+			    (ch == '\r' || ch == 'X') &&
+			    !keymap_act[mode][(byte)(ch)])
+			{
+				ch = inkey_from_menu();
+			}
+#endif /* ALLOW_COMMAND_MENU */
+#endif /* JP */
 		}
 
 		/* Clear top line */
@@ -3897,7 +4444,11 @@ void request_command(bool shopping)
 			p_ptr->command_arg = 0;
 
 			/* Begin the input */
+#ifdef JP
+			prt("回数: ", 0, 0);
+#else /* JP */
 			prt("Count: ", 0, 0);
+#endif /* JP */
 
 			/* Get a command count */
 			while (1)
@@ -3912,7 +4463,11 @@ void request_command(bool shopping)
 					p_ptr->command_arg = p_ptr->command_arg / 10;
 
 					/* Show current count */
+#ifdef JP
+					prt(format("回数: %d", p_ptr->command_arg), 0, 0);
+#else /* JP */
 					prt(format("Count: %d", p_ptr->command_arg), 0, 0);
+#endif /* JP */
 				}
 
 				/* Actual numeric data */
@@ -3922,7 +4477,11 @@ void request_command(bool shopping)
 					if (p_ptr->command_arg >= 1000)
 					{
 						/* Warn */
+#ifdef JP
+						bell("不当な繰り返し回数!");
+#else /* JP */
 						bell("Invalid repeat count!");
+#endif /* JP */
 
 						/* Limit */
 						p_ptr->command_arg = 9999;
@@ -3936,7 +4495,11 @@ void request_command(bool shopping)
 					}
 
 					/* Show current count */
+#ifdef JP
+					prt(format("回数: %d", p_ptr->command_arg), 0, 0);
+#else /* JP */
 					prt(format("Count: %d", p_ptr->command_arg), 0, 0);
+#endif /* JP */
 				}
 
 				/* Exit on "unusable" input */
@@ -3953,7 +4516,11 @@ void request_command(bool shopping)
 				p_ptr->command_arg = 99;
 
 				/* Show current count */
+#ifdef JP
+				prt(format("回数: %d", p_ptr->command_arg), 0, 0);
+#else /* JP */
 				prt(format("Count: %d", p_ptr->command_arg), 0, 0);
+#endif /* JP */
 			}
 
 			/* Hack -- Handle "old_arg" */
@@ -3963,14 +4530,22 @@ void request_command(bool shopping)
 				p_ptr->command_arg = old_arg;
 
 				/* Show current count */
+#ifdef JP
+				prt(format("回数: %d", p_ptr->command_arg), 0, 0);
+#else /* JP */
 				prt(format("Count: %d", p_ptr->command_arg), 0, 0);
+#endif /* JP */
 			}
 
 			/* Hack -- white-space means "enter command now" */
 			if ((ch == ' ') || (ch == '\n') || (ch == '\r'))
 			{
 				/* Get a real command */
+#ifdef JP
+				if (!get_com("コマンド: ", &ch))
+#else /* JP */
 				if (!get_com("Command: ", &ch))
+#endif /* JP */
 				{
 					/* Clear count */
 					p_ptr->command_arg = 0;
@@ -3986,7 +4561,11 @@ void request_command(bool shopping)
 		if (ch == '\\')
 		{
 			/* Get a real command */
+#ifdef JP
+			(void)get_com("コマンド: ", &ch);
+#else /* JP */
 			(void)get_com("Command: ", &ch);
+#endif /* JP */
 
 			/* Hack -- bypass keymaps */
 			if (!inkey_next) inkey_next = "";
@@ -3997,7 +4576,11 @@ void request_command(bool shopping)
 		if (ch == '^')
 		{
 			/* Get a new command and controlify it */
+#ifdef JP
+			if (get_com("CTRL: ", &ch)) ch = KTRL(ch);
+#else /* JP */
 			if (get_com("Control: ", &ch)) ch = KTRL(ch);
+#endif /* JP */
 		}
 
 
@@ -4059,6 +4642,22 @@ void request_command(bool shopping)
 		}
 	}
 
+#ifdef JP
+	for (i = 0; i < 256; i++)
+	{
+		cptr s = keymap_act[mode][i];
+		if (s != NULL)
+		{
+			if (*s == p_ptr->command_cmd && *(s+1) == 0)
+			{
+				caretcmd = i;
+				break;
+			}
+		}
+	}
+	if (!caretcmd) caretcmd = p_ptr->command_cmd;
+#endif /* JP */
+
 
 	/* Hack -- Scan equipment */
 	for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
@@ -4080,10 +4679,18 @@ void request_command(bool shopping)
 		while (s)
 		{
 			/* Check the "restriction" character */
+#ifdef JP
+			if ((s[1] == caretcmd) || (s[1] == '*'))
+#else /* JP */
 			if ((s[1] == p_ptr->command_cmd) || (s[1] == '*'))
+#endif /* JP */
 			{
 				/* Hack -- Verify command */
+#ifdef JP
+				if (!get_check("本当ですか? "))
+#else /* JP */
 				if (!get_check("Are you sure? "))
+#endif /* JP */
 				{
 					/* Hack -- Use "newline" */
 					p_ptr->command_cmd = '\n';

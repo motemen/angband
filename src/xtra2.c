@@ -8,6 +8,16 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3-v6 日本語版製作: しとしん
+ * 2.8.0      対応        : sayu, しとしん
+ * 2.8.1      対応        : FIRST, しとしん
+ * 2.8.3      対応        : FIRST, しとしん
+ *
+ * 日本語版機能追加 レベルアップ時の HP/MP 増加量表示
+ *                  英日切り替え機能
+ */
+
 #include "angband.h"
 
 
@@ -32,7 +42,11 @@ bool set_blind(int v)
 	{
 		if (!p_ptr->blind)
 		{
+#ifdef JP
+			message(MSG_BLIND, 0, "目が見えなくなってしまった！");
+#else /* JP */
 			message(MSG_BLIND, 0, "You are blind!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -42,7 +56,11 @@ bool set_blind(int v)
 	{
 		if (p_ptr->blind)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "やっと目が見えるようになった！");
+#else /* JP */
 			message(MSG_RECOVER, 0, "You can see again.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -91,7 +109,11 @@ bool set_confused(int v)
 	{
 		if (!p_ptr->confused)
 		{
+#ifdef JP
+			message(MSG_CONFUSED, 0, "あなたは混乱した！");
+#else /* JP */
 			message(MSG_CONFUSED, 0, "You are confused!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -101,7 +123,11 @@ bool set_confused(int v)
 	{
 		if (p_ptr->confused)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "やっと混乱がおさまった。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "You feel less confused now.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -141,7 +167,11 @@ bool set_poisoned(int v)
 	{
 		if (!p_ptr->poisoned)
 		{
+#ifdef JP
+			message(MSG_POISONED, 0, "毒に侵されてしまった！");
+#else /* JP */
 			message(MSG_POISONED, 0, "You are poisoned!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -151,7 +181,11 @@ bool set_poisoned(int v)
 	{
 		if (p_ptr->poisoned)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "やっと毒の痛みがなくなった。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "You are no longer poisoned.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -191,7 +225,11 @@ bool set_afraid(int v)
 	{
 		if (!p_ptr->afraid)
 		{
+#ifdef JP
+			message(MSG_AFRAID, 0, "何もかも恐くなってきた！");
+#else /* JP */
 			message(MSG_AFRAID, 0, "You are terrified!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -201,7 +239,11 @@ bool set_afraid(int v)
 	{
 		if (p_ptr->afraid)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "やっと恐怖を振り払った。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "You feel bolder now.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -241,7 +283,11 @@ bool set_paralyzed(int v)
 	{
 		if (!p_ptr->paralyzed)
 		{
+#ifdef JP
+			message(MSG_PARALYZED, 0, "体が麻痺してしまった！");
+#else /* JP */
 			message(MSG_PARALYZED, 0, "You are paralyzed!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -251,7 +297,11 @@ bool set_paralyzed(int v)
 	{
 		if (p_ptr->paralyzed)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "やっと動けるようになった。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "You can move again.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -294,7 +344,11 @@ bool set_image(int v)
 	{
 		if (!p_ptr->image)
 		{
+#ifdef JP
+			message(MSG_DRUGGED, 0, "薬物に侵されてしまった！");
+#else /* JP */
 			message(MSG_DRUGGED, 0, "You feel drugged!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -304,7 +358,11 @@ bool set_image(int v)
 	{
 		if (p_ptr->image)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "やっとはっきりと物が見えるようになった。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "You can see clearly again.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -347,7 +405,11 @@ bool set_fast(int v)
 	{
 		if (!p_ptr->fast)
 		{
+#ifdef JP
+			message(MSG_SPEED, 0, "素早く動けるようになった！");
+#else /* JP */
 			message(MSG_SPEED, 0, "You feel yourself moving faster!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -357,7 +419,11 @@ bool set_fast(int v)
 	{
 		if (p_ptr->fast)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "動きの素早さがなくなったようだ。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "You feel yourself slow down.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -397,7 +463,11 @@ bool set_slow(int v)
 	{
 		if (!p_ptr->slow)
 		{
+#ifdef JP
+			message(MSG_SLOW, 0, "体の動きが遅くなってしまった！");
+#else /* JP */
 			message(MSG_SLOW, 0, "You feel yourself moving slower!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -407,7 +477,11 @@ bool set_slow(int v)
 	{
 		if (p_ptr->slow)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "動きの遅さがなくなったようだ。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "You feel yourself speed up.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -447,7 +521,11 @@ bool set_shield(int v)
 	{
 		if (!p_ptr->shield)
 		{
+#ifdef JP
+			message(MSG_SHIELD, 0, "神秘のシールドに体が覆われた！");
+#else /* JP */
 			message(MSG_SHIELD, 0, "A mystic shield forms around your body!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -457,7 +535,11 @@ bool set_shield(int v)
 	{
 		if (p_ptr->shield)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "神秘のシールドが砕け散った。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "Your mystic shield crumbles away.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -498,7 +580,11 @@ bool set_blessed(int v)
 	{
 		if (!p_ptr->blessed)
 		{
+#ifdef JP
+			message(MSG_BLESSED, 0, "高潔な気分になった！");
+#else /* JP */
 			message(MSG_BLESSED, 0, "You feel righteous!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -508,7 +594,11 @@ bool set_blessed(int v)
 	{
 		if (p_ptr->blessed)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "高潔な気分が消え失せた。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "The prayer has expired.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -548,7 +638,11 @@ bool set_hero(int v)
 	{
 		if (!p_ptr->hero)
 		{
+#ifdef JP
+			message(MSG_HERO, 0, "ヒーローになった気がする！");
+#else /* JP */
 			message(MSG_HERO, 0, "You feel like a hero!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -558,7 +652,11 @@ bool set_hero(int v)
 	{
 		if (p_ptr->hero)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "ヒーローの気分が消え失せた。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "The heroism wears off.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -598,7 +696,11 @@ bool set_shero(int v)
 	{
 		if (!p_ptr->shero)
 		{
+#ifdef JP
+			message(MSG_BERSERK, 0, "殺戮マシーンになった気がする！");
+#else /* JP */
 			message(MSG_BERSERK, 0, "You feel like a killing machine!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -608,7 +710,11 @@ bool set_shero(int v)
 	{
 		if (p_ptr->shero)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "野蛮な気持ちが消え失せた。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "You feel less Berserk.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -648,7 +754,11 @@ bool set_protevil(int v)
 	{
 		if (!p_ptr->protevil)
 		{
+#ifdef JP
+			message(MSG_PROT_EVIL, 0, "邪悪なる存在から守られているような感じがする！");
+#else /* JP */
 			message(MSG_PROT_EVIL, 0, "You feel safe from evil!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -658,7 +768,11 @@ bool set_protevil(int v)
 	{
 		if (p_ptr->protevil)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "邪悪なる存在から守られている感じがなくなった。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "You no longer feel safe from evil.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -695,7 +809,11 @@ bool set_invuln(int v)
 	{
 		if (!p_ptr->invuln)
 		{
+#ifdef JP
+			message(MSG_INVULN, 0, "誰からも傷つけられない気がする！");
+#else /* JP */
 			message(MSG_INVULN, 0, "You feel invulnerable!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -705,7 +823,11 @@ bool set_invuln(int v)
 	{
 		if (p_ptr->invuln)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "傷つけられない感じがなくなった。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "You feel vulnerable once more.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -748,7 +870,11 @@ bool set_tim_invis(int v)
 	{
 		if (!p_ptr->tim_invis)
 		{
+#ifdef JP
+			message(MSG_SEE_INVIS, 0, "目が非常に敏感になった気がする！");
+#else /* JP */
 			message(MSG_SEE_INVIS, 0, "Your eyes feel very sensitive!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -758,7 +884,11 @@ bool set_tim_invis(int v)
 	{
 		if (p_ptr->tim_invis)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "目の敏感さがなくなったようだ。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "Your eyes feel less sensitive.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -804,7 +934,11 @@ bool set_tim_infra(int v)
 	{
 		if (!p_ptr->tim_infra)
 		{
+#ifdef JP
+			message(MSG_INFRARED, 0, "目がランランと輝き始めた！");
+#else /* JP */
 			message(MSG_INFRARED, 0, "Your eyes begin to tingle!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -814,7 +948,11 @@ bool set_tim_infra(int v)
 	{
 		if (p_ptr->tim_infra)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "目の輝きがなくなった。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "Your eyes stop tingling.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -857,7 +995,11 @@ bool set_oppose_acid(int v)
 	{
 		if (!p_ptr->oppose_acid && !p_ptr->immune_acid)
 		{
+#ifdef JP
+			message(MSG_RES_ACID, 0, "酸への耐性がついた気がする！");
+#else /* JP */
 			message(MSG_RES_ACID, 0, "You feel resistant to acid!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -867,7 +1009,11 @@ bool set_oppose_acid(int v)
 	{
 		if (p_ptr->oppose_acid && !p_ptr->immune_acid)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "酸への耐性が薄れた気がする。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "You feel less resistant to acid.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -907,7 +1053,11 @@ bool set_oppose_elec(int v)
 	{
 		if (!p_ptr->oppose_elec && !p_ptr->immune_elec)
 		{
+#ifdef JP
+			message(MSG_RES_ELEC, 0, "電撃への耐性がついた気がする！");
+#else /* JP */
 			message(MSG_RES_ELEC, 0, "You feel resistant to electricity!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -917,7 +1067,11 @@ bool set_oppose_elec(int v)
 	{
 		if (p_ptr->oppose_elec && !p_ptr->immune_elec)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "電撃への耐性が薄れた気がする。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "You feel less resistant to electricity.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -957,7 +1111,11 @@ bool set_oppose_fire(int v)
 	{
 		if (!p_ptr->oppose_fire && !p_ptr->immune_fire)
 		{
+#ifdef JP
+			message(MSG_RES_FIRE, 0, "火への耐性がついた気がする！");
+#else /* JP */
 			message(MSG_RES_FIRE, 0, "You feel resistant to fire!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -967,7 +1125,11 @@ bool set_oppose_fire(int v)
 	{
 		if (p_ptr->oppose_fire && !p_ptr->immune_fire)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "火への耐性が薄れた気がする。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "You feel less resistant to fire.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -1007,7 +1169,11 @@ bool set_oppose_cold(int v)
 	{
 		if (!p_ptr->oppose_cold && !p_ptr->immune_cold)
 		{
+#ifdef JP
+			message(MSG_RES_COLD, 0, "冷気への耐性がついた気がする！");
+#else /* JP */
 			message(MSG_RES_COLD, 0, "You feel resistant to cold!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -1017,7 +1183,11 @@ bool set_oppose_cold(int v)
 	{
 		if (p_ptr->oppose_cold && !p_ptr->immune_cold)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "冷気への耐性が薄れた気がする。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "You feel less resistant to cold.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -1057,7 +1227,11 @@ bool set_oppose_pois(int v)
 	{
 		if (!p_ptr->oppose_pois)
 		{
+#ifdef JP
+			message(MSG_RES_POIS, 0, "毒への耐性がついた気がする！");
+#else /* JP */
 			message(MSG_RES_POIS, 0, "You feel resistant to poison!");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -1067,7 +1241,11 @@ bool set_oppose_pois(int v)
 	{
 		if (p_ptr->oppose_pois)
 		{
+#ifdef JP
+			message(MSG_RECOVER, 0, "毒への耐性が薄れた気がする。");
+#else /* JP */
 			message(MSG_RECOVER, 0, "You feel less resistant to poison.");
+#endif /* JP */
 			notice = TRUE;
 		}
 	}
@@ -1163,21 +1341,33 @@ bool set_stun(int v)
 			/* Stun */
 			case 1:
 			{
+#ifdef JP
+				message(MSG_STUN, 0, "意識がもうろうとしてきた。");
+#else /* JP */
 				message(MSG_STUN, 0, "You have been stunned.");
+#endif /* JP */
 				break;
 			}
 
 			/* Heavy stun */
 			case 2:
 			{
+#ifdef JP
+				message(MSG_STUN, 0, "意識がひどくもうろうとしてきた。");
+#else /* JP */
 				message(MSG_STUN, 0, "You have been heavily stunned.");
+#endif /* JP */
 				break;
 			}
 
 			/* Knocked out */
 			case 3:
 			{
+#ifdef JP
+				message(MSG_STUN, 0, "頭がクラクラして意識が遠のいてきた。");
+#else /* JP */
 				message(MSG_STUN, 0, "You have been knocked out.");
+#endif /* JP */
 				break;
 			}
 		}
@@ -1195,7 +1385,11 @@ bool set_stun(int v)
 			/* None */
 			case 0:
 			{
+#ifdef JP
+				message(MSG_RECOVER, 0, "やっと朦朧状態から回復した。");
+#else /* JP */
 				message(MSG_RECOVER, 0, "You are no longer stunned.");
+#endif /* JP */
 				if (disturb_state) disturb(0, 0);
 				break;
 			}
@@ -1347,49 +1541,77 @@ bool set_cut(int v)
 			/* Graze */
 			case 1:
 			{
+#ifdef JP
+				message(MSG_CUT, 0, "かすり傷を負ってしまった。");
+#else /* JP */
 				message(MSG_CUT, 0, "You have been given a graze.");
+#endif /* JP */
 				break;
 			}
 
 			/* Light cut */
 			case 2:
 			{
+#ifdef JP
+				message(MSG_CUT, 0, "軽い傷を負ってしまった。");
+#else /* JP */
 				message(MSG_CUT, 0, "You have been given a light cut.");
+#endif /* JP */
 				break;
 			}
 
 			/* Bad cut */
 			case 3:
 			{
+#ifdef JP
+				message(MSG_CUT, 0, "ひどい傷を負ってしまった。");
+#else /* JP */
 				message(MSG_CUT, 0, "You have been given a bad cut.");
+#endif /* JP */
 				break;
 			}
 
 			/* Nasty cut */
 			case 4:
 			{
+#ifdef JP
+				message(MSG_CUT, 0, "大変な傷を負ってしまった。");
+#else /* JP */
 				message(MSG_CUT, 0, "You have been given a nasty cut.");
+#endif /* JP */
 				break;
 			}
 
 			/* Severe cut */
 			case 5:
 			{
+#ifdef JP
+				message(MSG_CUT, 0, "重大な傷を負ってしまった。");
+#else /* JP */
 				message(MSG_CUT, 0, "You have been given a severe cut.");
+#endif /* JP */
 				break;
 			}
 
 			/* Deep gash */
 			case 6:
 			{
+#ifdef JP
+				message(MSG_CUT, 0, "ひどい深手を負ってしまった。");
+#else /* JP */
 				message(MSG_CUT, 0, "You have been given a deep gash.");
+#endif /* JP */
 				break;
 			}
 
 			/* Mortal wound */
 			case 7:
 			{
+#ifdef JP
+				message(MSG_CUT, 0, "致命的な傷を負ってしまった。");
+#else /* JP */
 				message(MSG_CUT, 0, "You have been given a mortal wound.");
+#endif /* JP */
 				break;
 			}
 		}
@@ -1407,7 +1629,11 @@ bool set_cut(int v)
 			/* None */
 			case 0:
 			{
+#ifdef JP
+				message(MSG_RECOVER, 0, "やっと出血が止まった。");
+#else /* JP */
 				message(MSG_RECOVER, 0, "You are no longer bleeding.");
+#endif /* JP */
 				if (disturb_state) disturb(0, 0);
 				break;
 			}
@@ -1552,35 +1778,55 @@ bool set_food(int v)
 			/* Weak */
 			case 1:
 			{
+#ifdef JP
+				msg_print("まだ空腹で倒れそうだ。");
+#else /* JP */
 				msg_print("You are still weak.");
+#endif /* JP */
 				break;
 			}
 
 			/* Hungry */
 			case 2:
 			{
+#ifdef JP
+				msg_print("まだ空腹だ。");
+#else /* JP */
 				msg_print("You are still hungry.");
+#endif /* JP */
 				break;
 			}
 
 			/* Normal */
 			case 3:
 			{
+#ifdef JP
+				msg_print("空腹感がおさまった。");
+#else /* JP */
 				msg_print("You are no longer hungry.");
+#endif /* JP */
 				break;
 			}
 
 			/* Full */
 			case 4:
 			{
+#ifdef JP
+				msg_print("満腹だ！");
+#else /* JP */
 				msg_print("You are full!");
+#endif /* JP */
 				break;
 			}
 
 			/* Bloated */
 			case 5:
 			{
+#ifdef JP
+				msg_print("食べ過ぎだ！");
+#else /* JP */
 				msg_print("You have gorged yourself!");
+#endif /* JP */
 				break;
 			}
 		}
@@ -1599,7 +1845,11 @@ bool set_food(int v)
 			case 0:
 			{
 				sound(MSG_NOTICE);
+#ifdef JP
+				msg_print("あまりにも空腹で気を失ってしまった！");
+#else /* JP */
 				msg_print("You are getting faint from hunger!");
+#endif /* JP */
 				break;
 			}
 
@@ -1607,7 +1857,11 @@ bool set_food(int v)
 			case 1:
 			{
 				sound(MSG_NOTICE);
+#ifdef JP
+				msg_print("お腹が空いて倒れそうだ。");
+#else /* JP */
 				msg_print("You are getting weak from hunger!");
+#endif /* JP */
 				break;
 			}
 
@@ -1615,7 +1869,11 @@ bool set_food(int v)
 			case 2:
 			{
 				sound(MSG_HUNGRY);
+#ifdef JP
+				msg_print("お腹が空いてきた。");
+#else /* JP */
 				msg_print("You are getting hungry.");
+#endif /* JP */
 				break;
 			}
 
@@ -1623,7 +1881,11 @@ bool set_food(int v)
 			case 3:
 			{
 				sound(MSG_NOTICE);
+#ifdef JP
+				msg_print("満腹感がなくなった。");
+#else /* JP */
 				msg_print("You are no longer full.");
+#endif /* JP */
 				break;
 			}
 
@@ -1631,7 +1893,11 @@ bool set_food(int v)
 			case 4:
 			{
 				sound(MSG_NOTICE);
+#ifdef JP
+				msg_print("やっとお腹がきつくなくなった。");
+#else /* JP */
 				msg_print("You are no longer gorged.");
+#endif /* JP */
 				break;
 			}
 		}
@@ -1728,7 +1994,11 @@ void check_experience(void)
 		if (p_ptr->lev > p_ptr->max_lev) p_ptr->max_lev = p_ptr->lev;
 
 		/* Message */
+#ifdef JP
+		message_format(MSG_LEVEL, p_ptr->lev, "レベル %d にようこそ。", p_ptr->lev);
+#else /* JP */
 		message_format(MSG_LEVEL, p_ptr->lev, "Welcome to level %d.", p_ptr->lev);
+#endif /* JP */
 
 		/* Update some stuff */
 		p_ptr->update |= (PU_BONUS | PU_HP | PU_MANA | PU_SPELLS);
@@ -1760,8 +2030,14 @@ void check_experience(void)
 		/* Window stuff */
 		p_ptr->window |= (PW_PLAYER_0 | PW_PLAYER_1);
 
+#ifdef JP
+		level_up = 1;
+#endif /* JP */
 		/* Handle stuff */
 		handle_stuff();
+#ifdef JP
+		level_up = 0;
+#endif /* JP */
 	}
 }
 
@@ -1861,7 +2137,11 @@ static void build_quest_stairs(int y, int x)
 	delete_object(y, x);
 
 	/* Explain the staircase */
+#ifdef JP
+	msg_print("魔法の階段が現れた...");
+#else /* JP */
 	msg_print("A magical staircase appears...");
+#endif /* JP */
 
 	/* Create stairs down */
 	cave_set_feat(y, x, FEAT_MORE);
@@ -2082,9 +2362,15 @@ void monster_death(int m_idx)
 		p_ptr->redraw |= (PR_TITLE);
 
 		/* Congratulations */
+#ifdef JP
+		msg_print("*** おめでとう ***");
+		msg_print("あなたはゲームをコンプリートしました。");
+		msg_print("準備が整ったら引退(自殺コマンド)しても結構です。");
+#else /* JP */
 		msg_print("*** CONGRATULATIONS ***");
 		msg_print("You have won the game!");
 		msg_print("You may retire (commit suicide) when you are ready.");
+#endif /* JP */
 	}
 }
 
@@ -2165,7 +2451,11 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		/* Death by physical attack -- invisible monster */
 		else if (!m_ptr->ml)
 		{
+#ifdef JP
+			message_format(soundfx, m_ptr->r_idx, "%sを殺した。", m_name);
+#else /* JP */
 			message_format(soundfx, m_ptr->r_idx, "You have killed %s.", m_name);
+#endif /* JP */
 		}
 
 		/* Death by Physical attack -- non-living monster */
@@ -2174,13 +2464,21 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		         (r_ptr->flags2 & (RF2_STUPID)) ||
 		         (strchr("Evg", r_ptr->d_char)))
 		{
+#ifdef JP
+			message_format(soundfx, m_ptr->r_idx, "%sを倒した。", m_name);
+#else /* JP */
 			message_format(soundfx, m_ptr->r_idx, "You have destroyed %s.", m_name);
+#endif /* JP */
 		}
 
 		/* Death by Physical attack -- living monster */
 		else
 		{
+#ifdef JP
+			message_format(soundfx, m_ptr->r_idx, "%sを葬り去った。", m_name);
+#else /* JP */
 			message_format(soundfx, m_ptr->r_idx, "You have slain %s.", m_name);
+#endif /* JP */
 		}
 
 		/* Player level */
@@ -2538,7 +2836,11 @@ static void look_mon_desc(char *buf, size_t max, int m_idx)
 	if (m_ptr->hp >= m_ptr->maxhp)
 	{
 		/* No damage */
+#ifdef JP
+		my_strcpy(buf, (living ? "無傷" : "無ダメージ"), max);
+#else /* JP */
 		my_strcpy(buf, (living ? "unhurt" : "undamaged"), max);
+#endif /* JP */
 	}
 	else
 	{
@@ -2546,19 +2848,42 @@ static void look_mon_desc(char *buf, size_t max, int m_idx)
 		int perc = 100L * m_ptr->hp / m_ptr->maxhp;
 
 		if (perc >= 60)
+#ifdef JP
+			my_strcpy(buf, (living ? "軽傷" : "小ダメージ"), max);
+#else /* JP */
 			my_strcpy(buf, (living ? "somewhat wounded" : "somewhat damaged"), max);
+#endif /* JP */
 		else if (perc >= 25)
+#ifdef JP
+			my_strcpy(buf, (living ? "負傷" : "中ダメージ"), max);
+#else /* JP */
 			my_strcpy(buf, (living ? "wounded" : "damaged"), max);
+#endif /* JP */
 		else if (perc >= 10)
+#ifdef JP
+			my_strcpy(buf, (living ? "重傷" : "大ダメージ"), max);
+#else /* JP */
 			my_strcpy(buf, (living ? "badly wounded" : "badly damaged"), max);
+#endif /* JP */
 		else
+#ifdef JP
+			my_strcpy(buf, (living ? "半死半生" : "倒れかけ"), max);
+#else /* JP */
 			my_strcpy(buf, (living ? "almost dead" : "almost destroyed"), max);
+#endif /* JP */
 	}
 
+#ifdef JP
+	if (m_ptr->csleep) my_strcat(buf, ", 睡眠", max);
+	if (m_ptr->confused) my_strcat(buf, ", 混乱", max);
+	if (m_ptr->monfear) my_strcat(buf, ", 恐怖", max);
+	if (m_ptr->stunned) my_strcat(buf, ", 朦朧", max);
+#else /* JP */
 	if (m_ptr->csleep) my_strcat(buf, ", asleep", max);
 	if (m_ptr->confused) my_strcat(buf, ", confused", max);
 	if (m_ptr->monfear) my_strcat(buf, ", afraid", max);
 	if (m_ptr->stunned) my_strcat(buf, ", stunned", max);
+#endif /* JP */
 }
 
 
@@ -3145,37 +3470,63 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 		boring = TRUE;
 
 		/* Default */
+#ifdef JP
+		s1 = "";
+		s2 = "";
+		s3 = "が見える";
+#else /* JP */
 		s1 = "You see ";
 		s2 = "";
 		s3 = "";
+#endif /* JP */
 
 
 		/* The player */
 		if (cave_m_idx[y][x] < 0)
 		{
+#ifdef JP
+			s1 = "あなたは";
+			s2 = "の上";
+			s3 = "にいる";
+#else /* JP */
 			/* Description */
 			s1 = "You are ";
 
 			/* Preposition */
 			s2 = "on ";
+#endif /* JP */
 		}
 
 
 		/* Hack -- hallucination */
 		if (p_ptr->image)
 		{
+#ifdef JP
+			cptr name = "何か奇妙な物";
+#else /* JP */
 			cptr name = "something strange";
+#endif /* JP */
 
 			/* Display a message */
 			if (p_ptr->wizard)
 			{
+#ifdef JP
+				strnfmt(out_val, sizeof(out_val),
+				        "%s%s%s%s [%s] (%d:%d)", s1, name, s2, s3, info, y, x);
+#else /* JP */
 				strnfmt(out_val, sizeof(out_val),
 				        "%s%s%s%s [%s] (%d:%d)", s1, s2, s3, name, info, y, x);
+#endif /* JP */
 			}
 			else
 			{
+#ifdef JP
+				strnfmt(out_val, sizeof(out_val),
+				        "%s%s%s%s [%s]", s1, name, s2, s3, info);
+#else /* JP */
 				strnfmt(out_val, sizeof(out_val),
 				        "%s%s%s%s [%s]", s1, s2, s3, name, info);
+#endif /* JP */
 			}
 
 			prt(out_val, 0, 0);
@@ -3231,7 +3582,11 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 						screen_roff(m_ptr->r_idx);
 
 						/* Hack -- Complete the prompt (again) */
+#ifdef JP
+						Term_addstr(-1, TERM_WHITE, format("  [r思 %s]", info));
+#else /* JP */
 						Term_addstr(-1, TERM_WHITE, format("  [r,%s]", info));
+#endif /* JP */
 
 						/* Command */
 						query = inkey();
@@ -3251,15 +3606,27 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 						/* Describe, and prompt for recall */
 						if (p_ptr->wizard)
 						{
+#ifdef JP
+							strnfmt(out_val, sizeof(out_val),
+							        "%s%s(%s)%s%s[r思 %s] (%d:%d)",
+							        s1, m_name, buf, s2, s3, info, y, x);
+#else /* JP */
 							strnfmt(out_val, sizeof(out_val),
 							        "%s%s%s%s (%s) [r,%s] (%d:%d)",
 						            s1, s2, s3, m_name, buf, info, y, x);
+#endif /* JP */
 						}
 						else
 						{
+#ifdef JP
+							strnfmt(out_val, sizeof(out_val),
+							        "%s%s(%s)%s%s[r思 %s]",
+							        s1, m_name, buf, s2, s3, info);
+#else /* JP */
 							strnfmt(out_val, sizeof(out_val),
 							        "%s%s%s%s (%s) [r,%s]",
 							        s1, s2, s3, m_name, buf, info);
+#endif /* JP */
 						}
 
 						prt(out_val, 0, 0);
@@ -3285,14 +3652,28 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 				if ((query == ' ') && !(mode & (TARGET_LOOK))) break;
 
 				/* Change the intro */
+#ifdef JP
+				s1 = "それは";
+#else /* JP */
 				s1 = "It is ";
+#endif /* JP */
 
 				/* Hack -- take account of gender */
+#ifdef JP
+				if (r_ptr->flags1 & (RF1_FEMALE)) s1 = "彼女は";
+				else if (r_ptr->flags1 & (RF1_MALE)) s1 = "彼は";
+#else /* JP */
 				if (r_ptr->flags1 & (RF1_FEMALE)) s1 = "She is ";
 				else if (r_ptr->flags1 & (RF1_MALE)) s1 = "He is ";
+#endif /* JP */
 
 				/* Use a preposition */
+#ifdef JP
+				s2 = "を";
+				s3 = "持っている";
+#else /* JP */
 				s2 = "carrying ";
+#endif /* JP */
 
 				/* Scan all objects being carried */
 				for (this_o_idx = m_ptr->hold_o_idx; this_o_idx; this_o_idx = next_o_idx)
@@ -3313,14 +3694,25 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 					/* Describe the object */
 					if (p_ptr->wizard)
 					{
+#ifdef JP
+						strnfmt(out_val, sizeof(out_val),
+						        "%s%s%s%s[%s] (%d:%d)",
+						        s1, o_name, s2, s3, info, y, x);
+#else /* JP */
 						strnfmt(out_val, sizeof(out_val),
 						        "%s%s%s%s [%s] (%d:%d)",
 						        s1, s2, s3, o_name, info, y, x);
+#endif /* JP */
 					}
 					else
 					{
+#ifdef JP
+						strnfmt(out_val, sizeof(out_val),
+						        "%s%s%s%s[%s]", s1, o_name, s2, s3, info);
+#else /* JP */
 						strnfmt(out_val, sizeof(out_val),
 						        "%s%s%s%s [%s]", s1, s2, s3, o_name, info);
+#endif /* JP */
 					}
 
 					prt(out_val, 0, 0);
@@ -3334,14 +3726,23 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 					if ((query == ' ') && !(mode & (TARGET_LOOK))) break;
 
 					/* Change the intro */
+#ifdef JP
+					s2 = "をまた";
+#else /* JP */
 					s2 = "also carrying ";
+#endif /* JP */
 				}
 
 				/* Double break */
 				if (this_o_idx) break;
 
 				/* Use a preposition */
+#ifdef JP
+				s2 = "の上";
+				s3 = "にいる";
+#else /* JP */
 				s2 = "on ";
+#endif /* JP */
 			}
 		}
 
@@ -3373,15 +3774,27 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 					/* Describe the pile */
 					if (p_ptr->wizard)
 					{
+#ifdef JP
+						strnfmt(out_val, sizeof(out_val),
+						        "%s%d個のアイテムの山%s%s[r思 %s] (%d:%d)",
+						        s1, floor_num, s2, s3, info, y, x);
+#else /* JP */
 						strnfmt(out_val, sizeof(out_val),
 						        "%s%s%sa pile of %d objects [r,%s] (%d:%d)",
 						        s1, s2, s3, floor_num, info, y, x);
+#endif /* JP */
 					}
 					else
 					{
+#ifdef JP
+						strnfmt(out_val, sizeof(out_val),
+						        "%s%d個のアイテムの山%s%s[r思 %s]",
+						        s1, floor_num, s2, s3, info);
+#else /* JP */
 						strnfmt(out_val, sizeof(out_val),
 						        "%s%s%sa pile of %d objects [r,%s]",
 						        s1, s2, s3, floor_num, info);
+#endif /* JP */
 					}
 
 					prt(out_val, 0, 0);
@@ -3418,11 +3831,17 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 				/* Sometimes stop at "space" key */
 				if ((query == ' ') && !(mode & (TARGET_LOOK))) break;
 
+#ifdef JP
+				s1 = "それは";
+				s2 = "の上";
+				s3 = "にある";
+#else /* JP */
 				/* Change the intro */
 				s1 = "It is ";
 
 				/* Preposition */
 				s2 = "on ";
+#endif /* JP */
 			}
 		}
 
@@ -3454,14 +3873,25 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 				/* Describe the object */
 				if (p_ptr->wizard)
 				{
+#ifdef JP
+					strnfmt(out_val, sizeof(out_val),
+					        "%s%s%s%s[%s] (%d:%d)",
+					        s1, o_name, s2, s3, info, y, x);
+#else /* JP */
 					strnfmt(out_val, sizeof(out_val),
 					        "%s%s%s%s [%s] (%d:%d)",
 					        s1, s2, s3, o_name, info, y, x);
+#endif /* JP */
 				}
 				else
 				{
+#ifdef JP
+					strnfmt(out_val, sizeof(out_val),
+					        "%s%s%s%s[%s]", s1, o_name, s2, s3, info);
+#else /* JP */
 					strnfmt(out_val, sizeof(out_val),
 					        "%s%s%s%s [%s]", s1, s2, s3, o_name, info);
+#endif /* JP */
 				}
 
 				prt(out_val, 0, 0);
@@ -3475,13 +3905,26 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 				if ((query == ' ') && !(mode & (TARGET_LOOK))) break;
 
 				/* Change the intro */
+#ifdef JP
+				s1 = "それは";
+#else /* JP */
 				s1 = "It is ";
+#endif /* JP */
 
 				/* Plurals */
+#ifdef JP
+				if (o_ptr->number != 1) s1 = "それらは";
+#else /* JP */
 				if (o_ptr->number != 1) s1 = "They are ";
+#endif /* JP */
 
 				/* Preposition */
+#ifdef JP
+				s2 = "の上";
+				s3 = "に見える";
+#else /* JP */
 				s2 = "on ";
+#endif /* JP */
 			}
 		}
 
@@ -3502,33 +3945,61 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 		/* Terrain feature if needed */
 		if (boring || (feat > FEAT_INVIS))
 		{
+#ifdef JP
+			cptr name = X_f_name(&f_info[feat]);
+#else /* JP */
 			cptr name = f_name + f_info[feat].name;
+#endif /* JP */
 
 			/* Hack -- handle unknown grids */
+#ifdef JP
+			if (feat == FEAT_NONE) name = "未知の地形";
+#else /* JP */
 			if (feat == FEAT_NONE) name = "unknown grid";
+#endif /* JP */
 
 			/* Pick a prefix */
+#ifdef JP
+			if (*s2 && (feat >= FEAT_DOOR_HEAD)) s2 = "の中";
+#else /* JP */
 			if (*s2 && (feat >= FEAT_DOOR_HEAD)) s2 = "in ";
+#endif /* JP */
 
 			/* Pick proper indefinite article */
+#ifndef JP
 			s3 = (is_a_vowel(name[0])) ? "an " : "a ";
+#endif /* JP */
 
 			/* Hack -- special introduction for store doors */
 			if ((feat >= FEAT_SHOP_HEAD) && (feat <= FEAT_SHOP_TAIL))
 			{
+#ifdef JP
+				s2 = "の入口";
+#else /* JP */
 				s3 = "the entrance to the ";
+#endif /* JP */
 			}
 
 			/* Display a message */
 			if (p_ptr->wizard)
 			{
+#ifdef JP
+				strnfmt(out_val, sizeof(out_val),
+				        "%s%s%s%s[%s] (%d:%d)", s1, name, s2, s3, info, y, x);
+#else /* JP */
 				strnfmt(out_val, sizeof(out_val),
 				        "%s%s%s%s [%s] (%d:%d)", s1, s2, s3, name, info, y, x);
+#endif /* JP */
 			}
 			else
 			{
+#ifdef JP
+				strnfmt(out_val, sizeof(out_val),
+				        "%s%s%s%s[%s]", s1, name, s2, s3, info);
+#else /* JP */
 				strnfmt(out_val, sizeof(out_val),
 				        "%s%s%s%s [%s]", s1, s2, s3, name, info);
+#endif /* JP */
 			}
 
 			prt(out_val, 0, 0);
@@ -3636,13 +4107,21 @@ bool target_set_interactive(int mode)
 			/* Allow target */
 			if ((cave_m_idx[y][x] > 0) && target_able(cave_m_idx[y][x]))
 			{
+#ifdef JP
+				strcpy(info, "q止 t決 p自 o現 +次 -前 <向>");
+#else /* JP */
 				strcpy(info, "q,t,p,o,+,-,<dir>");
+#endif /* JP */
 			}
 
 			/* Dis-allow target */
 			else
 			{
+#ifdef JP
+				strcpy(info, "q止 p自 o現 +次 -前 <向>");
+#else /* JP */
 				strcpy(info, "q,p,o,+,-,<dir>");
+#endif /* JP */
 			}
 
 			/* Adjust panel if needed */
@@ -3731,7 +4210,11 @@ bool target_set_interactive(int mode)
 					}
 					else
 					{
+#ifdef JP
+						bell("無効なターゲットです！");
+#else /* JP */
 						bell("Illegal target!");
+#endif /* JP */
 					}
 					break;
 				}
@@ -3742,7 +4225,11 @@ bool target_set_interactive(int mode)
 					d = target_dir(query);
 
 					/* Oops */
+#ifdef JP
+					if (!d) bell("無効なキーです！");
+#else /* JP */
 					if (!d) bell("Illegal command for target mode!");
+#endif /* JP */
 
 					break;
 				}
@@ -3793,7 +4280,11 @@ bool target_set_interactive(int mode)
 		else
 		{
 			/* Default prompt */
+#ifdef JP
+			strcpy(info, "q止 t決 p自 m近 +次 -前 <向>");
+#else /* JP */
 			strcpy(info, "q,t,p,m,+,-,<dir>");
+#endif /* JP */
 
 			/* Describe and Prompt (enable "TARGET_LOOK") */
 			query = target_set_interactive_aux(y, x, mode | TARGET_LOOK, info);
@@ -3881,7 +4372,11 @@ bool target_set_interactive(int mode)
 					d = target_dir(query);
 
 					/* Oops */
+#ifdef JP
+					if (!d) bell("無効なキーです！");
+#else /* JP */
 					if (!d) bell("Illegal command for target mode!");
+#endif /* JP */
 
 					break;
 				}
@@ -3995,11 +4490,19 @@ bool get_aim_dir(int *dp)
 		/* Choose a prompt */
 		if (!target_okay())
 		{
+#ifdef JP
+			p = "方向 ('*'でターゲット選択, ESCで中断)? ";
+#else /* JP */
 			p = "Direction ('*' to choose a target, Escape to cancel)? ";
+#endif /* JP */
 		}
 		else
 		{
+#ifdef JP
+			p = "方向 ('5'でターゲットへ, '*'でターゲット再選択, ESCで中断)? ";
+#else /* JP */
 			p = "Direction ('5' for target, '*' to re-target, Escape to cancel)? ";
+#endif /* JP */
 		}
 
 		/* Get a command (or Cancel) */
@@ -4034,7 +4537,11 @@ bool get_aim_dir(int *dp)
 		}
 
 		/* Error */
+#ifdef JP
+		if (!dir) bell("無効な方向です！");
+#else /* JP */
 		if (!dir) bell("Illegal aim direction!");
+#endif /* JP */
 	}
 
 	/* No direction */
@@ -4054,7 +4561,11 @@ bool get_aim_dir(int *dp)
 	if (p_ptr->command_dir != dir)
 	{
 		/* Warn the user */
+#ifdef JP
+		msg_print("あなたは混乱している。");
+#else /* JP */
 		msg_print("You are confused.");
+#endif /* JP */
 	}
 
 	/* Save direction */
@@ -4114,7 +4625,11 @@ bool get_rep_dir(int *dp)
 	while (!dir)
 	{
 		/* Choose a prompt */
+#ifdef JP
+		p = "方向 (ESCで中断)? ";
+#else /* JP */
 		p = "Direction (Escape to cancel)? ";
+#endif /* JP */
 
 		/* Get a command (or Cancel) */
 		if (!get_com(p, &ch)) break;
@@ -4123,7 +4638,11 @@ bool get_rep_dir(int *dp)
 		dir = target_dir(ch);
 
 		/* Oops */
+#ifdef JP
+		if (!dir) bell("無効な方向です！");
+#else /* JP */
 		if (!dir) bell("Illegal repeatable direction!");
+#endif /* JP */
 	}
 
 	/* Aborted */
@@ -4173,7 +4692,11 @@ bool confuse_dir(int *dp)
 	if ((*dp) != dir)
 	{
 		/* Warn the user */
+#ifdef JP
+		msg_print("あなたは混乱している。");
+#else /* JP */
 		msg_print("You are confused.");
+#endif /* JP */
 
 		/* Save direction */
 		(*dp) = dir;

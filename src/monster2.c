@@ -8,6 +8,15 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3-v6 日本語版製作: しとしん
+ * 2.8.0      対応        : sayu, しとしん
+ * 2.8.1      対応        : FIRST
+ * 2.8.3      対応        : FIRST, しとしん
+ *
+ * 日本語版機能追加 : 英日切り替え機能
+ */
+
 #include "angband.h"
 
 
@@ -170,7 +179,11 @@ void compact_monsters(int size)
 
 
 	/* Message (only if compacting) */
+#ifdef JP
+	if (size) msg_print("モンスター情報を圧縮しています...");
+#else /* JP */
 	if (size) msg_print("Compacting monsters...");
+#endif /* JP */
 
 
 	/* Compact at least 'size' objects */
@@ -333,7 +346,11 @@ s16b mon_pop(void)
 
 
 	/* Warn the player (except during dungeon creation) */
+#ifdef JP
+	if (character_dungeon) msg_print("モンスターが多すぎる！");
+#else /* JP */
 	if (character_dungeon) msg_print("Too many monsters!");
+#endif /* JP */
 
 	/* Try not to crash */
 	return (0);
@@ -596,7 +613,11 @@ void display_monlist(void)
 		r_ptr = &r_info[m_ptr->r_idx];
 
 		/* Get the monster name */
+#ifdef JP
+		m_name = X_r_name(r_ptr);
+#else /* JP */
 		m_name = r_name + r_ptr->name;
+#endif /* JP */
 
 		/* Obtain the length of the description */
 		n = strlen(m_name);
@@ -613,6 +634,26 @@ void display_monlist(void)
 		/* Append the "optional" attr/char info */
 		Term_addstr(-1, TERM_WHITE, "/('");
 
+#ifdef JP
+		{
+			byte a, a2;
+			char c, c2;
+
+			a = r_ptr->x_attr;
+			c = r_ptr->x_char;
+
+			if (use_bigtile) bigtile_attr(&c, &a, &c2, &a2);
+
+			Term_addch(a, c);
+
+			if (use_bigtile)
+			{
+				Term_addch(a2, c2);
+
+				n++;
+			}
+		}
+#else /* JP */
 		Term_addch(r_ptr->x_attr, r_ptr->x_char);
 
 		if (use_bigtile)
@@ -624,6 +665,7 @@ void display_monlist(void)
 
 			n++;
 		}
+#endif /* JP */
 
 		Term_addstr(-1, TERM_WHITE, "'):");
 		n += 7;
@@ -710,7 +752,12 @@ void monster_desc(char *desc, size_t max, const monster_type *m_ptr, int mode)
 
 	monster_race *r_ptr = &r_info[m_ptr->r_idx];
 
+#ifdef JP
+	/* 英日切り替え機能に対応 */
+	cptr name = X_r_name(r_ptr);
+#else /* JP */
 	cptr name = (r_name + r_ptr->name);
+#endif /* JP */
 
 	bool seen, pron;
 
@@ -737,12 +784,26 @@ void monster_desc(char *desc, size_t max, const monster_type *m_ptr, int mode)
 
 
 		/* Assume simple result */
+#ifdef JP
+		res = "それ";
+#else /* JP */
 		res = "it";
+#endif /* JP */
 
 		/* Brute force: split on the possibilities */
 		switch (kind + (mode & 0x07))
 		{
 			/* Neuter, or unknown */
+#ifdef JP
+			case 0x00: res = "何か"; break;
+			case 0x01: res = "何か"; break;
+			case 0x02: res = "何かの"; break;
+			case 0x03: res = "何か自身"; break;
+			case 0x04: res = "何か"; break;
+			case 0x05: res = "何か"; break;
+			case 0x06: res = "何か"; break;
+			case 0x07: res = "それ自身"; break;
+#else /* JP */
 			case 0x00: res = "it"; break;
 			case 0x01: res = "it"; break;
 			case 0x02: res = "its"; break;
@@ -751,8 +812,19 @@ void monster_desc(char *desc, size_t max, const monster_type *m_ptr, int mode)
 			case 0x05: res = "something"; break;
 			case 0x06: res = "something's"; break;
 			case 0x07: res = "itself"; break;
+#endif /* JP */
 
 			/* Male (assume human if vague) */
+#ifdef JP
+			case 0x10: res = "彼"; break;
+			case 0x11: res = "彼"; break;
+			case 0x12: res = "彼の"; break;
+			case 0x13: res = "彼自身"; break;
+			case 0x14: res = "誰か"; break;
+			case 0x15: res = "誰か"; break;
+			case 0x16: res = "誰かの"; break;
+			case 0x17: res = "彼自身"; break;
+#else /* JP */
 			case 0x10: res = "he"; break;
 			case 0x11: res = "him"; break;
 			case 0x12: res = "his"; break;
@@ -761,8 +833,19 @@ void monster_desc(char *desc, size_t max, const monster_type *m_ptr, int mode)
 			case 0x15: res = "someone"; break;
 			case 0x16: res = "someone's"; break;
 			case 0x17: res = "himself"; break;
+#endif /* JP */
 
 			/* Female (assume human if vague) */
+#ifdef JP
+			case 0x20: res = "彼女"; break;
+			case 0x21: res = "彼女"; break;
+			case 0x22: res = "彼女の"; break;
+			case 0x23: res = "彼女自身"; break;
+			case 0x24: res = "誰か"; break;
+			case 0x25: res = "誰か"; break;
+			case 0x26: res = "誰かの"; break;
+			case 0x27: res = "彼女自身"; break;
+#else /* JP */
 			case 0x20: res = "she"; break;
 			case 0x21: res = "her"; break;
 			case 0x22: res = "her"; break;
@@ -771,6 +854,7 @@ void monster_desc(char *desc, size_t max, const monster_type *m_ptr, int mode)
 			case 0x25: res = "someone"; break;
 			case 0x26: res = "someone's"; break;
 			case 0x27: res = "herself"; break;
+#endif /* JP */
 		}
 
 		/* Copy the result */
@@ -782,9 +866,15 @@ void monster_desc(char *desc, size_t max, const monster_type *m_ptr, int mode)
 	else if ((mode & 0x02) && (mode & 0x01))
 	{
 		/* The monster is visible, so use its gender */
+#ifdef JP
+		if (r_ptr->flags1 & (RF1_FEMALE)) my_strcpy(desc, "彼女自身", max);
+		else if (r_ptr->flags1 & (RF1_MALE)) my_strcpy(desc, "彼自身", max);
+		else my_strcpy(desc, "それ自身", max);
+#else /* JP */
 		if (r_ptr->flags1 & (RF1_FEMALE)) my_strcpy(desc, "herself", max);
 		else if (r_ptr->flags1 & (RF1_MALE)) my_strcpy(desc, "himself", max);
 		else my_strcpy(desc, "itself", max);
+#endif /* JP */
 	}
 
 
@@ -804,7 +894,11 @@ void monster_desc(char *desc, size_t max, const monster_type *m_ptr, int mode)
 			/* XXX Check plurality for "some" */
 
 			/* Indefinite monsters need an indefinite article */
+#ifdef JP
+			my_strcpy(desc, "", max);
+#else /* JP */
 			my_strcpy(desc, is_a_vowel(name[0]) ? "an " : "a ", max);
+#endif /* JP */
 			my_strcat(desc, name, max);
 		}
 
@@ -812,7 +906,11 @@ void monster_desc(char *desc, size_t max, const monster_type *m_ptr, int mode)
 		else
 		{
 			/* Definite monsters need a definite article */
+#ifdef JP
+			my_strcpy(desc, "", max);
+#else /* JP */
 			my_strcpy(desc, "the ", max);
+#endif /* JP */
 			my_strcat(desc, name, max);
 		}
 
@@ -822,14 +920,22 @@ void monster_desc(char *desc, size_t max, const monster_type *m_ptr, int mode)
 			/* XXX Check for trailing "s" */
 
 			/* Simply append "apostrophe" and "s" */
+#ifdef JP
+			my_strcat(desc, "の", max);
+#else /* JP */
 			my_strcat(desc, "'s", max);
+#endif /* JP */
 		}
 
 		/* Mention "offscreen" monsters XXX XXX */
 		if (!panel_contains(m_ptr->fy, m_ptr->fx))
 		{
 			/* Append special notation */
+#ifdef JP
+			my_strcat(desc, " (画面外)", max);
+#else /* JP */
 			my_strcat(desc, " (offscreen)", max);
+#endif /* JP */
 		}
 	}
 }
@@ -1510,7 +1616,12 @@ static bool place_monster_one(int y, int x, int r_idx, bool slp)
 	if (!r_ptr->name) return (FALSE);
 
 	/* Name */
+#ifdef JP
+	/* 英日切り替え機能に対応 */
+	name = X_r_name(r_ptr);
+#else /* JP */
 	name = (r_name + r_ptr->name);
+#endif /* JP */
 
 
 	/* Hack -- "unique" monsters must be "unique" */
@@ -1536,7 +1647,11 @@ static bool place_monster_one(int y, int x, int r_idx, bool slp)
 		if (r_ptr->flags1 & (RF1_UNIQUE))
 		{
 			/* Message for cheaters */
+#ifdef JP
+			if (cheat_hear) msg_format("深層のユニーク・モンスター (%s)。", name);
+#else /* JP */
 			if (cheat_hear) msg_format("Deep Unique (%s).", name);
+#endif /* JP */
 
 			/* Boost rating by twice delta-depth */
 			rating += (r_ptr->level - p_ptr->depth) * 2;
@@ -1546,7 +1661,11 @@ static bool place_monster_one(int y, int x, int r_idx, bool slp)
 		else
 		{
 			/* Message for cheaters */
+#ifdef JP
+			if (cheat_hear) msg_format("深層のモンスター (%s)。", name);
+#else /* JP */
 			if (cheat_hear) msg_format("Deep Monster (%s).", name);
+#endif /* JP */
 
 			/* Boost rating by delta-depth */
 			rating += (r_ptr->level - p_ptr->depth);
@@ -1557,7 +1676,11 @@ static bool place_monster_one(int y, int x, int r_idx, bool slp)
 	else if (r_ptr->flags1 & (RF1_UNIQUE))
 	{
 		/* Unique monsters induce message */
+#ifdef JP
+		if (cheat_hear) msg_format("ユニーク・モンスター (%s)。", name);
+#else /* JP */
 		if (cheat_hear) msg_format("Unique (%s).", name);
+#endif /* JP */
 	}
 
 
@@ -1970,7 +2093,11 @@ bool alloc_monster(int dis, bool slp)
 	{
 		if (cheat_xtra || cheat_hear)
 		{
+#ifdef JP
+			msg_print("警告！新たなモンスターを配置できません。");
+#else /* JP */
 			msg_print("Warning! Could not allocate a new monster.");
+#endif /* JP */
 		}
 
 		return FALSE;
@@ -2260,7 +2387,11 @@ void message_pain(int m_idx, int dam)
 	/* Notice non-damage */
 	if (dam == 0)
 	{
+#ifdef JP
+		msg_format("%^sはダメージを受けていない。", m_name);
+#else /* JP */
 		msg_format("%^s is unharmed.", m_name);
+#endif /* JP */
 		return;
 	}
 
@@ -2274,6 +2405,22 @@ void message_pain(int m_idx, int dam)
 	/* Jelly's, Mold's, Vortex's, Quthl's */
 	if (strchr("jmvQ", r_ptr->d_char))
 	{
+#ifdef JP
+		if (percentage > 95)
+			msg_format("%^sはほとんど気にとめていない。", m_name);
+		else if (percentage > 75)
+			msg_format("%^sはしり込みした。", m_name);
+		else if (percentage > 50)
+			msg_format("%^sは縮こまった。", m_name);
+		else if (percentage > 35)
+			msg_format("%^sは痛みに震えた。", m_name);
+		else if (percentage > 20)
+			msg_format("%^sは身もだえした。", m_name);
+		else if (percentage > 10)
+			msg_format("%^sは苦痛で身もだえした。", m_name);
+		else
+			msg_format("%^sはぐにゃぐにゃと痙攣した。", m_name);
+#else /* JP */
 		if (percentage > 95)
 			msg_format("%^s barely notices.", m_name);
 		else if (percentage > 75)
@@ -2288,11 +2435,28 @@ void message_pain(int m_idx, int dam)
 			msg_format("%^s writhes in agony.", m_name);
 		else
 			msg_format("%^s jerks limply.", m_name);
+#endif /* JP */
 	}
 
 	/* Dogs and Hounds */
 	else if (strchr("CZ", r_ptr->d_char))
 	{
+#ifdef JP
+		if (percentage > 95)
+			msg_format("%^sは攻撃に肩をすくめた。", m_name);
+		else if (percentage > 75)
+			msg_format("%^sは痛みでうなった。", m_name);
+		else if (percentage > 50)
+			msg_format("%^sは痛みでキャンキャン吠えた。", m_name);
+		else if (percentage > 35)
+			msg_format("%^sは痛みで鳴きわめいた。", m_name);
+		else if (percentage > 20)
+			msg_format("%^sは苦痛のあまり鳴きわめいた。", m_name);
+		else if (percentage > 10)
+			msg_format("%^sは苦痛でもだえ苦しんだ。", m_name);
+		else
+			msg_format("%^sは弱々しく吠えた。", m_name);
+#else /* JP */
 		if (percentage > 95)
 			msg_format("%^s shrugs off the attack.", m_name);
 		else if (percentage > 75)
@@ -2307,11 +2471,28 @@ void message_pain(int m_idx, int dam)
 			msg_format("%^s writhes in agony.", m_name);
 		else
 			msg_format("%^s yelps feebly.", m_name);
+#endif /* JP */
 	}
 
 	/* One type of monsters (ignore,squeal,shriek) */
 	else if (strchr("FIKMRSXabclqrst", r_ptr->d_char))
 	{
+#ifdef JP
+		if (percentage > 95)
+			msg_format("%^sは攻撃を気にとめていない。", m_name);
+		else if (percentage > 75)
+			msg_format("%^sは痛みでうなった。", m_name);
+		else if (percentage > 50)
+			msg_format("%^sは痛みで叫んだ。", m_name);
+		else if (percentage > 35)
+			msg_format("%^sは痛みで絶叫した。", m_name);
+		else if (percentage > 20)
+			msg_format("%^sは苦痛のあまり絶叫した。", m_name);
+		else if (percentage > 10)
+			msg_format("%^sは苦痛でもだえ苦しんだ。", m_name);
+		else
+			msg_format("%^sは弱々しく叫んだ。", m_name);
+#else /* JP */
 		if (percentage > 95)
 			msg_format("%^s ignores the attack.", m_name);
 		else if (percentage > 75)
@@ -2326,11 +2507,28 @@ void message_pain(int m_idx, int dam)
 			msg_format("%^s writhes in agony.", m_name);
 		else
 			msg_format("%^s cries out feebly.", m_name);
+#endif /* JP */
 	}
 
 	/* Another type of monsters (shrug,cry,scream) */
 	else
 	{
+#ifdef JP
+		if (percentage > 95)
+			msg_format("%^sは攻撃に肩をすくめた。", m_name);
+		else if (percentage > 75)
+			msg_format("%^sは痛みでうなった。", m_name);
+		else if (percentage > 50)
+			msg_format("%^sは痛みで叫んだ。", m_name);
+		else if (percentage > 35)
+			msg_format("%^sは痛みで絶叫した。", m_name);
+		else if (percentage > 20)
+			msg_format("%^sは苦痛のあまり絶叫した。", m_name);
+		else if (percentage > 10)
+			msg_format("%^sは苦痛でもだえ苦しんだ。", m_name);
+		else
+			msg_format("%^sは弱々しく叫んだ。", m_name);
+#else /* JP */
 		if (percentage > 95)
 			msg_format("%^s shrugs off the attack.", m_name);
 		else if (percentage > 75)
@@ -2345,6 +2543,7 @@ void message_pain(int m_idx, int dam)
 			msg_format("%^s writhes in agony.", m_name);
 		else
 			msg_format("%^s cries out feebly.", m_name);
+#endif /* JP */
 	}
 }
 

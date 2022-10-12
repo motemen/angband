@@ -69,45 +69,95 @@ typedef struct
  */
 static const grouper group_item[] =
 {
+#ifdef JP
+	{ TV_SHOT,		"弾" },
+#else
 	{ TV_SHOT,		"Ammo" },
+#endif
 	{ TV_ARROW,		  NULL },
 	{ TV_BOLT,		  NULL },
 
+#ifdef JP
+	{ TV_BOW,		"射撃武器" },
+#else
 	{ TV_BOW,		"Bows" },
+#endif
 
+#ifdef JP
+	{ TV_SWORD,		"武器" },
+#else
 	{ TV_SWORD,		"Weapons" },
+#endif
 	{ TV_POLEARM,	  NULL },
 	{ TV_HAFTED,	  NULL },
 	{ TV_DIGGING,	  NULL },
 
+#ifdef JP
+	{ TV_SOFT_ARMOR,	"防具（体）" },
+#else
 	{ TV_SOFT_ARMOR,	"Armour (Body)" },
+#endif
 	{ TV_HARD_ARMOR,	  NULL },
 	{ TV_DRAG_ARMOR,	  NULL },
 
+#ifdef JP
+	{ TV_CLOAK,		"防具（その他）" },
+#else
 	{ TV_CLOAK,		"Armour (Misc)" },
+#endif
 	{ TV_SHIELD,	  NULL },
 	{ TV_HELM,		  NULL },
 	{ TV_CROWN,		  NULL },
 	{ TV_GLOVES,	  NULL },
 	{ TV_BOOTS,		  NULL },
 
+#ifdef JP
+	{ TV_AMULET,        "アミュレット" },
+	{ TV_RING,          "指輪" },
+#else
 	{ TV_AMULET,	"Amulets" },
 	{ TV_RING,		"Rings" },
+#endif
 
+#ifdef JP
+	{ TV_SCROLL,        "巻物" },
+	{ TV_POTION,        "薬" },
+	{ TV_FOOD,          "食料" },
+#else
 	{ TV_SCROLL,	"Scrolls" },
 	{ TV_POTION,	"Potions" },
 	{ TV_FOOD,		"Food" },
+#endif
 
+#ifdef JP
+        { TV_ROD,           "ロッド" },
+	{ TV_WAND,          "魔法棒" },
+	{ TV_STAFF,         "杖" },
+#else
 	{ TV_ROD,		"Rods" },
 	{ TV_WAND,		"Wands" },
 	{ TV_STAFF,		"Staffs" },
+#endif
 
+#ifdef JP
+	{ TV_MAGIC_BOOK,	"魔法書 (メイジ）" },
+	{ TV_PRAYER_BOOK,	"魔法書 (プリースト）" },
+#else
 	{ TV_MAGIC_BOOK,	"Books (Mage)" },
 	{ TV_PRAYER_BOOK,	"Books (Priest)" },
+#endif
 
+#ifdef JP
+	{ TV_CHEST,         "箱" },
+#else
 	{ TV_CHEST,		"Chests" },
+#endif
 
+#ifdef JP
+	{ TV_SPIKE,         "その他" },
+#else
 	{ TV_SPIKE,		"Various" },
+#endif
 	{ TV_LITE,		  NULL },
 	{ TV_FLASK,		  NULL },
 	{ TV_JUNK,		  NULL },
@@ -215,7 +265,11 @@ static void kind_info(char *buf, char *dam, char *wgt, int *lev, s32b *val, int 
 
 
 	/* Weight */
+#ifdef JP
+	sprintf(wgt, "%3d.%02d", lbtokg1(i_ptr->weight) , lbtokg2(i_ptr->weight));
+#else
 	sprintf(wgt, "%3d.%d", i_ptr->weight / 10, i_ptr->weight % 10);
+#endif
 }
 
 
@@ -247,7 +301,11 @@ static void spoil_obj_desc(cptr fname)
 	/* Oops */
 	if (!fff)
 	{
+#ifdef JP
+		msg_print("スポイラーファイルを作成できません。");
+#else
 		msg_print("Cannot create spoiler file.");
+#endif
 		return;
 	}
 
@@ -336,12 +394,20 @@ static void spoil_obj_desc(cptr fname)
 	/* Check for errors */
 	if (ferror(fff) || my_fclose(fff))
 	{
+#ifdef JP
+		msg_print("スポイラーファイルをクローズできません。");
+#else
 		msg_print("Cannot close spoiler file.");
+#endif
 		return;
 	}
 
 	/* Message */
+#ifdef JP
+	msg_print("スポイラーファイルの作成に成功しました。");
+#else
 	msg_print("Successfully created a spoiler file.");
+#endif
 }
 
 
@@ -358,26 +424,53 @@ static void spoil_obj_desc(cptr fname)
  */
 static const grouper group_artifact[] =
 {
+#ifdef JP
+	{ TV_SWORD,             "刃のついた武器" },
+	{ TV_POLEARM,           "竿状武器" },
+	{ TV_HAFTED,            "鈍器" },
+	{ TV_BOW,               "弓" },
+	{ TV_DIGGING,		"採掘道具" },
+#else
 	{ TV_SWORD,         "Edged Weapons" },
 	{ TV_POLEARM,       "Polearms" },
 	{ TV_HAFTED,        "Hafted Weapons" },
 	{ TV_BOW,           "Bows" },
 	{ TV_DIGGING,       "Diggers" },
+#endif
 
+#ifdef JP
+	{ TV_SOFT_ARMOR,        "防具 (体)" },
+#else
 	{ TV_SOFT_ARMOR,    "Body Armor" },
+#endif
 	{ TV_HARD_ARMOR,    NULL },
 	{ TV_DRAG_ARMOR,    NULL },
 
+#ifdef JP
+	{ TV_CLOAK,             "クローク" },
+	{ TV_SHIELD,            "シールド" },
+	{ TV_HELM,              "帽子/冠" },
+	{ TV_CROWN,             NULL },
+	{ TV_GLOVES,            "グローブ" },
+	{ TV_BOOTS,             "ブーツ" },
+#else
 	{ TV_CLOAK,         "Cloaks" },
 	{ TV_SHIELD,        "Shields" },
 	{ TV_HELM,          "Helms/Crowns" },
 	{ TV_CROWN,         NULL },
 	{ TV_GLOVES,        "Gloves" },
 	{ TV_BOOTS,         "Boots" },
+#endif
 
+#ifdef JP
+	{ TV_LITE,              "光源" },
+	{ TV_AMULET,            "アミュレット" },
+	{ TV_RING,              "指輪" },
+#else
 	{ TV_LITE,          "Light Sources" },
 	{ TV_AMULET,        "Amulets" },
 	{ TV_RING,          "Rings" },
+#endif
 
 	{ 0, NULL }
 };
@@ -451,7 +544,11 @@ static void spoil_artifact(cptr fname)
 	/* Oops */
 	if (!fff)
 	{
+#ifdef JP
+		msg_print("スポイラーファイルを作成できません。");
+#else
 		msg_print("Cannot create spoiler file.");
+#endif
 		return;
 	}
 
@@ -520,12 +617,20 @@ static void spoil_artifact(cptr fname)
 	/* Check for errors */
 	if (ferror(fff) || my_fclose(fff))
 	{
+#ifdef JP
+		msg_print("スポイラーファイルをクローズできません。");
+#else
 		msg_print("Cannot close spoiler file.");
+#endif
 		return;
 	}
 
 	/* Message */
+#ifdef JP
+	msg_print("スポイラーファイルの作成に成功しました。");
+#else
 	msg_print("Successfully created a spoiler file.");
+#endif
 }
 
 
@@ -565,7 +670,11 @@ static void spoil_mon_desc(cptr fname)
 	/* Oops */
 	if (!fff)
 	{
+#ifdef JP
+		msg_print("スポイラーファイルを作成できません。");
+#else
 		msg_print("Cannot create spoiler file.");
+#endif
 		return;
 	}
 
@@ -604,7 +713,11 @@ static void spoil_mon_desc(cptr fname)
 	{
 		monster_race *r_ptr = &r_info[who[i]];
 
+#ifdef JP
+		cptr name = X_r_name(r_ptr);
+#else
 		cptr name = (r_name + r_ptr->name);
+#endif
 
 		/* Get the "name" */
 		if (r_ptr->flags1 & (RF1_QUESTOR))
@@ -617,7 +730,11 @@ static void spoil_mon_desc(cptr fname)
 		}
 		else
 		{
+#ifdef JP
+			strnfmt(nam, sizeof(nam), X_monster("The %s", "    %s"), name);
+#else /* JP */
 			strnfmt(nam, sizeof(nam), "The %s", name);
+#endif /* JP */
 		}
 
 
@@ -672,12 +789,20 @@ static void spoil_mon_desc(cptr fname)
 	/* Check for errors */
 	if (ferror(fff) || my_fclose(fff))
 	{
+#ifdef JP
+		msg_print("スポイラーファイルをクローズできません。");
+#else
 		msg_print("Cannot close spoiler file.");
+#endif
 		return;
 	}
 
 	/* Worked */
+#ifdef JP
+	msg_print("スポイラーファイルの作成に成功しました。");
+#else
 	msg_print("Successfully created a spoiler file.");
+#endif
 }
 
 
@@ -712,7 +837,11 @@ static void spoil_mon_info(cptr fname)
 	/* Oops */
 	if (!fff)
 	{
+#ifdef JP
+		msg_print("スポイラーファイルを作成できません。");
+#else
 		msg_print("Cannot create spoiler file.");
+#endif
 		return;
 	}
 
@@ -764,11 +893,17 @@ static void spoil_mon_info(cptr fname)
 		}
 		else
 		{
+#ifndef JP
 			text_out("The ");
+#endif
 		}
 
 		/* Name */
+#ifdef JP
+		strnfmt(buf, sizeof(buf), "%s/%s  (", (r_name + r_ptr->J_name), (r_name+r_ptr->name));	/* ---)--- */
+#else
 		strnfmt(buf, sizeof(buf), "%s  (", (r_name + r_ptr->name));	/* ---)--- */
+#endif
 		text_out(buf);
 
 		/* Color */
@@ -784,45 +919,81 @@ static void spoil_mon_info(cptr fname)
 		text_out(buf);
 
 		/* Number */
+#ifdef JP
+		sprintf(buf, "番号:%d  ", r_idx);
+#else
 		sprintf(buf, "Num:%d  ", r_idx);
+#endif
 		text_out(buf);
 
 		/* Level */
+#ifdef JP
+		sprintf(buf, "階:%d  ", r_ptr->level);
+#else
 		sprintf(buf, "Lev:%d  ", r_ptr->level);
+#endif
 		text_out(buf);
 
 		/* Rarity */
+#ifdef JP
+		sprintf(buf, "稀少度:%d  ", r_ptr->rarity);
+#else
 		sprintf(buf, "Rar:%d  ", r_ptr->rarity);
+#endif
 		text_out(buf);
 
 		/* Speed */
 		if (r_ptr->speed >= 110)
 		{
+#ifdef JP
+			sprintf(buf, "スピード:+%d  ", (r_ptr->speed - 110));
+#else
 			sprintf(buf, "Spd:+%d  ", (r_ptr->speed - 110));
+#endif
 		}
 		else
 		{
+#ifdef JP
+			sprintf(buf, "スピード:-%d  ", (110 - r_ptr->speed));
+#else
 			sprintf(buf, "Spd:-%d  ", (110 - r_ptr->speed));
+#endif
 		}
 		text_out(buf);
 
 		/* Hitpoints */
 		if ((r_ptr->flags1 & RF1_FORCE_MAXHP) || (r_ptr->hside == 1))
 		{
+#ifdef JP
+			sprintf(buf, "HP:%d  ", r_ptr->hdice * r_ptr->hside);
+#else
 			sprintf(buf, "Hp:%d  ", r_ptr->hdice * r_ptr->hside);
+#endif
 		}
 		else
 		{
+#ifdef JP
+			sprintf(buf, "HP:%dd%d  ", r_ptr->hdice, r_ptr->hside);
+#else
 			sprintf(buf, "Hp:%dd%d  ", r_ptr->hdice, r_ptr->hside);
+#endif
 		}
 		text_out(buf);
 
 		/* Armor Class */
+#ifdef JP
+		sprintf(buf, "AC:%d  ", r_ptr->ac);
+#else
 		sprintf(buf, "Ac:%d  ", r_ptr->ac);
+#endif
 		text_out(buf);
 
 		/* Experience */
+#ifdef JP
+		sprintf(buf, "経験値:%ld\n", (long)(r_ptr->mexp));
+#else
 		sprintf(buf, "Exp:%ld\n", (long)(r_ptr->mexp));
+#endif
 		text_out(buf);
 
 		/* Describe */
@@ -838,11 +1009,19 @@ static void spoil_mon_info(cptr fname)
 	/* Check for errors */
 	if (ferror(fff) || my_fclose(fff))
 	{
+#ifdef JP
+		msg_print("スポイラーファイルをクローズできません。");
+#else
 		msg_print("Cannot close spoiler file.");
+#endif
 		return;
 	}
 
+#ifdef JP
+	msg_print("スポイラーファイルの作成に成功しました。");
+#else
 	msg_print("Successfully created a spoiler file.");
+#endif
 }
 
 
@@ -866,16 +1045,32 @@ void do_cmd_spoilers(void)
 		Term_clear();
 
 		/* Info */
+#ifdef JP
+		prt("スポイラーファイル作成", 2, 0);
+#else
 		prt("Create a spoiler file.", 2, 0);
+#endif
 
 		/* Prompt for a file */
+#ifdef JP
+		prt("(1) 簡潔なアイテム情報 (obj-desc.spo)", 5, 5);
+		prt("(2) 簡潔な伝説のアイテム情報 (artifact.spo)", 6, 5);
+		prt("(3) 簡潔なモンスター情報 (mon-desc.spo)", 7, 5);
+		prt("(4) 完全なモンスター情報 (mon-info.spo)", 8, 5);
+#else
 		prt("(1) Brief Object Info (obj-desc.spo)", 5, 5);
 		prt("(2) Brief Artifact Info (artifact.spo)", 6, 5);
 		prt("(3) Brief Monster Info (mon-desc.spo)", 7, 5);
 		prt("(4) Full Monster Info (mon-info.spo)", 8, 5);
+#endif
 
 		/* Prompt */
+#ifdef JP
+		prt("コマンド:", 18, 0);
+#else
 		prt("Command: ", 12, 0);
+#endif
+
 
 		/* Get a choice */
 		ch = inkey();
@@ -913,7 +1108,11 @@ void do_cmd_spoilers(void)
 		/* Oops */
 		else
 		{
+#ifdef JP
+			bell("無効なコマンドです！");
+#else
 			bell("Illegal command for spoilers!");
+#endif
 		}
 
 		/* Flush messages */

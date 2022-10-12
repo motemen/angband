@@ -8,6 +8,12 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3-v6 日本語版製作: しとしん
+ * 2.8.1      対応        : FIRST, しとしん
+ * 2.8.3      対応        : FIRST, しとしん
+ */
+
 #include "angband.h"
 
 
@@ -41,25 +47,41 @@ bool hp_player(int num)
 		/* Heal 0-4 */
 		if (num < 5)
 		{
+#ifdef JP
+			msg_print("少し気分が良くなった。");
+#else /* JP */
 			msg_print("You feel a little better.");
+#endif /* JP */
 		}
 
 		/* Heal 5-14 */
 		else if (num < 15)
 		{
+#ifdef JP
+			msg_print("気分が良くなった。");
+#else /* JP */
 			msg_print("You feel better.");
+#endif /* JP */
 		}
 
 		/* Heal 15-34 */
 		else if (num < 35)
 		{
+#ifdef JP
+			msg_print("とても気分が良くなった。");
+#else /* JP */
 			msg_print("You feel much better.");
+#endif /* JP */
 		}
 
 		/* Heal 35+ */
 		else
 		{
+#ifdef JP
+			msg_print("ひじょうに気分が良くなった。");
+#else /* JP */
 			msg_print("You feel very good.");
+#endif /* JP */
 		}
 
 		/* Notice */
@@ -83,7 +105,11 @@ void warding_glyph(void)
 	/* XXX XXX XXX */
 	if (!cave_clean_bold(py, px))
 	{
+#ifdef JP
+		msg_print("床上のアイテムが呪文を跳ね返した。");
+#else /* JP */
 		msg_print("The object resists the spell.");
+#endif /* JP */
 		return;
 	}
 
@@ -99,12 +125,21 @@ void warding_glyph(void)
  */
 static cptr desc_stat_pos[] =
 {
+#ifdef JP
+	"強く",
+	"知的に",
+	"賢く",
+	"器用に",
+	"健康に",
+	"美しく"
+#else /* JP */
 	"strong",
 	"smart",
 	"wise",
 	"dextrous",
 	"healthy",
 	"cute"
+#endif /* JP */
 };
 
 
@@ -113,12 +148,21 @@ static cptr desc_stat_pos[] =
  */
 static cptr desc_stat_neg[] =
 {
+#ifdef JP
+	"弱く",
+	"無知に",
+	"愚かに",
+	"不器用に",
+	"不健康に",
+	"醜く"
+#else /* JP */
 	"weak",
 	"stupid",
 	"naive",
 	"clumsy",
 	"sickly",
 	"ugly"
+#endif /* JP */
 };
 
 
@@ -144,8 +188,13 @@ bool do_dec_stat(int stat)
 	if (sust)
 	{
 		/* Message */
+#ifdef JP
+		msg_format("一瞬とても%sなった気がしたが、気のせいだったようだ。",
+		           desc_stat_neg[stat]);
+#else /* JP */
 		msg_format("You feel very %s for a moment, but the feeling passes.",
 		           desc_stat_neg[stat]);
+#endif /* JP */
 
 		/* Notice effect */
 		return (TRUE);
@@ -155,7 +204,11 @@ bool do_dec_stat(int stat)
 	if (dec_stat(stat, 10, FALSE))
 	{
 		/* Message */
+#ifdef JP
+		message_format(MSG_DRAIN_STAT, stat, "ひどく%sなった気がする。", desc_stat_neg[stat]);
+#else /* JP */
 		message_format(MSG_DRAIN_STAT, stat, "You feel very %s.", desc_stat_neg[stat]);
+#endif /* JP */
 
 		/* Notice effect */
 		return (TRUE);
@@ -175,7 +228,11 @@ bool do_res_stat(int stat)
 	if (res_stat(stat))
 	{
 		/* Message */
+#ifdef JP
+		msg_format("元通りに%sなった気がする。", desc_stat_pos[stat]);
+#else /* JP */
 		msg_format("You feel less %s.", desc_stat_neg[stat]);
+#endif /* JP */
 
 		/* Notice */
 		return (TRUE);
@@ -200,7 +257,11 @@ bool do_inc_stat(int stat)
 	if (inc_stat(stat))
 	{
 		/* Message */
+#ifdef JP
+		msg_format("君はとても%sなった！", desc_stat_pos[stat]);
+#else /* JP */
 		msg_format("You feel very %s!", desc_stat_pos[stat]);
+#endif /* JP */
 
 		/* Notice */
 		return (TRUE);
@@ -210,7 +271,11 @@ bool do_inc_stat(int stat)
 	if (res)
 	{
 		/* Message */
+#ifdef JP
+		msg_format("元通りに%sなった気がする。", desc_stat_pos[stat]);
+#else /* JP */
 		msg_format("You feel less %s.", desc_stat_neg[stat]);
+#endif /* JP */
 
 		/* Notice */
 		return (TRUE);
@@ -370,7 +435,11 @@ bool restore_level(void)
 	if (p_ptr->exp < p_ptr->max_exp)
 	{
 		/* Message */
+#ifdef JP
+		msg_print("生命力が戻ってきた気がする。");
+#else /* JP */
 		msg_print("You feel your life energies returning.");
+#endif /* JP */
 
 		/* Restore the experience */
 		p_ptr->exp = p_ptr->max_exp;
@@ -433,308 +502,600 @@ void self_knowledge(void)
 
 	if (p_ptr->blind)
 	{
+#ifdef JP
+		info[i++] = "あなたは目が見えない。";
+#else /* JP */
 		info[i++] = "You cannot see.";
+#endif /* JP */
 	}
 	if (p_ptr->confused)
 	{
+#ifdef JP
+		info[i++] = "あなたは混乱している。";
+#else /* JP */
 		info[i++] = "You are confused.";
+#endif /* JP */
 	}
 	if (p_ptr->afraid)
 	{
+#ifdef JP
+		info[i++] = "あなたは恐怖に侵されている。";
+#else /* JP */
 		info[i++] = "You are terrified.";
+#endif /* JP */
 	}
 	if (p_ptr->cut)
 	{
+#ifdef JP
+		info[i++] = "あなたは出血している。";
+#else /* JP */
 		info[i++] = "You are bleeding.";
+#endif /* JP */
 	}
 	if (p_ptr->stun)
 	{
+#ifdef JP
+		info[i++] = "あなたはもうろうとしている。";
+#else /* JP */
 		info[i++] = "You are stunned.";
+#endif /* JP */
 	}
 	if (p_ptr->poisoned)
 	{
+#ifdef JP
+		info[i++] = "あなたは毒に冒されている。";
+#else /* JP */
 		info[i++] = "You are poisoned.";
+#endif /* JP */
 	}
 	if (p_ptr->image)
 	{
+#ifdef JP
+		info[i++] = "あなたは幻覚を見ている。";
+#else /* JP */
 		info[i++] = "You are hallucinating.";
+#endif /* JP */
 	}
 
 	if (p_ptr->aggravate)
 	{
+#ifdef JP
+		info[i++] = "あなたはモンスターを怒らせている。";
+#else /* JP */
 		info[i++] = "You aggravate monsters.";
+#endif /* JP */
 	}
 	if (p_ptr->teleport)
 	{
+#ifdef JP
+		info[i++] = "あなたの位置はひじょうに不安定だ。";
+#else /* JP */
 		info[i++] = "Your position is very uncertain.";
+#endif /* JP */
 	}
 
 	if (p_ptr->blessed)
 	{
+#ifdef JP
+		info[i++] = "あなたは公正さを感じている。";
+#else /* JP */
 		info[i++] = "You feel righteous.";
+#endif /* JP */
 	}
 	if (p_ptr->hero)
 	{
+#ifdef JP
+		info[i++] = "あなたはヒーロー気分だ。";
+#else /* JP */
 		info[i++] = "You feel heroic.";
+#endif /* JP */
 	}
 	if (p_ptr->shero)
 	{
+#ifdef JP
+		info[i++] = "あなたは戦闘狂だ。";
+#else /* JP */
 		info[i++] = "You are in a battle rage.";
+#endif /* JP */
 	}
 	if (p_ptr->protevil)
 	{
+#ifdef JP
+		info[i++] = "あなたは邪悪なる存在から守られている。";
+#else /* JP */
 		info[i++] = "You are protected from evil.";
+#endif /* JP */
 	}
 	if (p_ptr->shield)
 	{
+#ifdef JP
+		info[i++] = "あなたは神秘のシールドで守られている。";
+#else /* JP */
 		info[i++] = "You are protected by a mystic shield.";
+#endif /* JP */
 	}
 	if (p_ptr->invuln)
 	{
+#ifdef JP
+		info[i++] = "あなたは現在傷つかない。";
+#else /* JP */
 		info[i++] = "You are temporarily invulnerable.";
+#endif /* JP */
 	}
 	if (p_ptr->confusing)
 	{
+#ifdef JP
+		info[i++] = "あなたの手は赤く輝いている。";
+#else /* JP */
 		info[i++] = "Your hands are glowing dull red.";
+#endif /* JP */
 	}
 	if (p_ptr->searching)
 	{
+#ifdef JP
+		info[i++] = "あなたはひじょうに注意深く周囲を見渡している。";
+#else /* JP */
 		info[i++] = "You are looking around very carefully.";
+#endif /* JP */
 	}
 	if (p_ptr->new_spells)
 	{
+#ifdef JP
+		info[i++] = "あなたは呪文や祈りを学ぶことができる。";
+#else /* JP */
 		info[i++] = "You can learn some spells/prayers.";
+#endif /* JP */
 	}
 	if (p_ptr->word_recall)
 	{
+#ifdef JP
+		info[i++] = "あなたはすぐに帰還するだろう。";
+#else /* JP */
 		info[i++] = "You will soon be recalled.";
+#endif /* JP */
 	}
 	if (p_ptr->see_infra)
 	{
+#ifdef JP
+		info[i++] = "あなたの瞳は赤外線に敏感である。";
+#else /* JP */
 		info[i++] = "Your eyes are sensitive to infrared light.";
+#endif /* JP */
 	}
 
 	if (p_ptr->slow_digest)
 	{
+#ifdef JP
+		info[i++] = "あなたは食欲が少ない。";
+#else /* JP */
 		info[i++] = "Your appetite is small.";
+#endif /* JP */
 	}
 	if (p_ptr->ffall)
 	{
+#ifdef JP
+		info[i++] = "あなたは柔らかに着地する。";
+#else /* JP */
 		info[i++] = "You land gently.";
+#endif /* JP */
 	}
 	if (p_ptr->lite)
 	{
+#ifdef JP
+		info[i++] = "あなたは明かりで輝いている。";
+#else /* JP */
 		info[i++] = "You are glowing with light.";
+#endif /* JP */
 	}
 	if (p_ptr->regenerate)
 	{
+#ifdef JP
+		info[i++] = "あなたは素早く体力を回復する。";
+#else /* JP */
 		info[i++] = "You regenerate quickly.";
+#endif /* JP */
 	}
 	if (p_ptr->telepathy)
 	{
+#ifdef JP
+		info[i++] = "あなたはテレパシーを持っている。";
+#else /* JP */
 		info[i++] = "You have ESP.";
+#endif /* JP */
 	}
 	if (p_ptr->see_inv)
 	{
+#ifdef JP
+		info[i++] = "あなたは透明なモンスターを見ることができる。";
+#else /* JP */
 		info[i++] = "You can see invisible creatures.";
+#endif /* JP */
 	}
 	if (p_ptr->free_act)
 	{
+#ifdef JP
+		info[i++] = "あなたは麻痺知らずの効果を持っている。";
+#else /* JP */
 		info[i++] = "You have free action.";
+#endif /* JP */
 	}
 	if (p_ptr->hold_life)
 	{
+#ifdef JP
+		info[i++] = "あなたは自己の生命力をしっかりと維持する。";
+#else /* JP */
 		info[i++] = "You have a firm hold on your life force.";
+#endif /* JP */
 	}
 
 	if (p_ptr->immune_acid)
 	{
+#ifdef JP
+		info[i++] = "あなたは酸に対する完全なる免疫を持っている。";
+#else /* JP */
 		info[i++] = "You are completely immune to acid.";
+#endif /* JP */
 	}
 	else if ((p_ptr->resist_acid) && (p_ptr->oppose_acid))
 	{
+#ifdef JP
+		info[i++] = "あなたは酸への強力な耐性を持っている。";
+#else /* JP */
 		info[i++] = "You resist acid exceptionally well.";
+#endif /* JP */
 	}
 	else if ((p_ptr->resist_acid) || (p_ptr->oppose_acid))
 	{
+#ifdef JP
+		info[i++] = "あなたは酸への耐性を持っている。";
+#else /* JP */
 		info[i++] = "You are resistant to acid.";
+#endif /* JP */
 	}
 
 	if (p_ptr->immune_elec)
 	{
+#ifdef JP
+		info[i++] = "あなたは電撃に対する完全なる免疫を持っている。";
+#else /* JP */
 		info[i++] = "You are completely immune to lightning.";
+#endif /* JP */
 	}
 	else if ((p_ptr->resist_elec) && (p_ptr->oppose_elec))
 	{
+#ifdef JP
+		info[i++] = "あなたは電撃への強力な耐性を持っている。";
+#else /* JP */
 		info[i++] = "You resist lightning exceptionally well.";
+#endif /* JP */
 	}
 	else if ((p_ptr->resist_elec) || (p_ptr->oppose_elec))
 	{
+#ifdef JP
+		info[i++] = "あなたは電撃への耐性を持っている。";
+#else /* JP */
 		info[i++] = "You are resistant to lightning.";
+#endif /* JP */
 	}
 
 	if (p_ptr->immune_fire)
 	{
+#ifdef JP
+		info[i++] = "あなたは火に対する完全なる免疫を持っている。";
+#else /* JP */
 		info[i++] = "You are completely immune to fire.";
+#endif /* JP */
 	}
 	else if ((p_ptr->resist_fire) && (p_ptr->oppose_fire))
 	{
+#ifdef JP
+		info[i++] = "あなた火への強力な耐性を持っている。";
+#else /* JP */
 		info[i++] = "You resist fire exceptionally well.";
+#endif /* JP */
 	}
 	else if ((p_ptr->resist_fire) || (p_ptr->oppose_fire))
 	{
+#ifdef JP
+		info[i++] = "あなたは火への耐性を持っている。";
+#else /* JP */
 		info[i++] = "You are resistant to fire.";
+#endif /* JP */
 	}
 
 	if (p_ptr->immune_cold)
 	{
+#ifdef JP
+		info[i++] = "あなたは冷気に対する完全なる免疫を持っている。";
+#else /* JP */
 		info[i++] = "You are completely immune to cold.";
+#endif /* JP */
 	}
 	else if ((p_ptr->resist_cold) && (p_ptr->oppose_cold))
 	{
+#ifdef JP
+		info[i++] = "あなたは冷気への強力な耐性を持っている。";
+#else /* JP */
 		info[i++] = "You resist cold exceptionally well.";
+#endif /* JP */
 	}
 	else if ((p_ptr->resist_cold) || (p_ptr->oppose_cold))
 	{
+#ifdef JP
+		info[i++] = "あなたは冷気への耐性を持っている。";
+#else /* JP */
 		info[i++] = "You are resistant to cold.";
+#endif /* JP */
 	}
 
 	if ((p_ptr->resist_pois) && (p_ptr->oppose_pois))
 	{
+#ifdef JP
+		info[i++] = "あなたは毒への強力な耐性を持っている。";
+#else /* JP */
 		info[i++] = "You resist poison exceptionally well.";
+#endif /* JP */
 	}
 	else if ((p_ptr->resist_pois) || (p_ptr->oppose_pois))
 	{
+#ifdef JP
+		info[i++] = "あなたは毒への耐性を持っている。";
+#else /* JP */
 		info[i++] = "You are resistant to poison.";
+#endif /* JP */
 	}
 
 	if (p_ptr->resist_fear)
 	{
+#ifdef JP
+		info[i++] = "あなたは全く恐怖を感じない。";
+#else /* JP */
 		info[i++] = "You are completely fearless.";
+#endif /* JP */
 	}
 
 	if (p_ptr->resist_lite)
 	{
+#ifdef JP
+		info[i++] = "あなたは閃光への耐性を持っている。";
+#else /* JP */
 		info[i++] = "You are resistant to bright light.";
+#endif /* JP */
 	}
 	if (p_ptr->resist_dark)
 	{
+#ifdef JP
+		info[i++] = "あなたは暗黒への耐性を持っている。";
+#else /* JP */
 		info[i++] = "You are resistant to darkness.";
+#endif /* JP */
 	}
 	if (p_ptr->resist_blind)
 	{
+#ifdef JP
+		info[i++] = "あなたの目は盲目への耐性を持っている。";
+#else /* JP */
 		info[i++] = "Your eyes are resistant to blindness.";
+#endif /* JP */
 	}
 	if (p_ptr->resist_confu)
 	{
+#ifdef JP
+		info[i++] = "あなたは混乱への耐性を持っている。";
+#else /* JP */
 		info[i++] = "You are resistant to confusion.";
+#endif /* JP */
 	}
 	if (p_ptr->resist_sound)
 	{
+#ifdef JP
+		info[i++] = "あなたは音波の衝撃への耐性を持っている。";
+#else /* JP */
 		info[i++] = "You are resistant to sonic attacks.";
+#endif /* JP */
 	}
 	if (p_ptr->resist_shard)
 	{
+#ifdef JP
+		info[i++] = "あなたは破片の攻撃への耐性を持っている。";
+#else /* JP */
 		info[i++] = "You are resistant to blasts of shards.";
+#endif /* JP */
 	}
 	if (p_ptr->resist_nexus)
 	{
+#ifdef JP
+		info[i++] = "あなたは因果混乱の攻撃への耐性を持っている。";
+#else /* JP */
 		info[i++] = "You are resistant to nexus attacks.";
+#endif /* JP */
 	}
 	if (p_ptr->resist_nethr)
 	{
+#ifdef JP
+		info[i++] = "あなたは地獄の力への耐性を持っている。";
+#else /* JP */
 		info[i++] = "You are resistant to nether forces.";
+#endif /* JP */
 	}
 	if (p_ptr->resist_chaos)
 	{
+#ifdef JP
+		info[i++] = "あなたはカオスの力への耐性を持っている。";
+#else /* JP */
 		info[i++] = "You are resistant to chaos.";
+#endif /* JP */
 	}
 	if (p_ptr->resist_disen)
 	{
+#ifdef JP
+		info[i++] = "あなたは劣化への耐性を持っている。";
+#else /* JP */
 		info[i++] = "You are resistant to disenchantment.";
+#endif /* JP */
 	}
 
 	if (p_ptr->sustain_str)
 	{
+#ifdef JP
+		info[i++] = "あなたの腕力は維持されている。";
+#else /* JP */
 		info[i++] = "Your strength is sustained.";
+#endif /* JP */
 	}
 	if (p_ptr->sustain_int)
 	{
+#ifdef JP
+		info[i++] = "あなたの知能は維持されている。";
+#else /* JP */
 		info[i++] = "Your intelligence is sustained.";
+#endif /* JP */
 	}
 	if (p_ptr->sustain_wis)
 	{
+#ifdef JP
+		info[i++] = "あなたの賢さは維持されている。";
+#else /* JP */
 		info[i++] = "Your wisdom is sustained.";
+#endif /* JP */
 	}
 	if (p_ptr->sustain_con)
 	{
+#ifdef JP
+		info[i++] = "あなたの耐久力は維持されている。";
+#else /* JP */
 		info[i++] = "Your constitution is sustained.";
+#endif /* JP */
 	}
 	if (p_ptr->sustain_dex)
 	{
+#ifdef JP
+		info[i++] = "あなたの器用さは維持されている。";
+#else /* JP */
 		info[i++] = "Your dexterity is sustained.";
+#endif /* JP */
 	}
 	if (p_ptr->sustain_chr)
 	{
+#ifdef JP
+		info[i++] = "あなたの魅力は維持されている。";
+#else /* JP */
 		info[i++] = "Your charisma is sustained.";
+#endif /* JP */
 	}
 
 	if (f1 & (TR1_STR))
 	{
+#ifdef JP
+		info[i++] = "あなたの腕力は装備によって影響を受けている。";
+#else /* JP */
 		info[i++] = "Your strength is affected by your equipment.";
+#endif /* JP */
 	}
 	if (f1 & (TR1_INT))
 	{
+#ifdef JP
+		info[i++] = "あなたの知能は装備によって影響を受けている。";
+#else /* JP */
 		info[i++] = "Your intelligence is affected by your equipment.";
+#endif /* JP */
 	}
 	if (f1 & (TR1_WIS))
 	{
+#ifdef JP
+		info[i++] = "あなたの賢さは装備によって影響を受けている。";
+#else /* JP */
 		info[i++] = "Your wisdom is affected by your equipment.";
+#endif /* JP */
 	}
 	if (f1 & (TR1_DEX))
 	{
+#ifdef JP
+		info[i++] = "あなたの器用さは装備によって影響を受けている。";
+#else /* JP */
 		info[i++] = "Your dexterity is affected by your equipment.";
+#endif /* JP */
 	}
 	if (f1 & (TR1_CON))
 	{
+#ifdef JP
+		info[i++] = "あなたの耐久力は装備によって影響を受けている。";
+#else /* JP */
 		info[i++] = "Your constitution is affected by your equipment.";
+#endif /* JP */
 	}
 	if (f1 & (TR1_CHR))
 	{
+#ifdef JP
+		info[i++] = "あなたの魅力は装備によって影響を受けている。";
+#else /* JP */
 		info[i++] = "Your charisma is affected by your equipment.";
+#endif /* JP */
 	}
 
 	if (f1 & (TR1_STEALTH))
 	{
+#ifdef JP
+		info[i++] = "あなたの隠密行動能力は装備によって影響を受けている。";
+#else /* JP */
 		info[i++] = "Your stealth is affected by your equipment.";
+#endif /* JP */
 	}
 	if (f1 & (TR1_SEARCH))
 	{
+#ifdef JP
+		info[i++] = "あなたの探索能力は装備によって影響を受けている。";
+#else /* JP */
 		info[i++] = "Your searching ability is affected by your equipment.";
+#endif /* JP */
 	}
 	if (f1 & (TR1_INFRA))
 	{
+#ifdef JP
+		info[i++] = "あなたの赤外線視力は装備によって影響を受けている。";
+#else /* JP */
 		info[i++] = "Your infravision is affected by your equipment.";
+#endif /* JP */
 	}
 	if (f1 & (TR1_TUNNEL))
 	{
+#ifdef JP
+		info[i++] = "あなたの採掘能力は装備によって影響を受けている。";
+#else /* JP */
 		info[i++] = "Your digging ability is affected by your equipment.";
+#endif /* JP */
 	}
 	if (f1 & (TR1_SPEED))
 	{
+#ifdef JP
+		info[i++] = "あなたのスピードは装備によって影響を受けている。";
+#else /* JP */
 		info[i++] = "Your speed is affected by your equipment.";
+#endif /* JP */
 	}
 	if (f1 & (TR1_BLOWS))
 	{
+#ifdef JP
+		info[i++] = "あなたの攻撃速度は装備によって影響を受けている。";
+#else /* JP */
 		info[i++] = "Your attack speed is affected by your equipment.";
+#endif /* JP */
 	}
 	if (f1 & (TR1_SHOTS))
 	{
+#ifdef JP
+		info[i++] = "あなたの射撃速度は装備によって影響を受けている。";
+#else /* JP */
 		info[i++] = "Your shooting speed is affected by your equipment.";
+#endif /* JP */
 	}
 	if (f1 & (TR1_MIGHT))
 	{
+#ifdef JP
+		info[i++] = "あなたの射撃力は装備によって影響を受けている。";
+#else /* JP */
 		info[i++] = "Your shooting might is affected by your equipment.";
+#endif /* JP */
 	}
 
 
@@ -747,84 +1108,156 @@ void self_knowledge(void)
 		/* Special "Attack Bonuses" */
 		if (f1 & (TR1_BRAND_ACID))
 		{
+#ifdef JP
+			info[i++] = "あなたの武器は敵を溶かす。";
+#else /* JP */
 			info[i++] = "Your weapon melts your foes.";
+#endif /* JP */
 		}
 		if (f1 & (TR1_BRAND_ELEC))
 		{
+#ifdef JP
+			info[i++] = "あなたの武器は敵を感電させる。";
+#else /* JP */
 			info[i++] = "Your weapon shocks your foes.";
+#endif /* JP */
 		}
 		if (f1 & (TR1_BRAND_FIRE))
 		{
+#ifdef JP
+			info[i++] = "あなたの武器は敵を燃やす。";
+#else /* JP */
 			info[i++] = "Your weapon burns your foes.";
+#endif /* JP */
 		}
 		if (f1 & (TR1_BRAND_COLD))
 		{
+#ifdef JP
+			info[i++] = "あなたの武器は敵を凍らせる。";
+#else /* JP */
 			info[i++] = "Your weapon freezes your foes.";
+#endif /* JP */
 		}
 		if (f1 & (TR1_BRAND_POIS))
 		{
+#ifdef JP
+			info[i++] = "あなたの武器は敵を毒におかす。";
+#else /* JP */
 			info[i++] = "Your weapon poisons your foes.";
+#endif /* JP */
 		}
 
 		/* Special "slay" flags */
 		if (f1 & (TR1_SLAY_ANIMAL))
 		{
+#ifdef JP
+			info[i++] = "あなたの武器は動物に対して強い力を発揮する。";
+#else /* JP */
 			info[i++] = "Your weapon strikes at animals with extra force.";
+#endif /* JP */
 		}
 		if (f1 & (TR1_SLAY_EVIL))
 		{
+#ifdef JP
+			info[i++] = "あなたの武器は邪悪なる存在に対して強い力を発揮する。";
+#else /* JP */
 			info[i++] = "Your weapon strikes at evil with extra force.";
+#endif /* JP */
 		}
 		if (f1 & (TR1_SLAY_UNDEAD))
 		{
+#ifdef JP
+			info[i++] = "あなたの武器はアンデッドに対して神聖なる力を発揮する。";
+#else /* JP */
 			info[i++] = "Your weapon strikes at undead with holy wrath.";
+#endif /* JP */
 		}
 		if (f1 & (TR1_SLAY_DEMON))
 		{
+#ifdef JP
+			info[i++] = "あなたの武器はデーモンに対して神聖なる力を発揮する。";
+#else /* JP */
 			info[i++] = "Your weapon strikes at demons with holy wrath.";
+#endif /* JP */
 		}
 		if (f1 & (TR1_SLAY_ORC))
 		{
+#ifdef JP
+			info[i++] = "あなたの武器はオークに対して特に強い力を発揮する。";
+#else /* JP */
 			info[i++] = "Your weapon is especially deadly against orcs.";
+#endif /* JP */
 		}
 		if (f1 & (TR1_SLAY_TROLL))
 		{
+#ifdef JP
+			info[i++] = "あなたの武器はトロルに対して特に強い力を発揮する。";
+#else /* JP */
 			info[i++] = "Your weapon is especially deadly against trolls.";
+#endif /* JP */
 		}
 		if (f1 & (TR1_SLAY_GIANT))
 		{
+#ifdef JP
+			info[i++] = "あなたの武器はジャイアントに対して特に強い力を発揮する。";
+#else /* JP */
 			info[i++] = "Your weapon is especially deadly against giants.";
+#endif /* JP */
 		}
 		if (f1 & (TR1_SLAY_DRAGON))
 		{
+#ifdef JP
+			info[i++] = "あなたの武器はドラゴンに対して特に強い力を発揮する。";
+#else /* JP */
 			info[i++] = "Your weapon is especially deadly against dragons.";
+#endif /* JP */
 		}
 
 		/* Special "kill" flags */
 		if (f1 & (TR1_KILL_DRAGON))
 		{
+#ifdef JP
+			info[i++] = "あなたの武器はドラゴンの天敵である。";
+#else /* JP */
 			info[i++] = "Your weapon is a great bane of dragons.";
+#endif /* JP */
 		}
 		if (f1 & (TR1_KILL_DEMON))
 		{
+#ifdef JP
+			info[i++] = "あなたの武器はデーモンの天敵である。";
+#else /* JP */
 			info[i++] = "Your weapon is a great bane of demons.";
+#endif /* JP */
 		}
 		if (f1 & (TR1_KILL_UNDEAD))
 		{
+#ifdef JP
+			info[i++] = "あなたの武器はアンデッドの天敵である。";
+#else /* JP */
 			info[i++] = "Your weapon is a great bane of undead.";
+#endif /* JP */
 		}
 
 
 		/* Indicate Blessing */
 		if (f3 & (TR3_BLESSED))
 		{
+#ifdef JP
+			info[i++] = "あなたの武器は神の祝福を受けている。";
+#else /* JP */
 			info[i++] = "Your weapon has been blessed by the gods.";
+#endif /* JP */
 		}
 
 		/* Hack */
 		if (f3 & (TR3_IMPACT))
 		{
+#ifdef JP
+			info[i++] = "あなたの武器は地震を引き起こし得る。";
+#else /* JP */
 			info[i++] = "Your weapon can induce earthquakes.";
+#endif /* JP */
 		}
 	}
 
@@ -837,7 +1270,11 @@ void self_knowledge(void)
 	Term_clear();
 
 	/* Label the information */
+#ifdef JP
+	prt("      あなたの状態:", 1, 0);
+#else /* JP */
 	prt("     Your Attributes:", 1, 0);
+#endif /* JP */
 
 	/* Dump the info */
 	for (k = 2, j = 0; j < i; j++)
@@ -848,14 +1285,22 @@ void self_knowledge(void)
 		/* Page wrap */
 		if ((k == 22) && (j+1 < i))
 		{
+#ifdef JP
+			prt("-- 続く --", k, 0);
+#else /* JP */
 			prt("-- more --", k, 0);
+#endif /* JP */
 			inkey();
 
 			/* Clear the screen */
 			Term_clear();
 
 			/* Label the information */
+#ifdef JP
+			prt("      あなたの状態:", 1, 0);
+#else /* JP */
 			prt("     Your Attributes:", 1, 0);
+#endif /* JP */
 
 			/* Reset */
 			k = 2;
@@ -863,7 +1308,11 @@ void self_knowledge(void)
 	}
 
 	/* Pause */
+#ifdef JP
+	prt("[何かキーを押すとゲームに戻ります]", k, 0);
+#else /* JP */
 	prt("[Press any key to continue]", k, 0);
+#endif /* JP */
 	(void)inkey();
 
 
@@ -933,7 +1382,11 @@ void set_recall(void)
 	/* Ironman */
 	if (adult_ironman && !p_ptr->total_winner)
 	{
+#ifdef JP
+		msg_print("何もおきなかった。");
+#else /* JP */
 		msg_print("Nothing happens.");
+#endif /* JP */
 		return;
 	}
 
@@ -947,19 +1400,31 @@ void set_recall(void)
 			 * ToDo: Add a new player_type field "recall_depth"
 			 * ToDo: Poll: Always reset recall depth?
 			 */
+#ifdef JP
+  		 if (get_check("ここは最深到達階より浅い階です。この階に戻って来ますか？ "))
+#else /* JP */
 			 if (get_check("Reset recall depth? "))
+#endif /* JP */
 				p_ptr->max_depth = p_ptr->depth;
 		}
 
 		p_ptr->word_recall = rand_int(20) + 15;
+#ifdef JP
+		msg_print("回りの大気が張りつめてきた...");
+#else /* JP */
 		msg_print("The air about you becomes charged...");
+#endif /* JP */
 	}
 
 	/* Deactivate recall */
 	else
 	{
 		p_ptr->word_recall = 0;
+#ifdef JP
+		msg_print("張りつめた大気が流れ去った...");
+#else /* JP */
 		msg_print("A tension leaves the air around you...");
+#endif /* JP */
 	}
 }
 
@@ -1008,7 +1473,11 @@ bool detect_traps(void)
 	/* Describe */
 	if (detect)
 	{
+#ifdef JP
+		msg_print("トラップの存在を感じとった！");
+#else /* JP */
 		msg_print("You sense the presence of traps!");
+#endif /* JP */
 	}
 
 	/* Result */
@@ -1062,7 +1531,11 @@ bool detect_doors(void)
 	/* Describe */
 	if (detect)
 	{
+#ifdef JP
+		msg_print("ドアの存在を感じとった！");
+#else /* JP */
 		msg_print("You sense the presence of doors!");
+#endif /* JP */
 	}
 
 	/* Result */
@@ -1106,7 +1579,11 @@ bool detect_stairs(void)
 	/* Describe */
 	if (detect)
 	{
+#ifdef JP
+		msg_print("階段の存在を感じとった！");
+#else /* JP */
 		msg_print("You sense the presence of stairs!");
+#endif /* JP */
 	}
 
 	/* Result */
@@ -1158,7 +1635,11 @@ bool detect_treasure(void)
 	/* Describe */
 	if (detect)
 	{
+#ifdef JP
+		msg_print("埋蔵された財宝の存在を感じとった！");
+#else /* JP */
 		msg_print("You sense the presence of buried treasure!");
+#endif /* JP */
 	}
 
 	/* Result */
@@ -1212,7 +1693,11 @@ bool detect_objects_gold(void)
 	/* Describe */
 	if (detect)
 	{
+#ifdef JP
+		msg_print("財宝の存在を感じとった！");
+#else /* JP */
 		msg_print("You sense the presence of treasure!");
+#endif /* JP */
 	}
 
 	/* Result */
@@ -1265,7 +1750,11 @@ bool detect_objects_normal(void)
 	/* Describe */
 	if (detect)
 	{
+#ifdef JP
+		msg_print("アイテムの存在を感じとった！");
+#else /* JP */
 		msg_print("You sense the presence of objects!");
+#endif /* JP */
 	}
 
 	/* Result */
@@ -1332,7 +1821,11 @@ bool detect_objects_magic(void)
 	/* Describe */
 	if (detect)
 	{
+#ifdef JP
+		msg_print("魔法のアイテムの存在を感じとった！");
+#else /* JP */
 		msg_print("You sense the presence of magic objects!");
+#endif /* JP */
 	}
 
 	/* Return result */
@@ -1387,7 +1880,11 @@ bool detect_monsters_normal(void)
 	if (flag)
 	{
 		/* Describe result */
+#ifdef JP
+		msg_print("モンスターの存在を感じとった！");
+#else /* JP */
 		msg_print("You sense the presence of monsters!");
+#endif /* JP */
 	}
 
 	/* Result */
@@ -1453,7 +1950,11 @@ bool detect_monsters_invis(void)
 	if (flag)
 	{
 		/* Describe result */
+#ifdef JP
+		msg_print("透明な生物の存在を感じとった！");
+#else /* JP */
 		msg_print("You sense the presence of invisible creatures!");
+#endif /* JP */
 	}
 
 	/* Result */
@@ -1520,7 +2021,11 @@ bool detect_monsters_evil(void)
 	if (flag)
 	{
 		/* Describe result */
+#ifdef JP
+		msg_print("邪悪なる生物の存在を感じとった！");
+#else /* JP */
 		msg_print("You sense the presence of evil creatures!");
+#endif /* JP */
 	}
 
 	/* Result */
@@ -1563,7 +2068,11 @@ void stair_creation(void)
 	/* XXX XXX XXX */
 	if (!cave_valid_bold(py, px))
 	{
+#ifdef JP
+		msg_print("床上のアイテムが呪文を跳ね返した。");
+#else /* JP */
 		msg_print("The object resists the spell.");
+#endif /* JP */
 		return;
 	}
 
@@ -1725,7 +2234,11 @@ bool enchant(object_type *o_ptr, int n, int eflag)
 				    (!(f3 & (TR3_PERMA_CURSE))) &&
 				    (o_ptr->to_h >= 0) && (rand_int(100) < 25))
 				{
+#ifdef JP
+					msg_print("かけられていた呪いが打ち破られた！");
+#else /* JP */
 					msg_print("The curse is broken!");
+#endif /* JP */
 
 					/* Uncurse the object */
 					uncurse_object(o_ptr);
@@ -1753,7 +2266,11 @@ bool enchant(object_type *o_ptr, int n, int eflag)
 				    (!(f3 & (TR3_PERMA_CURSE))) &&
 				    (o_ptr->to_d >= 0) && (rand_int(100) < 25))
 				{
+#ifdef JP
+					msg_print("かけられていた呪いが打ち破られた！");
+#else /* JP */
 					msg_print("The curse is broken!");
+#endif /* JP */
 
 					/* Uncurse the object */
 					uncurse_object(o_ptr);
@@ -1781,7 +2298,11 @@ bool enchant(object_type *o_ptr, int n, int eflag)
 				    (!(f3 & (TR3_PERMA_CURSE))) &&
 				    (o_ptr->to_a >= 0) && (rand_int(100) < 25))
 				{
+#ifdef JP
+					msg_print("かけられていた呪いが打ち破られた！");
+#else /* JP */
 					msg_print("The curse is broken!");
+#endif /* JP */
 
 					/* Uncurse the object */
 					uncurse_object(o_ptr);
@@ -1832,8 +2353,13 @@ bool enchant_spell(int num_hit, int num_dam, int num_ac)
 	if (num_ac) item_tester_hook = item_tester_hook_armour;
 
 	/* Get an item */
+#ifdef JP
+	q = "どのアイテムを強化しますか? ";
+	s = "強化できるアイテムがない。";
+#else /* JP */
 	q = "Enchant which item? ";
 	s = "You have nothing to enchant.";
+#endif /* JP */
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN | USE_FLOOR))) return (FALSE);
 
 	/* Get the item (in the pack) */
@@ -1853,9 +2379,13 @@ bool enchant_spell(int num_hit, int num_dam, int num_ac)
 	object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 0);
 
 	/* Describe */
+#ifdef JP
+	msg_format("%sが明るく輝いた！", o_name);
+#else /* JP */
 	msg_format("%s %s glow%s brightly!",
 	           ((item >= 0) ? "Your" : "The"), o_name,
 	           ((o_ptr->number > 1) ? "" : "s"));
+#endif /* JP */
 
 	/* Enchant */
 	if (enchant(o_ptr, num_hit, ENCH_TOHIT)) okay = TRUE;
@@ -1869,7 +2399,11 @@ bool enchant_spell(int num_hit, int num_dam, int num_ac)
 		if (flush_failure) flush();
 
 		/* Message */
+#ifdef JP
+		msg_print("強化に失敗した。");
+#else /* JP */
 		msg_print("The enchantment failed.");
+#endif /* JP */
 	}
 
 	/* Something happened */
@@ -1896,8 +2430,13 @@ bool ident_spell(void)
 	item_tester_hook = item_tester_unknown;
 
 	/* Get an item */
+#ifdef JP
+	q = "どのアイテムを鑑定しますか? ";
+	s = "鑑定できるアイテムがない。";
+#else /* JP */
 	q = "Identify which item? ";
 	s = "You have nothing to identify.";
+#endif /* JP */
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN | USE_FLOOR))) return (FALSE);
 
 	/* Get the item (in the pack) */
@@ -1949,18 +2488,33 @@ bool ident_spell(void)
 	/* Describe */
 	if (item >= INVEN_WIELD)
 	{
+#ifdef JP
+		msg_format("%^s: %s(%c)。",
+		           describe_use(item), o_name, index_to_label(item));
+#else /* JP */
 		msg_format("%^s: %s (%c).",
 		           describe_use(item), o_name, index_to_label(item));
+#endif /* JP */
 	}
 	else if (item >= 0)
 	{
+#ifdef JP
+		msg_format("ザック中: %s(%c)。",
+		           o_name, index_to_label(item));
+#else /* JP */
 		msg_format("In your pack: %s (%c).",
 		           o_name, index_to_label(item));
+#endif /* JP */
 	}
 	else
 	{
+#ifdef JP
+		msg_format("床上: %s。",
+		           o_name);
+#else /* JP */
 		msg_format("On the ground: %s.",
 		           o_name);
+#endif /* JP */
 	}
 
 	/* Something happened */
@@ -1989,8 +2543,13 @@ bool identify_fully(void)
 	item_tester_hook = item_tester_unknown_star;
 
 	/* Get an item */
+#ifdef JP
+	q = "完全に*鑑定*したいアイテム?";
+	s = "鑑定すべきアイテムがない。";
+#else /* JP */
 	q = "Identify which item? ";
 	s = "You have nothing to identify.";
+#endif /* JP */
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN | USE_FLOOR))) return (FALSE);
 
 	/* Get the item (in the pack) */
@@ -2048,18 +2607,33 @@ bool identify_fully(void)
 	/* Describe */
 	if (item >= INVEN_WIELD)
 	{
+#ifdef JP
+		msg_format("%^s: %s(%c)。",
+		           describe_use(item), o_name, index_to_label(item));
+#else /* JP */
 		msg_format("%^s: %s (%c).",
 		           describe_use(item), o_name, index_to_label(item));
+#endif /* JP */
 	}
 	else if (item >= 0)
 	{
+#ifdef JP
+		msg_format("ザック中: %s(%c)。",
+		           o_name, index_to_label(item));
+#else /* JP */
 		msg_format("In your pack: %s (%c).",
 		           o_name, index_to_label(item));
+#endif /* JP */
 	}
 	else
 	{
+#ifdef JP
+		msg_format("床上: %s。",
+		           o_name);
+#else /* JP */
 		msg_format("On the ground: %s.",
 		           o_name);
+#endif /* JP */
 	}
 
 	/* Describe it fully */
@@ -2106,8 +2680,13 @@ bool recharge(int num)
 	item_tester_hook = item_tester_hook_recharge;
 
 	/* Get an item */
+#ifdef JP
+	q = "どのアイテムに魔力を充填しますか? ";
+	s = "魔力を充填すべきアイテムがない。";
+#else /* JP */
 	q = "Recharge which item? ";
 	s = "You have nothing to recharge.";
+#endif /* JP */
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return (FALSE);
 
 	/* Get the item (in the pack) */
@@ -2132,7 +2711,11 @@ bool recharge(int num)
 	/* Back-fire */
 	if ((i <= 1) || (rand_int(i) == 0))
 	{
+#ifdef JP
+		msg_print("激しい閃光が発生した。");
+#else /* JP */
 		msg_print("There is a bright flash of light.");
+#endif /* JP */
 
 		/* Drain the power */
 		o_ptr->pval = 0;
@@ -2342,8 +2925,13 @@ void aggravate_monsters(int who)
 	}
 
 	/* Messages */
+#ifdef JP
+	if (speed) msg_print("付近で何かが突如興奮したような感じを受けた！");
+	else if (sleep) msg_print("何かが突如興奮したような騒々しい音が遠くに聞こえた！");
+#else /* JP */
 	if (speed) msg_print("You feel a sudden stirring nearby!");
 	else if (sleep) msg_print("You hear a sudden stirring in the distance!");
+#endif /* JP */
 }
 
 
@@ -2359,7 +2947,11 @@ bool banishment(void)
 
 
 	/* Mega-Hack -- Get a monster symbol */
+#ifdef JP
+	if (!get_com("どの種類(文字)のモンスターを追放しますか: ", &typ))
+#else /* JP */
 	if (!get_com("Choose a monster race (by symbol) to banish: ", &typ))
+#endif /* JP */
 		return FALSE;
 
 	/* Delete the monsters of that "type" */
@@ -2381,7 +2973,11 @@ bool banishment(void)
 		delete_monster_idx(i);
 
 		/* Take some damage */
+#ifdef JP
+		take_hit(randint(4), "追放の呪文を唱えた疲労");
+#else /* JP */
 		take_hit(randint(4), "the strain of casting Banishment");
+#endif /* JP */
 	}
 
 	/* Update monster list window */
@@ -2421,7 +3017,11 @@ bool mass_banishment(void)
 		delete_monster_idx(i);
 
 		/* Take some damage */
+#ifdef JP
+		take_hit(randint(3), "周辺追放の呪文を唱えた疲労");
+#else /* JP */
 		take_hit(randint(3), "the strain of casting Mass Banishment");
+#endif /* JP */
 
 		/* Note effect */
 		result = TRUE;
@@ -2462,13 +3062,21 @@ bool probing(void)
 			char m_name[80];
 
 			/* Start the message */
+#ifdef JP
+			if (!probe) msg_print("調査中...");
+#else /* JP */
 			if (!probe) msg_print("Probing...");
+#endif /* JP */
 
 			/* Get "the monster" or "something" */
 			monster_desc(m_name, sizeof(m_name), m_ptr, 0x04);
 
 			/* Describe the monster */
+#ifdef JP
+			msg_format("%^sは HP が %d ある。", m_name, m_ptr->hp);
+#else /* JP */
 			msg_format("%^s has %d hit points.", m_name, m_ptr->hp);
+#endif /* JP */
 
 			/* Learn all of the non-spell, non-treasure flags */
 			lore_do_probe(i);
@@ -2481,7 +3089,11 @@ bool probing(void)
 	/* Done */
 	if (probe)
 	{
+#ifdef JP
+		msg_print("これで全部です。");
+#else /* JP */
 		msg_print("That's all.");
+#endif /* JP */
 	}
 
 	/* Result */
@@ -2511,7 +3123,11 @@ void destroy_area(int y1, int x1, int r, bool full)
 	/* No effect in town */
 	if (!p_ptr->depth)
 	{
+#ifdef JP
+		msg_print("地面が一瞬震えた。");
+#else /* JP */
 		msg_print("The ground shakes for a moment.");
+#endif /* JP */
 		return;
 	}
 
@@ -2594,7 +3210,11 @@ void destroy_area(int y1, int x1, int r, bool full)
 	if (flag)
 	{
 		/* Message */
+#ifdef JP
+		msg_print("燃えるような閃光が発生した！");
+#else /* JP */
 		msg_print("There is a searing blast of light!");
+#endif /* JP */
 
 		/* Blind the player */
 		if (!p_ptr->resist_blind && !p_ptr->resist_lite)
@@ -2652,7 +3272,11 @@ void earthquake(int cy, int cx, int r)
 	/* No effect in town */
 	if (!p_ptr->depth)
 	{
+#ifdef JP
+		msg_print("地面が一瞬震えた。");
+#else /* JP */
 		msg_print("The ground shakes for a moment.");
+#endif /* JP */
 		return;
 	}
 
@@ -2731,18 +3355,31 @@ void earthquake(int cy, int cx, int r)
 		{
 			case 1:
 			{
+#ifdef JP
+				msg_print("ダンジョンの壁が崩れた！");
+#else /* JP */
 				msg_print("The cave ceiling collapses!");
+#endif /* JP */
 				break;
 			}
 			case 2:
 			{
+#ifdef JP
+				msg_print("ダンジョンの床が不自然にねじ曲がった！");
+#else /* JP */
 				msg_print("The cave floor twists in an unnatural way!");
+#endif /* JP */
 				break;
 			}
 			default:
 			{
+#ifdef JP
+				msg_print("ダンジョンが揺れた！");
+				msg_print("崩れた岩が降ってきた！");
+#else /* JP */
 				msg_print("The cave quakes!");
 				msg_print("You are pummeled with debris!");
+#endif /* JP */
 				break;
 			}
 		}
@@ -2751,7 +3388,11 @@ void earthquake(int cy, int cx, int r)
 		if (!sn)
 		{
 			/* Message and damage */
+#ifdef JP
+			msg_print("あなたはひどい怪我を負った！");
+#else /* JP */
 			msg_print("You are severely crushed!");
+#endif /* JP */
 			damage = 300;
 		}
 
@@ -2763,20 +3404,32 @@ void earthquake(int cy, int cx, int r)
 			{
 				case 1:
 				{
+#ifdef JP
+					msg_print("降り注ぐ岩をうまく避けた！");
+#else /* JP */
 					msg_print("You nimbly dodge the blast!");
+#endif /* JP */
 					damage = 0;
 					break;
 				}
 				case 2:
 				{
+#ifdef JP
+					msg_print("岩石があなたに直撃した!");
+#else /* JP */
 					msg_print("You are bashed by rubble!");
+#endif /* JP */
 					damage = damroll(10, 4);
 					(void)set_stun(p_ptr->stun + randint(50));
 					break;
 				}
 				case 3:
 				{
+#ifdef JP
+					msg_print("あなたは床と壁との間に挟まれてしまった！");
+#else /* JP */
 					msg_print("You are crushed between the floor and ceiling!");
+#endif /* JP */
 					damage = damroll(10, 4);
 					(void)set_stun(p_ptr->stun + randint(50));
 					break;
@@ -2788,7 +3441,11 @@ void earthquake(int cy, int cx, int r)
 		}
 
 		/* Take some damage */
+#ifdef JP
+		if (damage) take_hit(damage, "地震");
+#else /* JP */
 		if (damage) take_hit(damage, "an earthquake");
+#endif /* JP */
 	}
 
 
@@ -2851,7 +3508,11 @@ void earthquake(int cy, int cx, int r)
 					monster_desc(m_name, sizeof(m_name), m_ptr, 0);
 
 					/* Scream in pain */
+#ifdef JP
+					msg_format("%^sは苦痛で泣きわめいた！", m_name);
+#else /* JP */
 					msg_format("%^s wails out in pain!", m_name);
+#endif /* JP */
 
 					/* Take damage from the quake */
 					damage = (sn ? damroll(4, 8) : (m_ptr->hp + 1));
@@ -2866,7 +3527,11 @@ void earthquake(int cy, int cx, int r)
 					if (m_ptr->hp < 0)
 					{
 						/* Message */
+#ifdef JP
+						msg_format("%^sは岩石に埋もれてしまった！", m_name);
+#else /* JP */
 						msg_format("%^s is embedded in the rock!", m_name);
+#endif /* JP */
 
 						/* Delete the monster */
 						delete_monster(yy, xx);
@@ -3047,7 +3712,11 @@ static void cave_temp_room_lite(void)
 					monster_desc(m_name, sizeof(m_name), m_ptr, 0);
 
 					/* Dump a message */
+#ifdef JP
+					msg_format("%^sが目を覚ました。", m_name);
+#else /* JP */
 					msg_format("%^s wakes up.", m_name);
+#endif /* JP */
 				}
 			}
 		}
@@ -3228,7 +3897,11 @@ bool lite_area(int dam, int rad)
 	/* Hack -- Message */
 	if (!p_ptr->blind)
 	{
+#ifdef JP
+		msg_print("白い光が辺りを覆った。");
+#else /* JP */
 		msg_print("You are surrounded by a white light.");
+#endif /* JP */
 	}
 
 	/* Hook into the "project()" function */
@@ -3256,7 +3929,11 @@ bool unlite_area(int dam, int rad)
 	/* Hack -- Message */
 	if (!p_ptr->blind)
 	{
+#ifdef JP
+		msg_print("暗闇が辺りを覆った。");
+#else /* JP */
 		msg_print("Darkness surrounds you.");
+#endif /* JP */
 	}
 
 	/* Hook into the "project()" function */
@@ -3570,15 +4247,24 @@ bool curse_armor(void)
 	if (artifact_p(o_ptr) && (rand_int(100) < 50))
 	{
 		/* Cool */
+#ifdef JP
+		msg_format("%sが%sを包み込もうとしたが、%sはそれを跳ね返した！",
+		           "恐怖の暗黒オーラ", "防具", o_name);
+#else /* JP */
 		msg_format("A %s tries to %s, but your %s resists the effects!",
 		           "terrible black aura", "surround your armor", o_name);
+#endif /* JP */
 	}
 
 	/* not artifact or failed save... */
 	else
 	{
 		/* Oops */
+#ifdef JP
+		msg_format("恐怖の暗黒オーラがあなたの%sを包み込んだ！", o_name);
+#else /* JP */
 		msg_format("A terrible black aura blasts your %s!", o_name);
+#endif /* JP */
 
 		/* Blast the armor */
 		o_ptr->name1 = 0;
@@ -3634,15 +4320,24 @@ bool curse_weapon(void)
 	if (artifact_p(o_ptr) && (rand_int(100) < 50))
 	{
 		/* Cool */
+#ifdef JP
+		msg_format("%sが%sを包み込もうとしたが、%sはそれを跳ね返した！",
+		          "恐怖の暗黒オーラ", "武器", o_name);
+#else /* JP */
 		msg_format("A %s tries to %s, but your %s resists the effects!",
 		           "terrible black aura", "surround your weapon", o_name);
+#endif /* JP */
 	}
 
 	/* not artifact or failed save... */
 	else
 	{
 		/* Oops */
+#ifdef JP
+		msg_format("恐怖の暗黒オーラがあなたの%sを包み込んだ！", o_name);
+#else /* JP */
 		msg_format("A terrible black aura blasts your %s!", o_name);
+#endif /* JP */
 
 		/* Shatter the weapon */
 		o_ptr->name1 = 0;
@@ -3688,7 +4383,11 @@ void brand_object(object_type *o_ptr, byte brand_type)
 	    (!artifact_p(o_ptr)) && (!ego_item_p(o_ptr)) &&
 	    (!broken_p(o_ptr)) && (!cursed_p(o_ptr)))
 	{
+#ifdef JP
+		cptr act = "魔法の";
+#else /* JP */
 		cptr act = "magical";
+#endif /* JP */
 		char o_name[80];
 
 		object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 0);
@@ -3697,20 +4396,36 @@ void brand_object(object_type *o_ptr, byte brand_type)
 		{
 			case EGO_BRAND_FIRE:
 			case EGO_FLAME:
+#ifdef JP
+				act = "炎の";
+#else /* JP */
 				act = "fiery";
+#endif /* JP */
 				break;
 			case EGO_BRAND_COLD:
 			case EGO_FROST:
+#ifdef JP
+				act = "冷気の";
+#else /* JP */
 				act = "frosty";
+#endif /* JP */
 				break;
 			case EGO_BRAND_POIS:
 			case EGO_AMMO_VENOM:
+#ifdef JP
+				act = "病んだ";
+#else /* JP */
 				act = "sickly";
+#endif /* JP */
 				break;
 		}
 
 		/* Describe */
+#ifdef JP
+		msg_format("%sが%sオーラに包まれた！", o_name, act);
+#else
 		msg_format("A %s aura surrounds the %s.", act, o_name);
+#endif
 
 		/* Brand the object */
 		o_ptr->name2 = brand_type;
@@ -3727,7 +4442,11 @@ void brand_object(object_type *o_ptr, byte brand_type)
 	else
 	{
 		if (flush_failure) flush();
+#ifdef JP
+		msg_print("強化に失敗した。");
+#else
 		msg_print("The Branding failed.");
+#endif
 	}
 }
 
@@ -3787,8 +4506,13 @@ bool brand_ammo(void)
 	item_tester_hook = item_tester_hook_ammo;
 
 	/* Get an item */
+#ifdef JP
+	q = "どの矢玉を強化しますか? ";
+	s = "強化できる矢玉がない。";
+#else /* JP */
 	q = "Brand which kind of ammunition? ";
 	s = "You have nothing to brand.";
+#endif /* JP */
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN | USE_FLOOR))) return (FALSE);
 
 	/* Get the item (in the pack) */
@@ -3835,8 +4559,13 @@ bool brand_bolts(void)
 	item_tester_tval = TV_BOLT;
 
 	/* Get an item */
+#ifdef JP
+	q = "どのクロスボウの矢を強化しますか? ";
+	s = "強化できるクロスボウの矢がない。";
+#else /* JP */
 	q = "Brand which bolts? ";
 	s = "You have no bolts to brand.";
+#endif /* JP */
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return (FALSE);
 
 	/* Get the item (in the pack) */
@@ -3871,7 +4600,11 @@ void ring_of_power(int dir)
 		case 2:
 		{
 			/* Message */
+#ifdef JP
+			msg_print("あなたは悪しきオーラに包み込まれた。");
+#else /* JP */
 			msg_print("You are surrounded by a malignant aura.");
+#endif /* JP */
 
 			/* Decrease all stats (permanently) */
 			(void)dec_stat(A_STR, 50, TRUE);
@@ -3892,7 +4625,11 @@ void ring_of_power(int dir)
 		case 3:
 		{
 			/* Message */
+#ifdef JP
+			msg_print("あなたは強力なオーラに包み込まれた。");
+#else /* JP */
 			msg_print("You are surrounded by a powerful aura.");
+#endif /* JP */
 
 			/* Dispel monsters */
 			dispel_monsters(1000);

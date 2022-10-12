@@ -8,6 +8,15 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3-v6 日本語版製作: しとしん
+ * 2.8.0      対応        : しとしん
+ * 2.8.1      対応        : FIRST, しとしん
+ * 2.8.3      対応        : TeO, FIRST, しとしん
+ *
+ * 日本語版機能追加 : 常に一覧を表示する機能
+ *                    英日切り替え機能
+ */
 #include "angband.h"
 
 
@@ -53,8 +62,17 @@ static cptr syllables[MAX_SYLLABLES] =
  * Also keep an array of scroll colors (always WHITE for now).
  */
 
+#ifdef JP
+
+static char scroll_adj[MAX_TITLES][48];
+static char J_scroll_adj[MAX_TITLES][48];
+#define X_scroll_adj	X_object_xxxx(scroll_adj)
+
+#else /* JP */
+
 static char scroll_adj[MAX_TITLES][16];
 
+#endif /* JP */
 
 static void flavor_assign_fixed(void)
 {
@@ -109,7 +127,11 @@ static void flavor_assign_random(byte tval)
 		if ((tval == TV_FOOD) && (k_info[i].sval >= SV_FOOD_MIN_FOOD))
 			continue;
 
+#ifdef JP
+		if (!flavor_count) quit_fmt("tval %dに必要な外見が不足している。", tval);
+#else /* JP */
 		if (!flavor_count) quit_fmt("Not enough flavors for tval %d.", tval);
+#endif /* JP */
 
 		/* Select a flavor */
 		choice = rand_int(flavor_count);
@@ -240,6 +262,9 @@ void flavor_init(void)
 
 			/* Save the title */
 			my_strcpy(scroll_adj[i], buf+1, sizeof(scroll_adj[0]));
+#ifdef JP
+			my_strcpy(J_scroll_adj[i], sindarin_to_kana(buf+1), sizeof(J_scroll_adj[0]));
+#endif /* JP */
 
 			/* Assume okay */
 			okay = TRUE;
@@ -539,6 +564,18 @@ void object_flags_known(const object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3)
 }
 
 
+#ifdef JP
+/* 自動フラグ銘刻みのため */
+/*
+ * Obtain the random "flags" for an item
+ */
+void object_flags_random(const object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3)
+{
+	object_flags_aux(OBJECT_FLAGS_RANDOM, o_ptr, f1, f2, f3);
+}
+#endif /* JP */
+
+
 /*
  * Efficient version of '(T) += sprintf((T), "%c", (C))'
  */
@@ -625,6 +662,400 @@ void object_flags_known(const object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3)
 
 
 
+#ifdef JP
+
+/*
+ * Tables for Flag inscription.
+ */
+typedef struct flag_insc_type flag_insc_type;
+
+struct flag_insc_type
+{
+	cptr insc;
+	int  group;
+	int  flag;
+	int  x_group;
+	int  x_flag;
+};
+
+static flag_insc_type flag_insc_pval[] =
+{
+	{ "攻", 1, TR1_BLOWS, 0, 0 },
+	{ "速", 1, TR1_SPEED, 0, 0 },
+	{ "腕", 1, TR1_STR, 0, 0 },
+	{ "知", 1, TR1_INT, 0, 0 },
+	{ "賢", 1, TR1_WIS, 0, 0 },
+	{ "器", 1, TR1_DEX, 0, 0 },
+	{ "耐", 1, TR1_CON, 0, 0 },
+	{ "魅", 1, TR1_CHR, 0, 0 },
+	{ "隠", 1, TR1_STEALTH, 0, 0 },
+	{ "探", 1, TR1_SEARCH, 0, 0 },
+	{ "赤", 1, TR1_INFRA, 0, 0 },
+	{ "掘", 1, TR1_TUNNEL, 0, 0 },
+	{ NULL, 0, 0, 0, 0 }
+};
+
+static flag_insc_type flag_insc_immunity[] =
+{
+	{ "酸", 2, TR2_IM_ACID, 0, 0 },
+	{ "電", 2, TR2_IM_ELEC, 0, 0 },
+	{ "火", 2, TR2_IM_FIRE, 0, 0 },
+	{ "冷", 2, TR2_IM_COLD, 0, 0 },
+	{ NULL, 0, 0, 0, 0 }
+};
+
+static flag_insc_type flag_insc_resistance[] =
+{
+	{ "酸", 2, TR2_RES_ACID, 2, TR2_IM_ACID },
+	{ "電", 2, TR2_RES_ELEC, 2, TR2_IM_ELEC },
+	{ "火", 2, TR2_RES_FIRE, 2, TR2_IM_FIRE },
+	{ "冷", 2, TR2_RES_COLD, 2, TR2_IM_COLD },
+	{ "毒", 2, TR2_RES_POIS, 0, 0 },
+	{ "閃", 2, TR2_RES_LITE, 0, 0 },
+	{ "暗", 2, TR2_RES_DARK, 0, 0 },
+	{ "破", 2, TR2_RES_SHARD, 0, 0 },
+	{ "盲", 2, TR2_RES_BLIND, 0, 0 },
+	{ "乱", 2, TR2_RES_CONFU, 0, 0 },
+	{ "轟", 2, TR2_RES_SOUND, 0, 0 },
+	{ "獄", 2, TR2_RES_NETHR, 0, 0 },
+	{ "因", 2, TR2_RES_NEXUS, 0, 0 },
+	{ "沌", 2, TR2_RES_CHAOS, 0, 0 },
+	{ "劣", 2, TR2_RES_DISEN, 0, 0 },
+	{ "恐", 2, TR2_RES_FEAR, 0, 0 },
+	{ NULL, 0, 0, 0, 0 }
+};
+
+static flag_insc_type flag_insc_misc[] =
+{
+	{ "麻", 3, TR3_FREE_ACT, 0, 0 },
+	{ "視", 3, TR3_SEE_INVIS, 0, 0 },
+	{ "経", 3, TR3_HOLD_LIFE, 0, 0 },
+	{ "遅", 3, TR3_SLOW_DIGEST, 0, 0 },
+	{ "活", 3, TR3_REGEN, 0, 0 },
+	{ "浮", 3, TR3_FEATHER, 0, 0 },
+	{ "明", 3, TR3_LITE, 0, 0 },
+	{ "射", 1, TR1_SHOTS, 0, 0 },
+	{ "倍", 1, TR1_MIGHT, 0, 0 },
+	{ "怒", 3, TR3_AGGRAVATE, 0, 0 },
+	{ "祝", 3, TR3_BLESSED, 0, 0 },
+	{ "移", 3, TR3_TELEPORT, 0, 0 },
+	{ NULL, 0, 0, 0, 0 }
+};
+
+static flag_insc_type flag_insc_brand[] =
+{
+	{ "酸", 1, TR1_BRAND_ACID, 0, 0 },
+	{ "電", 1, TR1_BRAND_ELEC, 0, 0 },
+	{ "焼", 1, TR1_BRAND_FIRE, 0, 0 },
+	{ "凍", 1, TR1_BRAND_COLD, 0, 0 },
+	{ "毒", 1, TR1_BRAND_POIS, 0, 0 },
+	{ "震", 3, TR3_IMPACT, 0, 0 },
+	{ NULL, 0, 0, 0, 0 }
+};
+
+static flag_insc_type flag_insc_kill[] =
+{
+	{ "龍", 1, TR1_KILL_DRAGON, 0, 0 },
+	{ "デ", 1, TR1_KILL_DEMON, 0, 0 },
+	{ "死", 1, TR1_KILL_UNDEAD, 0, 0 },
+	{ NULL, 0, 0, 0, 0 }
+};
+
+static flag_insc_type flag_insc_slay[] =
+{
+	{ "動", 1, TR1_SLAY_ANIMAL, 0, 0 },
+	{ "邪", 1, TR1_SLAY_EVIL, 0, 0 },
+	{ "死", 1, TR1_SLAY_UNDEAD, 1, TR1_KILL_UNDEAD },
+	{ "デ", 1, TR1_SLAY_DEMON, 1, TR1_KILL_DEMON },
+	{ "オ", 1, TR1_SLAY_ORC, 0, 0 },
+	{ "ト", 1, TR1_SLAY_TROLL, 0, 0 },
+	{ "巨", 1, TR1_SLAY_GIANT, 0, 0 },
+	{ "竜", 1, TR1_SLAY_DRAGON, 1, TR1_KILL_DRAGON },
+	{ NULL, 0, 0, 0, 0 }
+};
+
+static flag_insc_type flag_insc_esp[] =
+{
+	{ "感", 3, TR3_TELEPATHY, 0, 0 },
+	{ NULL, 0, 0, 0, 0 }
+};
+
+static flag_insc_type flag_insc_sustain[] =
+{
+	{ "腕", 2, TR2_SUST_STR, 0, 0 },
+	{ "知", 2, TR2_SUST_INT, 0, 0 },
+	{ "賢", 2, TR2_SUST_WIS, 0, 0 },
+	{ "器", 2, TR2_SUST_DEX, 0, 0 },
+	{ "耐", 2, TR2_SUST_CON, 0, 0 },
+	{ "魅", 2, TR2_SUST_CHR, 0, 0 },
+	{ NULL, 0, 0, 0, 0 }
+};
+
+static flag_insc_type flag_insc_drain[] =
+{
+	{ "経", 3, TR3_DRAIN_EXP, 0, 0 },
+	{ NULL, 0, 0, 0, 0 }
+};
+
+bool have_flag(int group, u32b flag, u32b f1, u32b f2, u32b f3)
+{
+	switch (group)
+	{
+		case 1:  return !!(flag & f1);
+		case 2:  return !!(flag & f2);
+		case 3:  return !!(flag & f3);
+	}
+	return FALSE;
+}
+
+
+/*
+ *  Helper function for inscribe_flags()
+ */
+static char *inscribe_flags_aux(char *t, cptr header,
+                                const flag_insc_type *flag_insc,
+                                u32b f1, u32b f2, u32b f3)
+{
+	const flag_insc_type *fi_ptr;
+	bool first = TRUE;
+
+	for (fi_ptr = flag_insc; fi_ptr->insc; fi_ptr++)
+	{
+		if (have_flag(fi_ptr->group, fi_ptr->flag, f1, f2, f3) &&
+		    !have_flag(fi_ptr->x_group, fi_ptr->x_flag, f1, f2, f3))
+		{
+			/* Dump the header */
+			if (first)
+			{
+				object_desc_str_macro(t, header);
+				first = FALSE;
+			}
+
+			/* Dump the flag */
+			object_desc_str_macro(t, fi_ptr->insc);
+		}
+	}
+
+	return t;
+}
+
+/* 
+ * Inscribe object flags
+ */
+static char *inscribe_flags(char *t, u32b f1, u32b f2, u32b f3)
+{
+	char *s;
+
+
+	/* Remember the starting position */
+	s = t;
+	
+	/* PVAL bonuses */
+	t = inscribe_flags_aux(t, "+", flag_insc_pval, f1, f2, f3);
+
+	/* Immunities */
+	t = inscribe_flags_aux(t, "*", flag_insc_immunity, f1, f2, f3);
+
+	/* Resistances */
+	t = inscribe_flags_aux(t, "r", flag_insc_resistance, f1, f2, f3);
+
+	/* Misc. Abilities */
+	t = inscribe_flags_aux(t, ((t == s) ? "" : ";"), flag_insc_misc,
+	                       f1, f2, f3);
+
+	/* Brand Weapon */
+	t = inscribe_flags_aux(t, "|", flag_insc_brand, f1, f2, f3);
+
+	/* Kill Weapon */
+	t = inscribe_flags_aux(t, "/X", flag_insc_kill, f1, f2, f3);
+
+	/* Slay Weapon */
+	t = inscribe_flags_aux(t, "/", flag_insc_slay, f1, f2, f3);
+
+	/* Esp */
+	t = inscribe_flags_aux(t, "~", flag_insc_esp, f1, f2, f3);
+
+	/* Sustains */
+	t = inscribe_flags_aux(t, "(", flag_insc_sustain, f1, f2, f3);
+
+	/* Drains */
+	t = inscribe_flags_aux(t, "-", flag_insc_drain, f1, f2, f3);
+
+	/* Put a space if inscription is empty */
+	if (t == s) object_desc_chr_macro(t, ' ');
+
+	return t;
+}
+
+/* Inscribe all known flags */
+static char *inscribe_flags_known(char *t, object_type *o_ptr)
+{
+	u32b f1, f2, f3;
+
+	/* Extract the flags */
+	object_flags_known(o_ptr, &f1, &f2, &f3);
+
+	return inscribe_flags(t, f1, f2, f3);
+}
+
+/* Inscribe random flags only*/
+static char *inscribe_flags_random(char *t, object_type *o_ptr)
+{
+	u32b f1, f2, f3;
+
+	/* Extract the flags */
+	object_flags_random(o_ptr, &f1, &f2, &f3);
+
+	return inscribe_flags(t, f1, f2, f3);
+}
+
+static cptr get_inscription(char *buf, int max, const object_type *o_ptr)
+{
+	char tmpbuf[1024];
+	char *t = tmpbuf;
+	cptr s;
+
+	object_type *i_ptr;
+	object_type object_type_body;
+
+
+	/* Get local object */
+	i_ptr = &object_type_body;
+
+	/* Copy the object */
+	object_copy(i_ptr, o_ptr);
+
+	for (s = quark_str(i_ptr->note); *s; s++)
+	{
+		/* Auto flag inscription */
+		if (*s == '%')
+		{
+			/* Dump known flags */
+			if (strncmp((s+1), "all", 3) == 0)
+			{
+				t = inscribe_flags_known(t, i_ptr);
+				s += 3;
+			}
+
+			/* Dump random flags only */
+			else
+			{
+				t = inscribe_flags_random(t, i_ptr);
+			}
+		}
+		else
+		{
+			object_desc_chr_macro(t, *s);
+		}
+	}
+
+	*t = '\0';
+
+	buf[0] = '\0';
+	strncat(buf, tmpbuf, max);
+
+	return buf;
+}
+
+
+/*
+ * 伝説のアイテム名、名のあるアイテム名が基本アイテム名の前につく
+ * 形式かどうかを判定する。"『名前』" 及び "(名前)" という形式なら
+ * アイテム名の後ろに、そうでなければ前に付加される。
+ * ex. ガラドリエルの玻璃瓶
+ *     ロング・ソード『アンドゥリル』
+ *     ロング・ソード(防衛者)
+ */
+#define is_suffix_name(name) \
+	((prefix(name, "『") && suffix(name, "』")) || \
+	 ((name[0] == '('/*')'*/) && (name[strlen(name)-1] == /*'('*/')')))
+#define is_prefix_name(name) (!is_suffix_name(name))
+
+/* アイテムに適切な助数詞を返す */
+cptr object_counter_suffix(const object_type *o_ptr)
+{
+	switch (o_ptr->tval)
+	{
+		case TV_BOLT:
+		case TV_ARROW:
+		case TV_POLEARM:
+		case TV_STAFF:
+		case TV_WAND:
+		case TV_ROD:
+		case TV_DIGGING:
+		{
+			return  "本";
+		}
+		case TV_SCROLL:
+		{
+			return  "巻";
+		}
+		case TV_POTION:
+		{
+			return  "服";
+		}
+
+		case TV_MAGIC_BOOK:
+		case TV_PRAYER_BOOK:
+		{
+			return  "冊";
+		}
+		case TV_SOFT_ARMOR:
+		case TV_HARD_ARMOR:
+		case TV_DRAG_ARMOR:
+		case TV_CLOAK:
+		{
+			return  "着";
+		}
+		case TV_SWORD:
+		case TV_HAFTED:
+		case TV_BOW:
+		{
+			return  "振";
+		}
+		case TV_BOOTS:
+		{
+			return  "足";
+		}
+		/* 食べもの by ita */
+		case TV_FOOD:
+		{
+			if (o_ptr->sval == SV_FOOD_JERKY)
+			{
+				return "切れ";
+			}
+			break;
+		}
+		/* グローブ by 楠瀬 */
+		case TV_GLOVES:
+		{
+			return  "組";
+		}
+	}
+
+	return simple_counter_suffix(o_ptr->number);
+}
+
+/* 英日切り替えオプションによらず、常に日本語名を返す */
+void J_object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int mode)
+{
+	bool oldenglish = english_object;
+	english_object = FALSE;
+	object_desc(buf, max, o_ptr, pref, mode);
+	english_object = oldenglish;
+}
+
+/* 英日切り替えオプションによらず、常に英語名を返す */
+void E_object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int mode)
+{
+	bool oldenglish = english_object;
+	english_object = TRUE;
+	object_desc(buf, max, o_ptr, pref, mode);
+	english_object = oldenglish;
+}
+
+#endif /* JP */
+
 
 /*
  * Creates a description of the item "o_ptr", and stores it in "buf".
@@ -694,6 +1125,9 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 {
 	cptr basenm;
 	cptr modstr;
+#ifdef JP
+	cptr append_str;
+#endif /* JP */
 
 	int power;
 
@@ -766,10 +1200,19 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 	show_armour = FALSE;
 
 	/* Extract default "base" string */
+#ifdef JP
+	basenm = X_k_name(k_ptr);
+#else /* JP */
 	basenm = (k_name + k_ptr->name);
+#endif /* JP */
 
 	/* Assume no "modifier" string */
 	modstr = "";
+
+#ifdef JP
+	/* append_nameがTRUEの時にkind nameの後に付加する文字列 */
+	append_str = "の";
+#endif /* JP */
 
 
 	/* Analyze the object */
@@ -828,9 +1271,18 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 			if (artifact_p(o_ptr) && aware) break;
 
 			/* Color the object */
+#ifdef JP
+			modstr = X_flavor_name(&flavor_info[k_ptr->flavor]);
+#else /* JP */
 			modstr = flavor_text + flavor_info[k_ptr->flavor].text;
+#endif /* JP */
 			if (aware) append_name = TRUE;
+#ifdef JP
+			basenm = X_object((flavor ? "& # Amulet~%" : "& Amulet~%"),
+			                  (flavor ? "& %#アミュレット" : "& %アミュレット"));
+#else /* JP */
 			basenm = (flavor ? "& # Amulet~" : "& Amulet~");
+#endif /* JP */
 
 			break;
 		}
@@ -842,9 +1294,18 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 			if (artifact_p(o_ptr) && aware) break;
 
 			/* Color the object */
+#ifdef JP
+			modstr = X_flavor_name(&flavor_info[k_ptr->flavor]);
+#else /* JP */
 			modstr = flavor_text + flavor_info[k_ptr->flavor].text;
+#endif /* JP */
 			if (aware) append_name = TRUE;
+#ifdef JP
+			basenm = X_object((flavor ? "& # Ring~" : "& Ring~"),
+			                  (flavor ? "& %#指輪" : "& %指輪"));
+#else /* JP */
 			basenm = (flavor ? "& # Ring~" : "& Ring~");
+#endif /* JP */
 
 			break;
 		}
@@ -853,9 +1314,18 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		case TV_STAFF:
 		{
 			/* Color the object */
+#ifdef JP
+			modstr = X_flavor_name(&flavor_info[k_ptr->flavor]);
+#else /* JP */
 			modstr = flavor_text + flavor_info[k_ptr->flavor].text;
+#endif /* JP */
 			if (aware) append_name = TRUE;
+#ifdef JP
+			basenm = X_object((flavor ? "& # Staff~" : "& Staff~"),
+			                  (flavor ? "& %#杖" : "& %杖"));
+#else /* JP */
 			basenm = (flavor ? "& # Staff~" : "& Staff~");
+#endif /* JP */
 
 			break;
 		}
@@ -864,9 +1334,18 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		case TV_WAND:
 		{
 			/* Color the object */
+#ifdef JP
+			modstr = X_flavor_name(&flavor_info[k_ptr->flavor]);
+#else /* JP */
 			modstr = flavor_text + flavor_info[k_ptr->flavor].text;
+#endif /* JP */
 			if (aware) append_name = TRUE;
+#ifdef JP
+			basenm = X_object((flavor ? "& # Wand~" : "& Wand~"),
+			                  (flavor ? "& %#魔法棒" : "& %魔法棒"));
+#else /* JP */
 			basenm = (flavor ? "& # Wand~" : "& Wand~");
+#endif /* JP */
 
 			break;
 		}
@@ -875,9 +1354,18 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		case TV_ROD:
 		{
 			/* Color the object */
+#ifdef JP
+			modstr = X_flavor_name(&flavor_info[k_ptr->flavor]);
+#else /* JP */
 			modstr = flavor_text + flavor_info[k_ptr->flavor].text;
+#endif /* JP */
 			if (aware) append_name = TRUE;
+#ifdef JP
+			basenm = X_object((flavor ? "& # Rod~" : "& Rod~"),
+			                  (flavor ? "& %#ロッド" : "& %ロッド"));
+#else /* JP */
 			basenm = (flavor ? "& # Rod~" : "& Rod~");
+#endif /* JP */
 
 			break;
 		}
@@ -886,9 +1374,18 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		case TV_SCROLL:
 		{
 			/* Color the object */
+#ifdef JP
+			modstr = X_scroll_adj[o_ptr->sval];
+#else /* JP */
 			modstr = scroll_adj[o_ptr->sval];
+#endif /* JP */
 			if (aware) append_name = TRUE;
+#ifdef JP
+			basenm = X_object((flavor ? "& Scroll~ titled \"#\"" : "& Scroll~"),
+			                  (flavor ? "& \"#\"と書かれた%巻物" : "& %巻物"));
+#else /* JP */
 			basenm = (flavor ? "& Scroll~ titled \"#\"" : "& Scroll~");
+#endif /* JP */
 
 			break;
 		}
@@ -897,9 +1394,42 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		case TV_POTION:
 		{
 			/* Color the object */
+#ifdef JP
+			modstr = X_flavor_name(&flavor_info[k_ptr->flavor]);
+#else /* JP */
 			modstr = flavor_text + flavor_info[k_ptr->flavor].text;
+#endif /* JP */
 			if (aware) append_name = TRUE;
+#ifdef JP
+			basenm = X_object((flavor ? "& # Potion~" : "& Potion~"),
+			                  (flavor ? "& #%薬" : "& %薬"));
+#else /* JP */
 			basenm = (flavor ? "& # Potion~" : "& Potion~");
+#endif /* JP */
+
+#ifdef JP
+			/* Hack -- 一部のアイテムの表記を変更 */
+			if (aware && !english_object)
+			{
+				if ((streq((k_name + k_ptr->J_name), "水")) ||
+				    (streq((k_name + k_ptr->J_name), "塩水")) ||
+				    (streq((k_name + k_ptr->J_name), "酒")))
+				{
+					basenm = flavor ? "& #%入ったビン"
+					                : "& %入ったビン";
+				}
+				else if (streq((k_name + k_ptr->J_name), "毒"))
+				{
+					append_str = "";
+				}
+				else if ((streq((k_name + k_ptr->J_name), "リンゴジュース")) ||
+				         (streq ((k_name + k_ptr->J_name), "スライムモルドジュース")))
+				{
+					basenm = flavor ? "& #%" : "& %";
+					append_str = "";
+				}
+			}
+#endif /* JP */
 
 			break;
 		}
@@ -911,9 +1441,29 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 			if (o_ptr->sval >= SV_FOOD_MIN_FOOD) break;
 
 			/* Color the object */
+#ifdef JP
+			modstr = X_flavor_name(&flavor_info[k_ptr->flavor]);
+#else /* JP */
 			modstr = flavor_text + flavor_info[k_ptr->flavor].text;
+#endif /* JP */
 			if (aware) append_name = TRUE;
+#ifdef JP
+			basenm = X_object((flavor ? "& # Mushroom~" : "& Mushroom~"),
+			                  (flavor ? "& #%キノコ" : "& %キノコ"));
+#else /* JP */
 			basenm = (flavor ? "& # Mushroom~" : "& Mushroom~");
+#endif /* JP */
+
+#ifdef JP
+			/* Hack -- 一部のアイテムの表記を変更 */
+			if (aware && !english_object)
+			{
+				if (streq((k_name + k_ptr->J_name), "毒"))
+				{
+					append_str = "";
+				}
+			}
+#endif /* JP */
 
 			break;
 		}
@@ -922,7 +1472,12 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		case TV_MAGIC_BOOK:
 		{
 			modstr = basenm;
+#ifdef JP
+			basenm = X_object("& Book~ of Magic Spells #",
+			                  "& 呪文書#");
+#else /* JP */
 			basenm = "& Book~ of Magic Spells #";
+#endif /* JP */
 			break;
 		}
 
@@ -930,7 +1485,12 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		case TV_PRAYER_BOOK:
 		{
 			modstr = basenm;
+#ifdef JP
+			basenm = X_object("& Holy Book~ of Prayers #",
+			                  "& 祈祷書#");
+#else /* JP */
 			basenm = "& Holy Book~ of Prayers #";
+#endif /* JP */
 			break;
 		}
 
@@ -944,7 +1504,11 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		/* Hack -- Default -- Used in the "inventory" routine */
 		default:
 		{
+#ifdef JP
+			my_strcpy(buf, X_object("(nothing)", "(なし)"), max);
+#else /* JP */
 			my_strcpy(buf, "(nothing)", max);
+#endif /* JP */
 			return;
 		}
 	}
@@ -974,21 +1538,58 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		/* Hack -- None left */
 		else if (o_ptr->number <= 0)
 		{
+#ifdef JP
+			/* 変更:"no more" 表示は消す */
+#else
 			object_desc_str_macro(t, "no more ");
+#endif
 		}
 
 		/* Extract the number */
 		else if (o_ptr->number > 1)
 		{
 			object_desc_num_macro(t, o_ptr->number);
+#ifdef JP
+			/*
+			 * 個数表示の後に言葉を入れる。"まだ 2 毒薬を持っている"という感じの
+			 * 表示がどうしても気に入らなかったため。適当な言葉が見当たらないもの
+			 * については、9までは「9 つの」という表示にして、それ以上は「12 個の」
+			 * としてある。
+			 * ただ、従来の形式は文章的に変でもさっぱりとした良さがあるので、
+			 * オプションで選択できるようにした。
+			 */
+			if ((english_object == FALSE) && 
+			    (old_way_of_kaz == FALSE))
+			{
+				/*
+				 *「個数表示を従来の形式にする」オプションがセットされていない
+				 * 場合、言葉を付加する
+				 */
+				object_desc_str_macro(t, object_counter_suffix(o_ptr));
+				object_desc_str_macro(t, "の");
+			}
+#endif /* JP */
 			object_desc_chr_macro(t, ' ');
 		}
 
 		/* Hack -- The only one of its kind */
 		else if (known && artifact_p(o_ptr))
 		{
+#ifdef JP
+			/* 日本語には冠詞がないので代わりにマークをつける */
+			object_desc_str_macro(t, X_object("The ", "★"));
+#else /* JP */
 			object_desc_str_macro(t, "The ");
+#endif /* JP */
 		}
+
+#ifdef JP
+		/* 日本語表示では単数の冠詞は無し */
+		else if (english_object == FALSE)
+		{
+			/* Nothing */
+		}
+#endif /* JP */
 
 		/* Hack -- A single one, and next character will be a vowel */
 		else if ((*s == '#') ? is_a_vowel(modstr[0]) : is_a_vowel(*s))
@@ -1015,20 +1616,42 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		/* Hack -- all gone */
 		else if (o_ptr->number <= 0)
 		{
+#ifdef JP
+			/* 変更:"no more" 表示は消す */
+#else
 			object_desc_str_macro(t, "no more ");
+#endif
 		}
 
 		/* Prefix a number if required */
 		else if (o_ptr->number > 1)
 		{
 			object_desc_num_macro(t, o_ptr->number);
+#ifdef JP
+			/* 上記と同様に個数を表す言葉を付加する。*/
+			if ((english_object == FALSE) && 
+			    (old_way_of_kaz == FALSE))
+			{
+				/*
+				 *「個数表示を従来の形式にする」オプションがセットされていない
+				 * 場合、言葉を付加する
+				 */
+				object_desc_str_macro(t, object_counter_suffix(o_ptr));
+				object_desc_str_macro(t, "の");
+			}
+#endif /* JP */
 			object_desc_chr_macro(t, ' ');
 		}
 
 		/* Hack -- The only one of its kind */
 		else if (known && artifact_p(o_ptr))
 		{
+#ifdef JP
+			/* 日本語には冠詞がないので代わりにマークをつける */
+			object_desc_str_macro(t, X_object("The ", "★"));
+#else /* JP */
 			object_desc_str_macro(t, "The ");
+#endif /* JP */
 		}
 
 		/* Hack -- A single item, so no prefix needed */
@@ -1042,9 +1665,52 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 	/* Paranoia XXX XXX XXX */
 	/* ASSERT(*s != '~'); */
 
+#ifdef JP
+	/* 伝説のアイテム、名のあるアイテムの名前を付加する */
+	if ((english_object == FALSE) && known)
+	{
+		char temp[256];
+
+		/* Grab any artifact name */
+		if (o_ptr->name1)
+		{
+			artifact_type *a_ptr = &a_info[o_ptr->name1];
+
+			strcpy(temp, e_to_j(a_name + a_ptr->J_name));
+			if (is_prefix_name(temp))
+			{
+				object_desc_str_macro(t, temp);
+			}
+		}
+
+		/* Grab any ego-item name */
+		else if (o_ptr->name2)
+		{
+			ego_item_type *e_ptr = &e_info[o_ptr->name2];
+
+			strcpy(temp, e_to_j(e_name + e_ptr->J_name));
+			if (is_prefix_name(temp))
+			{
+				object_desc_str_macro(t, temp);
+			}
+		}
+	}
+#endif /* JP */
+
 	/* Copy the string */
 	for (; *s; s++)
 	{
+#ifdef JP
+		/* Kanji */
+		if (iskanji(*s))
+		{
+			/* Copy */
+			*t++ = *s++;
+			*t++ = *s;
+		}
+
+		else
+#endif
 		/* Pluralizer */
 		if (*s == '~')
 		{
@@ -1068,6 +1734,19 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 			object_desc_str_macro(t, modstr);
 		}
 
+#ifdef JP
+		/* saigo の代わり。効能を付化する by ita*/
+		else if (*s == '%')
+		{
+			/* Append the "kind name" to the "base name" */
+			if (append_name)
+			{
+				object_desc_str_macro(t, X_k_name(k_ptr));
+				object_desc_str_macro(t, append_str);
+			}
+		}
+#endif
+
 		/* Normal */
 		else
 		{
@@ -1078,7 +1757,11 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 
 
 	/* Append the "kind name" to the "base name" */
+#ifdef JP
+	if (append_name && english_object)
+#else /* JP */
 	if (append_name)
+#endif /* JP */
 	{
 		object_desc_str_macro(t, " of ");
 		object_desc_str_macro(t, (k_name + k_ptr->name));
@@ -1088,13 +1771,33 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 	/* Hack -- Append "Artifact" or "Special" names */
 	if (known)
 	{
+#ifdef JP
+		char temp[256];
+#endif /* JP */
+
 		/* Grab any artifact name */
 		if (o_ptr->name1)
 		{
 			artifact_type *a_ptr = &a_info[o_ptr->name1];
 
+#ifdef JP
+			if (english_object)
+			{
+				object_desc_chr_macro(t, ' ');
+				object_desc_str_macro(t, (a_name + a_ptr->name));
+			}
+			else
+			{
+				strcpy(temp, e_to_j(a_name + a_ptr->J_name));
+				if (!is_prefix_name(temp))
+				{
+					object_desc_str_macro(t, temp);
+				}
+			}
+#else /* JP */
 			object_desc_chr_macro(t, ' ');
 			object_desc_str_macro(t, (a_name + a_ptr->name));
+#endif /* JP */
 		}
 
 		/* Grab any ego-item name */
@@ -1102,8 +1805,24 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		{
 			ego_item_type *e_ptr = &e_info[o_ptr->name2];
 
+#ifdef JP
+			if (english_object)
+			{
+				object_desc_chr_macro(t, ' ');
+				object_desc_str_macro(t, (e_name + e_ptr->name));
+			}
+			else
+			{
+				strcpy(temp, e_to_j(e_name + e_ptr->J_name));
+				if (!is_prefix_name(temp))
+				{
+					object_desc_str_macro(t, temp);
+				}
+			}
+#else /* JP */
 			object_desc_chr_macro(t, ' ');
 			object_desc_str_macro(t, (e_name + e_ptr->name));
+#endif /* JP */
 		}
 	}
 
@@ -1126,7 +1845,11 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		/* May be "empty" */
 		else if (!o_ptr->pval)
 		{
+#ifdef JP
+			tail = X_object(" (empty)", "(空)");
+#else
 			tail = " (empty)";
+#endif
 		}
 
 		/* May be "disarmed" */
@@ -1134,11 +1857,19 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		{
 			if (chest_traps[0 - o_ptr->pval])
 			{
+#ifdef JP
+				tail = X_object(" (disarmed)", "(解除済)");
+#else
 				tail = " (disarmed)";
+#endif
 			}
 			else
 			{
+#ifdef JP
+				tail = X_object(" (unlocked)", "(非施錠)");
+#else
 				tail = " (unlocked)";
+#endif
 			}
 		}
 
@@ -1150,42 +1881,74 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 			{
 				case 0:
 				{
+#ifdef JP
+					tail = X_object(" (Locked)", "(施錠)");
+#else
 					tail = " (Locked)";
+#endif
 					break;
 				}
 				case CHEST_LOSE_STR:
 				{
+#ifdef JP
+					tail = X_object(" (Poison Needle)", "(毒針)");
+#else
 					tail = " (Poison Needle)";
+#endif
 					break;
 				}
 				case CHEST_LOSE_CON:
 				{
+#ifdef JP
+					tail = X_object(" (Poison Needle)", "(毒針)");
+#else
 					tail = " (Poison Needle)";
+#endif
 					break;
 				}
 				case CHEST_POISON:
 				{
+#ifdef JP
+					tail = X_object(" (Gas Trap)", "(ガス・トラップ)");
+#else
 					tail = " (Gas Trap)";
+#endif
 					break;
 				}
 				case CHEST_PARALYZE:
 				{
+#ifdef JP
+					tail = X_object(" (Gas Trap)", "(ガス・トラップ)");
+#else
 					tail = " (Gas Trap)";
+#endif
 					break;
 				}
 				case CHEST_EXPLODE:
 				{
+#ifdef JP
+					tail = X_object(" (Explosion Device)", "(爆発装置)");
+#else
 					tail = " (Explosion Device)";
+#endif
 					break;
 				}
 				case CHEST_SUMMON:
 				{
+#ifdef JP
+					tail = X_object(" (Summoning Runes)", "(召喚のルーン)");
+#else
 					tail = " (Summoning Runes)";
+#endif
 					break;
 				}
 				default:
 				{
+#ifdef JP
+					tail = X_object(" (Multiple Traps)", "(マルチ・トラップ)");
+#else
 					tail = " (Multiple Traps)";
+#endif
 					break;
 				}
 			}
@@ -1224,7 +1987,11 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		case TV_DIGGING:
 		{
 			/* Append a "damage" string */
+#ifdef JP
+			if (english_object) object_desc_chr_macro(t, ' ');
+#else /* JP */
 			object_desc_chr_macro(t, ' ');
+#endif /* JP */
 			object_desc_chr_macro(t, p1);
 			object_desc_num_macro(t, o_ptr->dd);
 			object_desc_chr_macro(t, 'd');
@@ -1242,7 +2009,11 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 			power = (o_ptr->sval % 10);
 
 			/* Append a "power" string */
+#ifdef JP
+			if (english_object) object_desc_chr_macro(t, ' ');
+#else /* JP */
 			object_desc_chr_macro(t, ' ');
+#endif /* JP */
 			object_desc_chr_macro(t, p1);
 			object_desc_chr_macro(t, 'x');
 			object_desc_num_macro(t, power);
@@ -1260,7 +2031,11 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		/* Show the tohit/todam on request */
 		if (show_weapon)
 		{
+#ifdef JP
+			if (english_object) object_desc_chr_macro(t, ' ');
+#else /* JP */
 			object_desc_chr_macro(t, ' ');
+#endif /* JP */
 			object_desc_chr_macro(t, p1);
 			object_desc_int_macro(t, o_ptr->to_h);
 			object_desc_chr_macro(t, ',');
@@ -1271,7 +2046,11 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		/* Show the tohit if needed */
 		else if (o_ptr->to_h)
 		{
+#ifdef JP
+			if (english_object) object_desc_chr_macro(t, ' ');
+#else /* JP */
 			object_desc_chr_macro(t, ' ');
+#endif /* JP */
 			object_desc_chr_macro(t, p1);
 			object_desc_int_macro(t, o_ptr->to_h);
 			object_desc_chr_macro(t, p2);
@@ -1280,7 +2059,11 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		/* Show the todam if needed */
 		else if (o_ptr->to_d)
 		{
+#ifdef JP
+			if (english_object) object_desc_chr_macro(t, ' ');
+#else /* JP */
 			object_desc_chr_macro(t, ' ');
+#endif /* JP */
 			object_desc_chr_macro(t, p1);
 			object_desc_int_macro(t, o_ptr->to_d);
 			object_desc_chr_macro(t, p2);
@@ -1294,7 +2077,11 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		/* Show the armor class info */
 		if (show_armour)
 		{
+#ifdef JP
+			if (english_object) object_desc_chr_macro(t, ' ');
+#else /* JP */
 			object_desc_chr_macro(t, ' ');
+#endif /* JP */
 			object_desc_chr_macro(t, b1);
 			object_desc_num_macro(t, o_ptr->ac);
 			object_desc_chr_macro(t, ',');
@@ -1305,7 +2092,11 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		/* No base armor, but does increase armor */
 		else if (o_ptr->to_a)
 		{
+#ifdef JP
+			if (english_object) object_desc_chr_macro(t, ' ');
+#else /* JP */
 			object_desc_chr_macro(t, ' ');
+#endif /* JP */
 			object_desc_chr_macro(t, b1);
 			object_desc_int_macro(t, o_ptr->to_a);
 			object_desc_chr_macro(t, b2);
@@ -1315,7 +2106,11 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 	/* Hack -- always show base armor */
 	else if (show_armour)
 	{
+#ifdef JP
+		if (english_object) object_desc_chr_macro(t, ' ');
+#else /* JP */
 		object_desc_chr_macro(t, ' ');
+#endif /* JP */
 		object_desc_chr_macro(t, b1);
 		object_desc_num_macro(t, o_ptr->ac);
 		object_desc_chr_macro(t, b2);
@@ -1329,9 +2124,17 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 	if ((o_ptr->tval == TV_LITE) && (!artifact_p(o_ptr)))
 	{
 		/* Hack -- Turns of light for normal lites */
+#ifdef JP
+		object_desc_str_macro(t, X_object(" (with ", "("));
+#else /* JP */
 		object_desc_str_macro(t, " (with ");
+#endif /* JP */
 		object_desc_num_macro(t, o_ptr->pval);
+#ifdef JP
+		object_desc_str_macro(t, X_object(" turns of light)", "ターンの寿命)"));
+#else /* JP */
 		object_desc_str_macro(t, " turns of light)");
+#endif /* JP */
 	}
 
 
@@ -1345,8 +2148,20 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		object_desc_chr_macro(t, ' ');
 		object_desc_chr_macro(t, p1);
 
+#ifdef JP
+		/*
+		 * 英語の場合 "+?" は前に、日本語の場合、後ろにつける。
+		 * ex. "+2 to stealth", "隠密+2"
+		 */
+		if (english_object)
+		{
+			/* Dump the "pval" itself */
+			object_desc_int_macro(t, o_ptr->pval);
+		}
+#else /* JP */
 		/* Dump the "pval" itself */
 		object_desc_int_macro(t, o_ptr->pval);
+#endif /* JP */
 
 		/* Do not display the "pval" flags */
 		if (f3 & (TR3_HIDE_TYPE))
@@ -1358,21 +2173,33 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		else if (f1 & (TR1_STEALTH))
 		{
 			/* Dump " to stealth" */
+#ifdef JP
+			tail = X_object(" to stealth", "隠密");
+#else /* JP */
 			tail = " to stealth";
+#endif /* JP */
 		}
 
 		/* Searching */
 		else if (f1 & (TR1_SEARCH))
 		{
 			/* Dump " to searching" */
+#ifdef JP
+			tail = X_object(" to searching", "探索");
+#else /* JP */
 			tail = " to searching";
+#endif /* JP */
 		}
 
 		/* Infravision */
 		else if (f1 & (TR1_INFRA))
 		{
 			/* Dump " to infravision" */
+#ifdef JP
+			tail = X_object(" to infravision", "赤外線視力");
+#else /* JP */
 			tail = " to infravision";
+#endif /* JP */
 		}
 
 #if 0
@@ -1381,7 +2208,11 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		else if (f1 & (TR1_TUNNEL))
 		{
 			/* Dump " to digging" */
+#ifdef JP
+			tail = X_object(" to digging", "採掘");
+#else /* JP */
 			tail = " to digging";
+#endif /* JP */
 		}
 
 #endif
@@ -1390,17 +2221,29 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		else if (f1 & (TR1_SPEED))
 		{
 			/* Dump " to speed" */
+#ifdef JP
+			tail = X_object(" to speed", "加速");
+#else /* JP */
 			tail = " to speed";
+#endif /* JP */
 		}
 
 		/* Blows */
 		else if (f1 & (TR1_BLOWS))
 		{
 			/* Add " attack" */
+#ifdef JP
+			tail = X_object(" attack", "攻撃");
+#else /* JP */
 			tail = " attack";
+#endif /* JP */
 
 			/* Add "attacks" */
+#ifdef JP
+			if (ABS(o_ptr->pval) != 1) tail2 = X_object("s", "");
+#else /* JP */
 			if (ABS(o_ptr->pval) != 1) tail2 = "s";
+#endif /* JP */
 		}
 
 #if 0
@@ -1423,6 +2266,18 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 		object_desc_str_macro(t, tail);
 		object_desc_str_macro(t, tail2);
 
+#ifdef JP
+		/*
+		 * 英語の場合 "+?" は前に、日本語の場合、後ろにつける。
+		 * ex. "+2 to stealth", "隠密+2"
+		 */
+		if (!english_object)
+		{
+			/* Dump the "pval" itself */
+			object_desc_int_macro(t, o_ptr->pval);
+		}
+#endif /* JP */
+
 		/* Finish the display */
 		object_desc_chr_macro(t, p2);
 	}
@@ -1433,11 +2288,20 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 	     (o_ptr->tval == TV_WAND)))
 	{
 		/* Dump " (N charges)" */
+#ifdef JP
+		if (english_object) object_desc_chr_macro(t, ' ');
+#else /* JP */
 		object_desc_chr_macro(t, ' ');
+#endif /* JP */
 		object_desc_chr_macro(t, p1);
 		object_desc_num_macro(t, o_ptr->pval);
+#ifdef JP
+		object_desc_str_macro(t, X_object(" charge", "回分"));
+		if ((o_ptr->pval != 1) && english_object)
+#else /* JP */
 		object_desc_str_macro(t, " charge");
 		if (o_ptr->pval != 1)
+#endif /* JP */
 		{
 			object_desc_chr_macro(t, 's');
 		}
@@ -1466,14 +2330,26 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 				if (power > o_ptr->number) power = o_ptr->number;
 
 				/* Display prettily */
+#ifdef JP
+				object_desc_str_macro(t, X_object(" (", "("));
+#else /* JP */
 				object_desc_str_macro(t, " (");
+#endif /* JP */
 				object_desc_num_macro(t, power);
+#ifdef JP
+				object_desc_str_macro(t, X_object(" charging)", "本 充填中)"));
+#else /* JP */
 				object_desc_str_macro(t, " charging)");
+#endif /* JP */
 			}
 			else
 			{
 				/* Single rod */
+#ifdef JP
+				object_desc_str_macro(t, X_object(" (charging)","(充填中)"));
+#else /* JP */
 				object_desc_str_macro(t, " (charging)");
+#endif /* JP */
 			}
 		}
 	}
@@ -1482,7 +2358,11 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 	else if (known && o_ptr->timeout)
 	{
 		/* Hack -- Dump " (charging)" if relevant */
+#ifdef JP
+		object_desc_str_macro(t, X_object(" (charging)", "(充填中)"));
+#else /* JP */
 		object_desc_str_macro(t, " (charging)");
+#endif /* JP */
 	}
 
 
@@ -1493,7 +2373,13 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 	/* Use standard inscription */
 	if (o_ptr->note)
 	{
+#ifdef JP
+		static char buf[1024];
+
+		u = get_inscription(buf, sizeof(buf), o_ptr);
+#else /* JP */
 		u = quark_str(o_ptr->note);
+#endif /* JP */
 	}
 
 	/* Use nothing */
@@ -1506,25 +2392,41 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 	/* Use special inscription, if any */
 	if (o_ptr->discount >= INSCRIP_NULL)
 	{
+#ifdef JP
+		v = X_inscrip_text[o_ptr->discount - INSCRIP_NULL];
+#else /* JP */
 		v = inscrip_text[o_ptr->discount - INSCRIP_NULL];
+#endif /* JP */
 	}
 
 	/* Use "cursed" if the item is known to be cursed */
 	else if (cursed_p(o_ptr) && known)
 	{
+#ifdef JP
+		v = X_object("cursed", "呪われている");
+#else /* JP */
 		v = "cursed";
+#endif /* JP */
 	}
 
 	/* Hack -- Use "empty" for empty wands/staffs */
 	else if (!known && (o_ptr->ident & (IDENT_EMPTY)))
 	{
+#ifdef JP
+		v = X_object("empty", "空");
+#else /* JP */
 		v = "empty";
+#endif /* JP */
 	}
 
 	/* Use "tried" if the object has been tested unsuccessfully */
 	else if (!aware && object_tried_p(o_ptr))
 	{
+#ifdef JP
+		v = X_object("tried", "未判明");
+#else /* JP */
 		v = "tried";
+#endif /* JP */
 	}
 
 	/* Use the discount, if any */
@@ -1532,7 +2434,11 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 	{
 		char *q = discount_buf;
 		object_desc_num_macro(q, o_ptr->discount);
+#ifdef JP
+		object_desc_str_macro(q, X_object("% off", "%引き"));
+#else /* JP */
 		object_desc_str_macro(q, "% off");
+#endif /* JP */
 		*q = '\0';
 		v = discount_buf;
 	}
@@ -1548,29 +2454,57 @@ void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int 
 	if (u || v)
 	{
 		/* Begin the inscription */
+#ifdef JP
+		if (english_object) *t++ = ' ';
+#else /* JP */
 		*t++ = ' ';
+#endif /* JP */
 		*t++ = c1;
 
 		/* Standard inscription */
 		if (u)
 		{
 			/* Append the inscription */
+#ifdef JP
+			while ((t < b + max - 5) && *u)
+			{
+				if (iskanji(*u)) *t++ = *u++;
+				*t++ = *u++;
+			}
+#else /* JP */
 			while ((t < b + 75) && *u) *t++ = *u++;
+#endif /* JP */
 		}
 
 		/* Special inscription too */
+#ifdef JP
+		if (u && v && (t < b + max - 5))
+#else /* JP */
 		if (u && v && (t < b + 75))
+#endif /* JP */
 		{
 			/* Separator */
 			*t++ = ',';
+#ifdef JP
+			if (english_object) *t++ = ' ';
+#else /* JP */
 			*t++ = ' ';
+#endif /* JP */
 		}
 
 		/* Special inscription */
 		if (v)
 		{
 			/* Append the inscription */
+#ifdef JP
+			while ((t < b + max - 5) && *v)
+			{
+				if (iskanji(*v)) *t++ = *v++;
+				*t++ = *v++;
+			}
+#else /* JP */
 			while ((t < b + 75) && *v) *t++ = *v++;
+#endif /* JP */
 		}
 
 		/* Terminate the inscription */
@@ -1780,6 +2714,21 @@ cptr mention_use(int i)
 	/* Examine the location */
 	switch (i)
 	{
+#ifdef JP
+		case INVEN_WIELD: p = "打撃用"; break;
+		case INVEN_BOW:   p = "射撃用"; break;
+		case INVEN_LEFT:  p = "左手指"; break;
+		case INVEN_RIGHT: p = "右手指"; break;
+		case INVEN_NECK:  p = "  首"; break;
+		case INVEN_LITE:  p = " 光源"; break;
+		case INVEN_BODY:  p = "  体"; break;
+		case INVEN_OUTER: p = "体の上"; break;
+		case INVEN_ARM:   p = "  腕"; break;
+		case INVEN_HEAD:  p = "  頭"; break;
+		case INVEN_HANDS: p = "  手"; break;
+		case INVEN_FEET:  p = "  足"; break;
+		default:          p = "ザック"; break;
+#else
 		case INVEN_WIELD: p = "Wielding"; break;
 		case INVEN_BOW:   p = "Shooting"; break;
 		case INVEN_LEFT:  p = "On left hand"; break;
@@ -1793,6 +2742,7 @@ cptr mention_use(int i)
 		case INVEN_HANDS: p = "On hands"; break;
 		case INVEN_FEET:  p = "On feet"; break;
 		default:          p = "In pack"; break;
+#endif
 	}
 
 	/* Hack -- Heavy weapon */
@@ -1802,7 +2752,11 @@ cptr mention_use(int i)
 		o_ptr = &inventory[i];
 		if (adj_str_hold[p_ptr->stat_ind[A_STR]] < o_ptr->weight / 10)
 		{
+#ifdef JP
+			p = "運搬中";
+#else
 			p = "Just lifting";
+#endif
 		}
 	}
 
@@ -1813,7 +2767,11 @@ cptr mention_use(int i)
 		o_ptr = &inventory[i];
 		if (adj_str_hold[p_ptr->stat_ind[A_STR]] < o_ptr->weight / 10)
 		{
+#ifdef JP
+			p = "運搬中";
+#else
 			p = "Just holding";
+#endif
 		}
 	}
 
@@ -1832,6 +2790,21 @@ cptr describe_use(int i)
 
 	switch (i)
 	{
+#ifdef JP
+		case INVEN_WIELD: p = "打撃用に装備している"; break;
+		case INVEN_BOW:   p = "射撃用に装備している"; break;
+		case INVEN_LEFT:  p = "左手の指にはめている"; break;
+		case INVEN_RIGHT: p = "右手の指にはめている"; break;
+		case INVEN_NECK:  p = "首にかけている"; break;
+		case INVEN_LITE:  p = "光源にしている"; break;
+		case INVEN_BODY:  p = "体に着ている"; break;
+		case INVEN_OUTER: p = "身にまとっている"; break;
+		case INVEN_ARM:   p = "腕につけている"; break;
+		case INVEN_HEAD:  p = "頭にかぶっている"; break;
+		case INVEN_HANDS: p = "手につけている"; break;
+		case INVEN_FEET:  p = "足にはいている"; break;
+		default:          p = "ザックに入っている"; break;
+#else
 		case INVEN_WIELD: p = "attacking monsters with"; break;
 		case INVEN_BOW:   p = "shooting missiles with"; break;
 		case INVEN_LEFT:  p = "wearing on your left hand"; break;
@@ -1845,6 +2818,7 @@ cptr describe_use(int i)
 		case INVEN_HANDS: p = "wearing on your hands"; break;
 		case INVEN_FEET:  p = "wearing on your feet"; break;
 		default:          p = "carrying in your pack"; break;
+#endif
 	}
 
 	/* Hack -- Heavy weapon */
@@ -1854,7 +2828,11 @@ cptr describe_use(int i)
 		o_ptr = &inventory[i];
 		if (adj_str_hold[p_ptr->stat_ind[A_STR]] < o_ptr->weight / 10)
 		{
+#ifdef JP
+			p = "持つだけで精一杯の";
+#else
 			p = "just lifting";
+#endif
 		}
 	}
 
@@ -1865,7 +2843,11 @@ cptr describe_use(int i)
 		o_ptr = &inventory[i];
 		if (adj_str_hold[p_ptr->stat_ind[A_STR]] < o_ptr->weight / 10)
 		{
+#ifdef JP
+			p = "持つだけで精一杯の";
+#else
 			p = "just holding";
+#endif
 		}
 	}
 
@@ -2030,7 +3012,11 @@ void display_inven(void)
 		if (show_weights && o_ptr->weight)
 		{
 			int wgt = o_ptr->weight * o_ptr->number;
+#ifdef JP
+			sprintf(tmp_val, "%3d.%02d kg", lbtokg1(wgt), lbtokg2(wgt));
+#else
 			sprintf(tmp_val, "%3d.%1d lb", wgt / 10, wgt % 10);
+#endif
 			Term_putstr(71, i, -1, TERM_WHITE, tmp_val);
 		}
 	}
@@ -2108,7 +3094,11 @@ void display_equip(void)
 		{
 			int wgt = o_ptr->weight * o_ptr->number;
 			int col = (show_labels ? 52 : 71);
+#ifdef JP
+			sprintf(tmp_val, "%3d.%02d kg", lbtokg1(wgt), lbtokg2(wgt));
+#else
 			sprintf(tmp_val, "%3d.%1d lb", wgt / 10, wgt % 10);
+#endif
 			Term_putstr(col, i - INVEN_WIELD, -1, TERM_WHITE, tmp_val);
 		}
 	}
@@ -2151,7 +3141,11 @@ void show_inven(void)
 	lim = 79 - 3;
 
 	/* Require space for weight (if needed) */
+#ifdef JP
+	if (show_weights) lim -= 10;
+#else
 	if (show_weights) lim -= 9;
+#endif
 
 
 	/* Find the "final" slot */
@@ -2190,7 +3184,11 @@ void show_inven(void)
 		my_strcpy(out_desc[k], o_name, sizeof(out_desc[0]));
 
 		/* Find the predicted "line length" */
+#ifdef JP
+		l = strlen(out_desc[k]) + 3;
+#else
 		l = strlen(out_desc[k]) + 5;
+#endif
 
 		/* Be sure to account for the weight */
 		if (show_weights) l += 9;
@@ -2203,7 +3201,11 @@ void show_inven(void)
 	}
 
 	/* Find the column to start in */
+#ifdef JP
+	col = (len > 74) ? 0 : (79 - len);
+#else
 	col = (len > 76) ? 0 : (79 - len);
+#endif
 
 	/* Output each entry */
 	for (j = 0; j < k; j++)
@@ -2230,8 +3232,13 @@ void show_inven(void)
 		if (show_weights)
 		{
 			int wgt = o_ptr->weight * o_ptr->number;
+#ifdef JP
+			sprintf(tmp_val, "%3d.%02d kg", lbtokg1(wgt), lbtokg2(wgt));
+			put_str(tmp_val, j + 1, 70);
+#else
 			sprintf(tmp_val, "%3d.%1d lb", wgt / 10, wgt % 10);
 			put_str(tmp_val, j + 1, 71);
+#endif
 		}
 	}
 
@@ -2266,10 +3273,18 @@ void show_equip(void)
 	lim = 79 - 3;
 
 	/* Require space for labels (if needed) */
+#ifdef JP
+	if (show_labels) lim -= (7 + 2);
+#else
 	if (show_labels) lim -= (14 + 2);
+#endif
 
 	/* Require space for weight (if needed) */
+#ifdef JP
+	if (show_weights) lim -= 10;
+#else
 	if (show_weights) lim -= 9;
+#endif
 
 	/* Scan the equipment list */
 	for (k = 0, i = INVEN_WIELD; i < INVEN_TOTAL; i++)
@@ -2295,10 +3310,18 @@ void show_equip(void)
 		my_strcpy(out_desc[k], o_name, sizeof(out_desc[0]));
 
 		/* Extract the maximal length (see below) */
+#ifdef JP
+		l = strlen(out_desc[k]) + (2 + 1);
+#else
 		l = strlen(out_desc[k]) + (2 + 3);
+#endif
 
 		/* Increase length for labels (if needed) */
+#ifdef JP
+		if (show_labels) l += (7 + 2);
+#else
 		if (show_labels) l += (14 + 2);
+#endif
 
 		/* Increase length for weight (if needed) */
 		if (show_weights) l += 9;
@@ -2311,7 +3334,11 @@ void show_equip(void)
 	}
 
 	/* Hack -- Find a column to start in */
+#ifdef JP
+	col = (len > 74) ? 0 : (79 - len);
+#else
 	col = (len > 76) ? 0 : (79 - len);
+#endif
 
 	/* Output each entry */
 	for (j = 0; j < k; j++)
@@ -2335,11 +3362,19 @@ void show_equip(void)
 		if (show_labels)
 		{
 			/* Mention the use */
+#ifdef JP
+			strnfmt(tmp_val, sizeof(tmp_val), "%-7s: ", mention_use(i));
+#else
 			strnfmt(tmp_val, sizeof(tmp_val), "%-14s: ", mention_use(i));
+#endif
 			put_str(tmp_val, j+1, col + 3);
 
 			/* Display the entry itself */
+#ifdef JP
+			c_put_str(out_color[j], out_desc[j], j+1, col + 3 +  7 + 2);
+#else
 			c_put_str(out_color[j], out_desc[j], j+1, col + 3 + 14 + 2);
+#endif
 		}
 
 		/* No labels */
@@ -2353,8 +3388,13 @@ void show_equip(void)
 		if (show_weights)
 		{
 			int wgt = o_ptr->weight * o_ptr->number;
+#ifdef JP
+			sprintf(tmp_val, "%3d.%02d kg", lbtokg1(wgt), lbtokg2(wgt));
+			put_str(tmp_val, j+1, 70);
+#else
 			sprintf(tmp_val, "%3d.%d lb", wgt / 10, wgt % 10);
 			put_str(tmp_val, j+1, 71);
+#endif
 		}
 	}
 
@@ -2389,7 +3429,11 @@ void show_floor(const int *floor_list, int floor_num)
 	lim = 79 - 3;
 
 	/* Require space for weight (if needed) */
+#ifdef JP
+	if (show_weights) lim -= 10;
+#else
 	if (show_weights) lim -= 9;
+#endif
 
 	/* Display the inventory */
 	for (k = 0, i = 0; i < floor_num; i++)
@@ -2415,7 +3459,11 @@ void show_floor(const int *floor_list, int floor_num)
 		my_strcpy(out_desc[k], o_name, sizeof(out_desc[0]));
 
 		/* Find the predicted "line length" */
+#ifdef JP
+		l = strlen(out_desc[k]) + 3;
+#else
 		l = strlen(out_desc[k]) + 5;
+#endif
 
 		/* Be sure to account for the weight */
 		if (show_weights) l += 9;
@@ -2428,7 +3476,11 @@ void show_floor(const int *floor_list, int floor_num)
 	}
 
 	/* Find the column to start in */
+#ifdef JP
+	col = (len > 74) ? 0 : (79 - len);
+#else
 	col = (len > 76) ? 0 : (79 - len);
+#endif
 
 	/* Output each entry */
 	for (j = 0; j < k; j++)
@@ -2455,8 +3507,13 @@ void show_floor(const int *floor_list, int floor_num)
 		if (show_weights)
 		{
 			int wgt = o_ptr->weight * o_ptr->number;
+#ifdef JP
+			sprintf(tmp_val, "%3d.%02d kg", lbtokg1(wgt), lbtokg2(wgt));
+			put_str(tmp_val, j + 1, 70);
+#else
 			sprintf(tmp_val, "%3d.%1d lb", wgt / 10, wgt % 10);
 			put_str(tmp_val, j + 1, 71);
+#endif
 		}
 	}
 
@@ -2534,7 +3591,11 @@ static bool verify_item(cptr prompt, int item)
 	object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
 
 	/* Prompt */
+#ifdef JP
+	strnfmt(out_val, sizeof(out_val), "%s%sですか? ", prompt, o_name);
+#else
 	strnfmt(out_val, sizeof(out_val), "%s %s? ", prompt, o_name);
+#endif
 
 	/* Query */
 	return (get_check(out_val));
@@ -2577,7 +3638,11 @@ static bool get_item_allow(int item)
 		if ((s[1] == p_ptr->command_cmd) || (s[1] == '*'))
 		{
 			/* Verify the choice */
+#ifdef JP
+			if (!verify_item("本当に", item)) return (FALSE);
+#else
 			if (!verify_item("Really try", item)) return (FALSE);
+#endif
 		}
 
 		/* Find another '!' */
@@ -2905,6 +3970,13 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 		}
 	}
 
+#ifdef JP
+	/*
+	 * 追加オプション(always_show_list)が設定されている場合は常に一覧を表示する
+	 */
+	if (always_show_list == TRUE) p_ptr->command_see = TRUE;
+#endif
+
 
 	/* Start out in "display" mode */
 	if (p_ptr->command_see)
@@ -2961,13 +4033,21 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 			if (p_ptr->command_see) show_inven();
 
 			/* Begin the prompt */
+#ifdef JP
+			sprintf(out_val, "持ち物:");
+#else
 			sprintf(out_val, "Inven:");
+#endif
 
 			/* List choices */
 			if (i1 <= i2)
 			{
 				/* Build the prompt */
+#ifdef JP
+				sprintf(tmp_val, "%c-%c,",
+#else
 				sprintf(tmp_val, " %c-%c,",
+#endif
 				        index_to_label(i1), index_to_label(i2));
 
 				/* Append */
@@ -2975,13 +4055,25 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 			}
 
 			/* Indicate ability to "view" */
+#ifdef JP
+			if (!p_ptr->command_see) strcat(out_val, " '*'一覧,");
+#else
 			if (!p_ptr->command_see) strcat(out_val, " * to see,");
+#endif
 
 			/* Indicate legality of "toggle" */
+#ifdef JP
+			if (use_equip) strcat(out_val, " '/'装備品,");
+#else
 			if (use_equip) strcat(out_val, " / for Equip,");
+#endif
 
 			/* Indicate legality of the "floor" */
+#ifdef JP
+			if (allow_floor) strcat(out_val, " '-'床上,");
+#else
 			if (allow_floor) strcat(out_val, " - for floor,");
+#endif
 		}
 
 		/* Viewing equipment */
@@ -2991,13 +4083,21 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 			if (p_ptr->command_see) show_equip();
 
 			/* Begin the prompt */
+#ifdef JP
+			sprintf(out_val, "装備品:");
+#else
 			sprintf(out_val, "Equip:");
+#endif
 
 			/* List choices */
 			if (e1 <= e2)
 			{
 				/* Build the prompt */
+#ifdef JP
+				sprintf(tmp_val, "%c-%c,",
+#else
 				sprintf(tmp_val, " %c-%c,",
+#endif
 				        index_to_label(e1), index_to_label(e2));
 
 				/* Append */
@@ -3005,13 +4105,25 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 			}
 
 			/* Indicate ability to "view" */
+#ifdef JP
+			if (!p_ptr->command_see) strcat(out_val, " '*'一覧,");
+#else
 			if (!p_ptr->command_see) strcat(out_val, " * to see,");
+#endif
 
 			/* Indicate legality of "toggle" */
+#ifdef JP
+			if (use_inven) strcat(out_val, " '/'持ち物,");
+#else
 			if (use_inven) strcat(out_val, " / for Inven,");
+#endif
 
 			/* Indicate legality of the "floor" */
+#ifdef JP
+			if (allow_floor) strcat(out_val, " '-'床上,");
+#else
 			if (allow_floor) strcat(out_val, " - for floor,");
+#endif
 		}
 
 		/* Viewing floor */
@@ -3021,26 +4133,46 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 			if (p_ptr->command_see) show_floor(floor_list, floor_num);
 
 			/* Begin the prompt */
+#ifdef JP
+			sprintf(out_val, "床上:");
+#else
 			sprintf(out_val, "Floor:");
+#endif
 
 			/* List choices */
 			if (f1 <= f2)
 			{
 				/* Build the prompt */
+#ifdef JP
+				sprintf(tmp_val, "%c-%c,", I2A(f1), I2A(f2));
+#else
 				sprintf(tmp_val, " %c-%c,", I2A(f1), I2A(f2));
+#endif
 
 				/* Append */
 				my_strcat(out_val, tmp_val, sizeof(out_val));
 			}
 
 			/* Indicate ability to "view" */
+#ifdef JP
+			if (!p_ptr->command_see) strcat(out_val, " '*'一覧,");
+#else
 			if (!p_ptr->command_see) strcat(out_val, " * to see,");
+#endif
 
 			/* Append */
+#ifdef JP
+			if (use_inven) strcat(out_val, " '/'持ち物,");
+#else
 			if (use_inven) strcat(out_val, " / for Inven,");
+#endif
 
 			/* Append */
+#ifdef JP
+			else if (use_equip) strcat(out_val, " '/' 装備品,");
+#else
 			else if (use_equip) strcat(out_val, " / for Equip,");
+#endif
 		}
 
 		/* Finish the prompt */
@@ -3109,7 +4241,11 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 				/* No toggle allowed */
 				else
 				{
+#ifdef JP
+					bell("アイテム・セレクタをスイッチできません！");
+#else
 					bell("Cannot switch item selector!");
+#endif
 					break;
 				}
 
@@ -3132,7 +4268,11 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 				/* Paranoia */
 				if (!allow_floor)
 				{
+#ifdef JP
+					bell("床上を選択できません！");
+#else
 					bell("Cannot select floor!");
+#endif
 					break;
 				}
 
@@ -3189,7 +4329,11 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 					if (!get_item_okay(k)) continue;
 
 					/* Verify the item (if required) */
+#ifdef JP
+					if (floor_query_flag && !verify_item("本当に", k)) continue;
+#else
 					if (floor_query_flag && !verify_item("Try", k)) continue;
+#endif
 
 					/* Allow player to "refuse" certain actions */
 					if (!get_item_allow(k)) continue;
@@ -3212,21 +4356,33 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 				/* Look up the tag */
 				if (!get_tag(&k, which))
 				{
+#ifdef JP
+					bell("不正なアイテム選択です(タグ)！");
+#else
 					bell("Illegal object choice (tag)!");
+#endif
 					break;
 				}
 
 				/* Hack -- Validate the item */
 				if ((k < INVEN_WIELD) ? !allow_inven : !allow_equip)
 				{
+#ifdef JP
+					bell("不正なアイテム選択です(タグ)！");
+#else
 					bell("Illegal object choice (tag)!");
+#endif
 					break;
 				}
 
 				/* Validate the item */
 				if (!get_item_okay(k))
 				{
+#ifdef JP
+					bell("不正なアイテム選択です(タグ)！");
+#else
 					bell("Illegal object choice (tag)!");
+#endif
 					break;
 				}
 
@@ -3252,7 +4408,11 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 				{
 					if (i1 != i2)
 					{
+#ifdef JP
+						bell("不正なアイテム選択です(デフォルト)！");
+#else
 						bell("Illegal object choice (default)!");
+#endif
 						break;
 					}
 
@@ -3264,7 +4424,11 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 				{
 					if (e1 != e2)
 					{
+#ifdef JP
+						bell("不正なアイテム選択です(デフォルト)！");
+#else
 						bell("Illegal object choice (default)!");
+#endif
 						break;
 					}
 
@@ -3276,7 +4440,11 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 				{
 					if (f1 != f2)
 					{
+#ifdef JP
+						bell("不正なアイテム選択です(デフォルト)！");
+#else
 						bell("Illegal object choice (default)!");
+#endif
 						break;
 					}
 
@@ -3286,7 +4454,11 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 				/* Validate the item */
 				if (!get_item_okay(k))
 				{
+#ifdef JP
+					bell("不正なアイテム選択です(デフォルト)！");
+#else
 					bell("Illegal object choice (default)!");
+#endif
 					break;
 				}
 
@@ -3321,7 +4493,11 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 
 					if (k < 0)
 					{
+#ifdef JP
+						bell("不正なアイテム選択です(持ち物)！");
+#else
 						bell("Illegal object choice (inven)!");
+#endif
 						break;
 					}
 				}
@@ -3333,7 +4509,11 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 
 					if (k < 0)
 					{
+#ifdef JP
+						bell("不正なアイテム選択です(装備品)！");
+#else
 						bell("Illegal object choice (equip)!");
+#endif
 						break;
 					}
 				}
@@ -3345,7 +4525,11 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 
 					if (k < 0 || k >= floor_num)
 					{
+#ifdef JP
+						bell("不正なアイテム選択です(床上)！");
+#else
 						bell("Illegal object choice (floor)!");
+#endif
 						break;
 					}
 
@@ -3356,12 +4540,20 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 				/* Validate the item */
 				if (!get_item_okay(k))
 				{
+#ifdef JP
+					bell("不正なアイテム選択です(ノーマル)！");
+#else
 					bell("Illegal object choice (normal)!");
+#endif
 					break;
 				}
 
 				/* Verify the item */
+#ifdef JP
+				if (verify && !verify_item("本当に", k))
+#else
 				if (verify && !verify_item("Try", k))
+#endif
 				{
 					done = TRUE;
 					break;

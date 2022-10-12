@@ -3,7 +3,7 @@
 -- TeCGraf/PUC-Rio
 -- Jul 1998
 -- Last update: Apr 2003
--- $Id: basic.lua,v 1.2 2003/08/10 11:43:28 rr9 Exp $
+-- $Id: basic.lua,v 1.1.1.1 2004/03/28 04:36:05 tooru Exp $
 
 -- This code is free software; you can redistribute it and/or modify it.
 -- The software provided hereunder is on an "as is" basis, and

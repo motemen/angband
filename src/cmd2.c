@@ -8,6 +8,15 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3 日本語版製作: しとしん
+ * 2.7.9v6 対応        : 岸康司, FIRST, しとしん
+ * 2.8.0   対応        : sayu, しとしん
+ * 2.8.1   対応        : FIRST, しとしん
+ * 2.8.3   対応        : FIRST, しとしん
+ * 2.9.0   対応        : 楠瀬
+ */
+
 #include "angband.h"
 
 
@@ -19,14 +28,22 @@ void do_cmd_go_up(void)
 	/* Verify stairs */
 	if (cave_feat[p_ptr->py][p_ptr->px] != FEAT_LESS)
 	{
+#ifdef JP
+		msg_print("ここには上り階段が見当たらない。");
+#else
 		msg_print("I see no up staircase here.");
+#endif
 		return;
 	}
 
 	/* Ironman */
 	if (adult_ironman)
 	{
+#ifdef JP
+		msg_print("何も起こらなかった。");
+#else
 		msg_print("Nothing happens!");
+#endif
 		return;
 	}
 
@@ -34,7 +51,11 @@ void do_cmd_go_up(void)
 	p_ptr->energy_use = 100;
 
 	/* Success */
+#ifdef JP
+	message(MSG_STAIRS_UP, 0, "階段を上って新たなる迷宮へと足を踏み入れた。");
+#else /* JP */
 	message(MSG_STAIRS_UP, 0, "You enter a maze of up staircases.");
+#endif /* JP */
 
 	/* Create a way back */
 	p_ptr->create_down_stair = TRUE;
@@ -55,7 +76,11 @@ void do_cmd_go_down(void)
 	/* Verify stairs */
 	if (cave_feat[p_ptr->py][p_ptr->px] != FEAT_MORE)
 	{
+#ifdef JP
+		msg_print("ここには下り階段が見当たらない。");
+#else
 		msg_print("I see no down staircase here.");
+#endif
 		return;
 	}
 
@@ -63,7 +88,11 @@ void do_cmd_go_down(void)
 	p_ptr->energy_use = 100;
 
 	/* Success */
+#ifdef JP
+	message(MSG_STAIRS_DOWN, 0, "階段を下りて新たなる迷宮へと足を踏み入れた。");
+#else /* JP */
 	message(MSG_STAIRS_DOWN, 0, "You enter a maze of down staircases.");
+#endif /* JP */
 
 	/* Create a way back */
 	p_ptr->create_up_stair = TRUE;
@@ -272,23 +301,37 @@ static void chest_trap(int y, int x, s16b o_idx)
 	/* Lose strength */
 	if (trap & (CHEST_LOSE_STR))
 	{
+#ifdef JP
+		msg_print("仕掛けられていた小さな針に刺されてしまった！");
+		take_hit(damroll(1, 4), "毒針");
+#else
 		msg_print("A small needle has pricked you!");
 		take_hit(damroll(1, 4), "a poison needle");
+#endif
 		(void)do_dec_stat(A_STR);
 	}
 
 	/* Lose constitution */
 	if (trap & (CHEST_LOSE_CON))
 	{
+#ifdef JP
+		msg_print("仕掛けられていた小さな針に刺されてしまった！");
+		take_hit(damroll(1, 4), "毒針");
+#else
 		msg_print("A small needle has pricked you!");
 		take_hit(damroll(1, 4), "a poison needle");
+#endif
 		(void)do_dec_stat(A_CON);
 	}
 
 	/* Poison */
 	if (trap & (CHEST_POISON))
 	{
+#ifdef JP
+		msg_print("突如吹き出した緑色のガスに包み込まれた！");
+#else
 		msg_print("A puff of green gas surrounds you!");
+#endif
 		if (!(p_ptr->resist_pois || p_ptr->oppose_pois))
 		{
 			(void)set_poisoned(p_ptr->poisoned + 10 + randint(20));
@@ -298,7 +341,11 @@ static void chest_trap(int y, int x, s16b o_idx)
 	/* Paralyze */
 	if (trap & (CHEST_PARALYZE))
 	{
+#ifdef JP
+		msg_print("突如吹き出した黄色いガスに包み込まれた！");
+#else
 		msg_print("A puff of yellow gas surrounds you!");
+#endif
 		if (!p_ptr->free_act)
 		{
 			(void)set_paralyzed(p_ptr->paralyzed + 10 + randint(20));
@@ -309,7 +356,11 @@ static void chest_trap(int y, int x, s16b o_idx)
 	if (trap & (CHEST_SUMMON))
 	{
 		int num = 2 + randint(3);
+#ifdef JP
+		msg_print("突如吹き出した煙に包み込まれた！");
+#else
 		msg_print("You are enveloped in a cloud of smoke!");
+#endif
 		sound(MSG_SUM_MONSTER);
 		for (i = 0; i < num; i++)
 		{
@@ -320,10 +371,19 @@ static void chest_trap(int y, int x, s16b o_idx)
 	/* Explode */
 	if (trap & (CHEST_EXPLODE))
 	{
+#ifdef JP
+		msg_print("突然、箱が爆発した！");
+		msg_print("箱の中の物はすべて粉々に砕け散った！");
+#else
 		msg_print("There is a sudden explosion!");
 		msg_print("Everything inside the chest is destroyed!");
+#endif
 		o_ptr->pval = 0;
+#ifdef JP
+		take_hit(damroll(5, 8), "爆発する箱");
+#else
 		take_hit(damroll(5, 8), "an exploding chest");
+#endif
 	}
 }
 
@@ -368,7 +428,11 @@ static bool do_cmd_open_chest(int y, int x, s16b o_idx)
 		/* Success -- May still have traps */
 		if (rand_int(100) < j)
 		{
+#ifdef JP
+			message(MSG_LOCKPICK, 0, "鍵をはずした。");
+#else /* JP */
 			message(MSG_LOCKPICK, 0, "You have picked the lock.");
+#endif /* JP */
 			gain_exp(1);
 			flag = TRUE;
 		}
@@ -379,7 +443,11 @@ static bool do_cmd_open_chest(int y, int x, s16b o_idx)
 			/* We may continue repeating */
 			more = TRUE;
 			if (flush_failure) flush();
+#ifdef JP
+			message(MSG_LOCKPICK_FAIL, 0, "鍵をはずせなかった。");
+#else
 			message(MSG_LOCKPICK_FAIL, 0, "You failed to pick the lock.");
+#endif
 		}
 	}
 
@@ -430,25 +498,41 @@ static bool do_cmd_disarm_chest(int y, int x, s16b o_idx)
 	/* Must find the trap first. */
 	if (!object_known_p(o_ptr))
 	{
+#ifdef JP
+		msg_print("トラップが見あたらない。");
+#else
 		msg_print("I don't see any traps.");
+#endif
 	}
 
 	/* Already disarmed/unlocked */
 	else if (o_ptr->pval <= 0)
 	{
+#ifdef JP
+		msg_print("箱にはトラップが仕掛けられていない。");
+#else
 		msg_print("The chest is not trapped.");
+#endif
 	}
 
 	/* No traps to find. */
 	else if (!chest_traps[o_ptr->pval])
 	{
+#ifdef JP
+		msg_print("箱にはトラップが仕掛けられていない。");
+#else
 		msg_print("The chest is not trapped.");
+#endif
 	}
 
 	/* Success (get a lot of experience) */
 	else if (rand_int(100) < j)
 	{
+#ifdef JP
+		message(MSG_DISARM, 0, "箱に仕掛けられていたトラップを解除した。");
+#else /* JP */
 		message(MSG_DISARM, 0, "You have disarmed the chest.");
+#endif /* JP */
 		gain_exp(o_ptr->pval);
 		o_ptr->pval = (0 - o_ptr->pval);
 	}
@@ -459,13 +543,21 @@ static bool do_cmd_disarm_chest(int y, int x, s16b o_idx)
 		/* We may keep trying */
 		more = TRUE;
 		if (flush_failure) flush();
+#ifdef JP
+		msg_print("箱のトラップ解除に失敗した。");
+#else
 		msg_print("You failed to disarm the chest.");
+#endif
 	}
 
 	/* Failure -- Set off the trap */
 	else
 	{
+#ifdef JP
+		msg_print("トラップを作動させてしまった！");
+#else
 		msg_print("You set off a trap!");
+#endif
 		chest_trap(y, x, o_idx);
 	}
 
@@ -614,7 +706,11 @@ static bool do_cmd_open_test(int y, int x)
 	if (!(cave_info[y][x] & (CAVE_MARK)))
 	{
 		/* Message */
+#ifdef JP
+		msg_print("そこには何も見当たらない。");
+#else
 		msg_print("You see nothing there.");
+#endif
 
 		/* Nope */
 		return (FALSE);
@@ -625,7 +721,11 @@ static bool do_cmd_open_test(int y, int x)
 	      (cave_feat[y][x] <= FEAT_DOOR_TAIL)))
 	{
 		/* Message */
+#ifdef JP
+		message(MSG_NOTHING_TO_OPEN, 0, "そこには開けるものが見当たらない。");
+#else
 		message(MSG_NOTHING_TO_OPEN, 0, "You see nothing there to open.");
+#endif
 
 		/* Nope */
 		return (FALSE);
@@ -658,7 +758,11 @@ static bool do_cmd_open_aux(int y, int x)
 	if (cave_feat[y][x] >= FEAT_DOOR_HEAD + 0x08)
 	{
 		/* Stuck */
+#ifdef JP
+		msg_print("ドアはがっちりと閉じられているようだ。");
+#else
 		msg_print("The door appears to be stuck.");
+#endif
 	}
 
 	/* Locked door */
@@ -684,7 +788,11 @@ static bool do_cmd_open_aux(int y, int x)
 		if (rand_int(100) < j)
 		{
 			/* Message */
+#ifdef JP
+			message(MSG_LOCKPICK, 0, "鍵をはずした。");
+#else /* JP */
 			message(MSG_LOCKPICK, 0, "You have picked the lock.");
+#endif /* JP */
 
 			/* Open the door */
 			cave_set_feat(y, x, FEAT_OPEN);
@@ -703,7 +811,11 @@ static bool do_cmd_open_aux(int y, int x)
 			if (flush_failure) flush();
 
 			/* Message */
+#ifdef JP
+			message(MSG_LOCKPICK_FAIL, 0, "鍵をはずせなかった。");
+#else
 			message(MSG_LOCKPICK_FAIL, 0, "You failed to pick the lock.");
+#endif
 
 			/* We may keep trying */
 			more = TRUE;
@@ -808,7 +920,11 @@ void do_cmd_open(void)
 	if (cave_m_idx[y][x] > 0)
 	{
 		/* Message */
+#ifdef JP
+		msg_print("モンスターが立ちふさがっている！");
+#else
 		msg_print("There is a monster in the way!");
+#endif
 
 		/* Attack */
 		py_attack(y, x);
@@ -842,7 +958,11 @@ static bool do_cmd_close_test(int y, int x)
 	if (!(cave_info[y][x] & (CAVE_MARK)))
 	{
 		/* Message */
+#ifdef JP
+		msg_print("そこには何も見当たらない。");
+#else
 		msg_print("You see nothing there.");
+#endif
 
 		/* Nope */
 		return (FALSE);
@@ -853,7 +973,11 @@ static bool do_cmd_close_test(int y, int x)
 	    (cave_feat[y][x] != FEAT_BROKEN))
 	{
 		/* Message */
+#ifdef JP
+		msg_print("そこには閉じるものが見当たらない。");
+#else
 		msg_print("You see nothing there to close.");
+#endif
 
 		/* Nope */
 		return (FALSE);
@@ -884,7 +1008,11 @@ static bool do_cmd_close_aux(int y, int x)
 	if (cave_feat[y][x] == FEAT_BROKEN)
 	{
 		/* Message */
+#ifdef JP
+		msg_print("ドアは壊れてしまっている。");
+#else
 		msg_print("The door appears to be broken.");
+#endif
 	}
 
 	/* Open door */
@@ -966,7 +1094,11 @@ void do_cmd_close(void)
 	if (cave_m_idx[y][x] > 0)
 	{
 		/* Message */
+#ifdef JP
+		msg_print("モンスターが立ちふさがっている！");
+#else
 		msg_print("There is a monster in the way!");
+#endif
 
 		/* Attack */
 		py_attack(y, x);
@@ -994,7 +1126,11 @@ static bool do_cmd_tunnel_test(int y, int x)
 	if (!(cave_info[y][x] & (CAVE_MARK)))
 	{
 		/* Message */
+#ifdef JP
+		msg_print("そこには何も見当たらない。");
+#else
 		msg_print("You see nothing there.");
+#endif
 
 		/* Nope */
 		return (FALSE);
@@ -1004,7 +1140,11 @@ static bool do_cmd_tunnel_test(int y, int x)
 	if (cave_floor_bold(y, x))
 	{
 		/* Message */
+#ifdef JP
+		msg_print("そこには掘るものが見当たらない。");
+#else
 		msg_print("You see nothing there to tunnel.");
+#endif
 
 		/* Nope */
 		return (FALSE);
@@ -1074,7 +1214,11 @@ static bool do_cmd_tunnel_aux(int y, int x)
 	/* Titanium */
 	if (cave_feat[y][x] >= FEAT_PERM_EXTRA)
 	{
+#ifdef JP
+		msg_print("この岩は硬すぎて掘れないようだ。");
+#else
 		msg_print("This seems to be permanent rock.");
+#endif
 	}
 
 	/* Granite */
@@ -1083,14 +1227,22 @@ static bool do_cmd_tunnel_aux(int y, int x)
 		/* Tunnel */
 		if ((p_ptr->skill_dig > 40 + rand_int(1600)) && twall(y, x))
 		{
+#ifdef JP
+			msg_print("穴を掘り終えた。");
+#else
 			msg_print("You have finished the tunnel.");
+#endif
 		}
 
 		/* Keep trying */
 		else
 		{
 			/* We may continue tunelling */
+#ifdef JP
+			msg_print("花崗岩の壁に穴を掘っている。");
+#else
 			msg_print("You tunnel into the granite wall.");
+#endif
 			more = TRUE;
 		}
 	}
@@ -1136,14 +1288,22 @@ static bool do_cmd_tunnel_aux(int y, int x)
 				place_gold(y, x);
 
 				/* Message */
+#ifdef JP
+				msg_print("何かを発見した！");
+#else
 				msg_print("You have found something!");
+#endif
 			}
 
 			/* Found nothing */
 			else
 			{
 				/* Message */
+#ifdef JP
+				msg_print("穴を掘り終えた。");
+#else
 				msg_print("You have finished the tunnel.");
+#endif
 			}
 		}
 
@@ -1151,7 +1311,11 @@ static bool do_cmd_tunnel_aux(int y, int x)
 		else if (hard)
 		{
 			/* Message, continue digging */
+#ifdef JP
+			msg_print("石英の鉱脈に穴を掘っている。");
+#else
 			msg_print("You tunnel into the quartz vein.");
+#endif
 			more = TRUE;
 		}
 
@@ -1159,7 +1323,11 @@ static bool do_cmd_tunnel_aux(int y, int x)
 		else
 		{
 			/* Message, continue digging */
+#ifdef JP
+			msg_print("溶岩の鉱脈に穴を掘っている。");
+#else
 			msg_print("You tunnel into the magma vein.");
+#endif
 			more = TRUE;
 		}
 	}
@@ -1171,7 +1339,11 @@ static bool do_cmd_tunnel_aux(int y, int x)
 		if ((p_ptr->skill_dig > rand_int(200)) && twall(y, x))
 		{
 			/* Message */
+#ifdef JP
+			msg_print("岩石をくずした。");
+#else
 			msg_print("You have removed the rubble.");
+#endif
 
 			/* Hack -- place an object */
 			if (rand_int(100) < 10)
@@ -1182,7 +1354,11 @@ static bool do_cmd_tunnel_aux(int y, int x)
 				/* Observe new object */
 				if (player_can_see_bold(y, x))
 				{
+#ifdef JP
+					msg_print("何かを発見した！");
+#else
 					msg_print("You have found something!");
+#endif
 				}
 			}
 		}
@@ -1190,7 +1366,11 @@ static bool do_cmd_tunnel_aux(int y, int x)
 		else
 		{
 			/* Message, keep digging */
+#ifdef JP
+			msg_print("岩石をくずしている。");
+#else
 			msg_print("You dig in the rubble.");
+#endif
 			more = TRUE;
 		}
 	}
@@ -1201,14 +1381,22 @@ static bool do_cmd_tunnel_aux(int y, int x)
 		/* Tunnel */
 		if ((p_ptr->skill_dig > 30 + rand_int(1200)) && twall(y, x))
 		{
+#ifdef JP
+			msg_print("穴を掘り終えた。");
+#else
 			msg_print("You have finished the tunnel.");
+#endif
 		}
 
 		/* Keep trying */
 		else
 		{
 			/* We may continue tunelling */
+#ifdef JP
+			msg_print("花崗岩の壁に穴を掘っている。");
+#else
 			msg_print("You tunnel into the granite wall.");
+#endif
 			more = TRUE;
 
 			/* Occasional Search XXX XXX */
@@ -1222,14 +1410,22 @@ static bool do_cmd_tunnel_aux(int y, int x)
 		/* Tunnel */
 		if ((p_ptr->skill_dig > 30 + rand_int(1200)) && twall(y, x))
 		{
+#ifdef JP
+			msg_print("穴を掘り終えた。");
+#else
 			msg_print("You have finished the tunnel.");
+#endif
 		}
 
 		/* Keep trying */
 		else
 		{
 			/* We may continue tunelling */
+#ifdef JP
+			msg_print("ドアに穴を開けている。");
+#else
 			msg_print("You tunnel into the door.");
+#endif
 			more = TRUE;
 		}
 	}
@@ -1293,7 +1489,11 @@ void do_cmd_tunnel(void)
 	if (cave_m_idx[y][x] > 0)
 	{
 		/* Message */
+#ifdef JP
+		msg_print("モンスターが立ちふさがっている！");
+#else
 		msg_print("There is a monster in the way!");
+#endif
 
 		/* Attack */
 		py_attack(y, x);
@@ -1320,7 +1520,11 @@ static bool do_cmd_disarm_test(int y, int x)
 	if (!(cave_info[y][x] & (CAVE_MARK)))
 	{
 		/* Message */
+#ifdef JP
+		msg_print("そこには何も見当たらない。");
+#else
 		msg_print("You see nothing there.");
+#endif
 
 		/* Nope */
 		return (FALSE);
@@ -1331,7 +1535,11 @@ static bool do_cmd_disarm_test(int y, int x)
 	      (cave_feat[y][x] <= FEAT_TRAP_TAIL)))
 	{
 		/* Message */
+#ifdef JP
+		msg_print("そこには解除するものが見当たらない。");
+#else
 		msg_print("You see nothing there to disarm.");
+#endif
 
 		/* Nope */
 		return (FALSE);
@@ -1363,7 +1571,11 @@ static bool do_cmd_disarm_aux(int y, int x)
 
 
 	/* Get the trap name */
+#ifdef JP
+	name = X_f_name(&f_info[cave_feat[y][x]]);
+#else
 	name = (f_name + f_info[cave_feat[y][x]].name);
+#endif
 
 	/* Get the "disarm" factor */
 	i = p_ptr->skill_dis;
@@ -1387,7 +1599,11 @@ static bool do_cmd_disarm_aux(int y, int x)
 	if (rand_int(100) < j)
 	{
 		/* Message */
+#ifdef JP
+		message_format(MSG_DISARM, 0, "%sを解除した。", name);
+#else /* JP */
 		message_format(MSG_DISARM, 0, "You have disarmed the %s.", name);
+#endif /* JP */
 
 		/* Reward */
 		gain_exp(power);
@@ -1406,7 +1622,11 @@ static bool do_cmd_disarm_aux(int y, int x)
 		if (flush_failure) flush();
 
 		/* Message */
+#ifdef JP
+		msg_format("%sの解除に失敗した。", name);
+#else
 		msg_format("You failed to disarm the %s.", name);
+#endif
 
 		/* We may keep trying */
 		more = TRUE;
@@ -1416,7 +1636,11 @@ static bool do_cmd_disarm_aux(int y, int x)
 	else
 	{
 		/* Message */
+#ifdef JP
+		msg_format("%sを作動させてしまった！", name);
+#else
 		msg_format("You set off the %s!", name);
+#endif
 
 		/* Hit the trap */
 		hit_trap(y, x);
@@ -1505,7 +1729,11 @@ void do_cmd_disarm(void)
 	if (cave_m_idx[y][x] > 0)
 	{
 		/* Message */
+#ifdef JP
+		msg_print("モンスターが立ちふさがっている！");
+#else
 		msg_print("There is a monster in the way!");
+#endif
 
 		/* Attack */
 		py_attack(y, x);
@@ -1539,7 +1767,11 @@ static bool do_cmd_bash_test(int y, int x)
 	if (!(cave_info[y][x] & (CAVE_MARK)))
 	{
 		/* Message */
+#ifdef JP
+		msg_print("そこには何も見当たらない。");
+#else
 		msg_print("You see nothing there.");
+#endif
 
 		/* Nope */
 		return (FALSE);
@@ -1550,7 +1782,11 @@ static bool do_cmd_bash_test(int y, int x)
 	      (cave_feat[y][x] <= FEAT_DOOR_TAIL)))
 	{
 		/* Message */
+#ifdef JP
+		msg_print("そこには体当たりするものが見当たらない。");
+#else
 		msg_print("You see nothing there to bash.");
+#endif
 
 		/* Nope */
 		return (FALSE);
@@ -1580,7 +1816,11 @@ static bool do_cmd_bash_aux(int y, int x)
 
 
 	/* Message */
+#ifdef JP
+	msg_print("ドアに体当たりをした！");
+#else
 	msg_print("You smash into the door!");
+#endif
 
 	/* Hack -- Bash power based on strength */
 	/* (Ranges from 3 to 20 to 100 to 200) */
@@ -1611,7 +1851,11 @@ static bool do_cmd_bash_aux(int y, int x)
 		}
 
 		/* Message */
+#ifdef JP
+		message(MSG_OPENDOOR, 0, "ドアを壊した！");
+#else
 		message(MSG_OPENDOOR, 0, "The door crashes open!");
+#endif
 
 		/* Update the visuals */
 		p_ptr->update |= (PU_UPDATE_VIEW | PU_MONSTERS);
@@ -1622,7 +1866,11 @@ static bool do_cmd_bash_aux(int y, int x)
 	         p_ptr->lev)
 	{
 		/* Message */
+#ifdef JP
+		msg_print("このドアは頑丈だ。");
+#else
 		msg_print("The door holds firm.");
+#endif
 
 		/* Allow repeated bashing */
 		more = TRUE;
@@ -1632,7 +1880,11 @@ static bool do_cmd_bash_aux(int y, int x)
 	else
 	{
 		/* Message */
+#ifdef JP
+		msg_print("体のバランスをくずしてしまった。");
+#else
 		msg_print("You are off-balance.");
+#endif
 
 		/* Hack -- Lose balance ala paralysis */
 		(void)set_paralyzed(p_ptr->paralyzed + 2 + rand_int(2));
@@ -1703,7 +1955,11 @@ void do_cmd_bash(void)
 	if (cave_m_idx[y][x] > 0)
 	{
 		/* Message */
+#ifdef JP
+		msg_print("モンスターが立ちふさがっている！");
+#else
 		msg_print("There is a monster in the way!");
+#endif
 
 		/* Attack */
 		py_attack(y, x);
@@ -1833,7 +2089,11 @@ void do_cmd_alter(void)
 	else
 	{
 		/* Oops */
+#ifdef JP
+		msg_print("おっと...");
+#else
 		msg_print("You spin around.");
+#endif
 	}
 
 	/* Cancel repetition unless we can continue */
@@ -1883,7 +2143,11 @@ static bool do_cmd_spike_test(int y, int x)
 	if (!(cave_info[y][x] & (CAVE_MARK)))
 	{
 		/* Message */
+#ifdef JP
+		msg_print("そこには何も見当たらない。");
+#else
 		msg_print("You see nothing there.");
+#endif
 
 		/* Nope */
 		return (FALSE);
@@ -1894,7 +2158,11 @@ static bool do_cmd_spike_test(int y, int x)
 	      (cave_feat[y][x] <= FEAT_DOOR_TAIL)))
 	{
 		/* Message */
+#ifdef JP
+		msg_print("そこにはくさびを打てるものが見当たらない。");
+#else
 		msg_print("You see nothing there to spike.");
+#endif
 
 		/* Nope */
 		return (FALSE);
@@ -1919,7 +2187,11 @@ void do_cmd_spike(void)
 	if (!get_spike(&item))
 	{
 		/* Message */
+#ifdef JP
+		msg_print("くさびを持っていない！");
+#else
 		msg_print("You have no spikes!");
+#endif
 
 		/* Done */
 		return;
@@ -1954,7 +2226,11 @@ void do_cmd_spike(void)
 	if (cave_m_idx[y][x] > 0)
 	{
 		/* Message */
+#ifdef JP
+		msg_print("モンスターが立ちふさがっている！");
+#else
 		msg_print("There is a monster in the way!");
+#endif
 
 		/* Attack */
 		py_attack(y, x);
@@ -1967,7 +2243,11 @@ void do_cmd_spike(void)
 		if (!do_cmd_spike_test(y, x)) return;
 
 		/* Successful jamming */
+#ifdef JP
+		msg_print("ドアにくさびを打ち込んだ。");
+#else
 		msg_print("You jam the door with a spike.");
+#endif
 
 		/* Convert "locked" to "stuck" XXX XXX XXX */
 		if (cave_feat[y][x] < FEAT_DOOR_HEAD + 0x08)
@@ -2011,7 +2291,11 @@ static bool do_cmd_walk_test(int y, int x)
 		if (cave_feat[y][x] == FEAT_RUBBLE)
 		{
 			/* Message */
+#ifdef JP
+			message(MSG_HITWALL, 0, "行く手に岩石がある！");
+#else /* JP */
 			message(MSG_HITWALL, 0, "There is a pile of rubble in the way!");
+#endif /* JP */
 		}
 
 		/* Door */
@@ -2021,14 +2305,22 @@ static bool do_cmd_walk_test(int y, int x)
 			if (easy_alter) return (TRUE);
 
 			/* Message */
+#ifdef JP
+			message(MSG_HITWALL, 0, "行く手にドアがある！");
+#else /* JP */
 			message(MSG_HITWALL, 0, "There is a door in the way!");
+#endif /* JP */
 		}
 
 		/* Wall */
 		else
 		{
 			/* Message */
+#ifdef JP
+			message(MSG_HITWALL, 0, "行く手に壁がある！");
+#else /* JP */
 			message(MSG_HITWALL, 0, "There is a wall in the way!");
+#endif /* JP */
 		}
 
 		/* Nope */
@@ -2127,7 +2419,11 @@ void do_cmd_run(void)
 	/* Hack XXX XXX XXX */
 	if (p_ptr->confused)
 	{
+#ifdef JP
+		msg_print("混乱していて走れない！");
+#else
 		msg_print("You are too confused!");
+#endif
 		return;
 	}
 
@@ -2231,7 +2527,11 @@ void do_cmd_rest(void)
 	/* Prompt for time if needed */
 	if (p_ptr->command_arg <= 0)
 	{
+#ifdef JP
+		cptr p = "休憩 (0-9999, '*' で HP/MP, '&' で必要なだけ): ";
+#else
 		cptr p = "Rest (0-9999, '*' for HP/SP, '&' as needed): ";
+#endif
 
 		char out_val[5];
 
@@ -2407,7 +2707,11 @@ void do_cmd_fire(void)
 	/* Require a usable launcher */
 	if (!j_ptr->tval || !p_ptr->ammo_tval)
 	{
+#ifdef JP
+		msg_print("射撃用の武器を持っていない。");
+#else
 		msg_print("You have nothing to fire with.");
+#endif
 		return;
 	}
 
@@ -2416,8 +2720,13 @@ void do_cmd_fire(void)
 	item_tester_tval = p_ptr->ammo_tval;
 
 	/* Get an item */
+#ifdef JP
+	q = "どれを撃ちますか? ";
+	s = "発射されるアイテムがありません。";
+#else
 	q = "Fire which item? ";
 	s = "You have nothing to fire.";
+#endif
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the object */
@@ -2578,7 +2887,11 @@ void do_cmd_fire(void)
 				bool fear = FALSE;
 
 				/* Assume a default death */
+#ifdef JP
+				cptr note_dies = "は死んだ。";
+#else
 				cptr note_dies = " dies.";
+#endif
 
 				/* Some monsters get "destroyed" */
 				if ((r_ptr->flags3 & (RF3_DEMON)) ||
@@ -2587,7 +2900,11 @@ void do_cmd_fire(void)
 				    (strchr("Evg", r_ptr->d_char)))
 				{
 					/* Special note at death */
+#ifdef JP
+					note_dies = "を倒した。";
+#else
 					note_dies = " is destroyed.";
+#endif
 				}
 
 
@@ -2595,7 +2912,11 @@ void do_cmd_fire(void)
 				if (!visible)
 				{
 					/* Invisible monster */
+#ifdef JP
+					message_format(MSG_SHOOT_HIT, 0, "%sが敵を捕捉した。", o_name);
+#else /* JP */
 					message_format(MSG_SHOOT_HIT, 0, "The %s finds a mark.", o_name);
+#endif /* JP */
 				}
 
 				/* Handle visible monster */
@@ -2607,7 +2928,11 @@ void do_cmd_fire(void)
 					monster_desc(m_name, sizeof(m_name), m_ptr, 0);
 
 					/* Message */
+#ifdef JP
+					message_format(MSG_SHOOT_HIT, 0, "%sが%sに命中した。", o_name, m_name);
+#else /* JP */
 					message_format(MSG_SHOOT_HIT, 0, "The %s hits %s.", o_name, m_name);
+#endif /* JP */
 
 					/* Hack -- Track this monster race */
 					if (m_ptr->ml) monster_race_track(m_ptr->r_idx);
@@ -2626,8 +2951,13 @@ void do_cmd_fire(void)
 				/* Complex message */
 				if (p_ptr->wizard)
 				{
+#ifdef JP
+					msg_format("%d/%d のダメージを与えた。",
+					           tdam, m_ptr->hp);
+#else
 					msg_format("You do %d (out of %d) damage.",
 					           tdam, m_ptr->hp);
+#endif
 				}
 
 				/* Hit the monster, check for death */
@@ -2652,7 +2982,11 @@ void do_cmd_fire(void)
 
 						/* Message */
 						message_format(MSG_FLEE, m_ptr->r_idx,
+#ifdef JP
+						               "%^sは恐怖して逃げ出した！", m_name);
+#else
 						               "%^s flees in terror!", m_name);
+#endif
 					}
 				}
 			}
@@ -2708,8 +3042,13 @@ void do_cmd_throw(void)
 
 
 	/* Get an item */
+#ifdef JP
+	q = "どのアイテムを投げますか? ";
+	s = "投げるアイテムがない。";
+#else
 	q = "Throw which item? ";
 	s = "You have nothing to throw.";
+#endif
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the object */
@@ -2867,7 +3206,11 @@ void do_cmd_throw(void)
 				bool fear = FALSE;
 
 				/* Assume a default death */
+#ifdef JP
+				cptr note_dies = "は死んだ。";
+#else
 				cptr note_dies = " dies.";
+#endif
 
 				/* Some monsters get "destroyed" */
 				if ((r_ptr->flags3 & (RF3_DEMON)) ||
@@ -2876,7 +3219,11 @@ void do_cmd_throw(void)
 				    (strchr("Evg", r_ptr->d_char)))
 				{
 					/* Special note at death */
+#ifdef JP
+					note_dies = "を倒した。";
+#else
 					note_dies = " is destroyed.";
+#endif
 				}
 
 
@@ -2884,7 +3231,11 @@ void do_cmd_throw(void)
 				if (!visible)
 				{
 					/* Invisible monster */
+#ifdef JP
+					msg_format("%sが敵を捕捉した。", o_name);
+#else
 					msg_format("The %s finds a mark.", o_name);
+#endif
 				}
 
 				/* Handle visible monster */
@@ -2896,7 +3247,11 @@ void do_cmd_throw(void)
 					monster_desc(m_name, sizeof(m_name), m_ptr, 0);
 
 					/* Message */
+#ifdef JP
+					msg_format("%sが%sに命中した。", o_name, m_name);
+#else
 					msg_format("The %s hits %s.", o_name, m_name);
+#endif
 
 					/* Hack -- Track this monster race */
 					if (m_ptr->ml) monster_race_track(m_ptr->r_idx);
@@ -2915,8 +3270,13 @@ void do_cmd_throw(void)
 				/* Complex message */
 				if (p_ptr->wizard)
 				{
+#ifdef JP
+					msg_format("%d/%dのダメージを与えた。",
+					           tdam, m_ptr->hp);
+#else
 					msg_format("You do %d (out of %d) damage.",
 					           tdam, m_ptr->hp);
+#endif
 				}
 
 				/* Hit the monster, check for death */
@@ -2941,7 +3301,11 @@ void do_cmd_throw(void)
 
 						/* Message */
 						message_format(MSG_FLEE, m_ptr->r_idx,
+#ifdef JP
+						               "%^sは恐怖して逃げ出した！", m_name);
+#else
 						               "%^s flees in terror!", m_name);
+#endif
 					}
 				}
 			}

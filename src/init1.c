@@ -8,6 +8,16 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3-v6 日本語版製作: しとしん
+ * _strchr()  製作        : エルロック
+ * 2.8.0      対応        : sayu, しとしん
+ * 2.8.1      対応        : FIRST
+ * 2.8.3      対応        : FIRST
+ *
+ * 日本語版機能追加 : 英日切り替え機能
+ */
+
 #include "angband.h"
 
 
@@ -1064,9 +1074,41 @@ errr parse_f_info(char *buf, header *head)
 		if (!(f_ptr->name = add_name(head, s)))
 			return (PARSE_ERROR_OUT_OF_MEMORY);
 
+#ifdef JP
+		/* デフォルトの日本語名に英語名を使用する */
+		f_ptr->J_name = f_ptr->name;
+#endif /* JP */
+
 		/* Default "mimic" */
 		f_ptr->mimic = i;
 	}
+
+#ifdef JP
+	/* Process 'J' for "Japanese" */
+	else if (buf[0] == 'J')
+	{
+		/* There better be a current f_ptr */
+		if (!f_ptr) return (PARSE_ERROR_MISSING_RECORD_HEADER);
+
+		/* Get the text */
+		s = buf + 4;
+
+		/* Process 'N' for "Name" */
+		if (buf[2] == 'N')
+		{
+			/* Store the name */
+			if (!(f_ptr->J_name = add_name(head, s)))
+			{
+				return (PARSE_ERROR_OUT_OF_MEMORY);
+			}
+		}
+		else
+		{
+			/* Oops */
+			return (PARSE_ERROR_UNDEFINED_DIRECTIVE);
+		}
+	}
+#endif /* JP */
 
 	/* Process 'M' for "Mimic" (one line only) */
 	else if (buf[0] == 'M')
@@ -1170,7 +1212,11 @@ static errr grab_one_kind_flag(object_kind *k_ptr, cptr what)
 		return (0);
 
 	/* Oops */
+#ifdef JP
+	msg_format("未知のアイテム・フラグ '%s'。", what);
+#else /* JP */
 	msg_format("Unknown object flag '%s'.", what);
+#endif /* JP */
 
 	/* Error */
 	return (PARSE_ERROR_GENERIC);
@@ -1224,7 +1270,46 @@ errr parse_k_info(char *buf, header *head)
 		/* Store the name */
 		if (!(k_ptr->name = add_name(head, s)))
 			return (PARSE_ERROR_OUT_OF_MEMORY);
+
+#ifdef JP
+		/* デフォルトの日本語名に英語名を使用する */
+		k_ptr->J_name = k_ptr->name;
+#endif /* JP */
 	}
+
+#ifdef JP
+	/* Process 'J' for "Japanese" */
+	else if (buf[0] == 'J')
+	{
+		/* There better be a current k_ptr */
+		if (!k_ptr) return (PARSE_ERROR_MISSING_RECORD_HEADER);
+
+		/* Get the text */
+		s = buf + 4;
+
+		/* Process 'N' for "Name" */
+		if (buf[2] == 'N')
+		{
+			/* Store the name */
+			if (!(k_ptr->J_name = add_name(head, s)))
+				return (PARSE_ERROR_OUT_OF_MEMORY);
+		}
+
+		/* Process 'D' for "Description" */
+		else if (buf[2] == 'D')
+		{
+			/* Store the text */
+			if (!add_text(&(k_ptr->text), head, s))
+				return (PARSE_ERROR_OUT_OF_MEMORY);
+		}
+
+		else
+		{
+			/* Oops */
+			return (PARSE_ERROR_UNDEFINED_DIRECTIVE);
+		}
+	}
+#endif /* JP */
 
 	/* Process 'G' for "Graphics" (one line only) */
 	else if (buf[0] == 'G')
@@ -1389,6 +1474,9 @@ errr parse_k_info(char *buf, header *head)
 	/* Process 'D' for "Description" */
 	else if (buf[0] == 'D')
 	{
+#ifdef JP
+		/* Ignore the original descriptions */
+#else /* JP */
 		/* There better be a current k_ptr */
 		if (!k_ptr) return (PARSE_ERROR_MISSING_RECORD_HEADER);
 
@@ -1398,6 +1486,7 @@ errr parse_k_info(char *buf, header *head)
 		/* Store the text */
 		if (!add_text(&(k_ptr->text), head, s))
 			return (PARSE_ERROR_OUT_OF_MEMORY);
+#endif /* JP */
 	}
 
 	else
@@ -1426,7 +1515,11 @@ static errr grab_one_artifact_flag(artifact_type *a_ptr, cptr what)
 		return (0);
 
 	/* Oops */
+#ifdef JP
+	msg_format("未知の伝説のアイテム・フラグ '%s'。", what);
+#else /* JP */
 	msg_format("Unknown artifact flag '%s'.", what);
+#endif /* JP */
 
 	/* Error */
 	return (PARSE_ERROR_GENERIC);
@@ -1451,7 +1544,11 @@ static errr grab_one_activation(artifact_type *a_ptr, cptr what)
 	}
 
 	/* Oops */
+#ifdef JP
+	msg_format("未知の伝説のアイテム始動 '%s'。", what);
+#else /* JP */
 	msg_format("Unknown artifact activation '%s'.", what);
+#endif /* JP */
 
 	/* Error */
 	return (PARSE_ERROR_GENERIC);
@@ -1506,9 +1603,48 @@ errr parse_a_info(char *buf, header *head)
 		if (!(a_ptr->name = add_name(head, s)))
 			return (PARSE_ERROR_OUT_OF_MEMORY);
 
+#ifdef JP
+		/* デフォルトの日本語名に英語名を使用する */
+		a_ptr->J_name = a_ptr->name;
+#endif /* JP */
+
 		/* Ignore everything */
 		a_ptr->flags3 |= (TR3_IGNORE_MASK);
 	}
+
+#ifdef JP
+	/* Process 'J' for "Japanese" */
+	else if (buf[0] == 'J')
+	{
+		/* There better be a current a_ptr */
+		if (!a_ptr) return (PARSE_ERROR_MISSING_RECORD_HEADER);
+
+		/* Get the text */
+		s = buf + 4;
+
+		/* Process 'N' for "Name" */
+		if (buf[2] == 'N')
+		{
+			/* Store the name */
+			if (!(a_ptr->J_name = add_name(head, s)))
+				return (PARSE_ERROR_OUT_OF_MEMORY);
+		}
+
+		/* Process 'D' for "Description" */
+		else if (buf[2] == 'D')
+		{
+			/* Store the text */
+			if (!add_text(&(a_ptr->text), head, s))
+				return (PARSE_ERROR_OUT_OF_MEMORY);
+		}
+
+		else
+		{
+			/* Oops */
+			return (PARSE_ERROR_UNDEFINED_DIRECTIVE);
+		}
+	}
+#endif /* JP */
 
 	/* Process 'I' for "Info" (one line only) */
 	else if (buf[0] == 'I')
@@ -1630,6 +1766,9 @@ errr parse_a_info(char *buf, header *head)
 	/* Process 'D' for "Description" */
 	else if (buf[0] == 'D')
 	{
+#ifdef JP
+		/* Ignore the original descriptions */
+#else /* JP */
 		/* There better be a current a_ptr */
 		if (!a_ptr) return (PARSE_ERROR_MISSING_RECORD_HEADER);
 
@@ -1639,6 +1778,7 @@ errr parse_a_info(char *buf, header *head)
 		/* Store the text */
 		if (!add_text(&a_ptr->text, head, s))
 			return (PARSE_ERROR_OUT_OF_MEMORY);
+#endif /* JP */
 	}
 
 	else
@@ -1667,7 +1807,11 @@ static bool grab_one_ego_item_flag(ego_item_type *e_ptr, cptr what)
 		return (0);
 
 	/* Oops */
+#ifdef JP
+	msg_format("未知の名のあるアイテム・フラグ '%s'。", what);
+#else /* JP */
 	msg_format("Unknown ego-item flag '%s'.", what);
+#endif /* JP */
 
 	/* Error */
 	return (PARSE_ERROR_GENERIC);
@@ -1725,9 +1869,48 @@ errr parse_e_info(char *buf, header *head)
 		if (!(e_ptr->name = add_name(head, s)))
 			return (PARSE_ERROR_OUT_OF_MEMORY);
 
+#ifdef JP
+		/* デフォルトの日本語名に英語名を使用する */
+		e_ptr->J_name = e_ptr->name;
+#endif /* JP */
+
 		/* Start with the first of the tval indices */
 		cur_t = 0;
 	}
+
+#ifdef JP
+	/* Process 'J' for "Japanese" */
+	else if (buf[0] == 'J')
+	{
+		/* There better be a current e_ptr */
+		if (!e_ptr) return (PARSE_ERROR_MISSING_RECORD_HEADER);
+
+		/* Get the text */
+		s = buf + 4;
+
+		/* Process 'N' for "Name" */
+		if (buf[2] == 'N')
+		{
+			/* Store the name */
+			if (!(e_ptr->J_name = add_name(head, s)))
+				return (PARSE_ERROR_OUT_OF_MEMORY);
+		}
+
+		/* Process 'D' for "Description" */
+		else if (buf[2] == 'D')
+		{
+			/* Store the text */
+			if (!add_text(&(e_ptr->text), head, s))
+				return (PARSE_ERROR_OUT_OF_MEMORY);
+		}
+
+		else
+		{
+			/* Oops */
+			return (PARSE_ERROR_UNDEFINED_DIRECTIVE);
+		}
+	}
+#endif /* JP */
 
 	/* Process 'W' for "More Info" (one line only) */
 	else if (buf[0] == 'W')
@@ -1838,6 +2021,9 @@ errr parse_e_info(char *buf, header *head)
 	/* Process 'D' for "Description" */
 	else if (buf[0] == 'D')
 	{
+#ifdef JP
+		/* Ignore the original descriptions */
+#else /* JP */
 		/* There better be a current e_ptr */
 		if (!e_ptr) return (PARSE_ERROR_MISSING_RECORD_HEADER);
 
@@ -1847,6 +2033,7 @@ errr parse_e_info(char *buf, header *head)
 		/* Store the text */
 		if (!add_text(&e_ptr->text, head, s))
 			return (PARSE_ERROR_OUT_OF_MEMORY);
+#endif /* JP */
 	}
 
 	else
@@ -1875,7 +2062,11 @@ static errr grab_one_basic_flag(monster_race *r_ptr, cptr what)
 		return (0);
 
 	/* Oops */
+#ifdef JP
+	msg_format("未知のモンスター・フラグ '%s'。", what);
+#else /* JP */
 	msg_format("Unknown monster flag '%s'.", what);
+#endif /* JP */
 
 	/* Failure */
 	return (PARSE_ERROR_GENERIC);
@@ -1897,7 +2088,11 @@ static errr grab_one_spell_flag(monster_race *r_ptr, cptr what)
 		return (0);
 
 	/* Oops */
+#ifdef JP
+	msg_format("未知のモンスター・フラグ '%s'。", what);
+#else /* JP */
 	msg_format("Unknown monster flag '%s'.", what);
+#endif /* JP */
 
 	/* Failure */
 	return (PARSE_ERROR_GENERIC);
@@ -1952,11 +2147,53 @@ errr parse_r_info(char *buf, header *head)
 		/* Store the name */
 		if (!(r_ptr->name = add_name(head, s)))
 			return (PARSE_ERROR_OUT_OF_MEMORY);
+
+#ifdef JP
+		/* デフォルトの日本語名に英語名を使用する */
+		r_ptr->J_name = r_ptr->name;
+#endif /* JP */
 	}
+
+#ifdef JP
+	/* Process 'J' for "Japanese" */
+	else if (buf[0] == 'J')
+	{
+		/* There better be a current r_ptr */
+		if (!r_ptr) return (PARSE_ERROR_MISSING_RECORD_HEADER);
+
+		/* Get the text */
+		s = buf + 4;
+
+		/* Process 'N' for "Name" */
+		if (buf[2] == 'N')
+		{
+			/* Store the name */
+			if (!(r_ptr->J_name = add_name(head, s)))
+				return (PARSE_ERROR_OUT_OF_MEMORY);
+		}
+
+		/* Process 'D' for "Description" */
+		else if (buf[2] == 'D')
+		{
+			/* Store the text */
+			if (!add_text(&(r_ptr->text), head, s))
+				return (PARSE_ERROR_OUT_OF_MEMORY);
+		}
+
+		else
+		{
+			/* Oops */
+			return (PARSE_ERROR_UNDEFINED_DIRECTIVE);
+		}
+	}
+#endif /* JP */
 
 	/* Process 'D' for "Description" */
 	else if (buf[0] == 'D')
 	{
+#ifdef JP
+		/* Ignore the original descriptions */
+#else /* JP */
 		/* There better be a current r_ptr */
 		if (!r_ptr) return (PARSE_ERROR_MISSING_RECORD_HEADER);
 
@@ -1966,6 +2203,7 @@ errr parse_r_info(char *buf, header *head)
 		/* Store the text */
 		if (!add_text(&(r_ptr->text), head, s))
 			return (PARSE_ERROR_OUT_OF_MEMORY);
+#endif /* JP */
 	}
 
 	/* Process 'G' for "Graphics" (one line only) */
@@ -2201,9 +2439,20 @@ errr parse_r_info(char *buf, header *head)
 	head->name_size += 64;
 	head->text_size += 64;
 
+#ifdef JP
+	/* 日本語名用 */
+	r_ptr->J_name = head->name_size;
+	r_head->name_size += 64;
+#endif /* JP */
+
 	/* Hack -- Default name/text for the ghost */
 	strcpy(r_name + r_ptr->name, "Nobody, the Undefined Ghost");
+#ifdef JP
+	strcpy(r_name + r_ptr->J_name, "見知らぬプレイヤーのゴースト『名無し』");
+	strcpy(r_text + r_ptr->text, "それには何故だか親しみを感じる...");
+#else /* JP */
 	strcpy(r_text + r_ptr->text, "It seems strangely familiar...");
+#endif /* JP */
 
 	/* Hack -- set the attr/char info */
 	r_ptr->d_attr = r_ptr->x_attr = TERM_WHITE;
@@ -2296,7 +2545,38 @@ errr parse_p_info(char *buf, header *head)
 		/* Store the name */
 		if (!(pr_ptr->name = add_name(head, s)))
 			return (PARSE_ERROR_OUT_OF_MEMORY);
+
+#ifdef JP
+		/* デフォルトの日本語名に英語名を使用する */
+		pr_ptr->J_name = pr_ptr->name;
+#endif /* JP */
 	}
+
+#ifdef JP
+	/* Process 'J' for "Japanese" */
+	else if (buf[0] == 'J')
+	{
+		/* There better be a current pr_ptr */
+		if (!pr_ptr) return (PARSE_ERROR_MISSING_RECORD_HEADER);
+
+		/* Get the text */
+		s = buf + 4;
+
+		/* Process 'N' for "Name" */
+		if (buf[2] == 'N')
+		{
+			/* Store the name */
+			if (!(pr_ptr->J_name = add_name(head, s)))
+				return (PARSE_ERROR_OUT_OF_MEMORY);
+		}
+
+		else
+		{
+			/* Oops */
+			return (PARSE_ERROR_UNDEFINED_DIRECTIVE);
+		}
+	}
+#endif /* JP */
 
 	/* Process 'S' for "Stats" (one line only) */
 	else if (buf[0] == 'S')
@@ -2520,6 +2800,9 @@ errr parse_c_info(char *buf, header *head)
 	static player_class *pc_ptr = NULL;
 
 	static int cur_title = 0;
+#ifdef JP
+	static int J_cur_title = 0;
+#endif /* JP */
 	static int cur_equip = 0;
 
 
@@ -2557,10 +2840,65 @@ errr parse_c_info(char *buf, header *head)
 		if (!(pc_ptr->name = add_name(head, s)))
 			return (PARSE_ERROR_OUT_OF_MEMORY);
 
+#ifdef JP
+		/* デフォルトの日本語名に英語名を使用する */
+		pc_ptr->J_name = pc_ptr->name;
+#endif /* JP */
+
 		/* No titles and equipment yet */
 		cur_title = 0;
+#ifdef JP
+		J_cur_title = 0;
+#endif /* JP */
 		cur_equip = 0;
 	}
+
+#ifdef JP
+	/* Process 'J' for "Japanese" */
+	else if (buf[0] == 'J')
+	{
+		/* There better be a current pc_ptr */
+		if (!pc_ptr) return (PARSE_ERROR_MISSING_RECORD_HEADER);
+
+		/* Get the text */
+		s = buf + 4;
+
+		/* Process 'N' for "Name" */
+		if (buf[2] == 'N')
+		{
+			/* Store the name */
+			if (!(pc_ptr->J_name = add_name(head, s)))
+				return (PARSE_ERROR_OUT_OF_MEMORY);
+		}
+
+		/* Process 'T' for "Titles" */
+		else if (buf[2] == 'T')
+		{
+			/* Forget default English title */
+			if (pc_ptr->J_title[J_cur_title] == pc_ptr->title[J_cur_title])
+			{
+				pc_ptr->J_title[J_cur_title] = 0;
+			}
+
+			/* Store the text */
+			if (!add_text(&pc_ptr->J_title[J_cur_title], head, s))
+				return (PARSE_ERROR_OUT_OF_MEMORY);
+			
+			/* Next title */
+			J_cur_title++;
+
+			/* Limit number of titles */
+			if (J_cur_title > PY_MAX_LEVEL / 5)
+				return (PARSE_ERROR_TOO_MANY_ARGUMENTS);
+		}
+
+		else
+		{
+			/* Oops */
+			return (PARSE_ERROR_UNDEFINED_DIRECTIVE);
+		}
+	}
+#endif /* JP */
 
 	/* Process 'S' for "Stats" (one line only) */
 	else if (buf[0] == 'S')
@@ -2747,6 +3085,14 @@ errr parse_c_info(char *buf, header *head)
 		if (!add_text(&pc_ptr->title[cur_title], head, s))
 			return (PARSE_ERROR_OUT_OF_MEMORY);
 		
+#ifdef JP
+		/* デフォルトの日本語名に英語名を使用する */
+		if (!pc_ptr->J_title[cur_title])
+		{
+			pc_ptr->J_title[cur_title] = pc_ptr->title[cur_title];
+		}
+#endif /* JP */
+
 		/* Next title */
 		cur_title++;
 
@@ -2962,7 +3308,38 @@ errr parse_b_info(char *buf, header *head)
 		/* Store the name */
 		if (!(ot_ptr->owner_name = add_name(head, t)))
 			return (PARSE_ERROR_OUT_OF_MEMORY);
+
+#ifdef JP
+		/* デフォルトの日本語名に英語名を使用する */
+		ot_ptr->J_owner_name = ot_ptr->owner_name;
+#endif /* JP */
 	}
+
+#ifdef JP
+	/* Process 'J' for "Japanese" */
+	else if (buf[0] == 'J')
+	{
+		/* There better be a current pr_ptr */
+		if (!ot_ptr) return (PARSE_ERROR_MISSING_RECORD_HEADER);
+
+		/* Get the text */
+		s = buf + 4;
+
+		/* Process 'N' for "Name" */
+		if (buf[2] == 'N')
+		{
+			/* Store the name */
+			if (!(ot_ptr->J_owner_name = add_name(head, s)))
+				return (PARSE_ERROR_OUT_OF_MEMORY);
+		}
+
+		else
+		{
+			/* Oops */
+			return (PARSE_ERROR_UNDEFINED_DIRECTIVE);
+		}
+	}
+#endif /* JP */
 
 	/* Process 'I' for "Info" (one line only) */
 	else if (buf[0] == 'I')
@@ -3161,10 +3538,51 @@ errr parse_flavor_info(char *buf, header *head)
 		if (!buf[1]) return (PARSE_ERROR_GENERIC);
 		if (!buf[2]) return (PARSE_ERROR_GENERIC);
 
+#ifdef JP
+		/*
+		 * 英日切り替えのためにtextではなくnameを使用
+		 * lua interface部はtextを使用している(日本語化未対応)
+		 * のでtextにも記録
+		 */
+		/* Store the name */
+		if (!(flavor_ptr->name = add_name(head, buf + 2)))
+			return (PARSE_ERROR_OUT_OF_MEMORY);
+
+		/* デフォルトの日本語名に英語名を使用する */
+		flavor_ptr->J_name = flavor_ptr->name;
+#endif /* JP */
+
 		/* Store the text */
 		if (!add_text(&flavor_ptr->text, head, buf + 2))
 			return (PARSE_ERROR_OUT_OF_MEMORY);
 	}
+
+#ifdef JP
+	/* Process 'J' for "Japanese" */
+	else if (buf[0] == 'J')
+	{
+		/* There better be a current flavor_ptr */
+		if (!flavor_ptr) return (PARSE_ERROR_MISSING_RECORD_HEADER);
+
+		/* Process 'D' for "Description" */
+		if (buf[2] == 'D')
+		{
+			/* Paranoia */
+			if (!buf[3]) return (PARSE_ERROR_GENERIC);
+			if (!buf[4]) return (PARSE_ERROR_GENERIC);
+
+			/* Store the name */
+			if (!(flavor_ptr->J_name = add_name(head, buf + 4)))
+				return (PARSE_ERROR_OUT_OF_MEMORY);
+		}
+
+		else
+		{
+			/* Oops */
+			return (PARSE_ERROR_UNDEFINED_DIRECTIVE);
+		}
+	}
+#endif /* JP */
 
 	else
 	{

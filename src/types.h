@@ -124,6 +124,9 @@ struct maxima
 struct feature_type
 {
 	u32b name;			/* Name (offset) */
+#ifdef JP
+	u32b J_name;			/* 日本語名 (offset) */
+#endif /* JP */
 	u32b text;			/* Text (offset) */
 
 	byte mimic;			/* Feature to mimic */
@@ -150,6 +153,9 @@ struct feature_type
 struct object_kind
 {
 	u32b name;			/* Name (offset) */
+#ifdef JP
+	u32b J_name;			/* 日本語名 (offset) */
+#endif /* JP */
 	u32b text;			/* Text (offset) */
 
 	byte tval;			/* Object type */
@@ -208,6 +214,9 @@ struct object_kind
 struct artifact_type
 {
 	u32b name;			/* Name (offset) */
+#ifdef JP
+	u32b J_name;			/* 日本語名 (offset) */
+#endif /* JP */
 	u32b text;			/* Text (offset) */
 
 	byte tval;			/* Artifact type */
@@ -249,6 +258,9 @@ struct artifact_type
 struct ego_item_type
 {
 	u32b name;			/* Name (offset) */
+#ifdef JP
+	u32b J_name;			/* 日本語名 (offset) */
+#endif /* JP */
 	u32b text;			/* Text (offset) */
 
 	s32b cost;			/* Ego-item "cost" */
@@ -315,6 +327,9 @@ struct monster_blow
 struct monster_race
 {
 	u32b name;				/* Name (offset) */
+#ifdef JP
+	u32b J_name;				/* 日本語名 (offset) */
+#endif /* JP */
 	u32b text;				/* Text (offset) */
 
 	byte hdice;				/* Creatures hit dice count */
@@ -583,6 +598,9 @@ struct quest
 struct owner_type
 {
 	u32b owner_name;	/* Name (offset) */
+#ifdef JP
+	u32b J_owner_name;	/* 日本語名 (offset) */
+#endif /* JP */
 
 	s32b max_cost;		/* Purse limit */
 
@@ -641,6 +659,9 @@ struct player_magic
 struct player_sex
 {
 	cptr title;			/* Type of sex */
+#ifdef JP
+	cptr J_title;			/* Type of sex */
+#endif
 
 	cptr winner;		/* Name of winner */
 };
@@ -652,6 +673,9 @@ struct player_sex
 struct player_race
 {
 	u32b name;			/* Name (offset) */
+#ifdef JP
+	u32b J_name;			/* 日本語名 (offset) */
+#endif /* JP */
 	u32b text;			/* Text (offset) */
 
 	s16b r_adj[A_MAX];	/* Racial stat bonuses */
@@ -711,8 +735,14 @@ struct start_item
 struct player_class
 {
 	u32b name;			/* Name (offset) */
+#ifdef JP
+	u32b J_name;			/* 日本語名 (offset) */
+#endif /* JP */
 
 	u32b title[10];		/* Titles - offset */
+#ifdef JP
+	u32b J_title[10];		/* 日本語名 (offset) */
+#endif /* JP */
 
 	s16b c_adj[A_MAX];	/* Class stat modifier */
 
@@ -1098,7 +1128,13 @@ typedef struct flavor_type flavor_type;
 
 struct flavor_type
 {
+#ifdef JP
+    /* 英日切り替えのためにtextではなくnameを使用 */
+	u32b name;      /* Name (offset) */
+	u32b J_name;    /* 日本語Name (offset) */
+#endif /* JP */
 	u32b text;      /* Text (offset) */
+
 	
 	byte tval;      /* Associated object type */
 	byte sval;      /* Associated object sub-type */
@@ -1109,3 +1145,45 @@ struct flavor_type
 	byte x_attr;    /* Desired flavor attribute */
 	char x_char;    /* Desired flavor character */
 };
+
+#ifdef ALLOW_COMMAND_MENU
+
+typedef struct menu_info_type menu_info_type;
+struct menu_info_type
+{
+	cptr name;
+	byte cmd;
+	bool fin;
+};
+
+typedef struct special_menu_info_type special_menu_info_type;
+struct special_menu_info_type
+{
+	cptr name;
+	byte window;
+	byte number;
+	byte type;
+	byte condition;
+};
+
+#endif /* ALLOW_COMMAND_MENU */
+
+#ifdef ALLOW_AUTO_PICKUP
+
+/*
+ *  A structure type for entry of auto-picker/destroyer
+ */
+typedef struct autopick_type autopick_type;
+struct autopick_type
+{
+	cptr name;
+	cptr insc;
+	byte act;
+	u32b flags;
+	u32b type;
+	byte tval;
+	byte sval;
+	s16b dice;
+};
+
+#endif /* ALLOW_AUTO_PICKUP */

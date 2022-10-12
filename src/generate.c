@@ -8,6 +8,13 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3 日本語版製作: しとしん
+ * 2.7.9v6 対応        : 岸康司
+ * 2.8.1   対応        : FIRST
+ * 2.8.3   対応        : FIRST
+ */
+
 #include "angband.h"
 
 #include "script.h"
@@ -611,7 +618,11 @@ static void destroy_level(void)
 
 
 	/* Note destroyed levels */
+#ifdef JP
+	if (cheat_room) msg_print("破壊された階");
+#else
 	if (cheat_room) msg_print("Destroyed Level");
+#endif
 
 	/* Drop a few epi-centers (usually about two) */
 	for (n = 0; n < randint(5); n++)
@@ -1705,7 +1716,11 @@ static void build_type5(int y0, int x0)
 	if (tmp < 30)
 	{
 		/* Describe */
+#ifdef JP
+		name = "ゼリー";
+#else
 		name = "jelly";
+#endif
 
 		/* Restrict to jelly */
 		get_mon_num_hook = vault_aux_jelly;
@@ -1715,7 +1730,11 @@ static void build_type5(int y0, int x0)
 	else if (tmp < 50)
 	{
 		/* Describe */
+#ifdef JP
+		name = "動物";
+#else
 		name = "animal";
+#endif
 
 		/* Restrict to animal */
 		get_mon_num_hook = vault_aux_animal;
@@ -1725,7 +1744,11 @@ static void build_type5(int y0, int x0)
 	else
 	{
 		/* Describe */
+#ifdef JP
+		name = "アンデッド";
+#else
 		name = "undead";
+#endif
 
 		/* Restrict to undead */
 		get_mon_num_hook = vault_aux_undead;
@@ -1761,7 +1784,11 @@ static void build_type5(int y0, int x0)
 	if (cheat_room)
 	{
 		/* Room type */
+#ifdef JP
+		msg_format("モンスター部屋(%s)", name);
+#else
 		msg_format("Monster nest (%s)", name);
+#endif
 	}
 
 
@@ -1884,7 +1911,11 @@ static void build_type6(int y0, int x0)
 	if (tmp < 20)
 	{
 		/* Message */
+#ifdef JP
+		name = "オーク";
+#else
 		name = "orc";
+#endif
 
 		/* Restrict monster selection */
 		get_mon_num_hook = vault_aux_orc;
@@ -1894,7 +1925,11 @@ static void build_type6(int y0, int x0)
 	else if (tmp < 40)
 	{
 		/* Message */
+#ifdef JP
+		name = "トロル";
+#else
 		name = "troll";
+#endif
 
 		/* Restrict monster selection */
 		get_mon_num_hook = vault_aux_troll;
@@ -1904,7 +1939,11 @@ static void build_type6(int y0, int x0)
 	else if (tmp < 60)
 	{
 		/* Message */
+#ifdef JP
+		name = "ジャイアント";
+#else
 		name = "giant";
+#endif
 
 		/* Restrict monster selection */
 		get_mon_num_hook = vault_aux_giant;
@@ -1920,7 +1959,11 @@ static void build_type6(int y0, int x0)
 			case 0:
 			{
 				/* Message */
+#ifdef JP
+				name = "アシッド・ドラゴン";
+#else
 				name = "acid dragon";
+#endif
 
 				/* Restrict dragon breath type */
 				vault_aux_dragon_mask4 = RF4_BR_ACID;
@@ -1933,7 +1976,11 @@ static void build_type6(int y0, int x0)
 			case 1:
 			{
 				/* Message */
+#ifdef JP
+				name = "エレクトリック・ドラゴン";
+#else
 				name = "electric dragon";
+#endif
 
 				/* Restrict dragon breath type */
 				vault_aux_dragon_mask4 = RF4_BR_ELEC;
@@ -1946,7 +1993,11 @@ static void build_type6(int y0, int x0)
 			case 2:
 			{
 				/* Message */
+#ifdef JP
+				name = "ファイア・ドラゴン";
+#else
 				name = "fire dragon";
+#endif
 
 				/* Restrict dragon breath type */
 				vault_aux_dragon_mask4 = RF4_BR_FIRE;
@@ -1959,7 +2010,11 @@ static void build_type6(int y0, int x0)
 			case 3:
 			{
 				/* Message */
+#ifdef JP
+				name = "コールド・ドラゴン";
+#else
 				name = "cold dragon";
+#endif
 
 				/* Restrict dragon breath type */
 				vault_aux_dragon_mask4 = RF4_BR_COLD;
@@ -1972,7 +2027,11 @@ static void build_type6(int y0, int x0)
 			case 4:
 			{
 				/* Message */
+#ifdef JP
+				name = "ポイズン・ドラゴン";
+#else
 				name = "poison dragon";
+#endif
 
 				/* Restrict dragon breath type */
 				vault_aux_dragon_mask4 = RF4_BR_POIS;
@@ -1985,7 +2044,11 @@ static void build_type6(int y0, int x0)
 			default:
 			{
 				/* Message */
+#ifdef JP
+				name = "万色ドラゴン";
+#else
 				name = "multi-hued dragon";
+#endif
 
 				/* Restrict dragon breath type */
 				vault_aux_dragon_mask4 = (RF4_BR_ACID | RF4_BR_ELEC |
@@ -2006,7 +2069,11 @@ static void build_type6(int y0, int x0)
 	else
 	{
 		/* Message */
+#ifdef JP
+		name = "デーモン";
+#else
 		name = "demon";
+#endif
 
 		/* Restrict monster selection */
 		get_mon_num_hook = vault_aux_demon;
@@ -2072,7 +2139,11 @@ static void build_type6(int y0, int x0)
 	if (cheat_room)
 	{
 		/* Room type */
+#ifdef JP
+		msg_format("%sの巣", name);
+#else
 		msg_format("Monster pit (%s)", name);
+#endif
 	}
 
 
@@ -3468,7 +3539,11 @@ void generate_cave(void)
 		if (o_max >= z_info->o_max)
 		{
 			/* Message */
+#ifdef JP
+			why = "アイテムが多すぎる";
+#else
 			why = "too many objects";
+#endif
 
 			/* Message */
 			okay = FALSE;
@@ -3478,7 +3553,11 @@ void generate_cave(void)
 		if (mon_max >= z_info->m_max)
 		{
 			/* Message */
+#ifdef JP
+			why = "モンスターが多すぎる";
+#else
 			why = "too many monsters";
+#endif
 
 			/* Message */
 			okay = FALSE;
@@ -3499,7 +3578,11 @@ void generate_cave(void)
 				    cheat_peek || cheat_xtra)
 				{
 					/* Message */
+#ifdef JP
+					why = "退屈な階";
+#else
 					why = "boring level";
+#endif
 				}
 
 				/* Try again */
@@ -3512,7 +3595,11 @@ void generate_cave(void)
 
 
 		/* Message */
+#ifdef JP
+		if (why) msg_format("生成やり直し(%s)", why);
+#else
 		if (why) msg_format("Generation restarted (%s)", why);
+#endif
 
 		/* Wipe the objects */
 		wipe_o_list();

@@ -8,6 +8,17 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3 日本語版製作: しとしん
+ * 2.7.9v6 対応        : 岸康司, FIRST, しとしん
+ * 2.8.0   対応        : sayu, しとしん
+ * 2.8.1   対応        : FIRST
+ * 2.8.3   対応        : FIRST, しとしん
+ * 2.9.0   対応        : 楠瀬
+ *
+ * 日本語版機能追加 : 英日切り替え機能
+ */
+
 #include "angband.h"
 
 
@@ -251,7 +262,11 @@ void do_cmd_change_name(void)
 	cptr p;
 
 	/* Prompt */
+#ifdef JP
+	p = "['c'で名前変更, 'f'でファイルへ書出, 'h'でモード変更, ESCで終了]";
+#else /* JP */
 	p = "['c' to change name, 'f' to file, 'h' to change mode, or ESC]";
+#endif /* JP */
 
 	/* Save screen */
 	screen_save();
@@ -284,17 +299,29 @@ void do_cmd_change_name(void)
 
 			strnfmt(ftmp, sizeof(ftmp), "%s.txt", op_ptr->base_name);
 
+#ifdef JP
+			if (get_string("ファイル名: ", ftmp, sizeof(ftmp)))
+#else /* JP */
 			if (get_string("File name: ", ftmp, sizeof(ftmp)))
+#endif /* JP */
 			{
 				if (ftmp[0] && (ftmp[0] != ' '))
 				{
 					if (file_character(ftmp, FALSE))
 					{
+#ifdef JP
+						msg_print("キャラクタ情報のファイルへの書き出しに失敗しました！");
+#else /* JP */
 						msg_print("Character dump failed!");
+#endif /* JP */
 					}
 					else
 					{
+#ifdef JP
+						msg_print("キャラクタ情報のファイルへの書き出しに成功しました。");
+#else /* JP */
 						msg_print("Character dump successful.");
+#endif /* JP */
 					}
 				}
 			}
@@ -309,7 +336,11 @@ void do_cmd_change_name(void)
 		/* Oops */
 		else
 		{
+#ifdef JP
+			bell("無効なキーです！");
+#else /* JP */
 			bell("Illegal command for change name!");
+#endif /* JP */
 		}
 
 		/* Flush messages */
@@ -417,11 +448,21 @@ void do_cmd_messages(void)
 		}
 
 		/* Display header XXX XXX XXX */
+#ifdef JP
+		/* translation */
+		prt(format("以前のメッセージ %d-%d 全部で(%d) オフセット(%d)",
+		           i, i + j - 1, n, q), 0, 0);
+#else /* JP */
 		prt(format("Message Recall (%d-%d of %d), Offset %d",
 		           i, i + j - 1, n, q), 0, 0);
+#endif /* JP */
 
 		/* Display prompt (not very informative) */
+#ifdef JP
+		prt("[ 'p' で更に古いもの, 'n' で更に新しいもの, '/' で検索, ESC で中断 ]", hgt - 1, 0);
+#else /* JP */
 		prt("[Press 'p' for older, 'n' for newer, ..., or ESCAPE]", hgt - 1, 0);
+#endif /* JP */
 
 		/* Get a command */
 		ch = inkey();
@@ -456,7 +497,11 @@ void do_cmd_messages(void)
 		if (ch == '=')
 		{
 			/* Prompt */
+#ifdef JP
+			prt("強調: ", hgt - 1, 0);
+#else /* JP */
 			prt("Show: ", hgt - 1, 0);
+#endif /* JP */
 
 			/* Get a "shower" string, or continue */
 			if (!askfor_aux(shower, sizeof(shower))) continue;
@@ -471,7 +516,11 @@ void do_cmd_messages(void)
 			s16b z;
 
 			/* Prompt */
+#ifdef JP
+			prt("検索: ", hgt - 1, 0);
+#else /* JP */
 			prt("Find: ", hgt - 1, 0);
+#endif /* JP */
 
 			/* Get a "finder" string, or continue */
 			if (!askfor_aux(finder, sizeof(finder))) continue;
@@ -559,11 +608,82 @@ void do_cmd_pref(void)
 	strcpy(tmp, "");
 
 	/* Ask for a "user pref command" */
+#ifdef JP
+	if (!get_string("設定変更コマンド: ", tmp, sizeof(tmp))) return;
+#else /* JP */
 	if (!get_string("Pref: ", tmp, sizeof(tmp))) return;
+#endif /* JP */
 
 	/* Process that pref command */
 	(void)process_pref_file_command(tmp);
 }
+
+#ifdef ALLOW_AUTO_PICKUP
+
+/*
+ * Process 'autopick pref file'
+ */
+void do_cmd_pickpref(void)
+{
+	char buf[80];
+
+	errr err = -1; 
+
+
+#ifdef JP
+	if(!get_check("自動拾い設定ファイルをロードしますか? ")) return;
+#else /* JP */
+	if(!get_check("Reload auto-pick preference file? ")) return;
+#endif /* JP */
+
+	init_autopicker();
+
+	/* Access character's "autopick" pref file */
+	sprintf(buf, "%s.prf", op_ptr->base_name);
+
+	/* Process that file */
+	err = process_autopick_pref_file(buf);
+	if (err > 0)
+	{
+#ifdef JP
+		msg_format("自動拾い設定ファイル'%s'の読み込みに失敗しました。", buf);
+#else /* JP */
+		msg_format("Failed to reload autopick pref file '%s'.", buf);
+#endif /* JP */
+	}
+	else if (err == 0)
+	{
+#ifdef JP
+		msg_format("%sを読み込みました。", buf);
+#else /* JP */
+		msg_format("loaded '%s'.", buf);
+#endif /* JP */
+		return;
+	}
+
+	/* Process "autopick" pref file */
+	strcpy(buf, "autopick.prf");
+	err = process_autopick_pref_file(buf);
+	if (err > 0)
+	{
+#ifdef JP
+		msg_format("自動拾い設定ファイル'%s'の読み込みに失敗しました。", buf);
+#else /* JP */
+		msg_format("Failed to reload autopick pref file '%s'.", buf);
+#endif /* JP */
+	}
+	else if (err == 0)
+	{
+#ifdef JP
+		msg_format("%sを読み込みました。", buf);
+#else /* JP */
+		msg_format("loaded '%s'.", buf);
+#endif /* JP */
+		return;
+	}
+}
+
+#endif /* ALLOW_AUTO_PICKUP */
 
 
 /*
@@ -579,10 +699,18 @@ static void do_cmd_pref_file_hack(int row)
 	char ftmp[80];
 
 	/* Prompt */
+#ifdef JP
+	prt("コマンド: ユーザー設定ファイルをロードします", row, 0);
+#else /* JP */
 	prt("Command: Load a user pref file", row, 0);
+#endif /* JP */
 
 	/* Prompt */
+#ifdef JP
+	prt("ファイル: ", row + 2, 0);
+#else /* JP */
 	prt("File: ", row + 2, 0);
+#endif /* JP */
 
 	/* Default filename */
 	strnfmt(ftmp, sizeof(ftmp), "%s.prf", op_ptr->base_name);
@@ -594,12 +722,20 @@ static void do_cmd_pref_file_hack(int row)
 	if (process_pref_file(ftmp))
 	{
 		/* Mention failure */
+#ifdef JP
+		msg_format("'%s'のロードに失敗しました。", ftmp);
+#else /* JP */
 		msg_format("Failed to load '%s'!", ftmp);
+#endif /* JP */
 	}
 	else
 	{
 		/* Mention success */
+#ifdef JP
+		msg_format("'%s'をロードしました", ftmp);
+#else /* JP */
 		msg_format("Loaded '%s'.", ftmp);
+#endif /* JP */
 	}
 }
 
@@ -639,8 +775,23 @@ static void do_cmd_options_aux(int page, cptr info)
 	while (TRUE)
 	{
 		/* Prompt XXX XXX XXX */
+#ifdef JP
+		strnfmt(buf, sizeof(buf), "%s (リターンで次へ, y/n でセット, ESC で決定, ? でヘルプ) ", info);
+#else /* JP */
 		strnfmt(buf, sizeof(buf), "%s (RET to advance, y/n to set, ESC to accept, ? for help) ", info);
+#endif /* JP */
 		prt(buf, 0, 0);
+
+#ifdef JP
+		/* 詐欺オプションをうっかりいじってしまう人がいるようなので注意 */
+		if (page == 6)
+		{
+			prt("                                 <<  注意  >>", 11, 0);
+			prt("      詐欺オプションを一度でも設定すると、スコア記録が残らなくなります！", 12, 0);
+			prt("      後に解除してもダメですので、勝利者を目指す方はここのオプションはい", 13, 0);
+			prt("      じらないようにして下さい。", 14, 0);
+		}
+#endif /* JP */
 
 		/* Display the options */
 		for (i = 0; i < n; i++)
@@ -653,7 +804,11 @@ static void do_cmd_options_aux(int page, cptr info)
 			/* Display the option text */
 			strnfmt(buf, sizeof(buf), "%-48s: %s  (%s)",
 			        option_desc[opt[i]],
+#ifdef JP
+			        op_ptr->opt[opt[i]] ? "Yes" : "No ",
+#else /* JP */
 			        op_ptr->opt[opt[i]] ? "yes" : "no ",
+#endif /* JP */
 			        option_text[opt[i]]);
 			c_prt(a, buf, i + 2, 0);
 		}
@@ -739,7 +894,11 @@ static void do_cmd_options_aux(int page, cptr info)
 
 			default:
 			{
+#ifdef JP
+				bell("無効なキーです！");
+#else /* JP */
 				bell("Illegal command for normal options!");
+#endif /* JP */
 				break;
 			}
 		}
@@ -776,7 +935,11 @@ static void do_cmd_options_win(void)
 	while (1)
 	{
 		/* Prompt */
+#ifdef JP
+		prt("ウィンドウ・フラグ (<方向>で移動, tでチェンジ, ESC)", 0, 0);
+#else /* JP */
 		prt("Window flags (<dir> to move, 't' to toggle, or ESC)", 0, 0);
+#endif /* JP */
 
 		/* Display the windows */
 		for (j = 0; j < ANGBAND_TERM_MAX; j++)
@@ -803,7 +966,11 @@ static void do_cmd_options_win(void)
 			if (i == y) a = TERM_L_BLUE;
 
 			/* Unused option */
+#ifdef JP
+			if (!str) str = "(未使用)";
+#else /* JP */
 			if (!str) str = "(Unused option)";
+#endif /* JP */
 
 			/* Flag name */
 			Term_putstr(0, i + 5, -1, a, str);
@@ -841,7 +1008,11 @@ static void do_cmd_options_win(void)
 			/* Hack -- ignore the main window */
 			if (x == 0)
 			{
+#ifdef JP
+				bell("メイン・ウィンドウ・フラグはセットできません！");
+#else /* JP */
 				bell("Cannot set main window flags!");
+#endif /* JP */
 			}
 
 			/* Toggle flag (off) */
@@ -873,7 +1044,11 @@ static void do_cmd_options_win(void)
 		/* Oops */
 		else
 		{
+#ifdef JP
+			bell("無効なキーです！");
+#else /* JP */
 			bell("Illegal command for window options!");
+#endif /* JP */
 		}
 	}
 
@@ -940,7 +1115,11 @@ static errr option_dump(cptr fname)
 	fprintf(fff, "\n\n");
 
 	/* Start dumping */
+#ifdef JP
+	fprintf(fff, "# 自動オプションセーブ\n\n");
+#else /* JP */
 	fprintf(fff, "# Automatic option dump\n\n");
+#endif /* JP */
 
 	/* Dump options (skip cheat, adult, score) */
 	for (i = 0; i < OPT_CHEAT; i++)
@@ -949,7 +1128,11 @@ static errr option_dump(cptr fname)
 		if (!option_text[i]) continue;
 
 		/* Comment */
+#ifdef JP
+		fprintf(fff, "# オプション '%s'\n", option_desc[i]);
+#else /* JP */
 		fprintf(fff, "# Option '%s'\n", option_desc[i]);
+#endif /* JP */
 
 		/* Dump the option */
 		if (op_ptr->opt[i])
@@ -978,8 +1161,13 @@ static errr option_dump(cptr fname)
 			if (!window_flag_desc[j]) continue;
 
 			/* Comment */
+#ifdef JP
+			fprintf(fff, "# ウィンドウ '%s', フラグ '%s'\n",
+			        angband_term_name[i], window_flag_desc[j]);
+#else /* JP */
 			fprintf(fff, "# Window '%s', Flag '%s'\n",
 			        angband_term_name[i], window_flag_desc[j]);
+#endif /* JP */
 
 			/* Dump the flag */
 			if (op_ptr->window_flag[i] & (1L << j))
@@ -1029,9 +1217,22 @@ void do_cmd_options(void)
 		Term_clear();
 
 		/* Why are we here */
+#ifdef JP
+		prt(format("[ %sオプションの設定 ]", JVERSION_NAME), 2, 0);
+#else /* JP */
 		prt(format("%s options", VERSION_NAME), 2, 0);
+#endif /* JP */
 
 		/* Give some choices */
+#ifdef JP
+		prt("(1) インターフェイス オプション", 4, 5);
+		prt("(2)   行動中止関係   オプション", 5, 5);
+		prt("(3)   ゲームプレイ   オプション", 6, 5);
+		prt("(4)      効率化      オプション", 7, 5);
+		prt("(5)       表示       オプション", 8, 5);
+		prt("(6)       初期       オプション", 9, 5);
+		prt("(7)       詐欺       オプション", 10, 5);
+#else /* JP */
 		prt("(1) User Interface Options", 4, 5);
 		prt("(2) Disturbance Options", 5, 5);
 		prt("(3) Game-Play Options", 6, 5);
@@ -1039,20 +1240,44 @@ void do_cmd_options(void)
 		prt("(5) Display Options", 8, 5);
 		prt("(6) Birth Options", 9, 5);
 		prt("(7) Cheat Options", 10, 5);
+#endif /* JP */
+
+#ifdef JP
+		/* 日本語版で追加されたオプション */
+		prt("(J)   日本語版特別   オプション", 11, 5);
+#endif /* JP */
 
 		/* Window flags */
+#ifdef JP
+		prt("(W) ウインドウフラグ", 12, 5);
+#else /* JP */
 		prt("(W) Window flags", 12, 5);
+#endif /* JP */
 
 		/* Load and Append */
+#ifdef JP
+		prt("(L) ユーザー設定ファイルのロード", 14, 5);
+		prt("(A) オプションをファイルに追加する", 15, 5);
+#else /* JP */
 		prt("(L) Load a user pref file", 14, 5);
 		prt("(A) Append options to a file", 15, 5);
+#endif /* JP */
 
 		/* Special choices */
+#ifdef JP
+		prt("(D) 基本ウェイト量", 17, 5);
+		prt("(H) 低ヒットポイント警告", 18, 5);
+#else /* JP */
 		prt("(D) Base Delay Factor", 17, 5);
 		prt("(H) Hitpoint Warning", 18, 5);
+#endif /* JP */
 
 		/* Prompt */
+#ifdef JP
+		prt("コマンド:", 20, 0);
+#else /* JP */
 		prt("Command: ", 20, 0);
+#endif /* JP */
 
 		/* Get command */
 		ch = inkey();
@@ -1063,44 +1288,80 @@ void do_cmd_options(void)
 		/* General Options */
 		else if (ch == '1')
 		{
+#ifdef JP
+			do_cmd_options_aux(0, "インターフェイス・オプション");
+#else /* JP */
 			do_cmd_options_aux(0, "User Interface Options");
+#endif /* JP */
 		}
 
 		/* Disturbance Options */
 		else if (ch == '2')
 		{
+#ifdef JP
+			do_cmd_options_aux(1, "行動中止関係のオプション");
+#else /* JP */
 			do_cmd_options_aux(1, "Disturbance Options");
+#endif /* JP */
 		}
 
 		/* Inventory Options */
 		else if (ch == '3')
 		{
+#ifdef JP
+			do_cmd_options_aux(2, "ゲームプレイ・オプション");
+#else /* JP */
 			do_cmd_options_aux(2, "Game-Play Options");
+#endif /* JP */
 		}
 
 		/* Efficiency Options */
 		else if (ch == '4')
 		{
+#ifdef JP
+			do_cmd_options_aux(3, "効率化オプション");
+#else /* JP */
 			do_cmd_options_aux(3, "Efficiency Options");
+#endif /* JP */
 		}
 
 		/* Display Options */
 		else if (ch == '5')
 		{
+#ifdef JP
+			do_cmd_options_aux(4, "表示オプション");
+#else /* JP */
 			do_cmd_options_aux(4, "Display Options");
+#endif /* JP */
 		}
 
 		/* Birth Options */
 		else if (ch == '6')
 		{
+#ifdef JP
+			do_cmd_options_aux(5, "初期オプション");
+#else /* JP */
 			do_cmd_options_aux(5, "Birth Options");
+#endif /* JP */
 		}
 
 		/* Cheating Options */
 		else if (ch == '7')
 		{
+#ifdef JP
+			do_cmd_options_aux(6, "詐欺オプション");
+#else /* JP */
 			do_cmd_options_aux(6, "Cheat Options");
+#endif /* JP */
 		}
+
+#ifdef JP
+		/* 日本語版特別オプション */
+		else if ((ch == 'J') || (ch == 'j'))
+		{
+			do_cmd_options_aux(7, "日本語版特別オプション");
+		}
+#endif /* JP */
 
 		/* Window flags */
 		else if ((ch == 'W') || (ch == 'w'))
@@ -1121,10 +1382,18 @@ void do_cmd_options(void)
 			char ftmp[80];
 
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: オプションをファイルに追加する", 20, 0);
+#else /* JP */
 			prt("Command: Append options to a file", 20, 0);
+#endif /* JP */
 
 			/* Prompt */
+#ifdef JP
+			prt("ファイル: ", 21, 0);
+#else /* JP */
 			prt("File: ", 21, 0);
+#endif /* JP */
 
 			/* Default filename */
 			strnfmt(ftmp, sizeof(ftmp), "%s.prf", op_ptr->base_name);
@@ -1136,12 +1405,20 @@ void do_cmd_options(void)
 			if (option_dump(ftmp))
 			{
 				/* Failure */
+#ifdef JP
+				msg_print("失敗!");
+#else /* JP */
 				msg_print("Failed!");
+#endif /* JP */
 			}
 			else
 			{
 				/* Success */
+#ifdef JP
+				msg_print("完了。");
+#else /* JP */
 				msg_print("Done.");
+#endif /* JP */
 			}
 		}
 
@@ -1149,21 +1426,35 @@ void do_cmd_options(void)
 		else if ((ch == 'D') || (ch == 'd'))
 		{
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: 基本ウェイト量", 20, 0);
+#else /* JP */
 			prt("Command: Base Delay Factor", 20, 0);
+#endif /* JP */
 
 			/* Get a new value */
 			while (1)
 			{
 				char cx;
 				int msec = op_ptr->delay_factor * op_ptr->delay_factor;
+#ifdef JP
+				prt(format("現在のウェイト: %d (%dミリ秒)",
+				           op_ptr->delay_factor, msec), 22, 0);
+				prt("ウェイト (0-9) ESCで決定: ", 21, 0);
+#else /* JP */
 				prt(format("Current base delay factor: %d (%d msec)",
 				           op_ptr->delay_factor, msec), 22, 0);
 				prt("New base delay factor (0-9 or ESC to accept): ", 21, 0);
+#endif /* JP */
 
 				cx = inkey();
 				if (cx == ESCAPE) break;
 				if (isdigit((unsigned char)cx)) op_ptr->delay_factor = D2I(cx);
+#ifdef JP
+				else bell("無効なキーです！");
+#else /* JP */
 				else bell("Illegal delay factor!");
+#endif /* JP */
 			}
 		}
 
@@ -1171,20 +1462,34 @@ void do_cmd_options(void)
 		else if ((ch == 'H') || (ch == 'h'))
 		{
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: 低ヒットポイント警告", 20, 0);
+#else /* JP */
 			prt("Command: Hitpoint Warning", 20, 0);
+#endif /* JP */
 
 			/* Get a new value */
 			while (1)
 			{
 				char cx;
+#ifdef JP
+				prt(format("現在の低ヒットポイント警告: %2d%%",
+  				           op_ptr->hitpoint_warn * 10), 22, 0);
+				prt("低ヒットポイント警告 (0-9) ESCで決定: ", 21, 0);
+#else /* JP */
 				prt(format("Current hitpoint warning: %2d%%",
 				           op_ptr->hitpoint_warn * 10), 22, 0);
 				prt("New hitpoint warning (0-9 or ESC to accept): ", 21, 0);
+#endif /* JP */
 
 				cx = inkey();
 				if (cx == ESCAPE) break;
 				if (isdigit((unsigned char)cx)) op_ptr->hitpoint_warn = D2I(cx);
+#ifdef JP
+				else bell("無効なキーです！");
+#else /* JP */
 				else bell("Illegal hitpoint warning!");
+#endif /* JP */
 			}
 		}
 
@@ -1192,7 +1497,11 @@ void do_cmd_options(void)
 		else
 		{
 			/* Oops */
+#ifdef JP
+			bell("無効なキーです！");
+#else /* JP */
 			bell("Illegal command for options!");
+#endif /* JP */
 		}
 
 		/* Flush messages */
@@ -1244,13 +1553,21 @@ static errr macro_dump(cptr fname)
 	fprintf(fff, "\n\n");
 
 	/* Start dumping */
+#ifdef JP
+	fprintf(fff, "# 自動マクロセーブ\n\n");
+#else /* JP */
 	fprintf(fff, "# Automatic macro dump\n\n");
+#endif /* JP */
 
 	/* Dump them */
 	for (i = 0; i < macro__num; i++)
 	{
 		/* Start the macro */
+#ifdef JP
+		fprintf(fff, "# マクロ '%d'\n\n", i);
+#else /* JP */
 		fprintf(fff, "# Macro '%d'\n\n", i);
+#endif /* JP */
 
 		/* Extract the macro action */
 		ascii_to_text(buf, sizeof(buf), macro__act[i]);
@@ -1424,7 +1741,11 @@ static errr keymap_dump(cptr fname)
 	fprintf(fff, "\n\n");
 
 	/* Start dumping */
+#ifdef JP
+	fprintf(fff, "# 自動キー配置セーブ\n\n");
+#else /* JP */
 	fprintf(fff, "# Automatic keymap dump\n\n");
+#endif /* JP */
 
 	/* Dump them */
 	for (i = 0; i < (int)N_ELEMENTS(keymap_act[mode]); i++)
@@ -1519,11 +1840,19 @@ void do_cmd_macros(void)
 		Term_clear();
 
 		/* Describe */
+#ifdef JP
+		prt("[ マクロの設定 ]", 2, 0);
+#else /* JP */
 		prt("Interact with Macros", 2, 0);
+#endif /* JP */
 
 
 		/* Describe that action */
+#ifdef JP
+		prt("(あるなら)現在のマクロ行動が下に表示されています:", 20, 0);
+#else /* JP */
 		prt("Current action (if any) shown below:", 20, 0);
+#endif /* JP */
 
 		/* Analyze the current action */
 		ascii_to_text(tmp, sizeof(tmp), macro_buffer);
@@ -1533,8 +1862,23 @@ void do_cmd_macros(void)
 
 
 		/* Selections */
+#ifdef JP
+		prt("(1) ユーザー設定ファイルのロード", 4, 5);
+#else /* JP */
 		prt("(1) Load a user pref file", 4, 5);
+#endif /* JP */
 #ifdef ALLOW_MACROS
+#ifdef JP
+		prt("(2) ファイルにマクロを追加", 5, 5);
+		prt("(3) マクロの確認", 6, 5);
+		prt("(4) マクロの作成", 7, 5);
+		prt("(5) マクロの削除", 8, 5);
+		prt("(6) ファイルにキー配置を追加", 9, 5);
+		prt("(7) キー配置の確認", 10, 5);
+		prt("(8) キー配置の作成", 11, 5);
+		prt("(9) キー配置の削除", 12, 5);
+		prt("(0) マクロ行動の入力", 13, 5);
+#else /* JP */
 		prt("(2) Append macros to a file", 5, 5);
 		prt("(3) Query a macro", 6, 5);
 		prt("(4) Create a macro", 7, 5);
@@ -1544,10 +1888,15 @@ void do_cmd_macros(void)
 		prt("(8) Create a keymap", 11, 5);
 		prt("(9) Remove a keymap", 12, 5);
 		prt("(0) Enter a new action", 13, 5);
+#endif /* JP */
 #endif /* ALLOW_MACROS */
 
 		/* Prompt */
+#ifdef JP
+		prt("コマンド:", 16, 0);
+#else /* JP */
 		prt("Command: ", 16, 0);
+#endif /* JP */
 
 		/* Get a command */
 		ch = inkey();
@@ -1570,10 +1919,18 @@ void do_cmd_macros(void)
 			char ftmp[80];
 
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: マクロをファイルに追加する", 16, 0);
+#else /* JP */
 			prt("Command: Append macros to a file", 16, 0);
+#endif /* JP */
 
 			/* Prompt */
+#ifdef JP
+			prt("ファイル: ", 18, 0);
+#else /* JP */
 			prt("File: ", 18, 0);
+#endif /* JP */
 
 			/* Default filename */
 			strnfmt(ftmp, sizeof(ftmp), "%s.prf", op_ptr->base_name);
@@ -1585,7 +1942,11 @@ void do_cmd_macros(void)
 			(void)macro_dump(ftmp);
 
 			/* Prompt */
+#ifdef JP
+			msg_print("マクロを追加しました。");
+#else /* JP */
 			msg_print("Appended macros.");
+#endif /* JP */
 		}
 
 		/* Query a macro */
@@ -1594,10 +1955,18 @@ void do_cmd_macros(void)
 			int k;
 
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: マクロの確認", 16, 0);
+#else /* JP */
 			prt("Command: Query a macro", 16, 0);
+#endif /* JP */
 
 			/* Prompt */
+#ifdef JP
+			prt("トリガーキー: ", 18, 0);
+#else /* JP */
 			prt("Trigger: ", 18, 0);
+#endif /* JP */
 
 			/* Get a macro trigger */
 			do_cmd_macro_aux(pat);
@@ -1609,7 +1978,11 @@ void do_cmd_macros(void)
 			if (k < 0)
 			{
 				/* Prompt */
+#ifdef JP
+				msg_print("そのキーにはマクロは定義されていません。");
+#else /* JP */
 				msg_print("Found no macro.");
+#endif /* JP */
 			}
 
 			/* Found one */
@@ -1625,7 +1998,11 @@ void do_cmd_macros(void)
 				prt(tmp, 22, 0);
 
 				/* Prompt */
+#ifdef JP
+				msg_print("マクロを確認しました。");
+#else /* JP */
 				msg_print("Found a macro.");
+#endif /* JP */
 			}
 		}
 
@@ -1633,10 +2010,18 @@ void do_cmd_macros(void)
 		else if (ch == '4')
 		{
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: マクロの作成", 16, 0);
+#else /* JP */
 			prt("Command: Create a macro", 16, 0);
+#endif /* JP */
 
 			/* Prompt */
+#ifdef JP
+			prt("トリガーキー: ", 18, 0);
+#else /* JP */
 			prt("Trigger: ", 18, 0);
+#endif /* JP */
 
 			/* Get a macro trigger */
 			do_cmd_macro_aux(pat);
@@ -1645,7 +2030,11 @@ void do_cmd_macros(void)
 			clear_from(20);
 
 			/* Prompt */
+#ifdef JP
+			prt("マクロ行動: ", 20, 0);
+#else /* JP */
 			prt("Action: ", 20, 0);
+#endif /* JP */
 
 			/* Convert to text */
 			ascii_to_text(tmp, sizeof(tmp), macro_buffer);
@@ -1660,7 +2049,11 @@ void do_cmd_macros(void)
 				macro_add(pat, macro_buffer);
 
 				/* Prompt */
+#ifdef JP
+				msg_print("マクロを追加しました。");
+#else /* JP */
 				msg_print("Added a macro.");
+#endif /* JP */
 			}
 		}
 
@@ -1668,10 +2061,18 @@ void do_cmd_macros(void)
 		else if (ch == '5')
 		{
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: マクロの削除", 16, 0);
+#else /* JP */
 			prt("Command: Remove a macro", 16, 0);
+#endif /* JP */
 
 			/* Prompt */
+#ifdef JP
+			prt("トリガーキー: ", 18, 0);
+#else /* JP */
 			prt("Trigger: ", 18, 0);
+#endif /* JP */
 
 			/* Get a macro trigger */
 			do_cmd_macro_aux(pat);
@@ -1680,7 +2081,11 @@ void do_cmd_macros(void)
 			macro_add(pat, pat);
 
 			/* Prompt */
+#ifdef JP
+			msg_print("マクロを削除しました。");
+#else /* JP */
 			msg_print("Removed a macro.");
+#endif /* JP */
 		}
 
 		/* Save keymaps */
@@ -1689,10 +2094,18 @@ void do_cmd_macros(void)
 			char ftmp[80];
 
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: キー配置をファイルに追加する", 16, 0);
+#else /* JP */
 			prt("Command: Append keymaps to a file", 16, 0);
+#endif /* JP */
 
 			/* Prompt */
+#ifdef JP
+			prt("ファイル: ", 18, 0);
+#else /* JP */
 			prt("File: ", 18, 0);
+#endif /* JP */
 
 			/* Default filename */
 			strnfmt(ftmp, sizeof(ftmp), "%s.prf", op_ptr->base_name);
@@ -1704,7 +2117,11 @@ void do_cmd_macros(void)
 			(void)keymap_dump(ftmp);
 
 			/* Prompt */
+#ifdef JP
+			msg_print("キー配置を追加しました。");
+#else /* JP */
 			msg_print("Appended keymaps.");
+#endif /* JP */
 		}
 
 		/* Query a keymap */
@@ -1713,10 +2130,18 @@ void do_cmd_macros(void)
 			cptr act;
 
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: キー配置の確認", 16, 0);
+#else /* JP */
 			prt("Command: Query a keymap", 16, 0);
+#endif /* JP */
 
 			/* Prompt */
+#ifdef JP
+			prt("押すキー: ", 18, 0);
+#else /* JP */
 			prt("Keypress: ", 18, 0);
+#endif /* JP */
 
 			/* Get a keymap trigger */
 			do_cmd_macro_aux_keymap(pat);
@@ -1728,7 +2153,11 @@ void do_cmd_macros(void)
 			if (!act)
 			{
 				/* Prompt */
+#ifdef JP
+				msg_print("キー配置は定義されていません。");
+#else /* JP */
 				msg_print("Found no keymap.");
+#endif /* JP */
 			}
 
 			/* Found one */
@@ -1744,7 +2173,11 @@ void do_cmd_macros(void)
 				prt(tmp, 22, 0);
 
 				/* Prompt */
+#ifdef JP
+				msg_print("キー配置を確認しました。");
+#else /* JP */
 				msg_print("Found a keymap.");
+#endif /* JP */
 			}
 		}
 
@@ -1752,10 +2185,18 @@ void do_cmd_macros(void)
 		else if (ch == '8')
 		{
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: キー配置の作成", 16, 0);
+#else /* JP */
 			prt("Command: Create a keymap", 16, 0);
+#endif /* JP */
 
 			/* Prompt */
+#ifdef JP
+			prt("押すキー: ", 18, 0);
+#else /* JP */
 			prt("Keypress: ", 18, 0);
+#endif /* JP */
 
 			/* Get a keymap trigger */
 			do_cmd_macro_aux_keymap(pat);
@@ -1764,7 +2205,11 @@ void do_cmd_macros(void)
 			clear_from(20);
 
 			/* Prompt */
+#ifdef JP
+			prt("行動: ", 20, 0);
+#else /* JP */
 			prt("Action: ", 20, 0);
+#endif /* JP */
 
 			/* Convert to text */
 			ascii_to_text(tmp, sizeof(tmp), macro_buffer);
@@ -1782,7 +2227,11 @@ void do_cmd_macros(void)
 				keymap_act[mode][(byte)(pat[0])] = string_make(macro_buffer);
 
 				/* Prompt */
+#ifdef JP
+				msg_print("キー配置を追加しました。");
+#else /* JP */
 				msg_print("Added a keymap.");
+#endif /* JP */
 			}
 		}
 
@@ -1790,10 +2239,18 @@ void do_cmd_macros(void)
 		else if (ch == '9')
 		{
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: キー配置の削除", 16, 0);
+#else /* JP */
 			prt("Command: Remove a keymap", 16, 0);
+#endif /* JP */
 
 			/* Prompt */
+#ifdef JP
+			prt("押すキー: ", 18, 0);
+#else /* JP */
 			prt("Keypress: ", 18, 0);
+#endif /* JP */
 
 			/* Get a keymap trigger */
 			do_cmd_macro_aux_keymap(pat);
@@ -1805,14 +2262,22 @@ void do_cmd_macros(void)
 			keymap_act[mode][(byte)(pat[0])] = NULL;
 
 			/* Prompt */
+#ifdef JP
+			msg_print("キー配置を削除しました。");
+#else /* JP */
 			msg_print("Removed a keymap.");
+#endif /* JP */
 		}
 
 		/* Enter a new action */
 		else if (ch == '0')
 		{
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: マクロ行動の入力", 16, 0);
+#else /* JP */
 			prt("Command: Enter a new action", 16, 0);
+#endif /* JP */
 
 			/* Go to the correct location */
 			Term_gotoxy(0, 22);
@@ -1834,7 +2299,11 @@ void do_cmd_macros(void)
 		else
 		{
 			/* Oops */
+#ifdef JP
+			bell("無効なキーです！");
+#else /* JP */
 			bell("Illegal command for macros!");
+#endif /* JP */
 		}
 
 		/* Flush messages */
@@ -1878,11 +2347,29 @@ void do_cmd_visuals(void)
 		Term_clear();
 
 		/* Ask for a choice */
+#ifdef JP
+		prt("画面表示の設定", 2, 0);
+#else /* JP */
 		prt("Interact with Visuals", 2, 0);
+#endif /* JP */
 
 		/* Give some choices */
+#ifdef JP
+		prt("(1) ユーザー設定ファイルのロード", 4, 5);
+#else /* JP */
 		prt("(1) Load a user pref file", 4, 5);
+#endif /* JP */
 #ifdef ALLOW_VISUALS
+#ifdef JP
+		prt("(2) モンスターの 色/文字 をファイルに書き出す", 5, 5);
+		prt("(3) アイテムの   色/文字 をファイルに書き出す", 6, 5);
+		prt("(4) 地形の       色/文字 をファイルに書き出す", 7, 5);
+		prt("(5) 外見の       色/文字 をファイルに書き出す", 8, 5);
+		prt("(6) モンスターの 色/文字 を変更する", 9, 5);
+		prt("(7) アイテムの   色/文字 を変更する", 10, 5);
+		prt("(8) 地形の       色/文字 を変更する", 11, 5);
+		prt("(9) 外見         色/文字 を変更する", 12, 5);
+#else /* JP */
 		prt("(2) Dump monster attr/chars", 5, 5);
 		prt("(3) Dump object attr/chars", 6, 5);
 		prt("(4) Dump feature attr/chars", 7, 5);
@@ -1891,11 +2378,20 @@ void do_cmd_visuals(void)
 		prt("(7) Change object attr/chars", 10, 5);
 		prt("(8) Change feature attr/chars", 11, 5);
 		prt("(9) Change flavor attr/chars", 12, 5);
+#endif /* JP */
 #endif
+#ifdef JP
+		prt("(0) 画面表示方法の初期化", 13, 5);
+#else /* JP */
 		prt("(0) Reset visuals", 13, 5);
+#endif /* JP */
 
 		/* Prompt */
+#ifdef JP
+		prt("コマンド: ", 15, 0);
+#else /* JP */
 		prt("Command: ", 15, 0);
+#endif /* JP */
 
 		/* Prompt */
 		ch = inkey();
@@ -1919,10 +2415,18 @@ void do_cmd_visuals(void)
 			char ftmp[80];
 
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: モンスターの[色/文字]をファイルに書き出します", 15, 0);
+#else /* JP */
 			prt("Command: Dump monster attr/chars", 15, 0);
+#endif /* JP */
 
 			/* Prompt */
+#ifdef JP
+			prt("ファイル: ", 17, 0);
+#else /* JP */
 			prt("File: ", 17, 0);
+#endif /* JP */
 
 			/* Default filename */
 			strnfmt(ftmp, sizeof(ftmp), "%s.prf", op_ptr->base_name);
@@ -1949,7 +2453,11 @@ void do_cmd_visuals(void)
 			fprintf(fff, "\n\n");
 
 			/* Start dumping */
+#ifdef JP
+			fprintf(fff, "# モンスターの[色/文字]の設定\n\n");
+#else /* JP */
 			fprintf(fff, "# Monster attr/char definitions\n\n");
+#endif /* JP */
 
 			/* Dump monsters */
 			for (i = 0; i < z_info->r_max; i++)
@@ -1960,7 +2468,12 @@ void do_cmd_visuals(void)
 				if (!r_ptr->name) continue;
 
 				/* Dump a comment */
+#ifdef JP
+				/* 英日切り替え機能対応 */
+				fprintf(fff, "# %s\n", X_r_name(r_ptr));
+#else /* JP */
 				fprintf(fff, "# %s\n", (r_name + r_ptr->name));
+#endif /* JP */
 
 				/* Dump the monster attr/char info */
 				fprintf(fff, "R:%d:0x%02X:0x%02X\n\n", i,
@@ -1977,7 +2490,11 @@ void do_cmd_visuals(void)
 			my_fclose(fff);
 
 			/* Message */
+#ifdef JP
+			msg_print("モンスターの[色/文字]をファイルに書き出しました。");
+#else /* JP */
 			msg_print("Dumped monster attr/chars.");
+#endif /* JP */
 		}
 
 		/* Dump object attr/chars */
@@ -1987,10 +2504,18 @@ void do_cmd_visuals(void)
 			char ftmp[80];
 
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: アイテムの[色/文字]をファイルに書き出します", 15, 0);
+#else /* JP */
 			prt("Command: Dump object attr/chars", 15, 0);
+#endif /* JP */
 
 			/* Prompt */
+#ifdef JP
+			prt("ファイル: ", 17, 0);
+#else /* JP */
 			prt("File: ", 17, 0);
+#endif /* JP */
 
 			/* Default filename */
 			strnfmt(ftmp, sizeof(ftmp), "%s.prf", op_ptr->base_name);
@@ -2017,7 +2542,11 @@ void do_cmd_visuals(void)
 			fprintf(fff, "\n\n");
 
 			/* Start dumping */
+#ifdef JP
+			fprintf(fff, "# アイテムの[色/文字]の設定\n\n");
+#else /* JP */
 			fprintf(fff, "# Object attr/char definitions\n\n");
+#endif /* JP */
 
 			/* Dump objects */
 			for (i = 0; i < z_info->k_max; i++)
@@ -2028,7 +2557,12 @@ void do_cmd_visuals(void)
 				if (!k_ptr->name) continue;
 
 				/* Dump a comment */
+#ifdef JP
+				/* 英日切り替え機能対応 */
+				fprintf(fff, "# %s\n", X_k_name(k_ptr));
+#else /* JP */
 				fprintf(fff, "# %s\n", (k_name + k_ptr->name));
+#endif /* JP */
 
 				/* Dump the object attr/char info */
 				fprintf(fff, "K:%d:0x%02X:0x%02X\n\n", i,
@@ -2045,7 +2579,11 @@ void do_cmd_visuals(void)
 			my_fclose(fff);
 
 			/* Message */
+#ifdef JP
+			msg_print("アイテムの[色/文字]をファイルに書き出しました。");
+#else /* JP */
 			msg_print("Dumped object attr/chars.");
+#endif /* JP */
 		}
 
 		/* Dump feature attr/chars */
@@ -2055,10 +2593,18 @@ void do_cmd_visuals(void)
 			char ftmp[80];
 
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: 地形の[色/文字]をファイルに書き出します", 15, 0);
+#else /* JP */
 			prt("Command: Dump feature attr/chars", 15, 0);
+#endif /* JP */
 
 			/* Prompt */
+#ifdef JP
+			prt("ファイル: ", 17, 0);
+#else /* JP */
 			prt("File: ", 17, 0);
+#endif /* JP */
 
 			/* Default filename */
 			strnfmt(ftmp, sizeof(ftmp), "%s.prf", op_ptr->base_name);
@@ -2085,7 +2631,11 @@ void do_cmd_visuals(void)
 			fprintf(fff, "\n\n");
 
 			/* Start dumping */
+#ifdef JP
+			fprintf(fff, "# 地形の[色/文字]の設定\n\n");
+#else /* JP */
 			fprintf(fff, "# Feature attr/char definitions\n\n");
+#endif /* JP */
 
 			/* Dump features */
 			for (i = 0; i < z_info->f_max; i++)
@@ -2096,7 +2646,12 @@ void do_cmd_visuals(void)
 				if (!f_ptr->name) continue;
 
 				/* Dump a comment */
+#ifdef JP
+				/* 英日切り替え機能対応 */
+				fprintf(fff, "# %s\n", X_f_name(f_ptr));
+#else /* JP */
 				fprintf(fff, "# %s\n", (f_name + f_ptr->name));
+#endif /* JP */
 
 				/* Dump the feature attr/char info */
 				fprintf(fff, "F:%d:0x%02X:0x%02X\n\n", i,
@@ -2113,7 +2668,11 @@ void do_cmd_visuals(void)
 			my_fclose(fff);
 
 			/* Message */
+#ifdef JP
+			msg_print("地形の[色/文字]をファイルに書き出しました。");
+#else /* JP */
 			msg_print("Dumped feature attr/chars.");
+#endif /* JP */
 		}
 
 		/* Dump flavor attr/chars */
@@ -2123,10 +2682,18 @@ void do_cmd_visuals(void)
 			char ftmp[80];
 
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: 外見の[色/文字]をファイルに書き出します", 15, 0);
+#else /* JP */
 			prt("Command: Dump flavor attr/chars", 15, 0);
+#endif /* JP */
 
 			/* Prompt */
+#ifdef JP
+			prt("ファイル: ", 17, 0);
+#else /* JP */
 			prt("File: ", 17, 0);
+#endif /* JP */
 
 			/* Default filename */
 			strnfmt(ftmp, sizeof(ftmp), "%s.prf", op_ptr->base_name);
@@ -2153,7 +2720,11 @@ void do_cmd_visuals(void)
 			fprintf(fff, "\n\n");
 
 			/* Start dumping */
+#ifdef JP
+			fprintf(fff, "# 外見の[色/文字]の設定\n\n");
+#else /* JP */
 			fprintf(fff, "# Flavor attr/char definitions\n\n");
+#endif /* JP */
 
 			/* Dump flavors */
 			for (i = 0; i < z_info->flavor_max; i++)
@@ -2161,7 +2732,11 @@ void do_cmd_visuals(void)
 				flavor_type *flavor_ptr = &flavor_info[i];
 
 				/* Dump a comment */
+#ifdef JP
+				fprintf(fff, "# %s\n", X_flavor_name(flavor_ptr));
+#else /* JP */
 				fprintf(fff, "# %s\n", (flavor_text + flavor_ptr->text));
+#endif /* JP */
 
 				/* Dump the flavor attr/char info */
 				fprintf(fff, "L:%d:0x%02X:0x%02X\n\n", i,
@@ -2178,7 +2753,11 @@ void do_cmd_visuals(void)
 			my_fclose(fff);
 
 			/* Message */
+#ifdef JP
+			msg_print("外見の[色/文字]をファイルに書き出しました。");
+#else /* JP */
 			msg_print("Dumped flavor attr/chars.");
+#endif /* JP */
 		}
 
 		/* Modify monster attr/chars */
@@ -2187,7 +2766,11 @@ void do_cmd_visuals(void)
 			static int r = 0;
 
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: モンスターの[色/文字]を変更します", 15, 0);
+#else /* JP */
 			prt("Command: Change monster attr/chars", 15, 0);
+#endif /* JP */
 
 			/* Hack -- query until done */
 			while (1)
@@ -2198,16 +2781,36 @@ void do_cmd_visuals(void)
 				byte dc = (byte)(r_ptr->d_char);
 				byte ca = (byte)(r_ptr->x_attr);
 				byte cc = (byte)(r_ptr->x_char);
+#ifdef JP
+				byte ca2, cc2;
+#endif /* JP */
 
 				/* Label the object */
+#ifdef JP
+				/* 英日切り替え機能対応 */
+				Term_putstr(5, 17, -1, TERM_WHITE,
+				            format("モンスター = %d, 名前 = %-40.40s",
+				                   r, X_r_name(r_ptr)));
+#else /* JP */
 				Term_putstr(5, 17, -1, TERM_WHITE,
 				            format("Monster = %d, Name = %-40.40s",
 				                   r, (r_name + r_ptr->name)));
+#endif /* JP */
 
 				/* Label the Default values */
+#ifdef JP
+				Term_putstr(10, 19, -1, TERM_WHITE,
+				            format("初期値  色 / 文字 = %3u / %3u", da, dc));
+#else /* JP */
 				Term_putstr(10, 19, -1, TERM_WHITE,
 				            format("Default attr/char = %3u / %3u", da, dc));
+#endif /* JP */
 				Term_putstr(40, 19, -1, TERM_WHITE, "<< ? >>");
+#ifdef JP
+				if (use_bigtile) bigtile_attr(&cc, &ca, &cc2, &ca2);
+				Term_putch(43, 19, ca, cc);
+				if (use_bigtile) Term_putch(43, 19, ca2, cc2);
+#else /* JP */
 				Term_putch(43, 19, da, dc);
 
 				if (use_bigtile)
@@ -2217,11 +2820,22 @@ void do_cmd_visuals(void)
 					else
 						Term_putch(44, 19, 0, ' ');
 				}
+#endif /* JP */
 
 				/* Label the Current values */
+#ifdef JP
+				Term_putstr(10, 20, -1, TERM_WHITE,
+				            format("現在値  色 / 文字 = %3u / %3u", ca, cc));
+#else /* JP */
 				Term_putstr(10, 20, -1, TERM_WHITE,
 				            format("Current attr/char = %3u / %3u", ca, cc));
+#endif /* JP */
 				Term_putstr(40, 20, -1, TERM_WHITE, "<< ? >>");
+#ifdef JP
+				if (use_bigtile) bigtile_attr(&cc, &ca, &cc2, &ca2);
+				Term_putch(43, 20, ca, cc);
+				if (use_bigtile) Term_putch(43, 20, ca2, cc2);
+#else /* JP */
 				Term_putch(43, 20, ca, cc);
 
 				if (use_bigtile)
@@ -2231,10 +2845,16 @@ void do_cmd_visuals(void)
 					else
 						Term_putch(44, 20, 0, ' ');
 				}
+#endif /* JP */
 
 				/* Prompt */
+#ifdef JP
+				Term_putstr(0, 22, -1, TERM_WHITE,
+				            "コマンド (n/N/a/A/c/C): ");
+#else /* JP */
 				Term_putstr(0, 22, -1, TERM_WHITE,
 				            "Command (n/N/a/A/c/C): ");
+#endif /* JP */
 
 				/* Get a command */
 				cx = inkey();
@@ -2258,7 +2878,11 @@ void do_cmd_visuals(void)
 			static int k = 0;
 
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: アイテムの[色/文字]を変更します", 15, 0);
+#else /* JP */
 			prt("Command: Change object attr/chars", 15, 0);
+#endif /* JP */
 
 			/* Hack -- query until done */
 			while (1)
@@ -2269,16 +2893,36 @@ void do_cmd_visuals(void)
 				byte dc = (byte)(k_ptr->d_char);
 				byte ca = (byte)(k_ptr->x_attr);
 				byte cc = (byte)(k_ptr->x_char);
+#ifdef JP
+				byte ca2, cc2;
+#endif /* JP */
 
 				/* Label the object */
+#ifdef JP
+				/* 英日切り替え機能対応 */
+				Term_putstr(5, 17, -1, TERM_WHITE,
+				            format("アイテム = %d, 名前 = %-40.40s",
+				                   k, X_k_name(k_ptr)));
+#else /* JP */
 				Term_putstr(5, 17, -1, TERM_WHITE,
 				            format("Object = %d, Name = %-40.40s",
 				                   k, (k_name + k_ptr->name)));
+#endif /* JP */
 
 				/* Label the Default values */
+#ifdef JP
+				Term_putstr(10, 19, -1, TERM_WHITE,
+				            format("初期値  色 / 文字 = %3d / %3d", da, dc));
+#else /* JP */
 				Term_putstr(10, 19, -1, TERM_WHITE,
 				            format("Default attr/char = %3d / %3d", da, dc));
+#endif /* JP */
 				Term_putstr(40, 19, -1, TERM_WHITE, "<< ? >>");
+#ifdef JP
+				if (use_bigtile) bigtile_attr(&cc, &ca, &cc2, &ca2);
+				Term_putch(43, 19, ca, cc);
+				if (use_bigtile) Term_putch(43, 19, ca2, cc2);
+#else /* JP */
 				Term_putch(43, 19, da, dc);
 
 				if (use_bigtile)
@@ -2288,11 +2932,22 @@ void do_cmd_visuals(void)
 					else
 						Term_putch(44, 19, 0, ' ');
 				}
+#endif /* JP */
 
 				/* Label the Current values */
+#ifdef JP
+				Term_putstr(10, 20, -1, TERM_WHITE,
+				            format("現在値  色 / 文字 = %3d / %3d", ca, cc));
+#else /* JP */
 				Term_putstr(10, 20, -1, TERM_WHITE,
 				            format("Current attr/char = %3d / %3d", ca, cc));
+#endif /* JP */
 				Term_putstr(40, 20, -1, TERM_WHITE, "<< ? >>");
+#ifdef JP
+				if (use_bigtile) bigtile_attr(&cc, &ca, &cc2, &ca2);
+				Term_putch(43, 20, ca, cc);
+				if (use_bigtile) Term_putch(43, 20, ca2, cc2);
+#else /* JP */
 				Term_putch(43, 20, ca, cc);
 
 				if (use_bigtile)
@@ -2302,10 +2957,16 @@ void do_cmd_visuals(void)
 					else
 						Term_putch(44, 20, 0, ' ');
 				}
+#endif /* JP */
 
 				/* Prompt */
+#ifdef JP
+				Term_putstr(0, 22, -1, TERM_WHITE,
+				            "コマンド (n/N/a/A/c/C): ");
+#else /* JP */
 				Term_putstr(0, 22, -1, TERM_WHITE,
 				            "Command (n/N/a/A/c/C): ");
+#endif /* JP */
 
 				/* Get a command */
 				cx = inkey();
@@ -2329,7 +2990,11 @@ void do_cmd_visuals(void)
 			static int f = 0;
 
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: 地形の[色/文字]を変更します", 15, 0);
+#else /* JP */
 			prt("Command: Change feature attr/chars", 15, 0);
+#endif /* JP */
 
 			/* Hack -- query until done */
 			while (1)
@@ -2340,16 +3005,35 @@ void do_cmd_visuals(void)
 				byte dc = (byte)(f_ptr->d_char);
 				byte ca = (byte)(f_ptr->x_attr);
 				byte cc = (byte)(f_ptr->x_char);
+#ifdef JP
+				byte ca2, cc2;
+#endif /* JP */
 
 				/* Label the object */
+#ifdef JP
+				Term_putstr(5, 17, -1, TERM_WHITE,
+				            format("地形 = %d, 名前 = %-40.40s",
+				                   f, X_f_name(f_ptr)));
+#else /* JP */
 				Term_putstr(5, 17, -1, TERM_WHITE,
 				            format("Terrain = %d, Name = %-40.40s",
 				                   f, (f_name + f_ptr->name)));
+#endif /* JP */
 
 				/* Label the Default values */
+#ifdef JP
+				Term_putstr(10, 19, -1, TERM_WHITE,
+				            format("初期値  色 / 文字 = %3d / %3d", da, dc));
+#else /* JP */
 				Term_putstr(10, 19, -1, TERM_WHITE,
 				            format("Default attr/char = %3d / %3d", da, dc));
+#endif /* JP */
 				Term_putstr(40, 19, -1, TERM_WHITE, "<< ? >>");
+#ifdef JP
+				if (use_bigtile) bigtile_attr(&cc, &ca, &cc2, &ca2);
+				Term_putch(43, 19, ca, cc);
+				if (use_bigtile) Term_putch(43, 19, ca2, cc2);
+#else /* JP */
 				Term_putch(43, 19, da, dc);
 
 				if (use_bigtile)
@@ -2359,11 +3043,22 @@ void do_cmd_visuals(void)
 					else
 						Term_putch(44, 19, 0, ' ');
 				}
+#endif /* JP */
 
 				/* Label the Current values */
+#ifdef JP
+				Term_putstr(10, 20, -1, TERM_WHITE,
+				            format("現在値  色 / 文字 = %3d / %3d", ca, cc));
+#else /* JP */
 				Term_putstr(10, 20, -1, TERM_WHITE,
 				            format("Current attr/char = %3d / %3d", ca, cc));
+#endif /* JP */
 				Term_putstr(40, 20, -1, TERM_WHITE, "<< ? >>");
+#ifdef JP
+				if (use_bigtile) bigtile_attr(&cc, &ca, &cc2, &ca2);
+				Term_putch(43, 20, ca, cc);
+				if (use_bigtile) Term_putch(43, 20, ca2, cc2);
+#else /* JP */
 				Term_putch(43, 20, ca, cc);
 
 				if (use_bigtile)
@@ -2373,10 +3068,16 @@ void do_cmd_visuals(void)
 					else
 						Term_putch(44, 20, 0, ' ');
 				}
+#endif /* JP */
 
 				/* Prompt */
+#ifdef JP
+				Term_putstr(0, 22, -1, TERM_WHITE,
+				            "コマンド (n/N/a/A/c/C): ");
+#else /* JP */
 				Term_putstr(0, 22, -1, TERM_WHITE,
 				            "Command (n/N/a/A/c/C): ");
+#endif /* JP */
 
 				/* Get a command */
 				cx = inkey();
@@ -2400,7 +3101,11 @@ void do_cmd_visuals(void)
 			static int f = 0;
 
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: 外見の[色/文字]を変更します", 15, 0);
+#else /* JP */
 			prt("Command: Change flavor attr/chars", 15, 0);
+#endif /* JP */
 
 			/* Hack -- query until done */
 			while (1)
@@ -2411,18 +3116,37 @@ void do_cmd_visuals(void)
 				byte dc = (byte)(flavor_ptr->d_char);
 				byte ca = (byte)(flavor_ptr->x_attr);
 				byte cc = (byte)(flavor_ptr->x_char);
+#ifdef JP
+				byte ca2, cc2;
+#endif /* JP */
 
 				/* Label the object */
+#ifdef JP
+				Term_putstr(5, 17, -1, TERM_WHITE,
+				            format("外見 = %d, 名前 = %-40.40s",
+				                   f, X_flavor_name(flavor_ptr)));
+#else /* JP */
 				Term_putstr(5, 17, -1, TERM_WHITE,
 				            format("Flavor = %d, Text = %-40.40s",
 				                   f, (flavor_text + flavor_ptr->text)));
+#endif /* JP */
 
 				/* Label the Default values */
+#ifdef JP
+				Term_putstr(10, 19, -1, TERM_WHITE,
+				            format("初期値  色 / 文字 = %3d / %3d", da, dc));
+#else /* JP */
 				Term_putstr(10, 19, -1, TERM_WHITE,
 				            format("Default attr/char = %3d / %3d", da, dc));
+#endif /* JP */
 				Term_putstr(40, 19, -1, TERM_WHITE, "<< ? >>");
 				Term_putch(43, 19, da, dc);
 
+#ifdef JP
+				if (use_bigtile) bigtile_attr(&cc, &ca, &cc2, &ca2);
+				Term_putch(43, 19, ca, cc);
+				if (use_bigtile) Term_putch(43, 19, ca2, cc2);
+#else /* JP */
 				if (use_bigtile)
 				{
 					if (da & 0x80)
@@ -2430,11 +3154,22 @@ void do_cmd_visuals(void)
 					else
 						Term_putch(44, 19, 0, ' ');
 				}
+#endif /* JP */
 
 				/* Label the Current values */
+#ifdef JP
+				Term_putstr(10, 20, -1, TERM_WHITE,
+				            format("現在値  色 / 文字 = %3d / %3d", ca, cc));
+#else /* JP */
 				Term_putstr(10, 20, -1, TERM_WHITE,
 				            format("Current attr/char = %3d / %3d", ca, cc));
+#endif /* JP */
 				Term_putstr(40, 20, -1, TERM_WHITE, "<< ? >>");
+#ifdef JP
+				if (use_bigtile) bigtile_attr(&cc, &ca, &cc2, &ca2);
+				Term_putch(43, 20, ca, cc);
+				if (use_bigtile) Term_putch(43, 20, ca2, cc2);
+#else /* JP */
 				Term_putch(43, 20, ca, cc);
 
 				if (use_bigtile)
@@ -2444,10 +3179,16 @@ void do_cmd_visuals(void)
 					else
 						Term_putch(44, 20, 0, ' ');
 				}
+#endif /* JP */
 
 				/* Prompt */
+#ifdef JP
+				Term_putstr(0, 22, -1, TERM_WHITE,
+				            "コマンド (n/N/a/A/c/C): ");
+#else /* JP */
 				Term_putstr(0, 22, -1, TERM_WHITE,
 				            "Command (n/N/a/A/c/C): ");
+#endif /* JP */
 
 				/* Get a command */
 				cx = inkey();
@@ -2474,13 +3215,21 @@ void do_cmd_visuals(void)
 			reset_visuals(TRUE);
 
 			/* Message */
+#ifdef JP
+			msg_print("画面上の[色/文字]を初期値にリセットしました。");
+#else /* JP */
 			msg_print("Visual attr/char tables reset.");
+#endif /* JP */
 		}
 
 		/* Unknown option */
 		else
 		{
+#ifdef JP
+			bell("無効なキーです！");
+#else /* JP */
 			bell("Illegal command for visuals!");
+#endif /* JP */
 		}
 
 		/* Flush messages */
@@ -2523,17 +3272,34 @@ void do_cmd_colors(void)
 		Term_clear();
 
 		/* Ask for a choice */
+#ifdef JP
+		prt("[ カラーの設定 ]", 2, 0);
+#else /* JP */
 		prt("Interact with Colors", 2, 0);
+#endif /* JP */
 
 		/* Give some choices */
+#ifdef JP
+		prt("(1) ユーザー設定ファイルのロード", 4, 5);
+#else /* JP */
 		prt("(1) Load a user pref file", 4, 5);
+#endif /* JP */
 #ifdef ALLOW_COLORS
+#ifdef JP
+		prt("(2) カラーの設定をファイルに書き出す", 5, 5);
+		prt("(3) カラーの設定を変更する", 6, 5);
+#else /* JP */
 		prt("(2) Dump colors", 5, 5);
 		prt("(3) Modify colors", 6, 5);
+#endif /* JP */
 #endif /* ALLOW_COLORS */
 
 		/* Prompt */
+#ifdef JP
+		prt("コマンド: ", 8, 0);
+#else /* JP */
 		prt("Command: ", 8, 0);
+#endif /* JP */
 
 		/* Prompt */
 		ch = inkey();
@@ -2565,10 +3331,18 @@ void do_cmd_colors(void)
 			char ftmp[80];
 
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: カラーの設定をファイルに書き出します", 8, 0);
+#else /* JP */
 			prt("Command: Dump colors", 8, 0);
+#endif /* JP */
 
 			/* Prompt */
+#ifdef JP
+			prt("ファイル: ", 10, 0);
+#else /* JP */
 			prt("File: ", 10, 0);
+#endif /* JP */
 
 			/* Default filename */
 			strnfmt(ftmp, sizeof(ftmp), "%s.prf", op_ptr->base_name);
@@ -2595,7 +3369,11 @@ void do_cmd_colors(void)
 			fprintf(fff, "\n\n");
 
 			/* Start dumping */
+#ifdef JP
+			fprintf(fff, "# カラーの設定\n\n");
+#else /* JP */
 			fprintf(fff, "# Color redefinitions\n\n");
+#endif /* JP */
 
 			/* Dump colors */
 			for (i = 0; i < 256; i++)
@@ -2605,7 +3383,11 @@ void do_cmd_colors(void)
 				int gv = angband_color_table[i][2];
 				int bv = angband_color_table[i][3];
 
+#ifdef JP
+				cptr name = "未知";
+#else /* JP */
 				cptr name = "unknown";
+#endif /* JP */
 
 				/* Skip non-entries */
 				if (!kv && !rv && !gv && !bv) continue;
@@ -2614,7 +3396,11 @@ void do_cmd_colors(void)
 				if (i < 16) name = color_names[i];
 
 				/* Dump a comment */
+#ifdef JP
+				fprintf(fff, "# カラー '%s'\n", name);
+#else /* JP */
 				fprintf(fff, "# Color '%s'\n", name);
+#endif /* JP */
 
 				/* Dump the monster attr/char info */
 				fprintf(fff, "V:%d:0x%02X:0x%02X:0x%02X:0x%02X\n\n",
@@ -2631,7 +3417,11 @@ void do_cmd_colors(void)
 			my_fclose(fff);
 
 			/* Message */
+#ifdef JP
+			msg_print("カラーの設定をファイルに書き出しました。");
+#else /* JP */
 			msg_print("Dumped color redefinitions.");
+#endif /* JP */
 		}
 
 		/* Edit colors */
@@ -2640,7 +3430,11 @@ void do_cmd_colors(void)
 			static byte a = 0;
 
 			/* Prompt */
+#ifdef JP
+			prt("コマンド: カラーの設定を変更します", 8, 0);
+#else /* JP */
 			prt("Command: Modify colors", 8, 0);
+#endif /* JP */
 
 			/* Hack -- query until done */
 			while (1)
@@ -2661,11 +3455,20 @@ void do_cmd_colors(void)
 				}
 
 				/* Describe the color */
+#ifdef JP
+				name = ((a < 16) ? color_names[a] : "未定義");
+#else /* JP */
 				name = ((a < 16) ? color_names[a] : "undefined");
+#endif /* JP */
 
 				/* Describe the color */
+#ifdef JP
+				Term_putstr(5, 10, -1, TERM_WHITE,
+				            format("カラー = %d, 名前 = %s", a, name));
+#else /* JP */
 				Term_putstr(5, 10, -1, TERM_WHITE,
 				            format("Color = %d, Name = %s", a, name));
+#endif /* JP */
 
 				/* Label the Current values */
 				Term_putstr(5, 12, -1, TERM_WHITE,
@@ -2676,8 +3479,13 @@ void do_cmd_colors(void)
 				                   angband_color_table[a][3]));
 
 				/* Prompt */
+#ifdef JP
+				Term_putstr(0, 14, -1, TERM_WHITE,
+				            "コマンド (n/N/k/K/r/R/g/G/b/B): ");
+#else /* JP */
 				Term_putstr(0, 14, -1, TERM_WHITE,
 				            "Command (n/N/k/K/r/R/g/G/b/B): ");
+#endif /* JP */
 
 				/* Get a command */
 				cx = inkey();
@@ -2710,7 +3518,11 @@ void do_cmd_colors(void)
 		/* Unknown option */
 		else
 		{
+#ifdef JP
+			bell("無効なキーです！");
+#else /* JP */
 			bell("Illegal command for colors!");
+#endif /* JP */
 		}
 
 		/* Flush messages */
@@ -2734,13 +3546,21 @@ void do_cmd_note(void)
 	strcpy(tmp, "");
 
 	/* Input */
+#ifdef JP
+	if (!get_string("メモ: ", tmp, sizeof(tmp))) return;
+#else /* JP */
 	if (!get_string("Note: ", tmp, sizeof(tmp))) return;
+#endif /* JP */
 
 	/* Ignore empty notes */
 	if (!tmp[0] || (tmp[0] == ' ')) return;
 
 	/* Add the note to the message recall */
+#ifdef JP
+	msg_format("メモ: %s", tmp);
+#else /* JP */
 	msg_format("Note: %s", tmp);
+#endif /* JP */
 }
 
 
@@ -2750,8 +3570,13 @@ void do_cmd_note(void)
 void do_cmd_version(void)
 {
 	/* Silly message */
+#ifdef JP
+	msg_format("%s %s",
+	           JVERSION_NAME, JVERSION_STRING);
+#else /* JP */
 	msg_format("You are playing %s %s.  Type '?' for more info.",
 	           VERSION_NAME, VERSION_STRING);
+#endif /* JP */
 }
 
 
@@ -2761,6 +3586,19 @@ void do_cmd_version(void)
  */
 static cptr do_cmd_feeling_text[11] =
 {
+#ifdef JP
+	"この階の雰囲気を感じとれなかった...",
+	"この階には何か特別なものがあるような気がする。",
+	"この階はこの上なく素晴らしい感じがする。",
+	"素晴らしい感じがする...",
+	"とても良い感じがする...",
+	"良い感じがする...",
+	"ちょっと幸運な感じがする...",
+	"多少は運が向いてきたか...",
+	"見た感じ悪くはない...",
+	"全然駄目ということはないが...",
+	"なんて退屈なところだ..."
+#else /* JP */
 	"Looks like any other level.",
 	"You feel there is something special about this level.",
 	"You have a superb feeling about this level.",
@@ -2772,6 +3610,7 @@ static cptr do_cmd_feeling_text[11] =
 	"You like the look of this place...",
 	"This level can't be all bad...",
 	"What a boring place..."
+#endif /* JP */
 };
 
 
@@ -2787,7 +3626,11 @@ void do_cmd_feeling(void)
 	/* No useful feeling in town */
 	if (!p_ptr->depth)
 	{
+#ifdef JP
+		msg_print("典型的な町のようだ。");
+#else /* JP */
 		msg_print("Looks like a typical town.");
+#endif /* JP */
 		return;
 	}
 
@@ -2893,7 +3736,11 @@ void do_cmd_load_screen(void)
 
 
 	/* Message */
+#ifdef JP
+	msg_print("ファイルに書き出された画面(記念撮影)をロードしました。");
+#else /* JP */
 	msg_print("Screen dump loaded.");
+#endif /* JP */
 	message_flush();
 
 
@@ -2914,7 +3761,11 @@ void do_cmd_save_screen(void)
 	if (!get_string("File: ", tmp_val, sizeof(tmp_val))) return;
 
 	html_screenshot(tmp_val);
+#ifdef JP
+	msg_print("ファイルに書き出しました。");
+#else /* JP */
 	msg_print("Dump saved.");
+#endif /* JP */
 }
 
 
@@ -3012,7 +3863,11 @@ static void do_cmd_knowledge_artifacts(void)
 		if (!okay[k]) continue;
 
 		/* Paranoia */
+#ifdef JP
+		strcpy(o_name, "未知の伝説のアイテム");
+#else /* JP */
 		strcpy(o_name, "Unknown Artifact");
+#endif /* JP */
 
 		/* Obtain the base object type */
 		z = lookup_kind(a_ptr->tval, a_ptr->sval);
@@ -3037,7 +3892,12 @@ static void do_cmd_knowledge_artifacts(void)
 		}
 
 		/* Hack -- Build the artifact name */
+#ifdef JP
+		/* 英日切り替え機能対応 */
+		fprintf(fff, "     %s%s\n", X_object("The ", ""), o_name);
+#else /* JP */
 		fprintf(fff, "     The %s\n", o_name);
+#endif /* JP */
 	}
 
 	/* Free the "okay" array */
@@ -3047,7 +3907,11 @@ static void do_cmd_knowledge_artifacts(void)
 	my_fclose(fff);
 
 	/* Display the file contents */
+#ifdef JP
+	show_file(file_name, "既知の(あるいは失われた)伝説のアイテム", 0, 0);
+#else /* JP */
 	show_file(file_name, "Known (or lost) artifacts", 0, 0);
+#endif /* JP */
 
 	/* Remove the file */
 	fd_kill(file_name);
@@ -3112,9 +3976,16 @@ static void do_cmd_knowledge_uniques(void)
 		if (dead) killed++;
 
 		/* Print a message */
+#ifdef JP
+		/* 英日切り替え機能対応 */
+		fprintf(fff, "     %-40sは%s\n",
+		        X_r_name(r_ptr),
+		        (dead ? "既に死んでいる" : "まだ生きている"));
+#else /* JP */
 		fprintf(fff, "     %-30s is %s\n",
 			    (r_name + r_ptr->name),
 			    (dead ? "dead" : "alive"));
+#endif /* JP */
 	}
 
 	/* Free the "who" array */
@@ -3124,7 +3995,11 @@ static void do_cmd_knowledge_uniques(void)
 	my_fclose(fff);
 
 	/* Construct header line */
+#ifdef JP
+	strnfmt(header, sizeof(header), "ユニークモンスター: 既知 %d, 死亡 %d", n, killed);
+#else /* JP */
 	strnfmt(header, sizeof(header), "Uniques: %d known, %d killed", n, killed);
+#endif /* JP */
 
 	/* Display the file contents */
 	show_file(file_name, header, 0, 0);
@@ -3186,11 +4061,119 @@ static void do_cmd_knowledge_objects(void)
 	my_fclose(fff);
 
 	/* Display the file contents */
+#ifdef JP
+	show_file(file_name, "既知のアイテム", 0, 0);
+#else /* JP */
 	show_file(file_name, "Known Objects", 0, 0);
+#endif /* JP */
 
 	/* Remove the file */
 	fd_kill(file_name);
 }
+
+
+#ifdef ALLOW_AUTO_PICKUP
+
+/*
+ * Check the status of "autopick"
+ */
+static void do_cmd_knowledge_autopick(void)
+{
+	int i;
+
+	FILE *fff;
+
+	char desc[1024];
+
+	char file_name[1024];
+
+
+	/* Temporary file */
+	fff = my_fopen_temp(file_name, 1024);
+
+	/* Failure */
+	if (!fff) return;
+
+	if (!max_autopick)
+	{
+#ifdef JP
+	    fprintf(fff, "自動破壊/拾いには何も登録されていません。");
+#else /* JP */
+	    fprintf(fff, "No preference for auto picker/destroyer.");
+#endif /* JP */
+	}
+	else
+	{
+#ifdef JP
+	    fprintf(fff, "   自動拾い/破壊には現在 %d行登録されています。\n\n", max_autopick);
+#else /* JP */
+	    fprintf(fff, "   There are %d registered lines for auto picker/destroyer.\n\n", max_autopick);
+#endif /* JP */
+	}
+
+	/* Scan the autopick list */
+	for (i = 0; i < max_autopick; i++)
+	{
+		cptr tmp;
+
+		autopick_type *ap_ptr = &autopick_list[i];
+
+
+		/* print action */
+		if (ap_ptr->act & AUTOPICK_ACT_PICKUP)
+		{
+#ifdef JP
+			tmp = "拾う";
+#else /* JP */
+			tmp = "Pickup";
+#endif /* JP */
+		}
+		else if (ap_ptr->act & AUTOPICK_ACT_DESTROY)
+		{
+#ifdef JP
+			tmp = "破壊";
+#else /* JP */
+			tmp = "Destroy";
+#endif /* JP */
+		}
+		else
+		{
+#ifdef JP
+			tmp = "放置";
+#else /* JP */
+			tmp = "Leave";
+#endif /* JP */
+		}
+		fprintf(fff, "%11s", format("[%s]", tmp));
+
+		/* print description */
+		autopick_desc(desc, ap_ptr, FALSE, FALSE);
+		fprintf(fff, " %s", desc);
+
+		/* print inscription */
+		if (ap_ptr->insc)
+		{
+			fprintf(fff, " {%s}", ap_ptr->insc);
+		}
+
+		fprintf(fff, "\n");
+	}
+
+	/* Close the file */
+	my_fclose(fff);
+
+	/* Display the file contents */
+#ifdef JP
+	show_file(file_name, "自動拾い/破壊 設定リスト", 0, 0);
+#else /* JP */
+	show_file(file_name, "Auto-picker/Destroyer", 0, 0);
+#endif /* JP */
+
+	/* Remove the file */
+	fd_kill(file_name);
+}
+
+#endif /* ALLOW_AUTO_PICKUP */
 
 
 
@@ -3257,7 +4240,11 @@ static void do_cmd_knowledge_kills(void)
 	my_fclose(fff);
 
 	/* Display the file contents */
+#ifdef JP
+	show_file(file_name, "倒したモンスター", 0, 0);
+#else /* JP */
 	show_file(file_name, "Kill counts", 0, 0);
+#endif /* JP */
 
 	/* Remove the file */
 	fd_kill(file_name);
@@ -3287,17 +4274,40 @@ void do_cmd_knowledge(void)
 		Term_clear();
 
 		/* Ask for a choice */
+#ifdef JP
+		prt("現在の知識を確認する", 2, 0);
+#else /* JP */
 		prt("Display current knowledge", 2, 0);
+#endif /* JP */
 
 		/* Give some choices */
+#ifdef JP
+		prt("(1) 既知の 伝説のアイテム       の一覧", 4, 5);
+		prt("(2) 既知の ユニーク・モンスター の一覧", 5, 5);
+		prt("(3) 既知の アイテム             の一覧", 6, 5);
+		prt("(4) 勇者の殿堂                  の一覧", 7, 5);
+		prt("(5) 倒したモンスター            の一覧", 8, 5);
+#else /* JP */
 		prt("(1) Display known artifacts", 4, 5);
 		prt("(2) Display known uniques", 5, 5);
 		prt("(3) Display known objects", 6, 5);
 		prt("(4) Display hall of fame", 7, 5);
 		prt("(5) Display kill counts", 8, 5);
+#endif /* JP */
+#ifdef ALLOW_AUTO_PICKUP
+#ifdef JP
+		prt("(6) 現在の自動拾い/破壊設定     の一覧", 9, 5);
+#else /* JP */
+		prt("(6) Display auto pick/destroy", 9, 5);
+#endif /* JP */
+#endif /* ALLOW_AUTO_PICKUP */
 
 		/* Prompt */
+#ifdef JP
+		prt("コマンド: ", 10, 0);
+#else /* JP */
 		prt("Command: ", 10, 0);
+#endif /* JP */
 
 		/* Prompt */
 		ch = inkey();
@@ -3335,10 +4345,23 @@ void do_cmd_knowledge(void)
 			do_cmd_knowledge_kills();
 		}
 
+#ifdef ALLOW_AUTO_PICKUP
+		/* Auto pick/destroy */
+		else if (ch == '6')
+		{
+			/* Spawn */
+			do_cmd_knowledge_autopick();
+		}
+#endif /* ALLOW_AUTO_PICKUP */
+
 		/* Unknown option */
 		else
 		{
+#ifdef JP
+			bell("無効なキーです！");
+#else /* JP */
 			bell("Illegal command for knowledge!");
+#endif /* JP */
 		}
 
 		/* Flush messages */

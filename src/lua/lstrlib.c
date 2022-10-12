@@ -1,5 +1,5 @@
 /*
-** $Id: lstrlib.c,v 1.2 2003/08/10 11:43:30 rr9 Exp $
+** $Id: lstrlib.c,v 1.2 2004/04/11 15:23:19 tooru Exp $
 ** Standard library for string operations and pattern-matching
 ** See Copyright Notice in lua.h
 */
@@ -63,6 +63,14 @@ static int str_lower (lua_State *L) {
   const char *s = luaL_checklstring(L, 1, &l);
   luaL_buffinit(L, &b);
   for (i=0; i<l; i++)
+#ifdef SJIS
+    if (iskanji(s[i])) {
+      luaL_putchar(&b, s[i]);
+      i++;
+      if (i<l) luaL_putchar(&b, s[i]);
+    }
+    else
+#endif /* SJIS */
     luaL_putchar(&b, tolower(uchar(s[i])));
   luaL_pushresult(&b);
   return 1;
@@ -76,6 +84,14 @@ static int str_upper (lua_State *L) {
   const char *s = luaL_checklstring(L, 1, &l);
   luaL_buffinit(L, &b);
   for (i=0; i<l; i++)
+#ifdef SJIS
+    if (iskanji(s[i])) {
+      luaL_putchar(&b, s[i]);
+      i++;
+      if (i<l) luaL_putchar(&b, s[i]);
+    }
+    else
+#endif /* SJIS */
     luaL_putchar(&b, toupper(uchar(s[i])));
   luaL_pushresult(&b);
   return 1;
@@ -646,6 +662,12 @@ static void luaI_addquoted (lua_State *L, luaL_Buffer *b, int arg) {
       }
       default: {
         luaL_putchar(b, *s);
+#ifdef SJIS
+        if (iskanji(*s)) {
+          s++;
+          luaL_putchar(b, *s);
+        }
+#endif /* SJIS */
         break;
       }
     }

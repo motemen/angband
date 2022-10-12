@@ -110,8 +110,22 @@ cptr get_default_font(int term_num)
 
 	/* Check environment for "base" font */
 	if (!font) font = getenv("ANGBAND_X11_FONT");
+#ifdef JP
+	/* Window specific font name */
+	sprintf(buf, "ANGBAND_X11_KFONT_%d", i);
+
+	/* Check environment for that font */
+	kfont = getenv(buf);
+
+	/* Check environment for "base" font */
+	if (!kfont) kfont = getenv("ANGBAND_X11_KFONT");
+#endif
 
 	/* No environment variables, use default font */
+#ifdef JP
+	if (!font) font  = DEFAULT_X11_FONT;
+	if(!kfont) kfont = DEFAULT_X11_KFONT;
+#else
 	if (!font)
 	{
 		switch (term_num)
@@ -162,6 +176,7 @@ cptr get_default_font(int term_num)
 			}
 		}
 	}
+#endif
 
 	return (font);
 }

@@ -8,6 +8,13 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3-v6 日本語版製作: しとしん
+ * 2.8.0      対応        : sayu, しとしん
+ * 2.8.1      対応        : FIRST
+ * 2.8.3      対応        : FIRST, しとしん
+ */
+
 #include "angband.h"
 
 #include "script.h"
@@ -194,19 +201,31 @@ static void sense_inventory(void)
 
 		if (i >= INVEN_WIELD)
 		{
+#ifdef JP
+			msg_format("%s%s(%c)は%sという感じがする...",
+			           describe_use(i), o_name, index_to_label(i),
+			           X_inscrip_text[feel - INSCRIP_NULL]);
+#else /* JP */
 			msg_format("You feel the %s (%c) you are %s %s %s...",
 			           o_name, index_to_label(i), describe_use(i),
 			           ((o_ptr->number == 1) ? "is" : "are"),
 			           inscrip_text[feel - INSCRIP_NULL]);
+#endif /* JP */
 		}
 
 		/* Message (inventory) */
 		else
 		{
+#ifdef JP
+			msg_format("ザックの中の%s(%c)は%sという感じがする...",
+			           o_name, index_to_label(i),
+			           X_inscrip_text[feel - INSCRIP_NULL]);
+#else /* JP */
 			msg_format("You feel the %s (%c) in your pack %s %s...",
 			           o_name, index_to_label(i),
 			           ((o_ptr->number == 1) ? "is" : "are"),
 			           inscrip_text[feel - INSCRIP_NULL]);
+#endif /* JP */
 		}
 
 		/* Sense the object */
@@ -394,16 +413,28 @@ static void recharged_notice(const object_type *o_ptr)
 
 			/* Notify the player */
 			if (o_ptr->number > 1)
+#ifdef JP
+				msg_format("%sは再充填された。", o_name);
+#else /* JP */
 				msg_format("Your %s have recharged.", o_name);
+#endif /* JP */
 
 			/* Artifacts */
 			else if (o_ptr->name1)
 			{
+#ifdef JP
+				msg_format("%sは再充填された。", o_name);
+#else /* JP */
 				msg_format("The %s has recharged.", o_name);
+#endif /* JP */
 			}
 
 			/* Single, non-artifact items */
+#ifdef JP
+			else msg_format("%sは再充填された。", o_name);
+#else /* JP */
 			else msg_format("Your %s has recharged.", o_name);
+#endif /* JP */
 
 			/* Done */
 			return;
@@ -615,15 +646,24 @@ static void process_world(void)
 				closing_flag++;
 
 				/* Message */
+#ifdef JP
+				msg_print("アングバンドへの門が閉じかかっています...");
+				msg_print("ゲームを終了するかセーブするかして下さい。");
+#else /* JP */
 				msg_print("The gates to ANGBAND are closing...");
 				msg_print("Please finish up and/or save your game.");
+#endif /* JP */
 			}
 
 			/* Slam the gate */
 			else
 			{
 				/* Message */
+#ifdef JP
+				msg_print("今、アングバンドへの門が閉ざされました。");
+#else /* JP */
 				msg_print("The gates to ANGBAND are now closed.");
+#endif /* JP */
 
 				/* Stop playing */
 				p_ptr->playing = FALSE;
@@ -657,14 +697,22 @@ static void process_world(void)
 			if (dawn)
 			{
 				/* Message */
+#ifdef JP
+				msg_print("夜が明けた。");
+#else /* JP */
 				msg_print("The sun has risen.");
+#endif /* JP */
 			}
 
 			/* Night falls */
 			else
 			{
 				/* Message */
+#ifdef JP
+				msg_print("日が沈んだ。");
+#else /* JP */
 				msg_print("The sun has fallen.");
+#endif /* JP */
 			}
 
 			/* Illuminate */
@@ -684,7 +732,11 @@ static void process_world(void)
 			int n;
 
 			/* Message */
+#ifdef JP
+			if (cheat_xtra) msg_print("店を更新しています...");
+#else /* JP */
 			if (cheat_xtra) msg_print("Updating Shops...");
+#endif /* JP */
 
 			/* Maintain each shop (except home) */
 			for (n = 0; n < MAX_STORES; n++)
@@ -700,7 +752,11 @@ static void process_world(void)
 			if (rand_int(STORE_SHUFFLE) == 0)
 			{
 				/* Message */
+#ifdef JP
+				if (cheat_xtra) msg_print("店主をシャッフルしています...");
+#else /* JP */
 				if (cheat_xtra) msg_print("Shuffling a Shopkeeper...");
+#endif /* JP */
 
 				/* Pick a random shop (except home) */
 				while (1)
@@ -714,7 +770,11 @@ static void process_world(void)
 			}
 
 			/* Message */
+#ifdef JP
+			if (cheat_xtra) msg_print("終了。");
+#else /* JP */
 			if (cheat_xtra) msg_print("Done.");
+#endif /* JP */
 		}
 	}
 
@@ -738,7 +798,11 @@ static void process_world(void)
 	if (p_ptr->poisoned)
 	{
 		/* Take damage */
+#ifdef JP
+		take_hit(1, "毒");
+#else /* JP */
 		take_hit(1, "poison");
+#endif /* JP */
 	}
 
 	/* Take damage from cuts */
@@ -763,7 +827,11 @@ static void process_world(void)
 		}
 
 		/* Take damage */
+#ifdef JP
+		take_hit(i, "致命傷");
+#else /* JP */
 		take_hit(i, "a fatal wound");
+#endif /* JP */
 	}
 
 
@@ -806,7 +874,11 @@ static void process_world(void)
 		i = (PY_FOOD_STARVE - p_ptr->food) / 10;
 
 		/* Take damage */
+#ifdef JP
+		take_hit(i, "空腹");
+#else /* JP */
 		take_hit(i, "starvation");
+#endif /* JP */
 	}
 
 	/* Default regeneration */
@@ -836,7 +908,11 @@ static void process_world(void)
 			if (!p_ptr->paralyzed && (rand_int(100) < 10))
 			{
 				/* Message */
+#ifdef JP
+				msg_print("あまりにも空腹で気絶してしまった。");
+#else /* JP */
 				msg_print("You faint from the lack of food.");
+#endif /* JP */
 				disturb(1, 0);
 
 				/* Hack -- faint (bypass free action) */
@@ -1065,14 +1141,22 @@ static void process_world(void)
 			else if (o_ptr->pval == 0)
 			{
 				disturb(0, 0);
+#ifdef JP
+				msg_print("明かりが消えてしまった！");
+#else /* JP */
 				msg_print("Your light has gone out!");
+#endif /* JP */
 			}
 
 			/* The light is getting dim */
 			else if ((o_ptr->pval < 100) && (!(o_ptr->pval % 10)))
 			{
 				if (disturb_minor) disturb(0, 0);
+#ifdef JP
+				msg_print("明かりが微かになってきている。");
+#else /* JP */
 				msg_print("Your light is growing faint.");
+#endif /* JP */
 			}
 		}
 	}
@@ -1128,7 +1212,11 @@ static void process_world(void)
 			/* Determine the level */
 			if (p_ptr->depth)
 			{
+#ifdef JP
+				msg_print("上に引っ張りあげられる感じがする！");
+#else /* JP */
 				msg_print("You feel yourself yanked upwards!");
+#endif /* JP */
 
 				/* New depth */
 				p_ptr->depth = 0;
@@ -1138,7 +1226,11 @@ static void process_world(void)
 			}
 			else
 			{
+#ifdef JP
+				msg_print("下に引きずり降ろされる感じがする！");
+#else /* JP */
 				msg_print("You feel yourself yanked downwards!");
+#endif /* JP */
 
 				/* New depth */
 				p_ptr->depth = p_ptr->max_depth;
@@ -1162,12 +1254,21 @@ static bool enter_wizard_mode(void)
 	if (verify_special && !(p_ptr->noscore & 0x0002) && !(p_ptr->is_dead))
 	{
 		/* Mention effects */
+#ifdef JP
+		msg_print("あなたは今ウィザードモードに入ろうとしています！ウィザード");
+		msg_print("モードは一種のインチキであり、入るとスコアが記録されません！");
+#else /* JP */
 		msg_print("You are about to enter 'wizard' mode for the very first time!");
 		msg_print("This is a form of cheating, and your game will not be scored!");
+#endif /* JP */
 		message_flush();
 
 		/* Verify request */
+#ifdef JP
+		if (!get_check("本当にウィザードモードに入りたいのですか? "))
+#else /* JP */
 		if (!get_check("Are you sure you want to enter wizard mode? "))
+#endif /* JP */
 		{
 			return (FALSE);
 		}
@@ -1193,12 +1294,21 @@ static bool verify_debug_mode(void)
 	if (verify_special && !(p_ptr->noscore & 0x0008))
 	{
 		/* Mention effects */
+#ifdef JP
+		msg_print("あなたは今、危険かつサポート対象外のデバッグコマンドを使おうとし");
+		msg_print("ています。あなたのマシンやセーブファイルが破壊される可能性あり！");
+#else /* JP */
 		msg_print("You are about to use the dangerous, unsupported, debug commands!");
 		msg_print("Your machine may crash, and your savefile may become corrupted!");
+#endif /* JP */
 		message_flush();
 
 		/* Verify request */
+#ifdef JP
+		if (!get_check("本当にデバッグコマンドを使用したいのですか? "))
+#else /* JP */
 		if (!get_check("Are you sure you want to use the debug commands? "))
+#endif /* JP */
 		{
 			return (FALSE);
 		}
@@ -1226,12 +1336,21 @@ static bool verify_borg_mode(void)
 	if (verify_special && !(p_ptr->noscore & 0x0010))
 	{
 		/* Mention effects */
+#ifdef JP
+		msg_print("あなたは今、危険かつサポート対象外のボーグコマンドを使おうとし");
+		msg_print("ています。あなたのマシンやセーブファイルが破壊される可能性あり！");
+#else /* JP */
 		msg_print("You are about to use the dangerous, unsupported, borg commands!");
 		msg_print("Your machine may crash, and your savefile may become corrupted!");
+#endif /* JP */
 		message_flush();
 
 		/* Verify request */
+#ifdef JP
+		if (!get_check("本当にボーグコマンドを使用したいのですか? "))
+#else /* JP */
 		if (!get_check("Are you sure you want to use the borg commands? "))
+#endif /* JP */
 		{
 			return (FALSE);
 		}
@@ -1287,12 +1406,20 @@ static void process_command(void)
 			if (p_ptr->wizard)
 			{
 				p_ptr->wizard = FALSE;
+#ifdef JP
+				msg_print("ウィザードモード解除。");
+#else /* JP */
 				msg_print("Wizard mode off.");
+#endif /* JP */
 			}
 			else if (enter_wizard_mode())
 			{
 				p_ptr->wizard = TRUE;
+#ifdef JP
+				msg_print("ウィザードモード突入。");
+#else /* JP */
 				msg_print("Wizard mode on.");
+#endif /* JP */
 			}
 
 			/* Update monsters */
@@ -1725,6 +1852,14 @@ static void process_command(void)
 			break;
 		}
 
+#ifdef JP
+		case '$':
+		{
+			do_cmd_pickpref();
+			break;
+		}
+#endif
+
 		/* Interact with macros */
 		case '@':
 		{
@@ -1854,7 +1989,11 @@ static void process_command(void)
 		/* Hack -- Unknown command */
 		default:
 		{
+#ifdef JP
+			prt(" '?' でヘルプが表示されます。", 0, 0);
+#else /* JP */
 			prt("Type '?' for help.", 0, 0);
+#endif /* JP */
 			break;
 		}
 	}
@@ -2022,7 +2161,11 @@ static void process_player(void)
 				disturb(0, 0);
 
 				/* Hack -- Show a Message */
+#ifdef JP
+				msg_print("中断しました。");
+#else /* JP */
 				msg_print("Cancelled.");
+#endif /* JP */
 			}
 		}
 	}
@@ -2069,13 +2212,21 @@ static void process_player(void)
 			disturb(0, 0);
 
 			/* Warning */
+#ifdef JP
+			msg_print("ザックからアイテムがあふれた！");
+#else /* JP */
 			msg_print("Your pack overflows!");
+#endif /* JP */
 
 			/* Describe */
 			object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
 
 			/* Message */
+#ifdef JP
+			msg_format("%sが落ちた。(%c)", o_name, index_to_label(item));
+#else /* JP */
 			msg_format("You drop %s (%c).", o_name, index_to_label(item));
+#endif /* JP */
 
 			/* Drop it (carefully) near the player */
 			drop_near(o_ptr, 0, p_ptr->py, p_ptr->px);
@@ -2652,6 +2803,9 @@ static void dungeon(void)
 static void process_some_user_pref_files(void)
 {
 	char buf[1024];
+#ifdef ALLOW_COMMAND_MENU
+	errr err;
+#endif
 
 
 	/* Process the "user.prf" file */
@@ -2662,6 +2816,28 @@ static void process_some_user_pref_files(void)
 
 	/* Process the "PLAYER.prf" file */
 	(void)process_pref_file(buf);
+
+#ifdef ALLOW_COMMAND_MENU
+	/* Access the "menu" pref file */
+	process_menu_file("menu.prf");
+#endif /* ALLOW_COMMAND_MENU */
+
+#ifdef ALLOW_AUTO_PICKUP
+	/* Free old entries */
+	init_autopicker();
+
+	/* Access character's "autopick" pref file */
+	sprintf(buf, "%s.prf", op_ptr->base_name);
+
+	/* Process that file */
+	err = process_autopick_pref_file(buf);
+
+	if (err < 0)
+	{
+		/* Process "autopick" pref file */
+		process_autopick_pref_file("autopick.prf");
+	}
+#endif /* ALLOW_AUTO_PICKUP */
 }
 
 
@@ -2701,7 +2877,11 @@ void play_game(bool new_game)
 	/* Verify main term */
 	if (!term_screen)
 	{
+#ifdef JP
+		quit("メイン・ウィンドウが存在しません");
+#else /* JP */
 		quit("main window does not exist");
+#endif /* JP */
 	}
 
 	/* Make sure main term is active */
@@ -2710,7 +2890,11 @@ void play_game(bool new_game)
 	/* Verify minimum size */
 	if ((Term->hgt < 24) || (Term->wid < 80))
 	{
+#ifdef JP
+		quit("メイン・ウィンドウが小さすぎます");
+#else /* JP */
 		quit("main window is too small");
+#endif /* JP */
 	}
 
 	/* Hack -- Turn off the cursor */
@@ -2721,7 +2905,11 @@ void play_game(bool new_game)
 	if (!load_player())
 	{
 		/* Oops */
+#ifdef JP
+		quit("セーブファイルが壊れています");
+#else /* JP */
 		quit("broken savefile");
+#endif /* JP */
 	}
 
 	/* Nothing loaded */
@@ -2819,7 +3007,11 @@ void play_game(bool new_game)
 	}
 
 	/* Flash a message */
+#ifdef JP
+	prt("お待ち下さい...", 0, 0);
+#else /* JP */
 	prt("Please wait...", 0, 0);
+#endif /* JP */
 
 	/* Flush the message */
 	Term_fresh();
@@ -2937,7 +3129,11 @@ void play_game(bool new_game)
 		if (p_ptr->playing && p_ptr->is_dead)
 		{
 			/* Mega-Hack -- Allow player to cheat death */
+#ifdef JP
+			if ((p_ptr->wizard || cheat_live) && !get_check("死にますか? "))
+#else /* JP */
 			if ((p_ptr->wizard || cheat_live) && !get_check("Die? "))
+#endif /* JP */
 			{
 				/* Mark social class, reset age, if needed */
 				if (p_ptr->sc) p_ptr->sc = p_ptr->age = 0;
@@ -2949,7 +3145,11 @@ void play_game(bool new_game)
 				p_ptr->noscore |= 0x0001;
 
 				/* Message */
+#ifdef JP
+				msg_print("ウィザードモードに念を送り、死を欺いた。");
+#else /* JP */
 				msg_print("You invoke wizard mode and cheat death.");
+#endif /* JP */
 				message_flush();
 
 				/* Cheat death */
@@ -2980,7 +3180,11 @@ void play_game(bool new_game)
 				if (p_ptr->word_recall)
 				{
 					/* Message */
+#ifdef JP
+					msg_print("張りつめた大気が流れ去った...");
+#else /* JP */
 					msg_print("A tension leaves the air around you...");
+#endif /* JP */
 					message_flush();
 
 					/* Hack -- Prevent recall */
@@ -2988,7 +3192,11 @@ void play_game(bool new_game)
 				}
 
 				/* Note cause of death XXX XXX XXX */
+#ifdef JP
+				strcpy(p_ptr->died_from, "死の欺き");
+#else /* JP */
 				strcpy(p_ptr->died_from, "Cheating death");
+#endif /* JP */
 
 				/* New depth */
 				p_ptr->depth = 0;

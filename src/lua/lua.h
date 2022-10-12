@@ -1,5 +1,5 @@
 /*
-** $Id: lua.h,v 1.3 2003/10/03 17:20:14 rr9 Exp $
+** $Id: lua.h,v 1.2 2004/04/11 15:23:19 tooru Exp $
 ** Lua - An Extensible Extension Language
 ** Tecgraf: Computer Graphics Technology Group, PUC-Rio, Brazil
 ** http://www.lua.org	mailto:info@lua.org
@@ -206,6 +206,10 @@ LUA_API int  lua_resume (lua_State *L, int narg);
 LUA_API int   lua_getgcthreshold (lua_State *L);
 LUA_API int   lua_getgccount (lua_State *L);
 LUA_API void  lua_setgcthreshold (lua_State *L, int newthreshold);
+
+#ifdef SJIS
+#define iskanji(x)  ((0x81<=(unsigned char)x && (unsigned char)x<=0x9f)|| (0xe0<=(unsigned char)x && (unsigned char)x<=0xfc))
+#endif /* SJIS */
 
 /*
 ** miscellaneous functions

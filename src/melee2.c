@@ -8,6 +8,13 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3 日本語版製作: しとしん
+ * 2.7.9v6 対応        : 岸康司, しとしん
+ * 2.8.1   対応        : FIRST, しとしん
+ * 2.8.3   対応        : FIRST, しとしん
+ */
+
 #include "angband.h"
 
 
@@ -872,7 +879,11 @@ bool make_attack_spell(int m_idx)
 	if ((thrown_spell >= RF5_OFFSET) && (rand_int(100) < failrate))
 	{
 		/* Message */
+#ifdef JP
+		msg_format("%^sは呪文を唱えようとしたが失敗した。", m_name);
+#else /* JP */
 		msg_format("%^s tries to cast a spell, but fails.", m_name);
+#endif /* JP */
 
 		return (TRUE);
 	}
@@ -887,7 +898,11 @@ bool make_attack_spell(int m_idx)
 			if (!direct) break;
 			disturb(1, 0);
 			sound(MSG_SHRIEK);
+#ifdef JP
+			msg_format("%^sがかん高い金切り声をあげた。", m_name);
+#else /* JP */
 			msg_format("%^s makes a high pitched shriek.", m_name);
+#endif /* JP */
 			aggravate_monsters(m_idx);
 			break;
 		}
@@ -914,8 +929,13 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+4:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが奇妙な音を発した。", m_name);
+			else msg_format("%^sが矢を放った。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s makes a strange noise.", m_name);
 			else msg_format("%^s fires an arrow.", m_name);
+#endif /* JP */
 			bolt(m_idx, GF_ARROW, damroll(1, 6));
 			break;
 		}
@@ -924,8 +944,13 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+5:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが奇妙な音を発した。", m_name);
+			else msg_format("%^sが矢を放った！", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s makes a strange noise.", m_name);
 			else msg_format("%^s fires an arrow!", m_name);
+#endif /* JP */
 			bolt(m_idx, GF_ARROW, damroll(3, 6));
 			break;
 		}
@@ -934,8 +959,13 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+6:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが奇妙な音を発した。", m_name);
+			else msg_format("%^sが武器を放った。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s makes a strange noise.", m_name);
 			else msg_format("%^s fires a missile.", m_name);
+#endif /* JP */
 			bolt(m_idx, GF_ARROW, damroll(5, 6));
 			break;
 		}
@@ -944,8 +974,13 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+7:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが奇妙な音を発した。", m_name);
+			else msg_format("%^sが武器を放った。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s makes a strange noise.", m_name);
 			else msg_format("%^s fires a missile!", m_name);
+#endif /* JP */
 			bolt(m_idx, GF_ARROW, damroll(7, 6));
 			break;
 		}
@@ -955,8 +990,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_BR_ACID);
+#ifdef JP
+			if (blind) msg_format("%^sが何かのブレスを吐いた。", m_name);
+			else msg_format("%^sが酸のブレスを吐いた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s breathes.", m_name);
 			else msg_format("%^s breathes acid.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_ACID,
 			       ((m_ptr->hp / 3) > 1600 ? 1600 : (m_ptr->hp / 3)));
 			update_smart_learn(m_idx, DRS_RES_ACID);
@@ -968,8 +1008,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_BR_ELEC);
+#ifdef JP
+			if (blind) msg_format("%^sが何かのブレスを吐いた。", m_name);
+			else msg_format("%^sが稲妻のブレスを吐いた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s breathes.", m_name);
 			else msg_format("%^s breathes lightning.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_ELEC,
 			       ((m_ptr->hp / 3) > 1600 ? 1600 : (m_ptr->hp / 3)));
 			update_smart_learn(m_idx, DRS_RES_ELEC);
@@ -981,8 +1026,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_BR_FIRE);
+#ifdef JP
+			if (blind) msg_format("%^sが何かのブレスを吐いた。", m_name);
+			else msg_format("%^sが火炎のブレスを吐いた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s breathes.", m_name);
 			else msg_format("%^s breathes fire.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_FIRE,
 			       ((m_ptr->hp / 3) > 1600 ? 1600 : (m_ptr->hp / 3)));
 			update_smart_learn(m_idx, DRS_RES_FIRE);
@@ -994,8 +1044,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_BR_FROST);
+#ifdef JP
+			if (blind) msg_format("%^sが何かのブレスを吐いた。", m_name);
+			else msg_format("%^sが冷気のブレスを吐いた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s breathes.", m_name);
 			else msg_format("%^s breathes frost.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_COLD,
 			       ((m_ptr->hp / 3) > 1600 ? 1600 : (m_ptr->hp / 3)));
 			update_smart_learn(m_idx, DRS_RES_COLD);
@@ -1007,8 +1062,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_BR_GAS);
+#ifdef JP
+			if (blind) msg_format("%^sが何かのブレスを吐いた。", m_name);
+			else msg_format("%^sがガスのブレスを吐いた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s breathes.", m_name);
 			else msg_format("%^s breathes gas.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_POIS,
 			       ((m_ptr->hp / 3) > 800 ? 800 : (m_ptr->hp / 3)));
 			update_smart_learn(m_idx, DRS_RES_POIS);
@@ -1020,8 +1080,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_BR_NETHER);
+#ifdef JP
+			if (blind) msg_format("%^sが何かのブレスを吐いた。", m_name);
+			else msg_format("%^sが地獄のブレスを吐いた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s breathes.", m_name);
 			else msg_format("%^s breathes nether.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_NETHER,
 			       ((m_ptr->hp / 6) > 550 ? 550 : (m_ptr->hp / 6)));
 			update_smart_learn(m_idx, DRS_RES_NETHR);
@@ -1033,8 +1098,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_BR_LIGHT);
+#ifdef JP
+			if (blind) msg_format("%^sが何かのブレスを吐いた。", m_name);
+			else msg_format("%^sが閃光のブレスを吐いた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s breathes.", m_name);
 			else msg_format("%^s breathes light.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_LITE,
 			       ((m_ptr->hp / 6) > 400 ? 400 : (m_ptr->hp / 6)));
 			update_smart_learn(m_idx, DRS_RES_LITE);
@@ -1046,8 +1116,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_BR_DARK);
+#ifdef JP
+			if (blind) msg_format("%^sが何かのブレスを吐いた。", m_name);
+			else msg_format("%^sが暗黒のブレスを吐いた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s breathes.", m_name);
 			else msg_format("%^s breathes darkness.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_DARK,
 			       ((m_ptr->hp / 6) > 400 ? 400 : (m_ptr->hp / 6)));
 			update_smart_learn(m_idx, DRS_RES_DARK);
@@ -1059,8 +1134,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_BR_CONF);
+#ifdef JP
+			if (blind) msg_format("%^sが何かのブレスを吐いた。", m_name);
+			else msg_format("%^sが混乱のブレスを吐いた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s breathes.", m_name);
 			else msg_format("%^s breathes confusion.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_CONFUSION,
 			       ((m_ptr->hp / 6) > 400 ? 400 : (m_ptr->hp / 6)));
 			update_smart_learn(m_idx, DRS_RES_CONFU);
@@ -1072,8 +1152,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_BR_SOUND);
+#ifdef JP
+			if (blind) msg_format("%^sが何かのブレスを吐いた。", m_name);
+			else msg_format("%^sが轟音のブレスを吐いた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s breathes.", m_name);
 			else msg_format("%^s breathes sound.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_SOUND,
 			       ((m_ptr->hp / 6) > 500 ? 500 : (m_ptr->hp / 6)));
 			update_smart_learn(m_idx, DRS_RES_SOUND);
@@ -1085,8 +1170,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_BR_CHAOS);
+#ifdef JP
+			if (blind) msg_format("%^sが何かのブレスを吐いた。", m_name);
+			else msg_format("%^sがカオスのブレスを吐いた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s breathes.", m_name);
 			else msg_format("%^s breathes chaos.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_CHAOS,
 			       ((m_ptr->hp / 6) > 500 ? 500 : (m_ptr->hp / 6)));
 			update_smart_learn(m_idx, DRS_RES_CHAOS);
@@ -1098,8 +1188,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_BR_DISENCHANT);
+#ifdef JP
+			if (blind) msg_format("%^sが何かのブレスを吐いた。", m_name);
+			else msg_format("%^sが劣化のブレスを吐いた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s breathes.", m_name);
 			else msg_format("%^s breathes disenchantment.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_DISENCHANT,
 			       ((m_ptr->hp / 6) > 500 ? 500 : (m_ptr->hp / 6)));
 			update_smart_learn(m_idx, DRS_RES_DISEN);
@@ -1111,8 +1206,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_BR_NEXUS);
+#ifdef JP
+			if (blind) msg_format("%^sが何かのブレスを吐いた。", m_name);
+			else msg_format("%^sが因果混乱のブレスを吐いた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s breathes.", m_name);
 			else msg_format("%^s breathes nexus.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_NEXUS,
 			       ((m_ptr->hp / 6) > 400 ? 400 : (m_ptr->hp / 6)));
 			update_smart_learn(m_idx, DRS_RES_NEXUS);
@@ -1124,8 +1224,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_BR_TIME);
+#ifdef JP
+			if (blind) msg_format("%^sが何かのブレスを吐いた。", m_name);
+			else msg_format("%^sが時間逆転のブレスを吐いた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s breathes.", m_name);
 			else msg_format("%^s breathes time.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_TIME,
 			       ((m_ptr->hp / 3) > 150 ? 150 : (m_ptr->hp / 3)));
 			break;
@@ -1136,8 +1241,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_BR_INERTIA);
+#ifdef JP
+			if (blind) msg_format("%^sが何かのブレスを吐いた。", m_name);
+			else msg_format("%^sが遅鈍のブレスを吐いた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s breathes.", m_name);
 			else msg_format("%^s breathes inertia.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_INERTIA,
 			       ((m_ptr->hp / 6) > 200 ? 200 : (m_ptr->hp / 6)));
 			break;
@@ -1148,8 +1258,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_BR_GRAVITY);
+#ifdef JP
+			if (blind) msg_format("%^sが何かのブレスを吐いた。", m_name);
+			else msg_format("%^sが重力のブレスを吐いた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s breathes.", m_name);
 			else msg_format("%^s breathes gravity.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_GRAVITY,
 			       ((m_ptr->hp / 3) > 200 ? 200 : (m_ptr->hp / 3)));
 			break;
@@ -1160,8 +1275,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_BR_SHARDS);
+#ifdef JP
+			if (blind) msg_format("%^sが何かのブレスを吐いた。", m_name);
+			else msg_format("%^sが破片のブレスを吐いた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s breathes.", m_name);
 			else msg_format("%^s breathes shards.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_SHARD,
 			       ((m_ptr->hp / 6) > 500 ? 500 : (m_ptr->hp / 6)));
 			update_smart_learn(m_idx, DRS_RES_SHARD);
@@ -1173,8 +1293,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_BR_PLASMA);
+#ifdef JP
+			if (blind) msg_format("%^sが何かのブレスを吐いた。", m_name);
+			else msg_format("%^sがプラズマのブレスを吐いた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s breathes.", m_name);
 			else msg_format("%^s breathes plasma.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_PLASMA,
 			       ((m_ptr->hp / 6) > 150 ? 150 : (m_ptr->hp / 6)));
 			break;
@@ -1185,8 +1310,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_BR_FORCE);
+#ifdef JP
+			if (blind) msg_format("%^sが何かのブレスを吐いた。", m_name);
+			else msg_format("%^sがフォースのブレスを吐いた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s breathes.", m_name);
 			else msg_format("%^s breathes force.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_FORCE,
 			       ((m_ptr->hp / 6) > 200 ? 200 : (m_ptr->hp / 6)));
 			break;
@@ -1221,8 +1351,13 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+31:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("何かが力を込めたうなり声をあげるのが聞こえた。", m_name);
+			else msg_format("%^sがあなたに石を投げた。", m_name);
+#else /* JP */
 			if (blind) msg_format("You hear something grunt with exertion.", m_name);
 			else msg_format("%^s hurls a boulder at you!", m_name);
+#endif /* JP */
 			bolt(m_idx, GF_ARROW, damroll(1 + r_ptr->level / 7, 12));
 			break;
 		}
@@ -1232,8 +1367,13 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+0:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sがアシッド・ボールの呪文を唱えた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s casts an acid ball.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_ACID,
 			       randint(rlev * 3) + 15);
 			update_smart_learn(m_idx, DRS_RES_ACID);
@@ -1244,8 +1384,13 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+1:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sがサンダー・ボールの呪文を唱えた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s casts a lightning ball.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_ELEC,
 			       randint(rlev * 3 / 2) + 8);
 			update_smart_learn(m_idx, DRS_RES_ELEC);
@@ -1256,8 +1401,13 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+2:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sがファイア・ボールの呪文を唱えた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s casts a fire ball.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_FIRE,
 			       randint(rlev * 7 / 2) + 10);
 			update_smart_learn(m_idx, DRS_RES_FIRE);
@@ -1268,8 +1418,13 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+3:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sがアイス・ボールの呪文を唱えた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s casts a frost ball.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_COLD,
 			       randint(rlev * 3 / 2) + 10);
 			update_smart_learn(m_idx, DRS_RES_COLD);
@@ -1280,8 +1435,13 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+4:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが悪臭雲の呪文を唱えた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s casts a stinking cloud.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_POIS,
 			       damroll(12, 2));
 			update_smart_learn(m_idx, DRS_RES_POIS);
@@ -1292,8 +1452,13 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+5:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが地獄球の呪文を唱えた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s casts a nether ball.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_NETHER,
 			       (50 + damroll(10, 10) + rlev));
 			update_smart_learn(m_idx, DRS_RES_NETHR);
@@ -1304,9 +1469,15 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+6:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが流れるような身振りをした。", m_name);
+			msg_print("あなたは渦巻きに飲み込まれた。");
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s gestures fluidly.", m_name);
 			msg_print("You are engulfed in a whirlpool.");
+#endif /* JP */
 			breath(m_idx, GF_WATER,
 			       randint(rlev * 5 / 2) + 50);
 			break;
@@ -1316,8 +1487,13 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+7:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かを力強くつぶやいた。", m_name);
+			else msg_format("%^sが魔力の嵐の呪文を念じた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles powerfully.", m_name);
 			else msg_format("%^s invokes a mana storm.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_MANA,
 			       (rlev * 5) + damroll(10, 10));
 			break;
@@ -1327,8 +1503,13 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+8:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かを力強くつぶやいた。", m_name);
+			else msg_format("%^sが暗黒の嵐の呪文を念じた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles powerfully.", m_name);
 			else msg_format("%^s invokes a darkness storm.", m_name);
+#endif /* JP */
 			breath(m_idx, GF_DARK,
 			       (rlev * 5) + damroll(10, 10));
 			update_smart_learn(m_idx, DRS_RES_DARK);
@@ -1347,7 +1528,11 @@ bool make_attack_spell(int m_idx)
 				disturb(1, 0);
 
 				/* Basic message */
+#ifdef JP
+				msg_format("%^sに精神エネルギーを吸い取られてしまった！", m_name);
+#else /* JP */
 				msg_format("%^s draws psychic energy from you!", m_name);
+#endif /* JP */
 
 				/* Attack power */
 				r1 = (randint(rlev) / 2) + 1;
@@ -1385,7 +1570,11 @@ bool make_attack_spell(int m_idx)
 					/* Special message */
 					if (seen)
 					{
+#ifdef JP
+						msg_format("%^sは気分が良さそうだ。", m_name);
+#else /* JP */
 						msg_format("%^s appears healthier.", m_name);
+#endif /* JP */
 					}
 				}
 			}
@@ -1400,20 +1589,36 @@ bool make_attack_spell(int m_idx)
 			disturb(1, 0);
 			if (!seen)
 			{
+#ifdef JP
+				msg_print("何かがあなたの精神に念を放っているようだ。");
+#else /* JP */
 				msg_print("You feel something focusing on your mind.");
+#endif /* JP */
 			}
 			else
 			{
+#ifdef JP
+				msg_format("%^sがあなたの瞳をじっとにらんでいる。", m_name);
+#else /* JP */
 				msg_format("%^s gazes deep into your eyes.", m_name);
+#endif /* JP */
 			}
 
 			if (rand_int(100) < p_ptr->skill_sav)
 			{
+#ifdef JP
+				msg_print("しかし念を跳ね返した！");
+#else /* JP */
 				msg_print("You resist the effects!");
+#endif /* JP */
 			}
 			else
 			{
+#ifdef JP
+				msg_print("霊的エネルギーで精神が攻撃された。");
+#else /* JP */
 				msg_print("Your mind is blasted by psionic energy.");
+#endif /* JP */
 				if (!p_ptr->resist_confu)
 				{
 					(void)set_confused(p_ptr->confused + rand_int(4) + 4);
@@ -1430,19 +1635,35 @@ bool make_attack_spell(int m_idx)
 			disturb(1, 0);
 			if (!seen)
 			{
+#ifdef JP
+				msg_print("何かがあなたの精神に念を放っているようだ。");
+#else /* JP */
 				msg_print("You feel something focusing on your mind.");
+#endif /* JP */
 			}
 			else
 			{
+#ifdef JP
+				msg_format("%^sがあなたの瞳をじっと見ている。", m_name);
+#else /* JP */
 				msg_format("%^s looks deep into your eyes.", m_name);
+#endif /* JP */
 			}
 			if (rand_int(100) < p_ptr->skill_sav)
 			{
+#ifdef JP
+				msg_print("しかし念を跳ね返した！");
+#else /* JP */
 				msg_print("You resist the effects!");
+#endif /* JP */
 			}
 			else
 			{
+#ifdef JP
+				msg_print("霊的エネルギーで精神が攻撃された。");
+#else /* JP */
 				msg_print("Your mind is blasted by psionic energy.");
+#endif /* JP */
 				take_hit(damroll(12, 15), ddesc);
 				if (!p_ptr->resist_blind)
 				{
@@ -1466,11 +1687,20 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sがあなたを指さして呪った。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s points at you and curses.", m_name);
+#endif /* JP */
 			if (rand_int(100) < p_ptr->skill_sav)
 			{
+#ifdef JP
+				msg_print("しかし呪いを跳ね返した！");
+#else /* JP */
 				msg_print("You resist the effects!");
+#endif /* JP */
 			}
 			else
 			{
@@ -1484,11 +1714,20 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sがあなたを指さして恐ろしげに呪った。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s points at you and curses horribly.", m_name);
+#endif /* JP */
 			if (rand_int(100) < p_ptr->skill_sav)
 			{
+#ifdef JP
+				msg_print("しかし呪いを跳ね返した！");
+#else /* JP */
 				msg_print("You resist the effects!");
+#endif /* JP */
 			}
 			else
 			{
@@ -1502,11 +1741,20 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かを大声で叫んだ。", m_name);
+			else msg_format("%^sがあなたを指さして恐ろしげに呪文を唱えた！", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles loudly.", m_name);
 			else msg_format("%^s points at you, incanting terribly!", m_name);
+#endif /* JP */
 			if (rand_int(100) < p_ptr->skill_sav)
 			{
+#ifdef JP
+				msg_print("しかし呪文を跳ね返した！");
+#else /* JP */
 				msg_print("You resist the effects!");
+#endif /* JP */
 			}
 			else
 			{
@@ -1520,11 +1768,20 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが「死ね！」と叫んだ。", m_name);
+			else msg_format("%^sがあなたを指さして「死ね！」と叫んだ。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s screams the word 'DIE!'", m_name);
 			else msg_format("%^s points at you, screaming the word DIE!", m_name);
+#endif /* JP */
 			if (rand_int(100) < p_ptr->skill_sav)
 			{
+#ifdef JP
+				msg_print("しかし呪文を跳ね返した！");
+#else /* JP */
 				msg_print("You resist the effects!");
+#endif /* JP */
 			}
 			else
 			{
@@ -1538,8 +1795,13 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+16:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sがアシッド・ボルトの呪文を唱えた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s casts a acid bolt.", m_name);
+#endif /* JP */
 			bolt(m_idx, GF_ACID,
 			     damroll(7, 8) + (rlev / 3));
 			update_smart_learn(m_idx, DRS_RES_ACID);
@@ -1550,8 +1812,13 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+17:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sがサンダー・ボルトの呪文を唱えた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s casts a lightning bolt.", m_name);
+#endif /* JP */
 			bolt(m_idx, GF_ELEC,
 			     damroll(4, 8) + (rlev / 3));
 			update_smart_learn(m_idx, DRS_RES_ELEC);
@@ -1562,8 +1829,13 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+18:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sがファイア・ボルトの呪文を唱えた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s casts a fire bolt.", m_name);
+#endif /* JP */
 			bolt(m_idx, GF_FIRE,
 			     damroll(9, 8) + (rlev / 3));
 			update_smart_learn(m_idx, DRS_RES_FIRE);
@@ -1574,8 +1846,13 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+19:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sがアイス・ボルトの呪文を唱えた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s casts a frost bolt.", m_name);
+#endif /* JP */
 			bolt(m_idx, GF_COLD,
 			     damroll(6, 8) + (rlev / 3));
 			update_smart_learn(m_idx, DRS_RES_COLD);
@@ -1593,8 +1870,13 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+21:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが地獄の矢の呪文を唱えた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s casts a nether bolt.", m_name);
+#endif /* JP */
 			bolt(m_idx, GF_NETHER,
 			     30 + damroll(5, 5) + (rlev * 3) / 2);
 			update_smart_learn(m_idx, DRS_RES_NETHR);
@@ -1605,8 +1887,13 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+22:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sがウォーター・ボルトの呪文を唱えた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s casts a water bolt.", m_name);
+#endif /* JP */
 			bolt(m_idx, GF_WATER,
 			     damroll(10, 10) + (rlev));
 			break;
@@ -1616,8 +1903,13 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+23:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが魔力の矢の呪文を唱えた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s casts a mana bolt.", m_name);
+#endif /* JP */
 			bolt(m_idx, GF_MANA,
 			     randint(rlev * 7 / 2) + 50);
 			break;
@@ -1627,8 +1919,13 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+24:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sがプラズマ・ボルトの呪文を唱えた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s casts a plasma bolt.", m_name);
+#endif /* JP */
 			bolt(m_idx, GF_PLASMA,
 			     10 + damroll(8, 7) + (rlev));
 			break;
@@ -1638,8 +1935,13 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+25:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが極寒の矢の呪文を唱えた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s casts an ice bolt.", m_name);
+#endif /* JP */
 			bolt(m_idx, GF_ICE,
 			     damroll(6, 6) + (rlev));
 			update_smart_learn(m_idx, DRS_RES_COLD);
@@ -1650,8 +1952,13 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+26:
 		{
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sがマジック・ミサイルの呪文を唱えた。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s casts a magic missile.", m_name);
+#endif /* JP */
 			bolt(m_idx, GF_MISSILE,
 			     damroll(2, 6) + (rlev / 3));
 			break;
@@ -1663,15 +1970,28 @@ bool make_attack_spell(int m_idx)
 			if (!direct) break;
 			disturb(1, 0);
 			sound(MSG_CAST_FEAR);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやくと、恐ろしげな音が聞こえた。", m_name);
+			else msg_format("%^sが恐ろしげな幻覚を作り出した。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles, and you hear scary noises.", m_name);
 			else msg_format("%^s casts a fearful illusion.", m_name);
+#endif /* JP */
 			if (p_ptr->resist_fear)
 			{
+#ifdef JP
+				msg_print("しかし恐怖に侵されなかった。");
+#else /* JP */
 				msg_print("You refuse to be frightened.");
+#endif /* JP */
 			}
 			else if (rand_int(100) < p_ptr->skill_sav)
 			{
+#ifdef JP
+				msg_print("しかし恐怖に侵されなかった。");
+#else /* JP */
 				msg_print("You refuse to be frightened.");
+#endif /* JP */
 			}
 			else
 			{
@@ -1686,15 +2006,28 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが呪文を唱えてあなたの目をくらました！", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s casts a spell, burning your eyes!", m_name);
+#endif /* JP */
 			if (p_ptr->resist_blind)
 			{
+#ifdef JP
+				msg_print("しかし効果がなかった！");
+#else /* JP */
 				msg_print("You are unaffected!");
+#endif /* JP */
 			}
 			else if (rand_int(100) < p_ptr->skill_sav)
 			{
+#ifdef JP
+				msg_print("しかし効果がなかった！");
+#else /* JP */
 				msg_print("You resist the effects!");
+#endif /* JP */
 			}
 			else
 			{
@@ -1709,15 +2042,28 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやくと、頭を悩ます音がした。", m_name);
+			else msg_format("%^sが誘惑的な幻覚を作り出した。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles, and you hear puzzling noises.", m_name);
 			else msg_format("%^s creates a mesmerising illusion.", m_name);
+#endif /* JP */
 			if (p_ptr->resist_confu)
 			{
+#ifdef JP
+				msg_print("しかし幻覚にはだまされなかった。");
+#else /* JP */
 				msg_print("You disbelieve the feeble spell.");
+#endif /* JP */
 			}
 			else if (rand_int(100) < p_ptr->skill_sav)
 			{
+#ifdef JP
+				msg_print("しかし幻覚にはだまされなかった。");
+#else /* JP */
 				msg_print("You disbelieve the feeble spell.");
+#endif /* JP */
 			}
 			else
 			{
@@ -1732,14 +2078,26 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
+#ifdef JP
+			msg_format("%^sがあなたの筋力を吸い取ろうとした！", m_name);
+#else /* JP */
 			msg_format("%^s drains power from your muscles!", m_name);
+#endif /* JP */
 			if (p_ptr->free_act)
 			{
+#ifdef JP
+				msg_print("しかし効果がなかった！");
+#else /* JP */
 				msg_print("You are unaffected!");
+#endif /* JP */
 			}
 			else if (rand_int(100) < p_ptr->skill_sav)
 			{
+#ifdef JP
+				msg_print("しかし効力を跳ね返した！");
+#else /* JP */
 				msg_print("You resist the effects!");
+#endif /* JP */
 			}
 			else
 			{
@@ -1754,15 +2112,28 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sがあなたの目をじっと見つめた！", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s stares deep into your eyes!", m_name);
+#endif /* JP */
 			if (p_ptr->free_act)
 			{
+#ifdef JP
+				msg_print("しかし効果がなかった！");
+#else /* JP */
 				msg_print("You are unaffected!");
+#endif /* JP */
 			}
 			else if (rand_int(100) < p_ptr->skill_sav)
 			{
+#ifdef JP
+				msg_print("しかし念を跳ね返した！");
+#else /* JP */
 				msg_format("You resist the effects!");
+#endif /* JP */
 			}
 			else
 			{
@@ -1780,24 +2151,40 @@ bool make_attack_spell(int m_idx)
 			disturb(1, 0);
 			if (blind)
 			{
+#ifdef JP
+				msg_format("%^sが何かをつぶやいた。", m_name);
+#else /* JP */
 				msg_format("%^s mumbles.", m_name);
+#endif /* JP */
 			}
 			else
 			{
+#ifdef JP
+				msg_format("%^sが自分の体に意識を集中している。", m_name);
+#else /* JP */
 				msg_format("%^s concentrates on %s body.", m_name, m_poss);
+#endif /* JP */
 			}
 
 			/* Allow quick speed increases to base+10 */
 			if (m_ptr->mspeed < r_ptr->speed + 10)
 			{
+#ifdef JP
+				msg_format("%^sの動きが速くなった。", m_name);
+#else /* JP */
 				msg_format("%^s starts moving faster.", m_name);
+#endif /* JP */
 				m_ptr->mspeed += 10;
 			}
 
 			/* Allow small speed increases to base+20 */
 			else if (m_ptr->mspeed < r_ptr->speed + 20)
 			{
+#ifdef JP
+				msg_format("%^sの動きが速くなった。", m_name);
+#else /* JP */
 				msg_format("%^s starts moving faster.", m_name);
+#endif /* JP */
 				m_ptr->mspeed += 2;
 			}
 
@@ -1818,11 +2205,19 @@ bool make_attack_spell(int m_idx)
 			/* Message */
 			if (blind)
 			{
+#ifdef JP
+				msg_format("%^sが何かをつぶやいた。", m_name);
+#else /* JP */
 				msg_format("%^s mumbles.", m_name);
+#endif /* JP */
 			}
 			else
 			{
+#ifdef JP
+				msg_format("%^sが自分の傷に意識を集中している。", m_name);
+#else /* JP */
 				msg_format("%^s concentrates on %s wounds.", m_name, m_poss);
+#endif /* JP */
 			}
 
 			/* Heal some */
@@ -1837,11 +2232,19 @@ bool make_attack_spell(int m_idx)
 				/* Message */
 				if (seen)
 				{
+#ifdef JP
+					msg_format("%^sは大幅に体力を回復したようだ。", m_name);
+#else /* JP */
 					msg_format("%^s looks REALLY healthy!", m_name);
+#endif /* JP */
 				}
 				else
 				{
+#ifdef JP
+					msg_format("%^sは元気になったようだ。", m_name);
+#else /* JP */
 					msg_format("%^s sounds REALLY healthy!", m_name);
+#endif /* JP */
 				}
 			}
 
@@ -1851,11 +2254,19 @@ bool make_attack_spell(int m_idx)
 				/* Message */
 				if (seen)
 				{
+#ifdef JP
+					msg_format("%^sは体力を回復したようだ。", m_name);
+#else /* JP */
 					msg_format("%^s looks healthier.", m_name);
+#endif /* JP */
 				}
 				else
 				{
+#ifdef JP
+					msg_format("%^sは体力を回復したようだ。", m_name);
+#else /* JP */
 					msg_format("%^s sounds healthier.", m_name);
+#endif /* JP */
 				}
 			}
 
@@ -1869,7 +2280,11 @@ bool make_attack_spell(int m_idx)
 				m_ptr->monfear = 0;
 
 				/* Message */
+#ifdef JP
+				msg_format("%^sは勇気を取り戻した。", m_name);
+#else /* JP */
 				msg_format("%^s recovers %s courage.", m_name, m_poss);
+#endif /* JP */
 			}
 
 			break;
@@ -1885,7 +2300,11 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+4:
 		{
 			disturb(1, 0);
+#ifdef JP
+			msg_format("%^sが瞬時に消えた。", m_name);
+#else /* JP */
 			msg_format("%^s blinks away.", m_name);
+#endif /* JP */
 			teleport_away(m_idx, 10);
 			break;
 		}
@@ -1894,7 +2313,11 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+5:
 		{
 			disturb(1, 0);
+#ifdef JP
+			msg_format("%^sがテレポートした。", m_name);
+#else /* JP */
 			msg_format("%^s teleports away.", m_name);
+#endif /* JP */
 			teleport_away(m_idx, MAX_SIGHT * 2 + 5);
 			break;
 		}
@@ -1916,7 +2339,11 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
+#ifdef JP
+			msg_format("%^sがあなたを引き戻した。", m_name);
+#else /* JP */
 			msg_format("%^s commands you to return.", m_name);
+#endif /* JP */
 			teleport_player_to(m_ptr->fy, m_ptr->fx);
 			break;
 		}
@@ -1926,7 +2353,11 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
+#ifdef JP
+			msg_format("%^sにテレポートさせられた。", m_name);
+#else /* JP */
 			msg_format("%^s teleports you away.", m_name);
+#endif /* JP */
 			teleport_player(100);
 			break;
 		}
@@ -1936,15 +2367,28 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何か奇妙な言葉をつぶやいた。", m_name);
+			else msg_format("%^sがあなたの足を指さした。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles strangely.", m_name);
 			else msg_format("%^s gestures at your feet.", m_name);
+#endif /* JP */
 			if (p_ptr->resist_nexus)
 			{
+#ifdef JP
+				msg_print("しかし効果がなかった！");
+#else /* JP */
 				msg_print("You are unaffected!");
+#endif /* JP */
 			}
 			else if (rand_int(100) < p_ptr->skill_sav)
 			{
+#ifdef JP
+				msg_print("しかし呪文を跳ね返した！");
+#else /* JP */
 				msg_print("You resist the effects!");
+#endif /* JP */
 			}
 			else
 			{
@@ -1965,8 +2409,13 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが暗闇の中で手を振った。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s gestures in shadow.", m_name);
+#endif /* JP */
 			(void)unlite_area(0, 3);
 			break;
 		}
@@ -1977,8 +2426,13 @@ bool make_attack_spell(int m_idx)
 			if (!direct) break;
 			disturb(1, 0);
 			sound(MSG_CREATE_TRAP);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいて邪悪に笑った。", m_name);
+			else msg_format("%^sが呪文を唱えて邪悪に笑った。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles, and then cackles evilly.", m_name);
 			else msg_format("%^s casts a spell and cackles evilly.", m_name);
+#endif /* JP */
 			(void)trap_creation();
 			break;
 		}
@@ -1988,15 +2442,27 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
+#ifdef JP
+			msg_format("%^sがあなたの記憶を消去しようとしている。", m_name);
+#else /* JP */
 			msg_format("%^s tries to blank your mind.", m_name);
+#endif /* JP */
 
 			if (rand_int(100) < p_ptr->skill_sav)
 			{
+#ifdef JP
+				msg_print("しかし念を跳ね返した！");
+#else /* JP */
 				msg_print("You resist the effects!");
+#endif /* JP */
 			}
 			else if (lose_all_info())
 			{
+#ifdef JP
+				msg_print("記憶が薄れてしまった。");
+#else /* JP */
 				msg_print("Your memories fade away.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -2012,10 +2478,17 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_SUM_MONSTER);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが魔法で%sを召喚した！", m_name,
+			                ((r_ptr->flags1) & RF1_UNIQUE ?
+			                 "下僕" : "仲間"));
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s magically summons %s %s.", m_name, m_poss,
 			                ((r_ptr->flags1) & RF1_UNIQUE ?
 			                 "minions" : "kin"));
+#endif /* JP */
 
 			/* Hack -- Set the letter of the monsters to summon */
 			summon_kin_type = r_ptr->d_char;
@@ -2025,7 +2498,11 @@ bool make_attack_spell(int m_idx)
 			}
 			if (blind && count)
 			{
+#ifdef JP
+				msg_print("多くのものが間近に現れた音がする。");
+#else /* JP */
 				msg_print("You hear many things appear nearby.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -2035,15 +2512,24 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_SUM_HI_DEMON);
+#ifdef JP
+ 			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが魔法で強力なデーモンを召喚した！", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s magically summons greater demons!", m_name);
+#endif /* JP */
 			for (k = 0; k < 8; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_HI_DEMON);
 			}
 			if (blind && count)
 			{
+#ifdef JP
+				msg_print("多くの邪悪なものが間近に現れた音がする。");
+#else /* JP */
 				msg_print("You hear many evil things appear nearby.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -2053,15 +2539,24 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_SUM_MONSTER);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが魔法で仲間を召喚した！", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s magically summons help!", m_name);
+#endif /* JP */
 			for (k = 0; k < 1; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, 0);
 			}
 			if (blind && count)
 			{
+#ifdef JP
+				msg_print("何かが間近に現れた音がする。");
+#else /* JP */
 				msg_print("You hear something appear nearby.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -2071,15 +2566,24 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_SUM_MONSTER);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが魔法でモンスターを召喚した！", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s magically summons monsters!", m_name);
+#endif /* JP */
 			for (k = 0; k < 8; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, 0);
 			}
 			if (blind && count)
 			{
+#ifdef JP
+				msg_print("多くのものが間近に現れた音がする。");
+#else /* JP */
 				msg_print("You hear many things appear nearby.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -2089,15 +2593,24 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_SUM_ANIMAL);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが魔法で動物を召喚した。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s magically summons animals.", m_name);
+#endif /* JP */
 			for (k = 0; k < 6; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_ANIMAL);
 			}
 			if (blind && count)
 			{
+#ifdef JP
+				msg_print("多くのものが間近に現れた音がする。");
+#else /* JP */
 				msg_print("You hear many things appear nearby.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -2107,15 +2620,24 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_SUM_SPIDER);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが魔法でクモを召喚した。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s magically summons spiders.", m_name);
+#endif /* JP */
 			for (k = 0; k < 6; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_SPIDER);
 			}
 			if (blind && count)
 			{
+#ifdef JP
+				msg_print("多くのものが間近に現れた音がする。");
+#else /* JP */
 				msg_print("You hear many things appear nearby.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -2125,15 +2647,24 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_SUM_HOUND);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが魔法でハウンドを召喚した。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s magically summons hounds.", m_name);
+#endif /* JP */
 			for (k = 0; k < 6; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_HOUND);
 			}
 			if (blind && count)
 			{
+#ifdef JP
+				msg_print("多くのものが間近に現れた音がする。");
+#else /* JP */
 				msg_print("You hear many things appear nearby.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -2143,15 +2674,24 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_SUM_HYDRA);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが魔法でヒドラを召喚した。", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s magically summons hydras.", m_name);
+#endif /* JP */
 			for (k = 0; k < 6; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_HYDRA);
 			}
 			if (blind && count)
 			{
+#ifdef JP
+				msg_print("多くのものが間近に現れた音がする。");
+#else /* JP */
 				msg_print("You hear many things appear nearby.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -2161,15 +2701,24 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_SUM_ANGEL);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが魔法で天使を召喚した！", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s magically summons an angel!", m_name);
+#endif /* JP */
 			for (k = 0; k < 1; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_ANGEL);
 			}
 			if (blind && count)
 			{
+#ifdef JP
+				msg_print("何かが間近に現れた音がする。");
+#else /* JP */
 				msg_print("You hear something appear nearby.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -2179,15 +2728,24 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_SUM_DEMON);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが魔法で地獄の強敵を召喚した！", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s magically summons a hellish adversary!", m_name);
+#endif /* JP */
 			for (k = 0; k < 1; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_DEMON);
 			}
 			if (blind && count)
 			{
+#ifdef JP
+				msg_print("何かが間近に現れた音がする。");
+#else /* JP */
 				msg_print("You hear something appear nearby.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -2197,15 +2755,24 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_SUM_UNDEAD);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが魔法でアンデッドの強敵を召喚した！", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s magically summons an undead adversary!", m_name);
+#endif /* JP */
 			for (k = 0; k < 1; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_UNDEAD);
 			}
 			if (blind && count)
 			{
+#ifdef JP
+				msg_print("何かが間近に現れた音がする。");
+#else /* JP */
 				msg_print("You hear something appear nearby.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -2215,15 +2782,24 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_SUM_DRAGON);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが魔法でドラゴンを召喚した！", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s magically summons a dragon!", m_name);
+#endif /* JP */
 			for (k = 0; k < 1; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_DRAGON);
 			}
 			if (blind && count)
 			{
+#ifdef JP
+				msg_print("何かが間近に現れた音がする。");
+#else /* JP */
 				msg_print("You hear something appear nearby.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -2233,15 +2809,24 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_SUM_HI_UNDEAD);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが魔法で強力なアンデッドを召喚した！", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s magically summons greater undead!", m_name);
+#endif /* JP */
 			for (k = 0; k < 8; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_HI_UNDEAD);
 			}
 			if (blind && count)
 			{
+#ifdef JP
+				msg_print("間近で何か多くのものが這い回る音が聞こえる。");
+#else /* JP */
 				msg_print("You hear many creepy things appear nearby.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -2251,15 +2836,24 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_SUM_HI_DRAGON);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが魔法で古代ドラゴンを召喚した！", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s magically summons ancient dragons!", m_name);
+#endif /* JP */
 			for (k = 0; k < 8; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_HI_DRAGON);
 			}
 			if (blind && count)
 			{
+#ifdef JP
+				msg_print("多くの力強いものが間近に現れた音が聞こえる。");
+#else /* JP */
 				msg_print("You hear many powerful things appear nearby.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -2269,8 +2863,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_SUM_WRAITH);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが魔法で屈強なアンデッドを召喚した！", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s magically summons mighty undead opponents!", m_name);
+#endif /* JP */
 			for (k = 0; k < 8; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_WRAITH);
@@ -2281,7 +2880,11 @@ bool make_attack_spell(int m_idx)
 			}
 			if (blind && count)
 			{
+#ifdef JP
+				msg_print("何か多くのものが這い回る音が聞こえる。");
+#else /* JP */
 				msg_print("You hear many creepy things appear nearby.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -2291,8 +2894,13 @@ bool make_attack_spell(int m_idx)
 		{
 			disturb(1, 0);
 			sound(MSG_SUM_UNIQUE);
+#ifdef JP
+			if (blind) msg_format("%^sが何かをつぶやいた。", m_name);
+			else msg_format("%^sが魔法で特別な強敵を召喚した！", m_name);
+#else /* JP */
 			if (blind) msg_format("%^s mumbles.", m_name);
 			else msg_format("%^s magically summons special opponents!", m_name);
+#endif /* JP */
 			for (k = 0; k < 8; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_UNIQUE);
@@ -2303,7 +2911,11 @@ bool make_attack_spell(int m_idx)
 			}
 			if (blind && count)
 			{
+#ifdef JP
+				msg_print("多くの力強いものが間近に現れた音が聞こえる。");
+#else /* JP */
 				msg_print("You hear many powerful things appear nearby.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -3370,7 +3982,11 @@ static void process_monster(int m_idx)
 				monster_desc(m_name, sizeof(m_name), m_ptr, 0);
 
 				/* Dump a message */
+#ifdef JP
+				msg_format("%^sが目を覚ました。", m_name);
+#else /* JP */
 				msg_format("%^s wakes up.", m_name);
+#endif /* JP */
 
 				/* Hack -- Update the health bar */
 				if (p_ptr->health_who == m_idx) p_ptr->redraw |= (PR_HEALTH);
@@ -3423,7 +4039,11 @@ static void process_monster(int m_idx)
 					monster_desc(m_name, sizeof(m_name), m_ptr, 0);
 
 					/* Dump a message */
+#ifdef JP
+					msg_format("%^sが目を覚ました。", m_name);
+#else /* JP */
 					msg_format("%^s wakes up.", m_name);
+#endif /* JP */
 
 					/* Hack -- Update the health bar */
 					if (p_ptr->health_who == m_idx) p_ptr->redraw |= (PR_HEALTH);
@@ -3476,7 +4096,11 @@ static void process_monster(int m_idx)
 				monster_desc(m_name, sizeof(m_name), m_ptr, 0);
 
 				/* Dump a message */
+#ifdef JP
+				msg_format("%^sは朦朧状態から立ち直った。", m_name);
+#else /* JP */
 				msg_format("%^s is no longer stunned.", m_name);
+#endif /* JP */
 
 				/* Hack -- Update the health bar */
 				if (p_ptr->health_who == m_idx) p_ptr->redraw |= (PR_HEALTH);
@@ -3515,7 +4139,11 @@ static void process_monster(int m_idx)
 				monster_desc(m_name, sizeof(m_name), m_ptr, 0);
 
 				/* Dump a message */
+#ifdef JP
+				msg_format("%^sは混乱から立ち直った。", m_name);
+#else /* JP */
 				msg_format("%^s is no longer confused.", m_name);
+#endif /* JP */
 
 				/* Hack -- Update the health bar */
 				if (p_ptr->health_who == m_idx) p_ptr->redraw |= (PR_HEALTH);
@@ -3554,7 +4182,11 @@ static void process_monster(int m_idx)
 				monster_desc(m_poss, sizeof(m_poss), m_ptr, 0x22);
 
 				/* Dump a message */
+#ifdef JP
+				msg_format("%^sは勇気を取り戻した。", m_name);
+#else /* JP */
 				msg_format("%^s recovers %s courage.", m_name, m_poss);
+#endif /* JP */
 
 				/* Hack -- Update the health bar */
 				if (p_ptr->health_who == m_idx) p_ptr->redraw |= (PR_HEALTH);
@@ -3798,7 +4430,11 @@ static void process_monster(int m_idx)
 				if (rand_int(m_ptr->hp / 10) > k)
 				{
 					/* Message */
+#ifdef JP
+					msg_print("ドアを叩き開ける音がした！");
+#else /* JP */
 					msg_print("You hear a door burst open!");
+#endif /* JP */
 
 					/* Disturb (sometimes) */
 					if (disturb_minor) disturb(0, 0);
@@ -3845,7 +4481,11 @@ static void process_monster(int m_idx)
 				/* Describe observable breakage */
 				if (cave_info[ny][nx] & (CAVE_MARK))
 				{
+#ifdef JP
+					msg_print("守りのルーンが壊れた！");
+#else /* JP */
 					msg_print("The rune of protection is broken!");
+#endif /* JP */
 				}
 
 				/* Forget the rune */
@@ -4027,7 +4667,11 @@ static void process_monster(int m_idx)
 							if (m_ptr->ml && player_has_los_bold(ny, nx))
 							{
 								/* Dump a message */
+#ifdef JP
+								msg_format("%^sは%sを拾おうとしたが、だめだった。",
+#else /* JP */
 								msg_format("%^s tries to pick up %s, but fails.",
+#endif /* JP */
 								           m_name, o_name);
 							}
 						}
@@ -4046,7 +4690,11 @@ static void process_monster(int m_idx)
 						if (player_has_los_bold(ny, nx))
 						{
 							/* Dump a message */
+#ifdef JP
+							msg_format("%^sが%sを拾った。", m_name, o_name);
+#else /* JP */
 							msg_format("%^s picks up %s.", m_name, o_name);
+#endif /* JP */
 						}
 
 						/* Get local object */
@@ -4072,7 +4720,11 @@ static void process_monster(int m_idx)
 						if (player_has_los_bold(ny, nx))
 						{
 							/* Dump a message */
+#ifdef JP
+							message_format(MSG_DESTROY, 0, "%^sが%sを破壊した。", m_name, o_name);
+#else /* JP */
 							message_format(MSG_DESTROY, 0, "%^s crushes %s.", m_name, o_name);
+#endif /* JP */
 						}
 
 						/* Delete the object */
@@ -4149,7 +4801,11 @@ static void process_monster(int m_idx)
 			monster_desc(m_name, sizeof(m_name), m_ptr, 0);
 
 			/* Dump a message */
+#ifdef JP
+			msg_format("%^sは戦いを決意した！", m_name);
+#else /* JP */
 			msg_format("%^s turns to fight!", m_name);
+#endif /* JP */
 		}
 
 		/* XXX XXX XXX Actually do something now (?) */

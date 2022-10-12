@@ -9,6 +9,18 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3 日本語版製作: しとしん
+ * 2.7.9v6 対応        : 岸康司, しとしん
+ * 2.8.0   対応        : sayu, しとしん
+ * 2.8.1   対応        : FIRST
+ * 2.8.3   対応        : FIRST, しとしん
+ *
+ *
+ * 日本語版機能追加 : 我が家の拡張のための準備
+ *                    英日切り替え機能
+ */
+
 #include "angband.h"
 
 #include "init.h"
@@ -80,6 +92,9 @@ void init_file_paths(char *path)
 	char buf[1024];
 #endif /* PRIVATE_USER_PATH */
 
+#ifdef ALLOW_AUTO_PICKUP
+	char buf2[1024];
+#endif /* ALLOW_AUTO_PICKUP */
 	/*** Free everything ***/
 
 	/* Free the main path */
@@ -135,15 +150,27 @@ void init_file_paths(char *path)
 	/*** Build the sub-directory names ***/
 
 	/* Build a path name */
+#ifdef JP
+	strcpy(tail, "edit" PATH_SEP "jp");
+#else
 	strcpy(tail, "edit");
+#endif
 	ANGBAND_DIR_EDIT = string_make(path);
 
 	/* Build a path name */
+#ifdef JP
+	strcpy(tail, "file" PATH_SEP "jp");
+#else
 	strcpy(tail, "file");
+#endif
 	ANGBAND_DIR_FILE = string_make(path);
 
 	/* Build a path name */
+#ifdef JP
+	strcpy(tail, "help" PATH_SEP "jp");
+#else /* JP */
 	strcpy(tail, "help");
+#endif /* JP */
 	ANGBAND_DIR_HELP = string_make(path);
 
 	/* Build a path name */
@@ -185,7 +212,11 @@ void init_file_paths(char *path)
 	ANGBAND_DIR_BONE = string_make(buf);
 
 	/* Build the path to the user specific sub-directory */
+#ifdef JP
+	path_build(buf, sizeof(buf), ANGBAND_DIR_USER, "data" PATH_SEP "jp");
+#else /* JP */
 	path_build(buf, sizeof(buf), ANGBAND_DIR_USER, "data");
+#endif /* JP */
 
 	/* Build a relative path name */
 	ANGBAND_DIR_DATA = string_make(buf);
@@ -207,7 +238,11 @@ void init_file_paths(char *path)
 	ANGBAND_DIR_BONE = string_make(path);
 
 	/* Build a path name */
+#ifdef JP
+	strcpy(tail, "data" PATH_SEP "jp");
+#else /* JP */
 	strcpy(tail, "data");
+#endif /* JP */
 	ANGBAND_DIR_DATA = string_make(path);
 
 	/* Build a path name */
@@ -216,12 +251,24 @@ void init_file_paths(char *path)
 
 #endif /* USE_PRIVATE_PATHS */
 
+#ifdef ALLOW_AUTO_PICKUP
+
+	/* Build a path name */
+	path_build(buf2, 1024, ANGBAND_DIR_USER, "autopick");
+	ANGBAND_DIR_USER_AUTOPICK = string_make(buf2);
+
+#endif /* ALLOW_AUTO_PICKUP */
+
 	/* Build a path name */
 	strcpy(tail, "xtra");
 	ANGBAND_DIR_XTRA = string_make(path);
 
 	/* Build a path name */
+#ifdef JP
+	strcpy(tail, "script" PATH_SEP "jp");
+#else /* JP */
 	strcpy(tail, "script");
+#endif /* JP */
 	ANGBAND_DIR_SCRIPT = string_make(path);
 
 #endif /* VM */
@@ -279,6 +326,9 @@ void create_user_dirs(void)
 {
 	char dirpath[1024];
 	char subdirpath[1024];
+#ifdef JP
+	char subsubdirpath[1024];
+#endif /* JP */
 
 
 	/* Get an absolute path from the filename */
@@ -312,6 +362,14 @@ void create_user_dirs(void)
 	/* Create the directory */
 	mkdir(dirpath, 0700);
 
+#ifdef JP
+	/* Build the path to the savefile sub-directory */
+	path_build(subdirpath, sizeof(subdirpath), subsubdirpath, "jp");
+
+	/* Create the directory */
+	mkdir(dirpath, 0700);
+#endif /* JP */
+
 	/* Build the path to the savefile sub-directory */
 	path_build(dirpath, sizeof(dirpath), subdirpath, "save");
 
@@ -340,6 +398,23 @@ int error_line;
 static cptr err_str[PARSE_ERROR_MAX] =
 {
 	NULL,
+#ifdef JP
+	"文法エラー",
+	"古いファイル",
+	"記録ヘッダがない",
+	"不連続レコード",
+	"おかしなフラグ存在",
+	"未定義命令",
+	"メモリ不足",
+	"設定値範囲外",
+	"引数不足",
+	"引数過剰",
+	"配置エントリ過剰",
+	"不正な魔法頻度",
+	"不正なアイテム数(0-99)",
+	"エントリ過剰",
+	"巨大な地下室",
+#else
 	"parse error",
 	"obsolete file",
 	"missing record header",
@@ -355,6 +430,7 @@ static cptr err_str[PARSE_ERROR_MAX] =
 	"invalid number of items (0-99)",
 	"too many entries",
 	"vault too big",
+#endif
 };
 
 
@@ -471,16 +547,30 @@ static void display_parse_error(cptr filename, errr err, cptr buf)
 	cptr oops;
 
 	/* Error string */
+#ifdef JP
+	oops = (((err > 0) && (err < PARSE_ERROR_MAX)) ? err_str[err] : "未知");
+#else /* JP */
 	oops = (((err > 0) && (err < PARSE_ERROR_MAX)) ? err_str[err] : "unknown");
+#endif /* JP */
 
 	/* Oops */
+#ifdef JP
+	msg_format("'%s.txt'ファイルの %d 行目にエラー", filename, error_line);
+	msg_format("レコード %d に '%s' のエラーがあります。", error_idx, oops);
+	msg_format("構文 '%s'。", buf);
+#else
 	msg_format("Error at line %d of '%s.txt'.", error_line, filename);
 	msg_format("Record %d contains a '%s' error.", error_idx, oops);
 	msg_format("Parsing '%s'.", buf);
+#endif
 	message_flush();
 
 	/* Quit */
+#ifdef JP
+	quit(format("'%s.txt'ファイルにエラー。", filename));
+#else
 	quit_fmt("Error in '%s.txt' file.", filename);
+#endif
 }
 
 #endif /* ALLOW_TEMPLATES */
@@ -556,7 +646,11 @@ static errr init_info(cptr filename, header *head)
 		fp = my_fopen(buf, "r");
 
 		/* Parse it */
+#ifdef JP
+		if (!fp) quit(format("'%s.txt'ファイルをオープンできません。", filename));
+#else
 		if (!fp) quit(format("Cannot open '%s.txt' file.", filename));
+#endif
 
 		/* Parse the file */
 		err = init_info_txt(fp, buf, head, head->parse_info_txt);
@@ -598,7 +692,11 @@ static errr init_info(cptr filename, header *head)
 			if (fd < 0)
 			{
 				/* Complain */
+#ifdef JP
+				plog_fmt("'%s'ファイルを作成できません！", buf);
+#else /* JP */
 				plog_fmt("Cannot create the '%s' file!", buf);
+#endif /* JP */
 
 				/* Continue */
 				return (0);
@@ -621,7 +719,11 @@ static errr init_info(cptr filename, header *head)
 		if (fd < 0)
 		{
 			/* Complain */
+#ifdef JP
+			plog_fmt("'%s'ファイルに書き込めません！", buf);
+#else /* JP */
 			plog_fmt("Cannot write the '%s' file!", buf);
+#endif /* JP */
 
 			/* Continue */
 			return (0);
@@ -674,7 +776,11 @@ static errr init_info(cptr filename, header *head)
 		fd = fd_open(buf, O_RDONLY);
 
 		/* Process existing "raw" file */
+#ifdef JP
+		if (fd < 0) quit(format("'%s.raw'ファイルをロードできません。", filename));
+#else
 		if (fd < 0) quit(format("Cannot load '%s.raw' file.", filename));
+#endif
 
 		/* Attempt to parse the "raw" file */
 		err = init_info_raw(fd, head);
@@ -683,7 +789,11 @@ static errr init_info(cptr filename, header *head)
 		fd_close(fd);
 
 		/* Error */
+#ifdef JP
+		if (err) quit(format("'%s.raw'ファイルを解析できません。", filename));
+#else
 		if (err) quit(format("Cannot parse '%s.raw' file.", filename));
+#endif
 
 #ifdef ALLOW_TEMPLATES
 	}
@@ -1441,6 +1551,14 @@ static errr init_other(void)
 		/* Assume full stock */
 		st_ptr->stock_size = STORE_INVEN_MAX;
 
+#ifdef JP
+		/*
+		 * 我が家が 20 ページまで使える隠し機能のための準備。
+		 * 隠しオプションが有効でもそうでなくても一応スペースを作っておく。
+		 */
+		if (i == STORE_HOME) st_ptr->stock_size *= 10;
+#endif
+
 		/* Allocate the stock */
 		C_MAKE(st_ptr->stock, st_ptr->stock_size, object_type);
 
@@ -1573,7 +1691,11 @@ static errr init_alloc(void)
 	}
 
 	/* Paranoia */
+#ifdef JP
+	if (!num[0]) quit("町のアイテムがない！");
+#else
 	if (!num[0]) quit("No town objects!");
+#endif
 
 
 	/*** Initialize object allocation info ***/
@@ -1659,7 +1781,11 @@ static errr init_alloc(void)
 	}
 
 	/* Paranoia */
+#ifdef JP
+	if (!num[0]) quit("町のモンスターがない！");
+#else
 	if (!num[0]) quit("No town monsters!");
+#endif
 
 
 	/*** Initialize monster allocation info ***/
@@ -1806,10 +1932,17 @@ static void note(cptr str)
  */
 static void init_angband_aux(cptr why)
 {
+#ifdef JP
+	quit_fmt("%s\n\n%s", why,
+	         "'lib'ディレクトリが存在しないか壊れているようです。\n"
+	         "ひょっとするとアーカイブが正しく解凍されていないのかもしれません。\n"
+	         "'README'ファイルを読んで確認してみて下さい。");
+#else
 	quit_fmt("%s\n\n%s", why,
 	         "The 'lib' directory is probably missing or broken.\n"
 	         "Perhaps the archive was not extracted correctly.\n"
 	         "See the 'readme.txt' file for more information.");
+#endif
 }
 
 
@@ -1885,7 +2018,11 @@ void init_angband(void)
 		char why[1024];
 
 		/* Message */
+#ifdef JP
+		strnfmt(why, sizeof(why), "'%s'ファイルにアクセスできません!", buf);
+#else
 		strnfmt(why, sizeof(why), "Cannot access the '%s' file!", buf);
+#endif
 
 		/* Crash and burn */
 		init_angband_aux(why);
@@ -1955,7 +2092,11 @@ void init_angband(void)
 			char why[1024];
 
 			/* Message */
+#ifdef JP
+			strnfmt(why, sizeof(why), "'%s'ファイルを作成できません!", buf);
+#else
 			strnfmt(why, sizeof(why), "Cannot create the '%s' file!", buf);
+#endif
 
 			/* Crash and burn */
 			init_angband_aux(why);
@@ -1969,79 +2110,167 @@ void init_angband(void)
 	/*** Initialize some arrays ***/
 
 	/* Initialize size info */
+#ifdef JP
+	note("[データサイズの初期化中... ]");
+	if (init_z_info()) quit("データサイズ初期化不能");
+#else
 	note("[Initializing array sizes...]");
 	if (init_z_info()) quit("Cannot initialize sizes");
+#endif
 
 	/* Initialize feature info */
+#ifdef JP
+	note("[データの初期化中... (地形)]");
+	if (init_f_info()) quit("地形初期化不能");
+#else
 	note("[Initializing arrays... (features)]");
 	if (init_f_info()) quit("Cannot initialize features");
+#endif
 
 	/* Initialize object info */
+#ifdef JP
+	note("[データの初期化中... (アイテム)]");
+	if (init_k_info()) quit("アイテム初期化不能");
+#else
 	note("[Initializing arrays... (objects)]");
 	if (init_k_info()) quit("Cannot initialize objects");
+#endif
 
 	/* Initialize artifact info */
+#ifdef JP
+	note("[データの初期化中... (伝説のアイテム)]");
+	if (init_a_info()) quit("伝説のアイテム初期化不能");
+#else
 	note("[Initializing arrays... (artifacts)]");
 	if (init_a_info()) quit("Cannot initialize artifacts");
+#endif
 
 	/* Initialize ego-item info */
+#ifdef JP
+	note("[データの初期化中... (名のあるアイテム)]");
+	if (init_e_info()) quit("名のあるアイテム初期化不能");
+#else
 	note("[Initializing arrays... (ego-items)]");
 	if (init_e_info()) quit("Cannot initialize ego-items");
+#endif
 
 	/* Initialize monster info */
+#ifdef JP
+	note("[データの初期化中... (モンスター)]");
+	if (init_r_info()) quit("モンスター初期化不能");
+#else
 	note("[Initializing arrays... (monsters)]");
 	if (init_r_info()) quit("Cannot initialize monsters");
+#endif
 
 	/* Initialize feature info */
+#ifdef JP
+	note("[データの初期化中... (建築物)]");
+	if (init_v_info()) quit("建築物初期化不能");
+#else
 	note("[Initializing arrays... (vaults)]");
 	if (init_v_info()) quit("Cannot initialize vaults");
+#endif
 
 	/* Initialize history info */
+#ifdef JP
+	note("[データの初期化中... (生い立ち)]");
+	if (init_h_info()) quit("生い立ち初期化不能");
+#else
 	note("[Initializing arrays... (histories)]");
 	if (init_h_info()) quit("Cannot initialize histories");
+#endif
 
 	/* Initialize race info */
+#ifdef JP
+	note("[データの初期化中... (種族)]");
+	if (init_p_info()) quit("種族初期化不能");
+#else
 	note("[Initializing arrays... (races)]");
 	if (init_p_info()) quit("Cannot initialize races");
+#endif
 
 	/* Initialize class info */
+#ifdef JP
+	note("[データの初期化中... (職業)]");
+	if (init_c_info()) quit("職業初期化不能");
+#else /* JP */
 	note("[Initializing arrays... (classes)]");
 	if (init_c_info()) quit("Cannot initialize classes");
+#endif /* JP */
 
 	/* Initialize owner info */
+#ifdef JP
+	note("[データの初期化中... (店主)]");
+	if (init_b_info()) quit("店主初期化不能");
+#else
 	note("[Initializing arrays... (owners)]");
 	if (init_b_info()) quit("Cannot initialize owners");
+#endif
 
 	/* Initialize price info */
+#ifdef JP
+	note("[データの初期化中... (価格)]");
+	if (init_g_info()) quit("価格初期化不能");
+#else
 	note("[Initializing arrays... (prices)]");
 	if (init_g_info()) quit("Cannot initialize prices");
+#endif
 
 	/* Initialize flavor info */
+#ifdef JP
+	note("[データの初期化中... (外見)]");
+	if (init_flavor_info()) quit("外見初期化不能");
+#else /* JP */
 	note("[Initializing arrays... (flavors)]");
 	if (init_flavor_info()) quit("Cannot initialize flavors");
+#endif /* JP */
 	
 	/* Initialize some other arrays */
+#ifdef JP
+	note("[データの初期化中... (その他)]");
+	if (init_other()) quit("その他のデータ初期化不能");
+#else
 	note("[Initializing arrays... (other)]");
 	if (init_other()) quit("Cannot initialize other stuff");
+#endif
 
 	/* Initialize some other arrays */
+#ifdef JP
+	note("[データの初期化中... (アロケーション)]");
+	if (init_alloc()) quit("アロケーション・スタッフ初期化不能");
+#else
 	note("[Initializing arrays... (alloc)]");
 	if (init_alloc()) quit("Cannot initialize alloc stuff");
+#endif
 
 	/* Initialize scripting */
+#ifdef JP
+	note("[スクリプトの初期化中... (スクリプト)]");
+	if (script_init()) quit("スクリプト初期化不能");
+#else /* JP */
 	note("[Initializing scripts... (scripts)]");
 	if (script_init()) quit("Cannot initialize scripts");
+#endif /* JP */
 
 	/*** Load default user pref files ***/
 
 	/* Initialize feature info */
+#ifdef JP
+	note("[ユーザ定義ファイルの読込中...]");
+#else
 	note("[Loading basic user pref file...]");
+#endif
 
 	/* Process that file */
 	(void)process_pref_file("pref.prf");
 
 	/* Done */
+#ifdef JP
+	note("[初期化終了]");
+#else
 	note("[Initialization complete]");
+#endif
 }
 
 

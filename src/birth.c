@@ -8,6 +8,14 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3-v6 日本語版製作: しとしん
+ * 2.8.0      対応        : sayu, しとしん
+ * 2.8.1      対応        : FIRST, しとしん
+ * 2.8.3      対応        : FIRST, しとしん
+ * 2.9.0      対応        : 楠瀬
+ */
+
 #include "angband.h"
 
 #include "script.h"
@@ -598,6 +606,9 @@ typedef struct birth_menu birth_menu;
 struct birth_menu
 {
 	bool grayed;
+#ifdef JP
+	cptr J_name;
+#endif /* JP */
 	cptr name;
 };
 
@@ -652,14 +663,24 @@ static int get_player_choice(birth_menu *choices, int num, int def,
 		{
 			if (i + top < 26)
 			{
+#ifdef JP
+				strnfmt(buf, sizeof(buf), "%c) %s", I2A(i + top),
+				        X_title_name(&choices[i + top]));
+#else /* JP */
 				strnfmt(buf, sizeof(buf), "%c) %s", I2A(i + top),
 				        choices[i + top].name);
+#endif /* JP */
 			}
 			else
 			{
 				/* ToDo: Fix the ASCII dependency */
+#ifdef JP
+				strnfmt(buf, sizeof(buf), "%c) %s", 'A' + (i + top - 26),
+				        X_title_name(&choices[i + top]));
+#else /* JP */
 				strnfmt(buf, sizeof(buf), "%c) %s", 'A' + (i + top - 26),
 				        choices[i + top].name);
+#endif /* JP */
 			}
 
 			/* Clear */
@@ -739,7 +760,11 @@ static int get_player_choice(birth_menu *choices, int num, int def,
 			}
 			else
 			{
+#ifdef JP
+				bell("無効なキーです！");
+#else /* JP */
 				bell("Illegal response to question!");
+#endif /* JP */
 			}
 		}
 
@@ -810,7 +835,11 @@ static int get_player_choice(birth_menu *choices, int num, int def,
 		}
 
 		/* Invalid input */
+#ifdef JP
+		else bell("無効なキーです！");
+#else /* JP */
 		else bell("Illegal response to question!");
+#endif /* JP */
 
 		/* If choice is off screen, move it to the top */
 		if ((cur < top) || (cur > top + hgt)) top = cur;
@@ -837,16 +866,33 @@ static void race_aux_hook(birth_menu r_str)
 	/* Display relevant details. */
 	for (i = 0; i < A_MAX; i++)
 	{
+#ifdef JP
+		strnfmt(s, sizeof(s), "%s%+d", stat_names[i],
+		        p_info[race].r_adj[i]);
+#else /* JP */
 		strnfmt(s, sizeof(s), "%s%+d", stat_names_reduced[i],
 		        p_info[race].r_adj[i]);
+#endif /* JP */
 		Term_putstr(RACE_AUX_COL, TABLE_ROW + i, -1, TERM_WHITE, s);
 	}
 
+#ifdef JP
+	strnfmt(s, sizeof(s), "体力サイ: %d ", p_info[race].r_mhp);
+#else /* JP */
 	strnfmt(s, sizeof(s), "Hit die: %d ", p_info[race].r_mhp);
+#endif /* JP */
 	Term_putstr(RACE_AUX_COL, TABLE_ROW + A_MAX, -1, TERM_WHITE, s);
+#ifdef JP
+	strnfmt(s, sizeof(s), "経験値: %d%% ", p_info[race].r_exp);
+#else /* JP */
 	strnfmt(s, sizeof(s), "Experience: %d%% ", p_info[race].r_exp);
+#endif /* JP */
 	Term_putstr(RACE_AUX_COL, TABLE_ROW + A_MAX + 1, -1, TERM_WHITE, s);
+#ifdef JP
+	strnfmt(s, sizeof(s), "赤外線視力: %d ft ", p_info[race].infra * 10);
+#else /* JP */
 	strnfmt(s, sizeof(s), "Infravision: %d ft ", p_info[race].infra * 10);
+#endif /* JP */
 	Term_putstr(RACE_AUX_COL, TABLE_ROW + A_MAX + 2, -1, TERM_WHITE, s);
 }
 
@@ -862,13 +908,21 @@ static bool get_player_race(void)
 	C_MAKE(races, z_info->p_max, birth_menu);
 
 	/* Extra info */
+#ifdef JP
+	Term_putstr(QUESTION_COL, QUESTION_ROW, -1, TERM_YELLOW,
+	            "《種族》によってキャラクターの先天的な資質やボーナスが変化します。");
+#else /* JP */
 	Term_putstr(QUESTION_COL, QUESTION_ROW, -1, TERM_YELLOW,
 	            "Your 'race' determines various intrinsic factors and bonuses.");
+#endif /* JP */
 
 	/* Tabulate races */
 	for (i = 0; i < z_info->p_max; i++)
 	{
 		races[i].name = p_name + p_info[i].name;
+#ifdef JP
+		races[i].J_name = p_name + p_info[i].J_name;
+#endif /* JP */
 		races[i].grayed = FALSE;
 	}
 
@@ -909,14 +963,27 @@ static void class_aux_hook(birth_menu c_str)
 	/* Display relevant details. */
 	for (i = 0; i < A_MAX; i++)
 	{
+#ifdef JP
+		strnfmt(s, sizeof(s), "%s%+d", stat_names[i],
+		        c_info[class_idx].c_adj[i]);
+#else /* JP */
 		strnfmt(s, sizeof(s), "%s%+d", stat_names_reduced[i],
 		        c_info[class_idx].c_adj[i]);
+#endif /* JP */
 		Term_putstr(CLASS_AUX_COL, TABLE_ROW + i, -1, TERM_WHITE, s);
 	}
 
+#ifdef JP
+	strnfmt(s, sizeof(s), "体力サイ: %d ", c_info[class_idx].c_mhp);
+#else /* JP */
 	strnfmt(s, sizeof(s), "Hit die: %d ", c_info[class_idx].c_mhp);
+#endif /* JP */
 	Term_putstr(CLASS_AUX_COL, TABLE_ROW + A_MAX, -1, TERM_WHITE, s);
+#ifdef JP
+	strnfmt(s, sizeof(s), "経験値: %d%% ", c_info[class_idx].c_exp);
+#else /* JP */
 	strnfmt(s, sizeof(s), "Experience: %d%% ", c_info[class_idx].c_exp);
+#endif /* JP */
 	Term_putstr(CLASS_AUX_COL, TABLE_ROW + A_MAX + 1, -1, TERM_WHITE, s);
 }
 
@@ -932,10 +999,17 @@ static bool get_player_class(void)
 	C_MAKE(classes, z_info->c_max, birth_menu);
 
 	/* Extra info */
+#ifdef JP
+	Term_putstr(QUESTION_COL, QUESTION_ROW, -1, TERM_YELLOW, /* mada */
+	            "《職業》によってキャラクターの先天的な能力やボーナスが変化します。");
+	Term_putstr(QUESTION_COL, QUESTION_ROW + 1, -1, TERM_YELLOW,
+	            "灰色で表示された選択肢は上級者向きの職業です。");
+#else /* JP */
 	Term_putstr(QUESTION_COL, QUESTION_ROW, -1, TERM_YELLOW,
 	            "Your 'class' determines various intrinsic abilities and bonuses.");
 	Term_putstr(QUESTION_COL, QUESTION_ROW + 1, -1, TERM_YELLOW,
 	            "Any greyed-out entries should only be used by advanced players.");
+#endif /* JP */
 
 	/* Tabulate classes */
 	for (i = 0; i < z_info->c_max; i++)
@@ -946,6 +1020,9 @@ static bool get_player_class(void)
 
 		/* Save the string */
 		classes[i].name = c_name + c_info[i].name;
+#ifdef JP
+		classes[i].J_name = c_name + c_info[i].J_name;
+#endif /* JP */
 	}
 
 	res = get_player_choice(classes, z_info->c_max, p_ptr->pclass,
@@ -975,13 +1052,21 @@ static bool get_player_sex(void)
 	birth_menu genders[MAX_SEXES];
 
 	/* Extra info */
+#ifdef JP
+	Term_putstr(QUESTION_COL, QUESTION_ROW, -1, TERM_YELLOW,
+	            "《性別》の違いはゲーム上特に影響を及ぼしません。");
+#else /* JP */
 	Term_putstr(QUESTION_COL, QUESTION_ROW, -1, TERM_YELLOW,
 	            "Your 'sex' does not have any significant gameplay effects.");
+#endif /* JP */
 
 	/* Tabulate genders */
 	for (i = 0; i < MAX_SEXES; i++)
 	{
 		genders[i].name = sex_info[i].title;
+#ifdef JP
+		genders[i].J_name = sex_info[i].J_title;
+#endif /* JP */
 		genders[i].grayed = FALSE;
 	}
 
@@ -1022,6 +1107,26 @@ static bool player_birth_aux_1(void)
 	Term_gotoxy(QUESTION_COL, HEADER_ROW);
 
 	/* Display some helpful information */
+#ifdef JP
+	text_out_c(TERM_L_BLUE,
+	           "以下の選択肢からキャラクターを選択してください:\n\n");
+	text_out_c(TERM_L_GREEN, "移動キー");
+	text_out("でメニューをスクロール。");
+	text_out_c(TERM_L_GREEN, "リターンキー");
+	text_out("で現在の選択肢を選択。");
+	text_out_c(TERM_L_GREEN, "リターンキー");
+	text_out("で現在の選択肢を選択。'");
+	text_out_c(TERM_L_GREEN, "*");
+	text_out("'で選択肢の中からランダムに選択。'");
+	text_out_c(TERM_L_GREEN, "ESC");
+	text_out("'でキャラクターの生成をやり直す。'");
+	text_out_c(TERM_L_GREEN, "=");
+	text_out("'で初期オプション。'");
+	text_out_c(TERM_L_GREEN, "?");
+	text_out("'でヘルプ。'");
+	text_out_c(TERM_L_GREEN, "Ctrl-X");
+	text_out("'で終了。");
+#else /* JP */
 	text_out_c(TERM_L_BLUE,
 	           "Please select your character from the menu below:\n\n");
 	text_out("Use the ");
@@ -1039,6 +1144,7 @@ static bool player_birth_aux_1(void)
 	text_out("' for help, or '");
 	text_out_c(TERM_L_GREEN, "Ctrl-X");
 	text_out("' to quit.");
+#endif /* JP */
 
 	/* Reset text_out() indentation */
 	text_out_indent = 0;
@@ -1206,7 +1312,11 @@ static bool player_birth_aux_2(void)
 		display_player(0);
 
 		/* Display the costs header */
+#ifdef JP
+		put_str("コスト", row - 1, col + 30);
+#else /* JP */
 		put_str("Cost", row - 1, col + 32);
+#endif /* JP */
 
 		/* Display the costs */
 		for (i = 0; i < A_MAX; i++)
@@ -1218,7 +1328,11 @@ static bool player_birth_aux_2(void)
 
 
 		/* Prompt XXX XXX XXX */
+#ifdef JP
+		strnfmt(buf, sizeof(buf), "総コスト %2d/48:  2/8 で移動, 4/6 で変更, リターンキーで決定", cost);
+#else /* JP */
 		strnfmt(buf, sizeof(buf), "Total Cost %2d/48.  Use 2/8 to move, 4/6 to modify, 'Enter' to accept.", cost);
+#endif /* JP */
 		prt(buf, 0, 0);
 
 		/* Place cursor just after cost of current stat */
@@ -1309,6 +1423,16 @@ static bool player_birth_aux_3(void)
 
 
 		/* Extra info */
+#ifdef JP
+		Term_putstr(5, 10, -1, TERM_WHITE,
+		            "《オートローラー》を使用するとステータスが設定した最小値より");
+		Term_putstr(5, 11, -1, TERM_WHITE,
+		            "低いキャラクターを自動的に無視することができます。");
+		Term_putstr(5, 12, -1, TERM_WHITE,
+		            "ステータスは互いに関連しているので、全てのステータスを最大値");
+		Term_putstr(5, 13, -1, TERM_WHITE,
+		            "(あるいは非常に高い値)に設定することは不可能です。");
+#else
 		Term_putstr(5, 10, -1, TERM_WHITE,
 		            "The auto-roller will automatically ignore characters which do");
 		Term_putstr(5, 11, -1, TERM_WHITE,
@@ -1317,9 +1441,14 @@ static bool player_birth_aux_3(void)
 		            "Note that stats are not independant, so it is not possible to");
 		Term_putstr(5, 13, -1, TERM_WHITE,
 		            "get perfect (or even high) values for all your stats.");
+#endif
 
 		/* Prompt for the minimum stats */
+#ifdef JP
+		put_str("最小値を入力して下さい: ", 15, 2);
+#else
 		put_str("Enter minimum value for: ", 15, 2);
+#endif
 
 		/* Output the maximum stats */
 		for (i = 0; i < A_MAX; i++)
@@ -1342,13 +1471,21 @@ static bool player_birth_aux_3(void)
 			/* Above 18 */
 			if (m > 18)
 			{
+#ifdef JP
+				strnfmt(inp, sizeof(inp), "(最大値 18/%02d):", (m - 18));
+#else /* JP */
 				strnfmt(inp, sizeof(inp), "(Max of 18/%02d):", (m - 18));
+#endif /* JP */
 			}
 
 			/* From 3 to 18 */
 			else
 			{
+#ifdef JP
+				strnfmt(inp, sizeof(inp), "(最大値 %2d):", m);
+#else /* JP */
 				strnfmt(inp, sizeof(inp), "(Max of %2d):", m);
+#endif /* JP */
 			}
 
 			/* Prepare a prompt */
@@ -1417,13 +1554,25 @@ static bool player_birth_aux_3(void)
 			Term_clear();
 
 			/* Label */
+#ifdef JP
+			put_str("最小値", 2, col+5);
+#else
 			put_str(" Limit", 2, col+5);
+#endif
 
 			/* Label */
+#ifdef JP
+			put_str("成功率", 2, col+13);
+#else
 			put_str("  Freq", 2, col+13);
+#endif
 
 			/* Label */
+#ifdef JP
+			put_str("現在値", 2, col+24);
+#else
 			put_str("  Roll", 2, col+24);
+#endif
 
 			/* Put the minimal stats */
 			for (i = 0; i < A_MAX; i++)
@@ -1440,10 +1589,18 @@ static bool player_birth_aux_3(void)
 			last_round = auto_round;
 
 			/* Label count */
+#ifdef JP
+			put_str("回数 :", 10, col+13);
+#else
 			put_str("Round:", 10, col+13);
+#endif
 
 			/* Indicate the state */
+#ifdef JP
+			put_str("(ESCで停止)", 12, col+13);
+#else
 			put_str("(Hit ESC to stop)", 12, col+13);
+#endif
 
 			/* Auto-roll */
 			while (1)
@@ -1503,7 +1660,11 @@ static bool player_birth_aux_3(void)
 						/* Never happened */
 						else
 						{
+#ifdef JP
+							c_put_str(TERM_RED, "(なし)", 3+i, col+13);
+#else
 							c_put_str(TERM_RED, "(NONE)", 3+i, col+13);
+#endif
 						}
 					}
 
@@ -1569,11 +1730,22 @@ static bool player_birth_aux_3(void)
 			display_player(0);
 
 			/* Prepare a prompt (must squeeze everything in) */
+#ifdef JP
+			/* オリジナルのままだと少し左に寄っていて見栄えが悪いので修正 */
+			Term_gotoxy(9, 23);
+#else
 			Term_gotoxy(2, 23);
+#endif
 			Term_addch(TERM_WHITE, b1);
+#ifdef JP
+			Term_addstr(-1, TERM_WHITE, "'r'で次の数値");
+			if (prev) Term_addstr(-1, TERM_WHITE, ", 'p'で前の数値");
+			Term_addstr(-1, TERM_WHITE, ", リターンキーでこの数値に決定");
+#else
 			Term_addstr(-1, TERM_WHITE, "'r' to reroll");
 			if (prev) Term_addstr(-1, TERM_WHITE, ", 'p' for prev");
 			Term_addstr(-1, TERM_WHITE, ", or 'Enter' to accept");
+#endif
 			Term_addch(TERM_WHITE, b2);
 
 			/* Prompt and get a command */
@@ -1606,7 +1778,11 @@ static bool player_birth_aux_3(void)
 			}
 
 			/* Warning */
+#ifdef JP
+			bell("無効なキーです！");
+#else
 			bell("Illegal auto-roller command!");
+#endif
 		}
 
 		/* Are we done? */
@@ -1635,7 +1811,11 @@ static bool player_birth_aux_3(void)
 static bool player_birth_aux(void)
 {
 	char ch;
+#ifdef JP
+	cptr prompt = "[ 'Q' で中断, 'S' で初めから, その他のキーでゲーム開始 ]";
+#else
 	cptr prompt = "['Q' to suicide, 'S' to start over, or any other key to continue]";
+#endif
 
 	/* Ask questions */
 	if (!player_birth_aux_1()) return (FALSE);

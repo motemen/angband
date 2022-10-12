@@ -8,6 +8,15 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3 日本語版製作: しとしん
+ * 2.7.9v6 対応        : 岸康司, FIRST, しとしん
+ * 2.8.0   対応        : sayu, しとしん
+ * 2.8.1   対応        : FIRST
+ * 2.8.3   対応        : FIRST, しとしん
+ * 2.9.0   対応        : 楠瀬
+ */
+
 #include "angband.h"
 
 
@@ -57,17 +66,29 @@ int critical_shot(int weight, int plus, int dam)
 
 		if (k < 500)
 		{
+#ifdef JP
+			msg_print("手ごたえがあった！");
+#else /* JP */
 			msg_print("It was a good hit!");
+#endif /* JP */
 			dam = 2 * dam + 5;
 		}
 		else if (k < 1000)
 		{
+#ifdef JP
+			msg_print("かなりの手ごたえがあった！");
+#else /* JP */
 			msg_print("It was a great hit!");
+#endif /* JP */
 			dam = 2 * dam + 10;
 		}
 		else
 		{
+#ifdef JP
+			msg_print("会心の一撃だ！");
+#else /* JP */
 			msg_print("It was a superb hit!");
+#endif /* JP */
 			dam = 3 * dam + 15;
 		}
 	}
@@ -97,31 +118,51 @@ int critical_norm(int weight, int plus, int dam)
 		if (k < 400)
 		{
 			sound(MSG_HIT_GOOD);
+#ifdef JP	  
+			msg_print("手ごたえがあった！");
+#else /* JP */
 			msg_print("It was a good hit!");
+#endif /* JP */
 			dam = 2 * dam + 5;
 		}
 		else if (k < 700)
 		{
 			sound(MSG_HIT_GREAT);
+#ifdef JP
+			msg_print("かなりの手ごたえがあった！");
+#else /* JP */
 			msg_print("It was a great hit!");
+#endif /* JP */
 			dam = 2 * dam + 10;
 		}
 		else if (k < 900)
 		{
 			sound(MSG_HIT_SUPERB);
+#ifdef JP
+			msg_print("会心の一撃だ！");
+#else /* JP */
 			msg_print("It was a superb hit!");
+#endif /* JP */
 			dam = 3 * dam + 15;
 		}
 		else if (k < 1300)
 		{
 			sound(MSG_HIT_HI_GREAT);
+#ifdef JP
+			msg_print("最高の会心の一撃だ！");
+#else /* JP */
 			msg_print("It was a *GREAT* hit!");
+#endif /* JP */
 			dam = 3 * dam + 20;
 		}
 		else
 		{
 			sound(MSG_HIT_HI_SUPERB);
+#ifdef JP
+			msg_print("比類なき最高の会心の一撃だ！");
+#else /* JP */
 			msg_print("It was a *SUPERB* hit!");
+#endif /* JP */
 			dam = ((7 * dam) / 2) + 25;
 		}
 	}
@@ -439,7 +480,11 @@ void search(void)
 					pick_trap(y, x);
 
 					/* Message */
+#ifdef JP
+					msg_print("トラップを発見した。");
+#else /* JP */
 					msg_print("You have found a trap.");
+#endif /* JP */
 
 					/* Disturb */
 					disturb(0, 0);
@@ -449,7 +494,11 @@ void search(void)
 				if (cave_feat[y][x] == FEAT_SECRET)
 				{
 					/* Message */
+#ifdef JP
+					msg_print("隠しドアを発見した。");
+#else /* JP */
 					msg_print("You have found a secret door.");
+#endif /* JP */
 
 					/* Pick a door */
 					place_closed_door(y, x);
@@ -474,7 +523,11 @@ void search(void)
 					if (!object_known_p(o_ptr))
 					{
 						/* Message */
+#ifdef JP
+						msg_print("箱に仕掛けられたトラップを発見した！");
+#else /* JP */
 						msg_print("You have discovered a trap on the chest!");
+#endif /* JP */
 
 						/* Know the trap */
 						object_known(o_ptr);
@@ -527,14 +580,33 @@ static bool auto_pickup_okay(const object_type *o_ptr)
  *
  * Delete the object afterwards.
  */
+#ifdef ALLOW_AUTO_PICKUP
+void py_pickup_aux(int o_idx)
+#else
 static void py_pickup_aux(int o_idx)
+#endif
 {
 	int slot;
 
+#ifdef JP
+	/*
+	 * アイテムを拾った際に「２つのケーキを持っている」
+	 * "You have two cakes." とアイテムを拾った後の合計のみの表示がオリジナル
+	 * だが、違和感が
+	 * あるという指摘をうけたので、「～を拾った、～を持っている」という表示
+	 * にかえてある。そのための配列。
+	 */
+	char old_name[80];
+#endif /* JP */
 	char o_name[80];
 	object_type *o_ptr;
 
 	o_ptr = &o_list[o_idx];
+
+#ifdef JP
+	/* Describe the object */
+	object_desc(old_name, sizeof(o_name), o_ptr, TRUE, 0);
+#endif /* JP */
 
 	/* Carry the object */
 	slot = inven_carry(o_ptr);
@@ -546,7 +618,12 @@ static void py_pickup_aux(int o_idx)
 	object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
 
 	/* Message */
+#ifdef JP
+	msg_format("%sを拾った。", old_name );
+	msg_format("%s(%c)を持っている。", o_name, index_to_label(slot));
+#else /* JP */
 	msg_format("You have %s (%c).", o_name, index_to_label(slot));
+#endif /* JP */
 
 	/* Delete the object */
 	delete_object_idx(o_idx);
@@ -600,8 +677,13 @@ void py_pickup(int pickup)
 			else sound_msg = MSG_MONEY3;
 
 			/* Message */
+#ifdef JP
+			message_format(sound_msg, 0, " $%ld の価値がある%sを見つけた。",
+			               (long)o_ptr->pval, o_name);
+#else /* JP */
 			message_format(sound_msg, 0, "You have found %ld gold pieces worth of %s.",
 			               (long)o_ptr->pval, o_name);
+#endif /* JP */
 
 			/* Collect the gold */
 			p_ptr->au += o_ptr->pval;
@@ -618,6 +700,11 @@ void py_pickup(int pickup)
 			/* Check the next object */
 			continue;
 		}
+
+#ifdef ALLOW_AUTO_PICKUP
+		/* Automatically pickup/destroy/inscribe the object */
+		if (do_autopick(this_o_idx)) continue;
+#endif /* ALLOW_AUTO_PICKUP */
 
 		/* Test for auto-pickup */
 		if (auto_pickup_okay(o_ptr))
@@ -670,7 +757,11 @@ void py_pickup(int pickup)
 		/* Describe the object */
 		if (!pickup)
 		{
+#ifdef JP
+			msg_format("%sがある。", o_name);
+#else /* JP */
 			msg_format("You see %s.", o_name);
+#endif /* JP */
 
 			/* Check the next object */
 			continue;
@@ -679,7 +770,11 @@ void py_pickup(int pickup)
 		/* Note that the pack is too full */
 		if (!inven_carry_okay(o_ptr))
 		{
+#ifdef JP
+			msg_format("ザックには%sを入れる隙間がない。", o_name);
+#else /* JP */
 			msg_format("You have no room for %s.", o_name);
+#endif /* JP */
 
 			/* Check the next object */
 			continue;
@@ -689,7 +784,11 @@ void py_pickup(int pickup)
 		if (carry_query_flag)
 		{
 			char out_val[160];
+#ifdef JP
+			strnfmt(out_val, sizeof(out_val), "%sを拾いますか? ", o_name);
+#else /* JP */
 			strnfmt(out_val, sizeof(out_val), "Pick up %s? ", o_name);
+#endif /* JP */
 			if (!get_check(out_val)) continue;
 		}
 
@@ -713,14 +812,22 @@ void py_pickup(int pickup)
 				object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
 
 				/* Message */
+#ifdef JP
+				msg_format("%sがある。", o_name);
+#else /* JP */
 				msg_format("You see %s.", o_name);
+#endif /* JP */
 			}
 
 			/* Multiple objects */
 			else
 			{
 				/* Message */
+#ifdef JP
+				msg_format("%d個のアイテムの山がある。", not_pickup);
+#else /* JP */
 				msg_format("You see a pile of %d objects.", not_pickup);
+#endif /* JP */
 			}
 
 			/* Done */
@@ -740,14 +847,22 @@ void py_pickup(int pickup)
 				object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
 
 				/* Message */
+#ifdef JP
+				msg_format("ザックには%sを入れる隙間がない。", o_name);
+#else /* JP */
 				msg_format("You have no room for %s.", o_name);
+#endif /* JP */
 			}
 
 			/* Multiple objects */
 			else
 			{
 				/* Message */
+#ifdef JP
+				msg_format("ザックには床の上のアイテムを入れる隙間が一つもない。");
+#else /* JP */
 				msg_print("You have no room for any of the objects on the floor.");
+#endif /* JP */
 			}
 
 			/* Done */
@@ -765,8 +880,13 @@ void py_pickup(int pickup)
 			item_tester_hook = inven_carry_okay;
 
 			/* Get an object*/
+#ifdef JP
+			q = "どのアイテムを拾いますか? ";
+			s = NULL;
+#else /* JP */
 			q = "Get which item? ";
 			s = NULL;
+#endif /* JP */
 			if (!get_item(&item, q, s, (USE_FLOOR))) break;
 
 			/* Pick up the object */
@@ -794,7 +914,11 @@ void hit_trap(int y, int x)
 {
 	int i, num, dam;
 
+#ifdef JP
+	cptr name = "トラップ";
+#else /* JP */
 	cptr name = "a trap";
+#endif /* JP */
 
 
 	/* Disturb the player */
@@ -805,10 +929,18 @@ void hit_trap(int y, int x)
 	{
 		case FEAT_TRAP_HEAD + 0x00:
 		{
+#ifdef JP
+			msg_print("床が抜けて下の階に落ちてしまった！");
+#else /* JP */
 			msg_print("You fall through a trap door!");
+#endif /* JP */
 			if (p_ptr->ffall)
 			{
+#ifdef JP
+				msg_print("下の階に柔らかに着地した。");
+#else /* JP */
 				msg_print("You float gently down to the next level.");
+#endif /* JP */
 			}
 			else
 			{
@@ -827,10 +959,18 @@ void hit_trap(int y, int x)
 
 		case FEAT_TRAP_HEAD + 0x01:
 		{
+#ifdef JP
+			msg_print("落し穴に落ちてしまった！");
+#else /* JP */
 			msg_print("You fall into a pit!");
+#endif /* JP */
 			if (p_ptr->ffall)
 			{
+#ifdef JP
+				msg_print("落し穴の底に柔らかに着地した。");
+#else /* JP */
 				msg_print("You float gently to the bottom of the pit.");
+#endif /* JP */
 			}
 			else
 			{
@@ -842,12 +982,21 @@ void hit_trap(int y, int x)
 
 		case FEAT_TRAP_HEAD + 0x02:
 		{
+#ifdef JP
+			msg_print("スパイクが敷かれた落し穴に落ちてしまった！");
+#else /* JP */
 			msg_print("You fall into a spiked pit!");
+#endif /* JP */
 
 			if (p_ptr->ffall)
 			{
+#ifdef JP
+				msg_print("落し穴の底に柔らかに着地した。");
+				msg_print("敷かれていたスパイクに触らずに済んだ。");
+#else /* JP */
 				msg_print("You float gently to the floor of the pit.");
 				msg_print("You carefully avoid touching the spikes.");
+#endif /* JP */
 			}
 
 			else
@@ -858,7 +1007,11 @@ void hit_trap(int y, int x)
 				/* Extra spike damage */
 				if (rand_int(100) < 50)
 				{
+#ifdef JP
+					msg_print("スパイクが刺さった！");
+#else /* JP */
 					msg_print("You are impaled!");
+#endif /* JP */
 
 					dam = dam * 2;
 					(void)set_cut(p_ptr->cut + randint(dam));
@@ -872,12 +1025,21 @@ void hit_trap(int y, int x)
 
 		case FEAT_TRAP_HEAD + 0x03:
 		{
+#ifdef JP
+			msg_print("スパイクが敷かれた落し穴に落ちてしまった！");
+#else /* JP */
 			msg_print("You fall into a spiked pit!");
+#endif /* JP */
 
 			if (p_ptr->ffall)
 			{
+#ifdef JP
+				msg_print("落し穴の底に柔らかに着地した。");
+				msg_print("敷かれていたスパイクに触らずに済んだ。");
+#else /* JP */
 				msg_print("You float gently to the floor of the pit.");
 				msg_print("You carefully avoid touching the spikes.");
+#endif /* JP */
 			}
 
 			else
@@ -888,14 +1050,22 @@ void hit_trap(int y, int x)
 				/* Extra spike damage */
 				if (rand_int(100) < 50)
 				{
+#ifdef JP
+					msg_print("毒を塗られたスパイクが刺さった！");
+#else /* JP */
 					msg_print("You are impaled on poisonous spikes!");
+#endif /* JP */
 
 					dam = dam * 2;
 					(void)set_cut(p_ptr->cut + randint(dam));
 
 					if (p_ptr->resist_pois || p_ptr->oppose_pois)
 					{
+#ifdef JP
+						msg_print("しかし毒の影響はなかった！");
+#else /* JP */
 						msg_print("The poison does not affect you!");
+#endif /* JP */
 					}
 					else
 					{
@@ -914,7 +1084,11 @@ void hit_trap(int y, int x)
 		case FEAT_TRAP_HEAD + 0x04:
 		{
 			sound(MSG_SUM_MONSTER);
+#ifdef JP
+			msg_print("突如吹き出した煙に包まれた！");
+#else /* JP */
 			msg_print("You are enveloped in a cloud of smoke!");
+#endif /* JP */
 			cave_info[y][x] &= ~(CAVE_MARK);
 			cave_set_feat(y, x, FEAT_FLOOR);
 			num = 2 + randint(3);
@@ -927,24 +1101,44 @@ void hit_trap(int y, int x)
 
 		case FEAT_TRAP_HEAD + 0x05:
 		{
+#ifdef JP
+			msg_print("テレポート・トラップにひっかかった！");
+#else /* JP */
 			msg_print("You hit a teleport trap!");
+#endif /* JP */
 			teleport_player(100);
 			break;
 		}
 
 		case FEAT_TRAP_HEAD + 0x06:
 		{
+#ifdef JP
+			msg_print("炎に包まれた！");
+#else /* JP */
 			msg_print("You are enveloped in flames!");
+#endif /* JP */
 			dam = damroll(4, 6);
+#ifdef JP
+			fire_dam(dam, "炎のトラップ");
+#else /* JP */
 			fire_dam(dam, "a fire trap");
+#endif /* JP */
 			break;
 		}
 
 		case FEAT_TRAP_HEAD + 0x07:
 		{
+#ifdef JP
+			msg_print("酸が吹きかけられた！");
+#else /* JP */
 			msg_print("You are splashed with acid!");
+#endif /* JP */
 			dam = damroll(4, 6);
+#ifdef JP
+			acid_dam(dam, "酸のトラップ");
+#else /* JP */
 			acid_dam(dam, "an acid trap");
+#endif /* JP */
 			break;
 		}
 
@@ -952,14 +1146,22 @@ void hit_trap(int y, int x)
 		{
 			if (check_hit(125))
 			{
+#ifdef JP
+				msg_print("小さなダーツが飛んできて刺さった！");
+#else /* JP */
 				msg_print("A small dart hits you!");
+#endif /* JP */
 				dam = damroll(1, 4);
 				take_hit(dam, name);
 				(void)set_slow(p_ptr->slow + rand_int(20) + 20);
 			}
 			else
 			{
+#ifdef JP
+				msg_print("小さなダーツが飛んできた！が、運良く当たらなかった。");
+#else /* JP */
 				msg_print("A small dart barely misses you.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -968,14 +1170,22 @@ void hit_trap(int y, int x)
 		{
 			if (check_hit(125))
 			{
+#ifdef JP
+				msg_print("小さなダーツが飛んできて刺さった！");
+#else /* JP */
 				msg_print("A small dart hits you!");
+#endif /* JP */
 				dam = damroll(1, 4);
 				take_hit(dam, name);
 				(void)do_dec_stat(A_STR);
 			}
 			else
 			{
+#ifdef JP
+				msg_print("小さなダーツが飛んできた！が、運良く当たらなかった。");
+#else /* JP */
 				msg_print("A small dart barely misses you.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -984,14 +1194,22 @@ void hit_trap(int y, int x)
 		{
 			if (check_hit(125))
 			{
+#ifdef JP
+				msg_print("小さなダーツが飛んできて刺さった！");
+#else /* JP */
 				msg_print("A small dart hits you!");
+#endif /* JP */
 				dam = damroll(1, 4);
 				take_hit(dam, name);
 				(void)do_dec_stat(A_DEX);
 			}
 			else
 			{
+#ifdef JP
+				msg_print("小さなダーツが飛んできた！が、運良く当たらなかった。");
+#else /* JP */
 				msg_print("A small dart barely misses you.");
+#endif /* JP */
 			}
 			break;
 		}
@@ -1000,21 +1218,33 @@ void hit_trap(int y, int x)
 		{
 			if (check_hit(125))
 			{
+#ifdef JP
+				msg_print("小さなダーツが飛んできて刺さった！");
+#else /* JP */
 				msg_print("A small dart hits you!");
+#endif /* JP */
 				dam = damroll(1, 4);
 				take_hit(dam, name);
 				(void)do_dec_stat(A_CON);
 			}
 			else
 			{
+#ifdef JP
+				msg_print("小さなダーツが飛んできた！が、運良く当たらなかった。");
+#else /* JP */
 				msg_print("A small dart barely misses you.");
+#endif /* JP */
 			}
 			break;
 		}
 
 		case FEAT_TRAP_HEAD + 0x0C:
 		{
+#ifdef JP
+			msg_print("黒いガスに包み込まれた！");
+#else /* JP */
 			msg_print("You are surrounded by a black gas!");
+#endif /* JP */
 			if (!p_ptr->resist_blind)
 			{
 				(void)set_blind(p_ptr->blind + rand_int(50) + 25);
@@ -1024,7 +1254,11 @@ void hit_trap(int y, int x)
 
 		case FEAT_TRAP_HEAD + 0x0D:
 		{
+#ifdef JP
+			msg_print("きらめくガスに包み込まれた！");
+#else /* JP */
 			msg_print("You are surrounded by a gas of scintillating colors!");
+#endif /* JP */
 			if (!p_ptr->resist_confu)
 			{
 				(void)set_confused(p_ptr->confused + rand_int(20) + 10);
@@ -1034,7 +1268,11 @@ void hit_trap(int y, int x)
 
 		case FEAT_TRAP_HEAD + 0x0E:
 		{
+#ifdef JP
+			msg_print("刺激的な緑色のガスに包み込まれた！");
+#else /* JP */
 			msg_print("You are surrounded by a pungent green gas!");
+#endif /* JP */
 			if (!p_ptr->resist_pois && !p_ptr->oppose_pois)
 			{
 				(void)set_poisoned(p_ptr->poisoned + rand_int(20) + 10);
@@ -1044,7 +1282,11 @@ void hit_trap(int y, int x)
 
 		case FEAT_TRAP_HEAD + 0x0F:
 		{
+#ifdef JP
+			msg_print("奇妙な白い霧に包まれた！");
+#else /* JP */
 			msg_print("You are surrounded by a strange white mist!");
+#endif /* JP */
 			if (!p_ptr->free_act)
 			{
 				(void)set_paralyzed(p_ptr->paralyzed + rand_int(10) + 5);
@@ -1107,7 +1349,11 @@ void py_attack(int y, int x)
 	if (p_ptr->afraid)
 	{
 		/* Message */
+#ifdef JP
+		msg_format("恐くて%sを攻撃できない！", m_name);
+#else /* JP */
 		msg_format("You are too afraid to attack %s!", m_name);
+#endif /* JP */
 
 		/* Done */
 		return;
@@ -1129,7 +1375,11 @@ void py_attack(int y, int x)
 		if (test_hit(chance, r_ptr->ac, m_ptr->ml))
 		{
 			/* Message */
+#ifdef JP
+			message_format(MSG_GENERIC, m_ptr->r_idx, "%sを攻撃した。", m_name);
+#else /* JP */
 			message_format(MSG_GENERIC, m_ptr->r_idx, "You hit %s.", m_name);
+#endif /* JP */
 
 			/* Hack -- bare hands do one damage */
 			k = 1;
@@ -1153,7 +1403,11 @@ void py_attack(int y, int x)
 			/* Complex message */
 			if (p_ptr->wizard)
 			{
+#ifdef JP
+				msg_format("%d/%d のダメージを与えた。", k, m_ptr->hp);
+#else /* JP */
 				msg_format("You do %d (out of %d) damage.", k, m_ptr->hp);
+#endif /* JP */
 			}
 
 			/* Damage, check for fear and death */
@@ -1166,7 +1420,11 @@ void py_attack(int y, int x)
 				p_ptr->confusing = FALSE;
 
 				/* Message */
+#ifdef JP
+				msg_print("手の輝きがなくなった。");
+#else /* JP */
 				msg_print("Your hands stop glowing.");
+#endif /* JP */
 
 				/* Confuse the monster */
 				if (r_ptr->flags3 & (RF3_NO_CONF))
@@ -1176,15 +1434,27 @@ void py_attack(int y, int x)
 						l_ptr->flags3 |= (RF3_NO_CONF);
 					}
 
+#ifdef JP
+					msg_format("%^sには効果がなかった。", m_name);
+#else /* JP */
 					msg_format("%^s is unaffected.", m_name);
+#endif /* JP */
 				}
 				else if (rand_int(100) < r_ptr->level)
 				{
+#ifdef JP
+					msg_format("%^sには効果がなかった。", m_name);
+#else /* JP */
 					msg_format("%^s is unaffected.", m_name);
+#endif /* JP */
 				}
 				else
 				{
+#ifdef JP
+					msg_format("%^sは混乱したようだ。", m_name);
+#else /* JP */
 					msg_format("%^s appears confused.", m_name);
+#endif /* JP */
 					m_ptr->confused += 10 + rand_int(p_ptr->lev) / 5;
 				}
 			}
@@ -1194,7 +1464,11 @@ void py_attack(int y, int x)
 		else
 		{
 			/* Message */
+#ifdef JP
+			message_format(MSG_MISS, m_ptr->r_idx, "ミス！ %sにかわされた。", m_name);
+#else /* JP */
 			message_format(MSG_MISS, m_ptr->r_idx, "You miss %s.", m_name);
+#endif /* JP */
 		}
 	}
 
@@ -1203,7 +1477,11 @@ void py_attack(int y, int x)
 	if (fear && m_ptr->ml)
 	{
 		/* Message */
+#ifdef JP
+		message_format(MSG_FLEE, m_ptr->r_idx, "%^sは恐怖して逃げ出した！", m_name);
+#else /* JP */
 		message_format(MSG_FLEE, m_ptr->r_idx, "%^s flees in terror!", m_name);
+#endif /* JP */
 	}
 
 
@@ -1279,7 +1557,11 @@ void move_player(int dir, int jumping)
 			/* Rubble */
 			if (cave_feat[y][x] == FEAT_RUBBLE)
 			{
+#ifdef JP
+				message(MSG_HITWALL, 0, "岩石が行く手をはばんでいるようだ。");
+#else /* JP */
 				message(MSG_HITWALL, 0, "You feel a pile of rubble blocking your way.");
+#endif /* JP */
 				cave_info[y][x] |= (CAVE_MARK);
 				lite_spot(y, x);
 			}
@@ -1287,7 +1569,11 @@ void move_player(int dir, int jumping)
 			/* Closed door */
 			else if (cave_feat[y][x] < FEAT_SECRET)
 			{
+#ifdef JP
+				message(MSG_HITWALL, 0, "ドアが行く手をはばんでいるようだ。");
+#else /* JP */
 				message(MSG_HITWALL, 0, "You feel a door blocking your way.");
+#endif /* JP */
 				cave_info[y][x] |= (CAVE_MARK);
 				lite_spot(y, x);
 			}
@@ -1295,7 +1581,11 @@ void move_player(int dir, int jumping)
 			/* Wall (or secret door) */
 			else
 			{
+#ifdef JP
+				message(MSG_HITWALL, 0, "壁が行く手をはばんでいるようだ。");
+#else /* JP */
 				message(MSG_HITWALL, 0, "You feel a wall blocking your way.");
+#endif /* JP */
 				cave_info[y][x] |= (CAVE_MARK);
 				lite_spot(y, x);
 			}
@@ -1307,19 +1597,31 @@ void move_player(int dir, int jumping)
 			/* Rubble */
 			if (cave_feat[y][x] == FEAT_RUBBLE)
 			{
+#ifdef JP
+				message(MSG_HITWALL, 0, "岩石が行く手をはばんでいる。");
+#else /* JP */
 				message(MSG_HITWALL, 0, "There is a pile of rubble blocking your way.");
+#endif /* JP */
 			}
 
 			/* Closed door */
 			else if (cave_feat[y][x] < FEAT_SECRET)
 			{
+#ifdef JP
+				message(MSG_HITWALL, 0, "ドアが行く手をはばんでいる。");
+#else /* JP */
 				message(MSG_HITWALL, 0, "There is a door blocking your way.");
+#endif /* JP */
 			}
 
 			/* Wall (or secret door) */
 			else
 			{
+#ifdef JP
+				message(MSG_HITWALL, 0, "壁が行く手をはばんでいる。");
+#else /* JP */
 				message(MSG_HITWALL, 0, "There is a wall blocking your way.");
+#endif /* JP */
 			}
 		}
 	}
@@ -1375,7 +1677,11 @@ void move_player(int dir, int jumping)
 			disturb(0, 0);
 
 			/* Message */
+#ifdef JP
+			msg_print("トラップだ！");
+#else /* JP */
 			msg_print("You found a trap!");
+#endif /* JP */
 
 			/* Pick a trap */
 			pick_trap(y, x);

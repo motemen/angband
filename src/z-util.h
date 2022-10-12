@@ -45,6 +45,12 @@ extern size_t my_strcpy(char *buf, const char *src, size_t bufsize);
 /* Concatenate two strings */
 extern size_t my_strcat(char *buf, const char *src, size_t bufsize);
 
+#ifdef JP
+extern char *my_strchr(const char *s, int ch);
+#undef strchr
+#define strchr(s, ch) my_strchr(s, ch)
+#endif /* JP */
+
 /* Test equality, prefix, suffix */
 extern bool streq(cptr s, cptr t);
 extern bool prefix(cptr s, cptr t);

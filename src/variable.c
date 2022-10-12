@@ -8,6 +8,17 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3-v6日本語版製作: しとしん
+ * 2.8.0     対応        : sayu, しとしん
+ * 2.8.1     対応        : FIRST
+ * 2.8.3     対応        : FIRST, しとしん
+ *
+ * 日本語版機能追加あり : レベルアップ上昇量表示
+ *                        日本語版オプション
+ *                        英日切り替え機能
+ */
+
 #include "angband.h"
 
 
@@ -22,6 +33,22 @@ cptr copyright =
 	"are included in all such copies.  Other copyrights may also apply.\n";
 
 
+#ifdef JP
+/* レベルアップの時に上昇量を表示するのに使う */
+int level_up = 0;
+#endif
+
+#ifdef ALLOW_COMMAND_MENU
+special_menu_info_type special_menu_info[MAX_MENU_SPECIAL];
+menu_info_type menu_info[MAX_MENU][MAX_MENUITEM];
+int max_menu[MAX_MENU];
+int max_menu_sp;
+#endif /* ALLOW_COMMAND_MENU */
+
+#ifdef ALLOW_AUTO_PICKUP
+int max_autopick;
+autopick_type autopick_list[MAX_AUTOPICK];
+#endif /* ALLOW_AUTO_PICKUP */
 /*
  * Executable version
  */
@@ -743,6 +770,13 @@ cptr ANGBAND_DIR_PREF;
  * These files are rarely portable between platforms
  */
 cptr ANGBAND_DIR_USER;
+
+#ifdef ALLOW_AUTO_PICKUP
+/*
+ * User defined "autopick" files (ascii)
+ */
+cptr ANGBAND_DIR_USER_AUTOPICK;
+#endif
 
 /*
  * Various extra files (binary)

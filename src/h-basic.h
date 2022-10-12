@@ -25,6 +25,11 @@
 /* Basic constants and macros */
 #include "h-define.h"
 
+#ifdef JP
+/* Japanese-specific stuff */
+#include "japanese.h"
+#endif /* JP */
+
 #endif
 
 

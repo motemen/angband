@@ -8,6 +8,12 @@
  * are included in all such copies.
  */
 
+/*
+ * 2.7.9v3-v6 日本語版製作: しとしん
+ * 2.8.1      対応        : FIRST
+ * 2.8.3      対応        : FIRST, しとしん
+ */
+
 #include "angband.h"
 
 
@@ -384,12 +390,20 @@ int main(int argc, char *argv[])
 
 	if (setgid(getegid()) != 0)
 	{
+#ifdef JP
+		quit("setgid(): 正しく許可を取れません！");
+#else
 		quit("setgid(): cannot set permissions correctly!");
+#endif
 	}
 
 	if (setuid(geteuid()) != 0)
 	{
+#ifdef JP
+		quit("setuid(): 正しく許可を取れません！");
+#else
 		quit("setuid(): cannot set permissions correctly!");
+#endif
 	}
 
 #  endif /* 0 */
@@ -408,7 +422,11 @@ int main(int argc, char *argv[])
 	/* Initialize the "time" checker */
 	if (check_time_init() || check_time())
 	{
+#ifdef JP
+		quit("アングバンドへの門が閉じています(時間が不適当)。");
+#else /* JP */
 		quit("The gates to Angband are closed (bad time).");
+#endif /* JP */
 	}
 
 	/* Get the "user name" as a default player name */
@@ -531,6 +549,20 @@ int main(int argc, char *argv[])
 			usage:
 			{
 				/* Dump usage information */
+#ifdef JP
+				puts("使用法: jangband [オプション] [-- サブオプション]");
+				puts("  -n       新しいキャラクターで始める");
+				puts("  -f       冗長表示モードを始動する");
+				puts("  -w       ウィザードモードを始動する");
+				puts("  -v       サウンドモードを有効にする");
+				puts("  -g       グラフィックモードを有効にする");
+				puts("  -o       オリジナルキー配置を使う(デフォルト)");
+				puts("  -r       ローグ風キー配置を使う");
+				puts("  -s<数字> <数字>の順位のスコアを見る(もしくはトップ10)");
+				puts("  -u<名前> あなたの<名前>のセーブ・ファイルでプレイする");
+				puts("  -d<パス> <パス>のディレクトリでセーブ・ファイルを探す");
+				puts("  -m<機種> 'main-<機種>.cの使用法を表示する");
+#else
 				puts("Usage: angband [options] [-- subopts]");
 				puts("  -n       Start a new character");
 				puts("  -f       Request fiddle (verbose) mode");
@@ -543,6 +575,7 @@ int main(int argc, char *argv[])
 				puts("  -u<who>  Use your <who> savefile");
 				puts("  -d<def>  Define a 'lib' dir sub-path");
 				puts("  -m<sys>  use Module <sys>, where <sys> can be:");
+#endif
 
 				/* Print the name and help for each available module */
 				for (i = 0; i < (int)N_ELEMENTS(modules); i++)
@@ -589,7 +622,11 @@ int main(int argc, char *argv[])
 	}
 
 	/* Make sure we have a display! */
+#ifdef JP
+	if (!done) quit("Unable to prepare any 'display module'!"); /* mada */
+#else /* JP */
 	if (!done) quit("Unable to prepare any 'display module'!");
+#endif /* JP */
 
 	/* Catch nasty signals */
 	signals_init();

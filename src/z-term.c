@@ -8,12 +8,19 @@
  * are included in all such copies.
  */
 
+/*
+ * 2.7.9v3 全角文字対応: FIRST
+ * 2.7.9v5 へ多分対応  : しとしん
+ * 2.8.0   対応        : sayu
+ * 2.8.1   対応        : FIRST
+ * 2.8.3   対応        : TeO
+ */
+
 /* Purpose: a generic, efficient, terminal window package -BEN- */
 
 #include "z-term.h"
 
 #include "z-virt.h"
-
 
 /*
  * This file provides a generic, efficient, terminal window package,
@@ -527,19 +534,99 @@ void Term_queue_char(term *t, int x, int y, byte a, char c, byte ta, char tc)
  * a valid location, so the first "n" characters of "s" can all be added
  * starting at (x,y) without causing any illegal operations.
  */
+/*
+ * 全角文字に対応。
+ * 変更範囲が全角文字の中央で切れないように範囲を拡大。
+ * すでに表示されている全角文字が切れるような表示の場合、その文字全体を消す。
+ * 全角文字コードの途中で0x00が来た場合には前半部分を捨てる。
+ * 全角文字の中央で文字属性が変わらないと仮定。
+ * By FIRST
+ */
+/*
+ * 2.7.9v3 用を v5 に多分対応させた
+ * By しとしん
+ */
+/*
+ * 2.8.0 に対応させた
+ * By sayu
+ */
+#ifdef JP
+void Term_queue_chars(term *t, int x, int y, int n, byte a, cptr s)
+#else /* JP */
 void Term_queue_chars(int x, int y, int n, byte a, cptr s)
+#endif /* JP */
 {
 	int x1 = -1, x2 = -1;
 
+#ifdef JP
+	byte *scr_aa = t->scr->a[y];
+	char *scr_cc = t->scr->c[y];
+#else /* JP */
 	byte *scr_aa = Term->scr->a[y];
 	char *scr_cc = Term->scr->c[y];
+#endif /* JP */
 
+#ifdef JP
+	byte *scr_taa = t->scr->ta[y];
+	char *scr_tcc = t->scr->tc[y];
+#else /* JP */
 	byte *scr_taa = Term->scr->ta[y];
 	char *scr_tcc = Term->scr->tc[y];
+#endif /* JP */
+
+#ifdef JP
+	/* 表示文字なし */
+	if (n == 0 || *s == 0) return;
+	/*
+	 * 全角文字の右半分から文字を表示する場合、
+	 * 重なった文字の左部分を消去。
+	 * 表示開始位置が左端でないと仮定。
+	 */
+	if (scr_aa[x] & KANJI2)
+	{
+		scr_cc[x - 1] = ' ';
+		x1 = x2 = x - 1;
+	}
+#endif
 
 	/* Queue the attr/chars */
 	for ( ; n; x++, s++, n--)
 	{
+#ifdef JP
+		/* 特殊文字としてMSBが立っている可能性がある */
+		/* その場合attrのMSBも立っているのでこれで識別する */
+/* check */
+		if (iskanji(*s) && !(a & 0x80))
+		{
+			char nc1 = *s++;
+			char nc2 = *s;
+
+			byte na1 = (a | KANJI1);
+			byte na2 = (a | KANJI2);
+
+			if((--n == 0) || !nc2) break;
+
+			if(scr_aa[x++] == na1 && scr_aa[x] == na2 &&
+			   scr_cc[x - 1] == *s && scr_cc[x] == nc2 &&
+			   scr_taa[x - 1] == 0 && scr_taa[x] == 0 &&
+			   scr_tcc[x - 1] == 0 && scr_tcc[x] == 0) continue;
+
+			scr_aa[x - 1] = na1;
+			scr_aa[x] = na2;
+			scr_cc[x - 1] = nc1;
+			scr_cc[x] = nc2;
+
+			scr_taa[x - 1] = 0;
+			scr_tcc[x - 1] = 0;
+			scr_taa[x] = 0;
+			scr_tcc[x] = 0;
+
+			if(x1 < 0) x1 = x - 1;
+			x2 = x;
+		}
+		else
+		{
+#endif /* JP */
 		byte oa = scr_aa[x];
 		char oc = scr_cc[x];
 
@@ -559,18 +646,50 @@ void Term_queue_chars(int x, int y, int n, byte a, cptr s)
 		/* Note the "range" of window updates */
 		if (x1 < 0) x1 = x;
 		x2 = x;
+#ifdef JP
 	}
+#endif
+	}
+
+#ifdef JP
+	/*
+	 * 全角文字の左半分で表示を終了する場合、
+	 * 重なった文字の右部分を消去。
+	 */
+	{
+		int w, h;
+		w = t->wid;
+		h = t->hgt;
+		if (x != w && (scr_aa[x] & KANJI2))
+		{
+			scr_cc[x] = ' ';
+			scr_aa[x] &= KANJIC;
+			if (x1 < 0) x1 = x;
+			x2 = x;
+		}
+	}
+#endif
 
 	/* Expand the "change area" as needed */
 	if (x1 >= 0)
 	{
 		/* Check for new min/max row info */
+#ifdef JP
+		if (y < t->y1) t->y1 = y;
+		if (y > t->y2) t->y2 = y;
+#else /* JP */
 		if (y < Term->y1) Term->y1 = y;
 		if (y > Term->y2) Term->y2 = y;
+#endif /* JP */
 
 		/* Check for new min/max col info in this row */
+#ifdef JP
+		if (x1 < t->x1[y]) t->x1[y] = x1;
+		if (x2 > t->x2[y]) t->x2[y] = x2;
+#else /* JP */
 		if (x1 < Term->x1[y]) Term->x1[y] = x1;
 		if (x2 > Term->x2[y]) Term->x2[y] = x2;
+#endif /* JP */
 	}
 }
 
@@ -618,6 +737,11 @@ static void Term_fresh_row_pict(int y, int x1, int x2)
 	byte na;
 	char nc;
 
+#ifdef JP
+	/* 全角文字の２バイト目かどうか */
+	int kanji = 0;
+#endif
+
 	/* Scan "modified" columns */
 	for (x = x1; x <= x2; x++)
 	{
@@ -629,6 +753,23 @@ static void Term_fresh_row_pict(int y, int x1, int x2)
 		na = scr_aa[x];
 		nc = scr_cc[x];
 
+#ifdef JP
+		if (kanji)
+		{
+			/* 全角文字２バイト目 */
+			kanji = 0;
+			old_aa[x] = na;
+			old_cc[x] = nc;
+			fn++;
+			continue;
+		}
+		/* 特殊文字としてMSBが立っている可能性がある */
+		/* その場合attrのMSBも立っているのでこれで識別する */
+/* check */
+/*		kanji = (iskanji(nc));  */
+		kanji = (iskanji(nc) && !(na & 0x80));
+#endif
+
 		ota = old_taa[x];
 		otc = old_tcc[x];
 
@@ -636,7 +777,15 @@ static void Term_fresh_row_pict(int y, int x1, int x2)
 		ntc = scr_tcc[x];
 
 		/* Handle unchanged grids */
+#ifdef JP
+		if ((na == oa) && (nc == oc) && (nta == ota) && (ntc == otc) &&
+		    (!kanji || (scr_aa[x + 1] == old_aa[x + 1] &&
+		                scr_cc[x + 1] == old_cc[x + 1] &&
+		                scr_taa[x + 1] == old_taa[x + 1] &&
+		                scr_tcc[x + 1] == old_tcc[x + 1])))
+#else
 		if ((na == oa) && (nc == oc) && (nta == ota) && (ntc == otc))
+#endif
 		{
 			/* Flush */
 			if (fn)
@@ -648,6 +797,16 @@ static void Term_fresh_row_pict(int y, int x1, int x2)
 				/* Forget */
 				fn = 0;
 			}
+
+#ifdef JP
+			/* 全角文字の時は再開位置は＋１ */
+			if(kanji)
+			{
+				x++;
+				fx++;
+				kanji = 0;
+			}
+#endif
 
 			/* Skip */
 			continue;
@@ -718,6 +877,11 @@ static void Term_fresh_row_both(int y, int x1, int x2)
 	byte na;
 	char nc;
 
+#ifdef JP
+	/* 全角文字の２バイト目かどうか */
+	int kanji = 0;
+#endif
+
 	/* Scan "modified" columns */
 	for (x = x1; x <= x2; x++)
 	{
@@ -729,6 +893,23 @@ static void Term_fresh_row_both(int y, int x1, int x2)
 		na = scr_aa[x];
 		nc = scr_cc[x];
 
+#ifdef JP
+		if (kanji)
+		{
+			/* 全角文字２バイト目 */
+			kanji = 0;
+			old_aa[x] = na;
+			old_cc[x] = nc;
+			fn++;
+			continue;
+		}
+		/* 特殊文字としてMSBが立っている可能性がある */
+		/* その場合attrのMSBも立っているのでこれで識別する */
+/* check */
+/*		kanji = (iskanji(nc));  */
+		kanji = (iskanji(nc) && !(na & 0x80));
+#endif
+
 		ota = old_taa[x];
 		otc = old_tcc[x];
 
@@ -736,7 +917,15 @@ static void Term_fresh_row_both(int y, int x1, int x2)
 		ntc = scr_tcc[x];
 
 		/* Handle unchanged grids */
+#ifdef JP
+		if ((na == oa) && (nc == oc) && (nta == ota) && (ntc == otc) &&
+		    (!kanji || (scr_aa[x + 1] == old_aa[x + 1] &&
+		                scr_cc[x + 1] == old_cc[x + 1] &&
+		                scr_taa[x + 1] == old_taa[x + 1] &&
+		                scr_tcc[x + 1] == old_tcc[x + 1])))
+#else
 		if ((na == oa) && (nc == oc) && (nta == ota) && (ntc == otc))
+#endif
 		{
 			/* Flush */
 			if (fn)
@@ -756,6 +945,16 @@ static void Term_fresh_row_both(int y, int x1, int x2)
 				/* Forget */
 				fn = 0;
 			}
+
+#ifdef JP
+			/* 全角文字の時は再開位置は＋１ */
+			if(kanji)
+			{
+				x++;
+				fx++;
+				kanji = 0;
+			}
+#endif
 
 			/* Skip */
 			continue;
@@ -800,7 +999,11 @@ static void Term_fresh_row_both(int y, int x1, int x2)
 		}
 
 		/* Notice new color */
+#ifdef	JP
+		if (fa != (na & KANJIC))
+#else
 		if (fa != na)
+#endif
 		{
 			/* Flush */
 			if (fn)
@@ -822,7 +1025,11 @@ static void Term_fresh_row_both(int y, int x1, int x2)
 			}
 
 			/* Save the new color */
+#ifdef	JP
+			fa = (na & KANJIC);
+#else
 			fa = na;
+#endif
 		}
 
 		/* Restart and Advance */
@@ -852,6 +1059,32 @@ static void Term_fresh_row_both(int y, int x1, int x2)
  *
  * Display text using "Term_text()" and "Term_wipe()"
  */
+/*
+ * 全角文字に対応。
+ * 変更範囲は全角文字の中央で切れないことを仮定。
+ * 全角文字コードの途中で0x00が来ないと仮定。
+ * 全角文字の中央で文字属性が変わらないと仮定。
+ * By FIRST
+ */
+/*
+ * 2.7.9v3 用を v5 に多分対応させた
+ * By しとしん
+ */
+/*
+ * さらに 2.8.1 に対応
+ * 2.8.1 では、キャラクタ表示として、
+ * Term_fresh_row_text()（全部テキスト表示）
+ *               _both()（特定のキャラクタのみグラフィック表示）
+ *               _pict()（全部グラフィック表示）
+ * の３つのルーチンが用意されている。
+ * 今回のパッチでは_text()、_both()だけパッチをあて、_pict()は当てていない。
+ * 他２つと同様のパッチでおそらく問題ないと思うが、ルーチンそのものが未対応
+ * なので今回は見送った。
+ * By FIRST
+ *
+ * 2.8.3 では、_pict()もパッチを当てている(main-mac.c で always_pict フラグが
+ * 立つことがあるため)	: TeO
+ */
 static void Term_fresh_row_text(int y, int x1, int x2)
 {
 	int x;
@@ -880,6 +1113,11 @@ static void Term_fresh_row_text(int y, int x1, int x2)
 	byte na;
 	char nc;
 
+#ifdef JP
+	/* 全角文字の２バイト目かどうか */
+	int kanji = 0;
+#endif
+
 
 	/* Scan "modified" columns */
 	for (x = x1; x <= x2; x++)
@@ -892,8 +1130,29 @@ static void Term_fresh_row_text(int y, int x1, int x2)
 		na = scr_aa[x];
 		nc = scr_cc[x];
 
+#ifdef JP
+		if (kanji)
+		{
+			/* 全角文字２バイト目 */
+			kanji = 0;
+			old_aa[x] = na;
+			old_cc[x] = nc;
+			fn++;
+			continue;
+		}
+		/* 特殊文字としてMSBが立っている可能性がある */
+		/* その場合attrのMSBも立っているのでこれで識別する */
+		kanji = (iskanji(nc) && !(na & 0x80));
+#endif
+
 		/* Handle unchanged grids */
+#ifdef JP
+		if ((na == oa) && (nc == oc) &&
+		    (!kanji || (scr_aa[x + 1] == old_aa[x + 1] &&
+		                scr_cc[x + 1] == old_cc[x + 1])))
+#else
 		if ((na == oa) && (nc == oc))
+#endif
 		{
 			/* Flush */
 			if (fn)
@@ -914,6 +1173,16 @@ static void Term_fresh_row_text(int y, int x1, int x2)
 				fn = 0;
 			}
 
+#ifdef JP
+			/* 全角文字の時は再開位置は＋１ */
+			if(kanji)
+			{
+				x++;
+				fx++;
+				kanji = 0;
+			}
+#endif
+
 			/* Skip */
 			continue;
 		}
@@ -923,7 +1192,11 @@ static void Term_fresh_row_text(int y, int x1, int x2)
 		old_cc[x] = nc;
 
 		/* Notice new color */
+#ifdef JP
+		if (fa != (na & KANJIC))
+#else
 		if (fa != na)
+#endif
 		{
 			/* Flush */
 			if (fn)
@@ -945,7 +1218,11 @@ static void Term_fresh_row_text(int y, int x1, int x2)
 			}
 
 			/* Save the new color */
+#ifdef JP
+			fa = (na & KANJIC);
+#else
 			fa = na;
+#endif
 		}
 
 		/* Restart and Advance */
@@ -1179,6 +1456,9 @@ errr Term_fresh(void)
 		/* Cursor was visible */
 		if (!old->cu && old->cv)
 		{
+#ifdef JP
+			byte csize = 1;
+#endif /* JP */
 			int tx = old->cx;
 			int ty = old->cy;
 
@@ -1194,10 +1474,19 @@ errr Term_fresh(void)
 			byte ota = old_taa[tx];
 			char otc = old_tcc[tx];
 
+#ifdef JP
+			if (((tx + 1) < Term->wid) &&
+			    !(oa & 0x80) && iskanji(old_cc[tx])) csize = 2;
+#endif /* JP */
+
 			/* Hack -- use "Term_pict()" always */
 			if (Term->always_pict)
 			{
+#ifdef JP
+				(void)((*Term->pict_hook)(tx, ty, csize, &oa, &oc, &ota, &old_tcc[tx]));
+#else /* JP */
 				(void)((*Term->pict_hook)(tx, ty, 1, &oa, &oc, &ota, &otc));
+#endif /* JP */
 			}
 
 			/* Hack -- use "Term_pict()" sometimes */
@@ -1209,7 +1498,11 @@ errr Term_fresh(void)
 			/* Hack -- restore the actual character */
 			else if (oa || Term->always_text)
 			{
+#ifdef JP
+				(void)((*Term->text_hook)(tx, ty, csize, (byte)(oa & KANJIC), &old_cc[tx]));
+#else /* JP */
 				(void)((*Term->text_hook)(tx, ty, 1, oa, &oc));
+#endif /* JP */
 			}
 
 			/* Hack -- erase the grid */
@@ -1302,7 +1595,14 @@ errr Term_fresh(void)
 		/* Draw the cursor */
 		if (!scr->cu && scr->cv)
 		{
+#ifdef JP
+			char oc = old->c[scr->cy][scr->cx];
+			byte oa = old->a[scr->cy][scr->cx];
+			if ((scr->cx + 1 < w) && ((old->a[scr->cy][scr->cx + 1] == 255) ||
+			                          (!(oa & 0x80) && iskanji(oc))))
+#else /* JP */
 			if ((scr->cx + 1 < w) && (old->a[scr->cy][scr->cx + 1] == 255))
+#endif /* JP */
 			{
 				/* Double width cursor for the Bigtile mode */
 				(void)((*Term->bigcurs_hook)(scr->cx, scr->cy));
@@ -1520,7 +1820,11 @@ errr Term_addstr(int n, byte a, cptr s)
 	if (Term->scr->cx + n >= w) res = n = w - Term->scr->cx;
 
 	/* Queue the first "n" characters for display */
+#ifdef JP
+	Term_queue_chars(Term, Term->scr->cx, Term->scr->cy, n, a, s); /* mada */
+#else /* JP */
 	Term_queue_chars(Term->scr->cx, Term->scr->cy, n, a, s);
+#endif /* JP */
 
 	/* Advance the cursor */
 	Term->scr->cx += n;
@@ -1751,6 +2055,15 @@ errr Term_redraw_section(int x1, int y1, int x2, int y2)
 	{
 		if ((x1 > 0) && (Term->old->a[i][x1] == 255))
 			x1--;
+
+#ifdef JP
+		/* 再描画が全角文字にかかる場合は文字全体を再描画する。 */
+		if ((x1 > 0) && (Term->old->a[i][x1] & KANJI2))
+			x1--;
+
+		if ((x2 < Term->hgt - 1) && (Term->old->a[i][x2] & KANJI1))
+			x2++;
+#endif /* JP */
 
 		Term->x1[i] = x1;
 		Term->x2[i] = x2;

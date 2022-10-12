@@ -136,6 +136,29 @@ size_t my_strcat(char *buf, const char *src, size_t bufsize)
 }
 
 
+#ifdef JP
+/*
+ * strchr() that recognize kanji.
+ */
+char *my_strchr(const char *s, int ch)
+{
+	while (*s)
+	{
+		if (iskanji(*s) && (*(s + 1) != '\0'))
+		{
+			s++;
+		}
+		else if (*s == ch)
+		{
+			return (char*)s;
+		}
+		s++;
+	}
+	return NULL;
+}
+#endif /* JP */
+
+
 /*
  * Determine if string "a" is equal to string "b"
  */

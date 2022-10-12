@@ -8,6 +8,14 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3 日本語版製作: しとしん
+ * 2.7.9v6 対応        : 岸康司, FIRST, しとしん
+ * 2.8.0   対応        : sayu, しとしん
+ * 2.8.1   対応        : FIRST, しとしん
+ * 2.8.3   対応        : FIRST, しとしん
+ */
+
 #include "angband.h"
 
 #include "script.h"
@@ -75,8 +83,13 @@ void do_cmd_eat_food(void)
 	item_tester_tval = TV_FOOD;
 
 	/* Get an item */
+#ifdef JP
+	q = "どれを食べますか? ";
+	s = "食べ物がない。";
+#else
 	q = "Eat which item? ";
 	s = "You have nothing to eat.";
+#endif
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -160,8 +173,13 @@ void do_cmd_quaff_potion(void)
 	item_tester_tval = TV_POTION;
 
 	/* Get an item */
+#ifdef JP
+	q = "どの薬を飲みますか? ";
+	s = "飲める薬がない。";
+#else
 	q = "Quaff which potion? ";
 	s = "You have no potions to quaff.";
+#endif
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -247,17 +265,29 @@ void do_cmd_read_scroll(void)
 	/* Check some conditions */
 	if (p_ptr->blind)
 	{
+#ifdef JP
+		msg_print("目が見えない。");
+#else
 		msg_print("You can't see anything.");
+#endif
 		return;
 	}
 	if (no_lite())
 	{
+#ifdef JP
+		msg_print("明かりがないので、暗くて読めない。");
+#else
 		msg_print("You have no light to read by.");
+#endif
 		return;
 	}
 	if (p_ptr->confused)
 	{
+#ifdef JP
+		msg_print("混乱していて読めない。");
+#else
 		msg_print("You are too confused!");
+#endif
 		return;
 	}
 
@@ -266,8 +296,13 @@ void do_cmd_read_scroll(void)
 	item_tester_tval = TV_SCROLL;
 
 	/* Get an item */
+#ifdef JP
+	q = "どの巻物を読みますか? ";
+	s = "読める巻物がない。";
+#else
 	q = "Read which scroll? ";
 	s = "You have no scrolls to read.";
+#endif
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -363,8 +398,13 @@ void do_cmd_use_staff(void)
 	item_tester_tval = TV_STAFF;
 
 	/* Get an item */
+#ifdef JP
+	q = "どの杖を使いますか? ";
+	s = "使える杖がない。";
+#else
 	q = "Use which staff? ";
 	s = "You have no staff to use.";
+#endif
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -407,7 +447,11 @@ void do_cmd_use_staff(void)
 	if ((chance < USE_DEVICE) || (randint(chance) < USE_DEVICE))
 	{
 		if (flush_failure) flush();
+#ifdef JP
+		msg_print("杖をうまく使えなかった。");
+#else
 		msg_print("You failed to use the staff properly.");
+#endif
 		return;
 	}
 
@@ -415,7 +459,11 @@ void do_cmd_use_staff(void)
 	if (o_ptr->pval <= 0)
 	{
 		if (flush_failure) flush();
+#ifdef JP
+		msg_print("この杖にはもう魔力が残っていない。");
+#else
 		msg_print("The staff has no charges left.");
+#endif
 		o_ptr->ident |= (IDENT_EMPTY);
 		p_ptr->notice |= (PN_COMBINE | PN_REORDER);
 		p_ptr->window |= (PW_INVEN);
@@ -504,8 +552,13 @@ void do_cmd_aim_wand(void)
 	item_tester_tval = TV_WAND;
 
 	/* Get an item */
+#ifdef JP
+	q = "どの魔法棒で狙いますか? ";
+	s = "使える魔法棒がない。";
+#else
 	q = "Aim which wand? ";
 	s = "You have no wand to aim.";
+#endif
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -584,8 +637,13 @@ void do_cmd_zap_rod(void)
 	item_tester_tval = TV_ROD;
 
 	/* Get an item */
+#ifdef JP
+	q = "どのロッドを振りますか? ";
+	s = "使えるロッドがない。";
+#else
 	q = "Zap which rod? ";
 	s = "You have no rod to zap.";
+#endif
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -667,8 +725,13 @@ void do_cmd_activate(void)
 	item_tester_hook = item_tester_hook_activate;
 
 	/* Get an item */
+#ifdef JP
+	q = "どのアイテムを始動させますか? ";
+	s = "始動できるアイテムを装備していない。";
+#else
 	q = "Activate which item? ";
 	s = "You have nothing to activate.";
+#endif
 	if (!get_item(&item, q, s, (USE_EQUIP))) return;
 
 	/* Get the item (in the pack) */
@@ -712,7 +775,11 @@ void do_cmd_activate(void)
 	if ((chance < USE_DEVICE) || (randint(chance) < USE_DEVICE))
 	{
 		if (flush_failure) flush();
+#ifdef JP
+		msg_print("うまく始動させることができなかった。");
+#else
 		msg_print("You failed to activate it properly.");
+#endif
 		return;
 	}
 

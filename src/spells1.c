@@ -8,6 +8,16 @@
  * are included in all such copies.  Other copyrights may also apply.
  */
 
+/*
+ * 2.7.9v3-v6 日本語版製作: しとしん
+ * 2.8.0      対応        : sayu, しとしん
+ * 2.8.1      対応        : FIRST
+ * 2.8.3      対応        : FIRST
+ *
+ * 日本語版機能追加 : ステータスの上昇量表示
+ *                    英日切り替え機能
+ */
+
 #include "angband.h"
 
 #include "script.h"
@@ -275,14 +285,22 @@ void teleport_player_level(void)
 {
 	if (adult_ironman)
 	{
+#ifdef JP
+		msg_print("何も起こらなかった。");
+#else /* JP */
 		msg_print("Nothing happens.");
+#endif /* JP */
 		return;
 	}
 
 
 	if (!p_ptr->depth)
 	{
+#ifdef JP
+		message(MSG_TPLEVEL, 0, "あなたは床を突き破って沈んでいく。");
+#else /* JP */
 		message(MSG_TPLEVEL, 0, "You sink through the floor.");
+#endif /* JP */
 
 		/* New depth */
 		p_ptr->depth++;
@@ -293,7 +311,11 @@ void teleport_player_level(void)
 
 	else if (is_quest(p_ptr->depth) || (p_ptr->depth >= MAX_DEPTH-1))
 	{
+#ifdef JP
+		message(MSG_TPLEVEL, 0, "あなたは天井を突き破って宙へ浮いていく。");
+#else /* JP */
 		message(MSG_TPLEVEL, 0, "You rise up through the ceiling.");
+#endif /* JP */
 
 		/* New depth */
 		p_ptr->depth--;
@@ -304,7 +326,11 @@ void teleport_player_level(void)
 
 	else if (rand_int(100) < 50)
 	{
+#ifdef JP
+		message(MSG_TPLEVEL, 0, "あなたは天井を突き破って宙へ浮いていく。");
+#else /* JP */
 		message(MSG_TPLEVEL, 0, "You rise up through the ceiling.");
+#endif /* JP */
 
 		/* New depth */
 		p_ptr->depth--;
@@ -315,7 +341,11 @@ void teleport_player_level(void)
 
 	else
 	{
+#ifdef JP
+		message(MSG_TPLEVEL, 0, "あなたは床を突き破って沈んでいく。");
+#else /* JP */
 		message(MSG_TPLEVEL, 0, "You sink through the floor.");
+#endif /* JP */
 
 		/* New depth */
 		p_ptr->depth++;
@@ -493,7 +523,11 @@ void take_hit(int dam, cptr kb_str)
 	if (p_ptr->chp < 0)
 	{
 		/* Hack -- Note death */
+#ifdef JP
+		message(MSG_DEATH, 0, "あなたは死にました。");
+#else /* JP */
 		message(MSG_DEATH, 0, "You die.");
+#endif /* JP */
 		message_flush();
 
 		/* Note cause of death */
@@ -518,11 +552,19 @@ void take_hit(int dam, cptr kb_str)
 		/* Hack -- bell on first notice */
 		if (old_chp > warning)
 		{
+#ifdef JP
+			bell("警告:低ヒット・ポイント！");
+#else /* JP */
 			bell("Low hitpoint warning!");
+#endif /* JP */
 		}
 
 		/* Message */
+#ifdef JP
+		message(MSG_HITPOINT_WARN, 0, "*** 警告:低ヒット・ポイント！ ***");
+#else /* JP */
 		message(MSG_HITPOINT_WARN, 0, "*** LOW HITPOINT WARNING! ***");
+#endif /* JP */
 		message_flush();
 	}
 }
@@ -790,12 +832,19 @@ static int inven_damage(inven_func typ, int perc)
 				object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 3);
 
 				/* Message */
+#ifdef JP
+				message_format(MSG_DESTROY, 0, "%s(%c)が%s破壊された！",
+				           o_name, index_to_label(i), ((o_ptr->number > 1) ?
+				            ((amt == o_ptr->number) ? "全て" :
+				            (amt > 1 ? "いくつか" : "一つ")) : "") );
+#else /* JP */
 				message_format(MSG_DESTROY, 0, "%sour %s (%c) %s destroyed!",
 				           ((o_ptr->number > 1) ?
 				            ((amt == o_ptr->number) ? "All of y" :
 				             (amt > 1 ? "Some of y" : "One of y")) : "Y"),
 				           o_name, index_to_label(i),
 				           ((amt > 1) ? "were" : "was"));
+#endif /* JP */
 
 				/* Hack -- If rods, wands, or staves are destroyed, the total
 				 * maximum timeout or charges of the stack needs to be reduced,
@@ -869,13 +918,21 @@ static int minus_ac(void)
 	/* Object resists */
 	if (f3 & (TR3_IGNORE_ACID))
 	{
+#ifdef JP
+		msg_format("しかし%sには効果がなかった！", o_name);
+#else /* JP */
 		msg_format("Your %s is unaffected!", o_name);
+#endif /* JP */
 
 		return (TRUE);
 	}
 
 	/* Message */
+#ifdef JP
+	msg_format("%sがダメージを受けた！", o_name);
+#else /* JP */
 	msg_format("Your %s is damaged!", o_name);
+#endif /* JP */
 
 	/* Damage the item */
 	o_ptr->to_a--;
@@ -994,9 +1051,25 @@ void cold_dam(int dam, cptr kb_str)
  * in particular, stat potions will always restore the stat and
  * then increase the fully restored value.
  */
+#ifdef JP
+static cptr c_stat_name[] =
+{
+	"腕力",
+	"知能",
+	"賢さ",
+	"器用さ",
+	"耐久力",
+	"魅力"
+};
+#endif
+
 bool inc_stat(int stat)
 {
 	int value, gain;
+
+#ifdef JP
+	int up;
+#endif
 
 	/* Then augment the current/max stat */
 	value = p_ptr->stat_cur[stat];
@@ -1032,6 +1105,23 @@ bool inc_stat(int stat)
 		{
 			value++;
 		}
+
+#ifdef JP
+		/* 上昇量表示 */
+		up = value - p_ptr->stat_cur[stat];
+
+		if ((p_ptr->stat_cur[stat] == 17) && (value > 18))
+			msg_format( "%sが 1/%02d 上がった！", c_stat_name[stat], value-18 );
+		else
+		{
+			/* Above 18 */
+			if ( value > 18 )
+				msg_format("%sが 0/%02d 上がった！", c_stat_name[stat], up );
+			/* From 3 to 18 */
+			else
+				msg_format("%sが %d 上がった！", c_stat_name[stat], up );
+		}
+#endif
 
 		/* Save the new value */
 		p_ptr->stat_cur[stat] = value;
@@ -1254,9 +1344,13 @@ bool apply_disenchant(int mode)
 	if (artifact_p(o_ptr) && (rand_int(100) < 60))
 	{
 		/* Message */
+#ifdef JP
+		msg_format("しかし%s(%c)は劣化を跳ね返した！", o_name, index_to_label(t) );
+#else /* JP */
 		msg_format("Your %s (%c) resist%s disenchantment!",
 		           o_name, index_to_label(t),
 		           ((o_ptr->number != 1) ? "" : "s"));
+#endif /* JP */
 
 		/* Notice */
 		return (TRUE);
@@ -1276,9 +1370,13 @@ bool apply_disenchant(int mode)
 	if ((o_ptr->to_a > 5) && (rand_int(100) < 20)) o_ptr->to_a--;
 
 	/* Message */
+#ifdef JP
+	msg_format("%s(%c)が劣化された！", o_name, index_to_label(t) );
+#else /* JP */
 	msg_format("Your %s (%c) %s disenchanted!",
 	           o_name, index_to_label(t),
 	           ((o_ptr->number != 1) ? "were" : "was"));
+#endif /* JP */
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -1316,7 +1414,11 @@ static void apply_nexus(const monster_type *m_ptr)
 		{
 			if (rand_int(100) < p_ptr->skill_sav)
 			{
+#ifdef JP
+				msg_print("しかし効力を跳ね返した！");
+#else /* JP */
 				msg_print("You resist the effects!");
+#endif /* JP */
 				break;
 			}
 
@@ -1329,11 +1431,19 @@ static void apply_nexus(const monster_type *m_ptr)
 		{
 			if (rand_int(100) < p_ptr->skill_sav)
 			{
+#ifdef JP
+				msg_print("しかし効力を跳ね返した！");
+#else /* JP */
 				msg_print("You resist the effects!");
+#endif /* JP */
 				break;
 			}
 
+#ifdef JP
+			msg_print("体がねじれ始めた...");
+#else /* JP */
 			msg_print("Your body starts to scramble...");
+#endif /* JP */
 
 			/* Pick a pair of stats */
 			ii = rand_int(A_MAX);
@@ -1442,7 +1552,11 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				/* Check line of sight */
 				if (player_has_los_bold(y, x))
 				{
+#ifdef JP
+					msg_print("まばゆい閃光が走った！");
+#else /* JP */
 					msg_print("There is a bright flash of light!");
+#endif /* JP */
 					obvious = TRUE;
 				}
 
@@ -1463,7 +1577,11 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				/* Check line of sound */
 				if (player_has_los_bold(y, x))
 				{
+#ifdef JP
+					msg_print("カチッと音がした！");
+#else /* JP */
 					msg_print("Click!");
+#endif /* JP */
 					obvious = TRUE;
 				}
 			}
@@ -1487,7 +1605,11 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				if (player_has_los_bold(y, x))
 				{
 					/* Message */
+#ifdef JP
+					msg_print("まばゆい閃光が走った！");
+#else /* JP */
 					msg_print("There is a bright flash of light!");
+#endif /* JP */
 					obvious = TRUE;
 
 					/* Visibility change */
@@ -1524,7 +1646,11 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				/* Message */
 				if (cave_info[y][x] & (CAVE_MARK))
 				{
+#ifdef JP
+					msg_print("壁が溶けて泥になった！");
+#else /* JP */
 					msg_print("The wall turns into mud!");
+#endif /* JP */
 					obvious = TRUE;
 				}
 
@@ -1541,8 +1667,13 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				/* Message */
 				if (cave_info[y][x] & (CAVE_MARK))
 				{
+#ifdef JP
+					msg_print("鉱脈が溶けて泥になった！");
+					msg_print("何かを見つけた！");
+#else /* JP */
 					msg_print("The vein turns into mud!");
 					msg_print("You have found something!");
+#endif /* JP */
 					obvious = TRUE;
 				}
 
@@ -1562,7 +1693,11 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				/* Message */
 				if (cave_info[y][x] & (CAVE_MARK))
 				{
+#ifdef JP
+					msg_print("鉱脈が溶けて泥になった！");
+#else /* JP */
 					msg_print("The vein turns into mud!");
+#endif /* JP */
 					obvious = TRUE;
 				}
 
@@ -1579,7 +1714,11 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				/* Message */
 				if (cave_info[y][x] & (CAVE_MARK))
 				{
+#ifdef JP
+					msg_print("岩石が溶けて泥になった！");
+#else /* JP */
 					msg_print("The rubble turns into mud!");
+#endif /* JP */
 					obvious = TRUE;
 				}
 
@@ -1595,7 +1734,11 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 					/* Found something */
 					if (player_can_see_bold(y, x))
 					{
+#ifdef JP
+						msg_print("岩石の下に何か隠されていた！");
+#else /* JP */
 						msg_print("There was something buried in the rubble!");
+#endif /* JP */
 						obvious = TRUE;
 					}
 
@@ -1610,7 +1753,11 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				/* Hack -- special message */
 				if (cave_info[y][x] & (CAVE_MARK))
 				{
+#ifdef JP
+					msg_print("ドアが溶けて泥になった！");
+#else /* JP */
 					msg_print("The door turns into mud!");
+#endif /* JP */
 					obvious = TRUE;
 				}
 
@@ -1792,7 +1939,11 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				if (hates_acid(o_ptr))
 				{
 					do_kill = TRUE;
+#ifdef JP
+					note_kill = "溶けた！";
+#else /* JP */
 					note_kill = (plural ? " melt!" : " melts!");
+#endif /* JP */
 					if (f3 & (TR3_IGNORE_ACID)) ignore = TRUE;
 				}
 				break;
@@ -1804,7 +1955,11 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				if (hates_elec(o_ptr))
 				{
 					do_kill = TRUE;
+#ifdef JP
+					note_kill= "壊れた！";
+#else /* JP */
 					note_kill = (plural ? " are destroyed!" : " is destroyed!");
+#endif /* JP */
 					if (f3 & (TR3_IGNORE_ELEC)) ignore = TRUE;
 				}
 				break;
@@ -1816,7 +1971,11 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				if (hates_fire(o_ptr))
 				{
 					do_kill = TRUE;
+#ifdef JP
+					note_kill = "燃え上がった！";
+#else /* JP */
 					note_kill = (plural ? " burn up!" : " burns up!");
+#endif /* JP */
 					if (f3 & (TR3_IGNORE_FIRE)) ignore = TRUE;
 				}
 				break;
@@ -1827,7 +1986,11 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 			{
 				if (hates_cold(o_ptr))
 				{
+#ifdef JP
+					note_kill = "砕け散った！";
+#else /* JP */
 					note_kill = (plural ? " shatter!" : " shatters!");
+#endif /* JP */
 					do_kill = TRUE;
 					if (f3 & (TR3_IGNORE_COLD)) ignore = TRUE;
 				}
@@ -1840,14 +2003,22 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				if (hates_fire(o_ptr))
 				{
 					do_kill = TRUE;
+#ifdef JP
+					note_kill = "燃え上がった！";
+#else /* JP */
 					note_kill = (plural ? " burn up!" : " burns up!");
+#endif /* JP */
 					if (f3 & (TR3_IGNORE_FIRE)) ignore = TRUE;
 				}
 				if (hates_elec(o_ptr))
 				{
 					ignore = FALSE;
 					do_kill = TRUE;
+#ifdef JP
+					note_kill= "壊れた！";
+#else /* JP */
 					note_kill = (plural ? " are destroyed!" : " is destroyed!");
+#endif /* JP */
 					if (f3 & (TR3_IGNORE_ELEC)) ignore = TRUE;
 				}
 				break;
@@ -1859,14 +2030,22 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				if (hates_fire(o_ptr))
 				{
 					do_kill = TRUE;
+#ifdef JP
+					note_kill = "燃え上がった！";
+#else /* JP */
 					note_kill = (plural ? " burn up!" : " burns up!");
+#endif /* JP */
 					if (f3 & (TR3_IGNORE_FIRE)) ignore = TRUE;
 				}
 				if (hates_cold(o_ptr))
 				{
 					ignore = FALSE;
 					do_kill = TRUE;
+#ifdef JP
+					note_kill = "砕け散った！";
+#else /* JP */
 					note_kill = (plural ? " shatter!" : " shatters!");
+#endif /* JP */
 					if (f3 & (TR3_IGNORE_COLD)) ignore = TRUE;
 				}
 				break;
@@ -1880,7 +2059,11 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 			{
 				if (hates_cold(o_ptr))
 				{
+#ifdef JP
+					note_kill = "砕け散った！";
+#else /* JP */
 					note_kill = (plural ? " shatter!" : " shatters!");
+#endif /* JP */
 					do_kill = TRUE;
 				}
 				break;
@@ -1890,7 +2073,11 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 			case GF_MANA:
 			{
 				do_kill = TRUE;
+#ifdef JP
+				note_kill= "壊れた！";
+#else /* JP */
 				note_kill = (plural ? " are destroyed!" : " is destroyed!");
+#endif /* JP */
 				break;
 			}
 
@@ -1900,7 +2087,11 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				if (cursed_p(o_ptr))
 				{
 					do_kill = TRUE;
+#ifdef JP
+					note_kill= "壊れた！";
+#else /* JP */
 					note_kill = (plural ? " are destroyed!" : " is destroyed!");
+#endif /* JP */
 				}
 				break;
 			}
@@ -1924,7 +2115,11 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 						/* Notice */
 						if (o_ptr->marked)
 						{
+#ifdef JP
+							msg_print("カチッと音がした！");
+#else /* JP */
 							msg_print("Click!");
+#endif /* JP */
 							obvious = TRUE;
 						}
 					}
@@ -1951,8 +2146,13 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				/* Observe the resist */
 				if (o_ptr->marked)
 				{
+#ifdef JP
+					msg_format("しかし床上の%sには影響がなかった！",
+					           o_name );
+#else /* JP */
 					msg_format("The %s %s unaffected!",
 					           o_name, (plural ? "are" : "is"));
+#endif /* JP */
 				}
 			}
 
@@ -1962,7 +2162,11 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				/* Describe if needed */
 				if (o_ptr->marked && note_kill)
 				{
+#ifdef JP
+					message_format(MSG_DESTROY, 0, "床上の%sが%s", o_name, note_kill);
+#else /* JP */
 					message_format(MSG_DESTROY, 0, "The %s%s", o_name, note_kill);
+#endif /* JP */
 				}
 
 				/* Delete the object */
@@ -2078,8 +2282,17 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 	/* Assume no note */
 	cptr note = NULL;
 
+#ifdef JP
+	/* このフラグが 1 のときは文の初めに「しかし」をつける */
+	int but_flag = 0;
+#endif /* JP */
+
 	/* Assume a default death */
+#ifdef JP
+	cptr note_dies = "は死んだ。";
+#else /* JP */
 	cptr note_dies = " dies.";
+#endif /* JP */
 
 
 	/* Walls protect monsters */
@@ -2117,7 +2330,11 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 	    (strchr("Evg", r_ptr->d_char)))
 	{
 		/* Special note at death */
+#ifdef JP
+		note_dies = "が倒された。";
+#else /* JP */
 		note_dies = " is destroyed.";
+#endif /* JP */
 	}
 
 
@@ -2137,7 +2354,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & (RF3_IM_ACID))
 			{
+#ifdef JP
+				note = "にはかなり耐性がある！";
+				but_flag = 1;
+#else /* JP */
 				note = " resists a lot.";
+#endif /* JP */
 				dam /= 9;
 				if (seen) l_ptr->flags3 |= (RF3_IM_ACID);
 			}
@@ -2150,7 +2372,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & (RF3_IM_ELEC))
 			{
+#ifdef JP
+				note = "にはかなり耐性がある！";
+				but_flag = 1;
+#else /* JP */
 				note = " resists a lot.";
+#endif /* JP */
 				dam /= 9;
 				if (seen) l_ptr->flags3 |= (RF3_IM_ELEC);
 			}
@@ -2163,7 +2390,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & (RF3_IM_FIRE))
 			{
+#ifdef JP
+				note = "にはかなり耐性がある！";
+				but_flag = 1;
+#else /* JP */
 				note = " resists a lot.";
+#endif /* JP */
 				dam /= 9;
 				if (seen) l_ptr->flags3 |= (RF3_IM_FIRE);
 			}
@@ -2176,7 +2408,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & (RF3_IM_COLD))
 			{
+#ifdef JP
+				note = "にはかなり耐性がある！";
+				but_flag = 1;
+#else /* JP */
 				note = " resists a lot.";
+#endif /* JP */
 				dam /= 9;
 				if (seen) l_ptr->flags3 |= (RF3_IM_COLD);
 			}
@@ -2189,7 +2426,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & (RF3_IM_POIS))
 			{
+#ifdef JP
+				note = "にはかなり耐性がある！";
+				but_flag = 1;
+#else /* JP */
 				note = " resists a lot.";
+#endif /* JP */
 				dam /= 9;
 				if (seen) l_ptr->flags3 |= (RF3_IM_POIS);
 			}
@@ -2203,7 +2445,11 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (r_ptr->flags3 & (RF3_EVIL))
 			{
 				dam *= 2;
+#ifdef JP
+				note = "はひどい痛手を受けた。";
+#else /* JP */
 				note = " is hit hard.";
+#endif /* JP */
 				if (seen) l_ptr->flags3 |= (RF3_EVIL);
 			}
 			break;
@@ -2222,7 +2468,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & RF3_RES_PLAS)
 			{
+#ifdef JP
+				note = "には耐性がある。";
+				but_flag = 1;
+#else /* JP */
 				note = " resists.";
+#endif /* JP */
 				dam *= 3; dam /= (randint(6)+6);
 				if (seen) l_ptr->flags3 |= RF3_RES_PLAS;
 			}
@@ -2235,19 +2486,33 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & (RF3_UNDEAD))
 			{
+#ifdef JP
+				note = "は免疫を持っている。";
+				but_flag = 1;
+#else /* JP */
 				note = " is immune.";
+#endif /* JP */
 				dam = 0;
 				if (seen) l_ptr->flags3 |= (RF3_UNDEAD);
 			}
 			else if (r_ptr->flags4 & (RF4_BR_NETH))
 			{
+#ifdef JP
+				note = "には耐性がある。";
+				but_flag = 1;
+#else /* JP */
 				note = " resists.";
+#endif /* JP */
 				dam *= 3; dam /= (randint(6)+6);
 			}
 			else if (r_ptr->flags3 & (RF3_EVIL))
 			{
 				dam /= 2;
+#ifdef JP
+				note = "はいくらか耐性を示した。";
+#else /* JP */
 				note = " resists somewhat.";
+#endif /* JP */
 				if (seen) l_ptr->flags3 |= (RF3_EVIL);
 			}
 			break;
@@ -2259,7 +2524,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & RF3_IM_WATER)
 			{
+#ifdef JP
+				note = "は免疫を持っている。";
+				but_flag = 1;
+#else /* JP */
 				note = " is immune.";
+#endif /* JP */
 				dam = 0;
 				if (seen) l_ptr->flags3 |= RF3_IM_WATER;
 			}
@@ -2274,7 +2544,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			do_conf = (5 + randint(11) + r) / (r + 1);
 			if (r_ptr->flags4 & (RF4_BR_CHAO))
 			{
+#ifdef JP
+				note = "には耐性がある。";
+				but_flag = 1;
+#else /* JP */
 				note = " resists.";
+#endif /* JP */
 				dam *= 3; dam /= (randint(6)+6);
 				do_poly = FALSE;
 			}
@@ -2287,7 +2562,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags4 & (RF4_BR_SHAR))
 			{
+#ifdef JP
+				note = "には耐性がある。";
+				but_flag = 1;
+#else /* JP */
 				note = " resists.";
+#endif /* JP */
 				dam *= 3; dam /= (randint(6)+6);
 			}
 			break;
@@ -2300,7 +2580,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			do_stun = (10 + randint(15) + r) / (r + 1);
 			if (r_ptr->flags4 & (RF4_BR_SOUN))
 			{
+#ifdef JP
+				note = "には耐性がある。";
+				but_flag = 1;
+#else /* JP */
 				note = " resists.";
+#endif /* JP */
 				dam *= 2; dam /= (randint(6)+6);
 			}
 			break;
@@ -2313,12 +2598,21 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			do_conf = (10 + randint(15) + r) / (r + 1);
 			if (r_ptr->flags4 & (RF4_BR_CONF))
 			{
+#ifdef JP
+				note = "には耐性がある。";
+				but_flag = 1;
+#else /* JP */
 				note = " resists.";
+#endif /* JP */
 				dam *= 2; dam /= (randint(6)+6);
 			}
 			else if (r_ptr->flags3 & (RF3_NO_CONF))
 			{
+#ifdef JP
+				note = "はいくらか耐性を示した。";
+#else /* JP */
 				note = " resists somewhat.";
+#endif /* JP */
 				dam /= 2;
 			}
 			break;
@@ -2330,7 +2624,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & RF3_RES_DISE)
 			{
+#ifdef JP
+				note = "には耐性がある。";
+				but_flag = 1;
+#else /* JP */
 				note = " resists.";
+#endif /* JP */
 				dam *= 3; dam /= (randint(6)+6);
 				if (seen) l_ptr->flags3 |= RF3_RES_DISE;
 			}
@@ -2343,7 +2642,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & RF3_RES_NEXUS)
 			{
+#ifdef JP
+				note = "には耐性がある。";
+				but_flag = 1;
+#else /* JP */
 				note = " resists.";
+#endif /* JP */
 				dam *= 3; dam /= (randint(6)+6);
 				if (seen) l_ptr->flags3 |= RF3_RES_NEXUS;
 			}
@@ -2357,7 +2661,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			do_stun = (randint(15) + r) / (r + 1);
 			if (r_ptr->flags4 & (RF4_BR_WALL))
 			{
+#ifdef JP
+				note = "には耐性がある。";
+				but_flag = 1;
+#else /* JP */
 				note = " resists.";
+#endif /* JP */
 				dam *= 3; dam /= (randint(6)+6);
 			}
 			break;
@@ -2369,7 +2678,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags4 & (RF4_BR_INER))
 			{
+#ifdef JP
+				note = "には耐性がある。";
+				but_flag = 1;
+#else /* JP */
 				note = " resists.";
+#endif /* JP */
 				dam *= 3; dam /= (randint(6)+6);
 			}
 			break;
@@ -2381,7 +2695,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags4 & (RF4_BR_TIME))
 			{
+#ifdef JP
+				note = "には耐性がある。";
+				but_flag = 1;
+#else /* JP */
 				note = " resists.";
+#endif /* JP */
 				dam *= 3; dam /= (randint(6)+6);
 			}
 			break;
@@ -2398,7 +2717,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 
 			if (r_ptr->flags4 & (RF4_BR_GRAV))
 			{
+#ifdef JP
+				note = "には耐性がある。";
+				but_flag = 1;
+#else /* JP */
 				note = " resists.";
+#endif /* JP */
 				dam *= 3; dam /= (randint(6)+6);
 				do_dist = 0;
 			}
@@ -2426,7 +2750,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			do_stun = (randint(15) + 1) / (r + 1);
 			if (r_ptr->flags3 & (RF3_IM_COLD))
 			{
+#ifdef JP
+				note = "にはかなり耐性がある！";
+				but_flag = 1;
+#else /* JP */
 				note = " resists a lot.";
+#endif /* JP */
 				dam /= 9;
 				if (seen) l_ptr->flags3 |= (RF3_IM_COLD);
 			}
@@ -2451,7 +2780,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 					if (seen) l_ptr->flags3 |= (RF3_DEMON);
 				}
 
+#ifdef JP
+				note = "には効果がなかった！";
+				but_flag = 1;
+#else /* JP */
 				note = " is unaffected!";
+#endif /* JP */
 				obvious = FALSE;
 				dam = 0;
 			}
@@ -2471,7 +2805,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if ((r_ptr->flags1 & (RF1_UNIQUE)) ||
 			    (r_ptr->level > randint((dam - 10) < 1 ? 1 : (dam - 10)) + 10))
 			{
+#ifdef JP
+				note = "には効果がなかった！";
+				but_flag = 1;
+#else /* JP */
 				note = " is unaffected!";
+#endif /* JP */
 				do_poly = FALSE;
 				obvious = FALSE;
 			}
@@ -2497,7 +2836,11 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			/* Attempt to clone. */
 			if (multiply_monster(cave_m_idx[y][x]))
 			{
+#ifdef JP
+				note = "が殖えた！";
+#else /* JP */
 				note = " spawns!";
+#endif /* JP */
 			}
 
 			/* No "real" damage */
@@ -2525,7 +2868,11 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (p_ptr->health_who == cave_m_idx[y][x]) p_ptr->redraw |= (PR_HEALTH);
 
 			/* Message */
+#ifdef JP
+			note = "は体力を回復したようだ。";
+#else /* JP */
 			note = " looks healthier.";
+#endif /* JP */
 
 			/* No "real" damage */
 			dam = 0;
@@ -2540,7 +2887,11 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 
 			/* Speed up */
 			if (m_ptr->mspeed < 150) m_ptr->mspeed += 10;
+#ifdef JP
+			note = "の動きが速くなった。";
+#else /* JP */
 			note = " starts moving faster.";
+#endif /* JP */
 
 			/* No "real" damage */
 			dam = 0;
@@ -2557,7 +2908,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if ((r_ptr->flags1 & (RF1_UNIQUE)) ||
 			    (r_ptr->level > randint((dam - 10) < 1 ? 1 : (dam - 10)) + 10))
 			{
+#ifdef JP
+				note = "には効果がなかった！";
+				but_flag = 1;
+#else /* JP */
 				note = " is unaffected!";
+#endif /* JP */
 				obvious = FALSE;
 			}
 
@@ -2565,7 +2921,11 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			else
 			{
 				if (m_ptr->mspeed > 60) m_ptr->mspeed -= 10;
+#ifdef JP
+				note = "の動きが遅くなった。";
+#else /* JP */
 				note = " starts moving slower.";
+#endif /* JP */
 			}
 
 			/* No "real" damage */
@@ -2591,13 +2951,22 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 				}
 
 				/* No obvious effect */
+#ifdef JP
+				note = "には効果がなかった！";
+				but_flag = 1;
+#else /* JP */
 				note = " is unaffected!";
+#endif /* JP */
 				obvious = FALSE;
 			}
 			else
 			{
 				/* Go to sleep (much) later */
+#ifdef JP
+				note = "は眠り込んでしまった！";
+#else /* JP */
 				note = " falls asleep!";
+#endif /* JP */
 				do_sleep = 500;
 			}
 
@@ -2630,7 +2999,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 				do_conf = 0;
 
 				/* No obvious effect */
+#ifdef JP
+				note = "には効果がなかった！";
+				but_flag = 1;
+#else /* JP */
 				note = " is unaffected!";
+#endif /* JP */
 				obvious = FALSE;
 			}
 
@@ -2654,8 +3028,13 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 				if (seen) l_ptr->flags3 |= (RF3_HURT_LITE);
 
 				/* Special effect */
+#ifdef JP
+				note = "は光に身をすくめた！";
+				note_dies = "は光を受けてしぼんでしまった！";
+#else /* JP */
 				note = " cringes from the light!";
 				note_dies = " shrivels away in the light!";
+#endif /* JP */
 			}
 
 			/* Normally no damage */
@@ -2676,14 +3055,24 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags4 & (RF4_BR_LITE))
 			{
+#ifdef JP
+				note = "には耐性がある。";
+				but_flag = 1;
+#else /* JP */
 				note = " resists.";
+#endif /* JP */
 				dam *= 2; dam /= (randint(6)+6);
 			}
 			else if (r_ptr->flags3 & (RF3_HURT_LITE))
 			{
 				if (seen) l_ptr->flags3 |= (RF3_HURT_LITE);
+#ifdef JP
+				note = "は光に身をすくめた！";
+				note_dies = "は光を受けてしぼんでしまった！";
+#else /* JP */
 				note = " cringes from the light!";
 				note_dies = " shrivels away in the light!";
+#endif /* JP */
 				dam *= 2;
 			}
 			break;
@@ -2696,7 +3085,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags4 & (RF4_BR_DARK))
 			{
+#ifdef JP
+				note = "には耐性がある。";
+				but_flag = 1;
+#else /* JP */
 				note = " resists.";
+#endif /* JP */
 				dam *= 2; dam /= (randint(6)+6);
 			}
 			break;
@@ -2716,8 +3110,13 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 				if (seen) l_ptr->flags3 |= (RF3_HURT_ROCK);
 
 				/* Cute little message */
+#ifdef JP
+				note = "の皮膚がただれた！";
+				note_dies = "はドロドロに溶けた！";
+#else /* JP */
 				note = " loses some skin!";
 				note_dies = " dissolves!";
+#endif /* JP */
 			}
 
 			/* Usually, ignore the effects */
@@ -2813,7 +3212,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 				if (r_ptr->level > randint((dam - 10) < 1 ? 1 : (dam - 10)) + 10)
 				{
 					/* No obvious effect */
+#ifdef JP
+					note = "には効果がなかった！";
+					but_flag = 1;
+#else /* JP */
 					note = " is unaffected!";
+#endif /* JP */
 					obvious = FALSE;
 					do_fear = 0;
 				}
@@ -2851,7 +3255,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 				if (r_ptr->level > randint((dam - 10) < 1 ? 1 : (dam - 10)) + 10)
 				{
 					/* No obvious effect */
+#ifdef JP
+					note = "には効果がなかった！";
+					but_flag = 1;
+#else /* JP */
 					note = " is unaffected!";
+#endif /* JP */
 					obvious = FALSE;
 					do_fear = 0;
 				}
@@ -2885,7 +3294,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			    (r_ptr->level > randint((dam - 10) < 1 ? 1 : (dam - 10)) + 10))
 			{
 				/* No obvious effect */
+#ifdef JP
+				note = "には効果がなかった！";
+				but_flag = 1;
+#else /* JP */
 				note = " is unaffected!";
+#endif /* JP */
 				obvious = FALSE;
 				do_fear = 0;
 			}
@@ -2909,8 +3323,13 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 				if (seen) obvious = TRUE;
 
 				/* Message */
+#ifdef JP
+				note = "は身震いした。";
+				note_dies = "はドロドロに溶けた！";
+#else /* JP */
 				note = " shudders.";
 				note_dies = " dissolves!";
+#endif /* JP */
 			}
 
 			/* Others ignore */
@@ -2940,8 +3359,13 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 				if (seen) obvious = TRUE;
 
 				/* Message */
+#ifdef JP
+				note = "は身震いした。";
+				note_dies = "はドロドロに溶けた！";
+#else /* JP */
 				note = " shudders.";
 				note_dies = " dissolves!";
+#endif /* JP */
 			}
 
 			/* Others ignore */
@@ -2965,8 +3389,13 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 
 			/* Message */
+#ifdef JP
+			note = "は身震いした。";
+			note_dies = "はドロドロに溶けた！";
+#else /* JP */
 			note = " shudders.";
 			note_dies = " dissolves!";
+#endif /* JP */
 
 			break;
 		}
@@ -3007,13 +3436,21 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 	{
 		/* Extract method of death */
 		note = note_dies;
+#ifdef JP
+		but_flag = 0;
+#endif /* JP */
 	}
 
 	/* Mega-Hack -- Handle "polymorph" -- monsters get a saving throw */
 	else if (do_poly && (randint(90) > r_ptr->level))
 	{
 		/* Default -- assume no polymorph */
+#ifdef JP
+		note = "には効果がなかった！";
+		but_flag = 1;
+#else /* JP */
 		note = " is unaffected!";
+#endif /* JP */
 
 		/* Pick a "new" monster race */
 		tmp = poly_r_idx(m_ptr->r_idx);
@@ -3025,7 +3462,11 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 
 			/* Monster polymorphs */
+#ifdef JP
+			note = "が変身した！";
+#else /* JP */
 			note = " changes!";
+#endif /* JP */
 
 			/* Turn off the damage */
 			dam = 0;
@@ -3053,7 +3494,11 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 		if (seen) obvious = TRUE;
 
 		/* Message */
+#ifdef JP
+		note = "が消え去った！";
+#else /* JP */
 		note = " disappears!";
+#endif /* JP */
 
 		/* Teleport */
 		teleport_away(cave_m_idx[y][x], do_dist);
@@ -3074,12 +3519,20 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 		/* Get confused */
 		if (m_ptr->stunned)
 		{
+#ifdef JP
+			note = "はひどくもうろうとした。";
+#else /* JP */
 			note = " is more dazed.";
+#endif /* JP */
 			tmp = m_ptr->stunned + (do_stun / 2);
 		}
 		else
 		{
+#ifdef JP
+			note = "はもうろうとした。";
+#else /* JP */
 			note = " is dazed.";
+#endif /* JP */
 			tmp = do_stun;
 		}
 
@@ -3099,14 +3552,22 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 		/* Already partially confused */
 		if (m_ptr->confused)
 		{
+#ifdef JP
+			note = "はさらに混乱したようだ。";
+#else /* JP */
 			note = " looks more confused.";
+#endif /* JP */
 			tmp = m_ptr->confused + (do_conf / 2);
 		}
 
 		/* Was not confused */
 		else
 		{
+#ifdef JP
+			note = "は混乱したようだ。";
+#else /* JP */
 			note = " looks confused.";
+#endif /* JP */
 			tmp = do_conf;
 		}
 
@@ -3148,14 +3609,24 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			delete_monster_idx(cave_m_idx[y][x]);
 
 			/* Give detailed messages if destroyed */
+#ifdef JP
+			if (note) msg_format((but_flag ? "しかし%^s%s" : "%^s%s"),
+			                     m_name, note);
+#else /* JP */
 			if (note) msg_format("%^s%s", m_name, note);
+#endif /* JP */
 		}
 
 		/* Damaged monster */
 		else
 		{
 			/* Give detailed messages if visible or destroyed */
+#ifdef JP
+			if (note && seen) msg_format((but_flag ? "しかし%^s%s" : "%^s%s"),
+			                             m_name, note);
+#else /* JP */
 			if (note && seen) msg_format("%^s%s", m_name, note);
+#endif /* JP */
 
 			/* Hack -- Pain message */
 			else if (dam > 0) message_pain(cave_m_idx[y][x], dam);
@@ -3180,7 +3651,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 		else
 		{
 			/* Give detailed messages if visible or destroyed */
+#ifdef JP
+			if (note && seen) msg_format((but_flag ? "しかし%^s%s" : "%^s%s"),
+			                             m_name, note);
+#else /* JP */
 			if (note && seen) msg_format("%^s%s", m_name, note);
+#endif /* JP */
 
 			/* Hack -- Pain message */
 			else if (dam > 0) message_pain(cave_m_idx[y][x], dam);
@@ -3189,8 +3665,13 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if ((fear || do_fear) && (m_ptr->ml))
 			{
 				/* Message */
+#ifdef JP
+				message_format(MSG_FLEE, m_ptr->r_idx,
+				               "%^sは恐怖して逃げ出した！", m_name);
+#else /* JP */
 				message_format(MSG_FLEE, m_ptr->r_idx,
 				               "%^s flees in terror!", m_name);
+#endif /* JP */
 			}
 
 			/* Hack -- handle sleep */
@@ -3307,7 +3788,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Standard damage -- hurts inventory too */
 		case GF_ACID:
 		{
+#ifdef JP
+			if (blind) msg_print("酸で攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by acid!");
+#endif /* JP */
 			acid_dam(dam, killer);
 			break;
 		}
@@ -3315,7 +3800,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Standard damage -- hurts inventory too */
 		case GF_FIRE:
 		{
+#ifdef JP
+			if (blind) msg_print("火炎で攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by fire!");
+#endif /* JP */
 			fire_dam(dam, killer);
 			break;
 		}
@@ -3323,7 +3812,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Standard damage -- hurts inventory too */
 		case GF_COLD:
 		{
+#ifdef JP
+			if (blind) msg_print("冷気で攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by cold!");
+#endif /* JP */
 			cold_dam(dam, killer);
 			break;
 		}
@@ -3331,7 +3824,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Standard damage -- hurts inventory too */
 		case GF_ELEC:
 		{
+#ifdef JP
+			if (blind) msg_print("電撃で攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by lightning!");
+#endif /* JP */
 			elec_dam(dam, killer);
 			break;
 		}
@@ -3339,7 +3836,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Standard damage -- also poisons player */
 		case GF_POIS:
 		{
+#ifdef JP
+			if (blind) msg_print("毒で攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by poison!");
+#endif /* JP */
 			if (p_ptr->resist_pois) dam = (dam + 2) / 3;
 			if (p_ptr->oppose_pois) dam = (dam + 2) / 3;
 			take_hit(dam, killer);
@@ -3353,7 +3854,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Standard damage */
 		case GF_MISSILE:
 		{
+#ifdef JP
+			if (blind) msg_print("何かで攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something!");
+#endif /* JP */
 			take_hit(dam, killer);
 			break;
 		}
@@ -3361,7 +3866,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Holy Orb -- Player only takes partial damage */
 		case GF_HOLY_ORB:
 		{
+#ifdef JP
+			if (blind) msg_print("何かで攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something!");
+#endif /* JP */
 			dam /= 2;
 			take_hit(dam, killer);
 			break;
@@ -3370,7 +3879,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Arrow -- no dodging XXX */
 		case GF_ARROW:
 		{
+#ifdef JP
+			if (blind) msg_print("何か鋭いもので攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something sharp!");
+#endif /* JP */
 			take_hit(dam, killer);
 			break;
 		}
@@ -3378,7 +3891,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Plasma -- No resist XXX */
 		case GF_PLASMA:
 		{
+#ifdef JP
+			if (blind) msg_print("何かで攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something!");
+#endif /* JP */
 			take_hit(dam, killer);
 			if (!p_ptr->resist_sound)
 			{
@@ -3391,7 +3908,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Nether -- drain experience */
 		case GF_NETHER:
 		{
+#ifdef JP
+			if (blind) msg_print("何か奇妙なもので攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something strange!");
+#endif /* JP */
 			if (p_ptr->resist_nethr)
 			{
 				dam *= 6; dam /= (randint(6) + 6);
@@ -3400,7 +3921,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 			{
 				if (p_ptr->hold_life && (rand_int(100) < 75))
 				{
+#ifdef JP
+					msg_print("自己の生命力をしっかり守った！");
+#else /* JP */
 					msg_print("You keep hold of your life force!");
+#endif /* JP */
 				}
 				else
 				{
@@ -3408,12 +3933,20 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 
 					if (p_ptr->hold_life)
 					{
+#ifdef JP
+						msg_print("生命力が少し体から抜け落ちた気がする！");
+#else /* JP */
 						msg_print("You feel your life slipping away!");
+#endif /* JP */
 						lose_exp(d / 10);
 					}
 					else
 					{
+#ifdef JP
+						msg_print("生命力が体から吸い取られた気がする！");
+#else /* JP */
 						msg_print("You feel your life draining away!");
+#endif /* JP */
 						lose_exp(d);
 					}
 				}
@@ -3425,7 +3958,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Water -- stun/confuse */
 		case GF_WATER:
 		{
+#ifdef JP
+			if (blind) msg_print("何かで攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something!");
+#endif /* JP */
 			if (!p_ptr->resist_sound)
 			{
 				(void)set_stun(p_ptr->stun + randint(40));
@@ -3441,7 +3978,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Chaos -- many effects */
 		case GF_CHAOS:
 		{
+#ifdef JP
+			if (blind) msg_print("何か奇妙なもので攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something strange!");
+#endif /* JP */
 			if (p_ptr->resist_chaos)
 			{
 				dam *= 6; dam /= (randint(6) + 6);
@@ -3458,7 +3999,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 			{
 				if (p_ptr->hold_life && (rand_int(100) < 75))
 				{
+#ifdef JP
+					msg_print("自己の生命力をしっかり守った！");
+#else /* JP */
 					msg_print("You keep hold of your life force!");
+#endif /* JP */
 				}
 				else
 				{
@@ -3466,12 +4011,20 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 
 					if (p_ptr->hold_life)
 					{
+#ifdef JP
+						msg_print("生命力が少し体から抜け落ちた気がする！");
+#else /* JP */
 						msg_print("You feel your life slipping away!");
+#endif /* JP */
 						lose_exp(d / 10);
 					}
 					else
 					{
+#ifdef JP
+						msg_print("生命力が体から吸い取られた気がする！");
+#else /* JP */
 						msg_print("You feel your life draining away!");
+#endif /* JP */
 						lose_exp(d);
 					}
 				}
@@ -3483,7 +4036,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Shards -- mostly cutting */
 		case GF_SHARD:
 		{
+#ifdef JP
+			if (blind) msg_print("何か鋭いもので攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something sharp!");
+#endif /* JP */
 			if (p_ptr->resist_shard)
 			{
 				dam *= 6; dam /= (randint(6) + 6);
@@ -3499,7 +4056,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Sound -- mostly stunning */
 		case GF_SOUND:
 		{
+#ifdef JP
+			if (blind) msg_print("何かで攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something!");
+#endif /* JP */
 			if (p_ptr->resist_sound)
 			{
 				dam *= 5; dam /= (randint(6) + 6);
@@ -3516,7 +4077,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Pure confusion */
 		case GF_CONFUSION:
 		{
+#ifdef JP
+			if (blind) msg_print("何かで攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something!");
+#endif /* JP */
 			if (p_ptr->resist_confu)
 			{
 				dam *= 5; dam /= (randint(6) + 6);
@@ -3532,7 +4097,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Disenchantment -- see above */
 		case GF_DISENCHANT:
 		{
+#ifdef JP
+			if (blind) msg_print("何か奇妙なもので攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something strange!");
+#endif /* JP */
 			if (p_ptr->resist_disen)
 			{
 				dam *= 6; dam /= (randint(6) + 6);
@@ -3548,7 +4117,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Nexus -- see above */
 		case GF_NEXUS:
 		{
+#ifdef JP
+			if (blind) msg_print("何か奇妙なもので攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something strange!");
+#endif /* JP */
 			if (p_ptr->resist_nexus)
 			{
 				dam *= 6; dam /= (randint(6) + 6);
@@ -3564,7 +4137,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Force -- mostly stun */
 		case GF_FORCE:
 		{
+#ifdef JP
+			if (blind) msg_print("何かで攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something!");
+#endif /* JP */
 			if (!p_ptr->resist_sound)
 			{
 				(void)set_stun(p_ptr->stun + randint(20));
@@ -3576,7 +4153,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Inertia -- slowness */
 		case GF_INERTIA:
 		{
+#ifdef JP
+			if (blind) msg_print("何か奇妙なもので攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something strange!");
+#endif /* JP */
 			(void)set_slow(p_ptr->slow + rand_int(4) + 4);
 			take_hit(dam, killer);
 			break;
@@ -3585,7 +4166,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Lite -- blinding */
 		case GF_LITE:
 		{
+#ifdef JP
+			if (blind) msg_print("何かで攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something!");
+#endif /* JP */
 			if (p_ptr->resist_lite)
 			{
 				dam *= 4; dam /= (randint(6) + 6);
@@ -3601,7 +4186,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Dark -- blinding */
 		case GF_DARK:
 		{
+#ifdef JP
+			if (blind) msg_print("何かで攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something!");
+#endif /* JP */
 			if (p_ptr->resist_dark)
 			{
 				dam *= 4; dam /= (randint(6) + 6);
@@ -3617,7 +4206,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Time -- bolt fewer effects XXX */
 		case GF_TIME:
 		{
+#ifdef JP
+			if (blind) msg_print("何か奇妙なもので攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something strange!");
+#endif /* JP */
 
 			switch (randint(10))
 			{
@@ -3632,15 +4225,28 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 				{
 					switch (randint(6))
 					{
+#ifdef JP
+						case 1: k = A_STR; act = "強く"; break;
+						case 2: k = A_INT; act = "聡明で"; break;
+						case 3: k = A_WIS; act = "賢明で"; break;
+						case 4: k = A_DEX; act = "器用で"; break;
+						case 5: k = A_CON; act = "健康で"; break;
+						case 6: k = A_CHR; act = "美しく"; break;
+#else /* JP */
 						case 1: k = A_STR; act = "strong"; break;
 						case 2: k = A_INT; act = "bright"; break;
 						case 3: k = A_WIS; act = "wise"; break;
 						case 4: k = A_DEX; act = "agile"; break;
 						case 5: k = A_CON; act = "hale"; break;
 						case 6: k = A_CHR; act = "beautiful"; break;
+#endif /* JP */
 					}
 
+#ifdef JP
+					msg_format("あなたは以前ほど%sなくなってしまった...。", act);
+#else /* JP */
 					msg_format("You're not as %s as you used to be...", act);
+#endif /* JP */
 
 					p_ptr->stat_cur[k] = (p_ptr->stat_cur[k] * 3) / 4;
 					if (p_ptr->stat_cur[k] < 3) p_ptr->stat_cur[k] = 3;
@@ -3650,7 +4256,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 
 				case 10:
 				{
+#ifdef JP
+					msg_print("あなたは以前ほど力強くなくなってしまった...。");
+#else /* JP */
 					msg_print("You're not as powerful as you used to be...");
+#endif /* JP */
 
 					for (k = 0; k < A_MAX; k++)
 					{
@@ -3668,7 +4278,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Gravity -- stun plus slowness plus teleport */
 		case GF_GRAVITY:
 		{
+#ifdef JP
+			if (blind) msg_print("何か奇妙なもので攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something strange!");
+#endif /* JP */
 			msg_print("Gravity warps around you.");
 
 			/* Higher level players can resist the teleportation better */
@@ -3688,7 +4302,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Pure damage */
 		case GF_MANA:
 		{
+#ifdef JP
+			if (blind) msg_print("何かで攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something!");
+#endif /* JP */
 			take_hit(dam, killer);
 			break;
 		}
@@ -3696,7 +4314,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Pure damage */
 		case GF_METEOR:
 		{
+#ifdef JP
+			if (blind) msg_print("何かで攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something!");
+#endif /* JP */
 			take_hit(dam, killer);
 			break;
 		}
@@ -3704,7 +4326,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Ice -- cold plus stun plus cuts */
 		case GF_ICE:
 		{
+#ifdef JP
+			if (blind) msg_print("何か鋭いもので攻撃された！");
+#else /* JP */
 			if (blind) msg_print("You are hit by something sharp!");
+#endif /* JP */
 			cold_dam(dam, killer);
 			if (!p_ptr->resist_shard)
 			{

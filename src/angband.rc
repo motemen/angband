@@ -2,20 +2,55 @@
 
 ANGBAND MENU
 {
+#ifdef JP
+	POPUP "ファイル(&F)"
+#else /* JP */
 	POPUP "&File"
+#endif /* JP */
 	{
+#ifdef JP
+		MENUITEM "新規(&N)", 100
+		MENUITEM "開く(&O)...", 101
+#else /* JP */
 		MENUITEM "&New", 100
 		MENUITEM "&Open...", 101
+#endif /* JP */
 		MENUITEM SEPARATOR
+#ifdef JP
+		MENUITEM "保存(&S)", 110
+#else /* JP */
 		MENUITEM "&Save", 110
+#endif /* JP */
 		MENUITEM SEPARATOR
+#ifdef JP
+		MENUITEM "終了(&X)", 130
+#else /* JP */
 		MENUITEM "E&xit", 130
+#endif /* JP */
 	}
 
+#ifdef JP
+	POPUP "ウィンドウ(&W)"
+#else /* JP */
 	POPUP "&Window"
+#endif /* JP */
 	{
+#ifdef JP
+		POPUP "表示(&V)"
+#else /* JP */
 		POPUP "&Visibility"
+#endif /* JP */
 		{
+#ifdef JP
+			MENUITEM "メインウィンドウ", 200
+			MENUITEM "サブウィンドウ 1", 201
+			MENUITEM "サブウィンドウ 2", 202
+			MENUITEM "サブウィンドウ 3", 203
+			MENUITEM "サブウィンドウ 4", 204
+			MENUITEM "サブウィンドウ 5", 205
+			MENUITEM "サブウィンドウ 6", 206
+			MENUITEM "サブウィンドウ 7", 207
+#else /* JP */
 			MENUITEM "Term-0 window", 200
 			MENUITEM "Term-1 window", 201
 			MENUITEM "Term-2 window", 202
@@ -24,10 +59,25 @@ ANGBAND MENU
 			MENUITEM "Term-5 window", 205
 			MENUITEM "Term-6 window", 206
 			MENUITEM "Term-7 window", 207
+#endif /* JP */
 		}
 
+#ifdef JP
+		POPUP "フォント(&F)"
+#else /* JP */
 		POPUP "&Font"
+#endif /* JP */
 		{
+#ifdef JP
+			MENUITEM "メインウィンドウ", 210
+			MENUITEM "サブウィンドウ 1", 211
+			MENUITEM "サブウィンドウ 2", 212
+			MENUITEM "サブウィンドウ 3", 213
+			MENUITEM "サブウィンドウ 4", 214
+			MENUITEM "サブウィンドウ 5", 215
+			MENUITEM "サブウィンドウ 6", 216
+			MENUITEM "サブウィンドウ 7", 217
+#else /* JP */
 			MENUITEM "Term-0 window", 210
 			MENUITEM "Term-1 window", 211
 			MENUITEM "Term-2 window", 212
@@ -36,12 +86,23 @@ ANGBAND MENU
 			MENUITEM "Term-5 window", 215
 			MENUITEM "Term-6 window", 216
 			MENUITEM "Term-7 window", 217
+#endif /* JP */
 		}
 
 		MENUITEM SEPARATOR
 
 		POPUP "Bizarre Display"
 		{
+#ifdef JP
+			MENUITEM "メインウィンドウ", 230
+			MENUITEM "サブウィンドウ 1", 231
+			MENUITEM "サブウィンドウ 2", 232
+			MENUITEM "サブウィンドウ 3", 233
+			MENUITEM "サブウィンドウ 4", 234
+			MENUITEM "サブウィンドウ 5", 235
+			MENUITEM "サブウィンドウ 6", 236
+			MENUITEM "サブウィンドウ 7", 237
+#else /* JP */
 			MENUITEM "Term-0 window", 230
 			MENUITEM "Term-1 window", 231
 			MENUITEM "Term-2 window", 232
@@ -50,10 +111,25 @@ ANGBAND MENU
 			MENUITEM "Term-5 window", 235
 			MENUITEM "Term-6 window", 236
 			MENUITEM "Term-7 window", 237
+#endif /* JP */
 		}
 
+#ifdef JP
+		POPUP "タイルの幅を広げる"
+#else
 		POPUP "Increase Tile Width"
+#endif /* JP */
 		{
+#ifdef JP
+			MENUITEM "メインウィンドウ", 240
+			MENUITEM "サブウィンドウ 1", 241
+			MENUITEM "サブウィンドウ 2", 242
+			MENUITEM "サブウィンドウ 3", 243
+			MENUITEM "サブウィンドウ 4", 244
+			MENUITEM "サブウィンドウ 5", 245
+			MENUITEM "サブウィンドウ 6", 246
+			MENUITEM "サブウィンドウ 7", 247
+#else /* JP */
 			MENUITEM "Term-0 window", 240
 			MENUITEM "Term-1 window", 241
 			MENUITEM "Term-2 window", 242
@@ -62,10 +138,25 @@ ANGBAND MENU
 			MENUITEM "Term-5 window", 245
 			MENUITEM "Term-6 window", 246
 			MENUITEM "Term-7 window", 247
+#endif /* JP */
 		}
 
+#ifdef JP
+		POPUP "タイルの幅を縮める"
+#else /* JP */
 		POPUP "Decrease Tile Width"
+#endif /* JP */
 		{
+#ifdef JP
+			MENUITEM "メインウィンドウ", 250
+			MENUITEM "サブウィンドウ 1", 251
+			MENUITEM "サブウィンドウ 2", 252
+			MENUITEM "サブウィンドウ 3", 253
+			MENUITEM "サブウィンドウ 4", 254
+			MENUITEM "サブウィンドウ 5", 255
+			MENUITEM "サブウィンドウ 6", 256
+			MENUITEM "サブウィンドウ 7", 257
+#else /* JP */
 			MENUITEM "Term-0 window", 250
 			MENUITEM "Term-1 window", 251
 			MENUITEM "Term-2 window", 252
@@ -74,10 +165,25 @@ ANGBAND MENU
 			MENUITEM "Term-5 window", 255
 			MENUITEM "Term-6 window", 256
 			MENUITEM "Term-7 window", 257
+#endif /* JP */
 		}
 
+#ifdef JP
+		POPUP "タイルの高さを広げる"
+#else /* JP */
 		POPUP "Increase Tile Height"
+#endif /* JP */
 		{
+#ifdef JP
+			MENUITEM "メインウィンドウ", 260
+			MENUITEM "サブウィンドウ 1", 261
+			MENUITEM "サブウィンドウ 2", 262
+			MENUITEM "サブウィンドウ 3", 263
+			MENUITEM "サブウィンドウ 4", 264
+			MENUITEM "サブウィンドウ 5", 265
+			MENUITEM "サブウィンドウ 6", 266
+			MENUITEM "サブウィンドウ 7", 267
+#else /* JP */
 			MENUITEM "Term-0 window", 260
 			MENUITEM "Term-1 window", 261
 			MENUITEM "Term-2 window", 262
@@ -86,10 +192,25 @@ ANGBAND MENU
 			MENUITEM "Term-5 window", 265
 			MENUITEM "Term-6 window", 266
 			MENUITEM "Term-7 window", 267
+#endif /* JP */
 		}
 
+#ifdef JP
+		POPUP "タイルの高さを縮める"
+#else /* JP */
 		POPUP "Decrease Tile Height"
+#endif /* JP */
 		{
+#ifdef JP
+			MENUITEM "メインウィンドウ", 270
+			MENUITEM "サブウィンドウ 1", 271
+			MENUITEM "サブウィンドウ 2", 272
+			MENUITEM "サブウィンドウ 3", 273
+			MENUITEM "サブウィンドウ 4", 274
+			MENUITEM "サブウィンドウ 5", 275
+			MENUITEM "サブウィンドウ 6", 276
+			MENUITEM "サブウィンドウ 7", 277
+#else /* JP */
 			MENUITEM "Term-0 window", 270
 			MENUITEM "Term-1 window", 271
 			MENUITEM "Term-2 window", 272
@@ -98,32 +219,76 @@ ANGBAND MENU
 			MENUITEM "Term-5 window", 275
 			MENUITEM "Term-6 window", 276
 			MENUITEM "Term-7 window", 277
+#endif /* JP */
 		}
 	}
 
+#ifdef JP
+	POPUP "オプション(&O)"
+#else /* JP */
 	POPUP "&Options"
+#endif /* JP */
 	{
+#ifdef JP
+		POPUP "グラフィック(&G)"
+#else /* JP */
 		POPUP "&Graphics"
+#endif /* JP */
 		{
+#ifdef JP
+			MENUITEM "なし(&N)", 400
+			MENUITEM "旧タイル(&O)", 401
+			MENUITEM "&Adam Boltさんのタイル", 402
+			MENUITEM "&David Gervaisさんのタイル", 403
+			MENUITEM "ビッグタイル(&B)", 409
+#else /* JP */
 			MENUITEM "&None", 400
 			MENUITEM "&Old tiles", 401
 			MENUITEM "&Adam Bolt's tiles", 402
 			MENUITEM "&David Gervais' tiles", 403
 			MENUITEM "&Bigtile mode", 409
+#endif /* JP */
 		}
 
+#ifdef JP
+  		MENUITEM "効果音(&S)", 410
+#else /* JP */
 		MENUITEM "&Sound", 410
+#endif /* JP */
 		MENUITEM SEPARATOR
+#ifdef JP
+		MENUITEM "Low Priority", 420
+		MENUITEM "スクリーンセーバーを起動", 430
+		MENUITEM "地図(&M)", 440
+#else /* JP */
 		MENUITEM "Low Priority", 420
 		MENUITEM "Activate Screensaver", 430
 		MENUITEM "&Map", 440
+#endif /* JP */
+		MENUITEM SEPARATOR
+#ifdef JP
+		MENUITEM "壁紙を使う(&B)", 450
+		MENUITEM "壁紙を選択(&O)...", 451
+#else /* JP */
+		MENUITEM "Use &Background", 450
+		MENUITEM "&Open Bitmap)...", 451
+#endif /* JP */
 	}
 
+#ifdef JP
+	POPUP "ヘルプ(&H)"
+#else /* JP */
 	POPUP "&Help"
+#endif /* JP */
 	{
+#ifdef JP
+		MENUITEM "ヘルプ目次(&C)", 901
+#else /* JP */
 		MENUITEM "&Contents", 901
+#endif /* JP */
 	}
 }
 
 ANGBAND ICON "angband.ico"
 
+ANGBAND BITMAP "wall.bmp"
