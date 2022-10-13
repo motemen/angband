@@ -10,131 +10,157 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 # ../lib/gamedata/blow_effects.txt:25
+#: ../lib/gamedata/blow_effects.txt:25
 msgctxt "blow_effects"
 msgid "attack"
 msgstr "ダメージを与える"
 
 # ../lib/gamedata/blow_effects.txt:32
+#: ../lib/gamedata/blow_effects.txt:32
 msgctxt "blow_effects"
 msgid "poison"
 msgstr "毒に冒す"
 
 # ../lib/gamedata/blow_effects.txt:42
+#: ../lib/gamedata/blow_effects.txt:42
 msgctxt "blow_effects"
 msgid "disenchant"
 msgstr "劣化させる"
 
 # ../lib/gamedata/blow_effects.txt:52
+#: ../lib/gamedata/blow_effects.txt:52
 msgctxt "blow_effects"
 msgid "drain charges"
 msgstr "充填魔力を吸収する"
 
 # ../lib/gamedata/blow_effects.txt:61
+#: ../lib/gamedata/blow_effects.txt:61
 msgctxt "blow_effects"
 msgid "steal gold"
 msgstr "金を盗む"
 
 # ../lib/gamedata/blow_effects.txt:70
+#: ../lib/gamedata/blow_effects.txt:70
 msgctxt "blow_effects"
 msgid "steal items"
 msgstr "アイテムを盗む"
 
 # ../lib/gamedata/blow_effects.txt:79
+#: ../lib/gamedata/blow_effects.txt:79
 msgctxt "blow_effects"
 msgid "eat your food"
 msgstr "あなたの食料を食べる"
 
 # ../lib/gamedata/blow_effects.txt:88
+#: ../lib/gamedata/blow_effects.txt:88
 msgctxt "blow_effects"
 msgid "absorb light"
 msgstr "光を吸収する"
 
 # ../lib/gamedata/blow_effects.txt:97
+#: ../lib/gamedata/blow_effects.txt:97
 msgctxt "blow_effects"
 msgid "shoot acid"
 msgstr "酸を飛ばす"
 
 # ../lib/gamedata/blow_effects.txt:153
+#: ../lib/gamedata/blow_effects.txt:106
 msgctxt "blow_effects"
 msgid "electrify"
 msgstr "感電させる"
 
 # ../lib/gamedata/blow_effects.txt:115
+#: ../lib/gamedata/blow_effects.txt:115
 msgctxt "blow_effects"
 msgid "burn"
 msgstr "燃やす"
 
 # ../lib/gamedata/blow_effects.txt:124
+#: ../lib/gamedata/blow_effects.txt:124
 msgctxt "blow_effects"
 msgid "freeze"
 msgstr "凍らせる"
 
 # ../lib/gamedata/blow_effects.txt:133
+#: ../lib/gamedata/blow_effects.txt:133
 msgctxt "blow_effects"
 msgid "blind"
 msgstr "盲目にする"
 
 # ../lib/gamedata/blow_effects.txt:143
+#: ../lib/gamedata/blow_effects.txt:143
 msgctxt "blow_effects"
 msgid "confuse"
 msgstr "混乱させる"
 
 # ../lib/gamedata/blow_effects.txt:153
+#: ../lib/gamedata/blow_effects.txt:153
 msgctxt "blow_effects"
 msgid "terrify"
 msgstr "恐怖させる"
 
 # ../lib/gamedata/blow_effects.txt:163
+#: ../lib/gamedata/blow_effects.txt:163
 msgctxt "blow_effects"
 msgid "paralyze"
 msgstr "麻痺させる"
 
 # ../lib/gamedata/blow_effects.txt:173
+#: ../lib/gamedata/blow_effects.txt:173
 msgctxt "blow_effects"
 msgid "reduce strength"
 msgstr "腕力を減少させる"
 
 # ../lib/gamedata/blow_effects.txt:183
+#: ../lib/gamedata/blow_effects.txt:183
 msgctxt "blow_effects"
 msgid "reduce intelligence"
 msgstr "知能を減少させる"
 
 # ../lib/gamedata/blow_effects.txt:193
+#: ../lib/gamedata/blow_effects.txt:193
 msgctxt "blow_effects"
 msgid "reduce wisdom"
 msgstr "賢さを減少させる"
 
 # ../lib/gamedata/blow_effects.txt:203
+#: ../lib/gamedata/blow_effects.txt:203
 msgctxt "blow_effects"
 msgid "reduce dexterity"
 msgstr "器用さを減少させる"
 
 # ../lib/gamedata/blow_effects.txt:213
+#: ../lib/gamedata/blow_effects.txt:213
 msgctxt "blow_effects"
 msgid "reduce constitution"
 msgstr "耐久力を減少させる"
 
 # ../lib/gamedata/blow_effects.txt:223
+#: ../lib/gamedata/blow_effects.txt:223
 msgctxt "blow_effects"
 msgid "reduce all stats"
 msgstr "すべてのステータスを減少させる"
 
 # ../lib/gamedata/blow_effects.txt:232
+#: ../lib/gamedata/blow_effects.txt:232
 msgctxt "blow_effects"
 msgid "shatter"
 msgstr "粉砕する"
 
 # ../lib/gamedata/blow_effects.txt:239
+#: ../lib/gamedata/blow_effects.txt:239
 msgctxt "blow_effects"
 msgid "lower experience"
 msgstr "経験値を下げる"
 
 # ../lib/gamedata/blow_effects.txt:279
+#: ../lib/gamedata/blow_effects.txt:279
 msgctxt "blow_effects"
 msgid "cause hallucinations"
 msgstr "幻覚状態にする"
 
 # ../lib/gamedata/blow_effects.txt:289
+#: ../lib/gamedata/blow_effects.txt:289
 msgctxt "blow_effects"
 msgid "inflict Black Breath"
 msgstr "黒の息を吐く"

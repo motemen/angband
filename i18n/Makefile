@@ -41,13 +41,3 @@ _gamedata-source.pot:
 	chmod +w $@ || true
 	xgettext --omit-header -kGAMEDATA_ -kGAMEDATA_N_ -o $@ ../src/list-mon-race-flags.h
 	chmod -w $@
-
-hengband.messages.po: hengband.in.po
-	msgmerge --previous $< messages.pot -o $@
-
-hengband.in.po:
-	perl -nle 'BEGIN { print qq(msgid ""\nmsgstr ""\n"Content-Type: text/plain; charset=UTF-8\\n"\n"Language: ja\\n"\n) } $$2 ne "\\0" and print qq(#: $$ARGV:$$.\nmsgid "$$2"\nmsgstr "$$1"\n) while /_\(\s*"((?:\\"|[^"])+)"\s*,\s*"((?:\\"|[^"])+)"\s*\)/g; $$. = 0 if eof' ../../../hengband/hengband/src/**/*.cpp | msguniq -o $@
-
-.PHONY: merge-messages
-merge-messages: hengband.messages.po
-	msgcat --lang ja --to-code UTF-8 ja_JP/LC_MESSAGES/messages.po hengband.messages.po -o ja_JP/LC_MESSAGES/messages.po

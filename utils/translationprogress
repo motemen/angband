@@ -1,0 +1,52 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use List::Util qw(sum);
+
+my %count;
+my ($msgid, $msgstr, @locs);
+my $state;
+
+while (<>) {
+  if (/^msgid "(.*)"/) {
+    $msgid = $1;
+    $state = 'MSGID';
+    undef $msgstr;
+  } elsif (/^msgstr "(.*)"/) {
+    $msgstr = $1;
+    $state = 'MSGSTR';
+  } elsif (/^"(.*)"/) {
+    if ($state eq 'MSGID') {
+      $msgid .= $1;
+    } elsif ($state eq 'MSGSTR') {
+      $msgstr .= $1;
+    } else {
+      die "got line '$_' at invalid state '$state' at line $.";
+    }
+  } else {
+    if (/^#: (.+)/) {
+      @locs = map { s/:[0-9]+$//; s<^(\.\./)+><>; $_ } split / /, $1;
+    }
+    if ($msgid) {
+      while (my $loc = pop @locs) {
+        $count{$loc}{$msgid} = length $msgstr ? 1 : 0;
+      }
+    }
+
+    undef $msgid;
+    undef $msgstr;
+    undef $state;
+  }
+}
+
+if ($msgid) {
+  while (my $loc = pop @locs) {
+    $count{$loc}{$msgid} = length $msgstr ? 1 : 0;
+  }
+}
+
+if (eof) {
+  for my $loc (sort keys %count) {
+    print "$loc\t", sum(values %{$count{$loc}}), "\t", scalar keys %{$count{$loc}}, "\n";
+  }
+}

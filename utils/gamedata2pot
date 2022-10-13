@@ -26,14 +26,14 @@ while (<$fh>) {
         next if $type eq 'blow_effects';
 
         next if $seen->{$1}++;
-        print "# $file:$.\n";
+        print "#: $file:$.\n";
         print qq(msgid "$1"\n);
         print qq(msgstr ""\n\n);
     }
 
     if (/^act:(.+)/) {
         next if $seen->{$1}++;
-        print "# $file:$.\n";
+        print "#: $file:$.\n";
         print qq(msgid "$1"\n);
         print qq(msgstr ""\n\n);
     }
@@ -50,7 +50,7 @@ while (<$fh>) {
 
         next if $seen->{ join "\n", @msgid }++;
 
-        print "# $file:$.\n";
+        print "#: $file:$.\n";
         print qq(msgctxt "$context"\n) if $context;
         print qq(msgid ""\n);
         for (@msgid) {

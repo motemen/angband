@@ -625,7 +625,7 @@ static const char *lore_describe_speed(uint8_t speed)
 	}
 
 	/* Return a weird description, since the value wasn't found in the table */
-	return "erroneously";
+	return _("erroneously");
 }
 
 /**
@@ -1031,7 +1031,7 @@ void lore_append_movement(textblock *tb, const struct monster_race *race,
 		textblock_append(tb, _(" erratically"));
 
 		/* Hack -- Occasional conjunction */
-		if (race->speed != 110) textblock_append(tb, ", and");
+		if (race->speed != 110) textblock_append(tb, _(", and"));
 	}
 
 	/* Speed */

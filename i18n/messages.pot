@@ -193,6 +193,10 @@ msgstr ""
 msgid "incredibly slowly"
 msgstr ""
 
+#: ../src/mon-lore.c:628
+msgid "erroneously"
+msgstr ""
+
 #: ../src/mon-lore.c:642
 msgid "at "
 msgstr ""
@@ -373,6 +377,10 @@ msgstr ""
 
 #: ../src/mon-lore.c:1031
 msgid " erratically"
+msgstr ""
+
+#: ../src/mon-lore.c:1034
+msgid ", and"
 msgstr ""
 
 #: ../src/mon-lore.c:1049
