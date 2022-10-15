@@ -13,7 +13,8 @@ $(LOCALE)/LC_MESSAGES/gamedata.po: \
 		$(LOCALE)/LC_MESSAGES/_gamedata-p_race.po \
 		$(LOCALE)/LC_MESSAGES/_gamedata-blow_methods.po \
 		$(LOCALE)/LC_MESSAGES/_gamedata-blow_effects.po \
-		$(LOCALE)/LC_MESSAGES/_gamedata-source.po
+		$(LOCALE)/LC_MESSAGES/_gamedata-source.po \
+		$(LOCALE)/LC_MESSAGES/_gamedata-object.po
 
 	chmod +w $@
 	xgettext $^ -o - | grep -v POT-Creation-Date: > $@
