@@ -1164,13 +1164,14 @@ void lore_append_exp(textblock *tb, const struct monster_race *race,
 
 	/* Mention the dependance on the player's level */
 	char level_part[64];
-	level = player->lev % 10;
 	#ifdef USE_LOCALE
+	level = player->lev;
 	strnfmt(level_part, sizeof(level_part), "%u", level);
 	#else
 	const char *ordinal, *article;
 	/* Take account of annoying English */
 	ordinal = "th";
+	level = player->lev % 10;
 	if ((player->lev / 10) == 1) /* nothing */;
 	else if (level == 1) ordinal = "st";
 	else if (level == 2) ordinal = "nd";
