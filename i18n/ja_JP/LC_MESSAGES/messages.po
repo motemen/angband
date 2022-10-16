@@ -125,7 +125,7 @@ msgstr "%s (%c) が一つ食べられてしまった!"
 
 #: ../src/mon-desc.c:205
 msgid "the "
-msgstr " "
+msgstr "\003"
 
 #: ../src/mon-desc.c:232
 msgid "'s"
@@ -213,7 +213,7 @@ msgstr ""
 
 #: ../src/mon-lore.c:642
 msgid "at "
-msgstr " "
+msgstr "\003"
 
 #: ../src/mon-lore.c:667
 msgid " normal speed, which is "
@@ -282,7 +282,7 @@ msgstr "、"
 #: ../src/mon-lore.c:797 ../src/mon-lore.c:800 ../src/mon-lore.c:843
 #: ../src/mon-lore.c:846 ../src/mon-lore.c:1038
 msgid " "
-msgstr " "
+msgstr "\003"
 
 #: ../src/mon-lore.c:889
 #, c-format
@@ -434,7 +434,7 @@ msgstr "あなたは"
 
 #: ../src/mon-lore.c:1110
 msgid "n"
-msgstr " "
+msgstr "\003"
 
 #: ../src/mon-lore.c:1112
 #, c-format

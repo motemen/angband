@@ -7,7 +7,7 @@
 #include <libintl.h>
 #include <locale.h>
 // NOTE[locale] temporary fix for gettext not handling empty msgstr
-#define _(string) ({ const char *t = gettext(string); t[0] == ' ' && t[1] == '\0' ? "" : t; })
+#define _(string) ({ const char *t = gettext(string); t && t[0] == '\003' && t[1] == '\0' ? "" : t; })
 #define _C(ctx, msgid) ({ const char *t = gettext(ctx "\004" msgid); strcmp(t, ctx "\004" msgid) == 0 ? msgid : t; })
 #define gettext_noop(string) string
 #define N_(string) gettext_noop(string)
