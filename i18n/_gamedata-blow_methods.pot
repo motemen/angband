@@ -1,0 +1,227 @@
+#: ../lib/gamedata/blow_methods.txt:20
+msgid "hits {target}"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:22
+msgid ""
+"hit"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:29
+msgid "touches {target}"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:31
+msgid ""
+"touch"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:38
+msgid "punches {target}"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:40
+msgid ""
+"punch"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:47
+msgid "kicks {target}"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:49
+msgid ""
+"kick"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:56
+msgid "claws {target}"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:58
+msgid ""
+"claw"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:65
+msgid "bites {target}"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:67
+msgid ""
+"bite"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:74
+msgid "stings {target}"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:76
+msgid ""
+"sting"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:83
+msgid "butts {target}"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:85
+msgid ""
+"butt"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:92
+msgid "crushes {target}"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:94
+msgid ""
+"crush"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:101
+msgid "engulfs {target}"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:103
+msgid ""
+"engulf"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:110
+msgid "crawls on {target}"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:112
+msgid ""
+"crawl on you"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:119
+msgid "drools on {target}"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:121
+msgid ""
+"drool on you"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:128
+msgid "spits on {target}"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:130
+msgid ""
+"spit"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:137
+msgid "gazes at {target}"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:139
+msgid ""
+"gaze"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:146
+msgid "wails at {target}"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:148
+msgid ""
+"wail"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:155
+msgid "releases spores at {target}"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:157
+msgid ""
+"release spores"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:164
+msgid "begs {target} for money"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:166
+msgid ""
+"beg"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:173
+msgid "insults {target}!"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:174
+msgid "insults {oftarget} mother!"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:175
+msgid "gives {target} the finger!"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:176
+msgid "humiliates {target}!"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:177
+msgid "defiles {target}!"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:178
+msgid "dances around {target}!"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:179
+msgid "makes obscene gestures!"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:180
+msgid "moons {target}!!!"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:182
+msgid ""
+"insult"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:189
+msgid "wants his mushrooms back"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:190
+msgid "tells {target} to get off his land"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:191
+msgid "looks for his dogs"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:192
+msgid "says 'Did you kill my Fang?'"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:193
+msgid "asks 'Do you want to buy any mushrooms?'"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:194
+msgid "seems sad about something"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:195
+msgid "asks if {target} {has} seen his dogs"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:196
+msgid "mumbles something about mushrooms"
+msgstr ""
+
+#: ../lib/gamedata/blow_methods.txt:198
+msgid ""
+"moan"
+msgstr ""
+

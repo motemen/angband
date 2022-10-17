@@ -1,6 +1,19 @@
 LOCALE = ja_JP
 
+GAMEDATA_POTS = \
+		_gamedata-class.pot \
+		_gamedata-monster.pot \
+		_gamedata-p_race.pot \
+		_gamedata-blow_methods.pot \
+		_gamedata-blow_effects.pot \
+		_gamedata-source.pot \
+		_gamedata-object.pot
+
+.PHONY: all
 all: $(LOCALE)/LC_MESSAGES/messages.mo $(LOCALE)/LC_MESSAGES/gamedata.mo
+
+.PHONY: all-pots
+all-pots: $(GAMEDATA_POTS)
 
 %.mo: %.po
 	msgfmt $< -o $@
@@ -8,13 +21,7 @@ all: $(LOCALE)/LC_MESSAGES/messages.mo $(LOCALE)/LC_MESSAGES/gamedata.mo
 $(LOCALE)/LC_MESSAGES/messages.mo: $(LOCALE)/LC_MESSAGES/messages.po
 
 $(LOCALE)/LC_MESSAGES/gamedata.po: \
-		$(LOCALE)/LC_MESSAGES/_gamedata-class.po \
-		$(LOCALE)/LC_MESSAGES/_gamedata-monster.po \
-		$(LOCALE)/LC_MESSAGES/_gamedata-p_race.po \
-		$(LOCALE)/LC_MESSAGES/_gamedata-blow_methods.po \
-		$(LOCALE)/LC_MESSAGES/_gamedata-blow_effects.po \
-		$(LOCALE)/LC_MESSAGES/_gamedata-source.po \
-		$(LOCALE)/LC_MESSAGES/_gamedata-object.po
+		$(patsubst %.pot,$(LOCALE)/LC_MESSAGES/%.po,$(GAMEDATA_POTS))
 
 	chmod +w $@
 	xgettext $^ -o - | grep -v POT-Creation-Date: > $@

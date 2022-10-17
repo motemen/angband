@@ -4,7 +4,9 @@ use warnings;
 use Encode;
 use Data::Dumper;
 
-# usage: applytrans <path/to/hengband/r_info.txt>
+# Import hengband translation to .pot files.
+#
+# usage: utils/applytrans <path/to/hengband/r_info.txt> < i18n/_gamedata-monster.pot > i18n/ja_JP/LC_MESSAGES/_gamedata-monster.po
 
 my $ja_monster_txt = shift or die;
 
@@ -15,11 +17,15 @@ my ($name_en, $name_ja, @desc_en, @desc_ja, @comments);
 my $translation = {};
 my $comments = {};
 
-# TODO: comments
 while (<$fh>) {
-  /^#/ and push @comments, $_;
-  /^N:\d+:(.+)/ and $name_ja = $1;
-  /^E:(.+)/     and $name_en = $1;
+  if (/^#J/) {
+    push @comments, $_;
+  } elsif (/^N:\d+:(.+)/) {
+    $name_ja = $1;
+  } elsif (/^E:(.+)/) {
+    $name_en = $1;
+  }
+
   if (my ($desc) = /^D:(.+)/) {
     if ($desc =~ /^\$(.+)/) {
       push @desc_en, $1;
@@ -28,22 +34,46 @@ while (<$fh>) {
     }
   }
 
-  if (/^$/ && $name_en) {
-    warn "conflict: $name_en" if $translation->{$name_en};
+  if (/^$/) {
+    if ($name_en) {
+      # empty line is end of entry
+      warn "conflict: $name_en" if $translation->{$name_en};
 
-    $translation->{uc $name_en} = $name_ja;
-    $translation->{ uc join "", @desc_en } = join "", @desc_ja;
-    $comments->{uc $name_en} = [ @comments ];
+      # Some files contain ':' in names for multiple entries
+      # > N:1:盲目:青い
+      # > E:Blindness:Blue
+      my @name_en_parts = split /:/, $name_en;
+      my @name_ja_parts = split /:/, $name_ja;
 
-    undef $name_en;
-    undef $name_ja;
-    undef @desc_en;
-    undef @desc_ja;
-    undef @comments;
+      die "unexpected: number of colons mismatch: '$name_en' vs '$name_ja'"
+        if @name_en_parts != @name_ja_parts;
+
+      $translation->{ uc join "", @desc_en } = join "", @desc_ja;
+
+      for my $i (0..$#name_en_parts) {
+        $translation->{uc $name_en_parts[$i]} = $name_ja_parts[$i];
+      }
+
+      # Comments are for first entry
+      $comments->{uc $name_en_parts[0]} = [ @comments ];
+
+      undef $name_en;
+      undef $name_ja;
+      undef @desc_en;
+      undef @desc_ja;
+      undef @comments;
+    } elsif (@comments) {
+      $comments->{''} = [ @comments ];
+    }
   }
 }
 
+for (@{ $comments->{''} || [] }) {
+  print "$_";
+}
+
 print <<'__HEADER__';
+
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"

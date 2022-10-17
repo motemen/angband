@@ -1,0 +1,2079 @@
+#: ../lib/gamedata/object.txt:175
+msgid "<pile>"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:179
+msgid "<unknown item>"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:183
+msgid "<unknown treasure>"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:187
+msgid "<curse object>"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:193
+msgid "& Wooden Torch~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:204
+msgid "& Lantern~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:215
+msgid "& Flask~ of oil"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:230
+msgid ""
+"It can be used to fuel a lantern with 7500 turns of light, up to"
+" a maximum of 15000 turns of light."
+"  When thrown, it is considered lit, so it does more than nominal"
+" damage (which occurs even against creatures resistant to fire)."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:235
+msgid "& Hard Biscuit~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:246
+msgid ""
+"A filling if tooth-breaking biscuit made mostly of rye."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:247
+msgid "& Apple~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:260
+msgid ""
+"Wrinkled, but sound and sweet."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:261
+msgid "& Handful~ of Dried Fruits"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:274
+msgid ""
+"Fruit roughly chopped and sun-dried, prepared as marching rations for the"
+" rangers of Ithilien."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:275
+msgid "& Slime Mold~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:289
+msgid ""
+"A strange fungal growth, prone to moving if not observed.  Not very tasty"
+" but quite filling."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:290
+msgid "& Ration~ of Food"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:305
+msgid ""
+"This nutritious but fairly bland food, called cram by the Lake-men who"
+" make it is familiar to anyone contemplating long journeys.  It is"
+" sustaining, but very uninteresting except as a chewing exercise."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:306
+msgid "& Scrap~ of Flesh"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:330
+msgid ""
+"A grey-looking piece of dried flesh of you dare not guess what creature."
+"  You would have to be desperate to eat this."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:332
+msgid "& Slice~ of Meat"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:346
+msgid ""
+"A thick slice of pork, salted to keep it from spoiling.  It is very"
+" filling."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:347
+msgid "& Honey-cake~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:362
+msgid ""
+"The Beornings are renowned as the best bakers among men, and their"
+" honey-cakes are deservedly prized.  Made of wheat flour with nuts and"
+" honey and twice baked, they will sustain you through a long march."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:363
+msgid "& Piece~ of Elvish Waybread"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:380
+msgid ""
+"Food of the elves is always good; their waybread is no exception.  These"
+" thin cakes are wrapped in leaves and keep their tastiness for months."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:381
+msgid "& Flask~ of Whisky"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:394
+msgid ""
+"It raises your spirits."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:395
+msgid "& Pint~ of Fine Wine"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:408
+msgid ""
+"A fine way to wash down some otherwise unappetising rations."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:409
+msgid "& Sip~ of Miruvor"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:424
+msgid ""
+"Just a little of this warm and fragrant liquor gives you fresh hope and"
+" vigour."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:425
+msgid "& Swig~ of Orcish Liquor"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:442
+msgid ""
+"This is a dirty brown color; you don't trust it."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:443
+msgid "& Draught~ of the Ents"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:460
+msgid ""
+"This looks like pure water, but its scent reminds you of the smell of a"
+" distant wood borne from afar by a cool breeze at night."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:463
+msgid "Second Sight"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:478
+msgid "Fast Recovery"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:496
+msgid "Vigor"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:513
+msgid "Clear Mind"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:532
+msgid "Emergency"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:552
+msgid "Terror"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:566
+msgid ""
+"It allows you to run for your life."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:567
+msgid "Stoneskin"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:581
+msgid ""
+"Its poison turns your skin to stone, albeit briefly."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:582
+msgid "Turbulence"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:593
+msgid "Debility"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:610
+msgid "Sprinting"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:624
+msgid ""
+"It hastes you for a while, but then makes you slower for a while afterward."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:625
+msgid "Purging"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:641
+msgid ""
+"It makes you very hungry but otherwise healthy."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:642
+msgid "Shadows"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:656
+msgid ""
+"It makes you very stealthy for a short while."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:662
+msgid "& Dagger~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:673
+msgid ""
+"A short two-edged blade perfect for thrusting or throwing."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:674
+msgid "& Main Gauche~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:684
+msgid ""
+"A short thrusting blade with a large guard, primarily used in duels."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:685
+msgid "& Rapier~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:695
+msgid ""
+"A long, thin thrusting blade, mainly used in duels."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:696
+msgid "& Short Sword~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:706
+msgid ""
+"A short thrusting sword."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:707
+msgid "& Cutlass~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:718
+msgid ""
+"A thicker and slightly longer dagger, the cutlass is a slashing sword.  It"
+" possesses a slight curve and only one side is sharp."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:719
+msgid "& Tulwar~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:729
+msgid ""
+"A wider-bladed cousin of the shamshir, with less of a curve."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:730
+msgid "& Scimitar~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:740
+msgid ""
+"A long sabre with an extreme curve to the blade."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:741
+msgid "& Long Sword~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:752
+msgid ""
+"A long, straight, two-edged blade, with two hand guards projecting out"
+" from the hilt to form a perfect cross."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:753
+msgid "& Broad Sword~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:763
+msgid ""
+"A heavy, single-edged sword with a strong grip."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:764
+msgid "& Bastard Sword~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:775
+msgid ""
+"Also known as the hand-and-a-half blade.  A larger-than-normal straight-"
+"sided sword with two cutting edges."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:776
+msgid "& Katana~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:787
+msgid ""
+"A slightly curved long-handled slashing sword with a single-edged"
+" blade and a chisel tip."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:788
+msgid "& Zweihander~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:798
+msgid ""
+"A sword designed for two hands."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:799
+msgid "& Executioner's Sword~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:809
+msgid ""
+"A giant, curved blade designed to cleave the head cleanly from the body."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:810
+msgid "& Blade~ of Chaos"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:822
+msgid ""
+"This inconstant weapon revels in disorder, hacking and slashing your foes"
+" with bloodthirsty glee."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:827
+msgid "& Whip~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:838
+msgid ""
+"A heavy whip, this thick coil is thrown from the shoulder and can"
+" knock down a large man."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:839
+msgid "& Ball-and-Chain~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:849
+msgid ""
+"A weighty iron ball, suspended by a chain from a sturdy oaken handle."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:850
+msgid "& Morning Star~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:861
+msgid ""
+"A sturdy wooden pole connected by a chain to a ball of steel, which often"
+" has projecting spikes."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:862
+msgid "& Flail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:873
+msgid ""
+"Two heavy bars of wood connected by a short link of chain, capable of"
+" delivering crushing blows."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:874
+msgid "& Two-Handed Great Flail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:885
+msgid ""
+"Two great bars of wood connected by a massive chain, needing two hands"
+" to properly wield."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:889
+msgid "& Mace~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:899
+msgid ""
+"A war club with an iron head, usually flanged or spiked."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:900
+msgid "& Lead-Filled Mace~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:911
+msgid ""
+"A heavy war club topped with a mass of lead-filled steel, capable of"
+" landing crushing blows."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:912
+msgid "& Quarterstaff~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:923
+msgid ""
+"Six feet of oak which can be wielded in both hands to give a drubbing or"
+" block one."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:924
+msgid "& Throwing Hammer~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:935
+msgid ""
+"A short-handled iron hammer that can strike hard when thrown."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:936
+msgid "& War Hammer~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:946
+msgid ""
+"A mallet with a tapered head and a long handle."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:947
+msgid "& Maul~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:957
+msgid ""
+"A long-handled hammer with a heavy head."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:958
+msgid "& Great Hammer~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:968
+msgid ""
+"A mighty hammer with a massive head designed to crush and stun."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:969
+msgid "& Mace~ of Disruption"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:981
+msgid ""
+"A giant's weapon, enchanted with shattering power that breaks bones,"
+" bodies, and spirit."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:986
+msgid "& Spear~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:998
+msgid ""
+"The basic polearm, with a double-edged knife mounted on a light shaft."
+"  This weapon can be thrown effectively."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:999
+msgid "& Awl-Pike~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1011
+msgid ""
+"A more robust version of the basic polearm, with a double-edged knife"
+" mounted on a sturdy shaft.  It cannot be thrown effectively, but offers"
+" some protection to the wielder."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1012
+msgid "& Trident~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1022
+msgid ""
+"A three-pronged spear, originally for catching fish."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1023
+msgid "& Halberd~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1035
+msgid ""
+"The most successful of the polearms, the halberd has a long haft mounted"
+" with a heavy axe blade and opposing spike, and topped by a thrusting"
+" spine."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1036
+msgid "& Pike~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1047
+msgid ""
+"A fifteen foot spear, requiring two hands to wield, principally used in"
+" infantry formations."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1051
+msgid "& Throwing Axe~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1063
+msgid ""
+"A short-handled hatchet, balanced for throwing.  A classic skirmisher's"
+" weapon."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1064
+msgid "& Beaked Axe~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1074
+msgid ""
+"A narrow axe head opposed by a crow's beak for penetrating armour."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1075
+msgid "& Broad Axe~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1085
+msgid ""
+"A simple, single-bladed war axe capable of chopping though limbs or armour."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1086
+msgid "& Battle Axe~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1096
+msgid ""
+"A double-bladed axe.  Very popular among Dwarves."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1097
+msgid "& Lochaber Axe~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1107
+msgid ""
+"A long shaft with a long narrow blade."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1108
+msgid "& Great Axe~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1119
+msgid ""
+"An enormous two-handed battle axe, carried by Dwarven champions, who"
+" compete to see who can cleave the most orc heads."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1123
+msgid "& Scythe~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1134
+msgid ""
+"The long crescent blade stands out from the handle of this"
+" polearm, and it is swung with two hands to harvest grain or blood."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1135
+msgid "& Glaive~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1146
+msgid ""
+"A reinforced wooden pole eight feet long, topped by a massive knife blade"
+" that can be used to thrust or chop."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1147
+msgid "& Lance~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1157
+msgid ""
+"A massive, tapered spear used primarily from horseback."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1158
+msgid "& Scythe~ of Slicing"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1169
+msgid ""
+"A reaper's weapon, the long blade almost hums in anticipation of"
+" the blood it will spill."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1170
+msgid "& Lucerne Hammer~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1180
+msgid ""
+"A long pole with a three- or four-pronged head balanced by a long spike."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1184
+msgid "& Sling~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1195
+msgid ""
+"A loop of leather and cords able to hurl stones or shot with"
+" tremendous velocity."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1196
+msgid "& Short Bow~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1206
+msgid ""
+"The traditional hunter's weapon, this light bow is easily drawn."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1207
+msgid "& Long Bow~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1218
+msgid ""
+"As tall as a man, the longbow can drive an arrow through the"
+" heaviest armour."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1219
+msgid "& Light Crossbow~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1230
+msgid ""
+"A mechanical bow made of wood, it is cocked to augment the strength"
+" of its wielder."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1231
+msgid "& Heavy Crossbow~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1242
+msgid ""
+"This arbalest is so powerful it has to be reinforced with metal and"
+" requires a crank to be cocked."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1246
+msgid "& Arrow~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1257
+msgid ""
+"It can be shot with a bow."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1258
+msgid "& Seeker Arrow~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1270
+msgid "& Mithril Arrow~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1284
+msgid "& Bolt~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1295
+msgid ""
+"It can be shot with a crossbow."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1296
+msgid "& Seeker Bolt~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1308
+msgid "& Mithril Bolt~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1322
+msgid "& Rounded Pebble~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1334
+msgid ""
+"It can be shot with a sling or thrown."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1336
+msgid "& Iron Shot~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1349
+msgid "& Mithril Shot~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1365
+msgid "& Shovel~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1376
+msgid ""
+"A compact and sturdy spade."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1377
+msgid "& Pick~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1389
+msgid ""
+"A heavy mining tool with a long, slightly curved head that tapers"
+" to chisel points on both ends."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1390
+msgid "& Mattock~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1402
+msgid ""
+"A digging tool with a broad horizontal blade balanced by a smaller"
+" vertical blade.  Used as a weapon of war by dwarves."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1408
+msgid "& Pair~ of Leather Sandals"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1419
+msgid ""
+"A set of open-topped footgear with soft calfskin lacings and a sturdy"
+" cured leather base."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1420
+msgid "& Pair~ of Leather Boots"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1430
+msgid ""
+"These are calf-high boots of flexible leather, laced from heel to calf."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1431
+msgid "& Pair~ of Iron Shod Boots"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1443
+msgid ""
+"A set of sturdy leather boots strengthened with iron that will last"
+" many weary miles."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1444
+msgid "& Pair~ of Steel Shod Boots"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1456
+msgid ""
+"A set of double-lined leather boots, with toes and heels reinforced with"
+" steel."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1457
+msgid "& Pair~ of Mithril Shod Boots"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1469
+msgid ""
+"The enduring dwarves make the finest footgear known, and they march in it"
+" for endless miles without wearying."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1470
+msgid "& Pair~ of Ethereal Slippers"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1481
+msgid ""
+"Fine quality elvish slippers, hard-wearing but apparently weightless."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1485
+msgid "& Hard Leather Cap~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1495
+msgid ""
+"A padded skullcap of boiled leather."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1496
+msgid "& Metal Cap~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1506
+msgid ""
+"A pot-helm of steel that protects the skull."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1507
+msgid "& Iron Helm~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1517
+msgid ""
+"A mighty helmet of heavy iron, completely enclosing the head."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1518
+msgid "& Steel Helm~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1529
+msgid ""
+"This great helm covers the head and shoulders with plates of steel and a"
+" curtain of mail."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1530
+msgid "& Iron Crown~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1541
+msgid ""
+"A plain band of iron, crowned with iron spikes.  It is a tyrant's"
+" symbol."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1542
+msgid "& Golden Crown~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1554
+msgid ""
+"An elegant golden circlet, with slender spines thrusting upward."
+"  It looks like it should be resting over the brow of a king."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1555
+msgid "& Jewel Encrusted Crown~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1567
+msgid ""
+"An elaboratedly decorated crown of massive gold, studded with a rainbow"
+" of gems and jewels; worthy of a High King."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1571
+msgid "& Robe~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1581
+msgid ""
+"A practical garment of thick wool or velvet, draping from neck to heels."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1582
+msgid "Soft Leather Armour~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1592
+msgid ""
+"A cuirass of pliable leather, with a thicker leather jack."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1593
+msgid "Studded Leather Armour~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1603
+msgid ""
+"A cuirass of pliable leather studded with metal rivets."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1604
+msgid "Hard Leather Armour~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1614
+msgid ""
+"A boiled leather cuirass and shoulder plates."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1615
+msgid "Leather Scale Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1626
+msgid ""
+"A tunic and skirt sewn with thick, overlapping scales of hardened"
+" leather."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1627
+msgid "Metal Scale Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1638
+msgid ""
+"A heavy shirt of overlapping steel scales backed by leather, with"
+" matching skirt and sleeves."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1639
+msgid "Chain Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1650
+msgid ""
+"A hauberk, leggings, and sleeves of interlocking steel rings, well padded"
+" with leather."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1651
+msgid "Augmented Chain Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1663
+msgid ""
+"A hauberk, leggings, and sleeves of interlocking steel rings,"
+" strategically reinforced at vital locations with a second layer"
+" of chain, all over a layer of heavy padding."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1664
+msgid "Bar Chain Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1676
+msgid ""
+"A hauberk, leggings, and sleeves of interlocking steel rings,"
+" reinforced around the shoulders with segmented plates of steel,"
+" all over a layer of heavy padding."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1677
+msgid "Metal Brigandine Armour~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1689
+msgid ""
+"A stiff suit of armour composed of small metal plates sewn to an"
+" inner layer of heavy canvas, and covered with a second layer of"
+" cloth."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1690
+msgid "Partial Plate Armour~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1700
+msgid ""
+"A steel corselet and vambraces over a skirt and leggings of chain."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1701
+msgid "Metal Lamellar Armour~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1712
+msgid ""
+"This unusual armour is a surprisingly light suit of laced and"
+" overlapping metal plates."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1713
+msgid "Full Plate Armour~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1724
+msgid ""
+"A full suit of carefully fitted plates, with hinged joints backed"
+" by chain, and light padding underneath."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1725
+msgid "Ribbed Plate Armour~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1736
+msgid ""
+"A full suit of finely fitted metal armour consisting of steel plates"
+" reinforced ridging."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1737
+msgid "Mithril Chain Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1748
+msgid ""
+"This wondrous suit of fine-linked chain shimmers as though of pure silver."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1749
+msgid "Mithril Plate Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1761
+msgid ""
+"A shimmering suit of true-silver, forged long ago by dwarven smiths of"
+" legend.  It gleams with purest white as you gaze upon it."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1762
+msgid "Adamantite Plate Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1773
+msgid ""
+"An exquisite suit of nearly impenetrable adamantite."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1776
+msgid "& Cloak~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1786
+msgid ""
+"A traveller's sturdy outer garment."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1787
+msgid "& Fur Cloak~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1797
+msgid ""
+"A heavy cloak made from fur and lined with leather; a luxury."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1798
+msgid "& Elven Cloak~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1810
+msgid ""
+"A mantle made of curious silken material by the Galadrim that wondrously"
+" takes on the hues and shapes of its surroundings."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1811
+msgid "& Ethereal Cloak~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1823
+msgid ""
+"This unearthly, completely transparent body mantle folds and drapes in"
+" iridescent patterns around you.  It weighs absolutely nothing."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1827
+msgid "& Set~ of Leather Gloves"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1837
+msgid ""
+"Leather hand protection, with an open palm for gripping weapons."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1838
+msgid "& Set~ of Gauntlets"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1848
+msgid ""
+"A set of gloves that completely covers the hand and wrist in steel plating."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1849
+msgid "& Set~ of Mithril Gauntlets"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1860
+msgid ""
+"A set of gauntlets wrought of light, shining mithril."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1861
+msgid "& Set~ of Caestus"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1872
+msgid ""
+"An ancient battle glove designed for hand-to-hand fighting.  Its layered"
+" leather thongs are enhanced for combat by bloody-looking spikes."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1873
+msgid "& Set~ of Alchemist's Gloves"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1884
+msgid ""
+"Highly protective gloves designed for an alchemist's elemental magics."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1904
+msgid "& Wicker Shield~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1914
+msgid ""
+"A light circular frame of wood surrounding fine-grained wickerwork."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1915
+msgid "& Small Metal Shield~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1925
+msgid ""
+"A round shield of wood reinforced with metal rims and central disk."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1926
+msgid "& Leather Shield~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1937
+msgid ""
+"A large oval shield made of layered wooden strips with a thick leather"
+" covering."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1938
+msgid "& Large Metal Shield~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1949
+msgid ""
+"An oval shield of wood covered by leather and rimmed with metal.  A large"
+" iron shield boss offers excellent hand protection."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1950
+msgid "& Knight's Shield~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1961
+msgid ""
+"A kite-shaped shield with rounded corners that covers the wearer from"
+" chest to toe, emblazoned with heraldic symbols."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1962
+msgid "& Mithril Shield~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1973
+msgid ""
+"A shield of purest white, made of mithril."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1981
+msgid "Strength"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:1991
+msgid "Intelligence"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2001
+msgid "Dexterity"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2011
+msgid "Constitution"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2021
+msgid "Speed"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2031
+msgid "Searching"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2042
+msgid "Bodykeeping"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2051
+msgid "Soulkeeping"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2063
+msgid "Resist Poison"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2073
+msgid "Resist Fire and Cold"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2085
+msgid "Light"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2094
+msgid "Flames"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2112
+msgid "Acid"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2130
+msgid "Ice"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2148
+msgid "Lightning"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2168
+msgid "Damage"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2178
+msgid ""
+"It boosts your to-dam value."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2179
+msgid "Accuracy"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2189
+msgid ""
+"It boosts your to-hit value."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2190
+msgid "Slaying"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2200
+msgid ""
+"It boosts your to-hit and to-dam values."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2201
+msgid "Protection"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2211
+msgid ""
+"It increases your armor class."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2215
+msgid "Teleportation"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2226
+msgid "Reckless Attacks"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2236
+msgid "Open Wounds"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2252
+msgid "Escaping"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2262
+msgid "the Mouse"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2273
+msgid "the Dog"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2285
+msgid "Slow Digestion"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2294
+msgid "Feather Falling"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2303
+msgid "Free Action"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2312
+msgid "See Invisible"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2321
+msgid "Digging"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2340
+msgid "Wisdom"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2352
+msgid "Resist Lightning"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2362
+msgid "Resist Acid"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2372
+msgid "Resistance"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2385
+msgid "Sustenance"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2396
+msgid "the Magi"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2409
+msgid "ESP"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2419
+msgid "Devotion"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2429
+msgid "Weaponmastery"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2441
+msgid "Trickery"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2454
+msgid "Regeneration"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2463
+msgid "Infravision"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2502
+msgid "Adornment"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2514
+msgid "Inertia"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2531
+msgid "Phase Door"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2555
+msgid "Teleport Level"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2569
+msgid "Magic Mapping"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2581
+msgid "Treasure Detection"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2595
+msgid "Detect Invisible"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2607
+msgid "Identify Rune"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2620
+msgid "Enchant Weapon To-Hit"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2632
+msgid "Enchant Weapon To-Dam"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2644
+msgid "Enchant Armour"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2656
+msgid "*Enchant Weapon*"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2669
+msgid "*Enchant Armour*"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2682
+msgid "Remove Curse"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2695
+msgid "*Remove Curse*"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2709
+msgid "Summon Monster"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2721
+msgid "Summon Undead"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2733
+msgid "Acquirement"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2744
+msgid "*Acquirement*"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2758
+msgid "Dispel Undead"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2770
+msgid "Banishment"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2780
+msgid "Mass Banishment"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2793
+msgid "Remove Hunger"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2818
+msgid "Word of Recall"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2829
+msgid "Recharging"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2841
+msgid "Door Destruction"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2852
+msgid "Deep Descent"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2866
+msgid "Blessing"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2878
+msgid "Holy Chant"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2890
+msgid "Holy Prayer"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2902
+msgid "Protection from Evil"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2918
+msgid "Monster Confusion"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2930
+msgid "Rune of Protection"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2940
+msgid "*Destruction*"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2952
+msgid "Aggravate Monster"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2966
+msgid "Curse Weapon"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2977
+msgid "Curse Armour"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:2988
+msgid "Darkness"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3001
+msgid "Trap Creation"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3080
+msgid "Augmentation"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3101
+msgid "Experience"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3114
+msgid "Cure Light Wounds"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3133
+msgid "Cure Serious Wounds"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3150
+msgid "Cure Critical Wounds"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3170
+msgid "Healing"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3190
+msgid "*Healing*"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3209
+msgid "Life"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3236
+msgid "Neutralize Poison"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3247
+msgid "Restore Mana"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3263
+msgid "Restore Life Levels"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3277
+msgid "Brawn"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3290
+msgid "Intellect"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3303
+msgid "Contemplation"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3316
+msgid "Nimbleness"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3329
+msgid "Toughness"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3345
+msgid "Enlightenment"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3357
+msgid "*Enlightenment*"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3397
+msgid "Heroism"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3412
+msgid "Berserk Strength"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3427
+msgid "Boldness"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3438
+msgid "Resist Heat"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3450
+msgid "Resist Cold"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3475
+msgid "True Seeing"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3503
+msgid "Slime Mold Juice"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3515
+msgid "Sleep"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3531
+msgid "Blindness"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3545
+msgid "Confusion"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3561
+msgid "Poison"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3575
+msgid "Slowness"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3591
+msgid "Surprise"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3610
+msgid "Salt Water"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3629
+msgid "Dragon Breath"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3652
+msgid "Magic Missile"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3666
+msgid "Lightning Bolts"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3680
+msgid "Frost Bolts"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3694
+msgid "Fire Bolts"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3708
+msgid "Acid Bolts"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3725
+msgid "Stinking Cloud"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3739
+msgid "Lightning Balls"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3754
+msgid "Cold Balls"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3769
+msgid "Fire Balls"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3784
+msgid "Acid Balls"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3802
+msgid "Slow Monster"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3816
+msgid "Confuse Monster"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3830
+msgid "Hold Monster"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3844
+msgid "Stun Monster"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3858
+msgid "Scare Monster"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3890
+msgid "Stone to Mud"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3904
+msgid "Polymorph"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3933
+msgid "Clone Monster"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3946
+msgid "Teleport Other"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3961
+msgid "Disable Traps"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3974
+msgid "Wonder"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:3994
+msgid "Dragon's Flame"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4009
+msgid "Dragon's Frost"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4024
+msgid "Dragon's Breath"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4052
+msgid "Drain Life"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4066
+msgid "Annihilation"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4084
+msgid "Heal Monster"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4098
+msgid "Haste Monster"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4119
+msgid "Summoning"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4133
+msgid "Haste Monsters"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4164
+msgid "Earthquakes"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4192
+msgid "Confuse Monsters"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4206
+msgid "Slow Monsters"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4220
+msgid "Sleep Monsters"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4252
+msgid "Detect Evil"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4266
+msgid "Mapping"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4283
+msgid "Curing"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4342
+msgid "Dispel Evil"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4369
+msgid "Power"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4383
+msgid "Holiness"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4430
+msgid "Starlight"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4506
+msgid "Treasure Location"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4520
+msgid "Detection"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4555
+msgid "Probing"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4755
+msgid "Restoration"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4849
+msgid "Illumination"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4864
+msgid "Recall"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4898
+msgid "& Small wooden chest~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4908
+msgid "& Large wooden chest~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4918
+msgid "& Small iron chest~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4928
+msgid "& Large iron chest~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4938
+msgid "& Small steel chest~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4948
+msgid "& Large steel chest~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4962
+msgid "Black Dragon Scale Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4978
+msgid ""
+"A suit of utterly black scales, against which no metal or wood can rest."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4979
+msgid "Blue Dragon Scale Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4996
+msgid ""
+"A suit of scales as blue as sapphires, emitting eerie sparks and coronas"
+" as you move about in it."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:4997
+msgid "White Dragon Scale Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5014
+msgid ""
+"A suit of scales, coldly gleaming in frosty white.  A shiver runs down"
+" through your spine even as you look at it."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5015
+msgid "Red Dragon Scale Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5032
+msgid ""
+"A suit of scales, with all the reds of every fire ever lit.  The scar"
+" tissue from an old burn aches as you put this armour on."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5033
+msgid "Green Dragon Scale Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5050
+msgid ""
+"A suit of scales, glistening in sickly green, out from which falls the"
+" skeleton of a rat who touched it and died in agony."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5051
+msgid "Multi-Hued Dragon Scale Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5078
+msgid ""
+"A suit of scales that throbs with angry energies; it takes all your energy"
+" to master the Elements fighting an endless war trapped inside."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5079
+msgid "Shining Dragon Scale Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5100
+msgid ""
+"A suit of scales shining like a beacon of Light even as it greedily sucks"
+" the energy away from everything that glows into Dark insatiate."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5101
+msgid "Law Dragon Scale Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5122
+msgid ""
+"A suit of scales in stern blue and silver.  You feel the slightest tremor"
+" as you touch it, like massed trumpets heard and cyclones felt from afar."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5123
+msgid "Gold Dragon Scale Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5141
+msgid ""
+"A suit of scales in mirror-like gold.  You hear nothing unusual as you"
+" wear this armour, yet your ears ache as though in the midst of a"
+" cacophony."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5142
+msgid "Chaos Dragon Scale Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5163
+msgid ""
+"A suit of scales that ripples and twists through every color and shape"
+" imaginable as you stare in fascination."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5164
+msgid "Balance Dragon Scale Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5190
+msgid ""
+"A suit of scales.  Featureless grey to casual inspection, yet a closer"
+" look reveals patterns within patterns of iridescence that throb with"
+" leashed energies bound as though by chains of adamant."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5191
+msgid "Power Dragon Scale Mail~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5212
+msgid ""
+"A suit with scales of every color, surrounded in a nimbus of perfectly"
+" untrammelled yet inextricably intermingled and utterly mastered powers"
+" elemental and ethereal."
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5217
+msgid "copper"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5221
+msgid "silver"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5225
+msgid "garnets"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5229
+msgid "gold"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5233
+msgid "opals"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5237
+msgid "sapphires"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5241
+msgid "rubies"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5245
+msgid "diamonds"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5249
+msgid "emeralds"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5253
+msgid "mithril"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5257
+msgid "adamantite"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5267
+msgid "& Mighty Hammer~"
+msgstr ""
+
+#: ../lib/gamedata/object.txt:5277
+msgid "& Massive Iron Crown~"
+msgstr ""
+
