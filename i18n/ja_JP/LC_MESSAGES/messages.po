@@ -659,14 +659,12 @@ msgid "%u "
 msgstr ""
 
 #: ../src/obj-desc.c:210
-#, fuzzy
 msgid "an "
-msgstr " "
+msgstr "\003"
 
 #: ../src/obj-desc.c:212
-#, fuzzy
 msgid "a "
-msgstr " "
+msgstr "\003"
 
 #: ../src/obj-desc.c:337
 #, c-format
