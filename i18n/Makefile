@@ -47,5 +47,5 @@ _gamedata-%.pot:
 
 _gamedata-source.pot:
 	chmod +w $@ || true
-	xgettext --omit-header -kGAMEDATA_ -kGAMEDATA_N_ -o $@ ../src/list-mon-race-flags.h
+	xgettext --omit-header -kGAMEDATA_ -kGAMEDATA_N_ -k -o $@ ../src/*.c ../src/*.h
 	chmod -w $@

@@ -109,7 +109,7 @@ msgstr ""
 msgid "One of your %s (%c) was eaten!"
 msgstr ""
 
-#: ../src/mon-desc.c:205
+#: ../src/mon-desc.c:205 ../src/obj-desc.c:194
 msgid "the "
 msgstr ""
 
@@ -326,7 +326,8 @@ msgstr ""
 msgid "This"
 msgstr ""
 
-#: ../src/mon-lore.c:978 ../src/mon-lore.c:987
+#: ../src/mon-lore.c:978 ../src/mon-lore.c:987 ../src/obj-desc.c:331
+#: ../src/obj-desc.c:333
 #, c-format
 msgid " %s"
 msgstr ""
@@ -629,6 +630,120 @@ msgstr ""
 #: ../src/mon-util.c:1066
 #, c-format
 msgid "You have slain %s."
+msgstr ""
+
+#: ../src/obj-desc.c:190
+msgid "no more "
+msgstr ""
+
+#: ../src/obj-desc.c:192
+#, c-format
+msgid "%u "
+msgstr ""
+
+#: ../src/obj-desc.c:210
+msgid "an "
+msgstr ""
+
+#: ../src/obj-desc.c:212
+msgid "a "
+msgstr ""
+
+#: ../src/obj-desc.c:337
+#, c-format
+msgid " '%s'"
+msgstr ""
+
+#: ../src/obj-desc.c:339
+#, c-format
+msgid " of %s"
+msgstr ""
+
+#: ../src/obj-desc.c:366
+#, c-format
+msgid " (%s)"
+msgstr ""
+
+#: ../src/obj-desc.c:383
+#, c-format
+msgid " (%dd%d)"
+msgstr ""
+
+#: ../src/obj-desc.c:388
+#, c-format
+msgid " (x%d)"
+msgstr ""
+
+#: ../src/obj-desc.c:435
+#, c-format
+msgid " (%d turns)"
+msgstr ""
+
+#: ../src/obj-desc.c:493
+#, c-format
+msgid " (%d charge%s)"
+msgstr ""
+
+#: ../src/obj-desc.c:497
+#, c-format
+msgid " (%d charging)"
+msgstr ""
+
+#: ../src/obj-desc.c:500
+msgid " (charging)"
+msgstr ""
+
+#: ../src/obj-desc.c:522
+msgid "empty"
+msgstr ""
+
+#: ../src/obj-desc.c:524
+msgid "tried"
+msgstr ""
+
+#: ../src/obj-desc.c:529
+msgid "cursed"
+msgstr ""
+
+#: ../src/obj-desc.c:533
+msgid "ignore"
+msgstr ""
+
+#: ../src/obj-desc.c:537
+msgid "??"
+msgstr ""
+
+#: ../src/obj-desc.c:564
+msgid " {unseen}"
+msgstr ""
+
+#: ../src/obj-desc.c:566
+msgid " {??}"
+msgstr ""
+
+#: ../src/obj-desc.c:568
+msgid " {cursed}"
+msgstr ""
+
+#: ../src/obj-desc.c:613
+msgid "(nothing)"
+msgstr ""
+
+#: ../src/obj-desc.c:618
+msgid "an unknown item"
+msgstr ""
+
+#: ../src/obj-desc.c:619
+msgid "unknown item"
+msgstr ""
+
+#: ../src/obj-desc.c:623
+#, c-format
+msgid "%d gold pieces worth of %s%s"
+msgstr ""
+
+#: ../src/obj-desc.c:625
+msgid " {ignore}"
 msgstr ""
 
 #: ../src/player-attack.c:715

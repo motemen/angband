@@ -17,6 +17,7 @@
  */
 
 #include "angband.h"
+#include "i18n.h"
 #include "obj-chest.h"
 #include "obj-desc.h"
 #include "obj-gear.h"
@@ -34,7 +35,7 @@ void object_base_name(char *buf, size_t max, int tval, bool plural)
 	size_t end = 0;
 
 	if (kb->name && kb->name[0]) 
-		(void) obj_desc_name_format(buf, max, end, kb->name, NULL, plural);
+		(void) obj_desc_name_format(buf, max, end, GAMEDATA_(kb->name), NULL, plural);
 }
 
 
@@ -54,7 +55,7 @@ void object_kind_name(char *buf, size_t max, const struct object_kind *kind,
 
 	/* Use proper name (Healing, or whatever) */
 	else
-		(void) obj_desc_name_format(buf, max, 0, kind->name, NULL, false);
+		(void) obj_desc_name_format(buf, max, 0, GAMEDATA_(kind->name), NULL, false);
 }
 
 
@@ -66,10 +67,10 @@ void object_kind_name(char *buf, size_t max, const struct object_kind *kind,
 static const char *obj_desc_get_modstr(const struct object_kind *kind)
 {
 	if (tval_can_have_flavor_k(kind))
-		return kind->flavor ? kind->flavor->text : "";
+		return kind->flavor ? GAMEDATA_(kind->flavor->text) : "";
 
 	if (tval_is_book_k(kind))
-		return kind->name;
+		return GAMEDATA_(kind->name);
 
 	return "";
 }
@@ -91,7 +92,7 @@ static const char *obj_desc_get_basename(const struct object *obj, bool aware,
 	/* Artifacts are special */
 	if (obj->artifact && (aware || object_is_known_artifact(obj) || terse ||
 						  !obj->kind->flavor))
-		return obj->kind->name;
+		return GAMEDATA_(obj->kind->name);
 
 	/* Analyze the object */
 	switch (obj->tval)
@@ -120,61 +121,61 @@ static const char *obj_desc_get_basename(const struct object *obj, bool aware,
 			return obj->kind->name;
 
 		case TV_AMULET:
-			return (show_flavor ? "& # Amulet~" : "& Amulet~");
+			return (show_flavor ? GAMEDATA_("& # Amulet~") : GAMEDATA_("& Amulet~"));
 
 		case TV_RING:
-			return (show_flavor ? "& # Ring~" : "& Ring~");
+			return (show_flavor ? GAMEDATA_("& # Ring~") : GAMEDATA_("& Ring~"));
 
 		case TV_STAFF:
-			return (show_flavor ? "& # Sta|ff|ves|" : "& Sta|ff|ves|");
+			return (show_flavor ? GAMEDATA_("& # Sta|ff|ves|") : GAMEDATA_("& Sta|ff|ves|"));
 
 		case TV_WAND:
-			return (show_flavor ? "& # Wand~" : "& Wand~");
+			return (show_flavor ? GAMEDATA_("& # Wand~") : GAMEDATA_("& Wand~"));
 
 		case TV_ROD:
-			return (show_flavor ? "& # Rod~" : "& Rod~");
+			return (show_flavor ? GAMEDATA_("& # Rod~") : GAMEDATA_("& Rod~"));
 
 		case TV_POTION:
-			return (show_flavor ? "& # Potion~" : "& Potion~");
+			return (show_flavor ? GAMEDATA_("& # Potion~") : GAMEDATA_("& Potion~"));
 
 		case TV_SCROLL:
-			return (show_flavor ? "& Scroll~ titled #" : "& Scroll~");
+			return (show_flavor ? GAMEDATA_("& Scroll~ titled #") : GAMEDATA_("& Scroll~"));
 
 		case TV_MAGIC_BOOK:
 			if (terse)
-				return "& Book~ #";
+				return GAMEDATA_("& Book~ #");
 			else
-				return "& Book~ of Magic Spells #";
+				return GAMEDATA_("& Book~ of Magic Spells #");
 
 		case TV_PRAYER_BOOK:
 			if (terse)
-				return "& Book~ #";
+				return GAMEDATA_("& Book~ #");
 			else
-				return "& Holy Book~ of Prayers #";
+				return GAMEDATA_("& Holy Book~ of Prayers #");
 
 		case TV_NATURE_BOOK:
 			if (terse)
-				return "& Book~ #";
+				return GAMEDATA_("& Book~ #");
 			else
-				return "& Book~ of Nature Magics #";
+				return GAMEDATA_("& Book~ of Nature Magics #");
 
 		case TV_SHADOW_BOOK:
 			if (terse)
-				return "& Tome~ #";
+				return GAMEDATA_("& Tome~ #");
 			else
-				return "& Necromantic Tome~ #";
+				return GAMEDATA_("& Necromantic Tome~ #");
 
 		case TV_OTHER_BOOK:
 			if (terse)
-				return "& Book~ #";
+				return GAMEDATA_("& Book~ #");
 			else
-				return "& Book of Mysteries~ #";
+				return GAMEDATA_("& Book of Mysteries~ #");
 
 		case TV_MUSHROOM:
-			return (show_flavor ? "& # Mushroom~" : "& Mushroom~");
+			return (show_flavor ? GAMEDATA_("& # Mushroom~") : GAMEDATA_("& Mushroom~"));
 	}
 
-	return "(nothing)";
+	return GAMEDATA_("(nothing)");
 }
 
 
@@ -186,11 +187,11 @@ static size_t obj_desc_name_prefix(char *buf, size_t max, size_t end,
 		const char *modstr, bool terse, uint16_t number)
 {
 	if (number == 0) {
-		strnfcat(buf, max, &end, "no more ");
+		strnfcat(buf, max, &end, _("no more "));
 	} else if (number > 1) {
-		strnfcat(buf, max, &end, "%u ", number);
+		strnfcat(buf, max, &end, _("%u "), number);
 	} else if (object_is_known_artifact(obj)) {
-		strnfcat(buf, max, &end, "the ");
+		strnfcat(buf, max, &end, _("the "));
 	} else if (*basename == '&') {
 		bool an = false;
 		const char *lookahead = basename + 1;
@@ -206,9 +207,9 @@ static size_t obj_desc_name_prefix(char *buf, size_t max, size_t end,
 
 		if (!terse) {
 			if (an)
-				strnfcat(buf, max, &end, "an ");
+				strnfcat(buf, max, &end, _("an "));
 			else
-				strnfcat(buf, max, &end, "a ");			
+				strnfcat(buf, max, &end, _("a "));
 		}
 	}
 
@@ -327,15 +328,15 @@ static size_t obj_desc_name(char *buf, size_t max, size_t end,
 
 	/* Append extra names of various kinds */
 	if (object_is_known_artifact(obj))
-		strnfcat(buf, max, &end, " %s", obj->artifact->name);
+		strnfcat(buf, max, &end, _(" %s"), GAMEDATA_(obj->artifact->name));
 	else if ((obj->known->ego && !(mode & ODESC_NOEGO)) || (obj->ego && store))
-		strnfcat(buf, max, &end, " %s", obj->ego->name);
+		strnfcat(buf, max, &end, _(" %s"), GAMEDATA_(obj->ego->name));
 	else if (aware && !obj->artifact &&
 			 (obj->kind->flavor || obj->kind->tval == TV_SCROLL)) {
 		if (terse)
-			strnfcat(buf, max, &end, " '%s'", obj->kind->name);
+			strnfcat(buf, max, &end, _(" '%s'"), GAMEDATA_(obj->kind->name));
 		else
-			strnfcat(buf, max, &end, " of %s", obj->kind->name);
+			strnfcat(buf, max, &end, _(" of %s"), GAMEDATA_(obj->kind->name));
 	}
 
 	return end;
@@ -362,7 +363,7 @@ static size_t obj_desc_chest(const struct object *obj, char *buf, size_t max,
 	if (obj->pval && !obj->known->pval) return end;
 
 	/* Describe the traps */
-	strnfcat(buf, max, &end, " (%s)", chest_trap_name(obj));
+	strnfcat(buf, max, &end, _(" (%s)"), chest_trap_name(obj));
 
 	return end;
 }
@@ -379,12 +380,12 @@ static size_t obj_desc_combat(const struct object *obj, char *buf, size_t max,
 	/* Display damage dice if they are known */
 	if (kf_has(obj->kind->kind_flags, KF_SHOW_DICE) &&
 		(!p || (p->obj_k->dd && p->obj_k->ds))) {
-		strnfcat(buf, max, &end, " (%dd%d)", obj->dd, obj->ds);
+		strnfcat(buf, max, &end, _(" (%dd%d)"), obj->dd, obj->ds);
 	}
 
 	/* Display shooting power as part of the multiplier */
 	if (kf_has(obj->kind->kind_flags, KF_SHOW_MULT)) {
-		strnfcat(buf, max, &end, " (x%d)",
+		strnfcat(buf, max, &end, _(" (x%d)"),
 				 obj->pval + obj->modifiers[OBJ_MOD_MIGHT]);
 	}
 
@@ -431,7 +432,7 @@ static size_t obj_desc_light(const struct object *obj, char *buf, size_t max,
 {
 	/* Fuelled light sources get number of remaining turns appended */
 	if (tval_is_light(obj) && !of_has(obj->flags, OF_NO_FUEL))
-		strnfcat(buf, max, &end, " (%d turns)", obj->timeout);
+		strnfcat(buf, max, &end, _(" (%d turns)"), obj->timeout);
 
 	return end;
 }
@@ -489,14 +490,14 @@ static size_t obj_desc_charges(const struct object *obj, char *buf, size_t max,
 
 	/* Wands and staffs have charges, others may be charging */
 	if (aware && tval_can_have_charges(obj)) {
-		strnfcat(buf, max, &end, " (%d charge%s)", obj->pval,
+		strnfcat(buf, max, &end, _(" (%d charge%s)"), obj->pval,
 				 PLURAL(obj->pval));
 	} else if (obj->timeout > 0) {
 		if (tval_is_rod(obj) && obj->number > 1)
-			strnfcat(buf, max, &end, " (%d charging)", number_charging(obj));
+			strnfcat(buf, max, &end, _(" (%d charging)"), number_charging(obj));
 		else if (tval_is_rod(obj) || obj->activation || obj->effect)
 			/* Artifacts, single rods */
-			strnfcat(buf, max, &end, " (charging)");
+			strnfcat(buf, max, &end, _(" (charging)"));
 	}
 
 	return end;
@@ -518,22 +519,22 @@ static size_t obj_desc_inscrip(const struct object *obj, char *buf,
 	/* Use special inscription, if any */
 	if (!object_flavor_is_aware(obj)) {
 		if (tval_can_have_charges(obj) && (obj->pval == 0))
-			u[n++] = "empty";
+			u[n++] = _("empty");
 		if (object_flavor_was_tried(obj))
-			u[n++] = "tried";
+			u[n++] = _("tried");
 	}
 
 	/* Note curses */
 	if (obj->known->curses)
-		u[n++] = "cursed";
+		u[n++] = _("cursed");
 
 	/* Note ignore */
 	if (p && ignore_item_ok(p, obj))
-		u[n++] = "ignore";
+		u[n++] = _("ignore");
 
 	/* Note unknown properties */
 	if (!object_runes_known(obj) && (obj->known->notice & OBJ_NOTICE_ASSESSED))
-		u[n++] = "??";
+		u[n++] = _("??");
 
 	if (n) {
 		int i;
@@ -560,11 +561,11 @@ static size_t obj_desc_aware(const struct object *obj, char *buf, size_t max,
 							 size_t end)
 {
 	if (!object_flavor_is_aware(obj)) {
-		strnfcat(buf, max, &end, " {unseen}");
+		strnfcat(buf, max, &end, _(" {unseen}"));
 	} else if (!object_runes_known(obj)) {
-		strnfcat(buf, max, &end, " {??}");
+		strnfcat(buf, max, &end, _(" {??}"));
 	} else if (obj->known->curses) {
-		strnfcat(buf, max, &end, " {cursed}");
+		strnfcat(buf, max, &end, _(" {cursed}"));
 	}
 
 	return end;
@@ -609,19 +610,19 @@ size_t object_desc(char *buf, size_t max, const struct object *obj,
 
 	/* Simple description for null item */
 	if (!obj || !obj->known)
-		return strnfmt(buf, max, "(nothing)");
+		return strnfmt(buf, max, _("(nothing)"));
 
 	/* Unknown itema and cash get straightforward descriptions */
 	if (obj->known && obj->kind != obj->known->kind) {
 		if (prefix)
-			return strnfmt(buf, max, "an unknown item");
-		return strnfmt(buf, max, "unknown item");
+			return strnfmt(buf, max, _("an unknown item"));
+		return strnfmt(buf, max, _("unknown item"));
 	}
 
 	if (tval_is_money(obj))
-		return strnfmt(buf, max, "%d gold pieces worth of %s%s",
+		return strnfmt(buf, max, _("%d gold pieces worth of %s%s"),
 				obj->pval, obj->kind->name,
-				ignore_item_ok(p, obj) ? " {ignore}" : "");
+				ignore_item_ok(p, obj) ? _(" {ignore}") : "");
 
 	/* Egos and kinds whose name we know are seen */
 	if (obj->known->ego && !spoil)

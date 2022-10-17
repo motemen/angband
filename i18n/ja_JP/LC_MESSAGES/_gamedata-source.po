@@ -9,6 +9,103 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: ../src/obj-desc.c:124
+msgid "& # Amulet~"
+msgstr ""
+
+#: ../src/obj-desc.c:124
+msgid "& Amulet~"
+msgstr ""
+
+#: ../src/obj-desc.c:127
+msgid "& # Ring~"
+msgstr ""
+
+#: ../src/obj-desc.c:127
+msgid "& Ring~"
+msgstr ""
+
+#: ../src/obj-desc.c:130
+msgid "& # Sta|ff|ves|"
+msgstr ""
+
+#: ../src/obj-desc.c:130
+msgid "& Sta|ff|ves|"
+msgstr ""
+
+#: ../src/obj-desc.c:133
+msgid "& # Wand~"
+msgstr ""
+
+#: ../src/obj-desc.c:133
+msgid "& Wand~"
+msgstr ""
+
+#: ../src/obj-desc.c:136
+msgid "& # Rod~"
+msgstr ""
+
+#: ../src/obj-desc.c:136
+msgid "& Rod~"
+msgstr ""
+
+#: ../src/obj-desc.c:139
+msgid "& # Potion~"
+msgstr ""
+
+#: ../src/obj-desc.c:139
+msgid "& Potion~"
+msgstr ""
+
+#: ../src/obj-desc.c:142
+msgid "& Scroll~ titled #"
+msgstr ""
+
+#: ../src/obj-desc.c:142
+msgid "& Scroll~"
+msgstr ""
+
+#: ../src/obj-desc.c:146 ../src/obj-desc.c:152 ../src/obj-desc.c:158
+#: ../src/obj-desc.c:170
+msgid "& Book~ #"
+msgstr ""
+
+#: ../src/obj-desc.c:148
+msgid "& Book~ of Magic Spells #"
+msgstr ""
+
+#: ../src/obj-desc.c:154
+msgid "& Holy Book~ of Prayers #"
+msgstr ""
+
+#: ../src/obj-desc.c:160
+msgid "& Book~ of Nature Magics #"
+msgstr ""
+
+#: ../src/obj-desc.c:164
+msgid "& Tome~ #"
+msgstr ""
+
+#: ../src/obj-desc.c:166
+msgid "& Necromantic Tome~ #"
+msgstr ""
+
+#: ../src/obj-desc.c:172
+msgid "& Book of Mysteries~ #"
+msgstr ""
+
+#: ../src/obj-desc.c:175
+msgid "& # Mushroom~"
+msgstr ""
+
+#: ../src/obj-desc.c:175
+msgid "& Mushroom~"
+msgstr ""
+
+#: ../src/obj-desc.c:178
+msgid "(nothing)"
+msgstr ""
+
 #: ../src/list-mon-race-flags.h:47
 msgid "invisible"
 msgstr "不可視"
