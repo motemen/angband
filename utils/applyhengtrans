@@ -3,14 +3,25 @@ use strict;
 use warnings;
 use Encode;
 use Data::Dumper;
+use File::Basename qw(dirname);
+use Cwd qw(cwd);
 
 # Import hengband translation to .pot files.
 #
-# usage: utils/applytrans <path/to/hengband/r_info.txt> < i18n/_gamedata-monster.pot > i18n/ja_JP/LC_MESSAGES/_gamedata-monster.po
+# usage: utils/applytrans <path/to/hengband/lib/edit/r_info.txt> < i18n/_gamedata-monster.pot > i18n/ja_JP/LC_MESSAGES/_gamedata-monster.po
 
-my $ja_monster_txt = shift or die;
+my $hengband_gamedata_txt = shift or die;
 
-open my $fh, '<', $ja_monster_txt or die $!;
+open my $fh, '<', $hengband_gamedata_txt or die $!;
+
+my $hengband_version = do {
+  my $cwd = cwd();
+  chdir dirname($hengband_gamedata_txt) or die $!;
+  my $version = qx(git describe --always);
+  chdir $cwd;
+  chomp $version;
+  $version;
+};
 
 my ($name_en, $name_ja, @desc_en, @desc_ja, @comments);
 
@@ -68,8 +79,9 @@ while (<$fh>) {
   }
 }
 
+print "### Original comments from Hengband $hengband_version:\n";
 for (@{ $comments->{''} || [] }) {
-  print "$_";
+  print "# $_";
 }
 
 print <<'__HEADER__';
@@ -106,8 +118,9 @@ while (<STDIN>) {
   }
 
   if ($msgid && (my $trans = $translation->{uc $msgid})) {
-    print $_ for @{ $comments->{uc $msgid} || [] };
-    print $_ for @comment_lines;
+    # Keep '#J0#' style message as msgmerge changes them to '# J0'
+    print "# $_" for @{ $comments->{uc $msgid} || [] };
+    print "$_" for @comment_lines;
     print $_ for @msgid_lines;
     $trans =~ s/"/\\"/g;
     print qq(msgstr "$trans"\n\n);

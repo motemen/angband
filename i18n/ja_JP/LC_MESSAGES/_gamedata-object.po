@@ -1,13 +1,34 @@
+# ## Original comments from Hengband 3.0.0Alpha68:
+# #JZ# Zangband 日本語訳: 板倉
+# #JZ# 「#J0#」で始まるコメントは日本語板 Angband のしとしんさんによる
+# #JZ# もので、「#JZ#」で始まるコメントは日本語版 Zangband で新たに
+# #JZ# 加わった項目です。日本語アングバンド同様、私（板倉）以外の方の
+# #JZ# コメントにはその方の名前を記載しています。
+# #JZ#
+# #JZ# ＃＃＃ 以下は日本語版 Angband にあるコメントです ＃＃＃
+# #J0# 日本語訳と日本語版製作 : しとしん
+# #J0#
+# #J0# 日本語版ではオリジナルと比較して設定項目が一つ増えています。
+# #J0# "E:" 以下の行がそうで、ここには英語名が記述されます。
+# #J0#
+# #J0# アイテム名の翻訳にあたっては多くの方にたいへんお世話になりました。
+# #J0#
+# #J0# (コメント)
+# #J0#
+# #J0# 武器や防具にも色々と読み方があるようですが、基本的に "name.doc" の
+# #J0# 執筆者である VOLKO さんの読み方に従いました。
+# #J0#
+# #J0# 基本的に restore という単語には「復活」という訳をあてて、それ以外の回復系
+# #J0# の単語には「回復」という訳をあてています。restore も「回復」でも良いのです
+# #J0# が、restore をするアイテムは「元の状態に戻す」という効果があるので、それ
+# #J0# を示唆する言葉として「復活」を選びました。
+# #J0#
+# #J0# identify という単語は他の日本語版ローグライクでは「識別」という訳が使
+# #J0# われている場合が多いのですが、identify の効果はアイテムの正確な名称や効
+# #J0# 果を明らかにするものですので、「鑑定」の方が雰囲気が近いと考えてそうし
+# #J0# ました。他のローグライクと異なってしまっていることは気になりますが。
 msgid ""
-msgstr ""
-"Project-Id-Version: Angband 4.2.4\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: ja\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 #: ../lib/gamedata/object.txt:175
 msgid "<pile>"
@@ -27,15 +48,16 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:193
 msgid "& Wooden Torch~"
-msgstr ""
+msgstr "松明"
 
 #: ../lib/gamedata/object.txt:204
+#, fuzzy
 msgid "& Lantern~"
-msgstr ""
+msgstr "ランス"
 
 #: ../lib/gamedata/object.txt:215
 msgid "& Flask~ of oil"
-msgstr ""
+msgstr "油つぼ"
 
 #: ../lib/gamedata/object.txt:230
 msgid ""
@@ -46,7 +68,7 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:235
 msgid "& Hard Biscuit~"
-msgstr ""
+msgstr "ビスケット"
 
 #: ../lib/gamedata/object.txt:246
 msgid "A filling if tooth-breaking biscuit made mostly of rye."
@@ -72,7 +94,7 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:275
 msgid "& Slime Mold~"
-msgstr ""
+msgstr "スライムモルド"
 
 #: ../lib/gamedata/object.txt:289
 msgid ""
@@ -82,7 +104,7 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:290
 msgid "& Ration~ of Food"
-msgstr ""
+msgstr "食料"
 
 #: ../lib/gamedata/object.txt:305
 msgid ""
@@ -92,8 +114,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/object.txt:306
+#, fuzzy
 msgid "& Scrap~ of Flesh"
-msgstr ""
+msgstr "ガントレット"
 
 #: ../lib/gamedata/object.txt:330
 msgid ""
@@ -102,8 +125,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/object.txt:332
+#, fuzzy
 msgid "& Slice~ of Meat"
-msgstr ""
+msgstr "ガントレット"
 
 #: ../lib/gamedata/object.txt:346
 msgid ""
@@ -123,7 +147,7 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:363
 msgid "& Piece~ of Elvish Waybread"
-msgstr ""
+msgstr "エルフの行糧"
 
 #: ../lib/gamedata/object.txt:380
 msgid ""
@@ -132,8 +156,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/object.txt:381
+#, fuzzy
 msgid "& Flask~ of Whisky"
-msgstr ""
+msgstr "油つぼ"
 
 #: ../lib/gamedata/object.txt:394
 msgid "It raises your spirits."
@@ -141,7 +166,7 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:395
 msgid "& Pint~ of Fine Wine"
-msgstr ""
+msgstr "高級ワイン"
 
 #: ../lib/gamedata/object.txt:408
 msgid "A fine way to wash down some otherwise unappetising rations."
@@ -246,7 +271,7 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:662
 msgid "& Dagger~"
-msgstr ""
+msgstr "ダガー"
 
 #: ../lib/gamedata/object.txt:673
 msgid "A short two-edged blade perfect for thrusting or throwing."
@@ -254,31 +279,32 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:674
 msgid "& Main Gauche~"
-msgstr ""
+msgstr "マン・ゴーシュ"
 
 #: ../lib/gamedata/object.txt:684
 msgid "A short thrusting blade with a large guard, primarily used in duels."
 msgstr ""
+"拳を防御する大きな鍔を持つ短い剣。主に決闘で防御用の短剣として用いられる。"
 
 #: ../lib/gamedata/object.txt:685
 msgid "& Rapier~"
-msgstr ""
+msgstr "レイピア"
 
 #: ../lib/gamedata/object.txt:695
 msgid "A long, thin thrusting blade, mainly used in duels."
-msgstr ""
+msgstr "突きに用いる長く細い刀身を持つ剣。主に決闘に用いられる。"
 
 #: ../lib/gamedata/object.txt:696
 msgid "& Short Sword~"
-msgstr ""
+msgstr "ショート・ソード"
 
 #: ../lib/gamedata/object.txt:706
 msgid "A short thrusting sword."
-msgstr ""
+msgstr "主に突く用途に用いる短い剣だ。"
 
 #: ../lib/gamedata/object.txt:707
 msgid "& Cutlass~"
-msgstr ""
+msgstr "カットラス"
 
 #: ../lib/gamedata/object.txt:718
 msgid ""
@@ -288,7 +314,7 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:719
 msgid "& Tulwar~"
-msgstr ""
+msgstr "タルワール"
 
 #: ../lib/gamedata/object.txt:729
 msgid "A wider-bladed cousin of the shamshir, with less of a curve."
@@ -296,7 +322,7 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:730
 msgid "& Scimitar~"
-msgstr ""
+msgstr "シミター"
 
 #: ../lib/gamedata/object.txt:740
 msgid "A long sabre with an extreme curve to the blade."
@@ -304,17 +330,17 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:741
 msgid "& Long Sword~"
-msgstr ""
+msgstr "ロング・ソード"
 
 #: ../lib/gamedata/object.txt:752
 msgid ""
 "A long, straight, two-edged blade, with two hand guards projecting out from "
 "the hilt to form a perfect cross."
-msgstr ""
+msgstr "十字の形に2本の柄が付いた長い両刃の直刀だ。"
 
 #: ../lib/gamedata/object.txt:753
 msgid "& Broad Sword~"
-msgstr ""
+msgstr "ブロード・ソード"
 
 #: ../lib/gamedata/object.txt:763
 msgid "A heavy, single-edged sword with a strong grip."
@@ -322,27 +348,28 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:764
 msgid "& Bastard Sword~"
-msgstr ""
+msgstr "バスタード・ソード"
 
 #: ../lib/gamedata/object.txt:775
 msgid ""
 "Also known as the hand-and-a-half blade.  A larger-than-normal straight-"
 "sided sword with two cutting edges."
-msgstr ""
+msgstr "片手半剣とも呼ばれる。通常のロング・ソードよりも長い両刃の直刀だ。"
 
 #: ../lib/gamedata/object.txt:776
 msgid "& Katana~"
-msgstr ""
+msgstr "カタナ"
 
 #: ../lib/gamedata/object.txt:787
 msgid ""
 "A slightly curved long-handled slashing sword with a single-edged blade and "
 "a chisel tip."
-msgstr ""
+msgstr "長い柄と微妙に曲った刃を持つ切れ味に優れた片刃の剣だ。"
 
+# #JZ#
 #: ../lib/gamedata/object.txt:788
 msgid "& Zweihander~"
-msgstr ""
+msgstr "ツヴァイハンダー"
 
 #: ../lib/gamedata/object.txt:798
 msgid "A sword designed for two hands."
@@ -350,44 +377,48 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:799
 msgid "& Executioner's Sword~"
-msgstr ""
+msgstr "首切りソード"
 
 #: ../lib/gamedata/object.txt:809
 msgid ""
 "A giant, curved blade designed to cleave the head cleanly from the body."
-msgstr ""
+msgstr "胴体から頭を綺麗に切り落とす為に作られた、巨大な曲った刃を持つ剣だ。"
 
 #: ../lib/gamedata/object.txt:810
 msgid "& Blade~ of Chaos"
-msgstr ""
+msgstr "カオス・ブレード"
 
 #: ../lib/gamedata/object.txt:822
 msgid ""
 "This inconstant weapon revels in disorder, hacking and slashing your foes "
 "with bloodthirsty glee."
 msgstr ""
+"千変万化の姿を持つこの武器は混沌の力によって敵を切り刻み、殺戮にふける事に残"
+"忍な喜びを感じている。"
 
 #: ../lib/gamedata/object.txt:827
 msgid "& Whip~"
-msgstr ""
+msgstr "ムチ"
 
 #: ../lib/gamedata/object.txt:838
 msgid ""
 "A heavy whip, this thick coil is thrown from the shoulder and can knock down "
 "a large man."
 msgstr ""
+"重い鞭だ。きつく巻いたこの鞭を肩の上から振り下ろすと大の男でも打ち倒す事がで"
+"きる。"
 
 #: ../lib/gamedata/object.txt:839
 msgid "& Ball-and-Chain~"
-msgstr ""
+msgstr "鎖つき鉄球"
 
 #: ../lib/gamedata/object.txt:849
 msgid "A weighty iron ball, suspended by a chain from a sturdy oaken handle."
-msgstr ""
+msgstr "頑丈な木製のハンドルに、重い鉄のボールが鎖で繋っている。"
 
 #: ../lib/gamedata/object.txt:850
 msgid "& Morning Star~"
-msgstr ""
+msgstr "モーニング・スター"
 
 #: ../lib/gamedata/object.txt:861
 msgid ""
@@ -397,13 +428,13 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:862
 msgid "& Flail~"
-msgstr ""
+msgstr "フレイル"
 
 #: ../lib/gamedata/object.txt:873
 msgid ""
 "Two heavy bars of wood connected by a short link of chain, capable of "
 "delivering crushing blows."
-msgstr ""
+msgstr "2本の重い木製の棒を短い鎖で繋げた物だ。対象を叩き潰す為に用いる。"
 
 #: ../lib/gamedata/object.txt:874
 msgid "& Two-Handed Great Flail~"
@@ -414,10 +445,12 @@ msgid ""
 "Two great bars of wood connected by a massive chain, needing two hands to "
 "properly wield."
 msgstr ""
+"2本の非常に大きな木製の棒を重い鎖で継いである。うまく用いるためには両手が必要"
+"だ。"
 
 #: ../lib/gamedata/object.txt:889
 msgid "& Mace~"
-msgstr ""
+msgstr "メイス"
 
 #: ../lib/gamedata/object.txt:899
 msgid "A war club with an iron head, usually flanged or spiked."
@@ -425,27 +458,31 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:900
 msgid "& Lead-Filled Mace~"
-msgstr ""
+msgstr "鉛詰めメイス"
 
 #: ../lib/gamedata/object.txt:911
 msgid ""
 "A heavy war club topped with a mass of lead-filled steel, capable of landing "
 "crushing blows."
 msgstr ""
+"重い棍棒の先に鉛を詰めた鋼鉄の重りを繋げてある。対象を叩き潰す為に用いる。"
 
 #: ../lib/gamedata/object.txt:912
 msgid "& Quarterstaff~"
-msgstr ""
+msgstr "クォータースタッフ"
 
 #: ../lib/gamedata/object.txt:923
 msgid ""
 "Six feet of oak which can be wielded in both hands to give a drubbing or "
 "block one."
 msgstr ""
+"2メートル程度の長さの木製の杖だ。両手で持って打ち付けたり攻撃を受け止める為に"
+"用いられる。"
 
 #: ../lib/gamedata/object.txt:924
+#, fuzzy
 msgid "& Throwing Hammer~"
-msgstr ""
+msgstr "ウォー・ハンマー"
 
 #: ../lib/gamedata/object.txt:935
 msgid "A short-handled iron hammer that can strike hard when thrown."
@@ -453,23 +490,25 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:936
 msgid "& War Hammer~"
-msgstr ""
+msgstr "ウォー・ハンマー"
 
 #: ../lib/gamedata/object.txt:946
 msgid "A mallet with a tapered head and a long handle."
-msgstr ""
+msgstr "長いハンドルがあり、先の尖った槌が先端から直角に付き出た形をしている。"
 
 #: ../lib/gamedata/object.txt:947
+#, fuzzy
 msgid "& Maul~"
-msgstr ""
+msgstr "メイス"
 
 #: ../lib/gamedata/object.txt:957
 msgid "A long-handled hammer with a heavy head."
 msgstr ""
 
+# #JZ#
 #: ../lib/gamedata/object.txt:958
 msgid "& Great Hammer~"
-msgstr ""
+msgstr "グレート・ハンマー"
 
 #: ../lib/gamedata/object.txt:968
 msgid "A mighty hammer with a massive head designed to crush and stun."
@@ -477,56 +516,65 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:969
 msgid "& Mace~ of Disruption"
-msgstr ""
+msgstr "粉砕のメイス"
 
 #: ../lib/gamedata/object.txt:981
 msgid ""
 "A giant's weapon, enchanted with shattering power that breaks bones, bodies, "
 "and spirit."
 msgstr ""
+"巨人の武器であり、相手の骨を、体を、そして精神をも粉砕する魔法が掛けられてい"
+"る。"
 
 #: ../lib/gamedata/object.txt:986
 msgid "& Spear~"
-msgstr ""
+msgstr "スピア"
 
 #: ../lib/gamedata/object.txt:998
 msgid ""
 "The basic polearm, with a double-edged knife mounted on a light shaft.  This "
 "weapon can be thrown effectively."
 msgstr ""
+"最も基本的な竿状武器だ。軽く長い竿の先に尖った両刃の穂先が付いていて、突き刺"
+"すのに適している。"
 
 #: ../lib/gamedata/object.txt:999
 msgid "& Awl-Pike~"
-msgstr ""
+msgstr "オウル・パイク"
 
 #: ../lib/gamedata/object.txt:1011
+#, fuzzy
 msgid ""
 "A more robust version of the basic polearm, with a double-edged knife "
 "mounted on a sturdy shaft.  It cannot be thrown effectively, but offers some "
 "protection to the wielder."
 msgstr ""
+"最も基本的な竿状武器だ。軽く長い竿の先に尖った両刃の穂先が付いていて、突き刺"
+"すのに適している。"
 
 #: ../lib/gamedata/object.txt:1012
 msgid "& Trident~"
-msgstr ""
+msgstr "トライデント"
 
 #: ../lib/gamedata/object.txt:1022
 msgid "A three-pronged spear, originally for catching fish."
-msgstr ""
+msgstr "三又の槍で、元来は魚を捕るのに用いられていた。"
 
 #: ../lib/gamedata/object.txt:1023
 msgid "& Halberd~"
-msgstr ""
+msgstr "ハルベルト"
 
 #: ../lib/gamedata/object.txt:1035
 msgid ""
 "The most successful of the polearms, the halberd has a long haft mounted "
 "with a heavy axe blade and opposing spike, and topped by a thrusting spine."
 msgstr ""
+"長い竿に重い斧の刃とその反対側にスパイクが付き、さらに竿の先端に付き刺す為の"
+"穂先が付いている。最も完成されたタイプの竿状武器である。"
 
 #: ../lib/gamedata/object.txt:1036
 msgid "& Pike~"
-msgstr ""
+msgstr "パイク"
 
 #: ../lib/gamedata/object.txt:1047
 msgid ""
@@ -535,8 +583,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/object.txt:1051
+#, fuzzy
 msgid "& Throwing Axe~"
-msgstr ""
+msgstr "ブロード・アックス"
 
 #: ../lib/gamedata/object.txt:1063
 msgid ""
@@ -546,7 +595,7 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:1064
 msgid "& Beaked Axe~"
-msgstr ""
+msgstr "ビークド・アックス"
 
 #: ../lib/gamedata/object.txt:1074
 msgid "A narrow axe head opposed by a crow's beak for penetrating armour."
@@ -554,24 +603,24 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:1075
 msgid "& Broad Axe~"
-msgstr ""
+msgstr "ブロード・アックス"
 
 #: ../lib/gamedata/object.txt:1085
 msgid ""
 "A simple, single-bladed war axe capable of chopping though limbs or armour."
-msgstr ""
+msgstr "単純な作りの片刃の戦斧で、対象の胴体や鎧を切断する威力がある。"
 
 #: ../lib/gamedata/object.txt:1086
 msgid "& Battle Axe~"
-msgstr ""
+msgstr "バトル・アックス"
 
 #: ../lib/gamedata/object.txt:1096
 msgid "A double-bladed axe.  Very popular among Dwarves."
-msgstr ""
+msgstr "幅広の両刃の斧だ。ドワーフによく用いられる。"
 
 #: ../lib/gamedata/object.txt:1097
 msgid "& Lochaber Axe~"
-msgstr ""
+msgstr "ロッホアーバー・アックス"
 
 #: ../lib/gamedata/object.txt:1107
 msgid "A long shaft with a long narrow blade."
@@ -579,27 +628,31 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:1108
 msgid "& Great Axe~"
-msgstr ""
+msgstr "グレート・アックス"
 
 #: ../lib/gamedata/object.txt:1119
 msgid ""
 "An enormous two-handed battle axe, carried by Dwarven champions, who compete "
 "to see who can cleave the most orc heads."
 msgstr ""
+"巨大な両手持ち用の戦斧だ。オークの首を落とした数を競うドワーフの戦士が愛用し"
+"ている。"
 
 #: ../lib/gamedata/object.txt:1123
 msgid "& Scythe~"
-msgstr ""
+msgstr "大鎌"
 
 #: ../lib/gamedata/object.txt:1134
 msgid ""
 "The long crescent blade stands out from the handle of this polearm, and it "
 "is swung with two hands to harvest grain or blood."
 msgstr ""
+"長い三日月型の刃が長い柄の先端に突けられている。両手に持って穀物、または生命"
+"を苅り取る為に用いられる…。"
 
 #: ../lib/gamedata/object.txt:1135
 msgid "& Glaive~"
-msgstr ""
+msgstr "グレイブ"
 
 #: ../lib/gamedata/object.txt:1146
 msgid ""
@@ -609,7 +662,7 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:1147
 msgid "& Lance~"
-msgstr ""
+msgstr "ランス"
 
 #: ../lib/gamedata/object.txt:1157
 msgid "A massive, tapered spear used primarily from horseback."
@@ -617,63 +670,69 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:1158
 msgid "& Scythe~ of Slicing"
-msgstr ""
+msgstr "切り裂きの大鎌"
 
 #: ../lib/gamedata/object.txt:1169
 msgid ""
 "A reaper's weapon, the long blade almost hums in anticipation of the blood "
 "it will spill."
 msgstr ""
+"死神の武器である。その長い刃は流血の期待に歓喜の声を上げているかのようだ。"
 
 #: ../lib/gamedata/object.txt:1170
 msgid "& Lucerne Hammer~"
-msgstr ""
+msgstr "ルツェルン・ハンマー"
 
 #: ../lib/gamedata/object.txt:1180
+#, fuzzy
 msgid ""
 "A long pole with a three- or four-pronged head balanced by a long spike."
-msgstr ""
+msgstr "長いハンドルがあり、先の尖った槌が先端から直角に付き出た形をしている。"
 
 #: ../lib/gamedata/object.txt:1184
 msgid "& Sling~"
-msgstr ""
+msgstr "スリング"
 
 #: ../lib/gamedata/object.txt:1195
 msgid ""
 "A loop of leather and cords able to hurl stones or shot with tremendous "
 "velocity."
 msgstr ""
+"長い紐の中間にある革製の石受け部分に石を包み、これを振り回す勢いで石を飛ばす"
+"武器だ。原始的な構造だが威力はある。"
 
 #: ../lib/gamedata/object.txt:1196
 msgid "& Short Bow~"
-msgstr ""
+msgstr "ショート・ボウ"
 
 #: ../lib/gamedata/object.txt:1206
 msgid "The traditional hunter's weapon, this light bow is easily drawn."
-msgstr ""
+msgstr "伝統的に狩人に用いられる武器だ。この軽い弓は簡単に引く事ができる。"
 
 #: ../lib/gamedata/object.txt:1207
 msgid "& Long Bow~"
-msgstr ""
+msgstr "ロング・ボウ"
 
 #: ../lib/gamedata/object.txt:1218
 msgid ""
 "As tall as a man, the longbow can drive an arrow through the heaviest armour."
-msgstr ""
+msgstr "人の身長程の長さの弓だ。厚い鉄製の鎧でも貫通する程の威力を持つ。"
 
 #: ../lib/gamedata/object.txt:1219
 msgid "& Light Crossbow~"
-msgstr ""
+msgstr "ライト・クロスボウ"
 
 #: ../lib/gamedata/object.txt:1230
 msgid ""
 "A mechanical bow made of wood, it is cocked to augment the strength of its "
 "wielder."
 msgstr ""
+"鋼鉄製の弦をあらかじめ引いておき、機械式の引き金を引くだけで矢を発射する事が"
+"できる。ショート・ボウやロング・ボウに比べて扱いが簡単な武器だ。"
 
 #: ../lib/gamedata/object.txt:1231
 msgid "& Heavy Crossbow~"
-msgstr ""
+msgstr "ヘヴィ・クロスボウ"
 
 #: ../lib/gamedata/object.txt:1242
 msgid ""
@@ -683,7 +742,7 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:1246
 msgid "& Arrow~"
-msgstr ""
+msgstr "矢"
 
 #: ../lib/gamedata/object.txt:1257
 msgid "It can be shot with a bow."
@@ -691,15 +750,17 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:1258
 msgid "& Seeker Arrow~"
-msgstr ""
+msgstr "追尾の矢"
 
+# #JZ#
 #: ../lib/gamedata/object.txt:1270
+#, fuzzy
 msgid "& Mithril Arrow~"
-msgstr ""
+msgstr "ミスリルの弾"
 
 #: ../lib/gamedata/object.txt:1284
 msgid "& Bolt~"
-msgstr ""
+msgstr "クロスボウの矢"
 
 #: ../lib/gamedata/object.txt:1295
 msgid "It can be shot with a crossbow."
@@ -707,15 +768,17 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:1296
 msgid "& Seeker Bolt~"
-msgstr ""
+msgstr "追尾クロスボウの矢"
 
+# #JZ#
 #: ../lib/gamedata/object.txt:1308
+#, fuzzy
 msgid "& Mithril Bolt~"
-msgstr ""
+msgstr "ミスリルの弾"
 
 #: ../lib/gamedata/object.txt:1322
 msgid "& Rounded Pebble~"
-msgstr ""
+msgstr "丸い小石"
 
 #: ../lib/gamedata/object.txt:1334
 msgid "It can be shot with a sling or thrown."
@@ -723,33 +786,35 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:1336
 msgid "& Iron Shot~"
-msgstr ""
+msgstr "鉄弾"
 
+# #JZ#
 #: ../lib/gamedata/object.txt:1349
 msgid "& Mithril Shot~"
-msgstr ""
+msgstr "ミスリルの弾"
 
 #: ../lib/gamedata/object.txt:1365
 msgid "& Shovel~"
-msgstr ""
+msgstr "シャベル"
 
 #: ../lib/gamedata/object.txt:1376
 msgid "A compact and sturdy spade."
-msgstr ""
+msgstr "小型で頑丈なシャベルだ。"
 
 #: ../lib/gamedata/object.txt:1377
 msgid "& Pick~"
-msgstr ""
+msgstr "つるはし"
 
 #: ../lib/gamedata/object.txt:1389
 msgid ""
 "A heavy mining tool with a long, slightly curved head that tapers to chisel "
 "points on both ends."
-msgstr ""
+msgstr "重い採掘用の道具で、微妙に曲った頭部の両端に切先が付いている。"
 
+# #JZ#
 #: ../lib/gamedata/object.txt:1390
 msgid "& Mattock~"
-msgstr ""
+msgstr "戦闘用つるはし"
 
 #: ../lib/gamedata/object.txt:1402
 msgid ""
@@ -758,8 +823,9 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/object.txt:1408
+#, fuzzy
 msgid "& Pair~ of Leather Sandals"
-msgstr ""
+msgstr "革グローブ"
 
 #: ../lib/gamedata/object.txt:1419
 msgid ""
@@ -768,12 +834,15 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/object.txt:1420
+#, fuzzy
 msgid "& Pair~ of Leather Boots"
-msgstr ""
+msgstr "革グローブ"
 
 #: ../lib/gamedata/object.txt:1430
 msgid "These are calf-high boots of flexible leather, laced from heel to calf."
 msgstr ""
+"ふくらはぎの高さまでの柔軟な革のブーツだ。踵からふくらはぎまで結び紐が付いて"
+"いる。"
 
 #: ../lib/gamedata/object.txt:1431
 msgid "& Pair~ of Iron Shod Boots"
@@ -795,9 +864,11 @@ msgid ""
 "steel."
 msgstr ""
 
+# #JZ#
 #: ../lib/gamedata/object.txt:1457
+#, fuzzy
 msgid "& Pair~ of Mithril Shod Boots"
-msgstr ""
+msgstr "ミスリルの弾"
 
 #: ../lib/gamedata/object.txt:1469
 msgid ""
@@ -815,50 +886,50 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:1485
 msgid "& Hard Leather Cap~"
-msgstr ""
+msgstr "硬革帽子"
 
 #: ../lib/gamedata/object.txt:1495
 msgid "A padded skullcap of boiled leather."
-msgstr ""
+msgstr "煮固めた革製の詰め物入りの帽子だ。"
 
 #: ../lib/gamedata/object.txt:1496
 msgid "& Metal Cap~"
-msgstr ""
+msgstr "金属帽子"
 
 #: ../lib/gamedata/object.txt:1506
 msgid "A pot-helm of steel that protects the skull."
-msgstr ""
+msgstr "頭部を保護する鋼鉄の帽子だ。"
 
 #: ../lib/gamedata/object.txt:1507
 msgid "& Iron Helm~"
-msgstr ""
+msgstr "鉄ヘルメット"
 
 #: ../lib/gamedata/object.txt:1517
 msgid "A mighty helmet of heavy iron, completely enclosing the head."
-msgstr ""
+msgstr "頭部を完全に覆う鉄製のヘルメットだ。"
 
 #: ../lib/gamedata/object.txt:1518
 msgid "& Steel Helm~"
-msgstr ""
+msgstr "鋼鉄ヘルメット"
 
 #: ../lib/gamedata/object.txt:1529
 msgid ""
 "This great helm covers the head and shoulders with plates of steel and a "
 "curtain of mail."
-msgstr ""
+msgstr "鋼鉄板と鎖かたびらを組み合わせて、頭部から肩までを完全に覆う防具だ。"
 
 #: ../lib/gamedata/object.txt:1530
 msgid "& Iron Crown~"
-msgstr ""
+msgstr "鉄冠"
 
 #: ../lib/gamedata/object.txt:1541
 msgid ""
 "A plain band of iron, crowned with iron spikes.  It is a tyrant's symbol."
-msgstr ""
+msgstr "鉄の環に鉄の突起で飾りが付けられた冠だ。君主の印である。"
 
 #: ../lib/gamedata/object.txt:1542
 msgid "& Golden Crown~"
-msgstr ""
+msgstr "金の冠"
 
 #: ../lib/gamedata/object.txt:1554
 msgid ""
@@ -868,7 +939,7 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:1555
 msgid "& Jewel Encrusted Crown~"
-msgstr ""
+msgstr "宝冠"
 
 #: ../lib/gamedata/object.txt:1567
 msgid ""
@@ -878,69 +949,76 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:1571
 msgid "& Robe~"
-msgstr ""
+msgstr "ローブ"
 
 #: ../lib/gamedata/object.txt:1581
 msgid ""
 "A practical garment of thick wool or velvet, draping from neck to heels."
-msgstr ""
+msgstr "首から踵までを覆う、ビロードまたは綿製の実用的な衣服だ。"
 
 #: ../lib/gamedata/object.txt:1582
 msgid "Soft Leather Armour~"
-msgstr ""
+msgstr "軟革よろい"
 
 #: ../lib/gamedata/object.txt:1592
+#, fuzzy
 msgid "A cuirass of pliable leather, with a thicker leather jack."
-msgstr ""
+msgstr "多数の金属製の鋲で補強されたしなやかな革の胴当てだ。"
 
 #: ../lib/gamedata/object.txt:1593
+#, fuzzy
 msgid "Studded Leather Armour~"
-msgstr ""
+msgstr "軟革よろい"
 
 #: ../lib/gamedata/object.txt:1603
 msgid "A cuirass of pliable leather studded with metal rivets."
-msgstr ""
+msgstr "多数の金属製の鋲で補強されたしなやかな革の胴当てだ。"
 
 #: ../lib/gamedata/object.txt:1604
 msgid "Hard Leather Armour~"
-msgstr ""
+msgstr "硬革よろい"
 
 #: ../lib/gamedata/object.txt:1614
 msgid "A boiled leather cuirass and shoulder plates."
-msgstr ""
+msgstr "煮固めた革製の胴当てと肩当てが付いた鎧だ。"
 
 #: ../lib/gamedata/object.txt:1615
 msgid "Leather Scale Mail~"
-msgstr ""
+msgstr "革製スケイル・メイル"
 
 #: ../lib/gamedata/object.txt:1626
 msgid ""
 "A tunic and skirt sewn with thick, overlapping scales of hardened leather."
 msgstr ""
+"革製のシャツに煮固めた革製の鱗のような形の部品を多数縫い付けてある鎧だ。"
 
 #: ../lib/gamedata/object.txt:1627
 msgid "Metal Scale Mail~"
-msgstr ""
+msgstr "金属製スケイル・メイル"
 
 #: ../lib/gamedata/object.txt:1638
 msgid ""
 "A heavy shirt of overlapping steel scales backed by leather, with matching "
 "skirt and sleeves."
 msgstr ""
+"革製の袖付きシャツに鋼鉄製の鱗のような形の部品を多数縫い付けてある鎧だ。"
 
 #: ../lib/gamedata/object.txt:1639
 msgid "Chain Mail~"
-msgstr ""
+msgstr "鎖かたびら"
 
 #: ../lib/gamedata/object.txt:1650
+#, fuzzy
 msgid ""
 "A hauberk, leggings, and sleeves of interlocking steel rings, well padded "
 "with leather."
 msgstr ""
+"噛み合った鋼鉄の輪でできた鎖かたびらの胴鎧と脛当てと袖であり、2枚目の鎖の層で"
+"重要な部分を戦略的に補強しており、至る所に重い詰め物の層がある。"
 
 #: ../lib/gamedata/object.txt:1651
 msgid "Augmented Chain Mail~"
-msgstr ""
+msgstr "重鎖かたびら"
 
 #: ../lib/gamedata/object.txt:1663
 msgid ""
@@ -948,21 +1026,26 @@ msgid ""
 "reinforced at vital locations with a second layer of chain, all over a layer "
 "of heavy padding."
 msgstr ""
+"噛み合った鋼鉄の輪でできた鎖かたびらの胴鎧と脛当てと袖であり、2枚目の鎖の層で"
+"重要な部分を戦略的に補強しており、至る所に重い詰め物の層がある。"
 
 #: ../lib/gamedata/object.txt:1664
 msgid "Bar Chain Mail~"
-msgstr ""
+msgstr "強化鎖かたびら"
 
 #: ../lib/gamedata/object.txt:1676
+#, fuzzy
 msgid ""
 "A hauberk, leggings, and sleeves of interlocking steel rings, reinforced "
 "around the shoulders with segmented plates of steel, all over a layer of "
 "heavy padding."
 msgstr ""
+"噛み合った鋼鉄の輪でできた鎖かたびらの胴鎧と脛当てと袖であり、2枚目の鎖の層で"
+"重要な部分を戦略的に補強しており、至る所に重い詰め物の層がある。"
 
 #: ../lib/gamedata/object.txt:1677
 msgid "Metal Brigandine Armour~"
-msgstr ""
+msgstr "金属製ブリガンダイン・アーマー"
 
 #: ../lib/gamedata/object.txt:1689
 msgid ""
@@ -972,15 +1055,15 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:1690
 msgid "Partial Plate Armour~"
-msgstr ""
+msgstr "パーシャル・プレート・メイル"
 
 #: ../lib/gamedata/object.txt:1700
 msgid "A steel corselet and vambraces over a skirt and leggings of chain."
-msgstr ""
+msgstr "鋼鉄製の胴鎧であり、スカートの上部には腕鎧があり、鎖の脛当てを持つ。"
 
 #: ../lib/gamedata/object.txt:1701
 msgid "Metal Lamellar Armour~"
-msgstr ""
+msgstr "金属製ラメラー・アーマー"
 
 #: ../lib/gamedata/object.txt:1712
 msgid ""
@@ -990,17 +1073,19 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:1713
 msgid "Full Plate Armour~"
-msgstr ""
+msgstr "フル・プレート・メイル"
 
 #: ../lib/gamedata/object.txt:1724
 msgid ""
 "A full suit of carefully fitted plates, with hinged joints backed by chain, "
 "and light padding underneath."
 msgstr ""
+"念入りに体に合わせた鉄板製の全身鎧であり、ちょうつがいで繋がった部分の裏は鎖"
+"で守られ、鎧の裏には軽い詰め物がある。"
 
 #: ../lib/gamedata/object.txt:1725
 msgid "Ribbed Plate Armour~"
-msgstr ""
+msgstr "強化プレート・アーマー"
 
 #: ../lib/gamedata/object.txt:1736
 msgid ""
@@ -1010,7 +1095,7 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:1737
 msgid "Mithril Chain Mail~"
-msgstr ""
+msgstr "ミスリル製鎖かたびら"
 
 #: ../lib/gamedata/object.txt:1748
 msgid ""
@@ -1019,17 +1104,19 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:1749
 msgid "Mithril Plate Mail~"
-msgstr ""
+msgstr "ミスリル製プレート・メイル"
 
 #: ../lib/gamedata/object.txt:1761
 msgid ""
 "A shimmering suit of true-silver, forged long ago by dwarven smiths of "
 "legend.  It gleams with purest white as you gaze upon it."
 msgstr ""
+"遥かなる昔に伝説のドワーフの鍛冶師に鍛えられた、輝くまことの銀の鎧だ。凝視す"
+"ると純白にきらめく。"
 
 #: ../lib/gamedata/object.txt:1762
 msgid "Adamantite Plate Mail~"
-msgstr ""
+msgstr "アダマンタイト製プレート・メイル"
 
 #: ../lib/gamedata/object.txt:1773
 msgid "An exquisite suit of nearly impenetrable adamantite."
@@ -1037,68 +1124,76 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:1776
 msgid "& Cloak~"
-msgstr ""
+msgstr "クローク"
 
 #: ../lib/gamedata/object.txt:1786
 msgid "A traveller's sturdy outer garment."
-msgstr ""
+msgstr "冒険者用の丈夫な外套だ。"
 
+# #JZ#
 #: ../lib/gamedata/object.txt:1787
 msgid "& Fur Cloak~"
-msgstr ""
+msgstr "毛皮のクローク"
 
 #: ../lib/gamedata/object.txt:1797
 msgid "A heavy cloak made from fur and lined with leather; a luxury."
 msgstr ""
 
+# #JZ#
 #: ../lib/gamedata/object.txt:1798
 msgid "& Elven Cloak~"
-msgstr ""
+msgstr "エルフのクローク"
 
 #: ../lib/gamedata/object.txt:1810
 msgid ""
 "A mantle made of curious silken material by the Galadrim that wondrously "
 "takes on the hues and shapes of its surroundings."
 msgstr ""
+"不思議な絹のような素材で作られた外套だ。その素材は周りの景色の色と形を映し出"
+"し、着用者を隠す効果がある。"
 
 #: ../lib/gamedata/object.txt:1811
 msgid "& Ethereal Cloak~"
-msgstr ""
+msgstr "天上のクローク"
 
 #: ../lib/gamedata/object.txt:1823
 msgid ""
 "This unearthly, completely transparent body mantle folds and drapes in "
 "iridescent patterns around you.  It weighs absolutely nothing."
 msgstr ""
+"この世の物ではない、この完全に透明な外套は着る者を虹模様で包み飾る。それは完"
+"全に重さがない。"
 
 #: ../lib/gamedata/object.txt:1827
 msgid "& Set~ of Leather Gloves"
-msgstr ""
+msgstr "革グローブ"
 
 #: ../lib/gamedata/object.txt:1837
 msgid "Leather hand protection, with an open palm for gripping weapons."
-msgstr ""
+msgstr "革製の手甲で、手のひらは武器を握るために開いている。"
 
 #: ../lib/gamedata/object.txt:1838
 msgid "& Set~ of Gauntlets"
-msgstr ""
+msgstr "ガントレット"
 
 #: ../lib/gamedata/object.txt:1848
 msgid ""
 "A set of gloves that completely covers the hand and wrist in steel plating."
-msgstr ""
+msgstr "手と手首を鋼鉄板で完全に覆うグローブだ。"
 
 #: ../lib/gamedata/object.txt:1849
+#, fuzzy
 msgid "& Set~ of Mithril Gauntlets"
-msgstr ""
+msgstr "ガントレット"
 
 #: ../lib/gamedata/object.txt:1860
 msgid "A set of gauntlets wrought of light, shining mithril."
 msgstr ""
 
 #: ../lib/gamedata/object.txt:1861
+#, fuzzy
 msgid "& Set~ of Caestus"
-msgstr ""
+msgstr "ガントレット"
 
 #: ../lib/gamedata/object.txt:1872
 msgid ""
@@ -1107,16 +1202,18 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/object.txt:1873
+#, fuzzy
 msgid "& Set~ of Alchemist's Gloves"
-msgstr ""
+msgstr "革グローブ"
 
 #: ../lib/gamedata/object.txt:1884
 msgid "Highly protective gloves designed for an alchemist's elemental magics."
 msgstr ""
 
 #: ../lib/gamedata/object.txt:1904
+#, fuzzy
 msgid "& Wicker Shield~"
-msgstr ""
+msgstr "ナイト・シールド"
 
 #: ../lib/gamedata/object.txt:1914
 msgid "A light circular frame of wood surrounding fine-grained wickerwork."
@@ -1124,35 +1221,38 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:1915
 msgid "& Small Metal Shield~"
-msgstr ""
+msgstr "金属製スモール・シールド"
 
 #: ../lib/gamedata/object.txt:1925
 msgid "A round shield of wood reinforced with metal rims and central disk."
-msgstr ""
+msgstr "金属の縁材と中心の円盤で強化した円形の木の盾だ。"
 
 #: ../lib/gamedata/object.txt:1926
+#, fuzzy
 msgid "& Leather Shield~"
-msgstr ""
+msgstr "金属製ラージ・シールド"
 
 #: ../lib/gamedata/object.txt:1937
 msgid ""
 "A large oval shield made of layered wooden strips with a thick leather "
 "covering."
-msgstr ""
+msgstr "重ねた木の板を厚い革で覆った大きな楕円形の盾だ。"
 
 #: ../lib/gamedata/object.txt:1938
 msgid "& Large Metal Shield~"
-msgstr ""
+msgstr "金属製ラージ・シールド"
 
 #: ../lib/gamedata/object.txt:1949
 msgid ""
 "An oval shield of wood covered by leather and rimmed with metal.  A large "
 "iron shield boss offers excellent hand protection."
 msgstr ""
+"革で覆った木の板を金属で縁取った楕円形の盾だ。盾の大きな鉄の突起は素晴らしい"
+"腕の防御をもたらす。"
 
 #: ../lib/gamedata/object.txt:1950
 msgid "& Knight's Shield~"
-msgstr ""
+msgstr "ナイト・シールド"
 
 #: ../lib/gamedata/object.txt:1961
 msgid ""
@@ -1160,9 +1260,11 @@ msgid ""
 "to toe, emblazoned with heraldic symbols."
 msgstr ""
 
+# #JZ#
 #: ../lib/gamedata/object.txt:1962
+#, fuzzy
 msgid "& Mithril Shield~"
-msgstr ""
+msgstr "ミスリルの弾"
 
 #: ../lib/gamedata/object.txt:1973
 msgid "A shield of purest white, made of mithril."
@@ -1170,27 +1272,27 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:1981
 msgid "Strength"
-msgstr ""
+msgstr "腕力"
 
 #: ../lib/gamedata/object.txt:1991
 msgid "Intelligence"
-msgstr ""
+msgstr "知能"
 
 #: ../lib/gamedata/object.txt:2001
 msgid "Dexterity"
-msgstr ""
+msgstr "器用さ"
 
 #: ../lib/gamedata/object.txt:2011
 msgid "Constitution"
-msgstr ""
+msgstr "耐久力"
 
 #: ../lib/gamedata/object.txt:2021
 msgid "Speed"
-msgstr ""
+msgstr "スピード"
 
 #: ../lib/gamedata/object.txt:2031
 msgid "Searching"
-msgstr ""
+msgstr "探索"
 
 #: ../lib/gamedata/object.txt:2042
 msgid "Bodykeeping"
@@ -1201,36 +1303,38 @@ msgid "Soulkeeping"
 msgstr ""
 
 #: ../lib/gamedata/object.txt:2063
+#, fuzzy
 msgid "Resist Poison"
-msgstr ""
+msgstr "耐酸"
 
 #: ../lib/gamedata/object.txt:2073
+#, fuzzy
 msgid "Resist Fire and Cold"
-msgstr ""
+msgstr "耐冷"
 
 #: ../lib/gamedata/object.txt:2085
 msgid "Light"
-msgstr ""
+msgstr "光"
 
 #: ../lib/gamedata/object.txt:2094
 msgid "Flames"
-msgstr ""
+msgstr "火炎"
 
 #: ../lib/gamedata/object.txt:2112
 msgid "Acid"
-msgstr ""
+msgstr "酸"
 
 #: ../lib/gamedata/object.txt:2130
 msgid "Ice"
-msgstr ""
+msgstr "氷"
 
 #: ../lib/gamedata/object.txt:2148
 msgid "Lightning"
-msgstr ""
+msgstr "電撃"
 
 #: ../lib/gamedata/object.txt:2168
 msgid "Damage"
-msgstr ""
+msgstr "ダメージ"
 
 #: ../lib/gamedata/object.txt:2178
 msgid "It boosts your to-dam value."
@@ -1238,7 +1342,7 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:2179
 msgid "Accuracy"
-msgstr ""
+msgstr "精度"
 
 #: ../lib/gamedata/object.txt:2189
 msgid "It boosts your to-hit value."
@@ -1246,7 +1350,7 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:2190
 msgid "Slaying"
-msgstr ""
+msgstr "殺戮"
 
 #: ../lib/gamedata/object.txt:2200
 msgid "It boosts your to-hit and to-dam values."
@@ -1254,7 +1358,7 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:2201
 msgid "Protection"
-msgstr ""
+msgstr "守り"
 
 #: ../lib/gamedata/object.txt:2211
 msgid "It increases your armor class."
@@ -1262,7 +1366,7 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:2215
 msgid "Teleportation"
-msgstr ""
+msgstr "テレポート"
 
 #: ../lib/gamedata/object.txt:2226
 msgid "Reckless Attacks"
@@ -1277,16 +1381,18 @@ msgid "Escaping"
 msgstr ""
 
 #: ../lib/gamedata/object.txt:2262
+#, fuzzy
 msgid "the Mouse"
-msgstr ""
+msgstr "スピード・モンスター"
 
 #: ../lib/gamedata/object.txt:2273
+#, fuzzy
 msgid "the Dog"
-msgstr ""
+msgstr "賢者"
 
 #: ../lib/gamedata/object.txt:2285
 msgid "Slow Digestion"
-msgstr ""
+msgstr "遅消化"
 
 #: ../lib/gamedata/object.txt:2294
 msgid "Feather Falling"
@@ -1294,11 +1400,11 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:2303
 msgid "Free Action"
-msgstr ""
+msgstr "麻痺知らず"
 
 #: ../lib/gamedata/object.txt:2312
 msgid "See Invisible"
-msgstr ""
+msgstr "透明物体感知"
 
 #: ../lib/gamedata/object.txt:2321
 msgid "Digging"
@@ -1306,55 +1412,63 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:2340
 msgid "Wisdom"
-msgstr ""
+msgstr "賢さ"
 
 #: ../lib/gamedata/object.txt:2352
+#, fuzzy
 msgid "Resist Lightning"
-msgstr ""
+msgstr "電撃"
 
 #: ../lib/gamedata/object.txt:2362
 msgid "Resist Acid"
-msgstr ""
+msgstr "耐酸"
 
+# #JZ#
 #: ../lib/gamedata/object.txt:2372
 msgid "Resistance"
-msgstr ""
+msgstr "耐性"
 
+# #JZ#
 #: ../lib/gamedata/object.txt:2385
+#, fuzzy
 msgid "Sustenance"
-msgstr ""
+msgstr "耐性"
 
 #: ../lib/gamedata/object.txt:2396
 msgid "the Magi"
-msgstr ""
+msgstr "賢者"
 
 #: ../lib/gamedata/object.txt:2409
 msgid "ESP"
 msgstr ""
 
 #: ../lib/gamedata/object.txt:2419
+#, fuzzy
 msgid "Devotion"
-msgstr ""
+msgstr "全感知"
 
 #: ../lib/gamedata/object.txt:2429
+#, fuzzy
 msgid "Weaponmastery"
-msgstr ""
+msgstr "回復モンスター"
 
 #: ../lib/gamedata/object.txt:2441
 msgid "Trickery"
 msgstr ""
 
 #: ../lib/gamedata/object.txt:2454
+#, fuzzy
 msgid "Regeneration"
-msgstr ""
+msgstr "全復活"
 
 #: ../lib/gamedata/object.txt:2463
+#, fuzzy
 msgid "Infravision"
-msgstr ""
+msgstr "混乱"
 
 #: ../lib/gamedata/object.txt:2502
 msgid "Adornment"
-msgstr ""
+msgstr "装飾"
 
 #: ../lib/gamedata/object.txt:2514
 msgid "Inertia"
@@ -1362,23 +1476,23 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:2531
 msgid "Phase Door"
-msgstr ""
+msgstr "ショート・テレポート"
 
 #: ../lib/gamedata/object.txt:2555
 msgid "Teleport Level"
-msgstr ""
+msgstr "テレポート・レベル"
 
 #: ../lib/gamedata/object.txt:2569
 msgid "Magic Mapping"
-msgstr ""
+msgstr "魔法の地図"
 
 #: ../lib/gamedata/object.txt:2581
 msgid "Treasure Detection"
-msgstr ""
+msgstr "財宝感知"
 
 #: ../lib/gamedata/object.txt:2595
 msgid "Detect Invisible"
-msgstr ""
+msgstr "透明物体感知"
 
 #: ../lib/gamedata/object.txt:2607
 msgid "Identify Rune"
@@ -1386,75 +1500,80 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:2620
 msgid "Enchant Weapon To-Hit"
-msgstr ""
+msgstr "武器命中率上昇"
 
 #: ../lib/gamedata/object.txt:2632
 msgid "Enchant Weapon To-Dam"
-msgstr ""
+msgstr "武器ダメージ増加"
 
 #: ../lib/gamedata/object.txt:2644
+#, fuzzy
 msgid "Enchant Armour"
-msgstr ""
+msgstr "*武器強化*"
 
 #: ../lib/gamedata/object.txt:2656
 msgid "*Enchant Weapon*"
-msgstr ""
+msgstr "*武器強化*"
 
 #: ../lib/gamedata/object.txt:2669
+#, fuzzy
 msgid "*Enchant Armour*"
-msgstr ""
+msgstr "*武器強化*"
 
 #: ../lib/gamedata/object.txt:2682
 msgid "Remove Curse"
-msgstr ""
+msgstr "解呪"
 
 #: ../lib/gamedata/object.txt:2695
 msgid "*Remove Curse*"
-msgstr ""
+msgstr "*解呪*"
 
 #: ../lib/gamedata/object.txt:2709
 msgid "Summon Monster"
-msgstr ""
+msgstr "サモン・モンスター"
 
 #: ../lib/gamedata/object.txt:2721
 msgid "Summon Undead"
-msgstr ""
+msgstr "サモン・アンデッド"
 
 #: ../lib/gamedata/object.txt:2733
 msgid "Acquirement"
-msgstr ""
+msgstr "獲得"
 
 #: ../lib/gamedata/object.txt:2744
 msgid "*Acquirement*"
-msgstr ""
+msgstr "*獲得*"
 
 #: ../lib/gamedata/object.txt:2758
 msgid "Dispel Undead"
-msgstr ""
+msgstr "アンデッド退散"
 
 #: ../lib/gamedata/object.txt:2770
+#, fuzzy
 msgid "Banishment"
-msgstr ""
+msgstr "周辺感知"
 
 #: ../lib/gamedata/object.txt:2780
 msgid "Mass Banishment"
 msgstr ""
 
 #: ../lib/gamedata/object.txt:2793
+#, fuzzy
 msgid "Remove Hunger"
-msgstr ""
+msgstr "解呪"
 
 #: ../lib/gamedata/object.txt:2818
 msgid "Word of Recall"
-msgstr ""
+msgstr "帰還の詔"
 
 #: ../lib/gamedata/object.txt:2829
 msgid "Recharging"
-msgstr ""
+msgstr "魔力充填"
 
 #: ../lib/gamedata/object.txt:2841
+#, fuzzy
 msgid "Door Destruction"
-msgstr ""
+msgstr "*破壊*"
 
 #: ../lib/gamedata/object.txt:2852
 msgid "Deep Descent"
@@ -1462,107 +1581,110 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:2866
 msgid "Blessing"
-msgstr ""
+msgstr "天恵"
 
 #: ../lib/gamedata/object.txt:2878
 msgid "Holy Chant"
-msgstr ""
+msgstr "聖唱歌"
 
 #: ../lib/gamedata/object.txt:2890
 msgid "Holy Prayer"
-msgstr ""
+msgstr "聖祈言"
 
 #: ../lib/gamedata/object.txt:2902
 msgid "Protection from Evil"
-msgstr ""
+msgstr "対邪悪結界"
 
 #: ../lib/gamedata/object.txt:2918
 msgid "Monster Confusion"
-msgstr ""
+msgstr "パニック・モンスター"
 
 #: ../lib/gamedata/object.txt:2930
 msgid "Rune of Protection"
-msgstr ""
+msgstr "守りのルーン"
 
 #: ../lib/gamedata/object.txt:2940
 msgid "*Destruction*"
-msgstr ""
+msgstr "*破壊*"
 
 #: ../lib/gamedata/object.txt:2952
 msgid "Aggravate Monster"
-msgstr ""
+msgstr "反感"
 
 #: ../lib/gamedata/object.txt:2966
 msgid "Curse Weapon"
-msgstr ""
+msgstr "武器呪縛"
 
 #: ../lib/gamedata/object.txt:2977
+#, fuzzy
 msgid "Curse Armour"
-msgstr ""
+msgstr "フル・プレート・メイル"
 
 #: ../lib/gamedata/object.txt:2988
 msgid "Darkness"
-msgstr ""
+msgstr "暗闇"
 
 #: ../lib/gamedata/object.txt:3001
 msgid "Trap Creation"
-msgstr ""
+msgstr "トラップ創造"
 
 #: ../lib/gamedata/object.txt:3080
 msgid "Augmentation"
-msgstr ""
+msgstr "増強"
 
 #: ../lib/gamedata/object.txt:3101
 msgid "Experience"
-msgstr ""
+msgstr "経験"
 
 #: ../lib/gamedata/object.txt:3114
 msgid "Cure Light Wounds"
-msgstr ""
+msgstr "軽傷の治癒"
 
 #: ../lib/gamedata/object.txt:3133
 msgid "Cure Serious Wounds"
-msgstr ""
+msgstr "重傷の治癒"
 
 #: ../lib/gamedata/object.txt:3150
 msgid "Cure Critical Wounds"
-msgstr ""
+msgstr "致命傷の治癒"
 
 #: ../lib/gamedata/object.txt:3170
 msgid "Healing"
-msgstr ""
+msgstr "体力回復"
 
 #: ../lib/gamedata/object.txt:3190
 msgid "*Healing*"
-msgstr ""
+msgstr "*体力回復*"
 
 #: ../lib/gamedata/object.txt:3209
 msgid "Life"
-msgstr ""
+msgstr "生命"
 
 #: ../lib/gamedata/object.txt:3236
 msgid "Neutralize Poison"
-msgstr ""
+msgstr "解毒"
 
 #: ../lib/gamedata/object.txt:3247
 msgid "Restore Mana"
-msgstr ""
+msgstr "魔力復活"
 
 #: ../lib/gamedata/object.txt:3263
 msgid "Restore Life Levels"
-msgstr ""
+msgstr "経験値復活"
 
 #: ../lib/gamedata/object.txt:3277
 msgid "Brawn"
 msgstr ""
 
 #: ../lib/gamedata/object.txt:3290
+#, fuzzy
 msgid "Intellect"
-msgstr ""
+msgstr "知能"
 
 #: ../lib/gamedata/object.txt:3303
+#, fuzzy
 msgid "Contemplation"
-msgstr ""
+msgstr "耐久力"
 
 #: ../lib/gamedata/object.txt:3316
 msgid "Nimbleness"
@@ -1574,31 +1696,31 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:3345
 msgid "Enlightenment"
-msgstr ""
+msgstr "周辺感知"
 
 #: ../lib/gamedata/object.txt:3357
 msgid "*Enlightenment*"
-msgstr ""
+msgstr "*啓蒙*"
 
 #: ../lib/gamedata/object.txt:3397
 msgid "Heroism"
-msgstr ""
+msgstr "ヒーロー"
 
 #: ../lib/gamedata/object.txt:3412
 msgid "Berserk Strength"
-msgstr ""
+msgstr "狂戦士化"
 
 #: ../lib/gamedata/object.txt:3427
 msgid "Boldness"
-msgstr ""
+msgstr "恐いもの知らず"
 
 #: ../lib/gamedata/object.txt:3438
 msgid "Resist Heat"
-msgstr ""
+msgstr "耐火"
 
 #: ../lib/gamedata/object.txt:3450
 msgid "Resist Cold"
-msgstr ""
+msgstr "耐冷"
 
 #: ../lib/gamedata/object.txt:3475
 msgid "True Seeing"
@@ -1606,27 +1728,27 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:3503
 msgid "Slime Mold Juice"
-msgstr ""
+msgstr "スライムモルドジュース"
 
 #: ../lib/gamedata/object.txt:3515
 msgid "Sleep"
-msgstr ""
+msgstr "眠り"
 
 #: ../lib/gamedata/object.txt:3531
 msgid "Blindness"
-msgstr ""
+msgstr "盲目"
 
 #: ../lib/gamedata/object.txt:3545
 msgid "Confusion"
-msgstr ""
+msgstr "混乱"
 
 #: ../lib/gamedata/object.txt:3561
 msgid "Poison"
-msgstr ""
+msgstr "毒"
 
 #: ../lib/gamedata/object.txt:3575
 msgid "Slowness"
-msgstr ""
+msgstr "のろま"
 
 #: ../lib/gamedata/object.txt:3591
 msgid "Surprise"
@@ -1634,87 +1756,90 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:3610
 msgid "Salt Water"
-msgstr ""
+msgstr "塩水"
 
 #: ../lib/gamedata/object.txt:3629
+#, fuzzy
 msgid "Dragon Breath"
-msgstr ""
+msgstr "ドラゴン・ブレス"
 
 #: ../lib/gamedata/object.txt:3652
 msgid "Magic Missile"
-msgstr ""
+msgstr "マジック・ミサイル"
 
 #: ../lib/gamedata/object.txt:3666
 msgid "Lightning Bolts"
-msgstr ""
+msgstr "サンダー・ボルト"
 
 #: ../lib/gamedata/object.txt:3680
 msgid "Frost Bolts"
-msgstr ""
+msgstr "アイス・ボルト"
 
 #: ../lib/gamedata/object.txt:3694
 msgid "Fire Bolts"
-msgstr ""
+msgstr "ファイア・ボルト"
 
 #: ../lib/gamedata/object.txt:3708
 msgid "Acid Bolts"
-msgstr ""
+msgstr "アシッド・ボルト"
 
 #: ../lib/gamedata/object.txt:3725
 msgid "Stinking Cloud"
-msgstr ""
+msgstr "悪臭雲"
 
 #: ../lib/gamedata/object.txt:3739
 msgid "Lightning Balls"
-msgstr ""
+msgstr "サンダー・ボール"
 
 #: ../lib/gamedata/object.txt:3754
 msgid "Cold Balls"
-msgstr ""
+msgstr "アイス・ボール"
 
 #: ../lib/gamedata/object.txt:3769
 msgid "Fire Balls"
-msgstr ""
+msgstr "ファイア・ボール"
 
 #: ../lib/gamedata/object.txt:3784
 msgid "Acid Balls"
-msgstr ""
+msgstr "アシッド・ボール"
 
 #: ../lib/gamedata/object.txt:3802
 msgid "Slow Monster"
-msgstr ""
+msgstr "スロウ・モンスター"
 
 #: ../lib/gamedata/object.txt:3816
 msgid "Confuse Monster"
-msgstr ""
+msgstr "パニック・モンスター"
 
 #: ../lib/gamedata/object.txt:3830
+#, fuzzy
 msgid "Hold Monster"
-msgstr ""
+msgstr "回復モンスター"
 
 #: ../lib/gamedata/object.txt:3844
+#, fuzzy
 msgid "Stun Monster"
-msgstr ""
+msgstr "サモン・モンスター"
 
 #: ../lib/gamedata/object.txt:3858
 msgid "Scare Monster"
-msgstr ""
+msgstr "恐慌モンスター"
 
 #: ../lib/gamedata/object.txt:3890
 msgid "Stone to Mud"
-msgstr ""
+msgstr "岩石溶解"
 
 #: ../lib/gamedata/object.txt:3904
 msgid "Polymorph"
-msgstr ""
+msgstr "突然変異"
 
 #: ../lib/gamedata/object.txt:3933
 msgid "Clone Monster"
-msgstr ""
+msgstr "クローン・モンスター"
 
 #: ../lib/gamedata/object.txt:3946
 msgid "Teleport Other"
-msgstr ""
+msgstr "テレポート・アウェイ"
 
 #: ../lib/gamedata/object.txt:3961
 msgid "Disable Traps"
@@ -1722,19 +1847,19 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:3974
 msgid "Wonder"
-msgstr ""
+msgstr "謎"
 
 #: ../lib/gamedata/object.txt:3994
 msgid "Dragon's Flame"
-msgstr ""
+msgstr "ドラゴンの火炎"
 
 #: ../lib/gamedata/object.txt:4009
 msgid "Dragon's Frost"
-msgstr ""
+msgstr "ドラゴンの冷気"
 
 #: ../lib/gamedata/object.txt:4024
 msgid "Dragon's Breath"
-msgstr ""
+msgstr "ドラゴン・ブレス"
 
 #: ../lib/gamedata/object.txt:4052
 msgid "Drain Life"
@@ -1742,128 +1867,130 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:4066
 msgid "Annihilation"
-msgstr ""
+msgstr "消滅"
 
 #: ../lib/gamedata/object.txt:4084
 msgid "Heal Monster"
-msgstr ""
+msgstr "回復モンスター"
 
 #: ../lib/gamedata/object.txt:4098
 msgid "Haste Monster"
-msgstr ""
+msgstr "スピード・モンスター"
 
 #: ../lib/gamedata/object.txt:4119
 msgid "Summoning"
-msgstr ""
+msgstr "召喚"
 
 #: ../lib/gamedata/object.txt:4133
 msgid "Haste Monsters"
-msgstr ""
+msgstr "スピード・モンスター"
 
 #: ../lib/gamedata/object.txt:4164
 msgid "Earthquakes"
-msgstr ""
+msgstr "地震"
 
 #: ../lib/gamedata/object.txt:4192
+#, fuzzy
 msgid "Confuse Monsters"
-msgstr ""
+msgstr "パニック・モンスター"
 
 #: ../lib/gamedata/object.txt:4206
 msgid "Slow Monsters"
-msgstr ""
+msgstr "スロウ・モンスター"
 
 #: ../lib/gamedata/object.txt:4220
 msgid "Sleep Monsters"
-msgstr ""
+msgstr "スリープ・モンスター"
 
 #: ../lib/gamedata/object.txt:4252
 msgid "Detect Evil"
-msgstr ""
+msgstr "邪悪存在感知"
 
 #: ../lib/gamedata/object.txt:4266
+#, fuzzy
 msgid "Mapping"
-msgstr ""
+msgstr "魔法の地図"
 
 #: ../lib/gamedata/object.txt:4283
 msgid "Curing"
-msgstr ""
+msgstr "癒し"
 
 #: ../lib/gamedata/object.txt:4342
 msgid "Dispel Evil"
-msgstr ""
+msgstr "邪悪存在退散"
 
 #: ../lib/gamedata/object.txt:4369
 msgid "Power"
-msgstr ""
+msgstr "力"
 
 #: ../lib/gamedata/object.txt:4383
 msgid "Holiness"
-msgstr ""
+msgstr "聖浄"
 
 #: ../lib/gamedata/object.txt:4430
 msgid "Starlight"
-msgstr ""
+msgstr "スターライト"
 
 #: ../lib/gamedata/object.txt:4506
 msgid "Treasure Location"
-msgstr ""
+msgstr "財宝感知"
 
 #: ../lib/gamedata/object.txt:4520
 msgid "Detection"
-msgstr ""
+msgstr "全感知"
 
 #: ../lib/gamedata/object.txt:4555
 msgid "Probing"
-msgstr ""
+msgstr "調査"
 
 #: ../lib/gamedata/object.txt:4755
 msgid "Restoration"
-msgstr ""
+msgstr "全復活"
 
 #: ../lib/gamedata/object.txt:4849
 msgid "Illumination"
-msgstr ""
+msgstr "イルミネーション"
 
 #: ../lib/gamedata/object.txt:4864
 msgid "Recall"
-msgstr ""
+msgstr "帰還"
 
 #: ../lib/gamedata/object.txt:4898
 msgid "& Small wooden chest~"
-msgstr ""
+msgstr "小さな木の箱"
 
 #: ../lib/gamedata/object.txt:4908
 msgid "& Large wooden chest~"
-msgstr ""
+msgstr "大きな木の箱"
 
 #: ../lib/gamedata/object.txt:4918
 msgid "& Small iron chest~"
-msgstr ""
+msgstr "小さな鉄の箱"
 
 #: ../lib/gamedata/object.txt:4928
 msgid "& Large iron chest~"
-msgstr ""
+msgstr "大きな鉄の箱"
 
 #: ../lib/gamedata/object.txt:4938
 msgid "& Small steel chest~"
-msgstr ""
+msgstr "小さな鋼鉄の箱"
 
 #: ../lib/gamedata/object.txt:4948
 msgid "& Large steel chest~"
-msgstr ""
+msgstr "大きな鋼鉄の箱"
 
 #: ../lib/gamedata/object.txt:4962
 msgid "Black Dragon Scale Mail~"
-msgstr ""
+msgstr "ブラックドラゴン・スケイルメイル"
 
 #: ../lib/gamedata/object.txt:4978
 msgid ""
 "A suit of utterly black scales, against which no metal or wood can rest."
-msgstr ""
+msgstr "木や金属が耐えられないかのような漆黒の鱗鎧だ。"
 
 #: ../lib/gamedata/object.txt:4979
 msgid "Blue Dragon Scale Mail~"
-msgstr ""
+msgstr "ブルードラゴン・スケイルメイル"
 
 #: ../lib/gamedata/object.txt:4996
 msgid ""
@@ -1873,27 +2000,27 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:4997
 msgid "White Dragon Scale Mail~"
-msgstr ""
+msgstr "ホワイトドラゴン・スケイルメイル"
 
 #: ../lib/gamedata/object.txt:5014
 msgid ""
 "A suit of scales, coldly gleaming in frosty white.  A shiver runs down "
 "through your spine even as you look at it."
-msgstr ""
+msgstr "冷淡な白に冷たくきらめく鱗鎧だ。それを見る時、背筋が寒くなる。"
 
 #: ../lib/gamedata/object.txt:5015
 msgid "Red Dragon Scale Mail~"
-msgstr ""
+msgstr "レッドドラゴン・スケイルメイル"
 
 #: ../lib/gamedata/object.txt:5032
 msgid ""
 "A suit of scales, with all the reds of every fire ever lit.  The scar tissue "
 "from an old burn aches as you put this armour on."
-msgstr ""
+msgstr "常に燃える炎に赤く彩られた鱗鎧だ。これを着ると古い火傷跡が痛む。"
 
 #: ../lib/gamedata/object.txt:5033
 msgid "Green Dragon Scale Mail~"
-msgstr ""
+msgstr "グリーンドラゴン・スケイルメイル"
 
 #: ../lib/gamedata/object.txt:5050
 msgid ""
@@ -1903,17 +2030,20 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:5051
 msgid "Multi-Hued Dragon Scale Mail~"
-msgstr ""
+msgstr "万色ドラゴン・スケイルメイル"
 
 #: ../lib/gamedata/object.txt:5078
 msgid ""
 "A suit of scales that throbs with angry energies; it takes all your energy "
 "to master the Elements fighting an endless war trapped inside."
 msgstr ""
+"怒りのエネルギーに脈打つ鱗鎧で、鎧の中に捕らわれ永遠に戦い続けるエレメント達"
+"を支配するために着る者の力全てを用いる。"
 
 #: ../lib/gamedata/object.txt:5079
+#, fuzzy
 msgid "Shining Dragon Scale Mail~"
-msgstr ""
+msgstr "ホワイトドラゴン・スケイルメイル"
 
 #: ../lib/gamedata/object.txt:5100
 msgid ""
@@ -1923,27 +2053,31 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:5101
 msgid "Law Dragon Scale Mail~"
-msgstr ""
+msgstr "ロードラゴン・スケイルメイル"
 
 #: ../lib/gamedata/object.txt:5122
 msgid ""
 "A suit of scales in stern blue and silver.  You feel the slightest tremor as "
 "you touch it, like massed trumpets heard and cyclones felt from afar."
 msgstr ""
+"厳粛な青と銀の鱗鎧だ。それに触れると、トランペットの集団の演奏が聞こえるか遠"
+"方からの竜巻を感じるかのようにごく微かな振動を感じる。"
 
 #: ../lib/gamedata/object.txt:5123
 msgid "Gold Dragon Scale Mail~"
-msgstr ""
+msgstr "ゴールドドラゴン・スケイルメイル"
 
 #: ../lib/gamedata/object.txt:5141
 msgid ""
 "A suit of scales in mirror-like gold.  You hear nothing unusual as you wear "
 "this armour, yet your ears ache as though in the midst of a cacophony."
 msgstr ""
+"鏡のような金の鱗鎧だ。不協和音の中にいるかのように耳が痛くなり、この鎧を着る"
+"と異常なまでに何も聞こえなくなる。"
 
 #: ../lib/gamedata/object.txt:5142
 msgid "Chaos Dragon Scale Mail~"
-msgstr ""
+msgstr "カオスドラゴン・スケイルメイル"
 
 #: ../lib/gamedata/object.txt:5163
 msgid ""
@@ -1953,7 +2087,7 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:5164
 msgid "Balance Dragon Scale Mail~"
-msgstr ""
+msgstr "バランスドラゴン・スケイルメイル"
 
 #: ../lib/gamedata/object.txt:5190
 msgid ""
@@ -1961,10 +2095,12 @@ msgid ""
 "reveals patterns within patterns of iridescence that throb with leashed "
 "energies bound as though by chains of adamant."
 msgstr ""
+"鱗鎧だ。何気なく見ると平凡な灰色だが、近づいてよく見るとアダマンタイトの鎖の"
+"ようなものに縛られたエネルギーが脈打つ虹色の紋様の中にも紋様が現れる。"
 
 #: ../lib/gamedata/object.txt:5191
 msgid "Power Dragon Scale Mail~"
-msgstr ""
+msgstr "パワードラゴン・スケイルメイル"
 
 #: ../lib/gamedata/object.txt:5212
 msgid ""
@@ -1975,52 +2111,52 @@ msgstr ""
 
 #: ../lib/gamedata/object.txt:5217
 msgid "copper"
-msgstr ""
+msgstr "銅の"
 
 #: ../lib/gamedata/object.txt:5221
 msgid "silver"
-msgstr ""
+msgstr "銀色の"
 
 #: ../lib/gamedata/object.txt:5225
 msgid "garnets"
-msgstr ""
+msgstr "ガーネット"
 
 #: ../lib/gamedata/object.txt:5229
 msgid "gold"
-msgstr ""
+msgstr "金塊"
 
 #: ../lib/gamedata/object.txt:5233
 msgid "opals"
-msgstr ""
+msgstr "オパール"
 
 #: ../lib/gamedata/object.txt:5237
 msgid "sapphires"
-msgstr ""
+msgstr "サファイア"
 
 #: ../lib/gamedata/object.txt:5241
 msgid "rubies"
-msgstr ""
+msgstr "ルビー"
 
 #: ../lib/gamedata/object.txt:5245
 msgid "diamonds"
-msgstr ""
+msgstr "ダイヤモンド"
 
 #: ../lib/gamedata/object.txt:5249
 msgid "emeralds"
-msgstr ""
+msgstr "エメラルド"
 
 #: ../lib/gamedata/object.txt:5253
 msgid "mithril"
-msgstr ""
+msgstr "ミスリルの"
 
 #: ../lib/gamedata/object.txt:5257
 msgid "adamantite"
-msgstr ""
+msgstr "アダマンタイトの"
 
 #: ../lib/gamedata/object.txt:5267
 msgid "& Mighty Hammer~"
-msgstr ""
+msgstr "冥界の大鉄杖"
 
 #: ../lib/gamedata/object.txt:5277
 msgid "& Massive Iron Crown~"
-msgstr ""
+msgstr "堂々たる鉄冠"
