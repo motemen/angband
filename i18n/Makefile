@@ -7,7 +7,8 @@ GAMEDATA_POTS = \
 		_gamedata-blow_methods.pot \
 		_gamedata-blow_effects.pot \
 		_gamedata-source.pot \
-		_gamedata-object.pot
+		_gamedata-object.pot \
+		_gamedata-object_base.pot \
 
 .PHONY: all
 all: $(LOCALE)/LC_MESSAGES/messages.mo $(LOCALE)/LC_MESSAGES/gamedata.mo

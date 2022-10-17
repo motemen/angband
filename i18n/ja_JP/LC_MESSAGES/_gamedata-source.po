@@ -55,7 +55,7 @@ msgstr ""
 
 #: ../src/obj-desc.c:139
 msgid "& Potion~"
-msgstr ""
+msgstr "薬"
 
 #: ../src/obj-desc.c:142
 msgid "& Scroll~ titled #"
@@ -63,7 +63,7 @@ msgstr ""
 
 #: ../src/obj-desc.c:142
 msgid "& Scroll~"
-msgstr ""
+msgstr "巻物"
 
 #: ../src/obj-desc.c:146 ../src/obj-desc.c:152 ../src/obj-desc.c:158
 #: ../src/obj-desc.c:170

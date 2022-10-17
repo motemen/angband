@@ -25,6 +25,7 @@ while (<$fh>) {
     if (/^name:(.+)/) {
         next if $type eq 'blow_methods';
         next if $type eq 'blow_effects';
+        /^name:[^:]+:(.+)/ or next if $type eq 'object_base';
 
         next if $seen->{$1}++;
         print "#: $file:$.\n";

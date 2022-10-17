@@ -118,7 +118,7 @@ static const char *obj_desc_get_basename(const struct object *obj, bool aware,
 		case TV_DRAG_ARMOR:
 		case TV_LIGHT:
 		case TV_FOOD:
-			return obj->kind->name;
+			return GAMEDATA_(obj->kind->name);
 
 		case TV_AMULET:
 			return (show_flavor ? GAMEDATA_("& # Amulet~") : GAMEDATA_("& Amulet~"));
@@ -336,7 +336,7 @@ static size_t obj_desc_name(char *buf, size_t max, size_t end,
 		if (terse)
 			strnfcat(buf, max, &end, _(" '%s'"), GAMEDATA_(obj->kind->name));
 		else
-			strnfcat(buf, max, &end, _(" of %s"), GAMEDATA_(obj->kind->name));
+			strnfcat(buf, max, &end, _(" of %s"), GAMEDATA_(obj->kind->name)); // TODO
 	}
 
 	return end;
