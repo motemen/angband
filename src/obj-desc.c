@@ -191,7 +191,7 @@ static size_t obj_desc_name_prefix(char *buf, size_t max, size_t end,
 	} else if (number > 1) {
 		strnfcat(buf, max, &end, _("%u "), number);
 	} else if (object_is_known_artifact(obj)) {
-		strnfcat(buf, max, &end, _("the "));
+		strnfcat(buf, max, &end, _("the ")); // TODO: _C("obj", "the ")
 	} else if (*basename == '&') {
 		bool an = false;
 		const char *lookahead = basename + 1;
@@ -335,8 +335,12 @@ static size_t obj_desc_name(char *buf, size_t max, size_t end,
 			 (obj->kind->flavor || obj->kind->tval == TV_SCROLL)) {
 		if (terse)
 			strnfcat(buf, max, &end, _(" '%s'"), GAMEDATA_(obj->kind->name));
-		else
-			strnfcat(buf, max, &end, _(" of %s"), GAMEDATA_(obj->kind->name)); // TODO
+		else {
+		 	char *buf_sofar = string_make(buf);
+			snprintf(buf, max, _("%s of %s"), buf_sofar, GAMEDATA_(obj->kind->name));
+			string_free(buf_sofar);
+			end = strlen(buf);
+		}
 	}
 
 	return end;

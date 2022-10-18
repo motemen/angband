@@ -660,107 +660,107 @@ msgstr ""
 
 #: ../src/obj-desc.c:210
 msgid "an "
-msgstr "\003"
+msgstr ""
 
 #: ../src/obj-desc.c:212
 msgid "a "
-msgstr "\003"
+msgstr ""
 
 #: ../src/obj-desc.c:337
 #, c-format
 msgid " '%s'"
 msgstr ""
 
-#: ../src/obj-desc.c:339
-#, fuzzy, c-format
-msgid " of %s"
-msgstr "一つ"
+#: ../src/obj-desc.c:340
+#, c-format
+msgid "%s of %s"
+msgstr "%2$sの%1$s"
 
-#: ../src/obj-desc.c:366
+#: ../src/obj-desc.c:370
 #, c-format
 msgid " (%s)"
 msgstr ""
 
-#: ../src/obj-desc.c:383
+#: ../src/obj-desc.c:387
 #, c-format
 msgid " (%dd%d)"
 msgstr ""
 
-#: ../src/obj-desc.c:388
+#: ../src/obj-desc.c:392
 #, c-format
 msgid " (x%d)"
 msgstr ""
 
-#: ../src/obj-desc.c:435
+#: ../src/obj-desc.c:439
 #, c-format
 msgid " (%d turns)"
 msgstr ""
 
-#: ../src/obj-desc.c:493
+#: ../src/obj-desc.c:497
 #, c-format
 msgid " (%d charge%s)"
 msgstr ""
 
-#: ../src/obj-desc.c:497
+#: ../src/obj-desc.c:501
 #, c-format
 msgid " (%d charging)"
 msgstr ""
 
-#: ../src/obj-desc.c:500
+#: ../src/obj-desc.c:504
 #, fuzzy
 msgid " (charging)"
 msgstr " (ターン平均"
 
-#: ../src/obj-desc.c:522
+#: ../src/obj-desc.c:526
 msgid "empty"
 msgstr ""
 
-#: ../src/obj-desc.c:524
+#: ../src/obj-desc.c:528
 msgid "tried"
 msgstr ""
 
-#: ../src/obj-desc.c:529
+#: ../src/obj-desc.c:533
 msgid "cursed"
 msgstr ""
 
-#: ../src/obj-desc.c:533
+#: ../src/obj-desc.c:537
 msgid "ignore"
 msgstr ""
 
-#: ../src/obj-desc.c:537
+#: ../src/obj-desc.c:541
 msgid "??"
 msgstr ""
 
-#: ../src/obj-desc.c:564
+#: ../src/obj-desc.c:568
 msgid " {unseen}"
 msgstr ""
 
-#: ../src/obj-desc.c:566
+#: ../src/obj-desc.c:570
 msgid " {??}"
 msgstr ""
 
-#: ../src/obj-desc.c:568
+#: ../src/obj-desc.c:572
 msgid " {cursed}"
 msgstr ""
 
-#: ../src/obj-desc.c:613
+#: ../src/obj-desc.c:617
 msgid "(nothing)"
 msgstr ""
 
-#: ../src/obj-desc.c:618
+#: ../src/obj-desc.c:622
 msgid "an unknown item"
 msgstr ""
 
-#: ../src/obj-desc.c:619
+#: ../src/obj-desc.c:623
 msgid "unknown item"
 msgstr ""
 
-#: ../src/obj-desc.c:623
+#: ../src/obj-desc.c:627
 #, c-format
 msgid "%d gold pieces worth of %s%s"
 msgstr ""
 
-#: ../src/obj-desc.c:625
+#: ../src/obj-desc.c:629
 msgid " {ignore}"
 msgstr ""
 
