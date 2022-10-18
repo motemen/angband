@@ -2211,7 +2211,7 @@ static int compare_advances(const void *ap, const void *bp)
     CGSize advances[2] = { { 0, 0 }, { 0, 0 } };
 
     CFStringRef s = CFStringCreateWithCharacters(NULL, unicharString, nuni);
-    NSLog(@"unichar is : %@", s);
+    // NSLog(@"unichar is : %@", s);
 
     CTFontRef font_ = NULL;
     if (CTFontGetGlyphsForCharacters((CTFontRef)font, unicharString, thisGlyphArray, nuni)) {

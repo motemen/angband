@@ -31,6 +31,7 @@
 #define GAMEDATA_C_(ctx, string) (string)
 #define STATIC_CONST_ static const
 #define MAX_CHAR_VISUAL_WIDTH 1
+#define ngettext(msgid, msgid_plural, n) ((n) == 1 ? (msgid) : (msgid_plural))
 #endif
 
 bool i18n_is_doublewidth(wchar_t ch);

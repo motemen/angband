@@ -178,20 +178,16 @@ static const char *obj_desc_get_basename(const struct object *obj, bool aware,
 	return GAMEDATA_("(nothing)");
 }
 
-
-/**
- * Start to description, indicating number/uniqueness (a, the, no more, 7, etc)
- */
-static size_t obj_desc_name_prefix(char *buf, size_t max, size_t end,
-		const struct object *obj, const char *basename,
-		const char *modstr, bool terse, uint16_t number)
+static const char *make_obj_desc_name_prefix(const struct object *obj,
+		const char *basename, const char *modstr, bool terse,
+		uint16_t number)
 {
 	if (number == 0) {
-		strnfcat(buf, max, &end, _("no more "));
+		return _("no more ");
 	} else if (number > 1) {
-		strnfcat(buf, max, &end, _("%u "), number);
+		return format(_("%u "), number);
 	} else if (object_is_known_artifact(obj)) {
-		strnfcat(buf, max, &end, _("the ")); // TODO: _C("obj", "the ")
+		return _("the "); // TODO: _C("object", "the ")
 	} else if (*basename == '&') {
 		bool an = false;
 		const char *lookahead = basename + 1;
@@ -207,12 +203,23 @@ static size_t obj_desc_name_prefix(char *buf, size_t max, size_t end,
 
 		if (!terse) {
 			if (an)
-				strnfcat(buf, max, &end, _("an "));
+				return _("an ");
 			else
-				strnfcat(buf, max, &end, _("a "));
+				return _("a ");
 		}
 	}
 
+	return "";
+}
+
+/**
+ * Start to description, indicating number/uniqueness (a, the, no more, 7, etc)
+ */
+static size_t obj_desc_name_prefix(char *buf, size_t max, size_t end,
+		const struct object *obj, const char *basename,
+		const char *modstr, bool terse, uint16_t number)
+{
+	strnfcat(buf, max, &end, "%s", make_obj_desc_name_prefix(obj, basename, modstr, terse, number));
 	return end;
 }
 
@@ -318,11 +325,6 @@ static size_t obj_desc_name(char *buf, size_t max, size_t end,
 		mode, p);
 	const char *modstr = obj_desc_get_modstr(obj->kind);
 
-	/* Quantity prefix */
-	if (prefix)
-		end = obj_desc_name_prefix(buf, max, end, obj, basename,
-			modstr, terse, number);
-
 	/* Base name */
 	end = obj_desc_name_format(buf, max, end, basename, modstr, plural);
 
@@ -341,6 +343,15 @@ static size_t obj_desc_name(char *buf, size_t max, size_t end,
 			string_free(buf_sofar);
 			end = strlen(buf);
 		}
+	}
+
+	/* Quantity prefix */
+	if (prefix) {
+		char *buf_sofar = string_make(buf);
+		strncpy(buf, make_obj_desc_name_prefix(obj, basename, modstr, terse, number), max);
+		strncat(buf, buf_sofar, max);
+		string_free(buf_sofar);
+		end = strlen(buf);
 	}
 
 	return end;

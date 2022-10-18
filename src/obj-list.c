@@ -419,6 +419,9 @@ void object_list_format_name(const object_list_entry_t *entry,
 	object_desc(name, sizeof(name), base_obj, ODESC_PREFIX | ODESC_FULL |
 		ODESC_ALTNUM | (entry->count[field] << 16), player);
 
+#ifdef LOCALE_NO_WORD_DIVIDER
+	my_strcat(line_buffer, name, size);
+#else
 	/* The source string for strtok() needs to be set properly, depending on
 	 * when we use it. */
 	if (!has_singular_prefix && entry->count[field] == 1) {
@@ -436,5 +439,6 @@ void object_list_format_name(const object_list_entry_t *entry,
 	/* Get the rest of the name and clip it to fit the max width. */
 	chunk = strtok(source, "\0");
 	my_strcat(line_buffer, chunk, size);
+#endif
 }
 
