@@ -20,7 +20,6 @@
   const char *t = dgettext("gamedata", buf); \
   strcmp(t, buf) == 0 ? (msgid) : t; \
 })
-#define STATIC_CONST_ const
 #define MAX_CHAR_VISUAL_WIDTH 2
 #else
 #define _(string) (string)
@@ -29,7 +28,6 @@
 #define _GAMEDATA(string) (string)
 #define N_GAMEDATA(string) (string)
 #define _GAMEDATA_C(ctx, string) (string)
-#define STATIC_CONST_ static const
 #define MAX_CHAR_VISUAL_WIDTH 1
 #define ngettext(msgid, msgid_plural, n) ((n) == 1 ? (msgid) : (msgid_plural))
 #endif

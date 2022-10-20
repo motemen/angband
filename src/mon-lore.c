@@ -560,27 +560,27 @@ static const char *lore_describe_awareness(int16_t awareness)
 {
 	/* Value table ordered descending, for priority. Terminator is
 	 * {SHRT_MAX, NULL}. */
-	STATIC_CONST_ struct lore_awareness {
+	static const struct lore_awareness {
 		int16_t threshold;
 		const char *description;
 	} lore_awareness_description[] = {
-		{200,	_("prefers to ignore")},
-		{95,	_("pays very little attention to")},
-		{75,	_("pays little attention to")},
-		{45,	_("tends to overlook")},
-		{25,	_("takes quite a while to see")},
-		{10,	_("takes a while to see")},
-		{5,		_("is fairly observant of")},
-		{3,		_("is observant of")},
-		{1,		_("is very observant of")},
-		{0,		_("is vigilant for")},
+		{200,	N_("prefers to ignore")},
+		{95,	N_("pays very little attention to")},
+		{75,	N_("pays little attention to")},
+		{45,	N_("tends to overlook")},
+		{25,	N_("takes quite a while to see")},
+		{10,	N_("takes a while to see")},
+		{5,		N_("is fairly observant of")},
+		{3,		N_("is observant of")},
+		{1,		N_("is very observant of")},
+		{0,		N_("is vigilant for")},
 		{SHRT_MAX,	NULL},
 	};
 	const struct lore_awareness *current = lore_awareness_description;
 
 	while (current->threshold != SHRT_MAX && current->description != NULL) {
 		if (awareness > current->threshold)
-			return current->description;
+			return _(current->description);
 
 		current++;
 	}
@@ -601,25 +601,25 @@ static const char *lore_describe_speed(uint8_t speed)
 {
 	/* Value table ordered descending, for priority. Terminator is
 	 * {UCHAR_MAX, NULL}. */
-	STATIC_CONST_ struct lore_speed {
+	static const struct lore_speed {
 		uint8_t threshold;
 		const char *description;
 	} lore_speed_description[] = {
-		{130,	_("incredibly quickly")},
-		{120,	_("very quickly")},
-		{115,	_("quickly")},
-		{110,	_("fairly quickly")},
-		{109,	_("normal speed")}, /* 110 is normal speed */
-		{99,	_("slowly")},
-		{89,	_("very slowly")},
-		{0,		_("incredibly slowly")},
+		{130,	N_("incredibly quickly")},
+		{120,	N_("very quickly")},
+		{115,	N_("quickly")},
+		{110,	N_("fairly quickly")},
+		{109,	N_("normal speed")}, /* 110 is normal speed */
+		{99,	N_("slowly")},
+		{89,	N_("very slowly")},
+		{0,		N_("incredibly slowly")},
 		{UCHAR_MAX,	NULL},
 	};
 	const struct lore_speed *current = lore_speed_description;
 
 	while (current->threshold != UCHAR_MAX && current->description != NULL) {
 		if (speed > current->threshold)
-			return current->description;
+			return _(current->description);
 
 		current++;
 	}
@@ -715,10 +715,10 @@ static monster_sex_t lore_monster_sex(const struct monster_race *race)
  */
 static const char *lore_pronoun_nominative(monster_sex_t sex, bool title_case)
 {
-	STATIC_CONST_ char *lore_pronouns[MON_SEX_MAX][2] = {
-		{_("it"), _("It")},
-		{_("he"), _("He")},
-		{_("she"), _("She")},
+	static const char *lore_pronouns[MON_SEX_MAX][2] = {
+		{N_("it"), N_("It")},
+		{N_("he"), N_("He")},
+		{N_("she"), N_("She")},
 	};
 
 	int pronoun_index = MON_SEX_NEUTER, case_index = 0;
@@ -729,7 +729,7 @@ static const char *lore_pronoun_nominative(monster_sex_t sex, bool title_case)
 	if (title_case)
 		case_index = 1;
 
-	return lore_pronouns[pronoun_index][case_index];
+	return _(lore_pronouns[pronoun_index][case_index]);
 }
 
 /**
@@ -744,10 +744,10 @@ static const char *lore_pronoun_nominative(monster_sex_t sex, bool title_case)
  */
 static const char *lore_pronoun_possessive(monster_sex_t sex, bool title_case)
 {
-	STATIC_CONST_ char *lore_pronouns[MON_SEX_MAX][2] = {
-		{_("its"), _("Its")},
-		{_("his"), _("His")},
-		{_("her"), _("Her")},
+	static const char *lore_pronouns[MON_SEX_MAX][2] = {
+		{N_("its"), N_("Its")},
+		{N_("his"), N_("His")},
+		{N_("her"), N_("Her")},
 	};
 
 	int pronoun_index = MON_SEX_NEUTER, case_index = 0;
@@ -758,7 +758,7 @@ static const char *lore_pronoun_possessive(monster_sex_t sex, bool title_case)
 	if (title_case)
 		case_index = 1;
 
-	return lore_pronouns[pronoun_index][case_index];
+	return _(lore_pronouns[pronoun_index][case_index]);
 }
 
 /**
