@@ -2779,6 +2779,11 @@ static __strong NSFont* gDefaultFont = nil;
 		}
 	    }
 
+#ifdef USE_DOUBLEWIDTH
+	    // double-width characters may remain undrawed half of them
+	    jcol++;
+#endif
+
 	    NSRect r = [self viewRectForCellBlockAtX:icol y:irow
 			     width:(jcol - icol) height:1];
 	    [self setNeedsDisplayInRect:r];
