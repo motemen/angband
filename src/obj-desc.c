@@ -35,7 +35,7 @@ void object_base_name(char *buf, size_t max, int tval, bool plural)
 	size_t end = 0;
 
 	if (kb->name && kb->name[0]) 
-		(void) obj_desc_name_format(buf, max, end, GAMEDATA_(kb->name), NULL, plural);
+		(void) obj_desc_name_format(buf, max, end, _GAMEDATA(kb->name), NULL, plural);
 }
 
 
@@ -55,7 +55,7 @@ void object_kind_name(char *buf, size_t max, const struct object_kind *kind,
 
 	/* Use proper name (Healing, or whatever) */
 	else
-		(void) obj_desc_name_format(buf, max, 0, GAMEDATA_(kind->name), NULL, false);
+		(void) obj_desc_name_format(buf, max, 0, _GAMEDATA(kind->name), NULL, false);
 }
 
 
@@ -67,10 +67,10 @@ void object_kind_name(char *buf, size_t max, const struct object_kind *kind,
 static const char *obj_desc_get_modstr(const struct object_kind *kind)
 {
 	if (tval_can_have_flavor_k(kind))
-		return kind->flavor ? GAMEDATA_(kind->flavor->text) : "";
+		return kind->flavor ? _GAMEDATA(kind->flavor->text) : "";
 
 	if (tval_is_book_k(kind))
-		return GAMEDATA_(kind->name);
+		return _GAMEDATA(kind->name);
 
 	return "";
 }
@@ -92,7 +92,7 @@ static const char *obj_desc_get_basename(const struct object *obj, bool aware,
 	/* Artifacts are special */
 	if (obj->artifact && (aware || object_is_known_artifact(obj) || terse ||
 						  !obj->kind->flavor))
-		return GAMEDATA_(obj->kind->name);
+		return _GAMEDATA(obj->kind->name);
 
 	/* Analyze the object */
 	switch (obj->tval)
@@ -118,64 +118,64 @@ static const char *obj_desc_get_basename(const struct object *obj, bool aware,
 		case TV_DRAG_ARMOR:
 		case TV_LIGHT:
 		case TV_FOOD:
-			return GAMEDATA_(obj->kind->name);
+			return _GAMEDATA(obj->kind->name);
 
 		case TV_AMULET:
-			return (show_flavor ? GAMEDATA_("& # Amulet~") : GAMEDATA_("& Amulet~"));
+			return (show_flavor ? _GAMEDATA("& # Amulet~") : _GAMEDATA("& Amulet~"));
 
 		case TV_RING:
-			return (show_flavor ? GAMEDATA_("& # Ring~") : GAMEDATA_("& Ring~"));
+			return (show_flavor ? _GAMEDATA("& # Ring~") : _GAMEDATA("& Ring~"));
 
 		case TV_STAFF:
-			return (show_flavor ? GAMEDATA_("& # Sta|ff|ves|") : GAMEDATA_("& Sta|ff|ves|"));
+			return (show_flavor ? _GAMEDATA("& # Sta|ff|ves|") : _GAMEDATA("& Sta|ff|ves|"));
 
 		case TV_WAND:
-			return (show_flavor ? GAMEDATA_("& # Wand~") : GAMEDATA_("& Wand~"));
+			return (show_flavor ? _GAMEDATA("& # Wand~") : _GAMEDATA("& Wand~"));
 
 		case TV_ROD:
-			return (show_flavor ? GAMEDATA_("& # Rod~") : GAMEDATA_("& Rod~"));
+			return (show_flavor ? _GAMEDATA("& # Rod~") : _GAMEDATA("& Rod~"));
 
 		case TV_POTION:
-			return (show_flavor ? GAMEDATA_("& # Potion~") : GAMEDATA_("& Potion~"));
+			return (show_flavor ? _GAMEDATA("& # Potion~") : _GAMEDATA("& Potion~"));
 
 		case TV_SCROLL:
-			return (show_flavor ? GAMEDATA_("& Scroll~ titled #") : GAMEDATA_("& Scroll~"));
+			return (show_flavor ? _GAMEDATA("& Scroll~ titled #") : _GAMEDATA("& Scroll~"));
 
 		case TV_MAGIC_BOOK:
 			if (terse)
-				return GAMEDATA_("& Book~ #");
+				return _GAMEDATA("& Book~ #");
 			else
-				return GAMEDATA_("& Book~ of Magic Spells #");
+				return _GAMEDATA("& Book~ of Magic Spells #");
 
 		case TV_PRAYER_BOOK:
 			if (terse)
-				return GAMEDATA_("& Book~ #");
+				return _GAMEDATA("& Book~ #");
 			else
-				return GAMEDATA_("& Holy Book~ of Prayers #");
+				return _GAMEDATA("& Holy Book~ of Prayers #");
 
 		case TV_NATURE_BOOK:
 			if (terse)
-				return GAMEDATA_("& Book~ #");
+				return _GAMEDATA("& Book~ #");
 			else
-				return GAMEDATA_("& Book~ of Nature Magics #");
+				return _GAMEDATA("& Book~ of Nature Magics #");
 
 		case TV_SHADOW_BOOK:
 			if (terse)
-				return GAMEDATA_("& Tome~ #");
+				return _GAMEDATA("& Tome~ #");
 			else
-				return GAMEDATA_("& Necromantic Tome~ #");
+				return _GAMEDATA("& Necromantic Tome~ #");
 
 		case TV_OTHER_BOOK:
 			if (terse)
-				return GAMEDATA_("& Book~ #");
+				return _GAMEDATA("& Book~ #");
 			else
-				return GAMEDATA_("& Book of Mysteries~ #");
+				return _GAMEDATA("& Book of Mysteries~ #");
 
 		case TV_MUSHROOM:
-			return (show_flavor ? GAMEDATA_("& # Mushroom~") : GAMEDATA_("& Mushroom~"));
+			return (show_flavor ? _GAMEDATA("& # Mushroom~") : _GAMEDATA("& Mushroom~"));
 	}
 
-	return GAMEDATA_("(nothing)");
+	return _GAMEDATA("(nothing)");
 }
 
 static const char *make_obj_desc_name_prefix(const struct object *obj,
@@ -330,16 +330,16 @@ static size_t obj_desc_name(char *buf, size_t max, size_t end,
 
 	/* Append extra names of various kinds */
 	if (object_is_known_artifact(obj))
-		strnfcat(buf, max, &end, _(" %s"), GAMEDATA_(obj->artifact->name));
+		strnfcat(buf, max, &end, _(" %s"), _GAMEDATA(obj->artifact->name));
 	else if ((obj->known->ego && !(mode & ODESC_NOEGO)) || (obj->ego && store))
-		strnfcat(buf, max, &end, _(" %s"), GAMEDATA_(obj->ego->name));
+		strnfcat(buf, max, &end, _(" %s"), _GAMEDATA(obj->ego->name));
 	else if (aware && !obj->artifact &&
 			 (obj->kind->flavor || obj->kind->tval == TV_SCROLL)) {
 		if (terse)
-			strnfcat(buf, max, &end, _(" '%s'"), GAMEDATA_(obj->kind->name));
+			strnfcat(buf, max, &end, _(" '%s'"), _GAMEDATA(obj->kind->name));
 		else {
 		 	char *buf_sofar = string_make(buf);
-			snprintf(buf, max, _("%s of %s"), buf_sofar, GAMEDATA_(obj->kind->name));
+			snprintf(buf, max, _("%s of %s"), buf_sofar, _GAMEDATA(obj->kind->name));
 			string_free(buf_sofar);
 			end = strlen(buf);
 		}

@@ -38,7 +38,7 @@ fi
 
 messages.pot: $(wildcard ../src/*.c)
 	chmod +w $@ || true
-	xgettext --omit-header -k_ -k_C:1c,2 -o $@ ../src/*.c
+	xgettext --omit-header -k_ -kN_ -k_C:1c,2 -o $@ ../src/*.c
 	chmod -w $@
 
 _gamedata-%.pot:
@@ -48,5 +48,5 @@ _gamedata-%.pot:
 
 _gamedata-source.pot:
 	chmod +w $@ || true
-	xgettext --omit-header -kGAMEDATA_ -kGAMEDATA_N_ -k -o $@ ../src/*.c ../src/*.h
+	xgettext --omit-header -k_GAMEDATA -kN_GAMEDATA -k -o $@ ../src/*.c ../src/*.h
 	chmod -w $@

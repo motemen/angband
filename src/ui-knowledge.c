@@ -3887,7 +3887,7 @@ static void lookup_symbol(char sym, char *buf, size_t max)
 		/* Slight hack - P appears twice */
 		if (streq(race->name, "Morgoth")) continue;
 		if (char_matches_key(race->d_char, sym)) {
-			strnfmt(buf, max, "%c - %s.", sym, GAMEDATA_(race->text));
+			strnfmt(buf, max, "%c - %s.", sym, _GAMEDATA(race->text));
 			return;
 		}
 	}

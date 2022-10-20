@@ -11,9 +11,9 @@
 #define _C(ctx, msgid) ({ const char *t = gettext(ctx "\004" msgid); strcmp(t, ctx "\004" msgid) == 0 ? msgid : t; })
 #define gettext_noop(string) string
 #define N_(string) gettext_noop(string)
-#define GAMEDATA_(string) dgettext("gamedata", string)
-#define GAMEDATA_N_(string) gettext_noop(string)
-#define GAMEDATA_C_(ctx, msgid) ({ \
+#define _GAMEDATA(string) dgettext("gamedata", string)
+#define N_GAMEDATA(string) gettext_noop(string)
+#define _GAMEDATA_C(ctx, msgid) ({ \
   char buf[256]; \
   strcpy(buf, ctx "\004"); \
   strcat(buf, (msgid)); \
@@ -26,9 +26,9 @@
 #define _(string) (string)
 #define _C(ctx, msgid) (msgid)
 #define N_(string) (string)
-#define GAMEDATA_(string) (string)
-#define GAMEDATA_N_(string) (string)
-#define GAMEDATA_C_(ctx, string) (string)
+#define _GAMEDATA(string) (string)
+#define N_GAMEDATA(string) (string)
+#define _GAMEDATA_C(ctx, string) (string)
 #define STATIC_CONST_ static const
 #define MAX_CHAR_VISUAL_WIDTH 1
 #define ngettext(msgid, msgid_plural, n) ((n) == 1 ? (msgid) : (msgid_plural))
