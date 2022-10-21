@@ -699,7 +699,7 @@ void Term_queue_chars(int x, int y, int n, int a, const wchar_t *s)
 	wchar_t *scr_tcc = Term->scr->tc[y];
 
 	/* Queue the attr/chars */
-	for ( ; n; x++, s++, n--) {
+	for ( ; n > 0; x++, s++, n--) {
 		int oa = scr_aa[x];
 		wchar_t oc = scr_cc[x];
 
@@ -722,6 +722,7 @@ void Term_queue_chars(int x, int y, int n, int a, const wchar_t *s)
 
 		if (i18n_is_doublewidth(*s)) {
 			x++;
+			if (x >= Term->wid) break;
 			scr_aa[x] = a;
 			scr_taa[x] = 0;
 			x2 = x;
@@ -2142,6 +2143,8 @@ errr Term_addstr(int n, int a, const char *buf)
 
 	int w = Term->wid;
 
+	int sw; // Visual width of string
+
 	errr res = 0;
 
 	wchar_t s[1024];
@@ -2156,10 +2159,10 @@ errr Term_addstr(int n, int a, const char *buf)
 	k = (n < 0) ? (w + 1) : n;
 
 	/* Obtain the usable string length */
-	for (n = 0; (n < k) && s[n]; n++) /* loop */;
-
 	/* React to reaching the edge of the screen */
-	if (Term->scr->cx + n >= w) res = n = w - Term->scr->cx;
+	for (n = 0, sw = 0; Term->scr->cx + sw < w && (n < k) && s[n]; n++) {
+		sw += i18n_wchar_visualwidth(s[n]);
+	}
 
 	/* Queue the first "n" characters for display */
 	Term_queue_chars(Term->scr->cx, Term->scr->cy, n, a, s);

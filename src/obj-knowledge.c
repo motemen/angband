@@ -554,7 +554,7 @@ bool object_is_known_random_artifact(const struct object *obj)
 	if (!obj->known) return false;
 	if (!obj->known->artifact) return false;
 
-	if (strncmp(obj->known->artifact->text, "Random ", 7) == 0) {
+	if (obj->known->artifact->text && strncmp(obj->known->artifact->text, "Random ", 7) == 0) {
 		return true;
 	}
 
