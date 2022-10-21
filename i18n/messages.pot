@@ -824,6 +824,306 @@ msgid ""
 "'{light green}Ctrl-X{/}' to quit."
 msgstr ""
 
+#: ../src/ui-display.c:101
+msgid "STR: "
+msgstr ""
+
+#: ../src/ui-display.c:101
+msgid "INT: "
+msgstr ""
+
+#: ../src/ui-display.c:101
+msgid "WIS: "
+msgstr ""
+
+#: ../src/ui-display.c:101
+msgid "DEX: "
+msgstr ""
+
+#: ../src/ui-display.c:101
+msgid "CON: "
+msgstr ""
+
+#: ../src/ui-display.c:109
+msgid "Str: "
+msgstr ""
+
+#: ../src/ui-display.c:109
+msgid "Int: "
+msgstr ""
+
+#: ../src/ui-display.c:109
+msgid "Wis: "
+msgstr ""
+
+#: ../src/ui-display.c:109
+msgid "Dex: "
+msgstr ""
+
+#: ../src/ui-display.c:109
+msgid "Con: "
+msgstr ""
+
+#: ../src/ui-display.c:179
+msgid "[=-WIZARD-=]"
+msgstr ""
+
+#: ../src/ui-display.c:181
+msgid "***WINNER***"
+msgstr ""
+
+#: ../src/ui-display.c:214
+msgid "LEVEL "
+msgstr ""
+
+#: ../src/ui-display.c:217
+msgid "Level "
+msgstr ""
+
+#: ../src/ui-display.c:244
+msgid "EXP"
+msgstr ""
+
+#: ../src/ui-display.c:244
+msgid "NXT"
+msgstr ""
+
+#: ../src/ui-display.c:247
+msgid "Exp"
+msgstr ""
+
+#: ../src/ui-display.c:247
+msgid "Nxt"
+msgstr ""
+
+#: ../src/ui-display.c:260
+msgid "AU "
+msgstr ""
+
+#: ../src/ui-display.c:307
+msgid "Cur AC "
+msgstr ""
+
+#: ../src/ui-display.c:321
+msgid "HP "
+msgstr ""
+
+#: ../src/ui-display.c:344
+msgid "SP "
+msgstr ""
+
+#: ../src/ui-display.c:479
+msgid "Fast"
+msgstr ""
+
+#: ../src/ui-display.c:482
+msgid "Slow"
+msgstr ""
+
+#: ../src/ui-display.c:515
+msgid "Town"
+msgstr ""
+
+#: ../src/ui-display.c:587
+msgid "L:"
+msgstr ""
+
+#: ../src/ui-display.c:590
+msgid "l:"
+msgstr ""
+
+#: ../src/ui-display.c:640
+msgid "EXP:"
+msgstr ""
+
+#: ../src/ui-display.c:640
+msgid "NXT:"
+msgstr ""
+
+#: ../src/ui-display.c:643
+msgid "exp:"
+msgstr ""
+
+#: ../src/ui-display.c:643
+msgid "nxt:"
+msgstr ""
+
+#: ../src/ui-display.c:654
+msgid "AC:"
+msgstr ""
+
+#: ../src/ui-display.c:665
+msgid "AU:"
+msgstr ""
+
+#: ../src/ui-display.c:676
+msgid "HP:"
+msgstr ""
+
+#: ../src/ui-display.c:700
+msgid "SP:"
+msgstr ""
+
+#: ../src/ui-display.c:921 ../src/ui-display.c:922
+msgid "Recall"
+msgstr ""
+
+#: ../src/ui-display.c:935 ../src/ui-display.c:936
+msgid "Descent"
+msgstr ""
+
+#: ../src/ui-display.c:963
+msgid "Rest      "
+msgstr ""
+
+#: ../src/ui-display.c:1001
+#, c-format
+msgid "Rep. %3d00"
+msgstr ""
+
+#: ../src/ui-display.c:1003
+#, c-format
+msgid "Repeat %3d"
+msgstr ""
+
+#: ../src/ui-display.c:1107
+msgid "LF:"
+msgstr ""
+
+#: ../src/ui-display.c:1127 ../src/ui-display.c:1129
+#, c-format
+msgid "Light %d "
+msgstr ""
+
+#: ../src/ui-display.c:1145
+#, c-format
+msgid "Moves +%d "
+msgstr ""
+
+#: ../src/ui-display.c:1148
+#, c-format
+msgid "Moves -%d "
+msgstr ""
+
+#: ../src/ui-display.c:1206 ../src/ui-display.c:1208
+msgid "DTrap "
+msgstr ""
+
+#: ../src/ui-display.c:1232
+#, c-format
+msgid "Study (%d)"
+msgstr ""
+
+#: ../src/ui-display.c:1276
+msgid "Unignoring"
+msgstr ""
+
+#: ../src/ui-display.c:2121
+msgid "Display inven/equip"
+msgstr ""
+
+#: ../src/ui-display.c:2122
+msgid "Display equip/inven"
+msgstr ""
+
+#: ../src/ui-display.c:2123
+msgid "Display player (basic)"
+msgstr ""
+
+#: ../src/ui-display.c:2124
+msgid "Display player (extra)"
+msgstr ""
+
+#: ../src/ui-display.c:2125
+msgid "Display player (compact)"
+msgstr ""
+
+#: ../src/ui-display.c:2126
+msgid "Display map view"
+msgstr ""
+
+#: ../src/ui-display.c:2127
+msgid "Display messages"
+msgstr ""
+
+#: ../src/ui-display.c:2128
+msgid "Display overhead view"
+msgstr ""
+
+#: ../src/ui-display.c:2129
+msgid "Display monster recall"
+msgstr ""
+
+#: ../src/ui-display.c:2130
+msgid "Display object recall"
+msgstr ""
+
+#: ../src/ui-display.c:2131
+msgid "Display monster list"
+msgstr ""
+
+#: ../src/ui-display.c:2132
+msgid "Display status"
+msgstr ""
+
+#: ../src/ui-display.c:2133
+msgid "Display item list"
+msgstr ""
+
+#: ../src/ui-display.c:2134
+msgid "Display player (topbar)"
+msgstr ""
+
+#: ../src/ui-display.c:2372
+msgid ""
+"The 'lib' directory is probably missing or broken.\n"
+"Perhaps the archive was not extracted correctly.\n"
+"See the 'readme.txt' file for more information."
+msgstr ""
+
+#: ../src/ui-display.c:2415
+#, c-format
+msgid "Cannot access the '%s' file!"
+msgstr ""
+
+#: ../src/ui-display.c:2549
+msgid "You invoke wizard mode and cheat death."
+msgstr ""
+
+#: ../src/ui-display.c:2568
+msgid "see"
+msgstr ""
+
+#: ../src/ui-display.c:2592
+msgid "have no room for"
+msgstr ""
+
+#: ../src/ui-display.c:2594
+msgid "feel"
+msgstr ""
+
+#: ../src/ui-display.c:2607
+#, c-format
+msgid "You %s %s."
+msgstr ""
+
+#: ../src/ui-display.c:2612
+msgid "have no room for the following objects"
+msgstr ""
+
+#: ../src/ui-display.c:2614
+msgid "feel something on the floor"
+msgstr ""
+
+#: ../src/ui-display.c:2619
+#, c-format
+msgid "You %s: "
+msgstr ""
+
+#: ../src/ui-display.c:2691
+msgid "Please wait..."
+msgstr ""
+
 #: ../src/ui-mon-lore.c:55
 msgid "The "
 msgstr ""

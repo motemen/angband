@@ -98,7 +98,7 @@ static game_event_type statusline_events[] =
  */
 const char *stat_names[STAT_MAX] =
 {
-	"STR: ", "INT: ", "WIS: ", "DEX: ", "CON: "
+	N_("STR: "), N_("INT: "), N_("WIS: "), N_("DEX: "), N_("CON: ")
 };
 
 /**
@@ -106,7 +106,7 @@ const char *stat_names[STAT_MAX] =
  */
 const char *stat_names_reduced[STAT_MAX] =
 {
-	"Str: ", "Int: ", "Wis: ", "Dex: ", "Con: "
+	N_("Str: "), N_("Int: "), N_("Wis: "), N_("Dex: "), N_("Con: ")
 };
 
 /**
@@ -176,14 +176,14 @@ static int fmt_title(char buf[], int max, bool short_mode)
 
 	/* Wizard, winner or neither */
 	if (player->wizard) {
-		my_strcpy(buf, "[=-WIZARD-=]", max);
+		my_strcpy(buf, _("[=-WIZARD-=]"), max);
 	} else if (player->total_winner || (player->lev > PY_MAX_LEVEL)) {
-		my_strcpy(buf, "***WINNER***", max);
+		my_strcpy(buf, _("***WINNER***"), max);
 	} else if (player_is_shapechanged(player)) {		
-		my_strcpy(buf, player->shape->name, max);
+		my_strcpy(buf, _GAMEDATA(player->shape->name), max);
 		my_strcap(buf);		
 	} else if (!short_mode) {
-		my_strcpy(buf, player->class->title[(player->lev - 1) / 5], max);
+		my_strcpy(buf, _GAMEDATA(player->class->title[(player->lev - 1) / 5]), max);
 	}
 
 	return strlen(buf);
@@ -211,10 +211,10 @@ static void prt_level(int row, int col)
 	strnfmt(tmp, sizeof(tmp), "%6d", player->lev);
 
 	if (player->lev >= player->max_lev) {
-		put_str("LEVEL ", row, col);
+		put_str(_("LEVEL "), row, col);
 		c_put_str(COLOUR_L_GREEN, tmp, row, col + 6);
 	} else {
-		put_str("Level ", row, col);
+		put_str(_("Level "), row, col);
 		c_put_str(COLOUR_YELLOW, tmp, row, col + 6);
 	}
 }
@@ -241,10 +241,10 @@ static void prt_exp(int row, int col)
 
 
 	if (player->exp >= player->max_exp) {
-		put_str((lev50 ? "EXP" : "NXT"), row, col);
+		put_str((lev50 ? _("EXP") : _("NXT")), row, col);
 		c_put_str(COLOUR_L_GREEN, out_val, row, col + 4);
 	} else {
-		put_str((lev50 ? "Exp" : "Nxt"), row, col);
+		put_str((lev50 ? _("Exp") : _("Nxt")), row, col);
 		c_put_str(COLOUR_YELLOW, out_val, row, col + 4);
 	}
 }
@@ -257,7 +257,7 @@ static void prt_gold(int row, int col)
 {
 	char tmp[32];
 
-	put_str("AU ", row, col);
+	put_str(_("AU "), row, col);
 	strnfmt(tmp, sizeof(tmp), "%9d", player->au);
 	c_put_str(COLOUR_L_GREEN, tmp, row, col + 3);
 }
@@ -304,7 +304,7 @@ static void prt_ac(int row, int col)
 {
 	char tmp[32];
 
-	put_str("Cur AC ", row, col);
+	put_str(_("Cur AC "), row, col);
 	strnfmt(tmp, sizeof(tmp), "%5d", 
 			player->known_state.ac + player->known_state.to_a);
 	c_put_str(COLOUR_L_GREEN, tmp, row, col + 7);
@@ -318,7 +318,7 @@ static void prt_hp(int row, int col)
 	char cur_hp[32], max_hp[32];
 	uint8_t color = player_hp_attr(player);
 
-	put_str("HP ", row, col);
+	put_str(_("HP "), row, col);
 
 	strnfmt(max_hp, sizeof(max_hp), "%4d", player->mhp);
 	strnfmt(cur_hp, sizeof(cur_hp), "%4d", player->chp);
@@ -341,7 +341,7 @@ static void prt_sp(int row, int col)
 		(player->lev < player->class->magic.spell_first))
 		return;
 
-	put_str("SP ", row, col);
+	put_str(_("SP "), row, col);
 
 	strnfmt(max_sp, sizeof(max_sp), "%4d", player->msp);
 	strnfmt(cur_sp, sizeof(cur_sp), "%4d", player->csp);
@@ -476,10 +476,10 @@ static int prt_speed_aux(char buf[], int max, uint8_t *attr)
 	/* 110 is normal speed, and requires no display */
 	if (i > 110) {
 		*attr = COLOUR_L_GREEN;
-		type = "Fast";
+		type = _("Fast");
 	} else if (i < 110) {
 		*attr = COLOUR_L_UMBER;
-		type = "Slow";
+		type = _("Slow");
 	}
 
 	if (type && !OPT(player, effective_speed))
@@ -512,7 +512,7 @@ static void prt_speed(int row, int col)
 static int fmt_depth(char buf[], int max)
 {
 	if (!player->depth)
-		my_strcpy(buf, "Town", max);
+		my_strcpy(buf, _("Town"), max);
 	else
 		strnfmt(buf, max, "%d' (L%d)",
 		        player->depth * 50, player->depth);
@@ -547,7 +547,7 @@ static void prt_race(int row, int col) {
 	if (player_is_shapechanged(player)) {
 		prt_field("", row, col);
 	} else {
-		prt_field(player->race->name, row, col);
+		prt_field(_GAMEDATA(player->race->name), row, col);
 	}
 }
 
@@ -558,8 +558,8 @@ static int prt_race_class_short(int row, int col)
 	if (player_is_shapechanged(player)) return 0;
 
 	strnfmt(buf, sizeof(buf), "%s %s",
-		player->race->name,
-		player->class->title[(player->lev - 1) / 5]);
+		_GAMEDATA(player->race->name),
+		_GAMEDATA(player->class->title[(player->lev - 1) / 5]));
 
 	c_put_str(COLOUR_L_GREEN, buf, row, col);
 
@@ -570,7 +570,7 @@ static void prt_class(int row, int col) {
 	if (player_is_shapechanged(player)) {
 		prt_field("", row, col);
 	} else {
-		prt_field(player->class->name, row, col);
+		prt_field(_GAMEDATA(player->class->name), row, col);
 	}
 }
 
@@ -584,10 +584,10 @@ static int prt_level_short(int row, int col)
 	strnfmt(tmp, sizeof(tmp), "%d", player->lev);
 
 	if (player->lev >= player->max_lev) {
-		put_str("L:", row, col);
+		put_str(_("L:"), row, col);
 		c_put_str(COLOUR_L_GREEN, tmp, row, col + 2);
 	} else {
-		put_str("l:", row, col);
+		put_str(_("l:"), row, col);
 		c_put_str(COLOUR_YELLOW, tmp, row, col + 2);
 	}
 
@@ -637,10 +637,10 @@ static int prt_exp_short(int row, int col)
 	strnfmt(out_val, sizeof(out_val), "%ld", xp);
 
 	if (player->exp >= player->max_exp) {
-		put_str((lev50 ? "EXP:" : "NXT:"), row, col);
+		put_str((lev50 ? _("EXP:") : _("NXT:")), row, col);
 		c_put_str(COLOUR_L_GREEN, out_val, row, col + 4);
 	} else {
-		put_str((lev50 ? "exp:" : "nxt:"), row, col);
+		put_str((lev50 ? _("exp:") : _("nxt:")), row, col);
 		c_put_str(COLOUR_YELLOW, out_val, row, col + 4);
 	}
 
@@ -651,7 +651,7 @@ static int prt_ac_short(int row, int col)
 {
 	char tmp[32];
 
-	put_str("AC:", row, col);
+	put_str(_("AC:"), row, col);
 	strnfmt(tmp, sizeof(tmp), "%d", 
 			player->known_state.ac + player->known_state.to_a);
 	c_put_str(COLOUR_L_GREEN, tmp, row, col + 3);
@@ -662,7 +662,7 @@ static int prt_gold_short(int row, int col)
 {
 	char tmp[32];
 
-	put_str("AU:", row, col);
+	put_str(_("AU:"), row, col);
 	strnfmt(tmp, sizeof(tmp), "%d", player->au);
 	c_put_str(COLOUR_L_GREEN, tmp, row, col + 3);
 	return 4+strlen(tmp);
@@ -673,7 +673,7 @@ static int prt_hp_short(int row, int col)
 	char cur_hp[32], max_hp[32];
 	uint8_t color = player_hp_attr(player);
 
-	put_str("HP:", row, col);
+	put_str(_("HP:"), row, col);
 	col += 3;
 
 	strnfmt(max_hp, sizeof(max_hp), "%d", player->mhp);
@@ -697,7 +697,7 @@ static int prt_sp_short(int row, int col)
 		(player->lev < player->class->magic.spell_first))
 		return 0;
 
-	put_str("SP:", row, col);
+	put_str(_("SP:"), row, col);
 	col += 3;
 
 	strnfmt(max_sp, sizeof(max_sp), "%d", player->msp);
@@ -918,8 +918,8 @@ struct state_info
 static size_t prt_recall(int row, int col)
 {
 	if (player->word_recall) {
-		c_put_str(COLOUR_WHITE, "Recall", row, col);
-		return sizeof "Recall";
+		c_put_str(COLOUR_WHITE, _("Recall"), row, col);
+		return sizeof _("Recall");
 	}
 
 	return 0;
@@ -932,8 +932,8 @@ static size_t prt_recall(int row, int col)
 static size_t prt_descent(int row, int col)
 {
 	if (player->deep_descent) {
-		c_put_str(COLOUR_WHITE, "Descent", row, col);
-		return sizeof "Descent";
+		c_put_str(COLOUR_WHITE, _("Descent"), row, col);
+		return sizeof _("Descent");
 	}
 
 	return 0;
@@ -960,7 +960,7 @@ static size_t prt_state(int row, int col)
 		int n = player_resting_count(player);
 
 		/* Start with "Rest" */
-		my_strcpy(text, "Rest      ", sizeof(text));
+		my_strcpy(text, _("Rest      "), sizeof(text));
 
 		/* Display according to length or intent of rest */
 		if (n >= 1000) {
@@ -998,9 +998,9 @@ static size_t prt_state(int row, int col)
 		int nrepeats = cmd_get_nrepeats();
 
 		if (nrepeats > 999)
-			strnfmt(text, sizeof(text), "Rep. %3d00", nrepeats / 100);
+			strnfmt(text, sizeof(text), _("Rep. %3d00"), nrepeats / 100);
 		else
-			strnfmt(text, sizeof(text), "Repeat %3d", nrepeats);
+			strnfmt(text, sizeof(text), _("Repeat %3d"), nrepeats);
 	}
 
 	/* Display the info (or blanks) */
@@ -1104,7 +1104,7 @@ static size_t prt_level_feeling(int row, int col)
 		strnfmt(mon_feeling_str, 5, "%d", (unsigned int) ( 10-mon_feeling ));
 
 	/* Display it */
-	c_put_str(COLOUR_WHITE, "LF:", row, col);
+	c_put_str(COLOUR_WHITE, _("LF:"), row, col);
 	new_col = col + 3;
 	c_put_str(mon_feeling_color[mon_feeling], mon_feeling_str, row, new_col);
 	new_col += strlen( mon_feeling_str );
@@ -1124,9 +1124,9 @@ static size_t prt_light(int row, int col)
 	int light = square_light(cave, player->grid);
 
 	if (light > 0) {
-		c_put_str(COLOUR_YELLOW, format("Light %d ", light), row, col);
+		c_put_str(COLOUR_YELLOW, format(_("Light %d "), light), row, col);
 	} else {
-		c_put_str(COLOUR_PURPLE, format("Light %d ", light), row, col);
+		c_put_str(COLOUR_PURPLE, format(_("Light %d "), light), row, col);
 	}
 
 	return 8 + (ABS(light) > 9 ? 1 : 0) + (light < 0 ? 1 : 0);
@@ -1142,10 +1142,10 @@ static size_t prt_moves(int row, int col)
 	/* 1 move is normal and requires no display */
 	if (i > 0) {
 		/* Display the number of moves */
-		c_put_str(COLOUR_L_TEAL, format("Moves +%d ", i), row, col);
+		c_put_str(COLOUR_L_TEAL, format(_("Moves +%d "), i), row, col);
 	} else if (i < 0) {
 		/* Display the number of moves */
-		c_put_str(COLOUR_L_TEAL, format("Moves -%d ", ABS(i)), row, col);
+		c_put_str(COLOUR_L_TEAL, format(_("Moves -%d "), ABS(i)), row, col);
 	}
 
 	/* Shouldn't be double digits, but be paranoid */
@@ -1180,12 +1180,13 @@ static size_t prt_terrain(int row, int col)
 	struct trap *trap = square_trap(cave, player->grid);
 	char buf[30];
 
+	// TODO[i18n]: may need to change strlen to textwidth
 	if (trap && !square_isinvis(cave, player->grid)) {
-		my_strcpy(buf, trap->kind->name, strlen(trap->kind->name) + 1);
+		my_strcpy(buf, _GAMEDATA(trap->kind->name), strlen(_GAMEDATA(trap->kind->name)) + 1);
 		my_strcap(buf);
 		c_put_str(trap->kind->d_attr, format("%s ", buf), row, col);
 	} else {
-		my_strcpy(buf, feat->name, strlen(feat->name) + 1);
+		my_strcpy(buf, _GAMEDATA(feat->name), strlen(_GAMEDATA(feat->name)) + 1);
 		my_strcap(buf);
 		c_put_str(feat->d_attr, format("%s ", buf), row, col);
 	}
@@ -1202,9 +1203,9 @@ static size_t prt_dtrap(int row, int col)
 	if (square_isdtrap(cave, player->grid)) {
 		/* The player is on the border */
 		if (square_dtrap_edge(cave, player->grid))
-			c_put_str(COLOUR_YELLOW, "DTrap ", row, col);
+			c_put_str(COLOUR_YELLOW, _("DTrap "), row, col);
 		else
-			c_put_str(COLOUR_L_GREEN, "DTrap ", row, col);
+			c_put_str(COLOUR_L_GREEN, _("DTrap "), row, col);
 
 		return 6;
 	}
@@ -1228,7 +1229,7 @@ static size_t prt_study(int row, int col)
 			attr = COLOUR_L_DARK;
 
 		/* Print study message */
-		text = format("Study (%d)", player->upkeep->new_spells);
+		text = format(_("Study (%d)"), player->upkeep->new_spells);
 		c_put_str(attr, text, row, col);
 		return strlen(text) + 1;
 	}
@@ -1272,7 +1273,7 @@ static size_t prt_tmd(int row, int col)
 static size_t prt_unignore(int row, int col)
 {
 	if (player->unignoring) {
-		const char *str = "Unignoring";
+		const char *str = _("Unignoring");
 		put_str(str, row, col);
 		return strlen(str) + 1;
 	}
@@ -2117,20 +2118,20 @@ static void flush_subwindow(game_event_type type, game_event_data *data,
  */
 const char *window_flag_desc[32] =
 {
-	"Display inven/equip",
-	"Display equip/inven",
-	"Display player (basic)",
-	"Display player (extra)",
-	"Display player (compact)",
-	"Display map view",
-	"Display messages",
-	"Display overhead view",
-	"Display monster recall",
-	"Display object recall",
-	"Display monster list",
-	"Display status",
-	"Display item list",
-	"Display player (topbar)",
+	N_("Display inven/equip"),
+	N_("Display equip/inven"),
+	N_("Display player (basic)"),
+	N_("Display player (extra)"),
+	N_("Display player (compact)"),
+	N_("Display map view"),
+	N_("Display messages"),
+	N_("Display overhead view"),
+	N_("Display monster recall"),
+	N_("Display object recall"),
+	N_("Display monster list"),
+	N_("Display status"),
+	N_("Display item list"),
+	N_("Display player (topbar)"),
 	NULL,
 	NULL,
 	NULL,
@@ -2368,9 +2369,9 @@ void subwindows_set_flags(uint32_t *new_flags, size_t n_subwindows)
 static void init_angband_aux(const char *why)
 {
 	quit_fmt("%s\n\n%s", why,
-	         "The 'lib' directory is probably missing or broken.\n"
+	         _("The 'lib' directory is probably missing or broken.\n"
 	         "Perhaps the archive was not extracted correctly.\n"
-	         "See the 'readme.txt' file for more information.");
+	         "See the 'readme.txt' file for more information."));
 }
 
 /*
@@ -2411,7 +2412,7 @@ static void show_splashscreen(game_event_type type, game_event_data *data,
 		char why[1024];
 
 		/* Crash and burn */
-		strnfmt(why, sizeof(why), "Cannot access the '%s' file!", buf);
+		strnfmt(why, sizeof(why), _("Cannot access the '%s' file!"), buf);
 		init_angband_aux(why);
 	}
 
@@ -2545,7 +2546,7 @@ static void new_level_display_update(game_event_type type,
  * ------------------------------------------------------------------------ */
 static void cheat_death(game_event_type type, game_event_data *data, void *user)
 {
-	msg("You invoke wizard mode and cheat death.");
+	msg(_("You invoke wizard mode and cheat death."));
 	event_signal(EVENT_MESSAGE_FLUSH);
 
 	wiz_cheat_death();
@@ -2564,7 +2565,7 @@ static void see_floor_items(game_event_type type, game_event_data *data,
 	int floor_num = 0;
 	bool blind = ((player->timed[TMD_BLIND]) || (no_light(player)));
 
-	const char *p = "see";
+	const char *p = _("see");
 	bool can_pickup = false;
 	int i;
 
@@ -2588,9 +2589,9 @@ static void see_floor_items(game_event_type type, game_event_data *data,
 		char o_name[80];
 
 		if (!can_pickup)
-			p = "have no room for";
+			p = _("have no room for");
 		else if (blind)
-			p = "feel";
+			p = _("feel");
 
 		/* Describe the object.  Less detail if blind. */
 		if (blind) {
@@ -2603,19 +2604,19 @@ static void see_floor_items(game_event_type type, game_event_data *data,
 
 		/* Message */
 		event_signal(EVENT_MESSAGE_FLUSH);
-		msg("You %s %s.", p, o_name);
+		msg_f(_("You %s %s."), p, o_name);
 	} else {
 		ui_event e;
 
 		if (!can_pickup)
-			p = "have no room for the following objects";
+			p = _("have no room for the following objects");
 		else if (blind)
-			p = "feel something on the floor";
+			p = _("feel something on the floor");
 
 		/* Display objects on the floor */
 		screen_save();
 		show_floor(floor_list, floor_num, OLIST_WEIGHT, NULL);
-		prt(format("You %s: ", p), 0, 0);
+		prt(format(_("You %s: "), p), 0, 0);
 
 		/* Wait for it.  Use key as next command. */
 		e = inkey_ex();
@@ -2687,7 +2688,7 @@ static void ui_leave_init(game_event_type type, game_event_data *data,
 	event_remove_handler(EVENT_INITSTATUS, splashscreen_note, NULL);
 
 	/* Flash a message */
-	prt("Please wait...", 0, 0);
+	prt(_("Please wait..."), 0, 0);
 
 	/* Flush the message */
 	Term_fresh();
