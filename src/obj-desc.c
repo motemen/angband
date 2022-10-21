@@ -187,7 +187,11 @@ static const char *make_obj_desc_name_prefix(const struct object *obj,
 	} else if (number > 1) {
 		return format(_("%u "), number);
 	} else if (object_is_known_artifact(obj)) {
-		return _("the "); // TODO[artifact]: _C("object", "the ")
+		if (object_is_known_random_artifact(obj)) {
+			return _C("random_artifact", "the ");
+		} else {
+			return _C("fixed_artifact", "the ");
+		}
 	} else if (*basename == '&') {
 		bool an = false;
 		const char *lookahead = basename + 1;
