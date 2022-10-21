@@ -1,6 +1,8 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
+use utf8;
+use open ':std' => ':utf8';
 use Encode;
 use Data::Dumper;
 use File::Basename qw(dirname);
@@ -9,6 +11,12 @@ use Cwd qw(cwd);
 # Import hengband translation to .pot files.
 #
 # usage: utils/applytrans <path/to/hengband/lib/edit/r_info.txt> < i18n/_gamedata-monster.pot > i18n/ja_JP/LC_MESSAGES/_gamedata-monster.po
+
+sub normalize {
+    my $name = shift;
+    $name =~ tr/Éáâäéëíóöúû/Eaaaeeioouu/;
+    return lc $name;
+}
 
 my $hengband_gamedata_txt = shift or die;
 
@@ -59,10 +67,10 @@ while (<$fh>) {
       die "unexpected: number of colons mismatch: '$name_en' vs '$name_ja'"
         if @name_en_parts != @name_ja_parts;
 
-      $translation->{ uc join "", @desc_en } = join "", @desc_ja;
+      $translation->{ normalize(join "", @desc_en) } = join "", @desc_ja;
 
       for my $i (0..$#name_en_parts) {
-        $translation->{uc $name_en_parts[$i]} = $name_ja_parts[$i];
+        $translation->{normalize($name_en_parts[$i])} = $name_ja_parts[$i];
       }
 
       # Comments are for first entry
@@ -117,9 +125,9 @@ while (<STDIN>) {
       undef @comment_lines;
   }
 
-  if ($msgid && (my $trans = $translation->{uc $msgid})) {
+  if ($msgid && (my $trans = $translation->{normalize($msgid)})) {
     # Keep '#J0#' style message as msgmerge changes them to '# J0'
-    print "# $_" for @{ $comments->{uc $msgid} || [] };
+    print "# $_" for @{ $comments->{normalize($msgid)} || [] };
     print "$_" for @comment_lines;
     print $_ for @msgid_lines;
     $trans =~ s/"/\\"/g;

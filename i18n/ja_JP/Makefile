@@ -14,8 +14,11 @@ LC_MESSAGES/_gamedata-%.po: _gamedata-%-hengband.po
 	msgmerge $< ../_gamedata-$*.pot > $@
 
 _gamedata-monster-hengband.po: $(HENGBAND_PATH)/lib/edit/r_info.txt
-	cat ../_gamedata-monster.pot | ../../utils/applyhengtrans $< > _gamedata-monster-hengband.po
+	cat ../_gamedata-monster.pot | ../../utils/applyhengtrans $< > $@
 
 _gamedata-object-hengband.po: $(HENGBAND_PATH)/lib/edit/k_info.txt
-	cat ../_gamedata-object.pot | ../../utils/applyhengtrans $< > _gamedata-object-hengband.po
+	cat ../_gamedata-object.pot | ../../utils/applyhengtrans $< > $@
+
+_gamedata-artifact-hengband.po: $(HENGBAND_PATH)/lib/edit/a_info.txt
+	cat ../_gamedata-artifact.pot | ../../utils/applyhengtrans $< > $@
 

@@ -34,6 +34,7 @@ while (<$fh>) {
     }
 
     if (/^act:(.+)/) {
+        next if $type eq 'artifact';
         next if $seen->{$1}++;
         print "#: $file:$.\n";
         print qq(msgid "$1"\n);
