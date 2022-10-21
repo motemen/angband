@@ -340,8 +340,7 @@ msgstr "このモンスターを倒したことはない。"
 msgid "This"
 msgstr "この"
 
-#: ../src/mon-lore.c:978 ../src/mon-lore.c:987 ../src/obj-desc.c:333
-#: ../src/obj-desc.c:335
+#: ../src/mon-lore.c:978 ../src/mon-lore.c:987
 #, c-format
 msgid " %s"
 msgstr "%s"
@@ -666,101 +665,118 @@ msgstr ""
 msgid "a "
 msgstr ""
 
+#: ../src/obj-desc.c:337
+#, c-format
+msgctxt "named_artifact"
+msgid "%s %s"
+msgstr "%s%s"
+
 #: ../src/obj-desc.c:339
 #, c-format
-msgid " '%s'"
+msgctxt "artifact"
+msgid "%s %s"
+msgstr "%2$s%1$s"
+
+#: ../src/obj-desc.c:343
+#, c-format
+msgid "%s %s"
+msgstr "%2$s%1$s"
+
+#: ../src/obj-desc.c:347
+#, c-format
+msgid "%s '%s'"
 msgstr ""
 
-#: ../src/obj-desc.c:342
+#: ../src/obj-desc.c:349
 #, c-format
 msgid "%s of %s"
 msgstr "%2$sの%1$s"
 
-#: ../src/obj-desc.c:381
+#: ../src/obj-desc.c:387
 #, c-format
 msgid " (%s)"
 msgstr ""
 
-#: ../src/obj-desc.c:398
+#: ../src/obj-desc.c:404
 #, c-format
 msgid " (%dd%d)"
 msgstr ""
 
-#: ../src/obj-desc.c:403
+#: ../src/obj-desc.c:409
 #, c-format
 msgid " (x%d)"
 msgstr ""
 
-#: ../src/obj-desc.c:450
+#: ../src/obj-desc.c:456
 #, c-format
 msgid " (%d turns)"
 msgstr ""
 
-#: ../src/obj-desc.c:508
+#: ../src/obj-desc.c:514
 #, c-format
 msgid " (%d charge%s)"
 msgstr ""
 
-#: ../src/obj-desc.c:512
+#: ../src/obj-desc.c:518
 #, c-format
 msgid " (%d charging)"
 msgstr ""
 
-#: ../src/obj-desc.c:515
+#: ../src/obj-desc.c:521
 #, fuzzy
 msgid " (charging)"
 msgstr " (ターン平均"
 
-#: ../src/obj-desc.c:537
+#: ../src/obj-desc.c:543
 msgid "empty"
 msgstr ""
 
-#: ../src/obj-desc.c:539
+#: ../src/obj-desc.c:545
 msgid "tried"
 msgstr ""
 
-#: ../src/obj-desc.c:544
+#: ../src/obj-desc.c:550
 msgid "cursed"
 msgstr ""
 
-#: ../src/obj-desc.c:548
+#: ../src/obj-desc.c:554
 msgid "ignore"
 msgstr ""
 
-#: ../src/obj-desc.c:552
+#: ../src/obj-desc.c:558
 msgid "??"
 msgstr ""
 
-#: ../src/obj-desc.c:579
+#: ../src/obj-desc.c:585
 msgid " {unseen}"
 msgstr ""
 
-#: ../src/obj-desc.c:581
+#: ../src/obj-desc.c:587
 msgid " {??}"
 msgstr ""
 
-#: ../src/obj-desc.c:583
+#: ../src/obj-desc.c:589
 msgid " {cursed}"
 msgstr ""
 
-#: ../src/obj-desc.c:628
+#: ../src/obj-desc.c:634
 msgid "(nothing)"
 msgstr ""
 
-#: ../src/obj-desc.c:633
+#: ../src/obj-desc.c:639
 msgid "an unknown item"
 msgstr ""
 
-#: ../src/obj-desc.c:634
+#: ../src/obj-desc.c:640
 msgid "unknown item"
 msgstr ""
 
-#: ../src/obj-desc.c:638
+#: ../src/obj-desc.c:644
 #, c-format
 msgid "%d gold pieces worth of %s%s"
 msgstr ""
 
-#: ../src/obj-desc.c:640
+#: ../src/obj-desc.c:646
 msgid " {ignore}"
 msgstr ""
 

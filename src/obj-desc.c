@@ -187,7 +187,7 @@ static const char *make_obj_desc_name_prefix(const struct object *obj,
 	} else if (number > 1) {
 		return format(_("%u "), number);
 	} else if (object_is_known_artifact(obj)) {
-		return _("the "); // TODO: _C("object", "the ")
+		return _("the "); // TODO[artifact]: _C("object", "the ")
 	} else if (*basename == '&') {
 		bool an = false;
 		const char *lookahead = basename + 1;
@@ -329,23 +329,29 @@ static size_t obj_desc_name(char *buf, size_t max, size_t end,
 	end = obj_desc_name_format(buf, max, end, basename, modstr, plural);
 
 	/* Append extra names of various kinds */
-	if (object_is_known_artifact(obj))
-		strnfcat(buf, max, &end, _(" %s"), _GAMEDATA(obj->artifact->name));
+        char *buf_sofar = string_make(buf);
+	if (object_is_known_artifact(obj)) {
+		// NOTE[i18n]: Some locales may want to show artifacts like
+		// "The Short Sword 'Sting'" but "Éowyn's Bastard Sword"
+		if (obj->artifact->name[0] == '\'') {
+			snprintf(buf, max, _C("named_artifact", "%s %s"), buf_sofar, _GAMEDATA(obj->artifact->name));
+		} else {
+			snprintf(buf, max, _C("artifact", "%s %s"), buf_sofar, _GAMEDATA(obj->artifact->name));
+		}
+	}
 	else if ((obj->known->ego && !(mode & ODESC_NOEGO)) || (obj->ego && store))
-		strnfcat(buf, max, &end, _(" %s"), _GAMEDATA(obj->ego->name));
+		snprintf(buf, max, _("%s %s"), buf_sofar, _GAMEDATA(obj->ego->name));
 	else if (aware && !obj->artifact &&
 			 (obj->kind->flavor || obj->kind->tval == TV_SCROLL)) {
 		if (terse)
-			strnfcat(buf, max, &end, _(" '%s'"), _GAMEDATA(obj->kind->name));
-		else {
-		 	char *buf_sofar = string_make(buf);
+			snprintf(buf, max, _("%s '%s'"), buf_sofar, _GAMEDATA(obj->kind->name));
+		else
 			snprintf(buf, max, _("%s of %s"), buf_sofar, _GAMEDATA(obj->kind->name));
-			string_free(buf_sofar);
-			end = strlen(buf);
-		}
 	}
+        string_free(buf_sofar);
+        end = strlen(buf);
 
-	/* Quantity prefix */
+        /* Quantity prefix */
 	if (prefix) {
 		char *buf_sofar = string_make(buf);
 		strncpy(buf, make_obj_desc_name_prefix(obj, basename, modstr, terse, number), max);
