@@ -2210,9 +2210,6 @@ static int compare_advances(const void *ap, const void *bp)
     CGGlyph thisGlyphArray[2] = { 0, 0 };
     CGSize advances[2] = { { 0, 0 }, { 0, 0 } };
 
-    CFStringRef s = CFStringCreateWithCharacters(NULL, unicharString, nuni);
-    // NSLog(@"unichar is : %@", s);
-
     CTFontRef font_ = NULL;
     if (CTFontGetGlyphsForCharacters((CTFontRef)font, unicharString, thisGlyphArray, nuni)) {
         font_ = (__bridge CTFontRef)font;
@@ -2227,10 +2224,7 @@ static int compare_advances(const void *ap, const void *bp)
             CTFontDescriptorRef fontDesc = CFArrayGetValueAtIndex(fonts, i);
             font_ = CTFontCreateWithFontDescriptor(fontDesc, 0.0, NULL);
             if (CTFontGetGlyphsForCharacters((CTFontRef)font_, unicharString, thisGlyphArray, nuni)) {
-                NSLog(@"Font hit : %@", CTFontDescriptorCopyAttribute(fontDesc, kCTFontNameAttribute));
                 break;
-            } else {
-                NSLog(@"Font not hit : %@", CTFontDescriptorCopyAttribute(fontDesc, kCTFontNameAttribute));
             }
         }
     }
