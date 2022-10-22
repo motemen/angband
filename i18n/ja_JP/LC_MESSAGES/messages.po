@@ -902,7 +902,7 @@ msgstr "レベル "
 
 #: ../src/ui-display.c:217
 msgid "Level "
-msgstr ""
+msgstr "レベル "
 
 #: ../src/ui-display.c:244
 msgid "EXP"
