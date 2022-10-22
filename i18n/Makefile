@@ -10,7 +10,8 @@ GAMEDATA_POTS = \
 		_gamedata-object.pot \
 		_gamedata-object_base.pot \
 		_gamedata-artifact.pot \
-		_gamedata-terrain.pot
+		_gamedata-terrain.pot \
+		_gamedata-body.pot
 
 .PHONY: all
 all: $(LOCALE)/LC_MESSAGES/messages.mo $(LOCALE)/LC_MESSAGES/gamedata.mo

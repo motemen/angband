@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Angband 4.2.4\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../lib/gamedata/body.txt:12
+msgid "weapon"
+msgstr "武器"
+
+#: ../lib/gamedata/body.txt:13
+msgid "shooting"
+msgstr "射撃"
+
+#: ../lib/gamedata/body.txt:14
+msgid "right hand"
+msgstr "右手"
+
+#: ../lib/gamedata/body.txt:15
+msgid "left hand"
+msgstr "左手"
+
+#: ../lib/gamedata/body.txt:16
+msgid "neck"
+msgstr "首"
+
+#: ../lib/gamedata/body.txt:17
+msgid "light"
+msgstr "光源"
+
+#: ../lib/gamedata/body.txt:18
+msgid "body"
+msgstr "体"
+
+#: ../lib/gamedata/body.txt:19
+msgid "back"
+msgstr "背中"
+
+#: ../lib/gamedata/body.txt:20
+msgid "arm"
+msgstr "腕"
+
+#: ../lib/gamedata/body.txt:21
+msgid "head"
+msgstr "頭"
+
+#: ../lib/gamedata/body.txt:22
+msgid "hands"
+msgstr "両手"
+
+#: ../lib/gamedata/body.txt:23
+msgid "feet"
+msgstr "足"
