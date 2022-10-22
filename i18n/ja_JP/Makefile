@@ -22,3 +22,5 @@ _gamedata-object-hengband.po: $(HENGBAND_PATH)/lib/edit/k_info.txt
 _gamedata-artifact-hengband.po: $(HENGBAND_PATH)/lib/edit/a_info.txt
 	cat ../_gamedata-artifact.pot | ../../utils/applyhengtrans $< > $@
 
+_gamedata-terrain-hengband.po: $(HENGBAND_PATH)/lib/edit/f_info.txt
+	cat ../_gamedata-terrain.pot | ../../utils/applyhengtrans $< > $@

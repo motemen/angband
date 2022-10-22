@@ -12217,3 +12217,239 @@ msgid ""
 "this plain iron crown has mounted upon it the two remaining Silmarils, "
 "greatest treasures of Middle-Earth."
 msgstr ""
+
+#: ../lib/gamedata/terrain.txt:98
+msgid "unknown grid"
+msgstr "未知の地形"
+
+#: ../lib/gamedata/terrain.txt:103
+msgid "open floor"
+msgstr "床"
+
+#: ../lib/gamedata/terrain.txt:109
+msgid ""
+"An open floor or bare ground.  Can be walked across by anything, and can "
+"hold traps or items.  Does not break line of sight."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:110
+msgid "closed door"
+msgstr "閉じたドア"
+
+#: ../lib/gamedata/terrain.txt:121
+msgid ""
+"Doors may be locked; getting through them may not be easy.  Your disarming "
+"skill makes all the difference to your ability to handle locks, but you can "
+"also take a pickaxe to them, or blast them open with magic.  Monsters are "
+"also slowed down by doors; you can earn yourself valuable time by locking "
+"them."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:122
+msgid "open door"
+msgstr "開いたドア"
+
+#: ../lib/gamedata/terrain.txt:129
+msgid ""
+"A door that is already open.  Player, monster, spell and missile can pass "
+"through as long as it stays open."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:130
+msgid "broken door"
+msgstr "壊れたドア"
+
+#: ../lib/gamedata/terrain.txt:136
+msgid "A door so broken that it cannot be shut."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:137
+msgid "up staircase"
+msgstr "上り階段"
+
+#: ../lib/gamedata/terrain.txt:143
+msgid "A staircase up to a shallower part of the dungeon."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:144
+msgid "down staircase"
+msgstr "下り階段"
+
+#: ../lib/gamedata/terrain.txt:150
+msgid "A staircase down to a deeper part of the dungeon."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:151
+msgid "General Store"
+msgstr "雑貨屋"
+
+#: ../lib/gamedata/terrain.txt:159
+msgid "The General Store sells food, ammunition and lighting supplies."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:160
+msgid "Armoury"
+msgstr "防具屋"
+
+#: ../lib/gamedata/terrain.txt:169
+msgid ""
+"The armour sold here will give you some protection against the blows of your "
+"enemies."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:170
+msgid "Weapon Smiths"
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:179
+msgid ""
+"Weapons for hitting and shooting your enemies are forged in the hot, acrid "
+"backroom of this enticing shop."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:180
+msgid "Bookseller"
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:189
+msgid ""
+"A quiet, reflective place of refuge, lined with shelves of mystical tomes."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:190
+msgid "Alchemy Shop"
+msgstr "錬金術の店"
+
+#: ../lib/gamedata/terrain.txt:198
+msgid "A dim, scented room where potions and scrolls are traded."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:199
+msgid "Magic Shop"
+msgstr "魔法の店"
+
+#: ../lib/gamedata/terrain.txt:207
+msgid "A shop for devices and adornments with magic trapped within."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:208
+msgid "Black Market"
+msgstr "ブラック・マーケット"
+
+#: ../lib/gamedata/terrain.txt:217
+msgid ""
+"Watch your back and hold onto your purse as you enter this disreputable "
+"haunt - and do not expect friendly service or good bargains."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:218
+msgid "Home"
+msgstr "我が家"
+
+#: ../lib/gamedata/terrain.txt:227
+msgid ""
+"Your safe piece of Middle Earth, and the only place you can store goods "
+"apart from on your person."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:228
+msgid "secret door"
+msgstr "隠しドア"
+
+#: ../lib/gamedata/terrain.txt:235
+msgid "A door that appears like a granite wall to untrained eyes."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:236
+msgid "pile of rubble"
+msgstr "岩石"
+
+#: ../lib/gamedata/terrain.txt:244
+msgid ""
+"Ends LOS, stops missiles, bolts, and beams.  May dissolve or be tunnelled to "
+"normal floor."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:245
+msgid "magma vein"
+msgstr "溶岩の鉱脈"
+
+#: ../lib/gamedata/terrain.txt:254
+msgid ""
+"A seam of soft rock.  It can be removed by digging or magic, and passed "
+"through by immaterial monsters.  It stops any spells, missiles or line of "
+"sight."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:255
+msgid "quartz vein"
+msgstr "石英の鉱脈"
+
+#: ../lib/gamedata/terrain.txt:264
+msgid ""
+"A seam of hardish rock.  It can be removed by digging or magic, and passed "
+"through by immaterial monsters.  It stops any spells, missiles or line of "
+"sight."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:265
+msgid "magma vein with treasure"
+msgstr "財宝を含有した溶岩の鉱脈"
+
+#: ../lib/gamedata/terrain.txt:274
+msgid ""
+"A seam of soft rock.  It can be removed by digging or magic, and passed "
+"through by immaterial monsters.  It stops any spells, missiles or line of "
+"sight.  It contains visible treasure."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:275
+msgid "quartz vein with treasure"
+msgstr "財宝を含有した石英の鉱脈"
+
+#: ../lib/gamedata/terrain.txt:284
+msgid ""
+"A seam of hardish rock.  It can be removed by digging or magic, and passed "
+"through by immaterial monsters.  It stops any spells, missiles or line of "
+"sight.  It contains visible treasure."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:285
+msgid "granite wall"
+msgstr "花崗岩の壁"
+
+#: ../lib/gamedata/terrain.txt:294
+msgid ""
+"A seam of hard rock.  It can be removed by digging or magic, and passed "
+"through by immaterial monsters.  It stops any spells, missiles or line of "
+"sight."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:295
+msgid "permanent wall"
+msgstr "永久岩の壁"
+
+#: ../lib/gamedata/terrain.txt:302
+msgid ""
+"You can dig through most walls but these are impenetrable.  The dungeon is "
+"surrounded by these kinds of walls and some special rooms are made of them."
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:305
+msgid "lava"
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:311
+msgid "A fiery pool of glowing lava.  Step in it at your peril!"
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:317
+msgid "pile of passable rubble"
+msgstr ""
+
+#: ../lib/gamedata/terrain.txt:325
+msgid ""
+"Ends LOS, stops missiles, bolts, and beams, and reduces the radius of ball "
+"spells.  May dissolve or be tunnelled to normal floor, and can be walked "
+"through by the player and monsters."
+msgstr ""

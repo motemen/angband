@@ -43,6 +43,8 @@ while (<$fh>) {
     $name_ja = $1;
   } elsif (/^E:(.+)/) {
     $name_en = $1;
+  } elsif (/^J:(.+)/) {
+    $name_ja = $1;
   }
 
   if (my ($desc) = /^D:(.+)/) {
