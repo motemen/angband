@@ -156,11 +156,11 @@ static void prt_stat(int stat, int row, int col)
 
 	/* Injured or healthy stat */
 	if (player->stat_cur[stat] < player->stat_max[stat]) {
-		put_str(stat_names_reduced[stat], row, col);
+		put_str(_(stat_names_reduced[stat]), row, col);
 		cnv_stat(player->state.stat_use[stat], tmp, sizeof(tmp));
 		c_put_str(COLOUR_YELLOW, tmp, row, col + 6);
 	} else {
-		put_str(stat_names[stat], row, col);
+		put_str(_(stat_names[stat]), row, col);
 		cnv_stat(player->state.stat_use[stat], tmp, sizeof(tmp));
 		c_put_str(COLOUR_L_GREEN, tmp, row, col + 6);
 	}

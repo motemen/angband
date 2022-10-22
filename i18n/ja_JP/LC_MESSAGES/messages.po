@@ -910,7 +910,7 @@ msgstr "経験"
 
 #: ../src/ui-display.c:244
 msgid "NXT"
-msgstr "あと"
+msgstr "次経験"
 
 #: ../src/ui-display.c:247
 msgid "Exp"
@@ -918,7 +918,7 @@ msgstr "経験"
 
 #: ../src/ui-display.c:247
 msgid "Nxt"
-msgstr "あと"
+msgstr "次経験"
 
 #: ../src/ui-display.c:260
 msgid "AU "
