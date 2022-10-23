@@ -20,6 +20,7 @@
 #include "angband.h"
 #include "cmd-core.h"
 #include "game-event.h"
+#include "i18n.h"
 #include "init.h"
 #include "obj-desc.h"
 #include "obj-gear.h"
@@ -305,11 +306,11 @@ const char *equip_mention(struct player *p, int slot)
 	/* Heavy */
 	if ((type == EQUIP_WEAPON && p->state.heavy_wield) ||
 			(type == EQUIP_WEAPON && p->state.heavy_shoot))
-		return _(slot_table[type].heavy_describe);
+		return _LIST(slot_table[type].heavy_describe);
 	else if (slot_table[type].name_in_desc)
-		return format(_(slot_table[type].mention), _GAMEDATA(p->body.slots[slot].name));
+		return format(_LIST(slot_table[type].mention), _GAMEDATA(p->body.slots[slot].name));
 	else
-		return _(slot_table[type].mention);
+		return _LIST(slot_table[type].mention);
 }
 
 
@@ -324,11 +325,11 @@ const char *equip_describe(struct player *p, int slot)
 	/* Heavy */
 	if ((type == EQUIP_WEAPON && p->state.heavy_wield) ||
 			(type == EQUIP_WEAPON && p->state.heavy_shoot))
-		return _(slot_table[type].heavy_describe);
+		return _LIST(slot_table[type].heavy_describe);
 	else if (slot_table[type].name_in_desc)
-		return format(_(slot_table[type].describe), _(p->body.slots[slot].name));
+		return format(_LIST(slot_table[type].describe), _GAMEDATA(p->body.slots[slot].name));
 	else
-		return _(slot_table[type].describe);
+		return _LIST(slot_table[type].describe);
 }
 
 /**
@@ -1115,13 +1116,13 @@ void inven_drop(struct object *obj, int amt)
 		player);
 
 	/* Message */
-	msg("You drop %s (%c).", name, label);
+	msg(_("You drop %s (%c)."), name, label);
 
 	/* Describe what's left */
 	if (dropped->artifact) {
 		object_desc(name, sizeof(name), dropped,
 			ODESC_FULL | ODESC_SINGULAR, player);
-		msg("You no longer have the %s (%c).", name, label);
+		msg(_("You no longer have the %s (%c)."), name, label);
 	} else {
 		struct object *first;
 		struct object *desc_target;
@@ -1377,7 +1378,7 @@ void pack_overflow(struct object *obj)
 	drop_near(cave, &obj, 0, player->grid, false, true);
 
 	/* Describe */
-	msg("You no longer have %s.", o_name);
+	msg(_("You no longer have %s."), o_name);
 
 	/* Notice, update, redraw */
 	if (player->upkeep->notice) notice_stuff(player);

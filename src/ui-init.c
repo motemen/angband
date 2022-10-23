@@ -51,6 +51,7 @@ void textui_init(void)
 	setlocale(LC_ALL, ___THIS_LOCALE(USE_LOCALE));
 	bindtextdomain("messages", ANGBAND_DIR_I18N);
 	bindtextdomain("gamedata", ANGBAND_DIR_I18N);
+	bindtextdomain("list", ANGBAND_DIR_I18N);
 	textdomain("messages");
 #endif
 

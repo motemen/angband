@@ -14,6 +14,8 @@
 #define N_(string) gettext_noop(string)
 #define _GAMEDATA(string) dgettext("gamedata", string)
 #define N_GAMEDATA(string) gettext_noop(string)
+#define _LIST(string) dgettext("list", string)
+#define N_LIST(string) gettext_noop(string)
 #define _GAMEDATA_C(ctx, msgid) ({ \
   char buf[256]; \
   strcpy(buf, ctx "\004"); \
@@ -29,6 +31,8 @@
 #define _GAMEDATA(string) (string)
 #define N_GAMEDATA(string) (string)
 #define _GAMEDATA_C(ctx, string) (string)
+#define _LIST(string) (string)
+#define N_LIST(string) (string)
 #define MAX_CHAR_VISUAL_WIDTH 1
 #define ngettext(msgid, msgid_plural, n) ((n) == 1 ? (msgid) : (msgid_plural))
 #endif

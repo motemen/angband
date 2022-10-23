@@ -648,146 +648,161 @@ msgstr "%sを破壊した。"
 msgid "You have slain %s."
 msgstr "%sを殺した。"
 
-#: ../src/obj-desc.c:186
+#: ../src/obj-desc.c:187
 msgid "no more "
 msgstr ""
 
-#: ../src/obj-desc.c:188
+#: ../src/obj-desc.c:189
 #, c-format
 msgid "%u "
 msgstr ""
 
-#: ../src/obj-desc.c:191
+#: ../src/obj-desc.c:192
 msgctxt "random_artifact"
 msgid "the "
 msgstr "☆"
 
-#: ../src/obj-desc.c:193
+#: ../src/obj-desc.c:194
 msgctxt "fixed_artifact"
 msgid "the "
 msgstr "★"
 
-#: ../src/obj-desc.c:210
+#: ../src/obj-desc.c:211
 msgid "an "
 msgstr ""
 
-#: ../src/obj-desc.c:212
+#: ../src/obj-desc.c:213
 msgid "a "
 msgstr ""
 
-#: ../src/obj-desc.c:341
+#: ../src/obj-desc.c:342
 #, c-format
 msgctxt "named_artifact"
 msgid "%s %s"
 msgstr "%s%s"
 
-#: ../src/obj-desc.c:343
+#: ../src/obj-desc.c:344
 #, c-format
 msgctxt "artifact"
 msgid "%s %s"
 msgstr "%2$s%1$s"
 
-#: ../src/obj-desc.c:347
+#: ../src/obj-desc.c:348
 #, c-format
 msgid "%s %s"
 msgstr "%2$s%1$s"
 
-#: ../src/obj-desc.c:351
+#: ../src/obj-desc.c:352
 #, c-format
 msgid "%s '%s'"
 msgstr ""
 
-#: ../src/obj-desc.c:353
+#: ../src/obj-desc.c:354
 #, c-format
 msgid "%s of %s"
 msgstr "%2$sの%1$s"
 
-#: ../src/obj-desc.c:391
+#: ../src/obj-desc.c:392
 #, c-format
 msgid " (%s)"
 msgstr ""
 
-#: ../src/obj-desc.c:408
+#: ../src/obj-desc.c:409
 #, c-format
 msgid " (%dd%d)"
 msgstr ""
 
-#: ../src/obj-desc.c:413
+#: ../src/obj-desc.c:414
 #, c-format
 msgid " (x%d)"
 msgstr ""
 
-#: ../src/obj-desc.c:460
+#: ../src/obj-desc.c:461
 #, c-format
 msgid " (%d turns)"
 msgstr " (%d ターン)"
 
-#: ../src/obj-desc.c:518
+#: ../src/obj-desc.c:519
 #, c-format
 msgid " (%d charge%s)"
 msgstr ""
 
-#: ../src/obj-desc.c:522
+#: ../src/obj-desc.c:523
 #, c-format
 msgid " (%d charging)"
 msgstr " (%d 充填中)"
 
-#: ../src/obj-desc.c:525
+#: ../src/obj-desc.c:526
 msgid " (charging)"
 msgstr " (充填中)"
 
-#: ../src/obj-desc.c:547
+#: ../src/obj-desc.c:548
 msgid "empty"
 msgstr ""
 
-#: ../src/obj-desc.c:549
+#: ../src/obj-desc.c:550
 msgid "tried"
 msgstr ""
 
-#: ../src/obj-desc.c:554
+#: ../src/obj-desc.c:555
 msgid "cursed"
 msgstr ""
 
-#: ../src/obj-desc.c:558
+#: ../src/obj-desc.c:559
 msgid "ignore"
 msgstr ""
 
-#: ../src/obj-desc.c:562
+#: ../src/obj-desc.c:563
 msgid "??"
 msgstr ""
 
-#: ../src/obj-desc.c:589
+#: ../src/obj-desc.c:590
 msgid " {unseen}"
 msgstr ""
 
-#: ../src/obj-desc.c:591
+#: ../src/obj-desc.c:592
 msgid " {??}"
 msgstr ""
 
-#: ../src/obj-desc.c:593
+#: ../src/obj-desc.c:594
 msgid " {cursed}"
 msgstr ""
 
-#: ../src/obj-desc.c:638
+#: ../src/obj-desc.c:639
 msgid "(nothing)"
 msgstr ""
 
-#: ../src/obj-desc.c:643
+#: ../src/obj-desc.c:644
 msgid "an unknown item"
 msgstr ""
 
-#: ../src/obj-desc.c:644
+#: ../src/obj-desc.c:645
 msgid "unknown item"
 msgstr ""
 
-#: ../src/obj-desc.c:648
+#: ../src/obj-desc.c:649
 #, c-format
 msgid "%d gold pieces worth of %s%s"
 msgstr ""
 
-#: ../src/obj-desc.c:650
+#: ../src/obj-desc.c:651
 msgid " {ignore}"
 msgstr ""
+
+#: ../src/obj-gear.c:1119
+#, fuzzy, c-format
+msgid "You drop %s (%c)."
+msgstr "%2$s%1$s。"
+
+#: ../src/obj-gear.c:1125
+#, c-format
+msgid "You no longer have the %s (%c)."
+msgstr ""
+
+#: ../src/obj-gear.c:1381
+#, fuzzy, c-format
+msgid "You no longer have %s."
+msgstr "%sを殺した。"
 
 #: ../src/player-attack.c:715
 msgid "punch"
@@ -1152,276 +1167,39 @@ msgstr ""
 msgid "The "
 msgstr ""
 
-#: ../src/list-equip-slots.h:15
-msgid "Wielding"
-msgstr "手持ち"
+#~ msgid "Wielding"
+#~ msgstr "手持ち"
 
-#: ../src/list-equip-slots.h:15
-msgid "just lifting"
-msgstr "運搬中"
+#~ msgid "just lifting"
+#~ msgstr "運搬中"
 
-#: ../src/list-equip-slots.h:15
-msgid "attacking monsters with"
-msgstr ""
+#~ msgid "Shooting"
+#~ msgstr "射撃"
 
-#: ../src/list-equip-slots.h:16
-msgid "Shooting"
-msgstr "射撃"
-
-#: ../src/list-equip-slots.h:16
-msgid "just holding"
-msgstr ""
-
-#: ../src/list-equip-slots.h:16
-msgid "shooting missiles with"
-msgstr ""
-
-#: ../src/list-equip-slots.h:17 ../src/list-equip-slots.h:20
-#: ../src/list-equip-slots.h:21 ../src/list-equip-slots.h:22
-#: ../src/list-equip-slots.h:23 ../src/list-equip-slots.h:24
-#: ../src/list-equip-slots.h:25
 #, c-format
-msgid "On %s"
-msgstr "%s"
+#~ msgid "On %s"
+#~ msgstr "%s"
 
-#: ../src/list-equip-slots.h:17 ../src/list-equip-slots.h:20
-#: ../src/list-equip-slots.h:21 ../src/list-equip-slots.h:22
-#: ../src/list-equip-slots.h:23 ../src/list-equip-slots.h:24
-#: ../src/list-equip-slots.h:25
-#, c-format
-msgid "wearing on your %s"
-msgstr ""
-
-#: ../src/list-equip-slots.h:18
-#, c-format
-msgid "Around %s"
-msgstr ""
-
-#: ../src/list-equip-slots.h:18
-#, c-format
-msgid "wearing around your %s"
-msgstr ""
-
-#: ../src/list-equip-slots.h:19
-msgid "Light source"
-msgstr ""
-
-#: ../src/list-equip-slots.h:19
-msgid "using to light your way"
-msgstr ""
-
-#: ../src/list-mon-message.h:12
-msgid "[is|are] hurt."
-msgstr ""
-
-#: ../src/list-mon-message.h:13
-msgid "die[s]."
-msgstr ""
-
-#: ../src/list-mon-message.h:14
 #, fuzzy
-msgid "[is|are] destroyed."
-msgstr "%sを破壊した。"
+#~ msgid "[is|are] destroyed."
+#~ msgstr "%sを破壊した。"
 
-#: ../src/list-mon-message.h:15
-msgid "resist[s] a lot."
-msgstr ""
-
-#: ../src/list-mon-message.h:16
-msgid "[is|are] hit hard."
-msgstr ""
-
-#: ../src/list-mon-message.h:17
 #, fuzzy
-msgid "resist[s]."
-msgstr "%sは{}に対して耐性がある"
+#~ msgid "resist[s]."
+#~ msgstr "%sは{}に対して耐性がある"
 
-#: ../src/list-mon-message.h:18
-msgid "[is|are] immune."
-msgstr ""
-
-#: ../src/list-mon-message.h:19
 #, fuzzy
-msgid "resist[s] somewhat."
-msgstr "いくらか"
+#~ msgid "resist[s] somewhat."
+#~ msgstr "いくらか"
 
-#: ../src/list-mon-message.h:20
-msgid "[is|are] unaffected!"
-msgstr ""
-
-#: ../src/list-mon-message.h:21
-msgid "spawn[s]!"
-msgstr ""
-
-#: ../src/list-mon-message.h:22
-msgid "look[s] healthier."
-msgstr ""
-
-#: ../src/list-mon-message.h:23
-msgid "fall[s] asleep!"
-msgstr ""
-
-#: ../src/list-mon-message.h:24
-msgid "wake[s] up."
-msgstr ""
-
-#: ../src/list-mon-message.h:25
-msgid "cringe[s] from the light!"
-msgstr ""
-
-#: ../src/list-mon-message.h:26
 #, fuzzy
-msgid "shrivel[s] away in the light!"
-msgstr "壁があって通れない！"
+#~ msgid "shrivel[s] away in the light!"
+#~ msgstr "壁があって通れない！"
 
-#: ../src/list-mon-message.h:27
-msgid "lose[s] some skin!"
-msgstr ""
+#, fuzzy
+#~ msgid "orc"
+#~ msgstr "または"
 
-#: ../src/list-mon-message.h:28
-msgid "dissolve[s]!"
-msgstr ""
-
-#: ../src/list-mon-message.h:29
-msgid "catch[es] fire!"
-msgstr ""
-
-#: ../src/list-mon-message.h:30
-msgid "[is|are] badly frozen."
-msgstr ""
-
-#: ../src/list-mon-message.h:31
-msgid "shudder[s]."
-msgstr ""
-
-#: ../src/list-mon-message.h:32
-msgid "change[s]!"
-msgstr ""
-
-#: ../src/list-mon-message.h:33
-msgid "disappear[s]!"
-msgstr ""
-
-#: ../src/list-mon-message.h:34
-msgid "[is|are] even more stunned."
-msgstr ""
-
-#: ../src/list-mon-message.h:35
-msgid "[is|are] stunned."
-msgstr ""
-
-#: ../src/list-mon-message.h:36
-msgid "[is|are] no longer stunned."
-msgstr ""
-
-#: ../src/list-mon-message.h:37
-msgid "look[s] more confused."
-msgstr ""
-
-#: ../src/list-mon-message.h:38
-msgid "look[s] confused."
-msgstr ""
-
-#: ../src/list-mon-message.h:39
-msgid "[is|are] no longer confused."
-msgstr ""
-
-#: ../src/list-mon-message.h:40
-msgid "look[s] more slowed."
-msgstr ""
-
-#: ../src/list-mon-message.h:41
-msgid "look[s] slowed."
-msgstr ""
-
-#: ../src/list-mon-message.h:42
-msgid "speed[s] up."
-msgstr ""
-
-#: ../src/list-mon-message.h:43
-msgid "look[s] even faster!"
-msgstr ""
-
-#: ../src/list-mon-message.h:44
-msgid "start[s] moving faster."
-msgstr ""
-
-#: ../src/list-mon-message.h:45
-msgid "slow[s] down."
-msgstr ""
-
-#: ../src/list-mon-message.h:46
-msgid "look[s] more terrified!"
-msgstr ""
-
-#: ../src/list-mon-message.h:47
-msgid "flee[s] in terror!"
-msgstr ""
-
-#: ../src/list-mon-message.h:48
-msgid "[is|are] no longer afraid."
-msgstr ""
-
-#: ../src/list-mon-message.h:49
-msgid "[is|are] frozen to the spot!"
-msgstr ""
-
-#: ../src/list-mon-message.h:50
-msgid "can move again."
-msgstr ""
-
-#: ../src/list-mon-message.h:51
-msgid "seem[s] less magical!"
-msgstr ""
-
-#: ../src/list-mon-message.h:52
-msgid "seem[s] magical again."
-msgstr ""
-
-#: ../src/list-mon-message.h:53
-msgid "falls under your spell!"
-msgstr ""
-
-#: ../src/list-mon-message.h:54
-msgid "is no longer under your control."
-msgstr ""
-
-#: ../src/list-mon-message.h:55
-msgid "shimmers for a moment."
-msgstr ""
-
-#: ../src/list-mon-message.h:56
-msgid "You hear [a|several] scream[|s] of agony!"
-msgstr ""
-
-#: ../src/list-mon-message.h:57
-msgid "disintegrate[s]!"
-msgstr ""
-
-#: ../src/list-mon-message.h:58
-msgid "freeze[s] and shatter[s]!"
-msgstr ""
-
-#: ../src/list-mon-message.h:59
-msgid "lose[s] some mana!"
-msgstr ""
-
-#: ../src/list-mon-message.h:60
-msgid "look[s] briefly puzzled."
-msgstr ""
-
-#: ../src/list-mon-message.h:61
-msgid "maintain[s] the same shape."
-msgstr ""
-
-#: ../src/list-mon-message.h:62
-msgid "[is|are] unharmed."
-msgstr ""
-
-#: ../src/list-mon-message.h:63
-msgid "appear[s]!"
-msgstr ""
-
-#: ../src/list-mon-message.h:64
-msgid "There is a puff of smoke!"
-msgstr ""
+#, fuzzy
+#~ msgid "slowed"
+#~ msgstr "ゆっくりと"

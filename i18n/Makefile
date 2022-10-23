@@ -14,7 +14,7 @@ GAMEDATA_POTS = \
 		_gamedata-body.pot
 
 .PHONY: all
-all: $(LOCALE)/LC_MESSAGES/messages.mo $(LOCALE)/LC_MESSAGES/gamedata.mo
+all: $(LOCALE)/LC_MESSAGES/messages.mo $(LOCALE)/LC_MESSAGES/gamedata.mo $(LOCALE)/LC_MESSAGES/list.mo
 
 .PHONY: all-pots
 all-pots: $(GAMEDATA_POTS)
@@ -23,6 +23,8 @@ all-pots: $(GAMEDATA_POTS)
 	msgfmt $< -o $@
 
 $(LOCALE)/LC_MESSAGES/messages.mo: $(LOCALE)/LC_MESSAGES/messages.po
+
+$(LOCALE)/LC_MESSAGES/list.mo: $(LOCALE)/LC_MESSAGES/list.po
 
 $(LOCALE)/LC_MESSAGES/gamedata.po: \
 		$(patsubst %.pot,$(LOCALE)/LC_MESSAGES/%.po,$(GAMEDATA_POTS))
@@ -41,7 +43,12 @@ fi
 
 messages.pot: $(wildcard ../src/*.c)
 	chmod +w $@ || true
-	xgettext --omit-header -k_ -kN_ -k_C:1c,2 -o $@ ../src/*.c ../src/*.h
+	xgettext --omit-header -k_ -kN_ -k_C:1c,2 -o $@ ../src/*.c
+	chmod -w $@
+
+list.pot: $(wildcard ../src/list-*.h)
+	chmod +w $@ || true
+	xgettext --omit-header -k_LIST -kN_LIST -o $@ ../src/list-*.h
 	chmod -w $@
 
 _gamedata-%.pot:

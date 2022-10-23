@@ -121,6 +121,7 @@ static const char *obj_desc_get_basename(const struct object *obj, bool aware,
 			return _GAMEDATA(obj->kind->name);
 
 		case TV_AMULET:
+			// Use _GAMEDATA here for align with other kinds
 			return (show_flavor ? _GAMEDATA("& # Amulet~") : _GAMEDATA("& Amulet~"));
 
 		case TV_RING:
