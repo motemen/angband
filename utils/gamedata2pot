@@ -11,8 +11,7 @@ use Cwd qw(realpath);
 # 'monster', 'class', ...
 my $type = shift or die;
 
-# for "poison" conflicting 
-my $context = { blow_effects => 'blow_effects' }->{$type};
+my $context = {}->{$type};
 
 my $file = realpath(catfile(dirname(__FILE__), updir, "lib", "gamedata", "$type.txt")) or die "cannot find lib/gamedata/$type.txt";
    $file = abs2rel($file);

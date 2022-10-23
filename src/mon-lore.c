@@ -1744,7 +1744,7 @@ void lore_append_attack(textblock *tb, const struct monster_race *race,
 			/* Describe the attack type */
 			// XXX[locale]: " to " usage differs to describe_effect() in obj-info.c
 			textblock_append(tb, _C("mon-lore", " to "));
-			textblock_append_c(tb, blow_color(player, index), "%s", _GAMEDATA_C("blow_effects", effect_str));
+			textblock_append_c(tb, blow_color(player, index), "%s", _GAMEDATA(effect_str));
 
 			textblock_append(tb, " (");
 			/* Describe damage (if known) */

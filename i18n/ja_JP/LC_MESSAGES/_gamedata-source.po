@@ -9,100 +9,100 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../src/obj-desc.c:124
+#: ../src/obj-desc.c:125
 msgid "& # Amulet~"
 msgstr ""
 
-#: ../src/obj-desc.c:124
+#: ../src/obj-desc.c:125
 msgid "& Amulet~"
 msgstr ""
 
-#: ../src/obj-desc.c:127
+#: ../src/obj-desc.c:128
 msgid "& # Ring~"
 msgstr ""
 
-#: ../src/obj-desc.c:127
+#: ../src/obj-desc.c:128
 msgid "& Ring~"
 msgstr ""
 
-#: ../src/obj-desc.c:130
+#: ../src/obj-desc.c:131
 msgid "& # Sta|ff|ves|"
 msgstr ""
 
-#: ../src/obj-desc.c:130
+#: ../src/obj-desc.c:131
 msgid "& Sta|ff|ves|"
 msgstr ""
 
-#: ../src/obj-desc.c:133
+#: ../src/obj-desc.c:134
 msgid "& # Wand~"
 msgstr ""
 
-#: ../src/obj-desc.c:133
+#: ../src/obj-desc.c:134
 msgid "& Wand~"
 msgstr ""
 
-#: ../src/obj-desc.c:136
+#: ../src/obj-desc.c:137
 msgid "& # Rod~"
 msgstr ""
 
-#: ../src/obj-desc.c:136
+#: ../src/obj-desc.c:137
 msgid "& Rod~"
 msgstr ""
 
-#: ../src/obj-desc.c:139
+#: ../src/obj-desc.c:140
 msgid "& # Potion~"
 msgstr ""
 
-#: ../src/obj-desc.c:139
+#: ../src/obj-desc.c:140
 msgid "& Potion~"
 msgstr "薬"
 
-#: ../src/obj-desc.c:142
+#: ../src/obj-desc.c:143
 msgid "& Scroll~ titled #"
 msgstr ""
 
-#: ../src/obj-desc.c:142
+#: ../src/obj-desc.c:143
 msgid "& Scroll~"
 msgstr "巻物"
 
-#: ../src/obj-desc.c:146 ../src/obj-desc.c:152 ../src/obj-desc.c:158
-#: ../src/obj-desc.c:170
+#: ../src/obj-desc.c:147 ../src/obj-desc.c:153 ../src/obj-desc.c:159
+#: ../src/obj-desc.c:171
 msgid "& Book~ #"
 msgstr ""
 
-#: ../src/obj-desc.c:148
+#: ../src/obj-desc.c:149
 msgid "& Book~ of Magic Spells #"
 msgstr ""
 
-#: ../src/obj-desc.c:154
+#: ../src/obj-desc.c:155
 msgid "& Holy Book~ of Prayers #"
 msgstr ""
 
-#: ../src/obj-desc.c:160
+#: ../src/obj-desc.c:161
 msgid "& Book~ of Nature Magics #"
 msgstr ""
 
-#: ../src/obj-desc.c:164
+#: ../src/obj-desc.c:165
 msgid "& Tome~ #"
 msgstr ""
 
-#: ../src/obj-desc.c:166
+#: ../src/obj-desc.c:167
 msgid "& Necromantic Tome~ #"
 msgstr ""
 
-#: ../src/obj-desc.c:172
+#: ../src/obj-desc.c:173
 msgid "& Book of Mysteries~ #"
 msgstr ""
 
-#: ../src/obj-desc.c:175
+#: ../src/obj-desc.c:176
 msgid "& # Mushroom~"
 msgstr ""
 
-#: ../src/obj-desc.c:175
+#: ../src/obj-desc.c:176
 msgid "& Mushroom~"
 msgstr ""
 
-#: ../src/obj-desc.c:178
+#: ../src/obj-desc.c:179
 msgid "(nothing)"
 msgstr ""
 
