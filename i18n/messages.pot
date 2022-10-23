@@ -1127,3 +1127,273 @@ msgstr ""
 #: ../src/ui-mon-lore.c:55
 msgid "The "
 msgstr ""
+
+#: ../src/list-equip-slots.h:15
+msgid "Wielding"
+msgstr ""
+
+#: ../src/list-equip-slots.h:15
+msgid "just lifting"
+msgstr ""
+
+#: ../src/list-equip-slots.h:15
+msgid "attacking monsters with"
+msgstr ""
+
+#: ../src/list-equip-slots.h:16
+msgid "Shooting"
+msgstr ""
+
+#: ../src/list-equip-slots.h:16
+msgid "just holding"
+msgstr ""
+
+#: ../src/list-equip-slots.h:16
+msgid "shooting missiles with"
+msgstr ""
+
+#: ../src/list-equip-slots.h:17 ../src/list-equip-slots.h:20
+#: ../src/list-equip-slots.h:21 ../src/list-equip-slots.h:22
+#: ../src/list-equip-slots.h:23 ../src/list-equip-slots.h:24
+#: ../src/list-equip-slots.h:25
+#, c-format
+msgid "On %s"
+msgstr ""
+
+#: ../src/list-equip-slots.h:17 ../src/list-equip-slots.h:20
+#: ../src/list-equip-slots.h:21 ../src/list-equip-slots.h:22
+#: ../src/list-equip-slots.h:23 ../src/list-equip-slots.h:24
+#: ../src/list-equip-slots.h:25
+#, c-format
+msgid "wearing on your %s"
+msgstr ""
+
+#: ../src/list-equip-slots.h:18
+#, c-format
+msgid "Around %s"
+msgstr ""
+
+#: ../src/list-equip-slots.h:18
+#, c-format
+msgid "wearing around your %s"
+msgstr ""
+
+#: ../src/list-equip-slots.h:19
+msgid "Light source"
+msgstr ""
+
+#: ../src/list-equip-slots.h:19
+msgid "using to light your way"
+msgstr ""
+
+#: ../src/list-mon-message.h:12
+msgid "[is|are] hurt."
+msgstr ""
+
+#: ../src/list-mon-message.h:13
+msgid "die[s]."
+msgstr ""
+
+#: ../src/list-mon-message.h:14
+msgid "[is|are] destroyed."
+msgstr ""
+
+#: ../src/list-mon-message.h:15
+msgid "resist[s] a lot."
+msgstr ""
+
+#: ../src/list-mon-message.h:16
+msgid "[is|are] hit hard."
+msgstr ""
+
+#: ../src/list-mon-message.h:17
+msgid "resist[s]."
+msgstr ""
+
+#: ../src/list-mon-message.h:18
+msgid "[is|are] immune."
+msgstr ""
+
+#: ../src/list-mon-message.h:19
+msgid "resist[s] somewhat."
+msgstr ""
+
+#: ../src/list-mon-message.h:20
+msgid "[is|are] unaffected!"
+msgstr ""
+
+#: ../src/list-mon-message.h:21
+msgid "spawn[s]!"
+msgstr ""
+
+#: ../src/list-mon-message.h:22
+msgid "look[s] healthier."
+msgstr ""
+
+#: ../src/list-mon-message.h:23
+msgid "fall[s] asleep!"
+msgstr ""
+
+#: ../src/list-mon-message.h:24
+msgid "wake[s] up."
+msgstr ""
+
+#: ../src/list-mon-message.h:25
+msgid "cringe[s] from the light!"
+msgstr ""
+
+#: ../src/list-mon-message.h:26
+msgid "shrivel[s] away in the light!"
+msgstr ""
+
+#: ../src/list-mon-message.h:27
+msgid "lose[s] some skin!"
+msgstr ""
+
+#: ../src/list-mon-message.h:28
+msgid "dissolve[s]!"
+msgstr ""
+
+#: ../src/list-mon-message.h:29
+msgid "catch[es] fire!"
+msgstr ""
+
+#: ../src/list-mon-message.h:30
+msgid "[is|are] badly frozen."
+msgstr ""
+
+#: ../src/list-mon-message.h:31
+msgid "shudder[s]."
+msgstr ""
+
+#: ../src/list-mon-message.h:32
+msgid "change[s]!"
+msgstr ""
+
+#: ../src/list-mon-message.h:33
+msgid "disappear[s]!"
+msgstr ""
+
+#: ../src/list-mon-message.h:34
+msgid "[is|are] even more stunned."
+msgstr ""
+
+#: ../src/list-mon-message.h:35
+msgid "[is|are] stunned."
+msgstr ""
+
+#: ../src/list-mon-message.h:36
+msgid "[is|are] no longer stunned."
+msgstr ""
+
+#: ../src/list-mon-message.h:37
+msgid "look[s] more confused."
+msgstr ""
+
+#: ../src/list-mon-message.h:38
+msgid "look[s] confused."
+msgstr ""
+
+#: ../src/list-mon-message.h:39
+msgid "[is|are] no longer confused."
+msgstr ""
+
+#: ../src/list-mon-message.h:40
+msgid "look[s] more slowed."
+msgstr ""
+
+#: ../src/list-mon-message.h:41
+msgid "look[s] slowed."
+msgstr ""
+
+#: ../src/list-mon-message.h:42
+msgid "speed[s] up."
+msgstr ""
+
+#: ../src/list-mon-message.h:43
+msgid "look[s] even faster!"
+msgstr ""
+
+#: ../src/list-mon-message.h:44
+msgid "start[s] moving faster."
+msgstr ""
+
+#: ../src/list-mon-message.h:45
+msgid "slow[s] down."
+msgstr ""
+
+#: ../src/list-mon-message.h:46
+msgid "look[s] more terrified!"
+msgstr ""
+
+#: ../src/list-mon-message.h:47
+msgid "flee[s] in terror!"
+msgstr ""
+
+#: ../src/list-mon-message.h:48
+msgid "[is|are] no longer afraid."
+msgstr ""
+
+#: ../src/list-mon-message.h:49
+msgid "[is|are] frozen to the spot!"
+msgstr ""
+
+#: ../src/list-mon-message.h:50
+msgid "can move again."
+msgstr ""
+
+#: ../src/list-mon-message.h:51
+msgid "seem[s] less magical!"
+msgstr ""
+
+#: ../src/list-mon-message.h:52
+msgid "seem[s] magical again."
+msgstr ""
+
+#: ../src/list-mon-message.h:53
+msgid "falls under your spell!"
+msgstr ""
+
+#: ../src/list-mon-message.h:54
+msgid "is no longer under your control."
+msgstr ""
+
+#: ../src/list-mon-message.h:55
+msgid "shimmers for a moment."
+msgstr ""
+
+#: ../src/list-mon-message.h:56
+msgid "You hear [a|several] scream[|s] of agony!"
+msgstr ""
+
+#: ../src/list-mon-message.h:57
+msgid "disintegrate[s]!"
+msgstr ""
+
+#: ../src/list-mon-message.h:58
+msgid "freeze[s] and shatter[s]!"
+msgstr ""
+
+#: ../src/list-mon-message.h:59
+msgid "lose[s] some mana!"
+msgstr ""
+
+#: ../src/list-mon-message.h:60
+msgid "look[s] briefly puzzled."
+msgstr ""
+
+#: ../src/list-mon-message.h:61
+msgid "maintain[s] the same shape."
+msgstr ""
+
+#: ../src/list-mon-message.h:62
+msgid "[is|are] unharmed."
+msgstr ""
+
+#: ../src/list-mon-message.h:63
+msgid "appear[s]!"
+msgstr ""
+
+#: ../src/list-mon-message.h:64
+msgid "There is a puff of smoke!"
+msgstr ""

@@ -7,8 +7,9 @@
 #include <libintl.h>
 #include <locale.h>
 // NOTE[locale] temporary fix for gettext not handling empty msgstr
+#define GETTEXT_GLUE "\004"
 #define _(string) ({ const char *t = gettext(string); t && t[0] == '\003' && t[1] == '\0' ? "" : t; })
-#define _C(ctx, msgid) ({ const char *t = gettext(ctx "\004" msgid); strcmp(t, ctx "\004" msgid) == 0 ? msgid : t; })
+#define _C(ctx, msgid) ({ const char *t = gettext(ctx GETTEXT_GLUE msgid); strcmp(t, ctx "\004" msgid) == 0 ? msgid : t; })
 #define gettext_noop(string) string
 #define N_(string) gettext_noop(string)
 #define _GAMEDATA(string) dgettext("gamedata", string)
