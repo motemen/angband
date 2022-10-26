@@ -36,29 +36,37 @@ msgid ""
 msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 #: ../lib/gamedata/artifact.txt:108
+#, fuzzy
+msgctxt "artifact"
 msgid "of Galadriel"
 msgstr "ガラドリエルの"
 
 #: ../lib/gamedata/artifact.txt:123
+msgctxt "artifact"
 msgid ""
 "A small crystal phial containing the light of Eärendil's Star.  Its light is "
 "imperishable, and near it darkness cannot endure."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:124
+#, fuzzy
+msgctxt "artifact"
 msgid "of Elendil"
 msgstr "丈高きエレンディルの"
 
 #: ../lib/gamedata/artifact.txt:138
+msgctxt "artifact"
 msgid "The shining Star of the North, a treasured heirloom of Elendil's house."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:139
 #, fuzzy
+msgctxt "artifact"
 msgid "of Thráin"
 msgstr "トーリン王の"
 
 #: ../lib/gamedata/artifact.txt:155
+msgctxt "artifact"
 msgid ""
 "A great globe seemingly filled with moonlight, the famed Heart of the "
 "Mountain.  It splinters the light that falls upon it into ten thousand "
@@ -67,10 +75,12 @@ msgstr ""
 
 #: ../lib/gamedata/artifact.txt:180
 #, fuzzy
+msgctxt "artifact"
 msgid "'Angrist'"
 msgstr "『オルクリスト』"
 
 #: ../lib/gamedata/artifact.txt:197
+msgctxt "artifact"
 msgid ""
 "Forged by Telchar, greatest of Dwarven smiths, and used by Beren to gouge a "
 "Silmaril out of Morgoth's crown, this long chopping dagger slices through "
@@ -78,34 +88,47 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:198
+#, fuzzy
+msgctxt "artifact"
 msgid "'Narthanc'"
 msgstr "『ナルサンク』"
 
 #: ../lib/gamedata/artifact.txt:211
+msgctxt "artifact"
 msgid "Instead of a blade, a flame seems to emerge from this dagger's hilt."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:212
+#, fuzzy
+msgctxt "artifact"
 msgid "'Nimthanc'"
 msgstr "『ニムサンク』"
 
 #: ../lib/gamedata/artifact.txt:225
+msgctxt "artifact"
 msgid "From the hilt of this dagger springs not so much a blade as an icicle."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:226
+#, fuzzy
+msgctxt "artifact"
 msgid "'Dethanc'"
 msgstr "『デサンク』"
 
 #: ../lib/gamedata/artifact.txt:239
+msgctxt "artifact"
 msgid "In this dagger is bound the very force of lightning."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:240
+#, fuzzy
+msgctxt "artifact"
 msgid "of Rilia"
 msgstr "リリアの"
 
 #: ../lib/gamedata/artifact.txt:256
+#, fuzzy
+msgctxt "artifact"
 msgid ""
 "A large stiletto dagger that glistens with odorless poison, to which the "
 "wearer seems oddly immune."
@@ -115,20 +138,25 @@ msgstr ""
 
 #: ../lib/gamedata/artifact.txt:257
 #, fuzzy
+msgctxt "artifact"
 msgid "'Belangil'"
 msgstr "『リンギル』"
 
 #: ../lib/gamedata/artifact.txt:272
+msgctxt "artifact"
 msgid ""
 "A frosty dagger wreathed in a nimbus of ice with a hilt of elk horn and an "
 "edge to wound the wind."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:273
+#, fuzzy
+msgctxt "artifact"
 msgid "of Azaghâl"
 msgstr "ドワーフ王アザガルの"
 
 #: ../lib/gamedata/artifact.txt:289
+msgctxt "artifact"
 msgid ""
 "Azaghâl, Dwarf-king of Belegost, fell before Glaurung in the Battle of "
 "Unnumbered Tears.  With his final breath, Azaghâl plunged this blade into "
@@ -137,38 +165,50 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:290
+#, fuzzy
+msgctxt "artifact"
 msgid "of Maedhros"
 msgstr "丈高きマエズロスの"
 
 #: ../lib/gamedata/artifact.txt:305
+msgctxt "artifact"
 msgid ""
 "A short thrusting blade with a large guard worn by the eldest son of Fëanor, "
 "Maedhros the Tall, who lost his right hand while escaping from Angband."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:306
+#, fuzzy
+msgctxt "artifact"
 msgid "'Forasgil'"
 msgstr "『フォラスギル』"
 
 #: ../lib/gamedata/artifact.txt:318
+msgctxt "artifact"
 msgid "A slender, tapered needle of ice that coldly grips its impaled prey."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:319
+#, fuzzy
+msgctxt "artifact"
 msgid "'Careth Asdriag'"
 msgstr "『カレス・アスドリアグ』"
 
 #: ../lib/gamedata/artifact.txt:335
+msgctxt "artifact"
 msgid ""
 "An heirloom of the dauntless Lords of Rhûn far to the east, and a name of "
 "dismay to creatures natural and unnatural."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:336
+#, fuzzy
+msgctxt "artifact"
 msgid "'Sting'"
 msgstr "『つらぬき丸』"
 
 #: ../lib/gamedata/artifact.txt:354
+msgctxt "artifact"
 msgid ""
 "\"I will give you a name, and I shall call you Sting.\"  The perfect size "
 "for Bilbo, and stamped forever by the courage he found in Mirkwood, this "
@@ -177,20 +217,26 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:355
+msgctxt "artifact"
 msgid "'Dagmor'"
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:369
+msgctxt "artifact"
 msgid ""
 "A stubby blade worn by Beren, whose horn sounded of old in the glades of "
 "Brethil."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:370
+#, fuzzy
+msgctxt "artifact"
 msgid "'Gondricam'"
 msgstr "『ゴンドリカム』"
 
 #: ../lib/gamedata/artifact.txt:384
+#, fuzzy
+msgctxt "artifact"
 msgid ""
 "Famed sea-defender of Lebennin.  A short, slightly curved chopping blade "
 "with a perfect edge shining cleanly in the sun, an object of hate to the men "
@@ -200,20 +246,25 @@ msgstr ""
 "悪の的であった。"
 
 #: ../lib/gamedata/artifact.txt:385
+msgctxt "artifact"
 msgid "'Haradekket'"
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:400
+msgctxt "artifact"
 msgid ""
 "A damascened scimitar that hefts with wondrous ease.  Famed in song as the "
 "\"Sickle of Harad\", and a deadly foe to the undead."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:401
+#, fuzzy
+msgctxt "artifact"
 msgid "'Ringil'"
 msgstr "『リンギル』"
 
 #: ../lib/gamedata/artifact.txt:422
+msgctxt "artifact"
 msgid ""
 "The weapon of Fingolfin, High King of the Noldor; it shines like a column of "
 "ice lit by light unquenchable.  Morgoth came but unwillingly to meet it of "
@@ -221,10 +272,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:423
+#, fuzzy
+msgctxt "artifact"
 msgid "'Andúril'"
 msgstr "『アンドゥリル』"
 
 #: ../lib/gamedata/artifact.txt:443
+msgctxt "artifact"
 msgid ""
 "The famed \"Flame of the West\", the Sword that was Broken and is forged "
 "again.  It glows with the essence of fire, its wearer is mighty in combat, "
@@ -232,10 +286,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:444
+#, fuzzy
+msgctxt "artifact"
 msgid "'Anguirel'"
-msgstr ""
+msgstr "『オルクリスト』"
 
 #: ../lib/gamedata/artifact.txt:461
+msgctxt "artifact"
 msgid ""
 "This black blade was forged of meteoric iron by Eöl the Dark Elf.  It is "
 "imbued with the malice of its maker; as dangerous to its wielder as it is "
@@ -244,20 +301,25 @@ msgstr ""
 
 #: ../lib/gamedata/artifact.txt:462
 #, fuzzy
+msgctxt "artifact"
 msgid "'Elvagil'"
 msgstr "『ナル=イ=バギル』"
 
 #: ../lib/gamedata/artifact.txt:476
+msgctxt "artifact"
 msgid ""
 "The \"Singing Blade\", whose wearer can slay Orcs and Trolls in the hidden "
 "and secret places of the earth."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:477
+#, fuzzy
+msgctxt "artifact"
 msgid "'Aranrúth'"
 msgstr "『アランルース』"
 
 #: ../lib/gamedata/artifact.txt:494
+msgctxt "artifact"
 msgid ""
 "The beautiful sword of Thingol, justly named \"King's Ire\".  It glistens "
 "icy enough to freeze the hearts of demons, and you feel supple and "
@@ -265,20 +327,25 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:495
+#, fuzzy
+msgctxt "artifact"
 msgid "'Glamdring'"
 msgstr "『グラムドリング』"
 
 #: ../lib/gamedata/artifact.txt:511
+msgctxt "artifact"
 msgid ""
 "This fiery, shining blade, mate to Orcrist, earned its sobriquet \"Beater\" "
 "from dying orcs who dared to behold hidden Gondolin."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:512
+msgctxt "artifact"
 msgid "'Aeglin'"
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:529
+msgctxt "artifact"
 msgid ""
 "Companion to Orcrist and Glamdring, and like them long lost, this sword is "
 "continually covered in tiny arcs of captive lightning that flash and dance "
@@ -286,30 +353,39 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:530
+#, fuzzy
+msgctxt "artifact"
 msgid "'Orcrist'"
 msgstr "『オルクリスト』"
 
 #: ../lib/gamedata/artifact.txt:546
+msgctxt "artifact"
 msgid ""
 "This coldly gleaming blade, mate to Glamdring, is called simply \"Biter\" by "
 "orcs who came to know its power all too well."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:547
+#, fuzzy
+msgctxt "artifact"
 msgid "'Calris'"
 msgstr "『カルリス』"
 
 #: ../lib/gamedata/artifact.txt:566
+msgctxt "artifact"
 msgid ""
 "This sword has runes of power incused on its ornate hilt, and a single blood "
 "channel that gleams coldly blue as you grasp this mighty weapon of peril."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:567
+#, fuzzy
+msgctxt "artifact"
 msgid "of Éowyn"
 msgstr "エオウィン姫の"
 
 #: ../lib/gamedata/artifact.txt:584
+msgctxt "artifact"
 msgid ""
 "The blade of the legendary Shieldmaiden of Rohan, who slew the foul steed of "
 "the Morgul-lord before striking down the mighty Witch-king himself, whom no "
@@ -317,10 +393,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:585
+#, fuzzy
+msgctxt "artifact"
 msgid "'Aglarang'"
 msgstr "『アグララング』"
 
 #: ../lib/gamedata/artifact.txt:598
+msgctxt "artifact"
 msgid ""
 "An utterly perfect, cleanly chiseled sword, with an edge that effortlessly "
 "slices rock and bone, and spells to render the wearer lithe and nimble.  It "
@@ -328,20 +407,26 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:599
+#, fuzzy
+msgctxt "artifact"
 msgid "'Gurthang'"
 msgstr "『グアサング』"
 
 #: ../lib/gamedata/artifact.txt:615
+msgctxt "artifact"
 msgid ""
 "A giant sword once wielded by mighty Túrin, and an even greater dragonbane; "
 "for what worm could stand against the blade that bathed in Glaurung's blood?"
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:616
+#, fuzzy
+msgctxt "artifact"
 msgid "'Zarcuthra'"
 msgstr "『ザルクスラ』"
 
 #: ../lib/gamedata/artifact.txt:639
+msgctxt "artifact"
 msgid ""
 "Runes dark and deadly stand stark against the naked steel of this awesome "
 "weapon, and you feel a wrathful power of slaying and rending as you slowly "
@@ -350,10 +435,12 @@ msgstr ""
 
 #: ../lib/gamedata/artifact.txt:640
 #, fuzzy
+msgctxt "artifact"
 msgid "'Mormegil'"
 msgstr "『フォラスギル』"
 
 #: ../lib/gamedata/artifact.txt:657
+msgctxt "artifact"
 msgid ""
 "A foul, twisted sword with blackened spines and knobs, its very name is a "
 "curse upon the lips of Elves and Men.  It is said that it will drink the "
@@ -361,10 +448,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:658
+#, fuzzy
+msgctxt "artifact"
 msgid "'Crisdurian'"
 msgstr "『クリスドゥリアン』"
 
 #: ../lib/gamedata/artifact.txt:676
+msgctxt "artifact"
 msgid ""
 "A giant's weapon, with a long blade tall and straight thrusting out from a "
 "massive double-pronged hilt.  On its blade are written doomspells against "
@@ -372,10 +462,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:677
+#, fuzzy
+msgctxt "artifact"
 msgid "'Doomcaller'"
 msgstr "『災いを招く者』"
 
 #: ../lib/gamedata/artifact.txt:697
+msgctxt "artifact"
 msgid ""
 "This weapon of wrath, wrought by a desperate berserker gang, dives hungrily "
 "into the yielding flesh of your enemies.  You yourself fall under the shadow "
@@ -383,60 +476,78 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:701
+#, fuzzy
+msgctxt "artifact"
 msgid "of Gothmog"
 msgstr "バルログの長ゴスモグの"
 
 #: ../lib/gamedata/artifact.txt:722
+msgctxt "artifact"
 msgid ""
 "A great crackling Balrog's whip of flame, this weapon could bring even "
 "Ungoliant to heel."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:723
+#, fuzzy
+msgctxt "artifact"
 msgid "of Fundin Bluecloak"
 msgstr "青き衣のフンディンの"
 
 #: ../lib/gamedata/artifact.txt:739
+msgctxt "artifact"
 msgid ""
 "The weapon of a mighty dwarven priest, whose shade is rumoured to haunt the "
 "halls of Angband still."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:740
+#, fuzzy
+msgctxt "artifact"
 msgid "'Bloodspike'"
 msgstr "『血流の刺』"
 
 #: ../lib/gamedata/artifact.txt:756
+msgctxt "artifact"
 msgid ""
 "You feel strong and firm of foot as you whip its spiked orb around and bathe "
 "it in the blood of your foes."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:757
+#, fuzzy
+msgctxt "artifact"
 msgid "'Firestar'"
 msgstr "『焔の星』"
 
 #: ../lib/gamedata/artifact.txt:771
+msgctxt "artifact"
 msgid ""
 "A famed battle-lord of old with a head as ruddy as embers that can yet rise "
 "up in wrath."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:772
+#, fuzzy
+msgctxt "artifact"
 msgid "'Totila'"
 msgstr "『トティラ』"
 
 #: ../lib/gamedata/artifact.txt:788
+msgctxt "artifact"
 msgid ""
 "A flail whose head befuddles those who stare as you whirl it round and "
 "becomes a fiery comet as you bring it down."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:789
+#, fuzzy
+msgctxt "artifact"
 msgid "'Thunderfist'"
 msgstr "『稲妻の拳』"
 
 #: ../lib/gamedata/artifact.txt:807
+msgctxt "artifact"
 msgid ""
 "The long-lost weapon of Kzurin, Dwarven champion of ancient Belegost Runes "
 "of strength adorn its handle, and flames and sparks roar and crackle around "
@@ -444,10 +555,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:808
+#, fuzzy
+msgctxt "artifact"
 msgid "'Taratol'"
 msgstr "『タラトル』"
 
 #: ../lib/gamedata/artifact.txt:824
+msgctxt "artifact"
 msgid ""
 "A great ridged mace that surrounds you with a nimbus of living lightning.  "
 "You remain utterly untouched, even as fat sparks crackle around your fingers "
@@ -455,30 +569,38 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:825
+#, fuzzy
+msgctxt "artifact"
 msgid "'Nar-i-vagil'"
 msgstr "『ナル=イ=バギル』"
 
 #: ../lib/gamedata/artifact.txt:838
+msgctxt "artifact"
 msgid ""
 "Named for a fiery star and set with priceless gems bearing mystic auras of "
 "protection and thought."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:839
+#, fuzzy
+msgctxt "artifact"
 msgid "'Eriril'"
 msgstr "『エリリル』"
 
 #: ../lib/gamedata/artifact.txt:854
+msgctxt "artifact"
 msgid ""
 "The radiant golden staff of an Istar of legend, this wizard's companion "
 "grants keen sight and clear knowledge of many hidden things."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:855
+msgctxt "artifact"
 msgid "of Olórin"
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:876
+msgctxt "artifact"
 msgid ""
 "A staff tall and sturdy, borne of old by Gandalf.  Rough-hewn runes that "
 "invoke the element of Earth stand bold upon its gnarled surface, and no "
@@ -487,10 +609,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:877
+#, fuzzy
+msgctxt "artifact"
 msgid "of Aulë"
 msgstr "鍛冶の司アウレの"
 
 #: ../lib/gamedata/artifact.txt:897
+msgctxt "artifact"
 msgid ""
 "The wondrous hammer of Aulë, creator of the wise Dwarven lords of old.  It "
 "bears demolishing magics that no serpent or demon can withstand, and invokes "
@@ -498,10 +623,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:898
+#, fuzzy
+msgctxt "artifact"
 msgid "'Deathwreaker'"
 msgstr "『死の復讐者』"
 
 #: ../lib/gamedata/artifact.txt:920
+msgctxt "artifact"
 msgid ""
 "A weapon so massive it seems beyond the strength of mortals, yet you feel "
 "the might of giants within you as you heft it.  As you grip the handle of "
@@ -511,20 +639,24 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:924
+msgctxt "artifact"
 msgid "'Aiglos'"
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:943
+msgctxt "artifact"
 msgid ""
 "The mighty spear of Gil-galad, famed as \"Snow-point\" in the songs of "
 "Elves.  Against it, all the foul corruptions of Sauron dashed in vain."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:944
+msgctxt "artifact"
 msgid "of Oromë"
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:962
+msgctxt "artifact"
 msgid ""
 "The thrusting spear of wise Oromë the Vala, strong against giants of frost, "
 "and able to pierce rock or flesh with ease."
@@ -532,10 +664,12 @@ msgstr ""
 
 #: ../lib/gamedata/artifact.txt:963
 #, fuzzy
+msgctxt "artifact"
 msgid "'Nimloth'"
 msgstr "『ニムサンク』"
 
 #: ../lib/gamedata/artifact.txt:979
+msgctxt "artifact"
 msgid ""
 "A thin spike of thrice-forged steel caps a straight silvan shaft cut from a "
 "legendary tree, and spells to break the wills of the undead and strike cold "
@@ -544,10 +678,12 @@ msgstr ""
 
 #: ../lib/gamedata/artifact.txt:980
 #, fuzzy
+msgctxt "artifact"
 msgid "of Melkor"
 msgstr "丈高きマエズロスの"
 
 #: ../lib/gamedata/artifact.txt:995
+msgctxt "artifact"
 msgid ""
 "A mighty, heavy black spear, once wielded by the Lord of Darkness himself as "
 "he came to Valinor in wrath.  Its envenomed bite pierced the Two Trees with "
@@ -555,10 +691,14 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:996
+#, fuzzy
+msgctxt "artifact"
 msgid "of Wrath"
 msgstr "憤怒の"
 
 #: ../lib/gamedata/artifact.txt:1012
+#, fuzzy
+msgctxt "artifact"
 msgid ""
 "A massive triple-pronged spear, so great it normally requires two hands to "
 "wield, evoking the spirit of Osse who with it pierced legions of evil and "
@@ -568,10 +708,13 @@ msgstr ""
 "を刺し貫いたオスセの霊力を宿している。"
 
 #: ../lib/gamedata/artifact.txt:1013
+#, fuzzy
+msgctxt "artifact"
 msgid "of Ulmo"
 msgstr "水の王ウルモの"
 
 #: ../lib/gamedata/artifact.txt:1030
+msgctxt "artifact"
 msgid ""
 "The awesome weapon of the Vala Ulmo, Lord of Waters.  Mightiest of all the "
 "powers of good save Manwë himself, Ulmo laughs to scorn the dread powers of "
@@ -579,10 +722,14 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1031
+#, fuzzy
+msgctxt "artifact"
 msgid "'Osondir'"
 msgstr "『オソンディア』"
 
 #: ../lib/gamedata/artifact.txt:1046
+#, fuzzy
+msgctxt "artifact"
 msgid ""
 "Lordly and tall did Osondir stand against the wrath of giants, and clear-"
 "eyed in barrows fell, wielding a halberd glowing ruby red."
@@ -591,30 +738,39 @@ msgstr ""
 "ルビー色に輝き、塚山の中でも視力を妨げない。"
 
 #: ../lib/gamedata/artifact.txt:1047
+#, fuzzy
+msgctxt "artifact"
 msgid "'Til-i-arc'"
 msgstr "『ティル=イ=アルク』"
 
 #: ../lib/gamedata/artifact.txt:1064
+msgctxt "artifact"
 msgid ""
 "Within this long two-handed spear dwell the spirits of frost giants and fire "
 "demons, who war forever, fettered by sorcerous binds."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1065
+#, fuzzy
+msgctxt "artifact"
 msgid "of Théoden"
 msgstr "更正せるセオデン王の"
 
 #: ../lib/gamedata/artifact.txt:1080
+msgctxt "artifact"
 msgid ""
 "The narrow axe head of this weapon would pierce the armour of a very Dragon, "
 "and the designs of your enemies stand naked and revealed."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1081
+#, fuzzy
+msgctxt "artifact"
 msgid "of Húrin"
 msgstr "フーリン王の"
 
 #: ../lib/gamedata/artifact.txt:1103
+msgctxt "artifact"
 msgid ""
 "Wielded by Húrin Thalion, last lord of Dor-Lómin at the Battle of Tears "
 "Unnumbered.  He stood alone, his friends and kinsmen dead about him, his axe "
@@ -624,40 +780,51 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1104
+#, fuzzy
+msgctxt "artifact"
 msgid "'Barukkheled'"
 msgstr "『バルクケレド』"
 
 #: ../lib/gamedata/artifact.txt:1120
+msgctxt "artifact"
 msgid ""
 "A royal heirloom of the southern coast, strong in combat against the evil "
 "creatures of earth."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1121
+#, fuzzy
+msgctxt "artifact"
 msgid "of Balli Stonehand"
 msgstr "石の手バリの"
 
 #: ../lib/gamedata/artifact.txt:1137
+msgctxt "artifact"
 msgid ""
 "The twin blades of this weapon were forged in Belegost, and powerful forces "
 "to resist and endure lie ready for its next owner."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1138
+#, fuzzy
+msgctxt "artifact"
 msgid "'Lotharang'"
 msgstr "『ロサラング』"
 
 #: ../lib/gamedata/artifact.txt:1153
+msgctxt "artifact"
 msgid ""
 "A superbly crafted double-bladed axe once borne by Ceruthain, commander of "
 "the Rangers of Arnor."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1154
+msgctxt "artifact"
 msgid "'Mundwine'"
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1169
+msgctxt "artifact"
 msgid ""
 "A massive axe with twin razor-sharp heads, so large that it usually requires "
 "two hands to wield, with spells to ward off the elements intricately "
@@ -665,10 +832,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1170
+#, fuzzy
+msgctxt "artifact"
 msgid "of Durin"
 msgstr "不死ドゥリンの"
 
 #: ../lib/gamedata/artifact.txt:1190
+msgctxt "artifact"
 msgid ""
 "The twin massive axe heads of this ancient demon's dread gleam with mithril "
 "inlay telling sagas of endurance.  The powers of Khazad-dûm protect its "
@@ -676,10 +846,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1191
+#, fuzzy
+msgctxt "artifact"
 msgid "of Eönwë"
 msgstr "旗手エオンウェの"
 
 #: ../lib/gamedata/artifact.txt:1211
+msgctxt "artifact"
 msgid ""
 "The axe of Eönwë, leader of the Hosts of the West in the War of Wrath, "
 "strikes with icy wrath at the undead, disperses hosts of evil at a word, and "
@@ -687,10 +860,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1212
+#, fuzzy
+msgctxt "artifact"
 msgid "'Avavir'"
 msgstr "『アヴァビア』"
 
 #: ../lib/gamedata/artifact.txt:1229
+msgctxt "artifact"
 msgid ""
 "Holding elemental powers whose struggles turn this weapon red and purest "
 "white, this shining reaper bears within it a power of going forth and "
@@ -698,10 +874,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1230
+#, fuzzy
+msgctxt "artifact"
 msgid "of Pain"
 msgstr "苦痛の"
 
 #: ../lib/gamedata/artifact.txt:1241
+msgctxt "artifact"
 msgid ""
 "The massive cleaver that crowns this glaive glows blood-red and black; fell "
 "spells of annihilation swirl and dance as you swing death's myrmidon down."
@@ -709,10 +888,12 @@ msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1242
 #, fuzzy
+msgctxt "artifact"
 msgid "of the Eorlingas"
 msgstr "ロヒアリムの"
 
 #: ../lib/gamedata/artifact.txt:1258
+msgctxt "artifact"
 msgid ""
 "\"Forth Eorlingas!\"  To the field of Celebrant, Eorl the Young came beyond "
 "hope to save beleaguered Gondor, and from his lance fled massive trolls and "
@@ -720,10 +901,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1259
+#, fuzzy
+msgctxt "artifact"
 msgid "'Turmil'"
 msgstr "『トゥアミル』"
 
 #: ../lib/gamedata/artifact.txt:1276
+msgctxt "artifact"
 msgid ""
 "Once wielded by the High Priest of Meneltarma, this great mace gleams coldly "
 "as though moonlit, and can strike equally mighty spiritual and physical "
@@ -732,24 +916,31 @@ msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1280
 #, fuzzy
+msgctxt "artifact"
 msgid "of Amrod"
 msgstr "アルヴェドゥイ王の"
 
 #: ../lib/gamedata/artifact.txt:1292
+msgctxt "artifact"
 msgid ""
 "One of a pair of hunting bows once belonging to Fëanor's two youngest sons.  "
 "The bows are like and yet unlike, much as the twin brothers were."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1293
+#, fuzzy
+msgctxt "artifact"
 msgid "of Amras"
-msgstr ""
+msgstr "アルヴェドゥイ王の"
 
 #: ../lib/gamedata/artifact.txt:1307
+#, fuzzy
+msgctxt "artifact"
 msgid "'Belthronding'"
 msgstr "『ベルスロンディング』"
 
 #: ../lib/gamedata/artifact.txt:1319
+msgctxt "artifact"
 msgid ""
 "The great bow of Beleg Cúthalion, the most famous archer of the Elves.  Its "
 "backbone of black yew holds strings of bear sinew, and of old, only Beleg "
@@ -757,10 +948,14 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1320
+#, fuzzy
+msgctxt "artifact"
 msgid "of Bard"
 msgstr "射手バルド王の黒い"
 
 #: ../lib/gamedata/artifact.txt:1332
+#, fuzzy
+msgctxt "artifact"
 msgid ""
 "The great yew bow of grim-faced Bard, who shot the mightiest arrow that "
 "songs record."
@@ -769,10 +964,12 @@ msgstr ""
 "抜いた矢は歌に唄われ語り継がれている。"
 
 #: ../lib/gamedata/artifact.txt:1333
+msgctxt "artifact"
 msgid "'Cubragol'"
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1345
+msgctxt "artifact"
 msgid ""
 "A crossbow that grants fiery speed to its finder, and imbues its bolts with "
 "flame unquenchable."
@@ -780,30 +977,38 @@ msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1346
 #, fuzzy
+msgctxt "artifact"
 msgid "of Umbar"
 msgstr "水の王ウルモの"
 
 #: ../lib/gamedata/artifact.txt:1360
+msgctxt "artifact"
 msgid ""
 "A great brazen arbalest with arms of gleaming steel.  It shoots quarrels "
 "with mighty power for those brave enough to risk betrayal."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1364
+#, fuzzy
+msgctxt "artifact"
 msgid "of Erebor"
-msgstr ""
+msgstr "金髪のケレゴルムの"
 
 #: ../lib/gamedata/artifact.txt:1381
+msgctxt "artifact"
 msgid ""
 "A fine dwarven pick, good for a miner, and suitable as a weapon should the "
 "wielder ever tunnel through into a foe's stronghold."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1382
+#, fuzzy
+msgctxt "artifact"
 msgid "of Náin"
 msgstr "ナインの"
 
 #: ../lib/gamedata/artifact.txt:1401
+msgctxt "artifact"
 msgid ""
 "A mighty Dwarven mattock, as good for hewing orc-necks as for hewing stone.  "
 "Náin, King of the Iron Hills, brought his mattock-wielding warriors to the "
@@ -812,10 +1017,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1405
+#, fuzzy
+msgctxt "artifact"
 msgid "of Fëanor"
 msgstr "フェアノール王の"
 
 #: ../lib/gamedata/artifact.txt:1421
+msgctxt "artifact"
 msgid ""
 "This wondrous pair of leather boots once sped Fëanor, creator of the "
 "Silmarils and the mightiest of the Eldar, to fulfill his hero's challenge "
@@ -825,20 +1033,24 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1422
+msgctxt "artifact"
 msgid "'Dal-i-thalion'"
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1437
+msgctxt "artifact"
 msgid ""
 "A pair of high-laced shoes, bestowing extraordinary agility and proof "
 "against the powers of corruption and withering."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1438
+msgctxt "artifact"
 msgid "of Wormtongue"
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1453
+msgctxt "artifact"
 msgid ""
 "A pair of running shoes once used by the treacherous Gríma son of Gálmód, "
 "the Wormtongue of Edoras.  They are aptly suited for a messenger, a servant, "
@@ -846,30 +1058,37 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1454
+msgctxt "artifact"
 msgid "of Radagast"
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1466
+msgctxt "artifact"
 msgid ""
 "Made of brown leather, covered with scuff marks and dust, still these boots "
 "possess the magic of Radagast, friend of birds and nature."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1467
+#, fuzzy
+msgctxt "artifact"
 msgid "of Thrór"
 msgstr "スロール王の"
 
 #: ../lib/gamedata/artifact.txt:1479
+msgctxt "artifact"
 msgid ""
 "Sturdy footwear of leather and steel as enduring as the long-suffering "
 "Dwarven king-in-exile who wore them."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1480
+msgctxt "artifact"
 msgid "'Stormwalker'"
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1497
+msgctxt "artifact"
 msgid ""
 "And they hewed off Gelmir's hands and feet, and his head last, within sight "
 "of the Elves, and left him.  By ill chance there stood Gwindor of "
@@ -879,10 +1098,14 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1501
+#, fuzzy
+msgctxt "artifact"
 msgid "of Thranduil"
 msgstr "スランドゥイル王の"
 
 #: ../lib/gamedata/artifact.txt:1513
+#, fuzzy
+msgctxt "artifact"
 msgid ""
 "The hunting cap of King Thranduil, to whose ears come all the secrets of his "
 "forest domain."
@@ -891,10 +1114,13 @@ msgstr ""
 "帽だ。"
 
 #: ../lib/gamedata/artifact.txt:1514
+#, fuzzy
+msgctxt "artifact"
 msgid "of Thengel"
 msgstr "センゲル王の"
 
 #: ../lib/gamedata/artifact.txt:1526
+msgctxt "artifact"
 msgid ""
 "A ridged helmet made of steel and embossed with scenes of valor in fine-"
 "engraved silver.  It grants the wearer nobility and understanding."
@@ -902,10 +1128,12 @@ msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1527
 #, fuzzy
+msgctxt "artifact"
 msgid "of Celebrimbor"
 msgstr "金髪のケレゴルムの"
 
 #: ../lib/gamedata/artifact.txt:1540
+msgctxt "artifact"
 msgid ""
 "A metal cap forged by the greatest Noldorin smith of the Second Age, this "
 "helm serves equally well in battle or at the forge, and its enchantment will "
@@ -913,10 +1141,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1541
+#, fuzzy
+msgctxt "artifact"
 msgid "of Dor-Lómin"
 msgstr "ドル=ローミンの"
 
 #: ../lib/gamedata/artifact.txt:1557
+msgctxt "artifact"
 msgid ""
 "The legendary Dragon-helm, forged by one of the legendary Dwarven smiths of "
 "the First Age.  The visage of mighty Glaurung forms its crest, and the mere "
@@ -925,10 +1156,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1558
+#, fuzzy
+msgctxt "artifact"
 msgid "'Holhenneth'"
 msgstr "『ホルヘンネス』"
 
 #: ../lib/gamedata/artifact.txt:1572
+msgctxt "artifact"
 msgid ""
 "A famous forged iron helm granting extraordinary powers of mind and "
 "awareness."
@@ -936,20 +1170,25 @@ msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1573
 #, fuzzy
+msgctxt "artifact"
 msgid "of Gorlim"
 msgstr "バルログの長ゴスモグの"
 
 #: ../lib/gamedata/artifact.txt:1586
+msgctxt "artifact"
 msgid ""
 "A headpiece, gaudy and barbaric, that betrayed a warrior when he most needed "
 "succor."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1587
+#, fuzzy
+msgctxt "artifact"
 msgid "of Hammerhand"
 msgstr "槌手王の"
 
 #: ../lib/gamedata/artifact.txt:1602
+msgctxt "artifact"
 msgid ""
 "A great helm, as steady and as distinctive as the hero of the Westdike.  "
 "Many long months was Helm Hammerhand besieged in the Hornburg, yet he strode "
@@ -958,10 +1197,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1603
+#, fuzzy
+msgctxt "artifact"
 msgid "of Berúthiel"
 msgstr "ベルシエル王妃の"
 
 #: ../lib/gamedata/artifact.txt:1616
+msgctxt "artifact"
 msgid ""
 "The midnight-hued steel circlet of the sorceress-queen Berúthiel.  It grants "
 "extraordinary powers of sight and awareness at a terrible physical cost."
@@ -969,60 +1211,77 @@ msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1617
 #, fuzzy
+msgctxt "artifact"
 msgid "of Gondor"
 msgstr "バルログの長ゴスモグの"
 
 #: ../lib/gamedata/artifact.txt:1633
+msgctxt "artifact"
 msgid ""
 "From dying Númenor, Elendil brought this shining winged circlet, emblem of "
 "Gondor through an age of the world."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1634
+#, fuzzy
+msgctxt "artifact"
 msgid "of Númenor"
 msgstr "ヌメノールの"
 
 #: ../lib/gamedata/artifact.txt:1649
+msgctxt "artifact"
 msgid ""
 "A massive golden crown, set with wondrous jewels of thought and warding, "
 "once worn by the kings of ancient Númenor."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1653
+#, fuzzy
+msgctxt "artifact"
 msgid "'Hithlomir'"
 msgstr "『ヒスロミア』"
 
 #: ../lib/gamedata/artifact.txt:1665
+msgctxt "artifact"
 msgid ""
 "Familiar with the secret ways hidden in darkness, this leather cuirass is "
 "truly more than it appears."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1666
+#, fuzzy
+msgctxt "artifact"
 msgid "of Himring"
 msgstr "ヒムリングの"
 
 #: ../lib/gamedata/artifact.txt:1680
+msgctxt "artifact"
 msgid ""
 "In this studded cuirass of pliable leather lives the memory of unvanquished "
 "Himring, defiant fortress surrounded by the legions of Morgoth."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1681
+#, fuzzy
+msgctxt "artifact"
 msgid "'Thalkettoth'"
 msgstr "『サルケットス』"
 
 #: ../lib/gamedata/artifact.txt:1693
+msgctxt "artifact"
 msgid ""
 "An amazingly light tunic and skirt sewn with thick, overlapping scales of "
 "hardened leather.  Those who wear it move with agility and assurance."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1697
+#, fuzzy
+msgctxt "artifact"
 msgid "of Arvedui"
 msgstr "アルヴェドゥイ王の"
 
 #: ../lib/gamedata/artifact.txt:1710
+msgctxt "artifact"
 msgid ""
 "A hauberk, leggings, and sleeves of interlocking steel rings, well padded "
 "with leather.  You feel as strong and tall as Arvedui, last king of Arnor, "
@@ -1030,10 +1289,14 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1711
+#, fuzzy
+msgctxt "artifact"
 msgid "of Caspanion"
 msgstr "カスパニオンの"
 
 #: ../lib/gamedata/artifact.txt:1727
+#, fuzzy
+msgctxt "artifact"
 msgid ""
 "A hauberk, leggings, and sleeves of interlocking steel rings, strategically "
 "reinforced at vital locations with a second layer of chain.  Magics to "
@@ -1043,10 +1306,13 @@ msgstr ""
 "法がかかっており、いかなる障害も着用者の道を妨げることは出来ない。"
 
 #: ../lib/gamedata/artifact.txt:1728
+#, fuzzy
+msgctxt "artifact"
 msgid "of the Rohirrim"
 msgstr "ロヒアリムの"
 
 #: ../lib/gamedata/artifact.txt:1742
+msgctxt "artifact"
 msgid ""
 "Small steel plates cover an inner layer of sturdy canvas, and both metal and "
 "cloth bear scenes of hunting and war.  As you don the armour of Eorl the "
@@ -1054,10 +1320,14 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1743
+#, fuzzy
+msgctxt "artifact"
 msgid "of Isildur"
 msgstr "イシルドゥアの"
 
 #: ../lib/gamedata/artifact.txt:1756
+#, fuzzy
+msgctxt "artifact"
 msgid ""
 "A gleaming steel suit covering the wearer from neck to foot, with runes of "
 "warding and stability deeply engraved into its surface."
@@ -1068,10 +1338,12 @@ msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1757
 #, fuzzy
+msgctxt "artifact"
 msgid "'Belegennon'"
 msgstr "『コランノン』"
 
 #: ../lib/gamedata/artifact.txt:1774
+msgctxt "artifact"
 msgid ""
 "This wondrous shirt of fine-linked chain shimmers before your eyes like "
 "light upon a rippling sea, the gems on it glittering like stars, the sound "
@@ -1082,10 +1354,12 @@ msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1775
 #, fuzzy
+msgctxt "artifact"
 msgid "of Celeborn"
 msgstr "金髪のケレゴルムの"
 
 #: ../lib/gamedata/artifact.txt:1790
+msgctxt "artifact"
 msgid ""
 "A shimmering suit of true-silver, forged long ago by dwarven smiths of "
 "legend.  It gleams with purest white as you gaze upon it, and mighty are its "
@@ -1093,10 +1367,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1791
+#, fuzzy
+msgctxt "artifact"
 msgid "'Soulkeeper'"
 msgstr "『魂の守り手』"
 
 #: ../lib/gamedata/artifact.txt:1807
+msgctxt "artifact"
 msgid ""
 "A suit of imperishable adamant with unconquerable strength to endure evil "
 "and disruptive magics.  It protects the life force of its wearer as nothing "
@@ -1104,20 +1381,27 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1811
+#, fuzzy
+msgctxt "artifact"
 msgid "'Colluin'"
 msgstr "『コルイン』"
 
 #: ../lib/gamedata/artifact.txt:1824
+#, fuzzy
+msgctxt "artifact"
 msgid ""
 "A cape worn by a hero from Valinor, a land utterly beyond the strife of "
 "Elements."
 msgstr "精霊達が争う渦中の地ヴァリノールの英雄が身に付けていたマントだ。"
 
 #: ../lib/gamedata/artifact.txt:1825
+#, fuzzy
+msgctxt "artifact"
 msgid "'Holcolleth'"
 msgstr "『ホルコルレス』"
 
 #: ../lib/gamedata/artifact.txt:1839
+msgctxt "artifact"
 msgid ""
 "This elven-grey mantle possesses great powers of tranquility and "
 "concealment, and grants the wearer the knowledge and understanding of the "
@@ -1125,20 +1409,26 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1840
+#, fuzzy
+msgctxt "artifact"
 msgid "of Thingol"
 msgstr "灰色マント王シンゴルの"
 
 #: ../lib/gamedata/artifact.txt:1854
+msgctxt "artifact"
 msgid ""
 "A translucent cloak of pearly grey with glowing, energized Elven runes "
 "showing calm and clear as moonlight on still water."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1855
+#, fuzzy
+msgctxt "artifact"
 msgid "of Thorongil"
 msgstr "大将ソロンギルの"
 
 #: ../lib/gamedata/artifact.txt:1868
+msgctxt "artifact"
 msgid ""
 "This shimmering cloak of greens and browns was once worn by the young "
 "Aragorn, a keen-eyed captain of Rohan and Gondor, valiant on both land and "
@@ -1146,20 +1436,26 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1869
+#, fuzzy
+msgctxt "artifact"
 msgid "'Colannon'"
 msgstr "『コランノン』"
 
 #: ../lib/gamedata/artifact.txt:1882
+msgctxt "artifact"
 msgid ""
 "A crystal-blue cape of fine silk worn by a silent messenger of the forces of "
 "Law.  Seldom will its wearer be diverted from his mission."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1883
+#, fuzzy
+msgctxt "artifact"
 msgid "of Lúthien"
 msgstr "ルシエン王女の"
 
 #: ../lib/gamedata/artifact.txt:1899
+msgctxt "artifact"
 msgid ""
 "The opaque midnight folds of this cloak, inlaid with a multitude of tiny "
 "diamonds, swirl around you, and you feel a hint, a fragment of the "
@@ -1167,10 +1463,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1900
+#, fuzzy
+msgctxt "artifact"
 msgid "of Tuor"
 msgstr "トゥオルの"
 
 #: ../lib/gamedata/artifact.txt:1913
+msgctxt "artifact"
 msgid ""
 "The great cloak given to Tuor by the Dweller in the Deep.  As you wrap "
 "yourself from head to foot the words of Ulmo echo: \"Thus thou shalt walk "
@@ -1178,64 +1477,85 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1917
+#, fuzzy
+msgctxt "artifact"
 msgid "'Cambeleg'"
 msgstr "『カンベレグ』"
 
 #: ../lib/gamedata/artifact.txt:1928
+#, fuzzy
+msgctxt "artifact"
 msgid "A hero's handgear that lends great prowess in battle."
 msgstr ""
 "「剛き掌」を意味する名を持つ、この英雄の手甲は、戦いにおける偉大なる武勇をも"
 "たらす。"
 
 #: ../lib/gamedata/artifact.txt:1929
+#, fuzzy
+msgctxt "artifact"
 msgid "'Cammithrim'"
 msgstr "『カンミスリム』"
 
 #: ../lib/gamedata/artifact.txt:1943
+msgctxt "artifact"
 msgid ""
 "These gloves glow so brightly as to light the way for the wearer and cast "
 "magical bolts with great frequency."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1944
+#, fuzzy
+msgctxt "artifact"
 msgid "'Paurhach'"
 msgstr "『パウアハッハ』"
 
 #: ../lib/gamedata/artifact.txt:1957
+msgctxt "artifact"
 msgid "A set of gauntlets that smoulder with an unnatural heat."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1958
+#, fuzzy
+msgctxt "artifact"
 msgid "'Paurnimmen'"
 msgstr "『パウアニンメン』"
 
 #: ../lib/gamedata/artifact.txt:1972
+msgctxt "artifact"
 msgid "A set of handgear, freezing with unnatural cold."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1973
+#, fuzzy
+msgctxt "artifact"
 msgid "'Pauraegen'"
 msgstr "『パウラエゲン』"
 
 #: ../lib/gamedata/artifact.txt:1985
+msgctxt "artifact"
 msgid "A set of handgear with sparks that crackle across its knuckleguards."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1986
+#, fuzzy
+msgctxt "artifact"
 msgid "'Paurnen'"
 msgstr "『パウアネン』"
 
 #: ../lib/gamedata/artifact.txt:2000
+msgctxt "artifact"
 msgid ""
 "A set of gauntlets that give off a foul, acrid odour yet remain untarnished."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2001
 #, fuzzy
+msgctxt "artifact"
 msgid "'Camlost'"
 msgstr "『カンベレグ』"
 
 #: ../lib/gamedata/artifact.txt:2013
+msgctxt "artifact"
 msgid ""
 "A pair of weakening gauntlets, named after Beren, who returned to Thingol "
 "having lost to Carcharoth the hand that clasped a Silmaril."
@@ -1243,40 +1563,52 @@ msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2014
 #, fuzzy
+msgctxt "artifact"
 msgid "of Eöl"
 msgstr "旗手エオンウェの"
 
 #: ../lib/gamedata/artifact.txt:2028
+msgctxt "artifact"
 msgid ""
 "The iron-shod gauntlets of the Dark Elven smith Eöl, who imbued them with "
 "magics he could channel in battle."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2029
+#, fuzzy
+msgctxt "artifact"
 msgid "of Fingolfin"
 msgstr "上級王フィンゴルフィンの"
 
 #: ../lib/gamedata/artifact.txt:2044
+msgctxt "artifact"
 msgid ""
 "The hand-sheathing of Fingolfin, the Elven warrior-king, who dealt Morgoth "
 "seven mighty wounds and pain that will last until the end of Arda."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2048
+#, fuzzy
+msgctxt "artifact"
 msgid "of Elros"
-msgstr ""
+msgstr "旗手エオンウェの"
 
 #: ../lib/gamedata/artifact.txt:2060
+msgctxt "artifact"
 msgid ""
 "The shield of Elros Tar-Minyatur, founder of Númenor.  Granted long life by "
 "the Valar, even his shield became imbued with power."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2061
+#, fuzzy
+msgctxt "artifact"
 msgid "of Thorin"
 msgstr "トーリン王の"
 
 #: ../lib/gamedata/artifact.txt:2073
+#, fuzzy
+msgctxt "artifact"
 msgid ""
 "Invoking the strength and endurance of Thorin, King under the Mountain, this "
 "little metal shield is proof against the Element of Earth."
@@ -1285,10 +1617,13 @@ msgstr ""
 "の盾は、地のエレメントに対する完全な防御を可能にする。"
 
 #: ../lib/gamedata/artifact.txt:2074
+#, fuzzy
+msgctxt "artifact"
 msgid "of Celegorm"
 msgstr "金髪のケレゴルムの"
 
 #: ../lib/gamedata/artifact.txt:2088
+msgctxt "artifact"
 msgid ""
 "This shield emblazoned with a multitude of creatures unseen for ages once "
 "protected Celegorm, Lord of Himlad; around it, a mystic balance lies, "
@@ -1297,10 +1632,12 @@ msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2089
 #, fuzzy
+msgctxt "artifact"
 msgid "of the Haradrim"
 msgstr "ロヒアリムの"
 
 #: ../lib/gamedata/artifact.txt:2104
+msgctxt "artifact"
 msgid ""
 "The painted shield of a chieftain of Far Harad, gaudy and barbaric.  Its "
 "wielder will fear nothing and fight with unnatural strength, but also draw "
@@ -1308,30 +1645,39 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2105
+#, fuzzy
+msgctxt "artifact"
 msgid "of Anárion"
 msgstr "アナリオンの"
 
 #: ../lib/gamedata/artifact.txt:2117
+msgctxt "artifact"
 msgid ""
 "The great metal-bound shield of Elendil's younger son Anárion, whom even "
 "Sauron could not corrupt."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2118
+#, fuzzy
+msgctxt "artifact"
 msgid "of Eärendil"
 msgstr "航海者エアレンディルの"
 
 #: ../lib/gamedata/artifact.txt:2133
+msgctxt "artifact"
 msgid ""
 "A shining shield wrought for Eärendil Half-Elven, son of Tuor and Idril, "
 "\"scored with runes to keep all wounds and harm from him\"."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2135
+#, fuzzy
+msgctxt "artifact"
 msgid "of Gil-galad"
 msgstr "上級王ギル=ガラドの"
 
 #: ../lib/gamedata/artifact.txt:2150
+msgctxt "artifact"
 msgid ""
 "The legendary shield of Ereinion Gil-galad, who fought his way to the gates "
 "of the Dark Tower, and with whom came light even to Gorgoroth."
@@ -1339,29 +1685,37 @@ msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2154
 #, fuzzy
+msgctxt "artifact"
 msgid "of Barahir"
 msgstr "射手バルド王の黒い"
 
 #: ../lib/gamedata/artifact.txt:2165
+msgctxt "artifact"
 msgid ""
 "Twinned serpents with eyes of emerald meet beneath a crown of flowers to "
 "form this ring, an ancient treasure of Isildur's house."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2166
+#, fuzzy
+msgctxt "artifact"
 msgid "of Tulkas"
 msgstr "勇猛なるトゥルカスの"
 
 #: ../lib/gamedata/artifact.txt:2178
+#, fuzzy
+msgctxt "artifact"
 msgid "The treasure of Tulkas, most fleet and wrathful of the Valar."
 msgstr "ヴァラールの中でも最も素早くかつ勇猛なトゥルカスの宝だ。"
 
 #: ../lib/gamedata/artifact.txt:2179
 #, fuzzy
+msgctxt "artifact"
 msgid "'Narya'"
 msgstr "『ナルサンク』"
 
 #: ../lib/gamedata/artifact.txt:2197
+msgctxt "artifact"
 msgid ""
 "The Ring of Fire, made of gold and set with a ruby that glows like flame.  "
 "Narya is one of the three Rings of Power created by Celebrimbor and hidden "
@@ -1369,10 +1723,12 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2198
+msgctxt "artifact"
 msgid "'Nenya'"
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2218
+msgctxt "artifact"
 msgid ""
 "The Ring of Adamant, made of mithril with a pure white stone as "
 "centerpiece.  Nenya is one of the three Rings of Power created by "
@@ -1380,10 +1736,12 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2219
+msgctxt "artifact"
 msgid "'Vilya'"
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2240
+msgctxt "artifact"
 msgid ""
 "The Ring of Sapphire, made of gold with a brilliant blue gem that shines "
 "like stars.  It glitters untouchable despite all that Morgoth ever wrought.  "
@@ -1392,10 +1750,12 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2241
+msgctxt "artifact"
 msgid "'The One Ring'"
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2263
+msgctxt "artifact"
 msgid ""
 "\"One Ring to rule them all, One Ring to find them, One Ring to bring them "
 "all and in the darkness bind them.\"  Made of massive gold, and inscribed "
@@ -1405,29 +1765,38 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2267
+#, fuzzy
+msgctxt "artifact"
 msgid "of Carlammas"
 msgstr "カルランマスの"
 
 #: ../lib/gamedata/artifact.txt:2278
+msgctxt "artifact"
 msgid ""
 "A fiery circle of bronze, with mighty spells to ward off and banish evil."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2279
+#, fuzzy
+msgctxt "artifact"
 msgid "of Ingwë"
 msgstr "上級王イングウェの"
 
 #: ../lib/gamedata/artifact.txt:2292
+msgctxt "artifact"
 msgid ""
 "The ancient heirloom of Ingwë, high lord of the Vanyar, against whom nothing "
 "of evil could stand."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2293
+#, fuzzy
+msgctxt "artifact"
 msgid "of the Dwarves"
 msgstr "ドワーフの"
 
 #: ../lib/gamedata/artifact.txt:2307
+msgctxt "artifact"
 msgid ""
 "The Nauglamír, a carcanet of gold set with a multitude of shining gems of "
 "Valinor.  The radiant Silmaril of Fëanor hangs in its midst as its crowning "
@@ -1437,10 +1806,12 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2308
+msgctxt "artifact"
 msgid "'Elessar'"
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2324
+msgctxt "artifact"
 msgid ""
 "A green stone, imbued with the power of Elvendom and the light of the Sun.  "
 "Those who gaze through it see the aged and infirm as young again, and its "
@@ -1449,20 +1820,26 @@ msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2325
 #, fuzzy
+msgctxt "artifact"
 msgid "'Evenstar'"
 msgstr "『焔の星』"
 
 #: ../lib/gamedata/artifact.txt:2338
+msgctxt "artifact"
 msgid ""
 "A plain white jewel, given by Queen Arwen to Frodo Baggins before his return "
 "to the Shire."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2354
+#, fuzzy
+msgctxt "artifact"
 msgid "'Razorback'"
 msgstr "『剣竜の鎧』"
 
 #: ../lib/gamedata/artifact.txt:2370
+#, fuzzy
+msgctxt "artifact"
 msgid ""
 "A massive suit of heavy dragon scales deeply saturated with many colors.  It "
 "throbs with angry energies, and you feel the raw elemental might of untamed "
@@ -1472,40 +1849,51 @@ msgstr ""
 "ち、着るものは荒々しい稲光のエネルギーを直に感じる。"
 
 #: ../lib/gamedata/artifact.txt:2371
+msgctxt "artifact"
 msgid "'Mediator'"
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2385
+msgctxt "artifact"
 msgid ""
 "A great suit of dragon hide, set with scales of many hues.  Even the "
 "mightiest wyrms of Law and Chaos fear the judgement of its wearer."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2386
+#, fuzzy
+msgctxt "artifact"
 msgid "'Bladeturner'"
 msgstr "『刀返し』"
 
 #: ../lib/gamedata/artifact.txt:2402
+msgctxt "artifact"
 msgid ""
 "An adamant suit with scales of every color.  Untrammelled powers elemental "
 "and ethereal swirl around it in an inextricably intermingled nimbus."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2406
+#, fuzzy
+msgctxt "artifact"
 msgid "'Grond'"
 msgstr "『グロンド』"
 
 #: ../lib/gamedata/artifact.txt:2424
+msgctxt "artifact"
 msgid ""
 "The mighty Hammer of the Underworld, blackened by doomspells of shattering.  "
 "Its wielder holds the lives of all Morgoth's servants in his hand."
 msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2425
+#, fuzzy
+msgctxt "artifact"
 msgid "of Morgoth"
-msgstr ""
+msgstr "丈高きマエズロスの"
 
 #: ../lib/gamedata/artifact.txt:2440
+msgctxt "artifact"
 msgid ""
 "Containing much of the power of he who once was mightiest among the Ainur, "
 "this plain iron crown has mounted upon it the two remaining Silmarils, "

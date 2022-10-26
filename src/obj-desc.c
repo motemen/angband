@@ -35,7 +35,7 @@ void object_base_name(char *buf, size_t max, int tval, bool plural)
 	size_t end = 0;
 
 	if (kb->name && kb->name[0]) 
-		(void) obj_desc_name_format(buf, max, end, _GAMEDATA(kb->name), NULL, plural);
+		(void) obj_desc_name_format(buf, max, end, _GAMEDATA_C("object", kb->name), NULL, plural);
 }
 
 
@@ -55,7 +55,7 @@ void object_kind_name(char *buf, size_t max, const struct object_kind *kind,
 
 	/* Use proper name (Healing, or whatever) */
 	else
-		(void) obj_desc_name_format(buf, max, 0, _GAMEDATA(kind->name), NULL, false);
+		(void) obj_desc_name_format(buf, max, 0, _GAMEDATA_C("object", kind->name), NULL, false);
 }
 
 
@@ -67,10 +67,10 @@ void object_kind_name(char *buf, size_t max, const struct object_kind *kind,
 static const char *obj_desc_get_modstr(const struct object_kind *kind)
 {
 	if (tval_can_have_flavor_k(kind))
-		return kind->flavor ? _GAMEDATA(kind->flavor->text) : "";
+		return kind->flavor ? _GAMEDATA_C("object", kind->flavor->text) : "";
 
 	if (tval_is_book_k(kind))
-		return _GAMEDATA(kind->name);
+		return _GAMEDATA_C("object", kind->name);
 
 	return "";
 }
@@ -92,7 +92,7 @@ static const char *obj_desc_get_basename(const struct object *obj, bool aware,
 	/* Artifacts are special */
 	if (obj->artifact && (aware || object_is_known_artifact(obj) || terse ||
 						  !obj->kind->flavor))
-		return _GAMEDATA(obj->kind->name);
+		return _GAMEDATA_C("object", obj->kind->name);
 
 	/* Analyze the object */
 	switch (obj->tval)
@@ -118,65 +118,65 @@ static const char *obj_desc_get_basename(const struct object *obj, bool aware,
 		case TV_DRAG_ARMOR:
 		case TV_LIGHT:
 		case TV_FOOD:
-			return _GAMEDATA(obj->kind->name);
+			return _GAMEDATA_C("object", obj->kind->name);
 
 		case TV_AMULET:
-			// Use _GAMEDATA here for align with other kinds
-			return (show_flavor ? _GAMEDATA("& # Amulet~") : _GAMEDATA("& Amulet~"));
+			// Use _GAMEDATA_C("object", ) here for align with other kinds
+			return (show_flavor ? _GAMEDATA_C("object", "& # Amulet~") : _GAMEDATA_C("object", "& Amulet~"));
 
 		case TV_RING:
-			return (show_flavor ? _GAMEDATA("& # Ring~") : _GAMEDATA("& Ring~"));
+			return (show_flavor ? _GAMEDATA_C("object", "& # Ring~") : _GAMEDATA_C("object", "& Ring~"));
 
 		case TV_STAFF:
-			return (show_flavor ? _GAMEDATA("& # Sta|ff|ves|") : _GAMEDATA("& Sta|ff|ves|"));
+			return (show_flavor ? _GAMEDATA_C("object", "& # Sta|ff|ves|") : _GAMEDATA_C("object", "& Sta|ff|ves|"));
 
 		case TV_WAND:
-			return (show_flavor ? _GAMEDATA("& # Wand~") : _GAMEDATA("& Wand~"));
+			return (show_flavor ? _GAMEDATA_C("object", "& # Wand~") : _GAMEDATA_C("object", "& Wand~"));
 
 		case TV_ROD:
-			return (show_flavor ? _GAMEDATA("& # Rod~") : _GAMEDATA("& Rod~"));
+			return (show_flavor ? _GAMEDATA_C("object", "& # Rod~") : _GAMEDATA_C("object", "& Rod~"));
 
 		case TV_POTION:
-			return (show_flavor ? _GAMEDATA("& # Potion~") : _GAMEDATA("& Potion~"));
+			return (show_flavor ? _GAMEDATA_C("object", "& # Potion~") : _GAMEDATA_C("object", "& Potion~"));
 
 		case TV_SCROLL:
-			return (show_flavor ? _GAMEDATA("& Scroll~ titled #") : _GAMEDATA("& Scroll~"));
+			return (show_flavor ? _GAMEDATA_C("object", "& Scroll~ titled #") : _GAMEDATA_C("object", "& Scroll~"));
 
 		case TV_MAGIC_BOOK:
 			if (terse)
-				return _GAMEDATA("& Book~ #");
+				return _GAMEDATA_C("object", "& Book~ #");
 			else
-				return _GAMEDATA("& Book~ of Magic Spells #");
+				return _GAMEDATA_C("object", "& Book~ of Magic Spells #");
 
 		case TV_PRAYER_BOOK:
 			if (terse)
-				return _GAMEDATA("& Book~ #");
+				return _GAMEDATA_C("object", "& Book~ #");
 			else
-				return _GAMEDATA("& Holy Book~ of Prayers #");
+				return _GAMEDATA_C("object", "& Holy Book~ of Prayers #");
 
 		case TV_NATURE_BOOK:
 			if (terse)
-				return _GAMEDATA("& Book~ #");
+				return _GAMEDATA_C("object", "& Book~ #");
 			else
-				return _GAMEDATA("& Book~ of Nature Magics #");
+				return _GAMEDATA_C("object", "& Book~ of Nature Magics #");
 
 		case TV_SHADOW_BOOK:
 			if (terse)
-				return _GAMEDATA("& Tome~ #");
+				return _GAMEDATA_C("object", "& Tome~ #");
 			else
-				return _GAMEDATA("& Necromantic Tome~ #");
+				return _GAMEDATA_C("object", "& Necromantic Tome~ #");
 
 		case TV_OTHER_BOOK:
 			if (terse)
-				return _GAMEDATA("& Book~ #");
+				return _GAMEDATA_C("object", "& Book~ #");
 			else
-				return _GAMEDATA("& Book of Mysteries~ #");
+				return _GAMEDATA_C("object", "& Book of Mysteries~ #");
 
 		case TV_MUSHROOM:
-			return (show_flavor ? _GAMEDATA("& # Mushroom~") : _GAMEDATA("& Mushroom~"));
+			return (show_flavor ? _GAMEDATA_C("object", "& # Mushroom~") : _GAMEDATA_C("object", "& Mushroom~"));
 	}
 
-	return _GAMEDATA("(nothing)");
+	return _GAMEDATA_C("object", "(nothing)");
 }
 
 static const char *make_obj_desc_name_prefix(const struct object *obj,
@@ -339,19 +339,19 @@ static size_t obj_desc_name(char *buf, size_t max, size_t end,
 		// NOTE[i18n]: Some locales may want to show artifacts like
 		// "The Short Sword 'Sting'" but "Éowyn's Bastard Sword"
 		if (obj->artifact->name[0] == '\'') {
-			snprintf(buf, max, _C("named_artifact", "%s %s"), buf_sofar, _GAMEDATA(obj->artifact->name));
+			snprintf(buf, max, _C("named_artifact", "%s %s"), buf_sofar, _GAMEDATA_C("artifact", obj->artifact->name));
 		} else {
-			snprintf(buf, max, _C("artifact", "%s %s"), buf_sofar, _GAMEDATA(obj->artifact->name));
+			snprintf(buf, max, _C("artifact", "%s %s"), buf_sofar, _GAMEDATA_C("artifact", obj->artifact->name));
 		}
 	}
 	else if ((obj->known->ego && !(mode & ODESC_NOEGO)) || (obj->ego && store))
-		snprintf(buf, max, _("%s %s"), buf_sofar, _GAMEDATA(obj->ego->name));
+		snprintf(buf, max, _("%s %s"), buf_sofar, _GAMEDATA_C("ego_item", obj->ego->name));
 	else if (aware && !obj->artifact &&
 			 (obj->kind->flavor || obj->kind->tval == TV_SCROLL)) {
 		if (terse)
-			snprintf(buf, max, _("%s '%s'"), buf_sofar, _GAMEDATA(obj->kind->name));
+			snprintf(buf, max, _("%s '%s'"), buf_sofar, _GAMEDATA_C("object", obj->kind->name));
 		else
-			snprintf(buf, max, _("%s of %s"), buf_sofar, _GAMEDATA(obj->kind->name));
+			snprintf(buf, max, _("%s of %s"), buf_sofar, _GAMEDATA_C("object", obj->kind->name));
 	}
         string_free(buf_sofar);
         end = strlen(buf);

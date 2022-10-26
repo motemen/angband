@@ -1,129 +1,155 @@
 #: ../lib/gamedata/blow_effects.txt:25
+msgctxt "blow_effects"
 msgid ""
 "attack"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:32
+msgctxt "blow_effects"
 msgid ""
 "poison"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:42
+msgctxt "blow_effects"
 msgid ""
 "disenchant"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:52
+msgctxt "blow_effects"
 msgid ""
 "drain charges"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:61
+msgctxt "blow_effects"
 msgid ""
 "steal gold"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:70
+msgctxt "blow_effects"
 msgid ""
 "steal items"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:79
+msgctxt "blow_effects"
 msgid ""
 "eat your food"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:88
+msgctxt "blow_effects"
 msgid ""
 "absorb light"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:97
+msgctxt "blow_effects"
 msgid ""
 "shoot acid"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:106
+msgctxt "blow_effects"
 msgid ""
 "electrify"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:115
+msgctxt "blow_effects"
 msgid ""
 "burn"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:124
+msgctxt "blow_effects"
 msgid ""
 "freeze"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:133
+msgctxt "blow_effects"
 msgid ""
 "blind"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:143
+msgctxt "blow_effects"
 msgid ""
 "confuse"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:153
+msgctxt "blow_effects"
 msgid ""
 "terrify"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:163
+msgctxt "blow_effects"
 msgid ""
 "paralyze"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:173
+msgctxt "blow_effects"
 msgid ""
 "reduce strength"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:183
+msgctxt "blow_effects"
 msgid ""
 "reduce intelligence"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:193
+msgctxt "blow_effects"
 msgid ""
 "reduce wisdom"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:203
+msgctxt "blow_effects"
 msgid ""
 "reduce dexterity"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:213
+msgctxt "blow_effects"
 msgid ""
 "reduce constitution"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:223
+msgctxt "blow_effects"
 msgid ""
 "reduce all stats"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:232
+msgctxt "blow_effects"
 msgid ""
 "shatter"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:239
+msgctxt "blow_effects"
 msgid ""
 "lower experience"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:279
+msgctxt "blow_effects"
 msgid ""
 "cause hallucinations"
 msgstr ""
 
 #: ../lib/gamedata/blow_effects.txt:289
+msgctxt "blow_effects"
 msgid ""
 "inflict Black Breath"
 msgstr ""

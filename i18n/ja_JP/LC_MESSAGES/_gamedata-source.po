@@ -10,101 +10,129 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../src/obj-desc.c:125
+msgctxt "object"
 msgid "& # Amulet~"
-msgstr ""
+msgstr "アミュレット"
 
 #: ../src/obj-desc.c:125
+msgctxt "object"
 msgid "& Amulet~"
-msgstr ""
+msgstr "アミュレット"
 
 #: ../src/obj-desc.c:128
+msgctxt "object"
 msgid "& # Ring~"
-msgstr ""
+msgstr "指輪"
 
 #: ../src/obj-desc.c:128
+msgctxt "object"
 msgid "& Ring~"
-msgstr ""
+msgstr "指輪"
 
 #: ../src/obj-desc.c:131
+msgctxt "object"
 msgid "& # Sta|ff|ves|"
-msgstr ""
+msgstr "杖"
 
 #: ../src/obj-desc.c:131
+msgctxt "object"
 msgid "& Sta|ff|ves|"
-msgstr ""
+msgstr "杖"
 
 #: ../src/obj-desc.c:134
+msgctxt "object"
 msgid "& # Wand~"
-msgstr ""
+msgstr "魔法棒"
 
 #: ../src/obj-desc.c:134
+msgctxt "object"
 msgid "& Wand~"
-msgstr ""
+msgstr "魔法棒"
 
 #: ../src/obj-desc.c:137
+msgctxt "object"
 msgid "& # Rod~"
-msgstr ""
+msgstr "ロッド"
 
 #: ../src/obj-desc.c:137
+msgctxt "object"
 msgid "& Rod~"
-msgstr ""
+msgstr "ロッド"
 
 #: ../src/obj-desc.c:140
+msgctxt "object"
 msgid "& # Potion~"
-msgstr ""
+msgstr "薬"
 
 #: ../src/obj-desc.c:140
+msgctxt "object"
 msgid "& Potion~"
 msgstr "薬"
 
 #: ../src/obj-desc.c:143
+msgctxt "object"
 msgid "& Scroll~ titled #"
-msgstr ""
+msgstr "と書かれた巻物"
 
 #: ../src/obj-desc.c:143
+msgctxt "object"
 msgid "& Scroll~"
 msgstr "巻物"
 
 #: ../src/obj-desc.c:147 ../src/obj-desc.c:153 ../src/obj-desc.c:159
 #: ../src/obj-desc.c:171
+msgctxt "object"
 msgid "& Book~ #"
 msgstr ""
 
 #: ../src/obj-desc.c:149
+msgctxt "object"
 msgid "& Book~ of Magic Spells #"
 msgstr ""
 
 #: ../src/obj-desc.c:155
+msgctxt "object"
 msgid "& Holy Book~ of Prayers #"
 msgstr ""
 
 #: ../src/obj-desc.c:161
+msgctxt "object"
 msgid "& Book~ of Nature Magics #"
 msgstr ""
 
 #: ../src/obj-desc.c:165
+msgctxt "object"
 msgid "& Tome~ #"
 msgstr ""
 
 #: ../src/obj-desc.c:167
+msgctxt "object"
 msgid "& Necromantic Tome~ #"
 msgstr ""
 
 #: ../src/obj-desc.c:173
+msgctxt "object"
 msgid "& Book of Mysteries~ #"
 msgstr ""
 
 #: ../src/obj-desc.c:176
+msgctxt "object"
 msgid "& # Mushroom~"
-msgstr ""
+msgstr "キノコ"
 
 #: ../src/obj-desc.c:176
+msgctxt "object"
 msgid "& Mushroom~"
-msgstr ""
+msgstr "キノコ"
 
 #: ../src/obj-desc.c:179
+msgctxt "object"
 msgid "(nothing)"
 msgstr ""
+
+#, fuzzy
+#~ msgid "look[s] confused."
+#~ msgstr "混乱"
 
 #~ msgid "invisible"
 #~ msgstr "不可視"
@@ -144,6 +172,10 @@ msgstr ""
 
 #~ msgid "destroy objects"
 #~ msgstr "アイテムを破壊する"
+
+#, fuzzy
+#~ msgid "pass through webs"
+#~ msgstr "壁を通り抜ける"
 
 #~ msgid "orc"
 #~ msgstr "オーク"

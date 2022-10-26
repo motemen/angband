@@ -10,49 +10,61 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../lib/gamedata/body.txt:12
+msgctxt "body"
 msgid "weapon"
 msgstr "武器"
 
 #: ../lib/gamedata/body.txt:13
+msgctxt "body"
 msgid "shooting"
 msgstr "射撃"
 
 #: ../lib/gamedata/body.txt:14
+msgctxt "body"
 msgid "right hand"
 msgstr "右手"
 
 #: ../lib/gamedata/body.txt:15
+msgctxt "body"
 msgid "left hand"
 msgstr "左手"
 
 #: ../lib/gamedata/body.txt:16
+msgctxt "body"
 msgid "neck"
 msgstr "首"
 
 #: ../lib/gamedata/body.txt:17
+msgctxt "body"
 msgid "light"
 msgstr "光源"
 
 #: ../lib/gamedata/body.txt:18
+msgctxt "body"
 msgid "body"
 msgstr "体"
 
 #: ../lib/gamedata/body.txt:19
+msgctxt "body"
 msgid "back"
 msgstr "背中"
 
 #: ../lib/gamedata/body.txt:20
+msgctxt "body"
 msgid "arm"
 msgstr "腕"
 
 #: ../lib/gamedata/body.txt:21
+msgctxt "body"
 msgid "head"
 msgstr "頭"
 
 #: ../lib/gamedata/body.txt:22
+msgctxt "body"
 msgid "hands"
 msgstr "両手"
 
 #: ../lib/gamedata/body.txt:23
+msgctxt "body"
 msgid "feet"
 msgstr "足"

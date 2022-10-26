@@ -306,11 +306,11 @@ const char *equip_mention(struct player *p, int slot)
 	/* Heavy */
 	if ((type == EQUIP_WEAPON && p->state.heavy_wield) ||
 			(type == EQUIP_WEAPON && p->state.heavy_shoot))
-		return _LIST(slot_table[type].heavy_describe);
+		return _GAMEDATA_C("list-equip-slots", slot_table[type].heavy_describe);
 	else if (slot_table[type].name_in_desc)
-		return format(_LIST(slot_table[type].mention), _GAMEDATA(p->body.slots[slot].name));
+		return format(_GAMEDATA_C("list-equip-slots", slot_table[type].mention), _GAMEDATA_C("body", p->body.slots[slot].name));
 	else
-		return _LIST(slot_table[type].mention);
+		return _GAMEDATA_C("list-equip-slots", slot_table[type].mention);
 }
 
 
@@ -325,11 +325,11 @@ const char *equip_describe(struct player *p, int slot)
 	/* Heavy */
 	if ((type == EQUIP_WEAPON && p->state.heavy_wield) ||
 			(type == EQUIP_WEAPON && p->state.heavy_shoot))
-		return _LIST(slot_table[type].heavy_describe);
+		return _GAMEDATA_C("list-equip-slots", slot_table[type].heavy_describe);
 	else if (slot_table[type].name_in_desc)
-		return format(_LIST(slot_table[type].describe), _GAMEDATA(p->body.slots[slot].name));
+		return format(_GAMEDATA_C("list-equip-slots", slot_table[type].describe), _GAMEDATA_C("body", p->body.slots[slot].name));
 	else
-		return _LIST(slot_table[type].describe);
+		return _GAMEDATA_C("list-equip-slots", slot_table[type].describe);
 }
 
 /**

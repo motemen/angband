@@ -3,24 +3,29 @@ msgid ""
 msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 #: ../lib/gamedata/terrain.txt:98
+msgctxt "terrain"
 msgid "unknown grid"
 msgstr "未知の地形"
 
 #: ../lib/gamedata/terrain.txt:103
+msgctxt "terrain"
 msgid "open floor"
 msgstr "床"
 
 #: ../lib/gamedata/terrain.txt:109
+msgctxt "terrain"
 msgid ""
 "An open floor or bare ground.  Can be walked across by anything, and can "
 "hold traps or items.  Does not break line of sight."
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:110
+msgctxt "terrain"
 msgid "closed door"
 msgstr "閉じたドア"
 
 #: ../lib/gamedata/terrain.txt:121
+msgctxt "terrain"
 msgid ""
 "Doors may be locked; getting through them may not be easy.  Your disarming "
 "skill makes all the difference to your ability to handle locks, but you can "
@@ -30,135 +35,165 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:122
+msgctxt "terrain"
 msgid "open door"
 msgstr "開いたドア"
 
 #: ../lib/gamedata/terrain.txt:129
+msgctxt "terrain"
 msgid ""
 "A door that is already open.  Player, monster, spell and missile can pass "
 "through as long as it stays open."
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:130
+msgctxt "terrain"
 msgid "broken door"
 msgstr "壊れたドア"
 
 #: ../lib/gamedata/terrain.txt:136
+msgctxt "terrain"
 msgid "A door so broken that it cannot be shut."
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:137
+msgctxt "terrain"
 msgid "up staircase"
 msgstr "上り階段"
 
 #: ../lib/gamedata/terrain.txt:143
+msgctxt "terrain"
 msgid "A staircase up to a shallower part of the dungeon."
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:144
+msgctxt "terrain"
 msgid "down staircase"
 msgstr "下り階段"
 
 #: ../lib/gamedata/terrain.txt:150
+msgctxt "terrain"
 msgid "A staircase down to a deeper part of the dungeon."
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:151
+msgctxt "terrain"
 msgid "General Store"
 msgstr "雑貨屋"
 
 #: ../lib/gamedata/terrain.txt:159
+msgctxt "terrain"
 msgid "The General Store sells food, ammunition and lighting supplies."
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:160
+msgctxt "terrain"
 msgid "Armoury"
 msgstr "防具屋"
 
 #: ../lib/gamedata/terrain.txt:169
+msgctxt "terrain"
 msgid ""
 "The armour sold here will give you some protection against the blows of your "
 "enemies."
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:170
+msgctxt "terrain"
 msgid "Weapon Smiths"
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:179
+msgctxt "terrain"
 msgid ""
 "Weapons for hitting and shooting your enemies are forged in the hot, acrid "
 "backroom of this enticing shop."
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:180
+msgctxt "terrain"
 msgid "Bookseller"
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:189
+msgctxt "terrain"
 msgid ""
 "A quiet, reflective place of refuge, lined with shelves of mystical tomes."
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:190
+msgctxt "terrain"
 msgid "Alchemy Shop"
 msgstr "錬金術の店"
 
 #: ../lib/gamedata/terrain.txt:198
+msgctxt "terrain"
 msgid "A dim, scented room where potions and scrolls are traded."
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:199
+msgctxt "terrain"
 msgid "Magic Shop"
 msgstr "魔法の店"
 
 #: ../lib/gamedata/terrain.txt:207
+msgctxt "terrain"
 msgid "A shop for devices and adornments with magic trapped within."
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:208
+msgctxt "terrain"
 msgid "Black Market"
 msgstr "ブラック・マーケット"
 
 #: ../lib/gamedata/terrain.txt:217
+msgctxt "terrain"
 msgid ""
 "Watch your back and hold onto your purse as you enter this disreputable "
 "haunt - and do not expect friendly service or good bargains."
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:218
+msgctxt "terrain"
 msgid "Home"
 msgstr "我が家"
 
 #: ../lib/gamedata/terrain.txt:227
+msgctxt "terrain"
 msgid ""
 "Your safe piece of Middle Earth, and the only place you can store goods "
 "apart from on your person."
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:228
+msgctxt "terrain"
 msgid "secret door"
 msgstr "隠しドア"
 
 #: ../lib/gamedata/terrain.txt:235
+msgctxt "terrain"
 msgid "A door that appears like a granite wall to untrained eyes."
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:236
+msgctxt "terrain"
 msgid "pile of rubble"
 msgstr "岩石"
 
 #: ../lib/gamedata/terrain.txt:244
+msgctxt "terrain"
 msgid ""
 "Ends LOS, stops missiles, bolts, and beams.  May dissolve or be tunnelled to "
 "normal floor."
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:245
+msgctxt "terrain"
 msgid "magma vein"
 msgstr "溶岩の鉱脈"
 
 #: ../lib/gamedata/terrain.txt:254
+msgctxt "terrain"
 msgid ""
 "A seam of soft rock.  It can be removed by digging or magic, and passed "
 "through by immaterial monsters.  It stops any spells, missiles or line of "
@@ -166,10 +201,12 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:255
+msgctxt "terrain"
 msgid "quartz vein"
 msgstr "石英の鉱脈"
 
 #: ../lib/gamedata/terrain.txt:264
+msgctxt "terrain"
 msgid ""
 "A seam of hardish rock.  It can be removed by digging or magic, and passed "
 "through by immaterial monsters.  It stops any spells, missiles or line of "
@@ -177,10 +214,12 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:265
+msgctxt "terrain"
 msgid "magma vein with treasure"
 msgstr "財宝を含有した溶岩の鉱脈"
 
 #: ../lib/gamedata/terrain.txt:274
+msgctxt "terrain"
 msgid ""
 "A seam of soft rock.  It can be removed by digging or magic, and passed "
 "through by immaterial monsters.  It stops any spells, missiles or line of "
@@ -188,10 +227,12 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:275
+msgctxt "terrain"
 msgid "quartz vein with treasure"
 msgstr "財宝を含有した石英の鉱脈"
 
 #: ../lib/gamedata/terrain.txt:284
+msgctxt "terrain"
 msgid ""
 "A seam of hardish rock.  It can be removed by digging or magic, and passed "
 "through by immaterial monsters.  It stops any spells, missiles or line of "
@@ -199,10 +240,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:285
+#, fuzzy
+msgctxt "terrain"
 msgid "granite wall"
 msgstr "花崗岩の壁"
 
 #: ../lib/gamedata/terrain.txt:294
+msgctxt "terrain"
 msgid ""
 "A seam of hard rock.  It can be removed by digging or magic, and passed "
 "through by immaterial monsters.  It stops any spells, missiles or line of "
@@ -210,28 +254,34 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:295
+msgctxt "terrain"
 msgid "permanent wall"
 msgstr "永久岩の壁"
 
 #: ../lib/gamedata/terrain.txt:302
+msgctxt "terrain"
 msgid ""
 "You can dig through most walls but these are impenetrable.  The dungeon is "
 "surrounded by these kinds of walls and some special rooms are made of them."
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:305
+msgctxt "terrain"
 msgid "lava"
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:311
+msgctxt "terrain"
 msgid "A fiery pool of glowing lava.  Step in it at your peril!"
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:317
+msgctxt "terrain"
 msgid "pile of passable rubble"
 msgstr ""
 
 #: ../lib/gamedata/terrain.txt:325
+msgctxt "terrain"
 msgid ""
 "Ends LOS, stops missiles, bolts, and beams, and reduces the radius of ball "
 "spells.  May dissolve or be tunnelled to normal floor, and can be walked "

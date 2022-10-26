@@ -180,10 +180,10 @@ static int fmt_title(char buf[], int max, bool short_mode)
 	} else if (player->total_winner || (player->lev > PY_MAX_LEVEL)) {
 		my_strcpy(buf, _("***WINNER***"), max);
 	} else if (player_is_shapechanged(player)) {		
-		my_strcpy(buf, _GAMEDATA(player->shape->name), max);
+		my_strcpy(buf, _GAMEDATA_C("shape", player->shape->name), max);
 		my_strcap(buf);		
 	} else if (!short_mode) {
-		my_strcpy(buf, _GAMEDATA(player->class->title[(player->lev - 1) / 5]), max);
+		my_strcpy(buf, _GAMEDATA_C("class", player->class->title[(player->lev - 1) / 5]), max);
 	}
 
 	return strlen(buf);
@@ -547,7 +547,7 @@ static void prt_race(int row, int col) {
 	if (player_is_shapechanged(player)) {
 		prt_field("", row, col);
 	} else {
-		prt_field(_GAMEDATA(player->race->name), row, col);
+		prt_field(_GAMEDATA_C("p_race", player->race->name), row, col);
 	}
 }
 
@@ -558,8 +558,8 @@ static int prt_race_class_short(int row, int col)
 	if (player_is_shapechanged(player)) return 0;
 
 	strnfmt(buf, sizeof(buf), "%s %s",
-		_GAMEDATA(player->race->name),
-		_GAMEDATA(player->class->title[(player->lev - 1) / 5]));
+		_GAMEDATA_C("p_race", player->race->name),
+		_GAMEDATA_C("class", player->class->title[(player->lev - 1) / 5]));
 
 	c_put_str(COLOUR_L_GREEN, buf, row, col);
 
@@ -570,7 +570,7 @@ static void prt_class(int row, int col) {
 	if (player_is_shapechanged(player)) {
 		prt_field("", row, col);
 	} else {
-		prt_field(_GAMEDATA(player->class->name), row, col);
+		prt_field(_GAMEDATA_C("class", player->class->name), row, col);
 	}
 }
 
@@ -1182,11 +1182,11 @@ static size_t prt_terrain(int row, int col)
 
 	// TODO[i18n]: may need to change strlen to textwidth
 	if (trap && !square_isinvis(cave, player->grid)) {
-		my_strcpy(buf, _GAMEDATA(trap->kind->name), strlen(_GAMEDATA(trap->kind->name)) + 1);
+		my_strcpy(buf, _GAMEDATA_C("trap", trap->kind->name), strlen(_GAMEDATA_C("trap", trap->kind->name)) + 1);
 		my_strcap(buf);
 		c_put_str(trap->kind->d_attr, format("%s ", buf), row, col);
 	} else {
-		my_strcpy(buf, _GAMEDATA(feat->name), strlen(_GAMEDATA(feat->name)) + 1);
+		my_strcpy(buf, _GAMEDATA_C("terrain", feat->name), strlen(_GAMEDATA_C("terrain", feat->name)) + 1);
 		my_strcap(buf);
 		c_put_str(feat->d_attr, format("%s ", buf), row, col);
 	}

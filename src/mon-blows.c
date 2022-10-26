@@ -95,7 +95,7 @@ char *monster_blow_method_action(struct blow_method *method, int midx)
 	while (choice--) {
 		msg = msg->next;
 	}
-	in_cursor = _GAMEDATA(msg->act_msg);
+	in_cursor = _GAMEDATA_C("blow", msg->act_msg);
 
 	/* Add info to the message */
 	next = strchr(in_cursor, '{');

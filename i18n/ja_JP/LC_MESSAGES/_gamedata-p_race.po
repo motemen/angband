@@ -11,55 +11,56 @@ msgstr ""
 
 # ../lib/gamedata/p_race.txt:67
 #: ../lib/gamedata/p_race.txt:67
+msgctxt "p_race"
 msgid "Human"
 msgstr "人間"
 
-# ../lib/gamedata/p_race.txt:87
 #: ../lib/gamedata/p_race.txt:87
+msgctxt "p_race"
 msgid "Half-Elf"
 msgstr ""
 
-# ../lib/gamedata/p_race.txt:108
 #: ../lib/gamedata/p_race.txt:108
+msgctxt "p_race"
 msgid "Elf"
 msgstr ""
 
-# ../lib/gamedata/p_race.txt:130
 #: ../lib/gamedata/p_race.txt:130
+msgctxt "p_race"
 msgid "Hobbit"
 msgstr ""
 
-# ../lib/gamedata/p_race.txt:152
 #: ../lib/gamedata/p_race.txt:152
+msgctxt "p_race"
 msgid "Gnome"
 msgstr ""
 
-# ../lib/gamedata/p_race.txt:174
 #: ../lib/gamedata/p_race.txt:174
+msgctxt "p_race"
 msgid "Dwarf"
 msgstr ""
 
-# ../lib/gamedata/p_race.txt:196
 #: ../lib/gamedata/p_race.txt:196
+msgctxt "p_race"
 msgid "Half-Orc"
 msgstr ""
 
-# ../lib/gamedata/p_race.txt:217
 #: ../lib/gamedata/p_race.txt:217
+msgctxt "p_race"
 msgid "Half-Troll"
 msgstr ""
 
-# ../lib/gamedata/p_race.txt:238
 #: ../lib/gamedata/p_race.txt:238
+msgctxt "p_race"
 msgid "Dunadan"
 msgstr ""
 
-# ../lib/gamedata/p_race.txt:259
 #: ../lib/gamedata/p_race.txt:259
+msgctxt "p_race"
 msgid "High-Elf"
 msgstr ""
 
-# ../lib/gamedata/p_race.txt:281
 #: ../lib/gamedata/p_race.txt:281
+msgctxt "p_race"
 msgid "Kobold"
 msgstr ""

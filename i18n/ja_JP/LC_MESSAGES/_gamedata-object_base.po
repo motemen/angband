@@ -10,133 +10,194 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../lib/gamedata/object_base.txt:19
+#, fuzzy
+msgctxt "object_base"
 msgid "Chest~"
 msgstr "箱"
 
 #: ../lib/gamedata/object_base.txt:24
+#, fuzzy
+msgctxt "object_base"
 msgid "Shot~"
 msgstr "弾"
 
 #: ../lib/gamedata/object_base.txt:30
+#, fuzzy
+msgctxt "object_base"
 msgid "Arrow~"
 msgstr "矢"
 
 #: ../lib/gamedata/object_base.txt:37
+#, fuzzy
+msgctxt "object_base"
 msgid "Bolt~"
 msgstr "クロスボウの矢"
 
 #: ../lib/gamedata/object_base.txt:44
+#, fuzzy
+msgctxt "object_base"
 msgid "Bow~"
 msgstr "弓"
 
 #: ../lib/gamedata/object_base.txt:50
+#, fuzzy
+msgctxt "object_base"
 msgid "Digger~"
 msgstr "シャベル/つるはし"
 
 #: ../lib/gamedata/object_base.txt:55
+#, fuzzy
+msgctxt "object_base"
 msgid "Hafted weapon~"
 msgstr "鈍器"
 
 #: ../lib/gamedata/object_base.txt:61
+#, fuzzy
+msgctxt "object_base"
 msgid "Polearm~"
 msgstr "長柄/斧"
 
 #: ../lib/gamedata/object_base.txt:67
+#, fuzzy
+msgctxt "object_base"
 msgid "Bladed weapon~"
 msgstr "剣"
 
 #: ../lib/gamedata/object_base.txt:73
+#, fuzzy
+msgctxt "object_base"
 msgid "Boot~"
 msgstr "靴"
 
 #: ../lib/gamedata/object_base.txt:78
+#, fuzzy
+msgctxt "object_base"
 msgid "Glove~"
 msgstr "籠手"
 
 #: ../lib/gamedata/object_base.txt:83
+#, fuzzy
+msgctxt "object_base"
 msgid "Helm~"
 msgstr "兜"
 
 #: ../lib/gamedata/object_base.txt:88
+#, fuzzy
+msgctxt "object_base"
 msgid "Crown~"
 msgstr "冠"
 
 #: ../lib/gamedata/object_base.txt:93
+#, fuzzy
+msgctxt "object_base"
 msgid "Shield~"
 msgstr "盾"
 
 #: ../lib/gamedata/object_base.txt:98
+#, fuzzy
+msgctxt "object_base"
 msgid "Cloak~"
 msgstr "クローク"
 
 #: ../lib/gamedata/object_base.txt:103
+#, fuzzy
+msgctxt "object_base"
 msgid "Soft Armor~"
 msgstr "軽鎧"
 
 #: ../lib/gamedata/object_base.txt:108
+#, fuzzy
+msgctxt "object_base"
 msgid "Hard Armor~"
 msgstr "重装鎧"
 
 #: ../lib/gamedata/object_base.txt:113
+#, fuzzy
+msgctxt "object_base"
 msgid "Dragon Armor~"
 msgstr "ドラゴン鎧"
 
 #: ../lib/gamedata/object_base.txt:117
+msgctxt "object_base"
 msgid "Light~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:123
+#, fuzzy
+msgctxt "object_base"
 msgid "Amulet~"
 msgstr "アミュレット"
 
 #: ../lib/gamedata/object_base.txt:127
+#, fuzzy
+msgctxt "object_base"
 msgid "Ring~"
 msgstr "指輪"
 
 #: ../lib/gamedata/object_base.txt:132
+#, fuzzy
+msgctxt "object_base"
 msgid "Staff~"
 msgstr "杖"
 
 #: ../lib/gamedata/object_base.txt:137
+#, fuzzy
+msgctxt "object_base"
 msgid "Wand~"
 msgstr "魔法棒"
 
 #: ../lib/gamedata/object_base.txt:142
+#, fuzzy
+msgctxt "object_base"
 msgid "Rod~"
 msgstr "ロッド"
 
 #: ../lib/gamedata/object_base.txt:147
+#, fuzzy
+msgctxt "object_base"
 msgid "Scroll~"
 msgstr "巻物"
 
 #: ../lib/gamedata/object_base.txt:152
+#, fuzzy
+msgctxt "object_base"
 msgid "Potion~"
 msgstr "薬"
 
 #: ../lib/gamedata/object_base.txt:159
+#, fuzzy
+msgctxt "object_base"
 msgid "Flask~"
 msgstr "油つぼ"
 
 #: ../lib/gamedata/object_base.txt:166
+#, fuzzy
+msgctxt "object_base"
 msgid "Food"
 msgstr "食料"
 
 #: ../lib/gamedata/object_base.txt:172
+#, fuzzy
+msgctxt "object_base"
 msgid "Mushroom~"
 msgstr "キノコ"
 
 #: ../lib/gamedata/object_base.txt:178
+msgctxt "object_base"
 msgid "Magic Book~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:183
+msgctxt "object_base"
 msgid "Prayer Book~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:188
+msgctxt "object_base"
 msgid "Nature Book~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:193
+msgctxt "object_base"
 msgid "Shadow Book~"
 msgstr ""

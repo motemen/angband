@@ -1,132 +1,165 @@
 #: ../lib/gamedata/object_base.txt:19
+msgctxt "object_base"
 msgid "Chest~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:24
+msgctxt "object_base"
 msgid "Shot~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:30
+msgctxt "object_base"
 msgid "Arrow~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:37
+msgctxt "object_base"
 msgid "Bolt~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:44
+msgctxt "object_base"
 msgid "Bow~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:50
+msgctxt "object_base"
 msgid "Digger~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:55
+msgctxt "object_base"
 msgid "Hafted weapon~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:61
+msgctxt "object_base"
 msgid "Polearm~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:67
+msgctxt "object_base"
 msgid "Bladed weapon~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:73
+msgctxt "object_base"
 msgid "Boot~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:78
+msgctxt "object_base"
 msgid "Glove~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:83
+msgctxt "object_base"
 msgid "Helm~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:88
+msgctxt "object_base"
 msgid "Crown~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:93
+msgctxt "object_base"
 msgid "Shield~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:98
+msgctxt "object_base"
 msgid "Cloak~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:103
+msgctxt "object_base"
 msgid "Soft Armor~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:108
+msgctxt "object_base"
 msgid "Hard Armor~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:113
+msgctxt "object_base"
 msgid "Dragon Armor~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:117
+msgctxt "object_base"
 msgid "Light~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:123
+msgctxt "object_base"
 msgid "Amulet~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:127
+msgctxt "object_base"
 msgid "Ring~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:132
+msgctxt "object_base"
 msgid "Staff~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:137
+msgctxt "object_base"
 msgid "Wand~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:142
+msgctxt "object_base"
 msgid "Rod~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:147
+msgctxt "object_base"
 msgid "Scroll~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:152
+msgctxt "object_base"
 msgid "Potion~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:159
+msgctxt "object_base"
 msgid "Flask~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:166
+msgctxt "object_base"
 msgid "Food"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:172
+msgctxt "object_base"
 msgid "Mushroom~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:178
+msgctxt "object_base"
 msgid "Magic Book~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:183
+msgctxt "object_base"
 msgid "Prayer Book~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:188
+msgctxt "object_base"
 msgid "Nature Book~"
 msgstr ""
 
 #: ../lib/gamedata/object_base.txt:193
+msgctxt "object_base"
 msgid "Shadow Book~"
 msgstr ""
 

@@ -1,12 +1,15 @@
 #: ../lib/gamedata/class.txt:136
+msgctxt "class"
 msgid "Warrior"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:172
+msgctxt "class"
 msgid "Mage"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:220
+msgctxt "class"
 msgid ""
 "Fires a magic missile that always hits its target and does"
 " unresistable damage."
@@ -16,6 +19,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:228
+msgctxt "class"
 msgid ""
 "Lights up all squares within 2 grids of the player, and hurts"
 " all light-sensitive monsters in the area of effect."
@@ -23,16 +27,19 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:237
+msgctxt "class"
 msgid ""
 "Detects all traps, doors, and stairs in the immediate area."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:242
+msgctxt "class"
 msgid ""
 "Teleports you randomly up to 10 squares away."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:250
+msgctxt "class"
 msgid ""
 "Creates an electrical discharge that hurts monsters and destroys"
 " vulnerable items in its path.  Length of the effect increases"
@@ -40,17 +47,20 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:256
+msgctxt "class"
 msgid ""
 "Detects all non-invisible monsters in the immediate area,"
 " for one turn only."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:262
+msgctxt "class"
 msgid ""
 "Shoots a radius-2 fire ball."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:275
+msgctxt "class"
 msgid ""
 "Adds charges to a stack of wands or staves."
 "  Chance of success and number of charges gained increase with your"
@@ -59,16 +69,19 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:279
+msgctxt "class"
 msgid ""
 "Reveals an unknown rune on an object."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:286
+msgctxt "class"
 msgid ""
 "Detects gold and senses objects in the immediate area."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:295
+msgctxt "class"
 msgid ""
 "Shoots a bolt of frost that always hits its target."
 "  Sometimes a beam is fired instead that hurts each monster"
@@ -77,75 +90,89 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:302
+msgctxt "class"
 msgid ""
 "Detects all monsters in the immediate area, for one turn only."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:308
+msgctxt "class"
 msgid ""
 "Sprays acid in a 60-degree cone, hitting all monsters up to 10 grids away."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:317
+msgctxt "class"
 msgid ""
 "Disables traps and destroys doors within a 1-square radius of you."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:323
+msgctxt "class"
 msgid ""
 "Teleports you randomly within the current level."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:330
+msgctxt "class"
 msgid ""
 "Produces a bolt that teleports away the first monster in its path."
 "  Distance teleported increases with player level."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:340
+msgctxt "class"
 msgid ""
 "Grants you resistance to acid, cold, fire and lightning for 20+1d20 turns."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:344
+msgctxt "class"
 msgid ""
 "Turns wand or staff energy into mana; tapping stuns the player briefly."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:349
+msgctxt "class"
 msgid ""
 "Increases spellcasting speed by 33% for 5+1d5 turns."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:358
+msgctxt "class"
 msgid ""
 "A door is created on each empty floor space that is directly"
 " adjacent to you.  These doors are closed, but not locked."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:373
+msgctxt "class"
 msgid ""
 "Teleports you 1 level up or 1 level down (chosen at random)."
 "  This spell may have no effect when the forced descent option is set."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:391
+msgctxt "class"
 msgid ""
 "Detects all traps, doors, stairs, treasure, objects and monsters in the"
 " immediate area."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:395
+msgctxt "class"
 msgid ""
 "Teleports you to (or near to) a square of your choice."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:401
+msgctxt "class"
 msgid ""
 "Fires a short range beam of force."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:413
+msgctxt "class"
 msgid ""
 "Shoots a radius-2 sound ball."
 "  Apart from doing sound damage, this also has a chance to stun"
@@ -153,12 +180,14 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:423
+msgctxt "class"
 msgid ""
 "Shoots a radius-2 shards ball and throws around anything in the area of"
 " effect."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:429
+msgctxt "class"
 msgid ""
 "Removes all monsters represented by a chosen symbol from the level."
 "  Uniques are not affected."
@@ -166,6 +195,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:435
+msgctxt "class"
 msgid ""
 "Removes all monsters within 20 squares of you."
 "  Uniques are not affected."
@@ -173,57 +203,68 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:442
+msgctxt "class"
 msgid ""
 "Shoots a radius-3 mana ball that does unresistable"
 " damage to each monster in its area of effect."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:445
+msgctxt "class"
 msgid "Druid"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:488
+msgctxt "class"
 msgid ""
 "Detects all living monsters in the immediate area, for one turn only."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:493
+msgctxt "class"
 msgid ""
 "Changes you into the shape of a quick and stealthy fox."
 "  While shapechanged you cannot use items."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:498
+msgctxt "class"
 msgid ""
 "Magically renders you comfortably fed (but not satiated)."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:504
+msgctxt "class"
 msgid ""
 "Shoots a radius-2 poison ball."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:510
+msgctxt "class"
 msgid ""
 "Confuse a single monster; more effective against animals."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:516
+msgctxt "class"
 msgid ""
 "Slows down a monster; more effective against animals."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:524
+msgctxt "class"
 msgid ""
 "Neutralizes poison."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:529
+msgctxt "class"
 msgid ""
 "Grants you resistance to poison for 20+1d20 turns."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:536
+msgctxt "class"
 msgid ""
 "Produces a beam that destroys the first section of wall it hits,"
 " unless it is a permanent wall.  Each monster caught in the beam that"
@@ -231,11 +272,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:543
+msgctxt "class"
 msgid ""
 "Maps the nearby area."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:554
+msgctxt "class"
 msgid ""
 "Strikes a target from above with a lightning bolt, followed by a clap"
 " of thunder.  Target grid must be targetable and known to the player;"
@@ -243,40 +286,47 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:561
+msgctxt "class"
 msgid ""
 "Causes shards to explode in a line out of the earth, striking objects and"
 " monsters.  Length of the line increases with player level."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:572
+msgctxt "class"
 msgid ""
 "Holds every adjacent, non-resistant monster for a level-dependent"
 " number of turns; animals are entranced for longer."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:579
+msgctxt "class"
 msgid ""
 "Attempts to put to sleep each monster within line of sight."
 "  Monsters that resist sleep are not affected."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:583
+msgctxt "class"
 msgid ""
 "Gives you the form of a statue of the Drúedain, slow but hard to hurt."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:587
+msgctxt "class"
 msgid ""
 "Gives you the form of one of the great eagles of Manwë."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:592
+msgctxt "class"
 msgid ""
 "Allows you to take the form of a great bear of the mountains, sweeping"
 " aside your enemies with your mighty paws."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:604
+msgctxt "class"
 msgid ""
 "Causes a targeted 4-square radius earthquake."
 "  Earthquakes may hurt the player, damage monsters and destroy items"
@@ -286,28 +336,33 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:610
+msgctxt "class"
 msgid ""
 "Hastes you (+10 to speed) for a level-dependent duration."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:619
+msgctxt "class"
 msgid ""
 "Restores all stats and experience points to maximum."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:625
+msgctxt "class"
 msgid ""
 "Speed up digestion to increase regeneration of hitpoints for"
 " the next 5+1d3 turns (or until hungry)."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:635
+msgctxt "class"
 msgid ""
 "Cures all cuts, poison, stunning and black breath, and leaves you"
 " well-nourished."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:652
+msgctxt "class"
 msgid ""
 "Shoots a swarm of 3 or 4 meteors."
 "  Meteors will travel until hitting a wall, a monster,"
@@ -319,32 +374,38 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:659
+msgctxt "class"
 msgid ""
 "Fires a gravity beam that hurts each monster in its path"
 " and has a chance of teleporting it away."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:665
+msgctxt "class"
 msgid ""
 "Strikes every monster in line of sight with sheets of ice from above."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:674
+msgctxt "class"
 msgid ""
 "Creates a radius 5 ball of fire, followed by a radius 5 earthquake,"
 " around the player."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:680
+msgctxt "class"
 msgid ""
 "Spews plasma in a long narrow cone from the player."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:683
+msgctxt "class"
 msgid "Priest"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:731
+msgctxt "class"
 msgid ""
 "Lights up all squares in a level-dependent area, and hurts"
 " all light-sensitive monsters in the area of effect."
@@ -352,29 +413,34 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:737
+msgctxt "class"
 msgid ""
 "Detects all evil monsters in the immediate area,"
 " for one turn only."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:749
+msgctxt "class"
 msgid ""
 "Heals a level-dependent amount or percentage of hitpoints, and"
 " cures 20 points worth of cuts and of stunning."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:757
+msgctxt "class"
 msgid ""
 "Blesses you, giving a bonus of +5 to AC and +10 to-hit, for a"
 " level-dependent number of turns."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:762
+msgctxt "class"
 msgid ""
 "Enables you to see invisible monsters for 24+1d24 turns."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:774
+msgctxt "class"
 msgid ""
 "Cures 10 points of damage, removes fear and, from character level 20,"
 " grants you heroism (resistance to fear, and a bonus of +12 to-hit)"
@@ -382,6 +448,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:787
+msgctxt "class"
 msgid ""
 "Shoots a radius-2 or radius-3 ball that does unresistable"
 " damage to each monster in its area of effect."
@@ -390,22 +457,26 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:793
+msgctxt "class"
 msgid ""
 "Fires a beam that lights up each square and hurts each"
 " light-sensitive monster in its path."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:799
+msgctxt "class"
 msgid ""
 "Inflicts unresistable damage on each undead monster within line of sight."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:805
+msgctxt "class"
 msgid ""
 "Inflicts unresistable damage on each evil monster within line of sight."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:813
+msgctxt "class"
 msgid ""
 "Protects you from evil for a level-dependent duration:"
 " all melee attacks by evil monsters have a chance to be repelled,"
@@ -413,22 +484,26 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:821
+msgctxt "class"
 msgid ""
 "Attempts to remove a curse from an item, more effective at higher"
 " character levels."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:831
+msgctxt "class"
 msgid ""
 "Teleports you randomly over a short distance."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:835
+msgctxt "class"
 msgid ""
 "Restores experience points to maximum if it is currently below maximum."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:845
+msgctxt "class"
 msgid ""
 "Teleports you from the dungeon to the town or from the town to the"
 " deepest level you have visited in the dungeon."
@@ -440,38 +515,45 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:855
+msgctxt "class"
 msgid ""
 "Heals 2000 points of damage and cures all stunning, cuts, poison"
 " and amnesia."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:863
+msgctxt "class"
 msgid ""
 "Restores to maximum all stats that are currently below maximum."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:868
+msgctxt "class"
 msgid ""
 "Lights up, maps out, and senses all objects on the complete current"
 " dungeon level."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:877
+msgctxt "class"
 msgid ""
 "Attempts to improve the to-hit bonus and the to-dam bonus of a weapon."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:882
+msgctxt "class"
 msgid ""
 "Attempts to improve the armour class bonus of a piece of armour."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:887
+msgctxt "class"
 msgid ""
 "Temporarily makes your melee attacks slay evil creatures."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:897
+msgctxt "class"
 msgid ""
 "Inscribes a glyph of warding beneath you."
 "  Summoned monsters can't appear on the glyph."
@@ -483,16 +565,19 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:902
+msgctxt "class"
 msgid ""
 "Temporarily makes your melee attacks powerfully slay demons."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:911
+msgctxt "class"
 msgid ""
 "Teleports away each evil monster within line of sight."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:920
+msgctxt "class"
 msgid ""
 "Destroys everything in a 15-square radius circle around you."
 "  All monsters, objects, and terrain features in the area of"
@@ -503,6 +588,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:934
+msgctxt "class"
 msgid ""
 "Inflicts unresistable damage on each evil monster within line of sight,"
 " cures 1000 points of damage, cures all stunning, heals all cut damage,"
@@ -510,38 +596,45 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:940
+msgctxt "class"
 msgid ""
 "Fires a beam of holy magic that does extra damage to evil creatures."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:949
+msgctxt "class"
 msgid ""
 "Casts a radius 4 ball of strong light, and then bathes the entire area"
 " in light doing 100 damage to every light-sensitive creature."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:952
+msgctxt "class"
 msgid "Necromancer"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:995
+msgctxt "class"
 msgid ""
 "Fires a bolt of nether magic."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1007
+msgctxt "class"
 msgid ""
 "Darkens all squares in a level-dependent area.  If you are in a room,"
 " the entire room will be darkened as well."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1012
+msgctxt "class"
 msgid ""
 "Changes you into the shape of a bat, weak but with excellent senses."
 "  While shapechanged you cannot use items."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1023
+msgctxt "class"
 msgid ""
 "Detects all monsters which have a spirit in the immediate area,"
 " and then maps in a region around them, increasing in size with"
@@ -549,11 +642,13 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1033
+msgctxt "class"
 msgid ""
 "Targets the nearest undead monster and damages it to gain player mana."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1044
+msgctxt "class"
 msgid ""
 "Instantly kill any monster in line-of-sight with less than four times the"
 " player's level in hitpoints, also hurting the player.  Other monsters are"
@@ -561,63 +656,74 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1051
+msgctxt "class"
 msgid ""
 "Attempts to put to sleep each evil monster within line of sight."
 "  Monsters that resist confusion are not affected."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1060
+msgctxt "class"
 msgid ""
 "Displaces your spirit a short distance, hurting your body as it is"
 " dragged along."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1067
+msgctxt "class"
 msgid ""
 "Casts a bolt which wounds, and makes spellcasting monsters less successful"
 " in casting spells."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1078
+msgctxt "class"
 msgid ""
 "Attempts to scare a single monster for a level-dependent duration."
 "  Monsters that resist fear are not affected."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1085
+msgctxt "class"
 msgid ""
 "Teleports you to the nearest living monster and drains a level-dependent"
 " number of hitpoints, healing and nourishing the player."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1091
+msgctxt "class"
 msgid ""
 "Inflicts unresistable damage on each living monster within line of sight."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1097
+msgctxt "class"
 msgid ""
 "Fires a beam of darkness."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1102
+msgctxt "class"
 msgid ""
 "Changes you into the form of a warg, and gives you temporary berserk"
 " strength, at the cost of some hitpoints."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1112
+msgctxt "class"
 msgid ""
 "Teleports away each monster with a spirit within line of sight."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1119
+msgctxt "class"
 msgid ""
 "Inflicts damage equal to four times player level on a single monster that"
 " is not undead, an elemental, a golem, or a vortex."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1128
+msgctxt "class"
 msgid ""
 "Destroys everything in a 15-square radius circle around you."
 "  All monsters, objects, and terrain features in the area of"
@@ -628,34 +734,40 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1147
+msgctxt "class"
 msgid ""
 "Fires a chaos beam, arc or ball in the chosen direction, wakes everything"
 " in the area, and attempts to frighten everything in line of sight."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1153
+msgctxt "class"
 msgid ""
 "Darkens, maps out, and detects all objects on the complete current"
 " dungeon level."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1159
+msgctxt "class"
 msgid ""
 "Invokes a radius-4 darkness ball."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1172
+msgctxt "class"
 msgid ""
 "Exchanges 50 hitpoints for 50 mana."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1179
+msgctxt "class"
 msgid ""
 "Produces a zone of disenchantment affecting the player and monsters"
 " within radius 4."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1190
+msgctxt "class"
 msgid ""
 "Allows you to assume the form of a vampire at the cost of half your"
 " current hitpoints, than teleports you to the nearest living monster"
@@ -665,22 +777,26 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1201
+msgctxt "class"
 msgid ""
 "Deals direct damage to a single monster, more the more damaged the monster"
 " is already, at the cost of 100 hitpoints."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1207
+msgctxt "class"
 msgid ""
 "Allows you to take control of a monster, and move it instead of yourself."
 "  Possible actions are move, stand still, 'd'rop, 'm'agic, or 'r'elease."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1209
+msgctxt "class"
 msgid "Paladin"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1298
+msgctxt "class"
 msgid ""
 "Cures 10 points of damage, removes fear and, from character level 15,"
 " grants you heroism (resistance to fear, and a bonus of +12 to-hit)"
@@ -688,57 +804,68 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1368
+msgctxt "class"
 msgid ""
 "Encases you and the targeted monster in a stone cell from which only the"
 " winner can emerge."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1371
+msgctxt "class"
 msgid "Rogue"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1426
+msgctxt "class"
 msgid ""
 "Detects all objects in the immediate area."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1431
+msgctxt "class"
 msgid ""
 "Detects all stairs in a wide area."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1460
+msgctxt "class"
 msgid ""
 "Prepares you to teleport a short distance after stealing from a monster."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1475
+msgctxt "class"
 msgid "Ranger"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1530
+msgctxt "class"
 msgid ""
 "Cures all cuts, poison, stunning and black breath."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1559
+msgctxt "class"
 msgid ""
 "Prevents you from leaving scent for monsters to track you by for a"
 " level-dependent duration."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1564
+msgctxt "class"
 msgid ""
 "Allows the player to turn a staff into a stack of arrows, with quality"
 " depending on staff level and player level."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1574
+msgctxt "class"
 msgid ""
 "Leaves a magical decoy that looks and sounds like the player."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1582
+msgctxt "class"
 msgid ""
 "Brands one stack of ammunition with fire, cold, or poison"
 " (selected at random) and at the same time attempts to improve"
@@ -748,16 +875,19 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1585
+msgctxt "class"
 msgid "Blackguard"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1630
+msgctxt "class"
 msgid ""
 "Detects all monsters susceptible to fear in the immediate area,"
 " for one turn only."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1640
+msgctxt "class"
 msgid ""
 "Removes fear and grants you berserk strength (resistance to fear,"
 " +75 melee skill, -10 to AC, and prevents healing"
@@ -765,6 +895,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1648
+msgctxt "class"
 msgid ""
 "Deals a level-dependent number of melee blows to each adjacent enemy."
 "  At level 5 you do one blow and gain an additional blow every 15"
@@ -772,12 +903,14 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1654
+msgctxt "class"
 msgid ""
 "Destroys an adjacent section of wall or rubble, unless it is a permanent"
 " wall.  Deals 20+1d30 damage to monsters vulnerable to rock remover."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1662
+msgctxt "class"
 msgid ""
 "You run up to 4 spaces towards targeted enemy, then perform a"
 " melee blow.  You gain an additional blow at levels 25 and 40.  If you"
@@ -785,12 +918,14 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1671
+msgctxt "class"
 msgid ""
 "Your mind becomes too focused to be slowed, paralyzed or confused"
 " for 12+d12 turns."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1681
+msgctxt "class"
 msgid ""
 "Attempts a level-dependent number of melee blows against the targeted"
 " enemy.  You get 1 blow for every 15 levels.  If any of these blows"
@@ -798,6 +933,7 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1689
+msgctxt "class"
 msgid ""
 "Attempts to scare every monster in line of sight for a duration dependent"
 " on player level and monster depth.  Monsters that resist fear are not"
@@ -805,23 +941,27 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1695
+msgctxt "class"
 msgid ""
 "Makes any monster that can move more inclined to run toward you, and less"
 " likely to use a ranged attack (including spells and innate abilities)."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1700
+msgctxt "class"
 msgid ""
 "Coats all your melee weapons with poison for 18+d18 turns."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1705
+msgctxt "class"
 msgid ""
 "With a blood-curdling cry you change into a half-man half-wolf!"
 "  In this form you move, attack, and heal faster."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1714
+msgctxt "class"
 msgid ""
 "Gives you a powerful desire to kill, increased every time you satisfy it."
 "  Gives you extra melee damage and extra blows, but comes"
@@ -829,17 +969,20 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1723
+msgctxt "class"
 msgid ""
 "Restores STR, INT, CON, and experience at the cost of 66 HP."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1729
+msgctxt "class"
 msgid ""
 "Attempts a melee blow that deals additional force damage when it hits,"
 " knocking the target back with a chance to stun it."
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1732
+msgctxt "class"
 msgid ""
 "Causes a radius 13 earthquake centered around the player."
 msgstr ""

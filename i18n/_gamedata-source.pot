@@ -1,96 +1,120 @@
 #: ../src/obj-desc.c:125
+msgctxt "object"
 msgid "& # Amulet~"
 msgstr ""
 
 #: ../src/obj-desc.c:125
+msgctxt "object"
 msgid "& Amulet~"
 msgstr ""
 
 #: ../src/obj-desc.c:128
+msgctxt "object"
 msgid "& # Ring~"
 msgstr ""
 
 #: ../src/obj-desc.c:128
+msgctxt "object"
 msgid "& Ring~"
 msgstr ""
 
 #: ../src/obj-desc.c:131
+msgctxt "object"
 msgid "& # Sta|ff|ves|"
 msgstr ""
 
 #: ../src/obj-desc.c:131
+msgctxt "object"
 msgid "& Sta|ff|ves|"
 msgstr ""
 
 #: ../src/obj-desc.c:134
+msgctxt "object"
 msgid "& # Wand~"
 msgstr ""
 
 #: ../src/obj-desc.c:134
+msgctxt "object"
 msgid "& Wand~"
 msgstr ""
 
 #: ../src/obj-desc.c:137
+msgctxt "object"
 msgid "& # Rod~"
 msgstr ""
 
 #: ../src/obj-desc.c:137
+msgctxt "object"
 msgid "& Rod~"
 msgstr ""
 
 #: ../src/obj-desc.c:140
+msgctxt "object"
 msgid "& # Potion~"
 msgstr ""
 
 #: ../src/obj-desc.c:140
+msgctxt "object"
 msgid "& Potion~"
 msgstr ""
 
 #: ../src/obj-desc.c:143
+msgctxt "object"
 msgid "& Scroll~ titled #"
 msgstr ""
 
 #: ../src/obj-desc.c:143
+msgctxt "object"
 msgid "& Scroll~"
 msgstr ""
 
 #: ../src/obj-desc.c:147 ../src/obj-desc.c:153 ../src/obj-desc.c:159
 #: ../src/obj-desc.c:171
+msgctxt "object"
 msgid "& Book~ #"
 msgstr ""
 
 #: ../src/obj-desc.c:149
+msgctxt "object"
 msgid "& Book~ of Magic Spells #"
 msgstr ""
 
 #: ../src/obj-desc.c:155
+msgctxt "object"
 msgid "& Holy Book~ of Prayers #"
 msgstr ""
 
 #: ../src/obj-desc.c:161
+msgctxt "object"
 msgid "& Book~ of Nature Magics #"
 msgstr ""
 
 #: ../src/obj-desc.c:165
+msgctxt "object"
 msgid "& Tome~ #"
 msgstr ""
 
 #: ../src/obj-desc.c:167
+msgctxt "object"
 msgid "& Necromantic Tome~ #"
 msgstr ""
 
 #: ../src/obj-desc.c:173
+msgctxt "object"
 msgid "& Book of Mysteries~ #"
 msgstr ""
 
 #: ../src/obj-desc.c:176
+msgctxt "object"
 msgid "& # Mushroom~"
 msgstr ""
 
 #: ../src/obj-desc.c:176
+msgctxt "object"
 msgid "& Mushroom~"
 msgstr ""
 
 #: ../src/obj-desc.c:179
+msgctxt "object"
 msgid "(nothing)"
 msgstr ""

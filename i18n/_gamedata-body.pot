@@ -1,48 +1,60 @@
 #: ../lib/gamedata/body.txt:12
+msgctxt "body"
 msgid "weapon"
 msgstr ""
 
 #: ../lib/gamedata/body.txt:13
+msgctxt "body"
 msgid "shooting"
 msgstr ""
 
 #: ../lib/gamedata/body.txt:14
+msgctxt "body"
 msgid "right hand"
 msgstr ""
 
 #: ../lib/gamedata/body.txt:15
+msgctxt "body"
 msgid "left hand"
 msgstr ""
 
 #: ../lib/gamedata/body.txt:16
+msgctxt "body"
 msgid "neck"
 msgstr ""
 
 #: ../lib/gamedata/body.txt:17
+msgctxt "body"
 msgid "light"
 msgstr ""
 
 #: ../lib/gamedata/body.txt:18
+msgctxt "body"
 msgid "body"
 msgstr ""
 
 #: ../lib/gamedata/body.txt:19
+msgctxt "body"
 msgid "back"
 msgstr ""
 
 #: ../lib/gamedata/body.txt:20
+msgctxt "body"
 msgid "arm"
 msgstr ""
 
 #: ../lib/gamedata/body.txt:21
+msgctxt "body"
 msgid "head"
 msgstr ""
 
 #: ../lib/gamedata/body.txt:22
+msgctxt "body"
 msgid "hands"
 msgstr ""
 
 #: ../lib/gamedata/body.txt:23
+msgctxt "body"
 msgid "feet"
 msgstr ""
 

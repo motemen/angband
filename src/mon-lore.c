@@ -946,7 +946,7 @@ void lore_append_flavor(textblock *tb, const struct monster_race *race)
 {
 	assert(tb && race);
 
-	textblock_append(tb, "%s\n", _GAMEDATA(race->text));
+	textblock_append(tb, "%s\n", _GAMEDATA_C("monster", race->text));
 }
 
 /**
@@ -1736,7 +1736,7 @@ void lore_append_attack(textblock *tb, const struct monster_race *race,
 			textblock_append(tb, _(", and "));
 
 		/* Describe the method */
-		textblock_append(tb, "%s", _GAMEDATA(race->blow[i].method->desc));
+		textblock_append(tb, "%s", _GAMEDATA_C("blow_methods", race->blow[i].method->desc));
 
 		/* Describe the effect (if any) */
 		if (effect_str && strlen(effect_str) > 0) {
@@ -1744,7 +1744,7 @@ void lore_append_attack(textblock *tb, const struct monster_race *race,
 			/* Describe the attack type */
 			// XXX[locale]: " to " usage differs to describe_effect() in obj-info.c
 			textblock_append(tb, _C("mon-lore", " to "));
-			textblock_append_c(tb, blow_color(player, index), "%s", _GAMEDATA(effect_str));
+			textblock_append_c(tb, blow_color(player, index), "%s", _GAMEDATA_C("blow_effects", effect_str));
 
 			textblock_append(tb, " (");
 			/* Describe damage (if known) */

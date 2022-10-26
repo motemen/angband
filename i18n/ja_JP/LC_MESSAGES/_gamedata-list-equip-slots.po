@@ -1,0 +1,80 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Angband 4.2.4\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../src/list-equip-slots.h:15
+msgctxt "list-equip-slots"
+msgid "Wielding"
+msgstr ""
+
+#: ../src/list-equip-slots.h:15
+msgctxt "list-equip-slots"
+msgid "just lifting"
+msgstr ""
+
+#: ../src/list-equip-slots.h:15
+msgctxt "list-equip-slots"
+msgid "attacking monsters with"
+msgstr ""
+
+#: ../src/list-equip-slots.h:16
+msgctxt "list-equip-slots"
+msgid "Shooting"
+msgstr ""
+
+#: ../src/list-equip-slots.h:16
+msgctxt "list-equip-slots"
+msgid "just holding"
+msgstr ""
+
+#: ../src/list-equip-slots.h:16
+msgctxt "list-equip-slots"
+msgid "shooting missiles with"
+msgstr ""
+
+#: ../src/list-equip-slots.h:17 ../src/list-equip-slots.h:20
+#: ../src/list-equip-slots.h:21 ../src/list-equip-slots.h:22
+#: ../src/list-equip-slots.h:23 ../src/list-equip-slots.h:24
+#: ../src/list-equip-slots.h:25
+#, c-format
+msgctxt "list-equip-slots"
+msgid "On %s"
+msgstr ""
+
+#: ../src/list-equip-slots.h:17 ../src/list-equip-slots.h:20
+#: ../src/list-equip-slots.h:21 ../src/list-equip-slots.h:22
+#: ../src/list-equip-slots.h:23 ../src/list-equip-slots.h:24
+#: ../src/list-equip-slots.h:25
+#, c-format
+msgctxt "list-equip-slots"
+msgid "wearing on your %s"
+msgstr ""
+
+#: ../src/list-equip-slots.h:18
+#, c-format
+msgctxt "list-equip-slots"
+msgid "Around %s"
+msgstr ""
+
+#: ../src/list-equip-slots.h:18
+#, c-format
+msgctxt "list-equip-slots"
+msgid "wearing around your %s"
+msgstr ""
+
+#: ../src/list-equip-slots.h:19
+msgctxt "list-equip-slots"
+msgid "Light source"
+msgstr ""
+
+#: ../src/list-equip-slots.h:19
+msgctxt "list-equip-slots"
+msgid "using to light your way"
+msgstr ""

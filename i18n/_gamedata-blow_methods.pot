@@ -1,226 +1,278 @@
 #: ../lib/gamedata/blow_methods.txt:20
+msgctxt "blow_methods"
 msgid "hits {target}"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:22
+msgctxt "blow_methods"
 msgid ""
 "hit"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:29
+msgctxt "blow_methods"
 msgid "touches {target}"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:31
+msgctxt "blow_methods"
 msgid ""
 "touch"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:38
+msgctxt "blow_methods"
 msgid "punches {target}"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:40
+msgctxt "blow_methods"
 msgid ""
 "punch"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:47
+msgctxt "blow_methods"
 msgid "kicks {target}"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:49
+msgctxt "blow_methods"
 msgid ""
 "kick"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:56
+msgctxt "blow_methods"
 msgid "claws {target}"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:58
+msgctxt "blow_methods"
 msgid ""
 "claw"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:65
+msgctxt "blow_methods"
 msgid "bites {target}"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:67
+msgctxt "blow_methods"
 msgid ""
 "bite"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:74
+msgctxt "blow_methods"
 msgid "stings {target}"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:76
+msgctxt "blow_methods"
 msgid ""
 "sting"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:83
+msgctxt "blow_methods"
 msgid "butts {target}"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:85
+msgctxt "blow_methods"
 msgid ""
 "butt"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:92
+msgctxt "blow_methods"
 msgid "crushes {target}"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:94
+msgctxt "blow_methods"
 msgid ""
 "crush"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:101
+msgctxt "blow_methods"
 msgid "engulfs {target}"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:103
+msgctxt "blow_methods"
 msgid ""
 "engulf"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:110
+msgctxt "blow_methods"
 msgid "crawls on {target}"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:112
+msgctxt "blow_methods"
 msgid ""
 "crawl on you"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:119
+msgctxt "blow_methods"
 msgid "drools on {target}"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:121
+msgctxt "blow_methods"
 msgid ""
 "drool on you"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:128
+msgctxt "blow_methods"
 msgid "spits on {target}"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:130
+msgctxt "blow_methods"
 msgid ""
 "spit"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:137
+msgctxt "blow_methods"
 msgid "gazes at {target}"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:139
+msgctxt "blow_methods"
 msgid ""
 "gaze"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:146
+msgctxt "blow_methods"
 msgid "wails at {target}"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:148
+msgctxt "blow_methods"
 msgid ""
 "wail"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:155
+msgctxt "blow_methods"
 msgid "releases spores at {target}"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:157
+msgctxt "blow_methods"
 msgid ""
 "release spores"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:164
+msgctxt "blow_methods"
 msgid "begs {target} for money"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:166
+msgctxt "blow_methods"
 msgid ""
 "beg"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:173
+msgctxt "blow_methods"
 msgid "insults {target}!"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:174
+msgctxt "blow_methods"
 msgid "insults {oftarget} mother!"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:175
+msgctxt "blow_methods"
 msgid "gives {target} the finger!"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:176
+msgctxt "blow_methods"
 msgid "humiliates {target}!"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:177
+msgctxt "blow_methods"
 msgid "defiles {target}!"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:178
+msgctxt "blow_methods"
 msgid "dances around {target}!"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:179
+msgctxt "blow_methods"
 msgid "makes obscene gestures!"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:180
+msgctxt "blow_methods"
 msgid "moons {target}!!!"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:182
+msgctxt "blow_methods"
 msgid ""
 "insult"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:189
+msgctxt "blow_methods"
 msgid "wants his mushrooms back"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:190
+msgctxt "blow_methods"
 msgid "tells {target} to get off his land"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:191
+msgctxt "blow_methods"
 msgid "looks for his dogs"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:192
+msgctxt "blow_methods"
 msgid "says 'Did you kill my Fang?'"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:193
+msgctxt "blow_methods"
 msgid "asks 'Do you want to buy any mushrooms?'"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:194
+msgctxt "blow_methods"
 msgid "seems sad about something"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:195
+msgctxt "blow_methods"
 msgid "asks if {target} {has} seen his dogs"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:196
+msgctxt "blow_methods"
 msgid "mumbles something about mushrooms"
 msgstr ""
 
 #: ../lib/gamedata/blow_methods.txt:198
+msgctxt "blow_methods"
 msgid ""
 "moan"
 msgstr ""

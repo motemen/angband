@@ -74,7 +74,7 @@ const char *describe_race_flag(int flag)
 	if (flag <= RF_NONE || flag >= RF_MAX)
 		return "";
 
-	return _LIST(rf->desc);
+	return _GAMEDATA_C("list-mon-race-flags", rf->desc);
 }
 
 /**

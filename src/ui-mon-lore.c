@@ -60,7 +60,7 @@ void lore_title(textblock *tb, const struct monster_race *race)
 	}
 
 	/* Dump the name and then append standard attr/char info */
-	textblock_append(tb, "%s", _GAMEDATA(race->name));
+	textblock_append(tb, "%s", _GAMEDATA_C("monster", race->name));
 
 	textblock_append(tb, " ('");
 	textblock_append_pict(tb, standard_attr, standard_char);

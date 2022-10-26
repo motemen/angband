@@ -11,10 +11,11 @@ GAMEDATA_POTS = \
 		_gamedata-object_base.pot \
 		_gamedata-artifact.pot \
 		_gamedata-terrain.pot \
-		_gamedata-body.pot
+		_gamedata-body.pot \
+		_gamedata-list-equip-slots.pot
 
 .PHONY: all
-all: $(LOCALE)/LC_MESSAGES/messages.mo $(LOCALE)/LC_MESSAGES/gamedata.mo $(LOCALE)/LC_MESSAGES/list.mo
+all: $(LOCALE)/LC_MESSAGES/messages.mo $(LOCALE)/LC_MESSAGES/gamedata.mo
 
 .PHONY: all-pots
 all-pots: $(GAMEDATA_POTS)
@@ -24,11 +25,10 @@ all-pots: $(GAMEDATA_POTS)
 
 $(LOCALE)/LC_MESSAGES/messages.mo: $(LOCALE)/LC_MESSAGES/messages.po
 
-$(LOCALE)/LC_MESSAGES/list.mo: $(LOCALE)/LC_MESSAGES/list.po
+$(LOCALE)/LC_MESSAGES/gamedata.mo: $(LOCALE)/LC_MESSAGES/gamedata.po
 
 $(LOCALE)/LC_MESSAGES/gamedata.po: \
 		$(patsubst %.pot,$(LOCALE)/LC_MESSAGES/%.po,$(GAMEDATA_POTS))
-
 	chmod +w $@
 	xgettext $^ -o - | grep -v POT-Creation-Date: > $@
 	chmod -w $@
@@ -46,9 +46,10 @@ messages.pot: $(wildcard ../src/*.c)
 	xgettext --omit-header -k_ -kN_ -k_C:1c,2 -o $@ ../src/*.c
 	chmod -w $@
 
-list.pot: $(wildcard ../src/list-*.h)
+_gamedata-list-%.pot: ../src/list-%.h
 	chmod +w $@ || true
-	xgettext --omit-header -k_LIST -kN_LIST -o $@ ../src/list-*.h
+	xgettext --omit-header -kN_GAMEDATA -o $@ ../src/list-$*.h
+	perl -i -ple 'print qq(msgctxt "list-$*") if /^msgid /' $@
 	chmod -w $@
 
 _gamedata-%.pot:
@@ -58,5 +59,5 @@ _gamedata-%.pot:
 
 _gamedata-source.pot:
 	chmod +w $@ || true
-	xgettext --omit-header -k_GAMEDATA -kN_GAMEDATA -k -o $@ ../src/*.c ../src/*.h
+	xgettext --omit-header -k_GAMEDATA -k_GAMEDATA_C:1c,2 -kN_GAMEDATA -k -o $@ ../src/*.c
 	chmod -w $@
