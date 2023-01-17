@@ -27,6 +27,7 @@
 #include "z-virt.h"
 #include "z-form.h"
 #include "z-file.h"
+#include "i18n.h"
 
 #define TEXTBLOCK_LEN_INITIAL		128
 #define TEXTBLOCK_LEN_INCR(x)		((x) + 128)
@@ -84,12 +85,9 @@ static void textblock_resize_if_needed(textblock *tb, size_t additional_size)
 	}
 }
 
-static void textblock_vappend_c(textblock *tb, uint8_t attr, const char *fmt,
-		va_list vp)
-{
+static char *alloc_fmt_v(const char *fmt, va_list vp) {
 	size_t temp_len = TEXTBLOCK_LEN_INITIAL;
 	char *temp_space = mem_zalloc(temp_len);
-	int new_length;
 
 	/* We have to format the incoming string in native (external) format
 	 * re-allocating the temporary space as necessary. Once it's been
@@ -110,6 +108,15 @@ static void textblock_vappend_c(textblock *tb, uint8_t attr, const char *fmt,
 		temp_len = TEXTBLOCK_LEN_INCR(temp_len);
 		temp_space = mem_realloc(temp_space, temp_len * sizeof *temp_space);
 	}
+
+	return temp_space;
+}
+
+static void textblock_vappend_c(textblock *tb, uint8_t attr, const char *fmt,
+		va_list vp)
+{
+	char *temp_space = alloc_fmt_v(fmt, vp);
+	int new_length;
 
 	/* Get extent of addition in wide chars */
 	new_length = text_mbstowcs(NULL, temp_space, 0);
@@ -233,6 +240,7 @@ size_t textblock_calculate_lines(textblock *tb, size_t **line_starts, size_t **l
 	size_t total_lines = 0;
 	size_t current_line_index = 0;
 	size_t current_line_length = 0;
+	size_t current_line_width = 0;
 	size_t breaking_char_offset = 0;
 
 	if (tb == NULL || line_starts == NULL || line_lengths == NULL || width == 0)
@@ -252,16 +260,19 @@ size_t textblock_calculate_lines(textblock *tb, size_t **line_starts, size_t **l
 			new_line(line_starts, line_lengths, &alloc_lines, &total_lines, text_offset + 1, 0);
 			current_line_index++;
 			current_line_length = 0;
+			current_line_width = 0;
 		}
 		else if (text[text_offset] == L' ') {
 			breaking_char_offset = text_offset;
 			current_line_length++;
+			current_line_width++;
 		}
 		else {
 			current_line_length++;
+			current_line_width += i18n_wchar_visualwidth(text[text_offset]);
 		}
 
-		if (current_line_length == width) {
+		if (current_line_width + (MAX_CHAR_VISUAL_WIDTH-1) >= width) {
 			/* We're out of space on the line and need to break it. */
 
 			size_t const current_line_start = (*line_starts)[current_line_index];
@@ -281,7 +292,7 @@ size_t textblock_calculate_lines(textblock *tb, size_t **line_starts, size_t **l
 				/* There was no breaking character on the current line, so we
 				 * just break at the current character. This can happen with a 
 				 * word that takes up the whole line, for example. */
-				adjusted_line_length = width;
+				adjusted_line_length = current_line_length;
 				next_line_start_offset = text_offset + 1;
 				text_offset++;
 			}
@@ -290,6 +301,7 @@ size_t textblock_calculate_lines(textblock *tb, size_t **line_starts, size_t **l
 			new_line(line_starts, line_lengths, &alloc_lines, &total_lines, next_line_start_offset, 0);
 			current_line_index++;
 			current_line_length = 0;
+			current_line_width = 0;
 		}
 		else {
 			/* There is still space on the line, so just add the character. */
@@ -726,3 +738,52 @@ errr text_lines_to_file(const char *path, text_writer writer)
 	return 0;
 }
 
+/**
+ * Add text to a text block, formatted
+ * and takes "embedded formatting" same as text_out_e() does
+ */
+void textblock_append_e(textblock *tb, const char *fmt, ...) {
+	va_list vp;
+	va_start(vp, fmt);
+	char *temp_space = alloc_fmt_v(fmt, vp);
+	va_end(vp);
+
+	char smallbuf[1024];
+	const char *start, *next, *text, *tag;
+	size_t textlen, taglen = 0;
+	start = temp_space;
+	while (next_section(start, 0, &text, &textlen, &tag, &taglen, &next)) {
+		int a = -1;
+
+		memcpy(smallbuf, text, textlen);
+		smallbuf[textlen] = 0;
+
+		if (tag) {
+			char tagbuffer[16];
+
+			/* Colour names are less than 16 characters long. */
+			assert(taglen < 16);
+
+			memcpy(tagbuffer, tag, taglen);
+			tagbuffer[taglen] = '\0';
+
+			a = color_text_to_attr(tagbuffer);
+		}
+		
+		if (a == -1) 
+			a = COLOUR_WHITE;
+
+		/* Get extent of addition in wide chars */
+		size_t new_length = text_mbstowcs(NULL, smallbuf, 0);
+		assert(new_length >= 0); /* If this fails, the string was badly formed */
+		textblock_resize_if_needed(tb, new_length + 1);
+
+		/* Convert to wide chars, into the text block buffer */
+		text_mbstowcs(tb->text + tb->strlen, smallbuf, tb->size - tb->strlen);
+		memset(tb->attrs + tb->strlen, a, new_length);
+		tb->strlen += new_length;
+
+		start = next;
+	}
+	mem_free(temp_space);
+}

@@ -61,4 +61,6 @@ extern void text_out_e(const char *fmt, ...)
 typedef void (*text_writer)(ang_file *f);
 errr text_lines_to_file(const char *path, text_writer writer);
 
+void textblock_append_e(textblock *tb, const char *fmt, ...);
+
 #endif /* INCLUDED_Z_TEXTBLOCK_H */
