@@ -249,9 +249,9 @@ static void get_subject(char *buf, size_t buflen,
 	} else {
 		/* Uniques, multiple monsters, or just one */
 		if (rf_has(race->flags, RF_UNIQUE)) {
-			my_strcpy(buf, race->name, buflen);
+			my_strcpy(buf, _GAMEDATA_C("monster", race->name), buflen);
 		} else if (count == 1) {
-			strnfmt(buf, buflen, "The %s", race->name);
+			strnfmt(buf, buflen, _("The %s"), _GAMEDATA_C("monster", race->name));
 		} else {
 			/* Get the plural of the race name */
 			if (race->plural != NULL) {
@@ -294,7 +294,7 @@ static void get_message_text(char *buf, size_t buflen,
 	assert(race->base->pain != NULL);
 
 	/* Find the appropriate message */
-	const char *source = msg_repository[msg_code].msg;
+	const char *source = _(msg_repository[msg_code].msg);
 	switch (msg_code) {
 		case MON_MSG_95: source = race->base->pain->messages[0]; break;
 		case MON_MSG_75: source = race->base->pain->messages[1]; break;
