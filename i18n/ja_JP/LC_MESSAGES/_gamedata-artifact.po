@@ -1,18 +1,44 @@
+# ## Original comments from Hengband 3.0.0Alpha68:
+# #JZ# Zangband 日本語訳: 板倉
+# #JZ# 「#J0#」で始まるコメントは日本語板 Angband のしとしんさんによる
+# #JZ# もので、「#JZ#」で始まるコメントは日本語版 Zangband で新たに
+# #JZ# 加わった項目です。日本語アングバンド同様、私（板倉）以外の方の
+# #JZ# コメントにはその方の名前を記載しています。
+# #JZ#
+# #JZ# ＃＃＃ 以下は日本語版 Angband にあるコメントです ＃＃＃
+# #J0# 日本語訳と日本語版製作 : しとしん
+# #J0#
+# #J0# 日本語版ではオリジナルと比較して設定項目が一つ増えています。
+# #J0#
+# #J0#
+# #J0# 翻訳に際してなるべく資料を確認するようにしました。
+# #J0# p.--  とあるのは「トールキン指輪物語辞典」でのページ数、
+# #J0# wp. --とあるのは「新訳指輪物語追補編」でのページ数をあらわします。
+# #J0# Ko -- とあるのは小林健一さんに教えてもらったものです。
+# #J0# ??? --とあるのは調べがつかなかったものです。
+# #J0#
+# #J0# 伝説のアイテムの翻訳に関しては 都々目さとし さんに大変お世話になりました。
+# #J0#
+# #J0# 所々にあるコメントは 小林 さんと 都々目さとし さんのものです。かっこ内に発
+# #J0# 言者を記載しました。
+# #J0#
+# #J0#「コメント」で検索できます。
+# #J0#
+# #J0# (ゲーム中での画面出力)
+# #J0#
+# #J0# 『』で囲まれた名前はアイテム名の後につきます。
+# #J0#      ex) スモール・ソード『つらぬき丸』
+# #J0#                         ~~~~~~~~~~~~~~
+# #J0# それ以外はアイテム名の前につきます。
+# #J0#      ex) スラインのアーケン石
+# #J0#          ~~~~~~~~~~
 msgid ""
-msgstr ""
-"Project-Id-Version: Angband 4.2.4\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: ja\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 #: ../lib/gamedata/artifact.txt:108
 msgctxt "artifact"
 msgid "of Galadriel"
-msgstr ""
+msgstr "ガラドリエルの"
 
 #: ../lib/gamedata/artifact.txt:123
 msgctxt "artifact"
@@ -24,7 +50,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:124
 msgctxt "artifact"
 msgid "of Elendil"
-msgstr ""
+msgstr "丈高きエレンディルの"
 
 #: ../lib/gamedata/artifact.txt:138
 msgctxt "artifact"
@@ -34,7 +60,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:139
 msgctxt "artifact"
 msgid "of Thráin"
-msgstr ""
+msgstr "トーリン王の"
 
 #: ../lib/gamedata/artifact.txt:155
 msgctxt "artifact"
@@ -47,7 +73,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:180
 msgctxt "artifact"
 msgid "'Angrist'"
-msgstr ""
+msgstr "『オルクリスト』"
 
 #: ../lib/gamedata/artifact.txt:197
 msgctxt "artifact"
@@ -60,7 +86,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:198
 msgctxt "artifact"
 msgid "'Narthanc'"
-msgstr ""
+msgstr "『ナルサンク』"
 
 #: ../lib/gamedata/artifact.txt:211
 msgctxt "artifact"
@@ -70,7 +96,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:212
 msgctxt "artifact"
 msgid "'Nimthanc'"
-msgstr ""
+msgstr "『ニムサンク』"
 
 #: ../lib/gamedata/artifact.txt:225
 msgctxt "artifact"
@@ -80,7 +106,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:226
 msgctxt "artifact"
 msgid "'Dethanc'"
-msgstr ""
+msgstr "『デサンク』"
 
 #: ../lib/gamedata/artifact.txt:239
 msgctxt "artifact"
@@ -90,7 +116,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:240
 msgctxt "artifact"
 msgid "of Rilia"
-msgstr ""
+msgstr "リリアの"
 
 #: ../lib/gamedata/artifact.txt:256
 msgctxt "artifact"
@@ -98,11 +124,13 @@ msgid ""
 "A large stiletto dagger that glistens with odorless poison, to which the "
 "wearer seems oddly immune."
 msgstr ""
+"シンダール語で「地獄の輝き」を意味する名を持つ大型のダガーで、毒で輝いている"
+"が装備するものは何故か毒の影響を受けない。"
 
 #: ../lib/gamedata/artifact.txt:257
 msgctxt "artifact"
 msgid "'Belangil'"
-msgstr ""
+msgstr "『リンギル』"
 
 #: ../lib/gamedata/artifact.txt:272
 msgctxt "artifact"
@@ -114,7 +142,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:273
 msgctxt "artifact"
 msgid "of Azaghâl"
-msgstr ""
+msgstr "ドワーフ王アザガルの"
 
 #: ../lib/gamedata/artifact.txt:289
 msgctxt "artifact"
@@ -128,7 +156,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:290
 msgctxt "artifact"
 msgid "of Maedhros"
-msgstr ""
+msgstr "丈高きマエズロスの"
 
 #: ../lib/gamedata/artifact.txt:305
 msgctxt "artifact"
@@ -140,7 +168,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:306
 msgctxt "artifact"
 msgid "'Forasgil'"
-msgstr ""
+msgstr "『フォラスギル』"
 
 #: ../lib/gamedata/artifact.txt:318
 msgctxt "artifact"
@@ -150,7 +178,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:319
 msgctxt "artifact"
 msgid "'Careth Asdriag'"
-msgstr ""
+msgstr "『カレス・アスドリアグ』"
 
 #: ../lib/gamedata/artifact.txt:335
 msgctxt "artifact"
@@ -162,7 +190,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:336
 msgctxt "artifact"
 msgid "'Sting'"
-msgstr ""
+msgstr "『つらぬき丸』"
 
 #: ../lib/gamedata/artifact.txt:354
 msgctxt "artifact"
@@ -188,7 +216,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:370
 msgctxt "artifact"
 msgid "'Gondricam'"
-msgstr ""
+msgstr "『ゴンドリカム』"
 
 #: ../lib/gamedata/artifact.txt:384
 msgctxt "artifact"
@@ -197,6 +225,8 @@ msgid ""
 "with a perfect edge shining cleanly in the sun, an object of hate to the men "
 "of Umbar who met it in combat."
 msgstr ""
+"名高きレベンニンの海の守護者だ。陽光に輝く完璧な刃は、ウンバールの海賊達の憎"
+"悪の的であった。"
 
 #: ../lib/gamedata/artifact.txt:385
 msgctxt "artifact"
@@ -213,7 +243,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:401
 msgctxt "artifact"
 msgid "'Ringil'"
-msgstr ""
+msgstr "『リンギル』"
 
 #: ../lib/gamedata/artifact.txt:422
 msgctxt "artifact"
@@ -226,7 +256,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:423
 msgctxt "artifact"
 msgid "'Andúril'"
-msgstr ""
+msgstr "『アンドゥリル』"
 
 #: ../lib/gamedata/artifact.txt:443
 msgctxt "artifact"
@@ -252,7 +282,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:462
 msgctxt "artifact"
 msgid "'Elvagil'"
-msgstr ""
+msgstr "『ナル=イ=バギル』"
 
 #: ../lib/gamedata/artifact.txt:476
 msgctxt "artifact"
@@ -264,7 +294,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:477
 msgctxt "artifact"
 msgid "'Aranrúth'"
-msgstr ""
+msgstr "『アランルース』"
 
 #: ../lib/gamedata/artifact.txt:494
 msgctxt "artifact"
@@ -277,7 +307,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:495
 msgctxt "artifact"
 msgid "'Glamdring'"
-msgstr ""
+msgstr "『グラムドリング』"
 
 #: ../lib/gamedata/artifact.txt:511
 msgctxt "artifact"
@@ -302,7 +332,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:530
 msgctxt "artifact"
 msgid "'Orcrist'"
-msgstr ""
+msgstr "『オルクリスト』"
 
 #: ../lib/gamedata/artifact.txt:546
 msgctxt "artifact"
@@ -314,7 +344,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:547
 msgctxt "artifact"
 msgid "'Calris'"
-msgstr ""
+msgstr "『カルリス』"
 
 #: ../lib/gamedata/artifact.txt:566
 msgctxt "artifact"
@@ -326,7 +356,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:567
 msgctxt "artifact"
 msgid "of Éowyn"
-msgstr ""
+msgstr "エオウィン姫の"
 
 #: ../lib/gamedata/artifact.txt:584
 msgctxt "artifact"
@@ -339,7 +369,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:585
 msgctxt "artifact"
 msgid "'Aglarang'"
-msgstr ""
+msgstr "『アグララング』"
 
 #: ../lib/gamedata/artifact.txt:598
 msgctxt "artifact"
@@ -352,7 +382,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:599
 msgctxt "artifact"
 msgid "'Gurthang'"
-msgstr ""
+msgstr "『グアサング』"
 
 #: ../lib/gamedata/artifact.txt:615
 msgctxt "artifact"
@@ -364,7 +394,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:616
 msgctxt "artifact"
 msgid "'Zarcuthra'"
-msgstr ""
+msgstr "『ザルクスラ』"
 
 #: ../lib/gamedata/artifact.txt:639
 msgctxt "artifact"
@@ -377,7 +407,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:640
 msgctxt "artifact"
 msgid "'Mormegil'"
-msgstr ""
+msgstr "『フォラスギル』"
 
 #: ../lib/gamedata/artifact.txt:657
 msgctxt "artifact"
@@ -390,7 +420,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:658
 msgctxt "artifact"
 msgid "'Crisdurian'"
-msgstr ""
+msgstr "『クリスドゥリアン』"
 
 #: ../lib/gamedata/artifact.txt:676
 msgctxt "artifact"
@@ -403,7 +433,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:677
 msgctxt "artifact"
 msgid "'Doomcaller'"
-msgstr ""
+msgstr "『災いを招く者』"
 
 #: ../lib/gamedata/artifact.txt:697
 msgctxt "artifact"
@@ -416,7 +446,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:701
 msgctxt "artifact"
 msgid "of Gothmog"
-msgstr ""
+msgstr "バルログの長ゴスモグの"
 
 #: ../lib/gamedata/artifact.txt:722
 msgctxt "artifact"
@@ -428,7 +458,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:723
 msgctxt "artifact"
 msgid "of Fundin Bluecloak"
-msgstr ""
+msgstr "青き衣のフンディンの"
 
 #: ../lib/gamedata/artifact.txt:739
 msgctxt "artifact"
@@ -440,7 +470,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:740
 msgctxt "artifact"
 msgid "'Bloodspike'"
-msgstr ""
+msgstr "『血流の刺』"
 
 #: ../lib/gamedata/artifact.txt:756
 msgctxt "artifact"
@@ -452,7 +482,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:757
 msgctxt "artifact"
 msgid "'Firestar'"
-msgstr ""
+msgstr "『焔の星』"
 
 #: ../lib/gamedata/artifact.txt:771
 msgctxt "artifact"
@@ -464,7 +494,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:772
 msgctxt "artifact"
 msgid "'Totila'"
-msgstr ""
+msgstr "『トティラ』"
 
 #: ../lib/gamedata/artifact.txt:788
 msgctxt "artifact"
@@ -476,7 +506,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:789
 msgctxt "artifact"
 msgid "'Thunderfist'"
-msgstr ""
+msgstr "『稲妻の拳』"
 
 #: ../lib/gamedata/artifact.txt:807
 msgctxt "artifact"
@@ -489,7 +519,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:808
 msgctxt "artifact"
 msgid "'Taratol'"
-msgstr ""
+msgstr "『タラトル』"
 
 #: ../lib/gamedata/artifact.txt:824
 msgctxt "artifact"
@@ -502,7 +532,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:825
 msgctxt "artifact"
 msgid "'Nar-i-vagil'"
-msgstr ""
+msgstr "『ナル=イ=バギル』"
 
 #: ../lib/gamedata/artifact.txt:838
 msgctxt "artifact"
@@ -514,7 +544,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:839
 msgctxt "artifact"
 msgid "'Eriril'"
-msgstr ""
+msgstr "『エリリル』"
 
 #: ../lib/gamedata/artifact.txt:854
 msgctxt "artifact"
@@ -540,7 +570,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:877
 msgctxt "artifact"
 msgid "of Aulë"
-msgstr ""
+msgstr "鍛冶の司アウレの"
 
 #: ../lib/gamedata/artifact.txt:897
 msgctxt "artifact"
@@ -553,7 +583,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:898
 msgctxt "artifact"
 msgid "'Deathwreaker'"
-msgstr ""
+msgstr "『死の復讐者』"
 
 #: ../lib/gamedata/artifact.txt:920
 msgctxt "artifact"
@@ -592,7 +622,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:963
 msgctxt "artifact"
 msgid "'Nimloth'"
-msgstr ""
+msgstr "『ニムサンク』"
 
 #: ../lib/gamedata/artifact.txt:979
 msgctxt "artifact"
@@ -605,7 +635,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:980
 msgctxt "artifact"
 msgid "of Melkor"
-msgstr ""
+msgstr "丈高きマエズロスの"
 
 #: ../lib/gamedata/artifact.txt:995
 msgctxt "artifact"
@@ -618,7 +648,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:996
 msgctxt "artifact"
 msgid "of Wrath"
-msgstr ""
+msgstr "憤怒の"
 
 #: ../lib/gamedata/artifact.txt:1012
 msgctxt "artifact"
@@ -627,11 +657,13 @@ msgid ""
 "wield, evoking the spirit of Osse who with it pierced legions of evil and "
 "undead."
 msgstr ""
+"三本の切先がある大振りな槍で、かつてこの槍を手に邪悪な者共や冥界の者共の軍勢"
+"を刺し貫いたオスセの霊力を宿している。"
 
 #: ../lib/gamedata/artifact.txt:1013
 msgctxt "artifact"
 msgid "of Ulmo"
-msgstr ""
+msgstr "水の王ウルモの"
 
 #: ../lib/gamedata/artifact.txt:1030
 msgctxt "artifact"
@@ -644,7 +676,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1031
 msgctxt "artifact"
 msgid "'Osondir'"
-msgstr ""
+msgstr "『オソンディア』"
 
 #: ../lib/gamedata/artifact.txt:1046
 msgctxt "artifact"
@@ -652,11 +684,13 @@ msgid ""
 "Lordly and tall did Osondir stand against the wrath of giants, and clear-"
 "eyed in barrows fell, wielding a halberd glowing ruby red."
 msgstr ""
+"巨人の怒りに立ち向かうようにオソンディアは堂々として高く、構えるハルベルトは"
+"ルビー色に輝き、塚山の中でも視力を妨げない。"
 
 #: ../lib/gamedata/artifact.txt:1047
 msgctxt "artifact"
 msgid "'Til-i-arc'"
-msgstr ""
+msgstr "『ティル=イ=アルク』"
 
 #: ../lib/gamedata/artifact.txt:1064
 msgctxt "artifact"
@@ -668,7 +702,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1065
 msgctxt "artifact"
 msgid "of Théoden"
-msgstr ""
+msgstr "更正せるセオデン王の"
 
 #: ../lib/gamedata/artifact.txt:1080
 msgctxt "artifact"
@@ -680,7 +714,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1081
 msgctxt "artifact"
 msgid "of Húrin"
-msgstr ""
+msgstr "フーリン王の"
 
 #: ../lib/gamedata/artifact.txt:1103
 msgctxt "artifact"
@@ -695,7 +729,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1104
 msgctxt "artifact"
 msgid "'Barukkheled'"
-msgstr ""
+msgstr "『バルクケレド』"
 
 #: ../lib/gamedata/artifact.txt:1120
 msgctxt "artifact"
@@ -707,7 +741,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1121
 msgctxt "artifact"
 msgid "of Balli Stonehand"
-msgstr ""
+msgstr "石の手バリの"
 
 #: ../lib/gamedata/artifact.txt:1137
 msgctxt "artifact"
@@ -719,7 +753,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1138
 msgctxt "artifact"
 msgid "'Lotharang'"
-msgstr ""
+msgstr "『ロサラング』"
 
 #: ../lib/gamedata/artifact.txt:1153
 msgctxt "artifact"
@@ -744,7 +778,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1170
 msgctxt "artifact"
 msgid "of Durin"
-msgstr ""
+msgstr "不死ドゥリンの"
 
 #: ../lib/gamedata/artifact.txt:1190
 msgctxt "artifact"
@@ -757,7 +791,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1191
 msgctxt "artifact"
 msgid "of Eönwë"
-msgstr ""
+msgstr "旗手エオンウェの"
 
 #: ../lib/gamedata/artifact.txt:1211
 msgctxt "artifact"
@@ -770,7 +804,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1212
 msgctxt "artifact"
 msgid "'Avavir'"
-msgstr ""
+msgstr "『アヴァビア』"
 
 #: ../lib/gamedata/artifact.txt:1229
 msgctxt "artifact"
@@ -783,7 +817,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1230
 msgctxt "artifact"
 msgid "of Pain"
-msgstr ""
+msgstr "苦痛の"
 
 #: ../lib/gamedata/artifact.txt:1241
 msgctxt "artifact"
@@ -795,7 +829,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1242
 msgctxt "artifact"
 msgid "of the Eorlingas"
-msgstr ""
+msgstr "ロヒアリムの"
 
 #: ../lib/gamedata/artifact.txt:1258
 msgctxt "artifact"
@@ -808,7 +842,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1259
 msgctxt "artifact"
 msgid "'Turmil'"
-msgstr ""
+msgstr "『トゥアミル』"
 
 #: ../lib/gamedata/artifact.txt:1276
 msgctxt "artifact"
@@ -821,7 +855,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1280
 msgctxt "artifact"
 msgid "of Amrod"
-msgstr ""
+msgstr "アルヴェドゥイ王の"
 
 #: ../lib/gamedata/artifact.txt:1292
 msgctxt "artifact"
@@ -838,7 +872,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1307
 msgctxt "artifact"
 msgid "'Belthronding'"
-msgstr ""
+msgstr "『ベルスロンディング』"
 
 #: ../lib/gamedata/artifact.txt:1319
 msgctxt "artifact"
@@ -851,7 +885,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1320
 msgctxt "artifact"
 msgid "of Bard"
-msgstr ""
+msgstr "射手バルド王の黒い"
 
 #: ../lib/gamedata/artifact.txt:1332
 msgctxt "artifact"
@@ -859,6 +893,8 @@ msgid ""
 "The great yew bow of grim-faced Bard, who shot the mightiest arrow that "
 "songs record."
 msgstr ""
+"後に王となる湖の街の陰気面バルドが竜を射抜いた伝説のいちいの弓だ。彼が龍を射"
+"抜いた矢は歌に唄われ語り継がれている。"
 
 #: ../lib/gamedata/artifact.txt:1333
 msgctxt "artifact"
@@ -875,7 +911,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1346
 msgctxt "artifact"
 msgid "of Umbar"
-msgstr ""
+msgstr "水の王ウルモの"
 
 #: ../lib/gamedata/artifact.txt:1360
 msgctxt "artifact"
@@ -899,7 +935,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1382
 msgctxt "artifact"
 msgid "of Náin"
-msgstr ""
+msgstr "ナインの"
 
 #: ../lib/gamedata/artifact.txt:1401
 msgctxt "artifact"
@@ -913,7 +949,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1405
 msgctxt "artifact"
 msgid "of Fëanor"
-msgstr ""
+msgstr "フェアノール王の"
 
 #: ../lib/gamedata/artifact.txt:1421
 msgctxt "artifact"
@@ -965,7 +1001,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1467
 msgctxt "artifact"
 msgid "of Thrór"
-msgstr ""
+msgstr "スロール王の"
 
 #: ../lib/gamedata/artifact.txt:1479
 msgctxt "artifact"
@@ -992,7 +1028,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1501
 msgctxt "artifact"
 msgid "of Thranduil"
-msgstr ""
+msgstr "スランドゥイル王の"
 
 #: ../lib/gamedata/artifact.txt:1513
 msgctxt "artifact"
@@ -1000,11 +1036,13 @@ msgid ""
 "The hunting cap of King Thranduil, to whose ears come all the secrets of his "
 "forest domain."
 msgstr ""
+"レゴラスの父であり、領土の森のあらゆる事を知るスランドウィル王のハンティング"
+"帽だ。"
 
 #: ../lib/gamedata/artifact.txt:1514
 msgctxt "artifact"
 msgid "of Thengel"
-msgstr ""
+msgstr "センゲル王の"
 
 #: ../lib/gamedata/artifact.txt:1526
 msgctxt "artifact"
@@ -1016,7 +1054,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1527
 msgctxt "artifact"
 msgid "of Celebrimbor"
-msgstr ""
+msgstr "金髪のケレゴルムの"
 
 #: ../lib/gamedata/artifact.txt:1540
 msgctxt "artifact"
@@ -1029,7 +1067,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1541
 msgctxt "artifact"
 msgid "of Dor-Lómin"
-msgstr ""
+msgstr "ドル=ローミンの"
 
 #: ../lib/gamedata/artifact.txt:1557
 msgctxt "artifact"
@@ -1043,7 +1081,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1558
 msgctxt "artifact"
 msgid "'Holhenneth'"
-msgstr ""
+msgstr "『ホルヘンネス』"
 
 #: ../lib/gamedata/artifact.txt:1572
 msgctxt "artifact"
@@ -1055,7 +1093,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1573
 msgctxt "artifact"
 msgid "of Gorlim"
-msgstr ""
+msgstr "バルログの長ゴスモグの"
 
 #: ../lib/gamedata/artifact.txt:1586
 msgctxt "artifact"
@@ -1067,7 +1105,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1587
 msgctxt "artifact"
 msgid "of Hammerhand"
-msgstr ""
+msgstr "槌手王の"
 
 #: ../lib/gamedata/artifact.txt:1602
 msgctxt "artifact"
@@ -1081,7 +1119,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1603
 msgctxt "artifact"
 msgid "of Berúthiel"
-msgstr ""
+msgstr "ベルシエル王妃の"
 
 #: ../lib/gamedata/artifact.txt:1616
 msgctxt "artifact"
@@ -1093,7 +1131,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1617
 msgctxt "artifact"
 msgid "of Gondor"
-msgstr ""
+msgstr "バルログの長ゴスモグの"
 
 #: ../lib/gamedata/artifact.txt:1633
 msgctxt "artifact"
@@ -1105,7 +1143,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1634
 msgctxt "artifact"
 msgid "of Númenor"
-msgstr ""
+msgstr "ヌメノールの"
 
 #: ../lib/gamedata/artifact.txt:1649
 msgctxt "artifact"
@@ -1117,7 +1155,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1653
 msgctxt "artifact"
 msgid "'Hithlomir'"
-msgstr ""
+msgstr "『ヒスロミア』"
 
 #: ../lib/gamedata/artifact.txt:1665
 msgctxt "artifact"
@@ -1129,7 +1167,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1666
 msgctxt "artifact"
 msgid "of Himring"
-msgstr ""
+msgstr "ヒムリングの"
 
 #: ../lib/gamedata/artifact.txt:1680
 msgctxt "artifact"
@@ -1141,7 +1179,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1681
 msgctxt "artifact"
 msgid "'Thalkettoth'"
-msgstr ""
+msgstr "『サルケットス』"
 
 #: ../lib/gamedata/artifact.txt:1693
 msgctxt "artifact"
@@ -1153,7 +1191,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1697
 msgctxt "artifact"
 msgid "of Arvedui"
-msgstr ""
+msgstr "アルヴェドゥイ王の"
 
 #: ../lib/gamedata/artifact.txt:1710
 msgctxt "artifact"
@@ -1166,7 +1204,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1711
 msgctxt "artifact"
 msgid "of Caspanion"
-msgstr ""
+msgstr "カスパニオンの"
 
 #: ../lib/gamedata/artifact.txt:1727
 msgctxt "artifact"
@@ -1175,11 +1213,13 @@ msgid ""
 "reinforced at vital locations with a second layer of chain.  Magics to "
 "enhance body and mind lie within, and no door can bar the wearer's path."
 msgstr ""
+"重要な部分が二重になった、手と足もカバーする鎖帷子だ。精神と肉体を強化する魔"
+"法がかかっており、いかなる障害も着用者の道を妨げることは出来ない。"
 
 #: ../lib/gamedata/artifact.txt:1728
 msgctxt "artifact"
 msgid "of the Rohirrim"
-msgstr ""
+msgstr "ロヒアリムの"
 
 #: ../lib/gamedata/artifact.txt:1742
 msgctxt "artifact"
@@ -1192,7 +1232,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1743
 msgctxt "artifact"
 msgid "of Isildur"
-msgstr ""
+msgstr "イシルドゥアの"
 
 #: ../lib/gamedata/artifact.txt:1756
 msgctxt "artifact"
@@ -1200,11 +1240,14 @@ msgid ""
 "A gleaming steel suit covering the wearer from neck to foot, with runes of "
 "warding and stability deeply engraved into its surface."
 msgstr ""
+"装備する者の首から足までをカバーする輝く鋼鉄の鎧で、邪悪なものを退け頑強さを"
+"増すルーン文字が表面に深く刻まれている。かつてサウロンから指輪を奪うのに成功"
+"したエレンディルの息子イシルドゥアが身に付けていた。"
 
 #: ../lib/gamedata/artifact.txt:1757
 msgctxt "artifact"
 msgid "'Belegennon'"
-msgstr ""
+msgstr "『コランノン』"
 
 #: ../lib/gamedata/artifact.txt:1774
 msgctxt "artifact"
@@ -1219,7 +1262,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1775
 msgctxt "artifact"
 msgid "of Celeborn"
-msgstr ""
+msgstr "金髪のケレゴルムの"
 
 #: ../lib/gamedata/artifact.txt:1790
 msgctxt "artifact"
@@ -1232,7 +1275,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1791
 msgctxt "artifact"
 msgid "'Soulkeeper'"
-msgstr ""
+msgstr "『魂の守り手』"
 
 #: ../lib/gamedata/artifact.txt:1807
 msgctxt "artifact"
@@ -1245,19 +1288,19 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1811
 msgctxt "artifact"
 msgid "'Colluin'"
-msgstr ""
+msgstr "『コルイン』"
 
 #: ../lib/gamedata/artifact.txt:1824
 msgctxt "artifact"
 msgid ""
 "A cape worn by a hero from Valinor, a land utterly beyond the strife of "
 "Elements."
-msgstr ""
+msgstr "精霊達が争う渦中の地ヴァリノールの英雄が身に付けていたマントだ。"
 
 #: ../lib/gamedata/artifact.txt:1825
 msgctxt "artifact"
 msgid "'Holcolleth'"
-msgstr ""
+msgstr "『ホルコルレス』"
 
 #: ../lib/gamedata/artifact.txt:1839
 msgctxt "artifact"
@@ -1270,7 +1313,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1840
 msgctxt "artifact"
 msgid "of Thingol"
-msgstr ""
+msgstr "灰色マント王シンゴルの"
 
 #: ../lib/gamedata/artifact.txt:1854
 msgctxt "artifact"
@@ -1282,7 +1325,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1855
 msgctxt "artifact"
 msgid "of Thorongil"
-msgstr ""
+msgstr "大将ソロンギルの"
 
 #: ../lib/gamedata/artifact.txt:1868
 msgctxt "artifact"
@@ -1295,7 +1338,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1869
 msgctxt "artifact"
 msgid "'Colannon'"
-msgstr ""
+msgstr "『コランノン』"
 
 #: ../lib/gamedata/artifact.txt:1882
 msgctxt "artifact"
@@ -1307,7 +1350,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1883
 msgctxt "artifact"
 msgid "of Lúthien"
-msgstr ""
+msgstr "ルシエン王女の"
 
 #: ../lib/gamedata/artifact.txt:1899
 msgctxt "artifact"
@@ -1320,7 +1363,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1900
 msgctxt "artifact"
 msgid "of Tuor"
-msgstr ""
+msgstr "トゥオルの"
 
 #: ../lib/gamedata/artifact.txt:1913
 msgctxt "artifact"
@@ -1333,17 +1376,19 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1917
 msgctxt "artifact"
 msgid "'Cambeleg'"
-msgstr ""
+msgstr "『カンベレグ』"
 
 #: ../lib/gamedata/artifact.txt:1928
 msgctxt "artifact"
 msgid "A hero's handgear that lends great prowess in battle."
 msgstr ""
+"「剛き掌」を意味する名を持つ、この英雄の手甲は、戦いにおける偉大なる武勇をも"
+"たらす。"
 
 #: ../lib/gamedata/artifact.txt:1929
 msgctxt "artifact"
 msgid "'Cammithrim'"
-msgstr ""
+msgstr "『カンミスリム』"
 
 #: ../lib/gamedata/artifact.txt:1943
 msgctxt "artifact"
@@ -1355,7 +1400,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1944
 msgctxt "artifact"
 msgid "'Paurhach'"
-msgstr ""
+msgstr "『パウアハッハ』"
 
 #: ../lib/gamedata/artifact.txt:1957
 msgctxt "artifact"
@@ -1365,7 +1410,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1958
 msgctxt "artifact"
 msgid "'Paurnimmen'"
-msgstr ""
+msgstr "『パウアニンメン』"
 
 #: ../lib/gamedata/artifact.txt:1972
 msgctxt "artifact"
@@ -1375,7 +1420,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1973
 msgctxt "artifact"
 msgid "'Pauraegen'"
-msgstr ""
+msgstr "『パウラエゲン』"
 
 #: ../lib/gamedata/artifact.txt:1985
 msgctxt "artifact"
@@ -1385,7 +1430,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1986
 msgctxt "artifact"
 msgid "'Paurnen'"
-msgstr ""
+msgstr "『パウアネン』"
 
 #: ../lib/gamedata/artifact.txt:2000
 msgctxt "artifact"
@@ -1396,7 +1441,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2001
 msgctxt "artifact"
 msgid "'Camlost'"
-msgstr ""
+msgstr "『カンベレグ』"
 
 #: ../lib/gamedata/artifact.txt:2013
 msgctxt "artifact"
@@ -1408,7 +1453,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2014
 msgctxt "artifact"
 msgid "of Eöl"
-msgstr ""
+msgstr "旗手エオンウェの"
 
 #: ../lib/gamedata/artifact.txt:2028
 msgctxt "artifact"
@@ -1420,7 +1465,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2029
 msgctxt "artifact"
 msgid "of Fingolfin"
-msgstr ""
+msgstr "上級王フィンゴルフィンの"
 
 #: ../lib/gamedata/artifact.txt:2044
 msgctxt "artifact"
@@ -1444,7 +1489,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2061
 msgctxt "artifact"
 msgid "of Thorin"
-msgstr ""
+msgstr "トーリン王の"
 
 #: ../lib/gamedata/artifact.txt:2073
 msgctxt "artifact"
@@ -1452,11 +1497,13 @@ msgid ""
 "Invoking the strength and endurance of Thorin, King under the Mountain, this "
 "little metal shield is proof against the Element of Earth."
 msgstr ""
+"山の下の王トーリン・オーケンシールドの強さと頑丈さを受け継いだこの小さな金属"
+"の盾は、地のエレメントに対する完全な防御を可能にする。"
 
 #: ../lib/gamedata/artifact.txt:2074
 msgctxt "artifact"
 msgid "of Celegorm"
-msgstr ""
+msgstr "金髪のケレゴルムの"
 
 #: ../lib/gamedata/artifact.txt:2088
 msgctxt "artifact"
@@ -1469,7 +1516,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2089
 msgctxt "artifact"
 msgid "of the Haradrim"
-msgstr ""
+msgstr "ロヒアリムの"
 
 #: ../lib/gamedata/artifact.txt:2104
 msgctxt "artifact"
@@ -1482,7 +1529,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2105
 msgctxt "artifact"
 msgid "of Anárion"
-msgstr ""
+msgstr "アナリオンの"
 
 #: ../lib/gamedata/artifact.txt:2117
 msgctxt "artifact"
@@ -1494,7 +1541,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2118
 msgctxt "artifact"
 msgid "of Eärendil"
-msgstr ""
+msgstr "航海者エアレンディルの"
 
 #: ../lib/gamedata/artifact.txt:2133
 msgctxt "artifact"
@@ -1506,7 +1553,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2135
 msgctxt "artifact"
 msgid "of Gil-galad"
-msgstr ""
+msgstr "上級王ギル=ガラドの"
 
 #: ../lib/gamedata/artifact.txt:2150
 msgctxt "artifact"
@@ -1518,7 +1565,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2154
 msgctxt "artifact"
 msgid "of Barahir"
-msgstr ""
+msgstr "射手バルド王の黒い"
 
 #: ../lib/gamedata/artifact.txt:2165
 msgctxt "artifact"
@@ -1530,17 +1577,17 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2166
 msgctxt "artifact"
 msgid "of Tulkas"
-msgstr ""
+msgstr "勇猛なるトゥルカスの"
 
 #: ../lib/gamedata/artifact.txt:2178
 msgctxt "artifact"
 msgid "The treasure of Tulkas, most fleet and wrathful of the Valar."
-msgstr ""
+msgstr "ヴァラールの中でも最も素早くかつ勇猛なトゥルカスの宝だ。"
 
 #: ../lib/gamedata/artifact.txt:2179
 msgctxt "artifact"
 msgid "'Narya'"
-msgstr ""
+msgstr "『ナルサンク』"
 
 #: ../lib/gamedata/artifact.txt:2197
 msgctxt "artifact"
@@ -1595,7 +1642,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2267
 msgctxt "artifact"
 msgid "of Carlammas"
-msgstr ""
+msgstr "カルランマスの"
 
 #: ../lib/gamedata/artifact.txt:2278
 msgctxt "artifact"
@@ -1606,7 +1653,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2279
 msgctxt "artifact"
 msgid "of Ingwë"
-msgstr ""
+msgstr "上級王イングウェの"
 
 #: ../lib/gamedata/artifact.txt:2292
 msgctxt "artifact"
@@ -1618,7 +1665,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2293
 msgctxt "artifact"
 msgid "of the Dwarves"
-msgstr ""
+msgstr "ドワーフの"
 
 #: ../lib/gamedata/artifact.txt:2307
 msgctxt "artifact"
@@ -1646,7 +1693,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2325
 msgctxt "artifact"
 msgid "'Evenstar'"
-msgstr ""
+msgstr "『焔の星』"
 
 #: ../lib/gamedata/artifact.txt:2338
 msgctxt "artifact"
@@ -1658,7 +1705,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2354
 msgctxt "artifact"
 msgid "'Razorback'"
-msgstr ""
+msgstr "『剣竜の鎧』"
 
 #: ../lib/gamedata/artifact.txt:2370
 msgctxt "artifact"
@@ -1667,6 +1714,8 @@ msgid ""
 "throbs with angry energies, and you feel the raw elemental might of untamed "
 "Lightning as you put it on."
 msgstr ""
+"様々な色彩が凝縮した重厚なドラゴンの鱗で作られた鎧だ。怒りのエネルギーを脈打"
+"ち、着るものは荒々しい稲光のエネルギーを直に感じる。"
 
 #: ../lib/gamedata/artifact.txt:2371
 msgctxt "artifact"
@@ -1683,7 +1732,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2386
 msgctxt "artifact"
 msgid "'Bladeturner'"
-msgstr ""
+msgstr "『刀返し』"
 
 #: ../lib/gamedata/artifact.txt:2402
 msgctxt "artifact"
@@ -1695,7 +1744,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2406
 msgctxt "artifact"
 msgid "'Grond'"
-msgstr ""
+msgstr "『グロンド』"
 
 #: ../lib/gamedata/artifact.txt:2424
 msgctxt "artifact"

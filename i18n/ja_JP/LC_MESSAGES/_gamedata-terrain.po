@@ -1,23 +1,16 @@
+# ## Original comments from Hengband 3.0.0Alpha68:
 msgid ""
-msgstr ""
-"Project-Id-Version: Angband 4.2.4\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: ja\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 #: ../lib/gamedata/terrain.txt:98
 msgctxt "terrain"
 msgid "unknown grid"
-msgstr ""
+msgstr "未知の地形"
 
 #: ../lib/gamedata/terrain.txt:103
 msgctxt "terrain"
 msgid "open floor"
-msgstr ""
+msgstr "床"
 
 #: ../lib/gamedata/terrain.txt:109
 msgctxt "terrain"
@@ -29,7 +22,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:110
 msgctxt "terrain"
 msgid "closed door"
-msgstr ""
+msgstr "開いたドア"
 
 #: ../lib/gamedata/terrain.txt:121
 msgctxt "terrain"
@@ -44,7 +37,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:122
 msgctxt "terrain"
 msgid "open door"
-msgstr ""
+msgstr "開いたドア"
 
 #: ../lib/gamedata/terrain.txt:129
 msgctxt "terrain"
@@ -56,7 +49,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:130
 msgctxt "terrain"
 msgid "broken door"
-msgstr ""
+msgstr "壊れたドア"
 
 #: ../lib/gamedata/terrain.txt:136
 msgctxt "terrain"
@@ -66,7 +59,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:137
 msgctxt "terrain"
 msgid "up staircase"
-msgstr ""
+msgstr "上り階段"
 
 #: ../lib/gamedata/terrain.txt:143
 msgctxt "terrain"
@@ -76,7 +69,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:144
 msgctxt "terrain"
 msgid "down staircase"
-msgstr ""
+msgstr "下り階段"
 
 #: ../lib/gamedata/terrain.txt:150
 msgctxt "terrain"
@@ -86,7 +79,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:151
 msgctxt "terrain"
 msgid "General Store"
-msgstr ""
+msgstr "雑貨屋"
 
 #: ../lib/gamedata/terrain.txt:159
 msgctxt "terrain"
@@ -96,7 +89,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:160
 msgctxt "terrain"
 msgid "Armoury"
-msgstr ""
+msgstr "防具屋"
 
 #: ../lib/gamedata/terrain.txt:169
 msgctxt "terrain"
@@ -131,7 +124,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:190
 msgctxt "terrain"
 msgid "Alchemy Shop"
-msgstr ""
+msgstr "錬金術の店"
 
 #: ../lib/gamedata/terrain.txt:198
 msgctxt "terrain"
@@ -141,7 +134,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:199
 msgctxt "terrain"
 msgid "Magic Shop"
-msgstr ""
+msgstr "魔法の店"
 
 #: ../lib/gamedata/terrain.txt:207
 msgctxt "terrain"
@@ -151,7 +144,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:208
 msgctxt "terrain"
 msgid "Black Market"
-msgstr ""
+msgstr "ブラック・マーケット"
 
 #: ../lib/gamedata/terrain.txt:217
 msgctxt "terrain"
@@ -163,7 +156,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:218
 msgctxt "terrain"
 msgid "Home"
-msgstr ""
+msgstr "我が家"
 
 #: ../lib/gamedata/terrain.txt:227
 msgctxt "terrain"
@@ -175,7 +168,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:228
 msgctxt "terrain"
 msgid "secret door"
-msgstr ""
+msgstr "隠しドア"
 
 #: ../lib/gamedata/terrain.txt:235
 msgctxt "terrain"
@@ -185,7 +178,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:236
 msgctxt "terrain"
 msgid "pile of rubble"
-msgstr ""
+msgstr "岩石"
 
 #: ../lib/gamedata/terrain.txt:244
 msgctxt "terrain"
@@ -197,7 +190,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:245
 msgctxt "terrain"
 msgid "magma vein"
-msgstr ""
+msgstr "溶岩の鉱脈"
 
 #: ../lib/gamedata/terrain.txt:254
 msgctxt "terrain"
@@ -210,7 +203,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:255
 msgctxt "terrain"
 msgid "quartz vein"
-msgstr ""
+msgstr "石英の鉱脈"
 
 #: ../lib/gamedata/terrain.txt:264
 msgctxt "terrain"
@@ -223,7 +216,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:265
 msgctxt "terrain"
 msgid "magma vein with treasure"
-msgstr ""
+msgstr "財宝を含有した溶岩の鉱脈"
 
 #: ../lib/gamedata/terrain.txt:274
 msgctxt "terrain"
@@ -236,7 +229,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:275
 msgctxt "terrain"
 msgid "quartz vein with treasure"
-msgstr ""
+msgstr "財宝を含有した石英の鉱脈"
 
 #: ../lib/gamedata/terrain.txt:284
 msgctxt "terrain"
@@ -249,7 +242,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:285
 msgctxt "terrain"
 msgid "granite wall"
-msgstr ""
+msgstr "花崗岩の壁"
 
 #: ../lib/gamedata/terrain.txt:294
 msgctxt "terrain"
@@ -262,7 +255,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:295
 msgctxt "terrain"
 msgid "permanent wall"
-msgstr ""
+msgstr "永久岩の壁"
 
 #: ../lib/gamedata/terrain.txt:302
 msgctxt "terrain"
@@ -284,7 +277,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:317
 msgctxt "terrain"
 msgid "pile of passable rubble"
-msgstr ""
+msgstr "岩石"
 
 #: ../lib/gamedata/terrain.txt:325
 msgctxt "terrain"
