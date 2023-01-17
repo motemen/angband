@@ -432,6 +432,32 @@ void msgt(unsigned int type, const char *fmt, ...)
 }
 
 
+// Like msg(), but uses vsnprintf for use of %1$s etc.
+void msg_f(const char *fmt, ...)
+{
+	va_list vp;
+
+	char buf[1024];
+
+	/* Begin the Varargs Stuff */
+	va_start(vp, fmt);
+
+	/* Format the args, save the length */
+	(void)vsnprintf(buf, sizeof(buf), fmt, vp);
+
+	/* End the Varargs Stuff */
+	va_end(vp);
+
+	/* Fail if messages not loaded */
+	if (!messages) return;
+
+	/* Add to message log */
+	message_add(buf, MSG_GENERIC);
+
+	/* Send refresh event */
+	event_signal_message(EVENT_MESSAGE, MSG_GENERIC, buf);
+}
+
 struct init_module messages_module = {
 	.name = "messages",
 	.init = messages_init,
