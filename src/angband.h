@@ -27,6 +27,8 @@
 #include "z-virt.h"
 #include "z-rand.h"
 
+#include "i18n.h"
+
 /*
  * Include the high-level includes.
  */
