@@ -17,10 +17,12 @@
  */
 #include "angband.h"
 #include "cave.h"
+#include "i18n.h"
 #include "player-calcs.h"
 #include "ui-input.h"
 #include "ui-output.h"
 #include "z-textblock.h"
+#include "z-util.h"
 
 /**
  * ------------------------------------------------------------------------
@@ -104,16 +106,17 @@ static void display_area(const wchar_t *text, const uint8_t *attrs,
 		size_t n_lines,
 		region area, size_t line_from)
 {
-	size_t i, j;
+	size_t i, j, c;
 
 	n_lines = MIN(n_lines, (size_t) area.page_rows);
 
 	for (i = 0; i < n_lines; i++) {
 		Term_erase(area.col, area.row + i, area.width);
-		for (j = 0; j < line_lengths[line_from + i]; j++) {
-			Term_putch(area.col + j, area.row + i,
+		for (j = 0, c = 0; j < line_lengths[line_from + i]; j++) {
+			Term_putch(area.col + c, area.row + i,
 					attrs[line_starts[line_from + i] + j],
 					text[line_starts[line_from + i] + j]);
+			c += i18n_wchar_visualwidth(text[line_starts[line_from + i] + j]);
 		}
 	}
 }
@@ -249,6 +252,7 @@ struct keypress textui_textblock_show(textblock *tb, region orig_area, const cha
  * This function will correctly handle any width up to the maximum legal
  * value of 256, though it works best for a standard 80 character width.
  */
+ // TODO[doublewidth]
 void text_out_to_screen(uint8_t a, const char *str)
 {
 	int x, y;
@@ -349,7 +353,9 @@ void text_out_to_screen(uint8_t a, const char *str)
 		Term_addch(a, ch);
 
 		/* Advance */
-		if (++x > wrap) x = wrap;
+		x += (i18n_is_doublewidth(ch) ? 2 : 1);
+		// TODO overwrite skiped char
+		if (x > wrap) x = wrap;
 	}
 }
 

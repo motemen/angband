@@ -361,6 +361,7 @@ static bool aux_reinit(struct chunk *c, struct player *p,
 		auxst->phrase2 = "on ";
 	} else {
 		/* Default */
+		// TODO[locale]: this mechanism cannot be handled by gettext
 		if (square_isseen(c, auxst->grid)) {
 			auxst->phrase1 = "You see ";
 		} else {
