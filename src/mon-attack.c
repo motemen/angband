@@ -631,16 +631,17 @@ bool make_attack_normal(struct monster *mon, struct player *p)
 
 			/* Message */
 			if (act) {
-				const char *fullstop = ".";
+				const char *fullstop = _(".");
 				if (suffix(act, "'") || suffix(act, "!")) {
 					fullstop = "";
 				}
 
+				// FIXME[locale] gettext??
 				if (OPT(p, show_damage)) {
 					msgt(sound_msg, "%s %s (%d)%s", m_name, act, damage,
 						 fullstop);
 				} else {
-					msgt(sound_msg, "%s %s%s", m_name, act, fullstop);
+					msgt(sound_msg, _("%s %s%s"), m_name, act, fullstop);
 				}
 			}
 
