@@ -4,6 +4,8 @@
 #include "i18n.h"
 #include "z-util.h"
 
+char _gamedata_c_buf[1024];
+
 bool i18n_is_doublewidth(wchar_t ch)
 {
 	// FIXME: Very dumb implementation

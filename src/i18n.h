@@ -27,12 +27,13 @@
 
 #define _GAMEDATA(msgid) dgettext("gamedata", msgid)
 
+extern char _gamedata_c_buf[1024];
+
 #define _GAMEDATA_C(ctx, msgid) ({ \
-  char buf[256]; \
-  strcpy(buf, ctx GETTEXT_GLUE); \
-  strcat(buf, (msgid)); \
-  const char *t = dgettext("gamedata", buf); \
-  strcmp(t, buf) == 0 ? msgid : t; \
+  strcpy(_gamedata_c_buf, ctx GETTEXT_GLUE); \
+  strcat(_gamedata_c_buf, (msgid)); \
+  const char *t = dgettext("gamedata", _gamedata_c_buf); \
+  strcmp(t, _gamedata_c_buf) == 0 ? msgid : t; \
 })
 
 #define N_GAMEDATA(msgid) gettext_noop(msgid)
