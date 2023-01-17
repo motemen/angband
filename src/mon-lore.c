@@ -19,6 +19,7 @@
 #include "angband.h"
 #include "effects.h"
 #include "game-world.h"
+#include "i18n.h"
 #include "init.h"
 #include "mon-attack.h"
 #include "mon-blows.h"
@@ -563,29 +564,29 @@ static const char *lore_describe_awareness(int16_t awareness)
 		int16_t threshold;
 		const char *description;
 	} lore_awareness_description[] = {
-		{200,	"prefers to ignore"},
-		{95,	"pays very little attention to"},
-		{75,	"pays little attention to"},
-		{45,	"tends to overlook"},
-		{25,	"takes quite a while to see"},
-		{10,	"takes a while to see"},
-		{5,		"is fairly observant of"},
-		{3,		"is observant of"},
-		{1,		"is very observant of"},
-		{0,		"is vigilant for"},
+		{200,	N_("prefers to ignore")},
+		{95,	N_("pays very little attention to")},
+		{75,	N_("pays little attention to")},
+		{45,	N_("tends to overlook")},
+		{25,	N_("takes quite a while to see")},
+		{10,	N_("takes a while to see")},
+		{5,		N_("is fairly observant of")},
+		{3,		N_("is observant of")},
+		{1,		N_("is very observant of")},
+		{0,		N_("is vigilant for")},
 		{SHRT_MAX,	NULL},
 	};
 	const struct lore_awareness *current = lore_awareness_description;
 
 	while (current->threshold != SHRT_MAX && current->description != NULL) {
 		if (awareness > current->threshold)
-			return current->description;
+			return _(current->description);
 
 		current++;
 	}
 
 	/* Values zero and less are the most vigilant */
-	return "is ever vigilant for";
+	return _("is ever vigilant for");
 }
 
 /**
@@ -604,27 +605,27 @@ static const char *lore_describe_speed(uint8_t speed)
 		uint8_t threshold;
 		const char *description;
 	} lore_speed_description[] = {
-		{130,	"incredibly quickly"},
-		{120,	"very quickly"},
-		{115,	"quickly"},
-		{110,	"fairly quickly"},
-		{109,	"normal speed"}, /* 110 is normal speed */
-		{99,	"slowly"},
-		{89,	"very slowly"},
-		{0,		"incredibly slowly"},
+		{130,	N_("incredibly quickly")},
+		{120,	N_("very quickly")},
+		{115,	N_("quickly")},
+		{110,	N_("fairly quickly")},
+		{109,	N_("normal speed")}, /* 110 is normal speed */
+		{99,	N_("slowly")},
+		{89,	N_("very slowly")},
+		{0,		N_("incredibly slowly")},
 		{UCHAR_MAX,	NULL},
 	};
 	const struct lore_speed *current = lore_speed_description;
 
 	while (current->threshold != UCHAR_MAX && current->description != NULL) {
 		if (speed > current->threshold)
-			return current->description;
+			return _(current->description);
 
 		current++;
 	}
 
 	/* Return a weird description, since the value wasn't found in the table */
-	return "erroneously";
+	return _("erroneously");
 }
 
 /**
@@ -638,7 +639,7 @@ static void lore_adjective_speed(textblock *tb, const struct monster_race *race)
 	/* "at" is separate from the normal speed description in order to use the
 	 * normal text colour */
 	if (race->speed == 110)
-		textblock_append(tb, "at ");
+		textblock_append(tb, _("at "));
 
 	textblock_append_c(tb, COLOUR_GREEN, "%s", lore_describe_speed(race->speed));
 }
@@ -663,7 +664,7 @@ static void lore_multiplier_speed(textblock *tb, const struct monster_race *race
 	strnfmt(buf, sizeof(buf), "%d.%dx", int_mul, dec_mul);
 	textblock_append_c(tb, COLOUR_L_BLUE, "%s", buf);
 
-	textblock_append(tb, " normal speed, which is ");
+	textblock_append(tb, _(" normal speed, which is "));
 	multiplier = 100 * extract_energy[race->speed]
 		/ extract_energy[player->state.speed];
 	int_mul = multiplier / 100;
@@ -682,10 +683,10 @@ static void lore_multiplier_speed(textblock *tb, const struct monster_race *race
 		attr = COLOUR_RED;
 	}
 	if (player->state.speed == race->speed) {
-		textblock_append(tb, "the same as you");
+		textblock_append(tb, _("the same as you"));
 	} else {
 		textblock_append_c(tb, attr, "%s", buf);
-		textblock_append(tb, " your speed");
+		textblock_append(tb, _(" your speed"));
 	}
 }
 
@@ -715,9 +716,9 @@ static monster_sex_t lore_monster_sex(const struct monster_race *race)
 static const char *lore_pronoun_nominative(monster_sex_t sex, bool title_case)
 {
 	static const char *lore_pronouns[MON_SEX_MAX][2] = {
-		{"it", "It"},
-		{"he", "He"},
-		{"she", "She"},
+		{N_("it"), N_("It")},
+		{N_("he"), N_("He")},
+		{N_("she"), N_("She")},
 	};
 
 	int pronoun_index = MON_SEX_NEUTER, case_index = 0;
@@ -728,7 +729,7 @@ static const char *lore_pronoun_nominative(monster_sex_t sex, bool title_case)
 	if (title_case)
 		case_index = 1;
 
-	return lore_pronouns[pronoun_index][case_index];
+	return _(lore_pronouns[pronoun_index][case_index]);
 }
 
 /**
@@ -744,9 +745,9 @@ static const char *lore_pronoun_nominative(monster_sex_t sex, bool title_case)
 static const char *lore_pronoun_possessive(monster_sex_t sex, bool title_case)
 {
 	static const char *lore_pronouns[MON_SEX_MAX][2] = {
-		{"its", "Its"},
-		{"his", "His"},
-		{"her", "Her"},
+		{N_("its"), N_("Its")},
+		{N_("his"), N_("His")},
+		{N_("her"), N_("Her")},
 	};
 
 	int pronoun_index = MON_SEX_NEUTER, case_index = 0;
@@ -757,7 +758,7 @@ static const char *lore_pronoun_possessive(monster_sex_t sex, bool title_case)
 	if (title_case)
 		case_index = 1;
 
-	return lore_pronouns[pronoun_index][case_index];
+	return _(lore_pronouns[pronoun_index][case_index]);
 }
 
 /**
@@ -774,6 +775,7 @@ static const char *lore_pronoun_possessive(monster_sex_t sex, bool title_case)
  * \param conjunction is a string that is added before the last item.
  * \param end is a string that is added after the last item.
  */
+// TODO[locale]: totally rewrite function for i18n
 static void lore_append_clause(textblock *tb, bitflag *f, uint8_t attr,
 							   const char *start, const char *conjunction,
 							   const char *end)
@@ -788,14 +790,14 @@ static void lore_append_clause(textblock *tb, bitflag *f, uint8_t attr,
 			/* First entry starts immediately */
 			if (flag != rf_next(f, FLAG_START)) {
 				if (comma) {
-					textblock_append(tb, ",");
+					textblock_append(tb, _(","));
 				}
 				/* Last entry */
 				if (rf_next(f, flag + 1) == FLAG_END) {
-					textblock_append(tb, " ");
+					textblock_append(tb, _(" "));
 					textblock_append(tb, "%s", conjunction);
 				}
-				textblock_append(tb, " ");
+				textblock_append(tb, _(" "));
 			}
 			textblock_append_c(tb, attr, "%s", describe_race_flag(flag));
 		}
@@ -838,10 +840,10 @@ static void lore_append_spell_clause(textblock *tb, bitflag *f, bool know_hp,
 				}
 				/* Last entry */
 				if (rsf_next(f, spell + 1) == FLAG_END) {
-					textblock_append(tb, " ");
+					textblock_append(tb, _(" "));
 					textblock_append(tb, "%s", conjunction);
 				}
-				textblock_append(tb, " ");
+				textblock_append(tb, _(" "));
 			}
 			textblock_append_c(tb, color, "%s",
 							   mon_spell_lore_description(spell, race));
@@ -884,48 +886,48 @@ void lore_append_kills(textblock *tb, const struct monster_race *race,
 		/* We've been killed... */
 		if (lore->deaths) {
 			/* Killed ancestors */
-			textblock_append(tb, "%s has slain %d of your ancestors",
+			textblock_append(tb, _("%s has slain %d of your ancestors"),
 							 lore_pronoun_nominative(msex, true), lore->deaths);
 
 			/* But we've also killed it */
 			if (dead)
-				textblock_append(tb, ", but you have taken revenge!  ");
+				textblock_append(tb, _(", but you have taken revenge!  "));
 
 			/* Unavenged (ever) */
 			else
-				textblock_append(tb, ", who %s unavenged.  ",
+				textblock_append(tb, _(", who %s unavenged.  "),
 								 VERB_AGREEMENT(lore->deaths, "remains",
 												"remain"));
 		} else if (dead) { /* Dead unique who never hurt us */
-			textblock_append(tb, "You have slain this foe.  ");
+			textblock_append(tb, _("You have slain this foe.  "));
 		} else {
 			/* Alive and never killed us */
 			out = false;
 		}
 	} else if (lore->deaths) {
 		/* Dead ancestors */
-		textblock_append(tb, "%d of your ancestors %s been killed by this creature, ", lore->deaths, VERB_AGREEMENT(lore->deaths, "has", "have"));
+		textblock_append(tb, _("%d of your ancestors %s been killed by this creature, "), lore->deaths, VERB_AGREEMENT(lore->deaths, "has", "have"));
 
 		if (lore->pkills) {
 			/* Some kills this life */
-			textblock_append(tb, "and you have exterminated at least %d of the creatures.  ", lore->pkills);
+			textblock_append(tb, _("and you have exterminated at least %d of the creatures.  "), lore->pkills);
 		} else if (lore->tkills) {
 			/* Some kills past lives */
-			textblock_append(tb, "and your ancestors have exterminated at least %d of the creatures.  ", lore->tkills);
+			textblock_append(tb, _("and your ancestors have exterminated at least %d of the creatures.  "), lore->tkills);
 		} else {
 			/* No kills */
-			textblock_append_c(tb, COLOUR_RED, "and %s is not ever known to have been defeated.  ", lore_pronoun_nominative(msex, false));
+			textblock_append_c(tb, COLOUR_RED, _("and %s is not ever known to have been defeated.  "), lore_pronoun_nominative(msex, false));
 		}
 	} else {
 		if (lore->pkills) {
 			/* Killed some this life */
-			textblock_append(tb, "You have killed at least %d of these creatures.  ", lore->pkills);
+			textblock_append(tb, _("You have killed at least %d of these creatures.  "), lore->pkills);
 		} else if (lore->tkills) {
 			/* Killed some last life */
-			textblock_append(tb, "Your ancestors have killed at least %d of these creatures.  ", lore->tkills);
+			textblock_append(tb, _("Your ancestors have killed at least %d of these creatures.  "), lore->tkills);
 		} else {
 			/* Killed none */
-			textblock_append(tb, "No battles to the death are recalled.  ");
+			textblock_append(tb, _("No battles to the death are recalled.  "));
 		}
 	}
 
@@ -944,7 +946,7 @@ void lore_append_flavor(textblock *tb, const struct monster_race *race)
 {
 	assert(tb && race);
 
-	textblock_append(tb, "%s\n", race->text);
+	textblock_append(tb, "%s\n", _GAMEDATA_C("monster", race->text));
 }
 
 /**
@@ -967,13 +969,13 @@ void lore_append_movement(textblock *tb, const struct monster_race *race,
 
 	assert(tb && race && lore);
 
-	textblock_append(tb, "This");
+	textblock_append(tb, _("This"));
 
 	/* Get adjectives */
 	create_mon_flag_mask(flags, RFT_RACE_A, RFT_MAX);
 	rf_inter(flags, race->flags);
 	for (f = rf_next(flags, FLAG_START); f; f = rf_next(flags, f + 1)) {
-		textblock_append_c(tb, COLOUR_L_BLUE, " %s", describe_race_flag(f));
+		textblock_append_c(tb, COLOUR_L_BLUE, _(" %s"), describe_race_flag(f));
 	}
 
 	/* Get noun */
@@ -981,66 +983,76 @@ void lore_append_movement(textblock *tb, const struct monster_race *race,
 	rf_inter(flags, race->flags);
 	f = rf_next(flags, FLAG_START);
 	if (f) {
-		textblock_append_c(tb, COLOUR_L_BLUE, " %s", describe_race_flag(f));
+		// TODO[locale]: May use context
+		textblock_append_c(tb, COLOUR_L_BLUE, _(" %s"), describe_race_flag(f));
 	} else {
-		textblock_append_c(tb, COLOUR_L_BLUE, " creature");
+		textblock_append_c(tb, COLOUR_L_BLUE, _(" creature"));
 	}
 
 	/* Describe location */
 	if (race->level == 0) {
-		textblock_append(tb, " lives in the town");
+		textblock_append(tb, _(" lives in the town"));
 	} else {
 		uint8_t colour = (race->level > player->max_depth) ?
 			COLOUR_RED : COLOUR_L_BLUE;
 
 		if (rf_has(known_flags, RF_FORCE_DEPTH))
-			textblock_append(tb, " is found ");
+			textblock_append(tb, _(" is found "));
 		else
-			textblock_append(tb, " is normally found ");
+			textblock_append(tb, _(" is normally found "));
 
-		textblock_append(tb, "at depths of ");
+		char depth_pre[64], depth_post[64];
+		i18n_text_split(_("at depths of {}"), depth_pre, depth_post);
+
+		textblock_append(tb, depth_pre);
 		textblock_append_c(tb, colour, "%d", race->level * 50);
-		textblock_append(tb, " feet (level ");
+		textblock_append(tb, _(" feet (level "));
 		textblock_append_c(tb, colour, "%d", race->level);
-		textblock_append(tb, ")");
+		textblock_append(tb, _(")"));
+		textblock_append(tb, depth_post);
 	}
 
-	textblock_append(tb, ", and moves");
+	char movement_pre[64], movement_post[64];
+	i18n_text_split(_(", and moves{}"), movement_pre, movement_post);
+
+	textblock_append(tb, movement_pre);
 
 	/* Random-ness */
 	if (flags_test(known_flags, RF_SIZE, RF_RAND_50, RF_RAND_25, FLAG_END)) {
 		/* Adverb */
 		if (rf_has(known_flags, RF_RAND_50) && rf_has(known_flags, RF_RAND_25))
-			textblock_append(tb, " extremely");
+			textblock_append(tb, _(" extremely"));
 		else if (rf_has(known_flags, RF_RAND_50))
-			textblock_append(tb, " somewhat");
+			textblock_append(tb, _(" somewhat"));
 		else if (rf_has(known_flags, RF_RAND_25))
-			textblock_append(tb, " a bit");
+			textblock_append(tb, _(" a bit"));
 
 		/* Adjective */
-		textblock_append(tb, " erratically");
+		textblock_append(tb, _(" erratically"));
 
 		/* Hack -- Occasional conjunction */
-		if (race->speed != 110) textblock_append(tb, ", and");
+		if (race->speed != 110) textblock_append(tb, _(", and"));
 	}
 
 	/* Speed */
-	textblock_append(tb, " ");
+	textblock_append(tb, _(" "));
 
 	if (OPT(player, effective_speed))
 		lore_multiplier_speed(tb, race);
 	else
 		lore_adjective_speed(tb, race);
 
+	textblock_append(tb, movement_post);
+
 	/* The speed description also describes "attack speed" */
 	if (rf_has(known_flags, RF_NEVER_MOVE)) {
-		textblock_append(tb, ", but ");
+		textblock_append(tb, _(", but "));
 		textblock_append_c(tb, COLOUR_L_GREEN,
-						   "does not deign to chase intruders");
+						   _("does not deign to chase intruders"));
 	}
 
 	/* End this sentence */
-	textblock_append(tb, ".  ");
+	textblock_append(tb, _(".  "));
 }
 
 /**
@@ -1069,29 +1081,35 @@ void lore_append_toughness(textblock *tb, const struct monster_race *race,
 	/* Describe monster "toughness" */
 	if (lore->armour_known) {
 		/* Hitpoints */
-		textblock_append(tb, "%s has a", lore_pronoun_nominative(msex, true));
+		textblock_append(tb, _("%s has a"), lore_pronoun_nominative(msex, true));
 
 		if (!rf_has(known_flags, RF_UNIQUE))
-			textblock_append(tb, "n average");
+			textblock_append(tb, _("n average"));
 
-		textblock_append(tb, " life rating of ");
+		char life_pre[64], life_post[64];
+		i18n_text_split(_(" life rating of {}"), life_pre, life_post);
+		textblock_append(tb, life_pre);
 		textblock_append_c(tb, COLOUR_L_BLUE, "%d", race->avg_hp);
+		textblock_append(tb, life_post);
 
 		/* Armor */
-		textblock_append(tb, ", and an armor rating of ");
+		char armor_pre[64], armor_post[64];
+		i18n_text_split(_(", and an armor rating of {}"), armor_pre, armor_post);
+		textblock_append(tb, armor_pre);
 		textblock_append_c(tb, COLOUR_L_BLUE, "%d", race->ac);
-		textblock_append(tb, ".  ");
+		textblock_append(tb, armor_post);
+		textblock_append(tb, _(".  "));
 
 		/* Player's base chance to hit */
 		random_chance c;
 		hit_chance(&c, chance_of_melee_hit_base(player, weapon), race->ac);
 		int percent = random_chance_scaled(c, 100);
 
-		textblock_append(tb, "You have a");
+		textblock_append(tb, _("You have a"));
 		if (percent == 8 || percent / 10 == 8)
-			textblock_append(tb, "n");
+			textblock_append(tb, _("n"));
 		textblock_append_c(tb, COLOUR_L_BLUE, " %d", percent);
-		textblock_append(tb, "%% chance to hit such a creature in melee (if you can see it).  ");
+		textblock_append(tb, _("%% chance to hit such a creature in melee (if you can see it).  "));
 	}
 }
 
@@ -1110,7 +1128,6 @@ void lore_append_exp(textblock *tb, const struct monster_race *race,
 					 const struct monster_lore *lore,
 					 bitflag known_flags[RF_SIZE])
 {
-	const char *ordinal, *article;
 	char buf[20] = "";
 	long exp_integer, exp_fraction;
 	int16_t level;
@@ -1120,12 +1137,11 @@ void lore_append_exp(textblock *tb, const struct monster_race *race,
 	if (!race->rarity) return;
 
 	/* Introduction */
+	const char *killof_part;
 	if (rf_has(known_flags, RF_UNIQUE))
-		textblock_append(tb, "Killing");
+		killof_part = _("Killing");
 	else
-		textblock_append(tb, "A kill of");
-
-	textblock_append(tb, " this creature");
+		killof_part = _("A kill of");
 
 	/* calculate the integer exp part */
 	exp_integer = (long)race->mexp * race->level / player->lev;
@@ -1141,10 +1157,18 @@ void lore_append_exp(textblock *tb, const struct monster_race *race,
 		my_strcat(buf, format(".%02ld", exp_fraction), sizeof(buf));
 
 	/* Mention the experience */
-	textblock_append(tb, " is worth ");
-	textblock_append_c(tb, COLOUR_BLUE, "%s point%s", buf,
-		PLURAL((exp_integer == 1) && (exp_fraction == 0)));
+	char points_part[64];
+	strnfmt(points_part, sizeof(points_part),
+		ngettext("%s point", "%s points", (exp_integer == 1) && (exp_fraction == 0) ? 1 : 2),
+		buf);
 
+	/* Mention the dependance on the player's level */
+	char level_part[64];
+	#ifdef USE_LOCALE
+	level = player->lev;
+	strnfmt(level_part, sizeof(level_part), "%u", level);
+	#else
+	const char *ordinal, *article;
 	/* Take account of annoying English */
 	ordinal = "th";
 	level = player->lev % 10;
@@ -1158,9 +1182,17 @@ void lore_append_exp(textblock *tb, const struct monster_race *race,
 	level = player->lev;
 	if ((level == 8) || (level == 11) || (level == 18)) article = "an";
 
-	/* Mention the dependance on the player's level */
-	textblock_append(tb, " for %s %u%s level character.  ", article,
-					 level, ordinal);
+	strnfmt(level_part, sizeof(level_part), "%s %u%s", article, level, ordinal);
+	#endif
+
+	// NOTE[i18n]: Here we need to use snprintf(), as specifying argument order by %1$s, %2$s, etc.
+	// is not supported by strnfmt().
+	// TODO: check if snprintf() is POSIX compliant.
+	char buf_sentence[192];
+	snprintf(buf_sentence, sizeof(buf_sentence),
+		_("%s this character is worth {blue}%s{/} for %s level character.  "),
+		killof_part, points_part, level_part);
+	textblock_append_e(tb, buf_sentence);
 }
 
 /**
@@ -1294,43 +1326,49 @@ void lore_append_abilities(textblock *tb, const struct monster_race *race,
 	/* Describe environment-shaping abilities. */
 	create_mon_flag_mask(current_flags, RFT_ALTER, RFT_MAX);
 	rf_inter(current_flags, known_flags);
-	strnfmt(start, sizeof(start), "%s can ", initial_pronoun);
-	lore_append_clause(tb, current_flags, COLOUR_WHITE, start, "and", ".  ");
+	char abilities_pre[64], abilities_post[64];
+	i18n_text_split(_("%s can {}.  "), abilities_pre, abilities_post);
+	my_strcpy(start, format(abilities_pre, initial_pronoun), sizeof(start));
+	lore_append_clause(tb, current_flags, COLOUR_WHITE, start, _("and"), abilities_post);
 
 	/* Describe detection traits */
 	create_mon_flag_mask(current_flags, RFT_DET, RFT_MAX);
 	rf_inter(current_flags, known_flags);
-	strnfmt(start, sizeof(start), "%s is ", initial_pronoun);
-	lore_append_clause(tb, current_flags, COLOUR_WHITE, start, "and", ".  ");
+	char detection_pre[64], detection_post[64];
+	i18n_text_split(_("%s is {}.  "), detection_pre, detection_post);
+	my_strcpy(start, format(detection_pre, initial_pronoun), sizeof(start));
+	lore_append_clause(tb, current_flags, COLOUR_WHITE, start, _("and"), detection_post);
 
 	/* Describe special things */
 	if (rf_has(known_flags, RF_UNAWARE))
-		textblock_append(tb, "%s disguises itself as something else.  ",
+		textblock_append(tb, _("%s disguises itself as something else.  "),
 						 initial_pronoun);
 	if (rf_has(known_flags, RF_MULTIPLY))
-		textblock_append_c(tb, COLOUR_ORANGE, "%s breeds explosively.  ",
+		textblock_append_c(tb, COLOUR_ORANGE, _("%s breeds explosively.  "),
 						   initial_pronoun);
 	if (rf_has(known_flags, RF_REGENERATE))
-		textblock_append(tb, "%s regenerates quickly.  ", initial_pronoun);
+		textblock_append(tb, _("%s regenerates quickly.  "), initial_pronoun);
 
 	/* Describe light */
 	if (race->light > 1) {
-		textblock_append(tb, "%s illuminates %s surroundings.  ",
+		textblock_append(tb, _("%s illuminates %s surroundings.  "),
 						 initial_pronoun, lore_pronoun_possessive(msex, false));
 	} else if (race->light == 1) {
-		textblock_append(tb, "%s is illuminated.  ", initial_pronoun);
+		textblock_append(tb, _("%s is illuminated.  "), initial_pronoun);
 	} else if (race->light == -1) {
-		textblock_append(tb, "%s is darkened.  ", initial_pronoun);
+		textblock_append(tb, _("%s is darkened.  "), initial_pronoun);
 	} else if (race->light < -1) {
-		textblock_append(tb, "%s shrouds %s surroundings in darkness.  ",
+		textblock_append(tb, _("%s shrouds %s surroundings in darkness.  "),
 						 initial_pronoun, lore_pronoun_possessive(msex, false));
 	}
 
 	/* Collect susceptibilities */
 	create_mon_flag_mask(current_flags, RFT_VULN, RFT_VULN_I, RFT_MAX);
 	rf_inter(current_flags, known_flags);
-	strnfmt(start, sizeof(start), "%s is hurt by ", initial_pronoun);
-	lore_append_clause(tb, current_flags, COLOUR_VIOLET, start, "and", "");
+	char susc_pre[64], susc_post[64];
+	i18n_text_split(_("%s is hurt by {}"), susc_pre, susc_post);
+	my_strcpy(start, format(susc_pre, initial_pronoun), sizeof(start));
+	lore_append_clause(tb, current_flags, COLOUR_VIOLET, start, _("and"), susc_post);
 	if (!rf_is_empty(current_flags)) {
 		prev = true;
 	}
@@ -1347,12 +1385,18 @@ void lore_append_abilities(textblock *tb, const struct monster_race *race,
 			rf_on(current_flags, flag);
 		}
 	}
-	if (prev) {
-		my_strcpy(start, ", but resists ", sizeof(start));
-	} else {
-		strnfmt(start, sizeof(start), "%s resists ", initial_pronoun);
+	char resist_pre[64], resist_post[64];
+	if (prev)
+	{
+		i18n_text_split(_(", but resists {}"), resist_pre, resist_post);
+		my_strcpy(start, resist_pre, sizeof(start));
 	}
-	lore_append_clause(tb, current_flags, COLOUR_L_UMBER, start, "and", "");
+	else
+	{
+		i18n_text_split(_("%s resists {}"), resist_pre, resist_post);
+		my_strcpy(start, format(resist_pre, initial_pronoun), sizeof(start));
+	}
+	lore_append_clause(tb, current_flags, COLOUR_L_UMBER, start, _("and"), resist_post);
 	if (!rf_is_empty(current_flags)) {
 		prev = true;
 	}
@@ -1379,11 +1423,18 @@ void lore_append_abilities(textblock *tb, const struct monster_race *race,
 				rf_off(current_flags, susc_flag);
 		}
 	}
-	if (prev) {
-		my_strcpy(start, ", and does not resist ", sizeof(start));
-	} else {
-		strnfmt(start, sizeof(start), "%s does not resist ",
-			initial_pronoun);
+
+	char noresist_pre[64], noresist_post[64];
+	if (prev)
+	{
+		i18n_text_split(_(", and does not resist {}"), noresist_pre, noresist_post);
+		my_strcpy(start,noresist_pre, sizeof(start));
+	}
+	else
+	{
+		i18n_text_split(_("%s does not resist {}"), noresist_pre, noresist_post);
+		my_strcpy(start, format(noresist_pre, initial_pronoun),
+				  sizeof(start));
 	}
 
 	/* Special case for undead */
@@ -1391,7 +1442,7 @@ void lore_append_abilities(textblock *tb, const struct monster_race *race,
 		rf_off(current_flags, RF_IM_NETHER);
 	}
 
-	lore_append_clause(tb, current_flags, COLOUR_L_UMBER, start, "or", "");
+	lore_append_clause(tb, current_flags, COLOUR_L_UMBER, start, _("or"), noresist_post);
 	if (!rf_is_empty(current_flags)) {
 		prev = true;
 	}
@@ -1399,18 +1450,25 @@ void lore_append_abilities(textblock *tb, const struct monster_race *race,
 	/* Collect non-effects */
 	create_mon_flag_mask(current_flags, RFT_PROT, RFT_MAX);
 	rf_inter(current_flags, known_flags);
-	if (prev) {
-		my_strcpy(start, ", and cannot be ", sizeof(start));
-	} else {
-		strnfmt(start, sizeof(start), "%s cannot be ", initial_pronoun);
+	char noneffect_pre[64], noneffect_post[64];
+	if (prev)
+	{
+		i18n_text_split(_(", and cannot be {}"), noneffect_pre, noneffect_post);
+		my_strcpy(start, noneffect_pre, sizeof(start));
 	}
-	lore_append_clause(tb, current_flags, COLOUR_L_UMBER, start, "or", "");
+	else
+	{
+		i18n_text_split(_("%s cannot be {}"), noneffect_pre, noneffect_post);
+		my_strcpy(start, format(noneffect_pre, initial_pronoun),
+				  sizeof(start));
+	}
+	lore_append_clause(tb, current_flags, COLOUR_L_UMBER, start, _("or"), noneffect_post);
 	if (!rf_is_empty(current_flags)) {
 		prev = true;
 	}
 
 	if (prev)
-		textblock_append(tb, ".  ");
+		textblock_append(tb, _(".  "));
 }
 
 /**
@@ -1437,11 +1495,11 @@ void lore_append_awareness(textblock *tb, const struct monster_race *race,
 	if (lore->sleep_known)
 	{
 		const char *aware = lore_describe_awareness(race->sleep);
-		textblock_append(tb, "%s %s intruders, which %s may notice from ",
+		textblock_append(tb, _("%s %s intruders, which %s may notice from "),
 						 lore_pronoun_nominative(msex, true), aware,
 						 lore_pronoun_nominative(msex, false));
 		textblock_append_c(tb, COLOUR_L_BLUE, "%d", 10 * race->hearing);
-		textblock_append(tb, " feet.  ");
+		textblock_append(tb, _(" feet.  "));
 	}
 }
 
@@ -1514,8 +1572,10 @@ void lore_append_spells(textblock *tb, const struct monster_race *race,
 	create_mon_spell_mask(test_flags, RST_BREATH, RST_NONE);
 	rsf_diff(current_flags, test_flags);
 	if (!rsf_is_empty(current_flags)) {
-		textblock_append(tb, "%s may ", initial_pronoun);
-		lore_append_spell_clause(tb, current_flags, know_hp, race, "or", "");
+		char innate_pre[64], innate_post[64];
+		i18n_text_split(_("%s may {}"), innate_pre, innate_post);
+		textblock_append(tb, innate_pre, initial_pronoun);
+		lore_append_spell_clause(tb, current_flags, know_hp, race, _("or"), innate_post);
 		innate = true;
 	}
 
@@ -1523,13 +1583,15 @@ void lore_append_spells(textblock *tb, const struct monster_race *race,
 	create_mon_spell_mask(current_flags, RST_BREATH, RST_NONE);
 	rsf_inter(current_flags, lore->spell_flags);
 	if (!rsf_is_empty(current_flags)) {
+		char breath_pre[64], breath_post[64];
 		if (innate) {
-			textblock_append(tb, ", and may ");
+			i18n_text_split(_(", and may {red}breathe {/}{}"), breath_pre, breath_post);
+			textblock_append(tb, breath_pre);
 		} else {
-			textblock_append(tb, "%s may ", initial_pronoun);
+			i18n_text_split(_("%s may {red}breathe {/}{}"), breath_pre, breath_post);
+			textblock_append(tb, breath_pre, initial_pronoun);
 		}
-		textblock_append_c(tb, COLOUR_L_RED, "breathe ");
-		lore_append_spell_clause(tb, current_flags, know_hp, race, "or", "");
+		lore_append_spell_clause(tb, current_flags, know_hp, race, _("or"), breath_post);
 		breath = true;
 	}
 
@@ -1560,19 +1622,17 @@ void lore_append_spells(textblock *tb, const struct monster_race *race,
 	create_mon_spell_mask(test_flags, RST_BREATH, RST_INNATE, RST_NONE);
 	rsf_diff(current_flags, test_flags);
 	if (!rsf_is_empty(current_flags)) {
-		/* Intro */
-		textblock_append(tb, "%s may ", initial_pronoun);
+		char spell_pre[64], spell_post[64];
+		i18n_text_split(_("%s may {red}cast spells{/}%s which {}"), spell_pre, spell_post);
 
-		/* Verb Phrase */
-		textblock_append_c(tb, COLOUR_L_RED, "cast spells");
-
-		/* Adverb */
+		const char *intelligent_adverb = "";
 		if (rf_has(known_flags, RF_SMART))
-			textblock_append(tb, " intelligently");
+			intelligent_adverb = _(" intelligently");
+
+		textblock_append_e(tb, spell_pre, initial_pronoun, intelligent_adverb);
 
 		/* List */
-		textblock_append(tb, " which ");
-		lore_append_spell_clause(tb, current_flags, know_hp, race, "or", "");
+		lore_append_spell_clause(tb, current_flags, know_hp, race, _("or"), spell_post);
 
 		/* End the sentence about innate/other spells */
 		if (race->freq_spell) {
@@ -1595,7 +1655,7 @@ void lore_append_spells(textblock *tb, const struct monster_race *race,
 			}
 		}
 
-		textblock_append(tb, ".  ");
+		textblock_append(tb, _(".  "));
 	}
 }
 
@@ -1626,7 +1686,7 @@ void lore_append_attack(textblock *tb, const struct monster_race *race,
 
 	/* Notice lack of attacks */
 	if (rf_has(known_flags, RF_NEVER_BLOW)) {
-		textblock_append(tb, "%s has no physical attacks.  ",
+		textblock_append(tb, _("%s has no physical attacks.  "),
 						 lore_pronoun_nominative(msex, true));
 		return;
 	}
@@ -1646,7 +1706,7 @@ void lore_append_attack(textblock *tb, const struct monster_race *race,
 
 	/* Describe the lack of knowledge */
 	if (known_attacks == 0) {
-		textblock_append_c(tb, COLOUR_ORANGE, "Nothing is known about %s attack.  ",
+		textblock_append_c(tb, COLOUR_ORANGE, _("Nothing is known about %s attack.  "),
 						 lore_pronoun_possessive(msex, false));
 		return;
 	}
@@ -1668,22 +1728,23 @@ void lore_append_attack(textblock *tb, const struct monster_race *race,
 
 		/* Introduce the attack description */
 		if (described_count == 0)
-			textblock_append(tb, "%s can ",
+			textblock_append(tb, _("%s can "),
 							 lore_pronoun_nominative(msex, true));
 		else if (described_count < known_attacks - 1)
-			textblock_append(tb, ", ");
+			textblock_append(tb, _(", "));
 		else
-			textblock_append(tb, ", and ");
+			textblock_append(tb, _(", and "));
 
 		/* Describe the method */
-		textblock_append(tb, "%s", race->blow[i].method->desc);
+		textblock_append(tb, "%s", _GAMEDATA_C("blow_methods", race->blow[i].method->desc));
 
 		/* Describe the effect (if any) */
 		if (effect_str && strlen(effect_str) > 0) {
 			int index = blow_index(race->blow[i].effect->name);
 			/* Describe the attack type */
-			textblock_append(tb, " to ");
-			textblock_append_c(tb, blow_color(player, index), "%s", effect_str);
+			// XXX[locale]: " to " usage differs to describe_effect() in obj-info.c
+			textblock_append(tb, _C("mon-lore", " to "));
+			textblock_append_c(tb, blow_color(player, index), "%s", _GAMEDATA_C("blow_effects", effect_str));
 
 			textblock_append(tb, " (");
 			/* Describe damage (if known) */
@@ -1714,12 +1775,12 @@ void lore_append_attack(textblock *tb, const struct monster_race *race,
 		described_count++;
 	}
 
-	textblock_append(tb, ", averaging");
+	textblock_append(tb, _(", averaging"));
 	if (known_attacks < total_attacks) {
-		textblock_append_c(tb, COLOUR_ORANGE, " at least");
+		textblock_append_c(tb, COLOUR_ORANGE, _(" at least"));
 	}
-	textblock_append_c(tb, COLOUR_L_GREEN, " %d", total_centidamage/100);
-	textblock_append(tb, " damage on each of %s turns.  ",
+	textblock_append_c(tb, COLOUR_L_GREEN, _(" %d"), total_centidamage/100);
+	textblock_append(tb, _(" damage on each of %s turns.  "),
 					 lore_pronoun_possessive(msex, false));
 }
 
