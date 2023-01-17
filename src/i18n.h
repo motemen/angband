@@ -32,7 +32,7 @@
   strcpy(buf, ctx GETTEXT_GLUE); \
   strcat(buf, (msgid)); \
   const char *t = dgettext("gamedata", buf); \
-  strcmp(t, buf) == 0 ? ("unkknown" ctx) : t; \
+  strcmp(t, buf) == 0 ? msgid : t; \
 })
 
 #define N_GAMEDATA(msgid) gettext_noop(msgid)

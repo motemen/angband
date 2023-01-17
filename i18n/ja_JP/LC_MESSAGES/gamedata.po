@@ -10413,19 +10413,16 @@ msgid "<curse object>"
 msgstr ""
 
 #: ../lib/gamedata/object.txt:193
-#, fuzzy
 msgctxt "object"
 msgid "& Wooden Torch~"
 msgstr "松明"
 
 #: ../lib/gamedata/object.txt:204
-#, fuzzy
 msgctxt "object"
 msgid "& Lantern~"
-msgstr "ランス"
+msgstr "ランタン"
 
 #: ../lib/gamedata/object.txt:215
-#, fuzzy
 msgctxt "object"
 msgid "& Flask~ of oil"
 msgstr "油つぼ"
@@ -10472,7 +10469,6 @@ msgid ""
 msgstr ""
 
 #: ../lib/gamedata/object.txt:275
-#, fuzzy
 msgctxt "object"
 msgid "& Slime Mold~"
 msgstr "スライムモルド"
@@ -10718,7 +10714,6 @@ msgstr ""
 "拳を防御する大きな鍔を持つ短い剣。主に決闘で防御用の短剣として用いられる。"
 
 #: ../lib/gamedata/object.txt:685
-#, fuzzy
 msgctxt "object"
 msgid "& Rapier~"
 msgstr "レイピア"
@@ -10730,7 +10725,6 @@ msgid "A long, thin thrusting blade, mainly used in duels."
 msgstr "突きに用いる長く細い刀身を持つ剣。主に決闘に用いられる。"
 
 #: ../lib/gamedata/object.txt:696
-#, fuzzy
 msgctxt "object"
 msgid "& Short Sword~"
 msgstr "ショート・ソード"
@@ -10742,7 +10736,6 @@ msgid "A short thrusting sword."
 msgstr "主に突く用途に用いる短い剣だ。"
 
 #: ../lib/gamedata/object.txt:707
-#, fuzzy
 msgctxt "object"
 msgid "& Cutlass~"
 msgstr "カットラス"
