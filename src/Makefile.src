@@ -38,7 +38,8 @@ HEADERS = \
 	z-set.h \
 	z-type.h \
 	z-util.h \
-	z-virt.h
+	z-virt.h \
+	i18n.h
 
 ZFILES = \
 	z-bitflag.o \
@@ -216,6 +217,7 @@ ANGFILES = \
 	wiz-debug.o \
 	wiz-spoil.o \
 	wiz-stats.o \
+	i18n.o \
 
 STATSMAINFILES = main-stats.o \
         stats/db.o
