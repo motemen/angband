@@ -39,6 +39,8 @@ if head=$(git rev-parse --verify --short HEAD 2>/dev/null); then
 		printf '%s' -dirty
 	fi
 
+	printf '%s' '-日本語'
+
 	# All done with git
 	exit
 fi

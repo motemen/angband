@@ -709,6 +709,7 @@ static int hasSameBackground(const struct TerminalCell* c)
 {
     [self checkForBigStuffOverwriteAtColumn:icol row:irow width:n height:1];
 
+    // TODO[doublewidth]
     struct TerminalCell *cellsRow = self->cells + irow * self.columnCount;
     for (int i = icol; i < icol + n; ++i) {
 	cellsRow[i].v.ch.glyph = *g++;
@@ -2148,13 +2149,36 @@ static BOOL initialized = NO;
     /* Get glyph and advance */
     CGGlyph thisGlyphArray[2] = { 0, 0 };
     CGSize advances[2] = { { 0, 0 }, { 0, 0 } };
-    CTFontGetGlyphsForCharacters(
-	(CTFontRef)font, unicharString, thisGlyphArray, nuni);
+
+    CTFontRef font_ = NULL;
+    if (CTFontGetGlyphsForCharacters((CTFontRef)font, unicharString, thisGlyphArray, nuni)) {
+        font_ = (__bridge CTFontRef)font;
+    } else {
+        CFStringRef lang_ja = CFSTR("ja");
+        CFArrayRef languages = CFArrayCreate(NULL, (const void **)&lang_ja, 1, &kCFTypeArrayCallBacks);
+
+        CFArrayRef fonts = CTFontCopyDefaultCascadeListForLanguages((CTFontRef)font, languages);
+
+        CFIndex len = CFArrayGetCount(fonts);
+        for (CFIndex i = 0; i < len; i++) {
+            CTFontDescriptorRef fontDesc = CFArrayGetValueAtIndex(fonts, i);
+            font_ = CTFontCreateWithFontDescriptor(fontDesc, 0.0, NULL);
+            if (CTFontGetGlyphsForCharacters((CTFontRef)font_, unicharString, thisGlyphArray, nuni)) {
+                break;
+            }
+        }
+    }
+
+    CGFontRef cgFont = CTFontCopyGraphicsFont(font_, NULL);
+    CGContextSetFont(ctx, cgFont);
+
     CGGlyph glyph = thisGlyphArray[0];
     CTFontGetAdvancesForGlyphs(
-	(CTFontRef)font, kCTFontHorizontalOrientation, thisGlyphArray,
+	font_, kCTFontHorizontalOrientation, thisGlyphArray,
 	advances, 1);
     CGSize advance = advances[0];
+
+    bool isDoubleWidth = i18n_is_doublewidth(wchar);
 
     /*
      * If our font is not monospaced, our tile width is deliberately not big
@@ -2168,6 +2192,11 @@ static BOOL initialized = NO;
         /* Our glyph fits, so we can just draw it, possibly with an offset */
         compressionRatio = 1.0;
         tileOffsetX = (NSWidth(tile) - advance.width)/2;
+    }
+    else if (isDoubleWidth)
+    {
+        compressionRatio = 1.0;
+        tileOffsetX = 0;
     }
     else
     {
@@ -2860,6 +2889,11 @@ static int compare_advances(const void *ap, const void *bp)
 		    --icol;
 		}
 	    }
+
+#ifdef USE_DOUBLEWIDTH
+	    // double-width characters may remain undrawed half of them
+	    jcol++;
+#endif
 
 	    NSRect r = [self viewRectForCellBlockAtX:icol y:irow
 			     width:(jcol - icol) height:1];
