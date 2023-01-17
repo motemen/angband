@@ -18,7 +18,7 @@ ARCHFLAGS = $(addprefix -arch ,$(ARCHS))
 OSXVERSFLAGS = -mmacosx-version-min=10.9
 WARNINGS = -W -Wall -Wextra -Wno-unused-parameter \
 	-Wno-missing-field-initializers -Wwrite-strings -Wmissing-prototypes \
-	-Wnested-externs -Wshadow -Wunused-macros
+	-Wnested-externs -Wshadow -Wunused-macros -Wno-format-security
 JUST_C = -std=c99
 OBJ_CFLAGS = -std=c99 -x objective-c -fobjc-arc
 CFLAGS = -g -I. $(WARNINGS) $(OPT) -DMACH_O_CARBON -DSOUND -DHAVE_MKSTEMP \
