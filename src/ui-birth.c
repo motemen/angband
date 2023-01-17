@@ -560,8 +560,8 @@ static void setup_menus(void)
 	mdata = race_menu.menu_data;
 
 	for (i = 0, r = races; r; r = r->next, i++)
-		mdata->items[r->ridx] = r->name;
-	mdata->hint = "Race affects stats and skills, and may confer resistances and abilities.";
+		mdata->items[r->ridx] = _GAMEDATA_C("p_race", r->name);
+	mdata->hint = _("Race affects stats and skills, and may confer resistances and abilities.");
 
 	/* Count the classes */
 	n = 0;
@@ -573,8 +573,8 @@ static void setup_menus(void)
 	mdata = class_menu.menu_data;
 
 	for (i = 0, c = classes; c; c = c->next, i++)
-		mdata->items[c->cidx] = c->name;
-	mdata->hint = "Class affects stats, skills, and other character traits.";
+		mdata->items[c->cidx] = _GAMEDATA_C("class", c->name);
+	mdata->hint = _("Class affects stats, skills, and other character traits.");
 		
 	/* Roller menu straightforward */
 	init_birth_menu(&roller_menu, MAX_BIRTH_ROLLERS, 0, &roller_region, false,
@@ -619,14 +619,14 @@ static void clear_question(void)
 }
 
 
-#define BIRTH_MENU_HELPTEXT \
+#define BIRTH_MENU_HELPTEXT _( \
 	"{light blue}Please select your character traits from the menus below:{/}\n\n" \
 	"Use the {light green}movement keys{/} to scroll the menu, " \
 	"{light green}Enter{/} to select the current menu item, '{light green}*{/}' " \
 	"for a random menu item, '{light green}@{/}' to finish the character with random selections, " \
 	"'{light green}ESC{/}' to step back through the birth process, " \
 	"'{light green}={/}' for the birth options, '{light green}?{/}' " \
-	"for help, or '{light green}Ctrl-X{/}' to quit."
+	"for help, or '{light green}Ctrl-X{/}' to quit.")
 
 /**
  * Show the birth instructions on an otherwise blank screen
