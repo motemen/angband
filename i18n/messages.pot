@@ -1,0 +1,1144 @@
+#: ../src/cmd-cave.c:1161 ../src/player-attack.c:729
+#, c-format
+msgid "You are too afraid to attack %s!"
+msgstr ""
+
+#: ../src/cmd-cave.c:1179
+msgid "There is a pile of rubble in the way!"
+msgstr ""
+
+#: ../src/cmd-cave.c:1185
+msgid "There is a wall in the way!"
+msgstr ""
+
+#: ../src/mon-attack.c:634
+msgid "."
+msgstr ""
+
+#: ../src/mon-attack.c:644
+#, c-format
+msgid "%s %s%s"
+msgstr ""
+
+#: ../src/mon-blows.c:131
+msgid "you"
+msgstr ""
+
+#: ../src/mon-blows.c:143
+msgid "your"
+msgstr ""
+
+#: ../src/mon-blows.c:229
+#, c-format
+msgid "%s tries to steal %syour %s, but fails."
+msgstr ""
+
+#: ../src/mon-blows.c:230 ../src/mon-blows.c:235
+msgid "one of "
+msgstr ""
+
+#: ../src/mon-blows.c:234
+#, c-format
+msgid "%syour %s (%c) was stolen!"
+msgstr ""
+
+#: ../src/mon-blows.c:366
+msgid "You are covered in acid!"
+msgstr ""
+
+#: ../src/mon-blows.c:368
+msgid "You are struck by electricity!"
+msgstr ""
+
+#: ../src/mon-blows.c:370
+msgid "You are enveloped in flames!"
+msgstr ""
+
+#: ../src/mon-blows.c:372
+msgid "You are covered with frost!"
+msgstr ""
+
+#: ../src/mon-blows.c:530
+msgid "You keep hold of your life force!"
+msgstr ""
+
+#: ../src/mon-blows.c:535
+msgid "You feel your life slipping away!"
+msgstr ""
+
+#: ../src/mon-blows.c:538
+msgid "You feel your life draining away!"
+msgstr ""
+
+#: ../src/mon-blows.c:653
+msgid "Energy drains from your pack!"
+msgstr ""
+
+#: ../src/mon-blows.c:697
+msgid "You quickly protect your money pouch!"
+msgstr ""
+
+#: ../src/mon-blows.c:708
+msgid "Nothing was stolen."
+msgstr ""
+
+#: ../src/mon-blows.c:713
+msgid "Your purse feels lighter."
+msgstr ""
+
+#: ../src/mon-blows.c:715
+#, c-format
+msgid "%d coins were stolen!"
+msgstr ""
+
+#: ../src/mon-blows.c:717
+msgid "All of your coins were stolen!"
+msgstr ""
+
+#: ../src/mon-blows.c:765
+msgid "You grab hold of your backpack!"
+msgstr ""
+
+#: ../src/mon-blows.c:816
+#, c-format
+msgid "Your %s (%c) was eaten!"
+msgstr ""
+
+#: ../src/mon-blows.c:821
+#, c-format
+msgid "One of your %s (%c) was eaten!"
+msgstr ""
+
+#: ../src/mon-desc.c:205
+msgid "the "
+msgstr ""
+
+#: ../src/mon-desc.c:232
+msgid "'s"
+msgstr ""
+
+#: ../src/mon-lore.c:567
+msgid "prefers to ignore"
+msgstr ""
+
+#: ../src/mon-lore.c:568
+msgid "pays very little attention to"
+msgstr ""
+
+#: ../src/mon-lore.c:569
+msgid "pays little attention to"
+msgstr ""
+
+#: ../src/mon-lore.c:570
+msgid "tends to overlook"
+msgstr ""
+
+#: ../src/mon-lore.c:571
+msgid "takes quite a while to see"
+msgstr ""
+
+#: ../src/mon-lore.c:572
+msgid "takes a while to see"
+msgstr ""
+
+#: ../src/mon-lore.c:573
+msgid "is fairly observant of"
+msgstr ""
+
+#: ../src/mon-lore.c:574
+msgid "is observant of"
+msgstr ""
+
+#: ../src/mon-lore.c:575
+msgid "is very observant of"
+msgstr ""
+
+#: ../src/mon-lore.c:576
+msgid "is vigilant for"
+msgstr ""
+
+#: ../src/mon-lore.c:589
+msgid "is ever vigilant for"
+msgstr ""
+
+#: ../src/mon-lore.c:608
+msgid "incredibly quickly"
+msgstr ""
+
+#: ../src/mon-lore.c:609
+msgid "very quickly"
+msgstr ""
+
+#: ../src/mon-lore.c:610
+msgid "quickly"
+msgstr ""
+
+#: ../src/mon-lore.c:611
+msgid "fairly quickly"
+msgstr ""
+
+#: ../src/mon-lore.c:612
+msgid "normal speed"
+msgstr ""
+
+#: ../src/mon-lore.c:613
+msgid "slowly"
+msgstr ""
+
+#: ../src/mon-lore.c:614
+msgid "very slowly"
+msgstr ""
+
+#: ../src/mon-lore.c:615
+msgid "incredibly slowly"
+msgstr ""
+
+#: ../src/mon-lore.c:628
+msgid "erroneously"
+msgstr ""
+
+#: ../src/mon-lore.c:642
+msgid "at "
+msgstr ""
+
+#: ../src/mon-lore.c:667
+msgid " normal speed, which is "
+msgstr ""
+
+#: ../src/mon-lore.c:686
+msgid "the same as you"
+msgstr ""
+
+#: ../src/mon-lore.c:689
+msgid " your speed"
+msgstr ""
+
+#: ../src/mon-lore.c:719
+msgid "it"
+msgstr ""
+
+#: ../src/mon-lore.c:719
+msgid "It"
+msgstr ""
+
+#: ../src/mon-lore.c:720
+msgid "he"
+msgstr ""
+
+#: ../src/mon-lore.c:720
+msgid "He"
+msgstr ""
+
+#: ../src/mon-lore.c:721
+msgid "she"
+msgstr ""
+
+#: ../src/mon-lore.c:721
+msgid "She"
+msgstr ""
+
+#: ../src/mon-lore.c:748
+msgid "its"
+msgstr ""
+
+#: ../src/mon-lore.c:748
+msgid "Its"
+msgstr ""
+
+#: ../src/mon-lore.c:749
+msgid "his"
+msgstr ""
+
+#: ../src/mon-lore.c:749
+msgid "His"
+msgstr ""
+
+#: ../src/mon-lore.c:750
+msgid "her"
+msgstr ""
+
+#: ../src/mon-lore.c:750
+msgid "Her"
+msgstr ""
+
+#: ../src/mon-lore.c:793
+msgid ","
+msgstr ""
+
+#: ../src/mon-lore.c:797 ../src/mon-lore.c:800 ../src/mon-lore.c:843
+#: ../src/mon-lore.c:846 ../src/mon-lore.c:1038
+msgid " "
+msgstr ""
+
+#: ../src/mon-lore.c:889
+#, c-format
+msgid "%s has slain %d of your ancestors"
+msgstr ""
+
+#: ../src/mon-lore.c:894
+msgid ", but you have taken revenge!  "
+msgstr ""
+
+#: ../src/mon-lore.c:898
+#, c-format
+msgid ", who %s unavenged.  "
+msgstr ""
+
+#: ../src/mon-lore.c:902
+msgid "You have slain this foe.  "
+msgstr ""
+
+#: ../src/mon-lore.c:909
+#, c-format
+msgid "%d of your ancestors %s been killed by this creature, "
+msgstr ""
+
+#: ../src/mon-lore.c:913
+#, c-format
+msgid "and you have exterminated at least %d of the creatures.  "
+msgstr ""
+
+#: ../src/mon-lore.c:916
+#, c-format
+msgid "and your ancestors have exterminated at least %d of the creatures.  "
+msgstr ""
+
+#: ../src/mon-lore.c:919
+#, c-format
+msgid "and %s is not ever known to have been defeated.  "
+msgstr ""
+
+#: ../src/mon-lore.c:924
+#, c-format
+msgid "You have killed at least %d of these creatures.  "
+msgstr ""
+
+#: ../src/mon-lore.c:927
+#, c-format
+msgid "Your ancestors have killed at least %d of these creatures.  "
+msgstr ""
+
+#: ../src/mon-lore.c:930
+msgid "No battles to the death are recalled.  "
+msgstr ""
+
+#: ../src/mon-lore.c:972
+msgid "This"
+msgstr ""
+
+#: ../src/mon-lore.c:978 ../src/mon-lore.c:987
+#, c-format
+msgid " %s"
+msgstr ""
+
+#: ../src/mon-lore.c:989
+msgid " creature"
+msgstr ""
+
+#: ../src/mon-lore.c:994
+msgid " lives in the town"
+msgstr ""
+
+#: ../src/mon-lore.c:1000
+msgid " is found "
+msgstr ""
+
+#: ../src/mon-lore.c:1002
+msgid " is normally found "
+msgstr ""
+
+#: ../src/mon-lore.c:1005
+msgid "at depths of {}"
+msgstr ""
+
+#: ../src/mon-lore.c:1009
+msgid " feet (level "
+msgstr ""
+
+#: ../src/mon-lore.c:1011
+msgid ")"
+msgstr ""
+
+#: ../src/mon-lore.c:1016
+msgid ", and moves{}"
+msgstr ""
+
+#: ../src/mon-lore.c:1024
+msgid " extremely"
+msgstr ""
+
+#: ../src/mon-lore.c:1026
+msgid " somewhat"
+msgstr ""
+
+#: ../src/mon-lore.c:1028
+msgid " a bit"
+msgstr ""
+
+#: ../src/mon-lore.c:1031
+msgid " erratically"
+msgstr ""
+
+#: ../src/mon-lore.c:1034
+msgid ", and"
+msgstr ""
+
+#: ../src/mon-lore.c:1049
+msgid ", but "
+msgstr ""
+
+#: ../src/mon-lore.c:1051
+msgid "does not deign to chase intruders"
+msgstr ""
+
+#: ../src/mon-lore.c:1055 ../src/mon-lore.c:1101 ../src/mon-lore.c:1471
+#: ../src/mon-lore.c:1658
+msgid ".  "
+msgstr ""
+
+#: ../src/mon-lore.c:1084
+#, c-format
+msgid "%s has a"
+msgstr ""
+
+#: ../src/mon-lore.c:1087
+msgid "n average"
+msgstr ""
+
+#: ../src/mon-lore.c:1090
+msgid " life rating of {}"
+msgstr ""
+
+#: ../src/mon-lore.c:1097
+msgid ", and an armor rating of {}"
+msgstr ""
+
+#: ../src/mon-lore.c:1108
+msgid "You have a"
+msgstr ""
+
+#: ../src/mon-lore.c:1110
+msgid "n"
+msgstr ""
+
+#: ../src/mon-lore.c:1112
+#, c-format
+msgid "%% chance to hit such a creature in melee (if you can see it).  "
+msgstr ""
+
+#: ../src/mon-lore.c:1142
+msgid "Killing"
+msgstr ""
+
+#: ../src/mon-lore.c:1144
+msgid "A kill of"
+msgstr ""
+
+#: ../src/mon-lore.c:1162
+#, c-format
+msgid "%s point"
+msgid_plural "%s points"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/mon-lore.c:1193
+#, c-format
+msgid "%s this character is worth {blue}%s{/} for %s level character.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1330
+#, c-format
+msgid "%s can {}.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1332 ../src/mon-lore.c:1340 ../src/mon-lore.c:1371
+#: ../src/mon-lore.c:1399
+msgid "and"
+msgstr ""
+
+#: ../src/mon-lore.c:1338
+#, c-format
+msgid "%s is {}.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1344
+#, c-format
+msgid "%s disguises itself as something else.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1347
+#, c-format
+msgid "%s breeds explosively.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1350
+#, c-format
+msgid "%s regenerates quickly.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1354
+#, c-format
+msgid "%s illuminates %s surroundings.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1357
+#, c-format
+msgid "%s is illuminated.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1359
+#, c-format
+msgid "%s is darkened.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1361
+#, c-format
+msgid "%s shrouds %s surroundings in darkness.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1369
+#, c-format
+msgid "%s is hurt by {}"
+msgstr ""
+
+#: ../src/mon-lore.c:1391
+msgid ", but resists {}"
+msgstr ""
+
+#: ../src/mon-lore.c:1396
+#, c-format
+msgid "%s resists {}"
+msgstr ""
+
+#: ../src/mon-lore.c:1430
+msgid ", and does not resist {}"
+msgstr ""
+
+#: ../src/mon-lore.c:1435
+#, c-format
+msgid "%s does not resist {}"
+msgstr ""
+
+#: ../src/mon-lore.c:1445 ../src/mon-lore.c:1465 ../src/mon-lore.c:1578
+#: ../src/mon-lore.c:1594 ../src/mon-lore.c:1635
+msgid "or"
+msgstr ""
+
+#: ../src/mon-lore.c:1456
+msgid ", and cannot be {}"
+msgstr ""
+
+#: ../src/mon-lore.c:1461
+#, c-format
+msgid "%s cannot be {}"
+msgstr ""
+
+#: ../src/mon-lore.c:1498
+#, c-format
+msgid "%s %s intruders, which %s may notice from "
+msgstr ""
+
+#: ../src/mon-lore.c:1502
+msgid " feet.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1576
+#, c-format
+msgid "%s may {}"
+msgstr ""
+
+#: ../src/mon-lore.c:1588
+msgid ", and may {red}breathe {/}{}"
+msgstr ""
+
+#: ../src/mon-lore.c:1591
+#, c-format
+msgid "%s may {red}breathe {/}{}"
+msgstr ""
+
+#: ../src/mon-lore.c:1626
+#, c-format
+msgid "%s may {red}cast spells{/}%s which {}"
+msgstr ""
+
+#: ../src/mon-lore.c:1630
+msgid " intelligently"
+msgstr ""
+
+#: ../src/mon-lore.c:1689
+#, c-format
+msgid "%s has no physical attacks.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1709
+#, c-format
+msgid "Nothing is known about %s attack.  "
+msgstr ""
+
+#: ../src/mon-lore.c:1731
+#, c-format
+msgid "%s can "
+msgstr ""
+
+#: ../src/mon-lore.c:1734
+msgid ", "
+msgstr ""
+
+#: ../src/mon-lore.c:1736
+msgid ", and "
+msgstr ""
+
+#: ../src/mon-lore.c:1746
+msgctxt "mon-lore"
+msgid " to "
+msgstr ""
+
+#: ../src/mon-lore.c:1778
+msgid ", averaging"
+msgstr ""
+
+#: ../src/mon-lore.c:1780
+msgid " at least"
+msgstr ""
+
+#: ../src/mon-lore.c:1782
+#, c-format
+msgid " %d"
+msgstr ""
+
+#: ../src/mon-lore.c:1783
+#, c-format
+msgid " damage on each of %s turns.  "
+msgstr ""
+
+#: ../src/mon-msg.c:254
+#, c-format
+msgid "The %s"
+msgstr ""
+
+#: ../src/mon-util.c:1060
+#, c-format
+msgid "You have killed %s."
+msgstr ""
+
+#: ../src/mon-util.c:1063
+#, c-format
+msgid "You have destroyed %s."
+msgstr ""
+
+#: ../src/mon-util.c:1066
+#, c-format
+msgid "You have slain %s."
+msgstr ""
+
+#: ../src/obj-desc.c:187
+msgid "no more "
+msgstr ""
+
+#: ../src/obj-desc.c:189
+#, c-format
+msgid "%u "
+msgstr ""
+
+#: ../src/obj-desc.c:192
+msgctxt "random_artifact"
+msgid "the "
+msgstr ""
+
+#: ../src/obj-desc.c:194
+msgctxt "fixed_artifact"
+msgid "the "
+msgstr ""
+
+#: ../src/obj-desc.c:211
+msgid "an "
+msgstr ""
+
+#: ../src/obj-desc.c:213
+msgid "a "
+msgstr ""
+
+#: ../src/obj-desc.c:342
+#, c-format
+msgctxt "named_artifact"
+msgid "%s %s"
+msgstr ""
+
+#: ../src/obj-desc.c:344
+#, c-format
+msgctxt "artifact"
+msgid "%s %s"
+msgstr ""
+
+#: ../src/obj-desc.c:348
+#, c-format
+msgid "%s %s"
+msgstr ""
+
+#: ../src/obj-desc.c:352
+#, c-format
+msgid "%s '%s'"
+msgstr ""
+
+#: ../src/obj-desc.c:354
+#, c-format
+msgid "%s of %s"
+msgstr ""
+
+#: ../src/obj-desc.c:392
+#, c-format
+msgid " (%s)"
+msgstr ""
+
+#: ../src/obj-desc.c:409
+#, c-format
+msgid " (%dd%d)"
+msgstr ""
+
+#: ../src/obj-desc.c:414
+#, c-format
+msgid " (x%d)"
+msgstr ""
+
+#: ../src/obj-desc.c:461
+#, c-format
+msgid " (%d turns)"
+msgstr ""
+
+#: ../src/obj-desc.c:519
+#, c-format
+msgid " (%d charge%s)"
+msgstr ""
+
+#: ../src/obj-desc.c:523
+#, c-format
+msgid " (%d charging)"
+msgstr ""
+
+#: ../src/obj-desc.c:526
+msgid " (charging)"
+msgstr ""
+
+#: ../src/obj-desc.c:548
+msgid "empty"
+msgstr ""
+
+#: ../src/obj-desc.c:550
+msgid "tried"
+msgstr ""
+
+#: ../src/obj-desc.c:555
+msgid "cursed"
+msgstr ""
+
+#: ../src/obj-desc.c:559
+msgid "ignore"
+msgstr ""
+
+#: ../src/obj-desc.c:563
+msgid "??"
+msgstr ""
+
+#: ../src/obj-desc.c:590
+msgid " {unseen}"
+msgstr ""
+
+#: ../src/obj-desc.c:592
+msgid " {??}"
+msgstr ""
+
+#: ../src/obj-desc.c:594
+msgid " {cursed}"
+msgstr ""
+
+#: ../src/obj-desc.c:639
+msgid "(nothing)"
+msgstr ""
+
+#: ../src/obj-desc.c:644
+msgid "an unknown item"
+msgstr ""
+
+#: ../src/obj-desc.c:645
+msgid "unknown item"
+msgstr ""
+
+#: ../src/obj-desc.c:649
+#, c-format
+msgid "%d gold pieces worth of %s%s"
+msgstr ""
+
+#: ../src/obj-desc.c:651
+msgid " {ignore}"
+msgstr ""
+
+#: ../src/obj-gear.c:1119
+#, c-format
+msgid "You drop %s (%c)."
+msgstr ""
+
+#: ../src/obj-gear.c:1125
+#, c-format
+msgid "You no longer have the %s (%c)."
+msgstr ""
+
+#: ../src/obj-gear.c:1381
+#, c-format
+msgid "You no longer have %s."
+msgstr ""
+
+#: ../src/player-attack.c:715
+msgid "punch"
+msgstr ""
+
+#: ../src/player-attack.c:742
+#, c-format
+msgid "You miss %s."
+msgstr ""
+
+#: ../src/player-attack.c:746
+msgid "You feel strange..."
+msgstr ""
+
+#: ../src/player-attack.c:756
+msgid "hit"
+msgstr ""
+
+#: ../src/player-attack.c:817
+msgid "fail to harm"
+msgstr ""
+
+#: ../src/player-attack.c:831
+#, c-format
+msgid "You %s %s%s. %s"
+msgstr ""
+
+#: ../src/player-attack.c:834
+#, c-format
+msgid "You %s %s%s."
+msgstr ""
+
+#: ../src/ui-birth.c:564
+msgid ""
+"Race affects stats and skills, and may confer resistances and abilities."
+msgstr ""
+
+#: ../src/ui-birth.c:577
+msgid "Class affects stats, skills, and other character traits."
+msgstr ""
+
+#: ../src/ui-birth.c:623
+msgid ""
+"{light blue}Please select your character traits from the menus below:{/}\n"
+"\n"
+"Use the {light green}movement keys{/} to scroll the menu, {light green}"
+"Enter{/} to select the current menu item, '{light green}*{/}' for a random "
+"menu item, '{light green}@{/}' to finish the character with random "
+"selections, '{light green}ESC{/}' to step back through the birth process, "
+"'{light green}={/}' for the birth options, '{light green}?{/}' for help, or "
+"'{light green}Ctrl-X{/}' to quit."
+msgstr ""
+
+#: ../src/ui-display.c:101
+msgid "STR: "
+msgstr ""
+
+#: ../src/ui-display.c:101
+msgid "INT: "
+msgstr ""
+
+#: ../src/ui-display.c:101
+msgid "WIS: "
+msgstr ""
+
+#: ../src/ui-display.c:101
+msgid "DEX: "
+msgstr ""
+
+#: ../src/ui-display.c:101
+msgid "CON: "
+msgstr ""
+
+#: ../src/ui-display.c:109
+msgid "Str: "
+msgstr ""
+
+#: ../src/ui-display.c:109
+msgid "Int: "
+msgstr ""
+
+#: ../src/ui-display.c:109
+msgid "Wis: "
+msgstr ""
+
+#: ../src/ui-display.c:109
+msgid "Dex: "
+msgstr ""
+
+#: ../src/ui-display.c:109
+msgid "Con: "
+msgstr ""
+
+#: ../src/ui-display.c:179
+msgid "[=-WIZARD-=]"
+msgstr ""
+
+#: ../src/ui-display.c:181
+msgid "***WINNER***"
+msgstr ""
+
+#: ../src/ui-display.c:214
+msgid "LEVEL "
+msgstr ""
+
+#: ../src/ui-display.c:217
+msgid "Level "
+msgstr ""
+
+#: ../src/ui-display.c:244
+msgid "EXP"
+msgstr ""
+
+#: ../src/ui-display.c:244
+msgid "NXT"
+msgstr ""
+
+#: ../src/ui-display.c:247
+msgid "Exp"
+msgstr ""
+
+#: ../src/ui-display.c:247
+msgid "Nxt"
+msgstr ""
+
+#: ../src/ui-display.c:260
+msgid "AU "
+msgstr ""
+
+#: ../src/ui-display.c:305
+msgid "Cur AC "
+msgstr ""
+
+#: ../src/ui-display.c:319
+msgid "HP "
+msgstr ""
+
+#: ../src/ui-display.c:342
+msgid "SP "
+msgstr ""
+
+#: ../src/ui-display.c:477
+msgid "Fast"
+msgstr ""
+
+#: ../src/ui-display.c:480
+msgid "Slow"
+msgstr ""
+
+#: ../src/ui-display.c:513
+msgid "Town"
+msgstr ""
+
+#: ../src/ui-display.c:585
+msgid "L:"
+msgstr ""
+
+#: ../src/ui-display.c:588
+msgid "l:"
+msgstr ""
+
+#: ../src/ui-display.c:638
+msgid "EXP:"
+msgstr ""
+
+#: ../src/ui-display.c:638
+msgid "NXT:"
+msgstr ""
+
+#: ../src/ui-display.c:641
+msgid "exp:"
+msgstr ""
+
+#: ../src/ui-display.c:641
+msgid "nxt:"
+msgstr ""
+
+#: ../src/ui-display.c:652
+msgid "AC:"
+msgstr ""
+
+#: ../src/ui-display.c:663
+msgid "AU:"
+msgstr ""
+
+#: ../src/ui-display.c:674
+msgid "HP:"
+msgstr ""
+
+#: ../src/ui-display.c:698
+msgid "SP:"
+msgstr ""
+
+#: ../src/ui-display.c:919 ../src/ui-display.c:920
+msgid "Recall"
+msgstr ""
+
+#: ../src/ui-display.c:933 ../src/ui-display.c:934
+msgid "Descent"
+msgstr ""
+
+#: ../src/ui-display.c:961
+msgid "Rest      "
+msgstr ""
+
+#: ../src/ui-display.c:999
+#, c-format
+msgid "Rep. %3d00"
+msgstr ""
+
+#: ../src/ui-display.c:1001
+#, c-format
+msgid "Repeat %3d"
+msgstr ""
+
+#: ../src/ui-display.c:1105
+msgid "LF:"
+msgstr ""
+
+#: ../src/ui-display.c:1125 ../src/ui-display.c:1127
+#, c-format
+msgid "Light %d "
+msgstr ""
+
+#: ../src/ui-display.c:1143
+#, c-format
+msgid "Moves +%d "
+msgstr ""
+
+#: ../src/ui-display.c:1146
+#, c-format
+msgid "Moves -%d "
+msgstr ""
+
+#: ../src/ui-display.c:1205 ../src/ui-display.c:1207
+msgid "DTrap "
+msgstr ""
+
+#: ../src/ui-display.c:1231
+#, c-format
+msgid "Study (%d)"
+msgstr ""
+
+#: ../src/ui-display.c:1275
+msgid "Unignoring"
+msgstr ""
+
+#: ../src/ui-display.c:2120
+msgid "Display inven/equip"
+msgstr ""
+
+#: ../src/ui-display.c:2121
+msgid "Display equip/inven"
+msgstr ""
+
+#: ../src/ui-display.c:2122
+msgid "Display player (basic)"
+msgstr ""
+
+#: ../src/ui-display.c:2123
+msgid "Display player (extra)"
+msgstr ""
+
+#: ../src/ui-display.c:2124
+msgid "Display player (compact)"
+msgstr ""
+
+#: ../src/ui-display.c:2125
+msgid "Display map view"
+msgstr ""
+
+#: ../src/ui-display.c:2126
+msgid "Display messages"
+msgstr ""
+
+#: ../src/ui-display.c:2127
+msgid "Display overhead view"
+msgstr ""
+
+#: ../src/ui-display.c:2128
+msgid "Display monster recall"
+msgstr ""
+
+#: ../src/ui-display.c:2129
+msgid "Display object recall"
+msgstr ""
+
+#: ../src/ui-display.c:2130
+msgid "Display monster list"
+msgstr ""
+
+#: ../src/ui-display.c:2131
+msgid "Display status"
+msgstr ""
+
+#: ../src/ui-display.c:2132
+msgid "Display item list"
+msgstr ""
+
+#: ../src/ui-display.c:2133
+msgid "Display player (topbar)"
+msgstr ""
+
+#: ../src/ui-display.c:2371
+msgid ""
+"The 'lib' directory is probably missing or broken.\n"
+"Perhaps the archive was not extracted correctly.\n"
+"See the 'readme.txt' file for more information."
+msgstr ""
+
+#: ../src/ui-display.c:2414
+#, c-format
+msgid "Cannot access the '%s' file!"
+msgstr ""
+
+#: ../src/ui-display.c:2548
+msgid "You invoke wizard mode and cheat death."
+msgstr ""
+
+#: ../src/ui-display.c:2567
+msgid "see"
+msgstr ""
+
+#: ../src/ui-display.c:2591
+msgid "have no room for"
+msgstr ""
+
+#: ../src/ui-display.c:2593
+msgid "feel"
+msgstr ""
+
+#: ../src/ui-display.c:2606
+#, c-format
+msgid "You %s %s."
+msgstr ""
+
+#: ../src/ui-display.c:2611
+msgid "have no room for the following objects"
+msgstr ""
+
+#: ../src/ui-display.c:2613
+msgid "feel something on the floor"
+msgstr ""
+
+#: ../src/ui-display.c:2618
+#, c-format
+msgid "You %s: "
+msgstr ""
+
+#: ../src/ui-display.c:2690
+msgid "Please wait..."
+msgstr ""
+
+#: ../src/ui-mon-lore.c:55
+msgid "The "
+msgstr ""

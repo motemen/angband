@@ -1,0 +1,72 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use File::Spec;
+use File::Spec::Functions qw(abs2rel canonpath catfile updir);
+use File::Basename qw(dirname);
+use Cwd qw(realpath);
+
+# Generates a .pot file from lib/gamedata/* files.
+
+# 'monster', 'class', ...
+my $type = shift or die;
+
+my $file = realpath(catfile(dirname(__FILE__), updir, "lib", "gamedata", "$type.txt")) or die "cannot find lib/gamedata/$type.txt";
+   $file = abs2rel($file);
+
+open my $fh, "<", $file or die "Can't open $file: $!";
+
+my $seen = {};
+
+while (<$fh>) {
+    if (/^name:(.+)/) {
+        next if $type eq 'blow_methods';
+        next if $type eq 'blow_effects';
+        /^name:[^:]+:(.+)/ or next if $type eq 'object_base';
+
+        next if $seen->{$1}++;
+        print "#: $file:$.\n";
+        print qq(msgctxt "$type"\n);
+        print qq(msgid "$1"\n);
+        print qq(msgstr ""\n\n);
+    }
+
+    if (/^act:(.+)/) {
+        next if $type eq 'artifact';
+        next if $seen->{$1}++;
+        print "#: $file:$.\n";
+        print qq(msgctxt "$type"\n);
+        print qq(msgid "$1"\n);
+        print qq(msgstr ""\n\n);
+    }
+
+    if (/^desc:(.+)/) {
+        my @msgid = ($1);
+        while (<$fh>) {
+            if (/^desc:(.+)/) {
+                push @msgid, $1;
+            } else {
+                last;
+            }
+        }
+
+        next if $seen->{ join "\n", @msgid }++;
+
+        print "#: $file:$.\n";
+        print qq(msgctxt "$type"\n);
+        print qq(msgid ""\n);
+        for (@msgid) {
+            s/"/\\"/g;
+            print qq("$_"\n);
+        }
+        print qq(msgstr ""\n\n);
+    }
+
+    if (/^slot:.+?:(.+)$/) {
+	next if $seen->{$1}++;
+	print "#: $file:$.\n";
+        print qq(msgctxt "$type"\n);
+	print qq(msgid "$1"\n);
+	print qq(msgstr ""\n\n);
+    }
+}

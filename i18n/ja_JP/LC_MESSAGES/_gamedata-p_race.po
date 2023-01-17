@@ -1,0 +1,65 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Angband 4.2.4\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../lib/gamedata/p_race.txt:67
+msgctxt "p_race"
+msgid "Human"
+msgstr ""
+
+#: ../lib/gamedata/p_race.txt:87
+msgctxt "p_race"
+msgid "Half-Elf"
+msgstr ""
+
+#: ../lib/gamedata/p_race.txt:108
+msgctxt "p_race"
+msgid "Elf"
+msgstr ""
+
+#: ../lib/gamedata/p_race.txt:130
+msgctxt "p_race"
+msgid "Hobbit"
+msgstr ""
+
+#: ../lib/gamedata/p_race.txt:152
+msgctxt "p_race"
+msgid "Gnome"
+msgstr ""
+
+#: ../lib/gamedata/p_race.txt:174
+msgctxt "p_race"
+msgid "Dwarf"
+msgstr ""
+
+#: ../lib/gamedata/p_race.txt:196
+msgctxt "p_race"
+msgid "Half-Orc"
+msgstr ""
+
+#: ../lib/gamedata/p_race.txt:217
+msgctxt "p_race"
+msgid "Half-Troll"
+msgstr ""
+
+#: ../lib/gamedata/p_race.txt:238
+msgctxt "p_race"
+msgid "Dunadan"
+msgstr ""
+
+#: ../lib/gamedata/p_race.txt:259
+msgctxt "p_race"
+msgid "High-Elf"
+msgstr ""
+
+#: ../lib/gamedata/p_race.txt:281
+msgctxt "p_race"
+msgid "Kobold"
+msgstr ""
