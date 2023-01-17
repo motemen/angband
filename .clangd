@@ -1,0 +1,14 @@
+CompileFlags:
+  Add: ["-DUSE_LOCALE"]
+---
+If:
+  PathMatch: src/tests/.*
+CompileFlags:
+  Add: ["-I.", "-I.."]
+---
+If:
+  PathMatch: .*\.[ch]
+  PathExclude: src/tests/.*
+CompileFlags:
+  Add: ["-std=c99"]
+  Remove: ["-x"]
