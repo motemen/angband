@@ -707,7 +707,13 @@ void Term_queue_chars(int x, int y, int n, int a, const wchar_t *s)
 		wchar_t otc = scr_tcc[x];
 
 		/* Hack -- Ignore non-changes */
-		if ((oa == a) && (oc == *s) && (ota == 0) && (otc == 0)) continue;
+		if ((oa == a) && (oc == *s) && (ota == 0) && (otc == 0)) {
+			if (i18n_is_doublewidth(*s)) {
+				x++;
+				if (x >= Term->wid) break;
+			}
+			continue;
+		}
 
 		/* Save the "literal" information */
 		scr_aa[x] = a;
@@ -724,7 +730,9 @@ void Term_queue_chars(int x, int y, int n, int a, const wchar_t *s)
 			x++;
 			if (x >= Term->wid) break;
 			scr_aa[x] = a;
+			scr_cc[x] = 0;
 			scr_taa[x] = 0;
+			scr_tcc[x] = 0;
 			x2 = x;
 		}
 	}
@@ -1530,6 +1538,10 @@ static void Term_fresh_row_text(int y, int x1, int x2)
 			}
 
 			/* Skip */
+			if (i18n_is_doublewidth(nc)) {
+				// advance 2 width
+				x++;
+			}
 			continue;
 		}
 
@@ -1557,6 +1569,14 @@ static void Term_fresh_row_text(int y, int x1, int x2)
 
 		/* Restart and Advance */
 		if (fn++ == 0) fx = x;
+
+		if (i18n_is_doublewidth(nc)) {
+			// advance 2 width
+			fn++;
+			x++;
+			old_aa[x] = scr_aa[x];
+			old_cc[x] = scr_cc[x];
+		}
 	}
 
 	/* Flush */
@@ -2159,8 +2179,7 @@ errr Term_addstr(int n, int a, const char *buf)
 	Term_queue_chars(Term->scr->cx, Term->scr->cy, n, a, s);
 
 	/* Advance the cursor */
-	// TODO[doublewidth]
-	Term->scr->cx += n;
+	Term->scr->cx += sw;
 
 	/* Hack -- Notice "Useless" cursor */
 	if (res) Term->scr->cu = 1;
