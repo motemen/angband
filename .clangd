@@ -1,5 +1,5 @@
 CompileFlags:
-  Add: ["-DUSE_LOCALE"]
+  Add: ["-DUSE_LOCALE", "-DMACH_O_CARBON"]
 ---
 If:
   PathMatch: src/tests/.*
