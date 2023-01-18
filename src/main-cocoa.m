@@ -709,7 +709,7 @@ static int hasSameBackground(const struct TerminalCell* c)
 {
     [self checkForBigStuffOverwriteAtColumn:icol row:irow width:n height:1];
 
-    // TODO[doublewidth]
+    // NOTE[doublewidth]: this n is "character count"
     struct TerminalCell *cellsRow = self->cells + irow * self.columnCount;
     for (int i = icol; i < icol + n; ++i) {
 	cellsRow[i].v.ch.glyph = *g++;
