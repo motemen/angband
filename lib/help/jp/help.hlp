@@ -1,0 +1,37 @@
+      [ 日本語版アングバンド・オンライン・ヘルプ・システムへようこそ ]
+
+  参照したいオンライン・ヘルプの番号を押して下さい:
+    (a) 全体的な情報          (general.txt)
+    (b) キャラクター作成      (birth.txt)
+    (c) ダンジョンの探険      (dungeon.txt)
+    (d) モンスターへの攻撃    (attack.txt)
+    (e) ゲームをプレイする    (playing.txt)
+    (f) コマンドの詳細        (command.txt)
+    (g) オプションの一覧      (option.txt)
+    (h) バージョン履歴        (version.txt)
+
+  <日本語版追加>
+
+    (1) 日本語版の情報        (jang_gen.txt)
+    (2) アイテムの解説        (j_name.txt)
+    (3) コマンドの一覧        (現在選択しているキー配置の簡略な一覧)
+    (4) 日本語訳について      (japanese.txt)
+
+Browser/help commands:
+  #     指定行へ移動       %  ファイルを開く     ?  前のファイルに戻る
+  SPACE １ページ進む       -  １ページ戻る       /  テキスト検索
+  RET   １行進む           =  １行戻る           &  テキストの強調表示
+  +     半ページ進む       _  半ページ戻る       !  大文字小文字の区別の切替
+***** [a] general.txt
+***** [b] birth.txt
+***** [c] dungeon.txt
+***** [d] attack.txt
+***** [e] playing.txt
+***** [f] command.txt
+***** [g] option.txt
+***** [h] version.txt
+***** [1] jang_gen.txt
+***** [2] j_name.txt
+***** [3] j_com.txt
+***** [4] japanese.txt
+

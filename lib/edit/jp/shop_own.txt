@@ -1,0 +1,131 @@
+# File: shop_own.txt
+
+
+# This file is used to initialize the "lib/data/shop_own.raw" file, which is
+# used to initialize the "shop owner" information for the Angband game.
+
+# Do not modify this file unless you know exactly what you are doing,
+# unless you wish to risk possible system crashes and broken savefiles.
+# After modifying this file, delete the "lib/data/shop_own.raw" file.
+
+
+# Format:
+# N:store:owner idx:owner name
+# I:race idx:purse:greed
+
+
+# Version stamp (required)
+
+V:3.0.5
+
+# General Store
+N:0:0:Bilbo the Friendly
+J:N:フレンドリーなビルボ
+I:3:5000:108
+N:0:1:Rincewind the Chicken
+J:N:憶病者リンスウィンド
+I:0:10000:108
+N:0:2:Snafu the Midget
+J:N:背の低いスナフ
+I:4:20000:107
+N:0:3:Lyar-el the Comely
+J:N:美しきライア=エル
+I:2:30000:107
+
+# Armoury
+N:1:0:Kon-Dar the Ugly
+J:N:醜悪コン=ダー
+I:6:5000:115
+N:1:1:Darg-Low the Grim
+J:N:頑固者ダーグ=ロウ
+I:0:10000:111
+N:1:2:Decado the Handsome
+J:N:ハンサムなデカド
+I:8:25000:112
+N:1:3:Mauglin the Grumpy
+J:N:偏屈者マウグリン
+I:5:30000:112
+
+# Weapon Smith
+N:2:0:Ithyl-Mak the Beastly
+J:N:残忍なるイシル=マク
+I:7:5000:115
+N:2:1:Arndal Beast-Slayer
+J:N:獣殺しのアーンダル
+I:1:10000:110
+N:2:2:Tarl Beast-Master
+J:N:獣使いのタール
+I:3:25000:115
+N:2:3:Oglign Dragon-Slayer
+J:N:竜殺しのオグライン
+I:5:30000:112
+
+# Temple
+N:3:0:Ludwig the Humble
+J:N:謙虚なルードヴィヒ
+I:0:15000:109
+N:3:1:Gunnar the Paladin
+J:N:パラディンのガンナー
+I:0:20000:110
+N:3:2:Delilah the Pure
+J:N:純粋なるデリラ
+I:2:25000:107
+N:3:3:Bosk the Wise
+J:N:賢明なるボスク
+I:5:30000:109
+
+# Alchemist
+N:4:0:Mauser the Chemist
+J:N:化学者マウザー
+I:1:10000:111
+N:4:1:Wizzle the Chaotic
+J:N:カオスのウィズル
+I:3:10000:110
+N:4:2:Ga-nat the Greedy
+J:N:強欲ガ=ナット
+I:4:15000:116
+N:4:3:Vella the Slender
+J:N:細身のベラ
+I:0:15000:111
+
+# Magic Shop
+N:5:0:Ariel the Sorceress
+J:N:ソーサラーのアリエル
+I:1:15000:110
+N:5:1:Buggerby the Great
+J:N:偉大なるブガービイ
+I:4:20000:113
+N:5:2:Inglorian the Mage
+J:N:メイジのイングロリアン
+I:0:25000:110
+N:5:3:Luthien Starshine
+J:N:ルシエン=スターシャイン
+I:9:30000:110
+
+# Black Market
+N:6:0:Lo-Hak the Awful
+J:N:恐怖のロ=ハック
+I:7:15000:150
+N:6:1:Histor the Goblin
+J:N:ゴブリンのヒストーア
+I:10:20000:150
+N:6:2:Durwin the Shifty
+J:N:策略家ダーウィン
+I:6:25000:150
+N:6:3:Drago the Fair
+J:N:公正なるドラゴ
+I:2:30000:150
+
+# Home
+N:7:0:Your home
+J:N:我が家
+I:99:0:100
+N:7:1:Your home
+J:N:我が家
+I:99:0:100
+N:7:2:Your home
+J:N:我が家
+I:99:0:100
+N:7:3:Your home
+J:N:我が家
+I:99:0:100

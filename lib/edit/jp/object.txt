@@ -1,0 +1,5094 @@
+# File: object.txt
+
+
+# 日本語訳と日本語版製作 : しとしん
+
+# 日本語版ではオリジナルと比較して設定項目が一つ増えています。
+# "E:" 以下の行がそうで、ここには英語名が記述されます。
+
+# アイテム名の翻訳にあたっては多くの方にたいへんお世話になりました。
+
+# (コメント)
+#
+# 武器や防具にも色々と読み方があるようですが、基本的に "name.doc" の
+# 執筆者である VOLKO さんの読み方に従いました。
+#
+# 基本的に restore という単語には「復活」という訳をあてて、それ以外の回復系
+# の単語には「回復」という訳をあてています。restore も「回復」でも良いのです
+# が、restore をするアイテムは「元の状態に戻す」という効果があるので、それ
+# を示唆する言葉として「復活」を選びました。
+#
+# identify という単語は他の日本語版ローグライクでは「識別」という訳が使われて
+# いる場合が多いのですが、identify の効果はアイテムの正確な名称や効果を明らか
+# にするものですので、「鑑定」の方が雰囲気が近いと考えてそうしました。他のロー
+# グライクと異なってしまっていることは気になりますが。
+
+# This file is used to initialize the "lib/data/object.raw" file, which is
+# used to initialize the "object kind" information for the Angband game.
+
+# Do not modify this file unless you know exactly what you are doing,
+# unless you wish to risk possible system crashes and broken savefiles.
+# After modifying this file, delete the "lib/data/object.raw" file.
+
+# Add some "IGNORE_XXX" flags to Rings, Amulets, etc.  XXX XXX
+
+# === Understanding object.txt ===
+
+# N: serial number : & object name~
+# G: symbol : color
+# I: tval : sval : pval
+# W: depth : rarity : weight : cost
+# P: base armor class : base damage : plus to-hit : plus to-dam : plus to-ac
+# A: depth/rarity : depth/rarity : etc
+# F: flag | flag | etc
+# D: description
+
+# 'N' indicates the beginning of an entry. The serial number must
+# increase for each new item. The '&' and '~' symbols are use to
+# include articles and pluralization as necessary to ensure
+# grammatical correctness in object descriptions.
+
+# 'G' is for graphics - symbol and color. There are 15 colors, as
+# follows:
+
+# D - Dark Gray    w - White          s - Gray          o - Orange
+# r - Red          g - Green          b - Blue          u - Brown
+# W - Light Gray   v - Violet         y - Yellow        R - Light Red
+# G - Light Green  B - Light Blue     U - Light Brown
+# Another color, "d", is used for "flavoured" items.
+
+# 'I' is for basic information. The tval is for the type of item, the
+# sval identifies the subtype and the pval indicates the amount of
+# effect the item has, if applicable (a fixed value: variable pvals
+# are currently hard-coded.) 
+
+# 'W' is for extra information. Depth is the depth the object is normally
+# found at (and defines what "level" the object is, when determining how easy 
+# it is to use a wand, staff or rod, rarity determines how common the object
+# is (currently unused, thanks to the A: allocation lines), weight is in
+# tenth-pounds and cost is the item's base value.
+
+# 'P' is for power information. The items base armor class, its base
+# damage and pluses to-hit, to-dam and to-ac (assuming the latter 
+# three numbers to be fixed: variable bonuses must be hard-coded.)
+
+# 'A' is for allocation - depth and rarity, in pairs. This allows an
+# item to have multiple natural depths and rarities. It is used to
+# ensure that certain vital items such as food and identify scrolls
+# are found throughout the dungeon. The "allocation" depth need not
+# match the depth as specified in the "W:" line.
+
+# 'F' is for flags. These are fairly self-explanatory. As many F:
+# lines may be used as are needed to specify all the flags and flags
+# are separated by the '|' symbol.
+
+# 'D' is for description. As many D: lines may be used as are needed
+# to describe the object. Note that lines will need spaces at their
+# ends or the beginning of the next line to prevent words from running
+# together.
+
+
+
+# Version stamp (required)
+
+V:3.0.5
+
+
+##### Non-kind (contains the "pile" picture) #####
+
+N:0:<pile>
+J:N:<アイテムの山>
+G:&:w
+
+
+##### Mushrooms #####
+
+N:1:Blindness
+J:N:盲目
+G:,:d
+I:80:1:500
+W:5:0:1:0
+A:5/1
+F:EASY_KNOW
+D:It causes blindness that lasts for 199+1d200 turns, unless you have
+D: resistance to blindness.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それは 199+1d200 ターン続く盲目を引き起こす。ただし盲目耐性があれば
+J:D:影響を受けない。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+N:2:Paranoia
+J:N:恐怖
+G:,:d
+I:80:2:500
+W:5:0:1:0
+A:5/1
+F:EASY_KNOW
+D:It induces fear that lasts for 9+1d10 turns, unless you have
+D: resistance to fear.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それは 9+1d10 ターン続く恐怖を引き起こす。ただし恐怖耐性があれば
+J:D:影響を受けない。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+N:3:Confusion
+J:N:混乱
+G:,:d
+I:80:3:500
+W:5:0:1:0
+A:5/1
+F:EASY_KNOW
+D:It induces confusion that lasts for 9+1d10 turns, unless you have
+D: resistance to confusion.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それは 9+1d10 ターン続く混乱を引き起こす。ただし混乱耐性があれば
+J:D:影響を受けない。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+N:4:Hallucination
+J:N:幻覚
+G:,:d
+I:80:4:500
+W:10:0:1:0
+A:10/1
+F:EASY_KNOW
+D:It causes you to hallucinate for 249+1d250 turns, unless you have
+D: resistance to chaos.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それは 249+1d250 ターン続く幻覚を引き起こす。ただしカオス耐性があれば
+J:D:影響を受けない。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+N:5:Cure Poison
+J:N:毒消し
+G:,:d
+I:80:12:500
+W:10:0:1:60
+A:10/1
+F:EASY_KNOW
+D:It neutralizes poison.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それは毒を中和する。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+N:6:Cure Blindness
+J:N:盲目治癒
+G:,:d
+I:80:13:500
+W:10:0:1:50
+A:10/1
+F:EASY_KNOW
+D:It cures blindness.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それは盲目を治す。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+N:7:Cure Paranoia
+J:N:恐怖除去
+G:,:d
+I:80:14:500
+W:10:0:1:25
+A:10/1
+F:EASY_KNOW
+D:It removes your fear.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それは恐怖を取り除く。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+N:8:Cure Confusion
+J:N:混乱脱出
+G:,:d
+I:80:15:500
+W:10:0:1:50
+A:10/1
+F:EASY_KNOW
+D:It cures confusion.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それは混乱を治す。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+N:9:Weakness
+J:N:脆弱
+G:,:d
+I:80:6:500
+W:10:0:1:0
+A:10/1
+F:EASY_KNOW
+D:It inflicts 6d6 points of damage, and also reduces strength unless you
+D: have sustain strength.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それは 6d6 のダメージを与え、腕力の維持がなければ
+J:D:腕力を減少させる。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+N:10:Unhealth
+J:N:病弱
+G:,:d
+I:80:10:500
+W:15:0:1:50
+A:15/1
+P:0:10d10:0:0:0
+F:EASY_KNOW
+D:It inflicts 10d10 points of damage, and also reduces constitution
+D: unless you have sustain constitution.
+D:  It may also be thrown to inflict 10d10 points of damage.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それは 10d10 のダメージを与え、耐久力の維持がなければ
+J:D:耐久力を減少させる。
+J:D:投げることによって 10d10 のダメージを与えることもできる。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+N:11:Restore Constitution
+J:N:耐久力復活
+G:,:d
+I:80:18:500
+W:20:0:1:350
+A:20/1
+F:EASY_KNOW
+D:It restores constitution to maximum if it is currently below maximum.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それは耐久力が低下していれば、耐久力を最大値まで復活させる。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+N:12:Restoring
+J:N:全復活
+G:,:d
+I:80:19:500
+W:20:0:1:1000
+A:20/8:30/4:40/1
+F:EASY_KNOW
+D:It restores to maximum all stats that are currently below maximum.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それは現在低下している全てのステータスを最大値に復活させる。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+N:13:Stupidity
+J:N:無知
+G:,:d
+I:80:8:500
+W:15:0:1:0
+A:15/1
+F:EASY_KNOW
+D:It inflicts 8d8 points of damage, and also reduces intelligence unless
+D: you have sustain intelligence.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それは 8d8 のダメージを与え、知能の維持がなければ
+J:D:知能を減少させる。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+N:14:Naivety
+J:N:愚鈍
+G:,:d
+I:80:9:500
+W:15:0:1:0
+A:15/1
+F:EASY_KNOW
+D:It inflicts 8d8 points of damage, and also reduces wisdom unless you
+D: have sustain wisdom.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それは 8d8 のダメージを与え、賢さの維持がなければ
+J:D:賢さを減少させる。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+N:15:Poison
+J:N:毒
+G:,:d
+I:80:0:500
+W:5:0:1:0
+A:5/1:5/1
+F:EASY_KNOW
+D:It poisons you (adding 9+1d10 points to the poison counter), unless
+D: you have resistance to poison.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それはあなたを毒に冒す(毒の計数に 9+1d10 を加える)。
+J:D:ただし毒耐性があれば影響を受けない。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+N:16:Sickness
+J:N:病気
+G:,:d
+I:80:7:500
+W:10:0:1:0
+A:10/1
+F:EASY_KNOW
+D:It inflicts 6d6 points of damage, and also reduces constitution unless
+D: you have sustain constitution.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それは 6d6 のダメージを与え、耐久力の維持がなければ
+J:D:耐久力を減少させる。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+N:17:Paralysis
+J:N:麻痺
+G:,:d
+I:80:5:500
+W:20:0:1:0
+A:20/1
+F:EASY_KNOW
+D:It induces paralysis that lasts for 9+1d10 turns, unless you have free
+D: action.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それは 9+1d10 ターン続く麻痺を引き起こす。ただし麻痺知らずがあれば
+J:D:影響を受けない。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+N:18:Restore Strength
+J:N:腕力復活
+G:,:d
+I:80:17:500
+W:20:0:1:350
+A:20/1
+F:EASY_KNOW
+D:It restores strength to maximum if it is currently below maximum.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それは腕力が低下していれば、腕力を最大値まで復活させる。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+N:19:Disease
+J:N:疾病
+G:,:d
+I:80:11:500
+W:20:0:1:50
+A:20/1
+P:0:10d10:0:0:0
+F:EASY_KNOW
+D:It inflicts 10d10 points of damage, and also reduces strength unless
+D: you have sustain strength.
+D:  It may also be thrown to inflict 10d10 points of damage.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それは 10d10 のダメージを与え、腕力の維持がなければ
+J:D:腕力を減少させる。
+J:D:投げることによって 10d10 のダメージを与えることもできる。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+N:20:Cure Serious Wounds
+J:N:重傷の治癒
+G:,:d
+I:80:16:500
+W:15:0:1:75
+A:15/1
+F:EASY_KNOW
+D:It cures 4d8 points of damage.
+D:  Mushrooms provide nourishment for about 250 turns under normal
+D: conditions.
+J:D:それは 4d8 のダメージを回復させる。
+J:D:キノコは通常の状態で、250 ターン相当の栄養を与える。
+
+##### Normal Food #####
+
+N:21:& Ration~ of Food
+J:N:& 食料
+G:,:U
+I:80:35:5000
+W:0:0:10:3
+A:0/1:5/1:10/1
+F:EASY_KNOW
+D:It provides nourishment for about 2500 turns under normal conditions.
+J:D:それは通常の状態で、2500 ターン相当の栄養を与える。
+
+N:22:& Hard Biscuit~
+J:N:& ビスケット
+G:,:U
+I:80:32:500
+W:0:0:2:1
+F:EASY_KNOW
+D:It provides nourishment for about 250 turns under normal conditions.
+J:D:それは通常の状態で、250 ターン相当の栄養を与える。
+
+N:23:& Strip~ of Beef Jerky
+J:N:& ビーフジャーキー
+G:,:u
+I:80:33:1500
+W:0:0:2:2
+F:EASY_KNOW
+D:It provides nourishment for about 750 turns under normal conditions.
+J:D:それは通常の状態で、750 ターン相当の栄養を与える。
+
+N:24:& Slime Mold~
+J:N:& スライムモルド
+G:,:g
+I:80:36:3000
+W:1:0:5:2
+A:1/1
+F:EASY_KNOW
+D:It provides nourishment for about 1500 turns under normal conditions.
+J:D:それは通常の状態で、1500 ターン相当の栄養を与える。
+
+N:25:& Piece~ of Elvish Waybread
+J:N:& エルフの行糧
+G:,:B
+I:80:37:7500
+W:5:0:3:10
+A:5/1:10/1:20/1
+F:EASY_KNOW
+D:It cures 4d8 points of damage and neutralizes poison.
+D:  It provides nourishment for about 3750 turns under normal
+D: conditions.
+J:D:それは 4d8 のダメージを回復させ、毒を中和する。
+J:D:それは通常の状態で、3750 ターン相当の栄養を与える。
+
+N:26:& Pint~ of Fine Ale
+J:N:& 高級エール
+G:,:y
+I:80:38:500
+W:0:0:5:1
+F:EASY_KNOW
+D:It provides nourishment for about 250 turns under normal conditions.
+J:D:それは通常の状態で、250 ターン相当の栄養を与える。
+
+N:27:& Pint~ of Fine Wine
+J:N:& 高級ワイン
+G:,:r
+I:80:39:1000
+W:0:0:10:2
+F:EASY_KNOW
+D:It provides nourishment for about 500 turns under normal conditions.
+J:D:それは通常の状態で、500 ターン相当の栄養を与える。
+
+
+## XXX 28 XXX ##
+
+## XXX 29 XXX ##
+
+
+##### Edged Weapons #####
+
+N:30:& Broken Dagger~
+J:N:& 折れたダガー
+G:|:D
+I:23:1:0
+W:0:0:5:1
+A:0/2:5/2
+P:0:1d1:-2:-4:0
+F:SHOW_MODS
+
+N:31:& Bastard Sword~
+J:N:& バスタード・ソード
+G:|:W
+I:23:21:0
+W:15:0:140:350
+A:15/1
+P:0:3d4:0:0:0
+F:SHOW_MODS
+
+N:32:& Scimitar~
+J:N:& シミター
+G:|:W
+I:23:18:0
+W:10:0:130:250
+A:10/1
+P:0:2d5:0:0:0
+F:SHOW_MODS
+
+N:33:& Tulwar~
+J:N:& タルワール
+G:|:W
+I:23:15:0
+W:5:0:100:200
+A:5/1
+P:0:2d4:0:0:0
+F:SHOW_MODS
+
+N:34:& Broad Sword~
+J:N:& ブロード・ソード
+G:|:W
+I:23:16:0
+W:10:0:150:255
+A:10/1:15/1
+P:0:2d5:0:0:0
+F:SHOW_MODS
+
+N:35:& Short Sword~
+J:N:& ショート・ソード
+G:|:W
+I:23:10:0
+W:5:0:80:90
+A:5/1
+P:0:1d7:0:0:0
+F:SHOW_MODS
+
+N:36:& Blade~ of Chaos
+J:N:& カオス・ブレード
+G:|:v
+I:23:30:0
+W:70:0:180:4000
+A:70/5
+P:0:6d5:0:0:0
+F:RES_CHAOS | SHOW_MODS
+
+N:37:& Two-Handed Sword~
+J:N:& 両手用ソード
+G:|:W
+I:23:25:0
+W:30:0:200:775
+A:30/1:40/1
+P:0:3d6:0:0:0
+F:SHOW_MODS
+
+N:38:& Main Gauche~
+J:N:& マン・ゴーシュ
+G:|:W
+I:23:5:0
+W:3:0:30:25
+A:3/1
+P:0:1d5:0:0:0
+F:SHOW_MODS
+
+N:39:& Cutlass~
+J:N:& カットラス
+G:|:W
+I:23:12:0
+W:5:0:110:85
+A:5/1
+P:0:1d7:0:0:0
+F:SHOW_MODS
+
+N:40:& Executioner's Sword~
+J:N:& 首切りソード
+G:|:r
+I:23:28:0
+W:40:0:260:850
+A:40/1
+P:0:4d5:0:0:0
+F:SHOW_MODS
+
+N:41:& Katana~
+J:N:& カタナ
+G:|:W
+I:23:20:0
+W:20:0:120:400
+A:20/1
+P:0:3d4:0:0:0
+F:SHOW_MODS
+
+N:42:& Long Sword~
+J:N:& ロング・ソード
+G:|:W
+I:23:17:0
+W:10:0:130:300
+A:10/1:20/1
+P:0:2d5:0:0:0
+F:SHOW_MODS
+
+N:43:& Dagger~
+J:N:& ダガー
+G:|:W
+I:23:4:0
+W:0:0:12:10
+A:0/1:5/1:10/1:20/1
+P:0:1d4:0:0:0
+F:SHOW_MODS
+
+N:44:& Rapier~
+J:N:& レイピア
+G:|:W
+I:23:7:0
+W:5:0:40:42
+A:5/1
+P:0:1d6:0:0:0
+F:SHOW_MODS
+
+N:45:& Sabre~
+J:N:& サーベル
+G:|:W
+I:23:11:0
+W:5:0:50:50
+A:5/1
+P:0:1d7:0:0:0
+F:SHOW_MODS
+
+N:46:& Small Sword~
+J:N:& スモール・ソード
+G:|:W
+I:23:8:0
+W:5:0:75:48
+A:5/1
+P:0:1d6:0:0:0
+F:SHOW_MODS
+
+N:47:& Broken Sword~
+J:N:& 折れた剣
+G:|:D
+I:23:2:0
+W:0:0:30:2
+A:0/2:5/2
+P:0:1d2:-2:-4:0
+F:SHOW_MODS
+
+##### Blunt Weapons #####
+
+N:48:& Ball-and-Chain~
+J:N:& 鎖つき鉄球
+G:\:D
+I:21:6:0
+W:20:0:150:200
+A:20/1
+P:0:2d4:0:0:0
+F:SHOW_MODS
+
+N:49:& Whip~
+J:N:& ムチ
+G:\:D
+I:21:2:0
+W:3:0:30:30
+A:3/1
+P:0:1d3:0:0:0
+F:SHOW_MODS
+
+N:50:& Flail~
+J:N:& フレイル
+G:\:D
+I:21:13:0
+W:10:0:150:353
+A:10/1
+P:0:2d6:0:0:0
+F:SHOW_MODS
+
+N:51:& Two-Handed Flail~
+J:N:& 両手用フレイル
+G:\:y
+I:21:18:0
+W:45:0:280:590
+A:45/1
+P:0:3d6:0:0:0
+F:SHOW_MODS
+
+N:52:& Morning Star~
+J:N:& モーニング・スター
+G:\:D
+I:21:12:0
+W:10:0:150:396
+A:10/1
+P:0:2d6:0:0:0
+F:SHOW_MODS
+
+N:53:& Mace~
+J:N:& メイス
+G:\:D
+I:21:5:0
+W:5:0:120:130
+A:5/1
+P:0:2d4:0:0:0
+F:SHOW_MODS
+
+N:54:& Quarterstaff~
+J:N:& クォータースタッフ
+G:\:U
+I:21:3:0
+W:10:0:150:200
+A:10/1
+P:0:1d9:0:0:0
+F:SHOW_MODS
+
+N:55:& War Hammer~
+J:N:& ウォー・ハンマー
+G:\:D
+I:21:8:0
+W:5:0:120:225
+A:5/1
+P:0:3d3:0:0:0
+F:SHOW_MODS
+
+N:56:& Lead-Filled Mace~
+J:N:& 鉛詰めメイス
+G:\:D
+I:21:15:0
+W:15:0:180:502
+A:15/1
+P:0:3d4:0:0:0
+F:SHOW_MODS
+
+N:57:& Mace~ of Disruption
+J:N:& 粉砕のメイス
+G:\:v
+I:21:20:0
+W:80:0:400:4300
+A:80/5
+P:0:5d8:0:0:0
+F:SLAY_UNDEAD | SHOW_MODS
+
+N:58:& Lucerne Hammer~
+J:N:& ルツェルン・ハンマー
+G:\:B
+I:21:10:0
+W:10:0:120:376
+A:10/1
+P:0:2d5:0:0:0
+F:SHOW_MODS
+
+##### Polearms and Axes #####
+
+N:59:& Beaked Axe~
+J:N:& ビークド・アックス
+G:/:s
+I:22:10:0
+W:15:0:180:408
+A:15/1
+P:0:2d6:0:0:0
+F:SHOW_MODS
+
+N:60:& Glaive~
+J:N:& グレイブ
+G:/:s
+I:22:13:0
+W:20:0:190:363
+A:20/1
+P:0:2d6:0:0:0
+F:SHOW_MODS
+
+N:61:& Halberd~
+J:N:& ハルベルト
+G:/:s
+I:22:15:0
+W:25:0:190:430
+A:25/1
+P:0:3d5:0:0:0
+F:SHOW_MODS
+
+N:62:& Awl-Pike~
+J:N:& オウル・パイク
+G:/:s
+I:22:4:0
+W:10:0:160:340
+A:10/1
+P:0:1d8:0:0:0
+F:SHOW_MODS
+
+N:63:& Pike~
+J:N:& パイク
+G:/:s
+I:22:8:0
+W:15:0:160:358
+A:15/1
+P:0:2d5:0:0:0
+F:SHOW_MODS
+
+N:64:& Spear~
+J:N:& スピア
+G:/:s
+I:22:2:0
+W:5:0:50:36
+A:5/1
+P:0:1d6:0:0:0
+F:SHOW_MODS
+
+N:65:& Trident~
+J:N:& トライデント
+G:/:y
+I:22:5:0
+W:5:0:70:120
+A:5/1
+P:0:1d8:0:0:0
+F:SHOW_MODS
+
+N:66:& Lance~
+J:N:& ランス
+G:/:s
+I:22:20:0
+W:10:0:300:230
+A:10/1
+P:0:2d8:0:0:0
+F:SHOW_MODS
+
+N:67:& Great Axe~
+J:N:& グレート・アックス
+G:/:s
+I:22:25:0
+W:40:0:230:500
+A:40/1
+P:0:4d4:0:0:0
+F:SHOW_MODS
+
+N:68:& Battle Axe~
+J:N:& バトル・アックス
+G:/:s
+I:22:22:0
+W:15:0:170:334
+A:15/1
+P:0:2d8:0:0:0
+F:SHOW_MODS
+
+N:69:& Lochaber Axe~
+J:N:& ロッホアーバー・アックス
+G:/:D
+I:22:28:0
+W:45:0:250:750
+A:45/1
+P:0:3d8:0:0:0
+F:SHOW_MODS
+
+N:70:& Broad Axe~
+J:N:& ブロード・アックス
+G:/:s
+I:22:11:0
+W:15:0:160:304
+A:15/1
+P:0:2d6:0:0:0
+F:SHOW_MODS
+
+N:71:& Scythe~
+J:N:& 大鎌
+G:/:s
+I:22:17:0
+W:45:0:250:800
+A:45/1
+P:0:5d3:0:0:0
+F:SHOW_MODS
+
+N:72:& Scythe~ of Slicing
+J:N:& 切り裂きの大鎌
+G:/:r
+I:22:30:0
+W:60:0:250:3500
+A:60/3
+P:0:8d4:0:0:0
+F:SHOW_MODS
+
+
+##### Bows, Crossbows, Slings #####
+
+N:73:& Short Bow~
+J:N:& ショート・ボウ
+G:}:U
+I:19:12:0
+W:3:0:30:50
+A:3/1:50/2
+F:SHOW_MODS
+
+N:74:& Long Bow~
+J:N:& ロング・ボウ
+G:}:U
+I:19:13:0
+W:10:0:40:120
+A:10/1:70/2
+F:SHOW_MODS
+
+N:75:& Light Crossbow~
+J:N:& ライト・クロスボウ
+G:}:s
+I:19:23:0
+W:15:0:110:140
+A:15/1:60/2
+F:SHOW_MODS
+
+N:76:& Heavy Crossbow~
+J:N:& ヘヴィ・クロスボウ
+G:}:s
+I:19:24:0
+W:30:0:200:300
+A:30/1:80/2
+F:SHOW_MODS
+
+N:77:& Sling~
+J:N:& スリング
+G:}:u
+I:19:2:0
+W:1:0:5:5
+A:1/1:40/2
+F:SHOW_MODS
+
+
+##### Missiles #####
+
+N:78:& Arrow~
+J:N:& 矢
+G:{:U
+I:17:1:0
+W:3:0:2:1
+A:3/1:15/1:50/1
+P:0:1d4:0:0:0
+F:SHOW_MODS
+D:It can be shot with a bow.
+J:D:それは弓で発射することができる。
+
+N:79:& Seeker Arrow~
+J:N:& 追尾の矢
+G:{:G
+I:17:2:0
+W:55:0:2:20
+A:55/2:80/2
+P:0:4d4:0:0:0
+F:SHOW_MODS
+D:It can be shot with a bow.
+J:D:それは弓で発射することができる。
+
+N:80:& Bolt~
+J:N:& クロスボウの矢
+G:{:s
+I:18:1:0
+W:3:0:3:2
+A:3/1:25/1:60/1
+P:0:1d5:0:0:0
+F:SHOW_MODS
+D:It can be shot with a crossbow.
+J:D:それはクロスボウで発射することができる。
+
+N:81:& Seeker Bolt~
+J:N:& 追尾クロスボウの矢
+G:{:g
+I:18:2:0
+W:65:0:3:25
+A:65/2:90/2
+P:0:4d5:0:0:0
+F:SHOW_MODS
+D:It can be shot with a crossbow.
+J:D:それはクロスボウで発射することができる。
+
+N:82:& Rounded Pebble~
+J:N:& 丸い小石
+G:{:s
+I:16:0:0
+W:0:0:4:1
+A:0/1:10/2
+P:0:1d2:0:0:0
+F:SHOW_MODS
+D:It can be shot with a sling.
+J:D:それはスリングで発射することができる。
+
+N:83:& Iron Shot~
+J:N:& 鉄弾
+G:{:s
+I:16:1:0
+W:3:0:5:2
+A:3/1:40/2
+P:0:1d4:0:0:0
+F:SHOW_MODS
+D:It can be shot with a sling.
+J:D:それはスリングで発射することができる。
+
+
+##### Digging Tools #####
+
+N:84:& Shovel~
+J:N:& シャベル
+G:\:s
+I:20:1:1
+W:1:0:60:10
+A:5/2
+P:0:1d2:0:0:0
+F:SHOW_MODS | TUNNEL
+
+N:85:& Gnomish Shovel~
+J:N:& ノームのシャベル
+G:\:G
+I:20:2:2
+W:20:0:60:100
+A:20/3
+P:0:1d2:0:0:0
+F:SHOW_MODS | TUNNEL
+
+N:86:& Dwarven Shovel~
+J:N:& ドワーフのシャベル
+G:\:B
+I:20:3:3
+W:40:0:120:200
+A:40/4
+P:0:1d3:0:0:0
+F:SHOW_MODS | TUNNEL
+
+N:87:& Pick~
+J:N:& つるはし
+G:\:s
+I:20:4:1
+W:5:0:150:50
+A:10/2
+P:0:1d3:0:0:0
+F:SHOW_MODS | TUNNEL
+
+N:88:& Orcish Pick~
+J:N:& オークのつるはし
+G:\:g
+I:20:5:2
+W:30:0:180:300
+A:30/3
+P:0:1d3:0:0:0
+F:SHOW_MODS | TUNNEL
+
+N:89:& Dwarven Pick~
+J:N:& ドワーフのつるはし
+G:\:b
+I:20:6:3
+W:50:0:200:600
+A:50/4
+P:0:1d4:0:0:0
+F:SHOW_MODS | TUNNEL
+
+N:90:& Mattock~
+J:N:マトック
+G:\:D
+I:20:7:3
+W:50:0:250:700
+A:50/2
+P:0:1d8:0:0:0
+F:SHOW_MODS | TUNNEL
+
+
+##### Armor #####
+
+N:91:& Pair~ of Soft Leather Boots
+J:N:& 軟革ブーツ
+G:]:U
+I:30:2:0
+W:3:0:20:7
+A:3/1
+P:2:1d1:0:0:0
+
+N:92:& Pair~ of Hard Leather Boots
+J:N:& 硬革ブーツ
+G:]:U
+I:30:3:0
+W:5:0:40:12
+A:5/1
+P:3:1d1:0:0:0
+
+N:93:& Pair~ of Metal Shod Boots
+J:N:& 鉄鋲底の靴
+G:]:s
+I:30:6:0
+W:20:0:80:50
+A:20/1
+P:6:1d1:0:0:0
+
+N:94:& Hard Leather Cap~
+J:N:& 硬革帽子
+G:]:u
+I:32:2:0
+W:3:0:15:12
+A:3/1
+P:2:0d0:0:0:0
+
+N:95:& Metal Cap~
+J:N:& 金属帽子
+G:]:s
+I:32:3:0
+W:10:0:20:30
+A:10/1
+P:3:1d1:0:0:0
+
+N:96:& Iron Helm~
+J:N:& 鉄ヘルメット
+G:]:s
+I:32:5:0
+W:20:0:75:75
+A:20/1
+P:5:1d3:0:0:0
+
+N:97:& Steel Helm~
+J:N:& 鋼鉄ヘルメット
+G:]:W
+I:32:6:0
+W:40:0:60:200
+A:40/1
+P:6:1d3:0:0:0
+
+N:98:& Iron Crown~
+J:N:& 鉄冠
+G:]:s
+I:33:10:0
+W:45:0:20:500
+A:45/1
+P:0:1d1:0:0:0
+
+N:99:& Golden Crown~
+J:N:& 金の冠
+G:]:y
+I:33:11:0
+W:45:0:30:1000
+A:45/1
+P:0:1d1:0:0:0
+F:IGNORE_ACID
+
+N:100:& Jewel Encrusted Crown~
+J:N:& 宝冠
+G:]:v
+I:33:12:0
+W:50:0:40:2000
+A:50/1
+P:0:1d1:0:0:0
+F:IGNORE_ACID
+
+N:101:& Robe~
+J:N:& ローブ
+G:(:b
+I:36:2:0
+W:1:0:20:4
+A:1/1:50/1
+P:2:0d0:0:0:0
+
+N:102:& Filthy Rag~
+J:N:& 汚れたボロ服
+G:(:D
+I:36:1:0
+W:0:0:20:1
+A:0/1
+P:1:0d0:0:0:-1
+
+N:103:Soft Leather Armour~
+J:N:軟革よろい
+G:(:U
+I:36:4:0
+W:3:0:80:18
+A:3/1
+P:4:0d0:0:0:0
+
+N:104:Soft Studded Leather~
+J:N:鋲付軟革よろい
+G:(:U
+I:36:5:0
+W:3:0:90:35
+A:3/1
+P:5:1d1:0:0:0
+
+N:105:Hard Leather Armour~
+J:N:硬革よろい
+G:(:U
+I:36:6:0
+W:5:0:100:150
+A:5/1
+P:6:1d1:-1:0:0
+
+N:106:Hard Studded Leather~
+J:N:鋲付硬革よろい
+G:(:U
+I:36:7:0
+W:10:0:110:200
+A:10/1
+P:7:1d2:-1:0:0
+
+N:107:Leather Scale Mail~
+J:N:革製スケイル・メイル
+G:(:U
+I:36:11:0
+W:15:0:140:450
+A:15/1
+P:11:1d1:-1:0:0
+
+N:108:Metal Scale Mail~
+J:N:金属製スケイル・メイル
+G:[:s
+I:37:3:0
+W:25:0:250:550
+A:25/1
+P:13:1d4:-2:0:0
+
+N:109:Chain Mail~
+J:N:鎖かたびら
+G:[:s
+I:37:4:0
+W:25:0:220:750
+A:25/1
+P:14:1d4:-2:0:0
+
+N:110:Rusty Chain Mail~
+J:N:錆びた鎖かたびら
+G:[:r
+I:37:1:0
+W:25:0:200:550
+A:25/1
+P:14:1d4:-5:0:-8
+
+N:111:Augmented Chain Mail~
+J:N:重鎖かたびら
+G:[:s
+I:37:6:0
+W:30:0:270:900
+A:30/1
+P:16:1d4:-2:0:0
+
+N:112:Bar Chain Mail~
+J:N:強化鎖かたびら
+G:[:s
+I:37:8:0
+W:35:0:280:950
+A:35/1
+P:18:1d4:-2:0:0
+
+N:113:Metal Brigandine Armour~
+J:N:金属製ブリガンダイン・アーマー
+G:[:s
+I:37:9:0
+W:35:0:290:1100
+A:35/1
+P:19:1d4:-3:0:0
+
+N:114:Partial Plate Armour~
+J:N:パーシャル・プレート・メイル
+G:[:W
+I:37:12:0
+W:45:0:260:1200
+A:45/1
+P:22:1d6:-3:0:0
+
+N:115:Metal Lamellar Armour~
+J:N:金属製ラメラー・アーマー
+G:[:W
+I:37:13:0
+W:45:0:340:1250
+A:45/1
+P:23:1d6:-3:0:0
+
+N:116:Full Plate Armour~
+J:N:フル・プレート・メイル
+G:[:W
+I:37:15:0
+W:45:0:380:1350
+A:45/1
+P:25:2d4:-3:0:0
+
+N:117:Ribbed Plate Armour~
+J:N:強化プレート・アーマー
+G:[:W
+I:37:18:0
+W:50:0:380:1500
+A:50/1
+P:28:2d4:-3:0:0
+
+N:118:Adamantite Plate Mail~
+J:N:アダマンタイト製プレート・メイル
+G:[:G
+I:37:30:0
+W:75:0:420:20000
+A:75/4
+P:40:2d4:-4:0:0
+F:IGNORE_ACID
+
+N:119:Mithril Plate Mail~
+J:N:ミスリル製プレート・メイル
+G:[:B
+I:37:25:0
+W:60:0:300:15000
+A:60/3
+P:35:2d4:-3:0:0
+F:IGNORE_ACID
+
+N:120:Mithril Chain Mail~
+J:N:ミスリル製鎖かたびら
+G:[:B
+I:37:20:0
+W:55:0:150:7000
+A:55/3
+P:28:1d4:-1:0:0
+F:IGNORE_ACID
+
+N:121:Double Chain Mail~
+J:N:二重鎖かたびら
+G:[:s
+I:37:7:0
+W:30:0:250:850
+A:30/1
+P:16:1d4:-2:0:0
+
+
+# This shield does not belong here
+
+N:122:& Shield~ of Deflection
+J:N:& 偏向のシールド
+G:):B
+I:34:10:0
+W:70:0:100:10000
+A:70/4
+P:10:1d1:0:0:10
+F:IGNORE_ACID
+
+
+### The Cloaks ###
+
+N:123:& Cloak~
+J:N:& クローク
+G:(:g
+I:35:1:0
+W:1:0:10:3
+A:1/1:20/1
+P:1:0d0:0:0:0
+
+N:124:& Shadow Cloak~
+J:N:& 影のクローク
+G:(:D
+I:35:6:0
+W:60:0:5:4000
+A:60/2
+P:6:0d0:0:0:4
+
+
+### The Gloves ###
+
+N:125:& Set~ of Leather Gloves
+J:N:& 革グローブ
+G:]:U
+I:31:1:0
+W:1:0:5:3
+A:1/1
+P:1:0d0:0:0:0
+
+N:126:& Set~ of Gauntlets
+J:N:& ガントレット
+G:]:U
+I:31:2:0
+W:10:0:25:35
+A:10/1
+P:2:1d1:0:0:0
+
+N:127:& Set~ of Cesti
+J:N:& セスタス
+G:]:W
+I:31:5:0
+W:50:0:40:100
+A:50/1
+P:5:1d1:0:0:0
+
+
+### The shields ###
+
+N:128:& Small Leather Shield~
+J:N:& 革製スモール・シールド
+G:):U
+I:34:2:0
+W:3:0:50:30
+A:3/1
+P:2:1d1:0:0:0
+
+N:129:& Large Leather Shield~
+J:N:& 革製ラージ・シールド
+G:):U
+I:34:4:0
+W:15:0:100:120
+A:15/1
+P:4:1d2:0:0:0
+
+N:130:& Small Metal Shield~
+J:N:& 金属製スモール・シールド
+G:):s
+I:34:3:0
+W:10:0:65:50
+A:10/1
+P:3:1d2:0:0:0
+
+N:131:& Large Metal Shield~
+J:N:& 金属製ラージ・シールド
+G:):s
+I:34:5:0
+W:30:0:120:200
+A:30/1
+P:5:1d3:0:0:0
+
+
+##### Rings #####
+
+N:132:Strength
+J:N:腕力
+G:=:d
+I:45:24:0
+W:30:0:2:500
+A:30/1
+F:STR | SUST_STR | HIDE_TYPE
+
+N:133:Dexterity
+J:N:器用さ
+G:=:d
+I:45:26:0
+W:30:0:2:500
+A:30/1
+F:DEX | SUST_DEX | HIDE_TYPE
+
+N:134:Constitution
+J:N:耐久力
+G:=:d
+I:45:27:0
+W:30:0:2:500
+A:30/1
+F:CON | SUST_CON | HIDE_TYPE
+
+N:135:Intelligence
+J:N:知能
+G:=:d
+I:45:25:0
+W:30:0:2:500
+A:30/1
+F:INT | SUST_INT | HIDE_TYPE
+
+N:136:Speed
+J:N:スピード
+G:=:d
+I:45:31:0
+W:75:0:2:100000
+A:75/1
+F:SPEED | HIDE_TYPE
+
+N:137:Searching
+J:N:探索
+G:=:d
+I:45:23:0
+W:5:0:2:250
+A:5/1
+F:SEARCH | HIDE_TYPE
+
+N:138:Teleportation
+J:N:テレポート
+G:=:d
+I:45:4:0
+W:5:0:2:0
+A:5/1
+F:LIGHT_CURSE | TELEPORT | EASY_KNOW
+
+N:139:Slow Digestion
+J:N:遅消化
+G:=:d
+I:45:6:0
+W:5:0:2:250
+A:5/1
+F:SLOW_DIGEST | EASY_KNOW
+
+N:140:Resist Fire
+J:N:耐火
+G:=:d
+I:45:8:0
+W:10:0:2:250
+A:10/1
+F:RES_FIRE | IGNORE_FIRE | EASY_KNOW
+
+N:141:Resist Cold
+J:N:耐冷
+G:=:d
+I:45:9:0
+W:10:0:2:250
+A:10/1
+F:RES_COLD | IGNORE_COLD | EASY_KNOW
+
+N:142:Feather Falling
+J:N:羽毛落下
+G:=:d
+I:45:7:0
+W:5:0:2:200
+A:5/1
+F:FEATHER | EASY_KNOW
+
+N:143:Resist Poison
+J:N:耐毒
+G:=:d
+I:45:20:0
+W:40:0:2:16000
+A:40/2
+F:RES_POIS | EASY_KNOW
+
+N:144:Free Action
+J:N:麻痺知らず
+G:=:d
+I:45:21:0
+W:20:0:2:1500
+A:20/1
+F:FREE_ACT | EASY_KNOW
+
+N:145:Weakness
+J:N:脆弱
+G:=:d
+I:45:2:-5
+W:5:0:2:0
+A:5/1
+F:LIGHT_CURSE | STR | HIDE_TYPE
+
+N:146:Flames
+J:N:火炎
+G:=:d
+I:45:18:0
+W:50:0:2:3000
+A:50/2
+P:0:0d0:0:0:15
+F:RES_FIRE | IGNORE_FIRE | 
+F:ACTIVATE
+
+N:147:Acid
+J:N:酸
+G:=:d
+I:45:17:0
+W:50:0:2:3000
+A:50/2
+P:0:0d0:0:0:15
+F:RES_ACID | IGNORE_ACID | 
+F:ACTIVATE
+
+N:148:Ice
+J:N:氷
+G:=:d
+I:45:19:0
+W:50:0:2:3000
+A:50/2
+P:0:0d0:0:0:15
+F:RES_COLD | IGNORE_COLD | 
+F:ACTIVATE
+
+N:149:Woe
+J:N:苦悩
+G:=:d
+I:45:0:-5
+W:50:0:2:0
+A:50/1
+F:LIGHT_CURSE | TELEPORT | WIS | CHR | HIDE_TYPE
+
+N:150:Stupidity
+J:N:無知
+G:=:d
+I:45:3:-5
+W:5:0:2:0
+A:5/1
+F:LIGHT_CURSE | INT | HIDE_TYPE
+
+N:151:Damage
+J:N:ダメージ
+G:=:d
+I:45:29:0
+W:20:0:2:500
+A:20/1
+D:It boosts your to-dam value.
+J:D:それはあなたのダメージ量を増やす。
+
+N:152:Accuracy
+J:N:精度
+G:=:d
+I:45:28:0
+W:20:0:2:500
+A:20/1
+D:It boosts your to-hit value.
+J:D:それはあなたの攻撃命中率を増やす。
+
+N:153:Protection
+J:N:守り
+G:=:d
+I:45:16:0
+W:10:0:2:500
+A:10/1
+D:It increases your armor class.
+J:D:それはあなたのアーマークラスを増やす。
+
+N:154:Aggravate Monster
+J:N:エキサイト・モンスター
+G:=:d
+I:45:1:0
+W:5:0:2:0
+A:5/1
+F:LIGHT_CURSE | AGGRAVATE | EASY_KNOW
+
+N:155:See Invisible
+J:N:透明物体感知
+G:=:d
+I:45:22:0
+W:30:0:2:340
+A:30/1
+F:SEE_INVIS | EASY_KNOW
+
+N:156:Sustain Strength
+J:N:腕力維持
+G:=:d
+I:45:10:0
+W:20:0:2:400
+A:20/1
+F:SUST_STR | EASY_KNOW
+
+N:157:Sustain Intelligence
+J:N:知能維持
+G:=:d
+I:45:11:0
+W:20:0:2:400
+A:20/1
+F:SUST_INT | EASY_KNOW
+
+N:158:Sustain Wisdom
+J:N:賢さ維持
+G:=:d
+I:45:12:0
+W:20:0:2:400
+A:20/1
+F:SUST_WIS | EASY_KNOW
+
+N:159:Sustain Constitution
+J:N:耐久力維持
+G:=:d
+I:45:13:0
+W:20:0:2:400
+A:20/1
+F:SUST_CON | EASY_KNOW
+
+N:160:Sustain Dexterity
+J:N:器用さ維持
+G:=:d
+I:45:14:0
+W:20:0:2:400
+A:20/1
+F:SUST_DEX | EASY_KNOW
+
+N:161:Sustain Charisma
+J:N:魅力維持
+G:=:d
+I:45:15:0
+W:20:0:2:400
+A:20/1
+F:SUST_CHR | EASY_KNOW
+
+N:162:Slaying
+J:N:殺戮
+G:=:d
+I:45:30:0
+W:40:0:2:1000
+A:40/1
+F:SHOW_MODS
+D:It boosts your to-hit and to-dam values.
+J:D:それはあなたの攻撃命中率やダメージ量を増やす。
+
+##### Amulets #####
+
+N:163:Wisdom
+J:N:賢さ
+G:":d
+I:40:6:0
+W:30:0:3:500
+A:30/1
+F:WIS | SUST_WIS | HIDE_TYPE
+
+N:164:Charisma
+J:N:魅力
+G:":d
+I:40:7:0
+W:30:0:3:500
+A:30/1
+F:CHR | SUST_CHR | HIDE_TYPE
+
+N:165:Searching
+J:N:探索
+G:":d
+I:40:5:0
+W:15:0:3:600
+A:15/1
+F:SEARCH | HIDE_TYPE
+
+N:166:Teleportation
+J:N:テレポート
+G:":d
+I:40:1:0
+W:10:0:3:0
+A:10/1
+F:LIGHT_CURSE | TELEPORT | EASY_KNOW
+
+N:167:Slow Digestion
+J:N:遅消化
+G:":d
+I:40:3:0
+W:15:0:3:200
+A:15/1
+F:SLOW_DIGEST | EASY_KNOW
+
+N:168:Resist Acid
+J:N:耐酸
+G:":d
+I:40:4:0
+W:10:0:3:300
+A:10/1
+F:RES_ACID | IGNORE_ACID | EASY_KNOW
+
+N:169:Adornment
+J:N:装飾
+G:":d
+I:40:2:0
+W:10:0:3:20
+A:10/1
+F:EASY_KNOW
+
+N:170:Sustenance
+J:N:維持
+G:":d
+I:40:9:0
+W:60:0:3:20000
+A:60/6
+F:SUST_STR | SUST_INT | SUST_WIS | SUST_DEX | SUST_CON | SUST_CHR | 
+F:HOLD_LIFE | SLOW_DIGEST | EASY_KNOW | 
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+N:171:the Magi
+J:N:賢者
+G:":d
+I:40:8:0
+W:70:0:3:30000
+A:70/8
+P:0:0d0:0:0:3
+F:FREE_ACT | SEE_INVIS | SEARCH | SUST_INT | INT | RES_CONFU |
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD |
+F:HIDE_TYPE
+
+N:172:DOOM
+J:N:滅び
+G:":d
+I:40:0:-5
+W:50:0:3:0
+A:50/1
+F:LIGHT_CURSE | STR | INT | WIS | DEX | CON | CHR | HIDE_TYPE
+
+
+##### Scrolls #####
+
+N:173:Enchant Weapon To-Hit
+J:N:武器命中率上昇
+G:?:w
+I:70:17:0
+W:15:0:5:125
+A:15/1
+F:EASY_KNOW
+D:It attempts to magically enhance a weapon's to-hit bonus once.
+J:D:それは一度だけ武器の攻撃命中率ボーナスを増加させようと試みる。
+
+N:174:Enchant Weapon To-Dam
+J:N:武器ダメージ増加
+G:?:w
+I:70:18:0
+W:15:0:5:125
+A:15/1
+F:EASY_KNOW
+D:It attempts to magically enhance a weapon's to-dam bonus once.
+J:D:それは一度だけ武器のダメージ量ボーナスを増加させようと試みる。
+
+N:175:Enchant Armor
+J:N:防具強化
+G:?:w
+I:70:16:0
+W:15:0:5:125
+A:15/1
+F:EASY_KNOW
+D:It attempts to enchant a piece of armor once.
+J:D:それは一度だけ防具のアーマークラスを強化しようと試みる。
+
+N:176:Identify
+J:N:鑑定
+G:?:w
+I:70:12:0
+W:1:0:5:50
+A:1/1:5/1:10/1:30/1
+F:EASY_KNOW
+D:It reveals all normal (magical but non-hidden) powers of one object.
+D:  (The spell may be aborted without using up the scroll.)
+J:D:それは一つのアイテムの全ての通常の(隠されていない魔法の)能力を
+J:D:明らかにする。
+J:D:(この呪文は巻物を消費することなく中断することができる。)
+
+N:177:*Identify*
+J:N:*鑑定*
+G:?:w
+I:70:13:0
+W:30:0:5:1000
+A:25/1:40/1:70/1
+F:EASY_KNOW
+D:It reveals all normal and hidden powers of one object, and also
+D: permanently implants this knowledge into your mind, so that you will
+D: never forget it even if hit by magical amnesia.
+D:  (The spell may be aborted without using up the scroll.)
+J:D:それは一つのアイテムの全ての通常の能力と隠された能力を
+J:D:明らかにし、この知識をあなたの精神に永久に植え付けることにより、
+J:D:魔法による記憶喪失を受けても決して忘れないようにする。
+J:D:(この呪文は巻物を消費することなく中断することができる。)
+
+## XXX 178 XXX ##
+
+## XXX 179 XXX ##
+
+N:180:Remove Curse
+J:N:解呪
+G:?:w
+I:70:14:0
+W:10:0:5:100
+A:10/1
+F:EASY_KNOW
+D:It removes all ordinary curses from all equipped items.
+D:  Heavy or permanent curses are unaffected.
+J:D:それは全ての装備から普通の呪いを取り除く。
+J:D:強力な呪いや永遠の呪いを取り除くことはできない。
+
+N:181:Light
+J:N:光
+G:?:w
+I:70:24:0
+W:0:0:5:15
+A:0/1:3/1:10/1
+F:EASY_KNOW
+D:It lights up an area with a radius of 2 squares, plus the entire room
+D: if you are currently in one.
+D:  This inflicts 2d8 points of damage on any light-sensitive creatures
+D: within the radius of the spell.
+J:D:それは半径 2 の範囲を光で周囲を照らし、あなたが部屋の中にいれば
+J:D:部屋全体を照らす。
+J:D:これにより呪文の範囲内にいる光に弱いモンスターに 2d8 のダメージを
+J:D:与える。
+
+## XXX 182 XXX ##
+
+## XXX 183 XXX ##
+
+N:184:Summon Monster
+J:N:モンスター召喚
+G:?:w
+I:70:4:0
+W:1:0:5:0
+A:1/1
+F:EASY_KNOW
+D:It summons 1d3 monsters that are generated at the current dungeon
+D: level.
+D:  If a monster normally appears in groups, a whole group will appear.
+D:  If a monster normally has escorts, it will appear with escorts.
+J:D:それは現在のダンジョンの深さで生成される 1d3 体のモンスターを
+J:D:召喚する。
+J:D:モンスターが通常集団で現れる場合、集団で召喚される。
+J:D:モンスターが通常護衛を伴って現れる場合、護衛とともに召喚される。
+
+N:185:Phase Door
+J:N:フェイズ・ドア
+G:?:w
+I:70:8:0
+W:1:0:5:15
+A:1/1
+F:EASY_KNOW
+D:It teleports you randomly up to 10 squares away.
+J:D:それはあなたを 10 マス以内の離れた場所にランダムに
+J:D:テレポートさせる。
+
+N:186:Teleportation
+J:N:テレポート
+G:?:w
+I:70:9:0
+W:10:0:5:40
+A:10/1
+F:EASY_KNOW
+D:It teleports you randomly up to 100 squares away.
+J:D:それはあなたを 100 マス以内の離れた場所にランダムに
+J:D:テレポートさせる。
+
+N:187:Teleport Level
+J:N:レベル・テレポート
+G:?:w
+I:70:10:0
+W:20:0:5:50
+A:20/1
+F:EASY_KNOW
+D:It teleports you 1 level up or down (chosen at random).
+D:  The direction will always be down from the town level, and up from
+D: level 99 if Sauron has not been killed or level 100 if Morgoth has
+D: not been killed.
+D:  This scroll has no effect when the "Ironman" option is set.
+J:D:それはあなたを 1 階上か下にテレポートさせる(ランダムに選択)。
+J:D:地上にいる場合には方向は常に下方向、地下 99 階にいてサウロンが
+J:D:まだ生きている場合や地下 100 階にいてモルゴスがまだ生きている場合
+J:D:には方向は常に上方向になる。
+J:D:「鉄人」オプションが設定されている場合にはこの巻物は何の効果もない。
+
+N:188:Monster Confusion
+J:N:パニック・モンスター
+G:?:w
+I:70:36:0
+W:5:0:5:30
+A:5/1
+F:EASY_KNOW
+D:It enchants you with an aura of confusion that causes your hands to
+D: glow red.  The enchantment is dissipated when you strike a monster;
+D: at that moment an attempt is made to confuse the monster.
+J:D:それはあなたを混乱のオーラで強化し、手を赤く輝かせる。
+J:D:あなたがモンスターに攻撃を命中させたとき、そのモンスターを混乱
+J:D:させようとする。それと同時に、オーラは消失する。
+
+N:189:Magic Mapping
+J:N:魔法の地図
+G:?:w
+I:70:25:0
+W:5:0:5:40
+A:5/1
+F:EASY_KNOW
+D:It maps out a portion of the level centered on you.
+J:D:それはあなたを中心にダンジョンの一部の地図を明らかにする。
+
+N:190:Rune of Protection
+J:N:守りのルーン
+G:?:w
+I:70:38:0
+W:60:0:5:500
+A:60/4:90/1
+F:EASY_KNOW
+D:It inscribes a glyph of warding beneath you.  Monsters can't move onto
+D: the glyph, though they do have a (monster level) in 550 chance of
+D: breaking the glyph when they try to move there.  Note that you can
+D: still be attacked if you are standing on the glyph!
+J:D:それはあなたの足下に結界の紋章を刻む。
+J:D:モンスターは紋章のある場所へ移動することはできない。
+J:D:ただし、移動しようとしたときに(モンスターのレベル/550)の確率で
+J:D:紋章を破壊することができる。
+J:D:紋章の上に立っていてもモンスターに攻撃されることに注意すること。
+
+N:191:*Remove Curse*
+J:N:*解呪*
+G:?:w
+I:70:15:0
+W:50:0:5:8000
+A:50/2:95/1
+F:EASY_KNOW
+D:It removes all ordinary and heavy curses from all equipped objects.
+D:  Permanent curses are unaffected.
+J:D:それは全ての装備から普通の呪いと強力な呪いを取り除く。
+J:D:永遠の呪いを取り除くことはできない。
+
+N:192:Treasure Detection
+J:N:財宝感知
+G:?:w
+I:70:26:0
+W:0:0:5:15
+A:0/1
+F:EASY_KNOW
+D:It detects all treasure in the immediate area.
+J:D:それはすぐ近くの範囲の全ての財宝を感知する。
+
+N:193:Object Detection
+J:N:アイテム感知
+G:?:w
+I:70:27:0
+W:0:0:5:15
+A:0/1
+F:EASY_KNOW
+D:It detects all objects in the immediate area.
+J:D:それはすぐ近くの範囲の全てのアイテムを感知する。
+
+N:194:Trap Detection
+J:N:トラップ感知
+G:?:w
+I:70:28:0
+W:5:0:5:35
+A:5/1:10/1
+F:EASY_KNOW
+D:It detects all traps in the immediate area.
+J:D:それはすぐ近くの範囲の全てのトラップを感知する。
+
+## XXX 195 XXX ##
+
+## XXX 196 XXX ##
+
+N:197:Door/Stair Location
+J:N:ドア/階段探知
+G:?:w
+I:70:29:0
+W:5:0:5:35
+A:5/1:10/1:15/1
+F:EASY_KNOW
+D:It detects all stairs and doors in the immediate area.
+J:D:それはすぐ近くの範囲の全ての階段とドアを感知する。
+
+N:198:Acquirement
+J:N:獲得
+G:?:w
+I:70:46:0
+W:20:0:5:100000
+A:20/8
+F:EASY_KNOW
+D:It creates one good object on the floor near you.
+J:D:それはあなたの近くの床によいアイテムを作り出す。
+
+N:199:*Acquirement*
+J:N:*獲得*
+G:?:w
+I:70:47:0
+W:60:0:5:200000
+A:60/16
+F:EASY_KNOW
+D:It creates 1+1d2 good objects on the ground near you.
+J:D:それはあなたの近くの床に 1+1d2 個のよいアイテムを作り出す。
+
+N:200:Mass Banishment
+J:N:周辺追放
+G:?:w
+I:70:45:0
+W:50:0:5:1000
+A:50/4:95/4
+F:EASY_KNOW
+D:It removes all monsters within 20 squares of you.
+D:  Uniques are unaffected.
+D:  You take 1d3 points of damage for every monster removed.
+J:D:それはあなたから 20 マス以内の全てのモンスターを取り除く。
+J:D:ユニーク・モンスターは影響を受けない。
+J:D:取り除いたモンスター 1 体につき 1d3 のダメージを受ける。
+
+N:201:Detect Invisible
+J:N:透明物体感知
+G:?:w
+I:70:30:0
+W:1:0:5:15
+A:1/1
+F:EASY_KNOW
+D:It detects all invisible monsters in the immediate area.
+J:D:それはすぐ近くの範囲の全ての透明なモンスターを感知する。
+
+N:202:Aggravate Monster
+J:N:エキサイト・モンスター
+G:?:w
+I:70:1:0
+W:5:0:5:0
+A:5/1
+F:EASY_KNOW
+D:It awakens all sleeping monsters within 40 squares of you, and hastes
+D: all monsters within line of sight unless they are already hasted.
+J:D:それはあなたから 40 マス以内の全ての眠っているモンスターを目覚めさせ、
+J:D:視界内の全てのモンスターを加速する。すでに加速しているモンスターは
+J:D:影響を受けない。
+
+N:203:Trap Creation
+J:N:トラップ創造
+G:?:w
+I:70:7:0
+W:10:0:5:0
+A:10/1
+F:EASY_KNOW
+D:It creates traps on all empty squares within a 1-square radius of you.
+J:D:それはあなたに隣接する全ての何もないマスにトラップを作り出す。
+
+N:204:Trap/Door Destruction
+J:N:トラップ/ドア破壊
+G:?:w
+I:70:39:0
+W:10:0:5:50
+A:10/1
+F:EASY_KNOW
+D:It destroys all traps and doors within a 1-square radius of you.
+J:D:それはあなたに隣接する全てのトラップとドアを破壊する。
+
+## XXX 205 XXX ##
+
+N:206:Recharging
+J:N:魔力充填
+G:?:w
+I:70:22:0
+W:40:0:5:200
+A:40/1
+F:EASY_KNOW
+D:It recharges a wand or a staff.
+D:  If successful, a wand or staff gains 2+1d(60/((level of
+D: wand/staff)+2)+1) charges; failure occurs 1 time in (160-(level of
+D: wand/staff)-(10*(# of charges)))/15, and uncharges the wand or staff.
+J:D:それは魔法棒や杖の魔力を充填する。
+J:D:成功した場合、魔法棒と杖は 2+1d(60/((魔法棒/杖のレベル)+2)+1)
+J:D: 回の使用回数を得る。失敗する確率は (160-(魔法棒/杖のレベル)-
+J:D:(10*(使用回数)))/15 分の一で、失敗すれば魔法棒や杖の魔力は失われる。
+
+N:207:Banishment
+J:N:追放
+G:?:w
+I:70:44:0
+W:40:0:5:750
+A:40/4:80/2
+F:EASY_KNOW
+D:It removes all monsters represented by a chosen symbol from the level.
+D:  Uniques are unaffected.
+D:  You take 1d4 points of damage for every monster removed.
+J:D:それは現在の階にいる選択した文字で表される全てのモンスターを取り除く。
+J:D:ユニーク・モンスターは影響を受けない。
+J:D:取り除いたモンスター 1 体につき 1d4 のダメージを受ける。
+
+N:208:Darkness
+J:N:暗闇
+G:?:w
+I:70:0:0
+W:1:0:5:0
+A:1/1
+F:EASY_KNOW
+D:It darkens all squares within 3 squares of you, plus the entire room
+D: if you are currently in one; and blinds you for 3+1d5 turns unless
+D: you have resistance to blindness.
+J:D:それは半径 3 の範囲を暗くし、あなたが部屋の中にいれば
+J:D:部屋全体を暗くする。さらに 3+1d5 ターンの間あなたを盲目にする。
+J:D:ただし盲目耐性を持っていれば盲目の影響を受けない。
+
+N:209:Protection from Evil
+J:N:対邪悪結界
+G:?:w
+I:70:37:0
+W:30:0:5:50
+A:30/1
+F:EASY_KNOW
+D:It grants you the enchantment of protection from evil for a duration
+D: equal to 1d25 plus three times your character level.
+J:D:それは (1d25 + キャラクターのレベル) に等しい期間、邪悪な存在に対する結界を
+J:D:あなたに授ける。
+
+N:210:Satisfy Hunger
+J:N:空腹充足
+G:?:w
+I:70:32:0
+W:5:0:5:10
+A:5/1
+F:EASY_KNOW
+D:It magically renders you well-fed (but not satiated).
+D:  This will also cure a bloated stomach.
+J:D:それは魔法によってあなたを満腹にする(食べ過ぎにはしない)。
+J:D:お腹がふくれている場合にはそれを癒す。
+
+N:211:Dispel Undead
+J:N:アンデッド退散
+G:?:w
+I:70:42:0
+W:40:0:5:200
+A:40/1
+F:EASY_KNOW
+D:It inflicts 60 points of damage on all undead creatures within line of
+D: sight.
+J:D:それは視界内の全てのアンデッドモンスターに 60 のダメージを与える。
+
+N:212:*Enchant Weapon*
+J:N:*武器強化*
+G:?:w
+I:70:21:0
+W:50:0:5:500
+A:50/1
+F:EASY_KNOW
+D:It attempts to magically enhance a weapon's to-dam and to-hit bonuses
+D: 1d3 times each.
+J:D:それは武器の攻撃命中率ボーナスとダメージ量ボーナスをそれぞれ 1d3 回
+J:D:増加させようと試みる。
+
+N:213:Curse Weapon
+J:N:武器呪縛
+G:?:w
+I:70:3:0
+W:50:0:5:0
+A:50/1
+F:EASY_KNOW
+D:It curses the currently wielded melee weapon, removing all of its
+D: special powers and changing the weapon's to-hit and to-dam bonuses
+D: both to -2d5.
+D:  Artifacts have a 1 in 2 chance to resist.
+J:D:それは現在装備している武器に呪いをかけ、全ての特殊能力を取り除き、
+J:D:武器の命中率ボーナスとダメージ量ボーナスを -2d5 にする。
+J:D:伝説のアイテムは 1/2 の確率で効果を跳ね返す。
+
+N:214:*Enchant Armor*
+J:N:*防具強化*
+G:?:w
+I:70:20:0
+W:50:0:5:500
+A:50/1:50/1
+F:EASY_KNOW
+D:It attempts to enchant a piece of armor 2+1d3 times.
+J:D:それは2+1d3回防具のアーマークラスを強化しようと試みる。
+
+N:215:Curse Armor
+J:N:防具呪縛
+G:?:w
+I:70:2:0
+W:50:0:5:0
+A:50/1
+F:EASY_KNOW
+D:It curses the currently equipped body armor, removing all of its
+D: special powers, reducing the base AC of the armor to 0, and changing
+D: the magical AC bonus of the armor to -2d5.
+D:  Artifacts have a 1 in 2 chance to resist.
+J:D:それは現在装備している鎧に呪いをかけ、全ての特殊能力を取り除き、
+J:D:基本 AC を 0 にし、魔法による AC ボーナスを -2d5 にする。
+J:D:伝説のアイテムは 1/2 の確率で効果を跳ね返す。
+
+N:216:Summon Undead
+J:N:アンデッド召喚
+G:?:w
+I:70:5:0
+W:15:0:5:0
+A:15/1
+F:EASY_KNOW
+D:It summons 1d3 non-unique undead monsters that are generated at the
+D: current dungeon level.
+D:  If a monster normally appears in groups, a whole group will appear.
+D:  If a monster normally has escorts, it will appear with escorts.
+J:D:それは現在のダンジョンの深さで生成される 1d3 体のユニークでないアンデッド
+J:D:モンスターを召喚する。
+J:D:モンスターが通常集団で現れる場合、集団で召喚される。
+J:D:モンスターが通常護衛を伴って現れる場合、護衛とともに召喚される。
+
+N:217:Blessing
+J:N:天恵
+G:?:w
+I:70:33:0
+W:1:0:5:15
+A:1/1
+F:EASY_KNOW
+D:It blesses you (a bonus of +5 to armor class and +10 to-hit) for
+D: 6+1d12 turns.
+J:D:それは 6+1d12 ターンの間あなたを祝福する(アーマークラスに +5 のボーナス
+J:D:と攻撃命中率に +10 のボーナス)。
+
+N:218:Holy Chant
+J:N:聖唱歌
+G:?:w
+I:70:34:0
+W:10:0:5:40
+A:10/1
+F:EASY_KNOW
+D:It blesses you (a bonus of +5 to armor class and +10 to-hit) for
+D: 12+1d24 turns.
+J:D:それは 12+1d24 ターンの間あなたを祝福する(アーマークラスに +5 のボーナス
+J:D:と攻撃命中率に +10 のボーナス)。
+
+N:219:Holy Prayer
+J:N:聖祈言
+G:?:w
+I:70:35:0
+W:25:0:5:80
+A:25/1
+F:EASY_KNOW
+D:It blesses you (a bonus of +5 to armor class and +10 to-hit) for
+D: 24+1d48 turns.
+J:D:それは 24+1d48 ターンの間あなたを祝福する(アーマークラスに +5 のボーナス
+J:D:と攻撃命中率に +10 のボーナス)。
+
+N:220:Word of Recall
+J:N:帰還の詔
+G:?:w
+I:70:11:0
+W:5:0:5:150
+A:5/1
+F:EASY_KNOW
+D:It invokes the spell of recall, which takes you from the dungeon to
+D: the town or from the town to the deepest level you have visited in
+D: the dungeon.  It takes a while for the spell to act.  Until then, the
+D: spell can be canceled by reading a second scroll.
+J:D:それは帰還の呪文を発動させる。これによってあなたをダンジョンから町に、
+J:D:あるいは町からあなたが訪れた最も深い階に移動させる。
+J:D:呪文が効果を発揮するまでにはある程度の時間がかかる。
+J:D:それまでに巻物を読むことによって呪文を取り消すことができる。
+
+N:221:*Destruction*
+J:N:*破壊*
+G:?:w
+I:70:41:0
+W:40:0:5:250
+A:40/1
+F:EASY_KNOW
+D:It destroys a circular area centered at you with a radius of 15
+D: squares, randomly placing new walls and floor space (stairs are
+D: immune).  All monsters and objects (excluding artifacts) are removed
+D: from the affected area.
+D:  This effect will also cause blindness lasting for 10+1d10 turns
+D: unless you have resistance to either blindness or light.
+J:D:それはあなたを中心に半径 15 マスの円形の範囲を破壊し、
+J:D:ランダムに新しい壁や床を配置する(階段は影響を受けない)。
+J:D:全てのモンスターとアイテム(伝説のアイテムを除く)は影響を受けた
+J:D:範囲から取り除かれる。
+J:D:この効果は 10+1d10 ターンの盲目も引き起こす。
+J:D:ただし盲目耐性か閃光耐性があれば盲目の影響を受けない。
+
+##### Potions #####
+
+N:222:Slime Mold Juice
+J:N:スライムモルドジュース
+G:!:d
+I:75:2:400
+W:0:0:4:2
+A:0/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It has no effect apart from providing nourishment (for about 200 turns
+D: under normal conditions).
+D:  Note: These are always Icky Green Potions.
+J:D:それは栄養になる(通常の状態で、200 ターン相当)以外何の効果も持たない。
+J:D:注：このアイテムは常によどんだ緑の薬である。
+
+N:223:Apple Juice
+J:N:リンゴジュース
+G:!:d
+I:75:1:250
+W:0:0:4:1
+A:0/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It has no effect apart from providing nourishment (for about 125 turns
+D: under normal conditions).
+D:  Note: These are always Light Brown Potions.
+J:D:それは栄養になる(通常の状態で、125 ターン相当)以外何の効果も持たない。
+J:D:注：このアイテムは常に薄茶色の薬である。
+
+N:224:Water
+J:N:水
+G:!:d
+I:75:0:200
+W:0:0:4:1
+A:0/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It has no effect apart from providing nourishment (for about 100 turns
+D: under normal conditions).
+D:  Note: These are always Clear Potions.
+J:D:それは栄養になる(通常の状態で、100 ターン相当)以外何の効果も持たない。
+J:D:注：このアイテムは常に透明な薬である。
+
+N:225:Strength
+J:N:腕力
+G:!:d
+I:75:48:0
+W:30:0:4:8000
+A:30/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It first acts as a Potion of Restore Strength, then permanently
+D: increases strength.
+J:D:それは最初に腕力復活の薬の効果を発揮し、次に腕力を永遠に増加させる。
+
+N:226:Weakness
+J:N:脆弱
+G:!:d
+I:75:16:0
+W:3:0:4:0
+A:3/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It reduces strength (unless you have sustain strength).
+J:D:それは腕力を減少させる。ただし腕力の維持があれば影響を受けない。
+
+N:227:Restore Strength
+J:N:腕力復活
+G:!:d
+I:75:42:0
+W:25:0:4:300
+A:25/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It restores strength to maximum if it is currently below maximum.
+J:D:それは腕力が低下していれば、腕力を最大値まで復活させる。
+
+N:228:Intelligence
+J:N:知能
+G:!:d
+I:75:49:0
+W:30:0:4:8000
+A:30/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It first acts as a Potion of Restore Intelligence, then permanently
+D: increases intelligence.
+J:D:それは最初に知能復活の薬の効果を発揮し、次に知能を永遠に増加させる。
+
+N:229:Stupidity
+J:N:無知
+G:!:d
+I:75:17:0
+W:20:0:4:0
+A:20/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It reduces intelligence (unless you have sustain intelligence).
+J:D:それは知能を減少させる。ただし知能の維持があれば影響を受けない。
+
+N:230:Restore Intelligence
+J:N:知能復活
+G:!:d
+I:75:43:0
+W:25:0:4:300
+A:25/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It restores intelligence to maximum if it is currently below maximum.
+J:D:それは知能が低下していれば、知能を最大値まで復活させる。
+
+N:231:Wisdom
+J:N:賢さ
+G:!:d
+I:75:50:0
+W:30:0:4:8000
+A:30/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It first acts as a Potion of Restore Wisdom, then permanently
+D: increases wisdom.
+J:D:それは最初に賢さ復活の薬の効果を発揮し、次に賢さを永遠に増加させる。
+
+N:232:Naivety
+J:N:愚鈍
+G:!:d
+I:75:18:0
+W:20:0:4:0
+A:20/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It reduces wisdom (unless you have sustain wisdom).
+J:D:それは賢さを減少させる。ただし賢さの維持があれば影響を受けない。
+
+N:233:Restore Wisdom
+J:N:賢さ復活
+G:!:d
+I:75:44:0
+W:25:0:4:300
+A:25/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It restores wisdom to maximum if it is currently below maximum.
+J:D:それは賢さが低下していれば、賢さを最大値まで復活させる。
+
+N:234:Charisma
+J:N:魅力
+G:!:d
+I:75:53:0
+W:20:0:4:1000
+A:20/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It first acts as a Potion of Restore Charisma, then permanently
+D: increases charisma.
+J:D:それは最初に魅力復活の薬の効果を発揮し、次に魅力を永遠に増加させる。
+
+N:235:Ugliness
+J:N:醜悪
+G:!:d
+I:75:21:0
+W:20:0:4:0
+A:20/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It reduces charisma (unless you have sustain charisma).
+J:D:それは魅力を減少させる。ただし魅力の維持があれば影響を受けない。
+
+N:236:Restore Charisma
+J:N:魅力復活
+G:!:d
+I:75:47:0
+W:20:0:4:300
+A:20/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It restores charisma to maximum if it is currently below maximum.
+J:D:それは魅力が低下していれば、魅力を最大値まで復活させる。
+
+N:237:Cure Light Wounds
+J:N:軽傷の治癒
+G:!:d
+I:75:34:50
+W:0:0:4:15
+A:0/1:1/1:3/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It cures 2d8 points of damage, heals 10 points worth of cuts, and
+D: cures blindness.
+D:  It also provides nourishment for about 25 turns under normal
+D: conditions.
+J:D:それは 2d8 のダメージを回復させ、怪我を 10 点回復させ、
+J:D:盲目を治す。
+J:D:さらに通常の状態で 25 ターン相当の栄養を与える。
+
+N:238:Clumsiness
+J:N:不器用
+G:!:d
+I:75:19:0
+W:5:0:4:0
+A:5/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It reduces dexterity (unless you have sustain dexterity).
+J:D:それは器用さを減少させる。ただし器用さの維持があれば影響を受けない。
+
+N:239:Sickliness
+J:N:病気
+G:!:d
+I:75:20:0
+W:10:0:4:0
+A:10/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It reduces constitution (unless you have sustain constitution).
+J:D:それは耐久力を減少させる。ただし耐久力の維持があれば影響を受けない。
+
+N:240:Cure Serious Wounds
+J:N:重傷の治癒
+G:!:d
+I:75:35:100
+W:3:0:4:40
+A:3/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It cures 4d8 points of damage, heals half of all cut damage plus
+D: another 50 points, and cures blindness and confusion.
+D:  It also provides nourishment for about 50 turns under normal
+D: conditions.
+J:D:それは 4d8 のダメージを回復させ、怪我を半分と 50 点回復させ、
+J:D:盲目と混乱を治す。
+J:D:さらに通常の状態で 50 ターン相当の栄養を与える。
+
+N:241:Cure Critical Wounds
+J:N:致命傷の治癒
+G:!:d
+I:75:36:100
+W:5:0:4:100
+A:5/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It cures 6d8 points of damage, cures all stunning, heals all cut
+D: damage, neutralizes poison, and cures blindness and confusion.
+D:  It also provides nourishment for about 50 turns under normal
+D: conditions.
+J:D:それは 6d8 のダメージを回復させ、朦朧から完全に回復させ、
+J:D:全ての怪我を回復させ、毒を中和し、盲目と混乱を治す。
+J:D:さらに通常の状態で 50 ターン相当の栄養を与える。
+
+N:242:Healing
+J:N:体力回復
+G:!:d
+I:75:37:200
+W:15:0:4:300
+A:15/1:60/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It cures 300 points of damage, cures all stunning, heals all cut
+D: damage, neutralizes poison, and cures blindness and confusion.
+D:  It also provides nourishment for about 100 turns under normal
+D: conditions.
+J:D:それは 300 のダメージを回復させ、朦朧から完全に回復させ、
+J:D:全ての怪我を回復させ、毒を中和し、盲目と混乱を治す。
+J:D:さらに通常の状態で 100 ターン相当の栄養を与える。
+
+N:243:Constitution
+J:N:耐久力
+G:!:d
+I:75:52:0
+W:30:0:4:8000
+A:30/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It first acts as a Potion of Restore Constitution, then permanently
+D: increases constitution.
+J:D:それは最初に耐久力復活の薬の効果を発揮し、次に耐久力を永遠に増加させる。
+
+N:244:Experience
+J:N:経験
+G:!:d
+I:75:59:0
+W:65:0:4:25000
+A:65/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It grants either 100000 experience points or half the current
+D: experience point total plus 10, whichever is less.
+J:D:それは経験値を 100000、あるいは現在の経験値の半分 + 10 の少ない
+J:D:ほうだけ増加させる。
+
+N:245:Sleep
+J:N:眠り
+G:!:d
+I:75:11:100
+W:0:0:4:0
+A:0/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It induces paralyzation for 3+1d4 turns, unless you have free action.
+D:  It also provides nourishment for about 50 turns under normal
+D: conditions.
+J:D:それは 3+1d4 ターンの麻痺を引き起こす。ただし麻痺知らずがあれば
+J:D:影響を受けない。
+J:D:さらに通常の状態で 50 ターン相当の栄養を与える。
+
+N:246:Blindness
+J:N:盲目
+G:!:d
+I:75:7:0
+W:0:0:4:0
+A:0/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It induces blindness for 99+1d100 turns, unless you have resistance to
+D: blindness.
+J:D:それは 99+1d100 ターンの盲目を引き起こす。ただし盲目耐性があれば
+J:D:影響を受けない。
+
+N:247:Confusion
+J:N:混乱
+G:!:d
+I:75:9:50
+W:0:0:4:0
+A:0/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It induces confusion for 14+1d20 turns, unless you have resistance to
+D: confusion.
+D:  It also provides nourishment for about 25 turns under normal
+D: conditions.
+J:D:それは 14+1d20 ターンの混乱を引き起こす。ただし混乱耐性があれば
+J:D:影響を受けない。
+J:D:さらに通常の状態で 25 ターン相当の栄養を与える。
+
+N:248:Poison
+J:N:毒
+G:!:d
+I:75:6:0
+W:3:0:4:0
+A:3/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It poisons you (adding 9+1d15 points to the poison counter), unless
+D: you have resistance to poison.
+J:D:それはあなたを毒に冒す(毒の計数に 9+1d15 を加える)。
+J:D:ただし毒耐性があれば影響を受けない。
+
+N:249:Speed
+J:N:スピード
+G:!:d
+I:75:29:0
+W:1:0:4:75
+A:1/1:40/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It hastes you (+10 to speed) for 15+1d25 turns (or 5 additional turns
+D: if you already are under the effect of a temporary haste
+D: enchantment).
+J:D:それは 15+1d25 ターンの間あなたを加速(速度 +10)させる。
+J:D:すでに一時的な加速の影響を受けている場合、効果の持続時間は
+J:D: 5 ターン増えるだけである。
+
+N:250:Slowness
+J:N:のろま
+G:!:d
+I:75:4:50
+W:1:0:4:0
+A:1/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It slows you down (-10 to speed) for 15+1d25 turns; this duration is
+D: cumulative with other temporary slowing enchantments.
+D:  It also provides nourishment for about 25 turns under normal
+D: conditions.
+J:D:それは 15+1d25 ターンの間あなたを減速(速度 -10)させる。
+J:D:効果の持続時間は他の一時的減速効果と累積する。
+J:D:さらに通常の状態で 25 ターン相当の栄養を与える。
+
+N:251:Dexterity
+J:N:器用さ
+G:!:d
+I:75:51:0
+W:30:0:4:8000
+A:30/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It first acts as a Potion of Restore Dexterity, then permanently
+D: increases dexterity.
+J:D:それは最初に器用さ復活の薬の効果を発揮し、次に器用さを永遠に増加させる。
+
+N:252:Restore Dexterity
+J:N:器用さ復活
+G:!:d
+I:75:45:0
+W:25:0:4:300
+A:25/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It restores dexterity to maximum if it is currently below maximum.
+J:D:それは器用さが低下していれば、器用さを最大値まで復活させる。
+
+N:253:Restore Constitution
+J:N:耐久力復活
+G:!:d
+I:75:46:0
+W:25:0:4:300
+A:25/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It restores constution to maximum if it is currently below maximum.
+J:D:それは耐久力が低下していれば、耐久力を最大値まで復活させる。
+
+N:254:Lose Memories
+J:N:記憶喪失
+G:!:d
+I:75:13:0
+W:10:0:4:0
+A:10/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It drains 25% of your experience total, unless you have hold life.
+J:D:それは経験値を 25% 減少させる。ただし生命力保持の能力があれば
+J:D:影響を受けない。
+
+N:255:Salt Water
+J:N:塩水
+G:!:d
+I:75:5:0
+W:0:0:4:0
+A:0/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It induces vomiting, which will result in severe hunger but will also
+D: clear away all poison.
+D:  This will also cause 4 turns of paralysis, even if you have free
+D: action.
+J:D:それはあなたを嘔吐させ、飢死寸前にするが、同時に全ての毒を取り除く。
+J:D:さらに 4 ターンの麻痺を引き起こす。これは麻痺知らずの能力があっても
+J:D:防げない。
+
+N:256:Enlightenment
+J:N:啓蒙
+G:!:d
+I:75:56:0
+W:25:0:4:800
+A:25/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It completely lights up and magically maps the current dungeon level.
+J:D:それは現在の階を完全に明かりで照らし、魔法で地図を明らかにする
+
+N:257:Heroism
+J:N:ヒーロー
+G:!:d
+I:75:32:0
+W:1:0:4:35
+A:1/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It cures 10 points of damage, removes fear and grants you heroism
+D: (resistance to fear, and a bonus of +12 to-hit) for 25+1d25 turns.
+J:D:それは 10 のダメージを回復させ、恐怖を取り除き、25+1d25 ターンの間、
+J:D:ヒーローの効果(恐怖への耐性と攻撃命中率に +12 のボーナス)をあなたに
+J:D:授ける。
+
+N:258:Berserk Strength
+J:N:肉体野獣化
+G:!:d
+I:75:33:0
+W:3:0:4:100
+A:3/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It cures 30 points of damage, removes fear and grants you berserk
+D: strength (resistance to fear, a bonus of +12 to-hit, and a penalty of
+D: -10 to AC) for 25+1d25 turns.
+J:D:それは 30 のダメージを回復させ、恐怖を取り除き、25+1d25 ターンの間、
+J:D:肉体野獣化(恐怖への耐性、攻撃命中率に +12 のボーナス、AC に -10 の
+J:D:ペナルティ)の効果をあなたに授ける。
+
+N:259:Boldness
+J:N:恐いもの知らず
+G:!:d
+I:75:28:0
+W:1:0:4:10
+A:1/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It removes fear.
+J:D:それは恐怖を取り除く。
+
+N:260:Restore Life Levels
+J:N:生命力復活
+G:!:d
+I:75:41:0
+W:40:0:4:400
+A:40/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It restores experience to maximum if it is currently below maximum.
+J:D:それは経験値が低下していれば、経験値を最大値まで復活させる。
+
+N:261:Resist Heat
+J:N:耐火
+G:!:d
+I:75:30:0
+W:1:0:4:30
+A:1/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It grants you temporary resistance to fire for 10+1d10 turns.
+D:  Temporary resistance is cumulative with permanent resistance, if one
+D: of your equipped items provides that.  The duration is cumulative
+D: with other magic providing temporary fire resistance.
+J:D:それは 10+1d10 ターンの間、一時的な火炎への耐性をあなたに授ける。
+J:D:常時の耐性を授けるアイテムを装備していれば、一時的な耐性は常時の
+J:D:耐性と累積する。効果のある期間は他の魔法による一時的な火炎への耐性
+J:D:と累積する。
+
+N:262:Resist Cold
+J:N:耐冷
+G:!:d
+I:75:31:0
+W:1:0:4:30
+A:1/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It grants you temporary resistance to cold for 10+1d10 turns.
+D:  Temporary resistance is cumulative with permanent resistance, if one
+D: of your equipped items provides that.  The duration is cumulative
+D: with other magic providing temporary cold resistance.
+J:D:それは 10+1d10 ターンの間、一時的な冷気への耐性をあなたに授ける。
+J:D:常時の耐性を授けるアイテムを装備していれば、一時的な耐性は常時の
+J:D:耐性と累積する。効果のある期間は他の魔法による一時的な冷気への耐性
+J:D:と累積する。
+
+N:263:Detect Invisible
+J:N:透明物体感知
+G:!:d
+I:75:25:0
+W:3:0:4:50
+A:3/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It enables you to see invisible creatures for 12+1d12 turns.
+J:D:それは 12+1d12 ターンの間、透明なモンスターを見ることを可能にする。
+
+N:264:Slow Poison
+J:N:減毒
+G:!:d
+I:75:26:0
+W:1:0:4:25
+A:1/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It halves the severity of any current poisoning.
+J:D:それは現在の毒の重症度を半分にする。
+
+N:265:Neutralize Poison
+J:N:解毒
+G:!:d
+I:75:27:0
+W:5:0:4:75
+A:5/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It neutralizes poison.
+J:D:それは毒を中和する。
+
+N:266:Restore Mana
+J:N:魔力復活
+G:!:d
+I:75:40:0
+W:25:0:4:350
+A:25/1:70/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It restores mana points to maximum if they are currently below
+D: maximum.
+J:D:それは MP が低下していれば、MP を最大値まで復活させる。
+
+N:267:Infravision
+J:N:赤外線視力
+G:!:d
+I:75:24:0
+W:3:0:4:20
+A:3/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It extends the radius of your infravision by 50 feet for 100+1d100
+D: turns.
+J:D:それは 100+1d100 ターンの間、赤外線視力の範囲を 50 フィート
+J:D:長くする。
+
+## XXX 268 XXX ##
+
+
+##### Wands #####
+
+N:269:Light
+J:N:光
+G:-:d
+I:65:7:0
+W:3:0:10:200
+A:3/1
+P:0:1d1:0:0:0
+D:It lights up a line of squares, inflicting 6d8 points of damage on
+D: light-sensitive creatures on the line.
+J:D:それは直線上のマスを明るくし、光に弱いモンスターに 6d8 のダメージを
+J:D:与える。
+
+N:270:Lightning Bolts
+J:N:サンダー・ボルト
+G:-:d
+I:65:17:0
+W:15:0:10:600
+A:15/1
+P:0:1d1:0:0:0
+D:It shoots a lightning bolt that inflicts 6d6 points of damage, with a
+D: 20% chance of getting a lightning beam.
+J:D:それは稲妻の矢を発射し、 6d6 のダメージを与える。
+J:D:20% の確率で稲妻のビームになる。
+
+N:271:Frost Bolts
+J:N:アイス・ボルト
+G:-:d
+I:65:19:0
+W:20:0:10:800
+A:20/1
+P:0:1d1:0:0:0
+D:It shoots a frost bolt that inflicts 6d8 points of damage, with a 20%
+D: chance of getting a cold beam.
+J:D:それは冷気の矢を発射し、 6d8 のダメージを与える。
+J:D:20% の確率で冷気のビームになる。
+
+N:272:Fire Bolts
+J:N:ファイア・ボルト
+G:-:d
+I:65:18:0
+W:30:0:10:1000
+A:30/1
+P:0:1d1:0:0:0
+D:It shoots a fire bolt that inflicts 12d8 points of damage, with a 20%
+D: chance of getting a fire beam.
+J:D:それは火炎の矢を発射し、 12d8 のダメージを与える。
+J:D:20% の確率で火炎のビームになる。
+
+N:273:Stone to Mud
+J:N:岩石溶解
+G:-:d
+I:65:6:0
+W:10:0:10:300
+A:10/1
+P:0:1d1:0:0:0
+D:It turns the first section of wall encountered by the beam shot by
+D: this spell into mud.
+D:  Permanent walls are not affected.
+D:  If a monster that is susceptible to rock remover is caught in the
+D: beam, it will take 20+1d30 points of damage.
+J:D:それはこの呪文によって発射されたビームが命中した最初の壁を泥に変える。
+J:D:永久岩の壁は影響を受けない。
+J:D:岩石を除去するものに弱いモンスターがビームに捕まれば、20+1d30 のダメージ
+J:D:を受ける。
+
+N:274:Polymorph
+J:N:チェンジ・モンスター
+G:-:d
+I:65:13:0
+W:20:0:10:400
+A:20/1
+P:0:1d1:0:0:0
+D:It attempts to polymorph a single monster.
+D:  Uniques are unaffected.
+J:D:それは 1 体のモンスターを変化させようと試みる。
+J:D:ユニーク・モンスターは影響を受けない。
+
+N:275:Heal Monster
+J:N:回復モンスター
+G:-:d
+I:65:0:0
+W:3:0:10:0
+A:3/1
+P:0:1d1:0:0:0
+D:It cures a single monster for 4d6 points of damage.
+J:D:それは 1 体のモンスターのダメージを 4d6 回復させる。
+
+N:276:Haste Monster
+J:N:スピード・モンスター
+G:-:d
+I:65:1:0
+W:3:0:10:0
+A:3/1
+P:0:1d1:0:0:0
+D:It hastes a single monster.
+J:D:それは 1 体のモンスターを加速させる。
+
+N:277:Slow Monster
+J:N:スロウ・モンスター
+G:-:d
+I:65:9:0
+W:5:0:10:500
+A:5/1
+P:0:1d1:0:0:0
+D:It attempts to slow down a single monster.
+D:  Uniques are unaffected.
+J:D:それは 1 体のモンスターを減速させようと試みる。
+J:D:ユニーク・モンスターは影響を受けない。
+
+N:278:Confuse Monster
+J:N:パニック・モンスター
+G:-:d
+I:65:10:0
+W:5:0:10:500
+A:5/1
+P:0:1d1:0:0:0
+D:It attempts to confuse a single monster.
+D:  Uniques are unaffected.
+J:D:それは 1 体のモンスターを混乱させようと試みる。
+J:D:ユニーク・モンスターは影響を受けない。
+
+N:279:Sleep Monster
+J:N:スリープ・モンスター
+G:-:d
+I:65:8:0
+W:5:0:10:500
+A:5/1
+P:0:1d1:0:0:0
+D:It attempts to put a single monster to sleep.
+D:  Uniques are unaffected.
+J:D:それは 1 体のモンスターを眠らせようと試みる。
+J:D:ユニーク・モンスターは影響を受けない。
+
+N:280:Drain Life
+J:N:生命力吸収
+G:-:d
+I:65:12:0
+W:50:0:10:1200
+A:50/1
+P:0:1d1:0:0:0
+D:It inflicts 150 points of damage on a single monster that is not
+D: undead, a demon, an elemental, a golem, or a vortex.
+J:D:それは 1 体のモンスターに 150 のダメージを与える。
+J:D:アンデッド、デーモン、エレメンタル、ゴーレム、ボルテックスは
+J:D:影響を受けない。
+
+N:281:Trap/Door Destruction
+J:N:トラップ/ドア破壊
+G:-:d
+I:65:5:0
+W:10:0:10:100
+A:10/1
+P:0:1d1:0:0:0
+D:It destroys all doors and disarms all traps in a line.
+J:D:それは直線上の全てのドアを破壊し、全てのトラップを解除する。
+
+N:282:Magic Missile
+J:N:マジック・ミサイル
+G:-:d
+I:65:15:0
+W:3:0:10:200
+A:3/1
+P:0:1d1:0:0:0
+D:It fires a magic missile that inflicts 3d4 points of damage, with a
+D: 20% chance of getting a magic beam.
+J:D:それは魔法の矢を発射し、 12d8 のダメージを与える。
+J:D:20% の確率で魔法のビームになる。
+
+N:283:Clone Monster
+J:N:クローン・モンスター
+G:-:d
+I:65:2:0
+W:15:0:10:0
+A:15/1:50/1
+P:0:1d1:0:0:0
+D:It hastes and fully heals a single monster.  If the monster is next to
+D: an empty space and not a unique, a new monster of the same type will
+D: be created.
+J:D:それは 1 体のモンスターを加速し、ダメージを完全に回復させる。
+J:D:モンスターの隣の空間が空いており、モンスターがユニーク・モンスターでな
+J:D:ければ、同じ種類の新しいモンスターが生成される。
+
+N:284:Scare Monster
+J:N:恐慌モンスター
+G:-:d
+I:65:11:0
+W:10:0:10:500
+A:10/4
+P:0:1d1:0:0:0
+D:It attempts to scare a single monster.
+D:  Uniques are unaffected.
+J:D:それは 1 体のモンスターを恐怖させようと試みる。
+J:D:ユニーク・モンスターは影響を受けない。
+
+N:285:Teleport Other
+J:N:テレポート・アウェイ
+G:-:d
+I:65:3:0
+W:20:0:10:350
+A:20/1
+P:0:1d1:0:0:0
+D:It produces a beam that teleports all monsters caught in it up to 100
+D: squares away.
+J:D:それはビームを生み出し、ビームが捕らえた全てのモンスターを
+J:D:100 マス以内の離れた場所にテレポートさせる。
+
+N:286:Disarming
+J:N:トラップ解除
+G:-:d
+I:65:4:0
+W:20:0:10:700
+A:20/1
+P:0:1d1:0:0:0
+D:It produces a beam that disarms all traps, unlocks all locked doors
+D: and reveals all secret doors.
+J:D:それはビームを生み出し、ビームを浴びた全てのトラップを解除し、
+J:D:全ての鍵のかかったドアを開き、隠しドアを明らかにする。
+
+N:287:Lightning Balls
+J:N:サンダー・ボール
+G:-:d
+I:65:21:0
+W:35:0:10:1200
+A:35/1
+P:0:1d1:0:0:0
+F:IGNORE_ELEC
+D:It shoots a radius-2 lightning ball that inflicts 64 points of damage
+D: at its center.
+J:D:それは半径 2 の稲妻のボールを発射し、中心では 64 のダメージを
+J:D:与える。
+
+N:288:Cold Balls
+J:N:アイス・ボール
+G:-:d
+I:65:23:0
+W:40:0:10:1500
+A:40/1
+P:0:1d1:0:0:0
+F:IGNORE_COLD
+D:It shoots a radius-2 frost ball that inflicts 96 points of damage at
+D: its center.
+J:D:それは半径 2 の冷気のボールを発射し、中心では 96 のダメージを
+J:D:与える。
+
+N:289:Fire Balls
+J:N:ファイア・ボール
+G:-:d
+I:65:22:0
+W:50:0:10:1800
+A:50/1
+P:0:1d1:0:0:0
+F:IGNORE_FIRE
+D:It shoots a radius-2 fire ball that inflicts 144 points of damage at
+D: its center.
+J:D:それは半径 2 の火炎のボールを発射し、中心では 144 のダメージを
+J:D:与える。
+
+N:290:Stinking Cloud
+J:N:悪臭雲
+G:-:d
+I:65:14:0
+W:5:0:10:400
+A:5/1
+P:0:1d1:0:0:0
+D:It shoots a radius-2 poison cloud that inflicts 12 points of damage at
+D: its center.
+J:D:それは半径 2 の毒の雲を発射し、中心では 12 のダメージを
+J:D:与える。
+
+N:291:Acid Balls
+J:N:アシッド・ボール
+G:-:d
+I:65:20:0
+W:50:0:10:1650
+A:50/1
+P:0:1d1:0:0:0
+F:IGNORE_ACID
+D:It shoots a radius-2 acid ball that inflicts 120 points of damage at
+D: its center.
+J:D:それは半径 2 の酸のボールを発射し、中心では 120 のダメージを
+J:D:与える。
+
+N:292:Wonder
+J:N:謎
+G:-:d
+I:65:24:0
+W:3:0:10:250
+A:3/1
+P:0:1d1:0:0:0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:It has a random effect chosen from the various wand effects, except
+D: Dragon's Flame, Dragon's Frost, Dragon's Breath, Annihilation.
+J:D:それは様々なワンドの効果をランダムに発揮する。
+J:D:ただしドラゴンの火炎、ドラゴンの冷気、ドラゴン・ブレス、壊滅は除く。
+
+## XXX 293 XXX ##
+
+N:294:Acid Bolts
+J:N:アシッド・ボルト
+G:-:d
+I:65:16:0
+W:30:0:10:950
+A:30/1
+P:0:1d1:0:0:0
+D:It shoots an acid bolt that inflicts 10d8 points of damage, with a 20%
+D: chance of getting an acid beam.
+J:D:それは酸の矢を発射し、 10d8 のダメージを与える。
+J:D:20% の確率で酸のビームになる。
+
+N:295:Dragon's Flame
+J:N:ドラゴンの火炎
+G:-:d
+I:65:26:0
+W:50:0:10:2400
+A:50/4
+P:0:1d1:0:0:0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:It shoots a radius-3 fire ball that inflicts 200 points of damage at
+D: its center.
+J:D:それは半径 3 の火炎のボールを発射し、中心では 200 のダメージを
+J:D:与える。
+
+N:296:Dragon's Frost
+J:N:ドラゴンの冷気
+G:-:d
+I:65:27:0
+W:50:0:10:2400
+A:50/4
+P:0:1d1:0:0:0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:It shoots a radius-3 frost ball that inflicts 160 points of damage at
+D: its center.
+J:D:それは半径 3 の冷気のボールを発射し、中心では 160 のダメージを
+J:D:与える。
+
+N:297:Dragon's Breath
+J:N:ドラゴン・ブレス
+G:-:d
+I:65:28:0
+W:60:0:10:2400
+A:60/4
+P:0:1d1:0:0:0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:It shoots a radius-3 fire/frost/acid/lightning/poison ball that
+D: inflicts 200/160/200/180/120 points of damage at its center (damage
+D: type chosen at random).
+J:D:それは半径 3 の火炎/冷気/酸/電撃/毒のボールを発射し、中心では
+J:D: 200/160/200/180/120 のダメージを与える(ダメージの種類はランダムに
+J:D:選択される)。
+
+N:298:Annihilation
+J:N:壊滅
+G:-:d
+I:65:25:0
+W:60:0:10:3000
+A:60/4
+P:0:1d1:0:0:0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:It inflicts 250 points of damage on a single monster that is not
+D: undead, a demon, an elemental, a golem, or a vortex.
+J:D:それは 1 体のモンスターに 250 のダメージを与える。
+J:D:アンデッド、デーモン、エレメンタル、ゴーレム、ボルテックスは
+J:D:影響を受けない。
+
+## XXX 299 XXX ##
+
+
+##### Staffs #####
+
+N:300:Trap Location
+J:N:トラップ探知
+G:_:d
+I:55:12:0
+W:10:0:50:350
+A:10/1
+P:0:1d2:0:0:0
+D:It detects all traps in the immediate area.
+J:D:それはすぐ近くの範囲の全てのトラップを感知する。
+
+N:301:Treasure Location
+J:N:財宝探知
+G:_:d
+I:55:10:0
+W:5:0:50:200
+A:5/1
+P:0:1d2:0:0:0
+D:It detects all treasure in the immediate area.
+J:D:それはすぐ近くの範囲の全ての財宝を感知する。
+
+N:302:Object Location
+J:N:アイテム探知
+G:_:d
+I:55:11:0
+W:5:0:50:200
+A:5/1
+P:0:1d2:0:0:0
+D:It detects all objects in the immediate area.
+J:D:それはすぐ近くの範囲の全てのアイテムを感知する。
+
+N:303:Teleportation
+J:N:テレポート
+G:_:d
+I:55:4:0
+W:20:0:50:2000
+A:20/1
+P:0:1d2:0:0:0
+D:It teleports you randomly with a maximum range of 100 squares.
+J:D:それはあなたを 100 マス以内の離れた場所にランダムに
+J:D:テレポートさせる。
+
+N:304:Earthquakes
+J:N:地震
+G:_:d
+I:55:28:0
+W:40:0:50:350
+A:40/1
+P:0:1d2:0:0:0
+D:It causes an earthquake centered on you that has a 10-square radius;
+D: this randomly places new walls and floor space.  Monsters can be
+D: caught by a newly created wall; this does not affect monsters that
+D: can bore through rock or pass through walls, but otherwise monsters
+D: take 4d8 points of damage if they can evade the falling rock, or are
+D: lost inside the rock forever if they cannot.
+J:D:それはあなたを中心に半径 10 の地震を引き起こし、ランダムに新しい
+J:D:壁や床を配置する。モンスターは新しく生成された壁に挟まれることがある。
+J:D:壁を掘り進むモンスターはこの影響を受けないが、その他のモンスターは
+J:D:落ちてきた岩を回避できた場合でも 4d8 のダメージを受け、 回避に失敗した
+J:D:場合には永遠に岩の下敷きになる。
+
+N:305:Summoning
+J:N:召喚
+G:_:d
+I:55:3:0
+W:10:0:50:0
+A:10/1:50/1
+P:0:1d2:0:0:0
+D:It summons 1d4 monsters that are generated at the current dungeon
+D: level.
+D:  If a monster normally appears in groups, a whole group will appear.
+D:  If a monster normally has escorts, it will appear with escorts.
+J:D:それは現在のダンジョンの深さで生成される 1d4 体のモンスターを召喚する。
+J:D:モンスターが通常集団で現れる場合、集団で召喚される。
+J:D:モンスターが通常護衛を伴って現れる場合、護衛とともに召喚される。
+
+N:306:Light
+J:N:光
+G:_:d
+I:55:8:0
+W:5:0:50:250
+A:5/1
+P:0:1d2:0:0:0
+D:It lights up an area with a radius of 2 squares, plus the entire room
+D: if you are currently in one.
+D:  This inflicts 2d8 points of damage on any light-sensitive creatures
+D: within the radius of the spell.
+J:D:それは半径 2 の範囲を光で周囲を照らし、あなたが部屋の中にいれば
+J:D:部屋全体を照らす。
+J:D:これにより呪文の範囲内にいる光に弱いモンスターに 2d8 のダメージを
+J:D:与える。
+
+N:307:*Destruction*
+J:N:*破壊*
+G:_:d
+I:55:29:0
+W:50:0:50:2500
+A:50/1:70/1
+P:0:1d2:0:0:0
+D:It destroys a circular area centered at you with a radius of 15
+D: squares, randomly placing new walls and floor space (stairs are
+D: immune).  All monsters and objects (excluding artifacts) are removed
+D: from the affected area.
+D:  This effect will also cause blindness lasting for 10+1d10 turns
+D: unless you have resistance to either blindness or light.
+J:D:それはあなたの周囲半径 15 マス以内の円形の範囲を破壊し、ランダムに
+J:D:新しい壁や床を配置する(階段は影響を受けない)。全てのモンスターとアイテム
+J:D:(伝説のアイテムは除く)は影響範囲から取り除かれる。
+J:D:この効果は 10+1d10 ターン続く盲目も引き起こす。ただし盲目耐性か閃光
+J:D:耐性があれば影響を受けない。
+
+N:308:Starlight
+J:N:スターライト
+G:_:d
+I:55:7:0
+W:20:0:50:800
+A:20/1
+P:0:1d2:0:0:0
+D:It fires a line of light in all eight cardinal directions;
+D: light-sensitive monsters caught in one of the lines take 6d8 points
+D: of damage.
+J:D:それは 8 方向に光線を発射し、光に弱いモンスターに 6d8 のダメージを
+J:D:与える。
+
+N:309:Haste Monsters
+J:N:スピード・モンスター
+G:_:d
+I:55:2:0
+W:10:0:50:0
+A:10/1
+P:0:1d2:0:0:0
+D:It hastes all monsters within line of sight.
+J:D:それは視界内の全てのモンスターを加速させる。
+
+N:310:Slow Monsters
+J:N:スロウ・モンスター
+G:_:d
+I:55:21:0
+W:10:0:50:800
+A:10/1
+P:0:1d2:0:0:0
+D:It attempts to slow down all monsters within line of sight.
+D:  Uniques are unaffected.
+J:D:それは視界内の全てのモンスターを減速させようと試みる。
+J:D:ユニーク・モンスターは影響を受けない。
+
+N:311:Sleep Monsters
+J:N:スリープ・モンスター
+G:_:d
+I:55:20:0
+W:10:0:50:700
+A:10/1
+P:0:1d2:0:0:0
+D:It attempts to put all monsters within line of sight to sleep.
+D:  Uniques are unaffected.
+J:D:それは視界内の全てのモンスターを眠らせようと試みる。
+J:D:ユニーク・モンスターは影響を受けない。
+
+N:312:Cure Light Wounds
+J:N:軽傷の治癒
+G:_:d
+I:55:16:0
+W:5:0:50:350
+A:5/1
+P:0:1d2:0:0:0
+D:It cures 1d8 points of damage.
+J:D:それは 1d8 のダメージを回復させる。
+
+N:313:Detect Invisible
+J:N:透明物体感知
+G:_:d
+I:55:14:0
+W:5:0:50:200
+A:5/1
+P:0:1d2:0:0:0
+D:It detects all invisible monsters in the immediate area.
+J:D:それはすぐ近くの範囲の全ての透明なモンスターを感知する。
+
+N:314:Speed
+J:N:スピード
+G:_:d
+I:55:22:0
+W:40:0:50:1000
+A:40/1
+P:0:1d2:0:0:0
+D:It hastes you (+10 to speed) for 15+1d30 turns (or 5 additional turns
+D: if you already are under the effect of a temporary haste
+D: enchantment).
+J:D:それは 15+1d30 ターンの間あなたを加速(速度 +10)させる。
+J:D:すでに一時的な加速の影響を受けている場合、効果の持続時間は
+J:D: 5 ターン増えるだけである。
+
+N:315:Slowness
+J:N:のろま
+G:_:d
+I:55:1:0
+W:40:0:50:0
+A:40/1
+P:0:1d2:0:0:0
+D:It slows you down (-10 to speed) for 15+1d30 turns; this duration is
+D: cumulative with other temporary slowing enchantments.
+J:D:それは 15+1d30 ターンの間あなたを減速(速度 -10)させる。
+J:D:効果の持続時間は他の一時的減速効果と累積する。
+
+N:316:Door/Stair Location
+J:N:ドア/階段探知
+G:_:d
+I:55:13:0
+W:10:0:50:350
+A:10/1
+P:0:1d2:0:0:0
+D:It detects all doors and stairs in the immediate area.
+J:D:それはすぐ近くの範囲の全てのドアと階段を感知する。
+
+N:317:Remove Curse
+J:N:解呪
+G:_:d
+I:55:6:0
+W:40:0:50:500
+A:40/1
+P:0:1d2:0:0:0
+D:It removes all ordinary curses from all equipped items.
+D:  Heavy or permanent curses are unaffected.
+J:D:それは全ての装備から普通の呪いを取り除く。
+J:D:強力な呪いや永遠の呪いを取り除くことはできない。
+
+N:318:Detect Evil
+J:N:邪悪存在感知
+G:_:d
+I:55:15:0
+W:20:0:50:350
+A:20/1
+P:0:1d2:0:0:0
+D:It detects all evil monsters in the immediate area.
+J:D:それはすぐ近くの範囲の全ての邪悪なモンスターを感知する。
+
+N:319:Curing
+J:N:癒し
+G:_:d
+I:55:17:0
+W:25:0:50:1000
+A:25/1
+P:0:1d2:0:0:0
+D:It cures all stunning, heals all cut damage, neutralizes poison, and
+D: cures blindness and confusion.
+J:D:それは朦朧から完全に回復させ、全ての怪我を回復させ、毒を中和し、
+J:D:盲目と混乱を治す。
+
+N:320:Dispel Evil
+J:N:邪悪存在退散
+G:_:d
+I:55:24:0
+W:50:0:50:1200
+A:50/1
+P:0:1d2:0:0:0
+D:It inflicts 60 points of damage on all evil monsters within line of
+D: sight.
+J:D:それは視界内の全ての邪悪なモンスターに 60 のダメージを与える。
+
+N:321:Probing
+J:N:調査
+G:_:d
+I:55:23:0
+W:30:0:50:2000
+A:30/1
+P:0:1d2:0:0:0
+D:It probes all monsters within line of sight, giving information both
+D: on the current hit points of the monsters and many of their
+D: characteristics and abilities (excluding melee, spellcasting, and
+D: breath attacks).
+J:D:それは視界内の全てのモンスターを調査し、現在のヒットポイントや
+J:D:モンスターの特徴と能力の情報を与える(直接攻撃、呪文、ブレスなどの
+J:D:情報を除く)。
+
+N:322:Darkness
+J:N:暗闇
+G:_:d
+I:55:0:0
+W:5:0:50:0
+A:5/1:50/1
+P:0:1d2:0:0:0
+D:It darkens all squares within 3 squares of you, plus the entire room
+D: if you are currently in one; and blinds you for 3+1d5 turns, unless
+D: you have resistance to blindness.
+J:D:それは半径 3 の範囲を暗くし、あなたが部屋の中にいれば
+J:D:部屋全体を暗くする。さらに 3+1d5 ターンの間あなたを盲目にする。
+J:D:ただし盲目耐性を持っていれば盲目の影響を受けない。
+
+N:323:Banishment
+J:N:追放
+G:_:d
+I:55:27:0
+W:70:0:50:3500
+A:70/4
+P:0:1d2:0:0:0
+D:It removes all monsters represented by a chosen symbol from the level.
+D:  Uniques are unaffected.
+D:  You take 1d4 points of damage for every monster removed.
+J:D:それは現在の階にいる選択した文字で表される全てのモンスターを取り除く。
+J:D:ユニーク・モンスターは影響を受けない。
+J:D:取り除いたモンスター 1 体につき 1d4 のダメージを受ける。
+
+N:324:Power
+J:N:力
+G:_:d
+I:55:25:0
+W:70:0:50:4000
+A:70/2
+P:0:1d2:0:0:0
+D:It inflicts 120 points of damage on all monsters within line of sight.
+J:D:それは視界内の全てのモンスターに 120 のダメージを与える。
+
+N:325:the Magi
+J:N:賢者
+G:_:d
+I:55:19:0
+W:70:0:50:4500
+A:70/2
+P:0:1d2:0:0:0
+D:It restores both intelligence and mana points to maximum if either or
+D: both are currently below maximum.
+J:D:それは知能や MP が低下していれば、両者を最大値まで復活させる。
+
+N:326:Perception
+J:N:鑑識
+G:_:d
+I:55:5:0
+W:10:0:50:400
+A:10/1
+P:0:1d2:0:0:0
+D:It reveals all normal (magical but non-hidden) powers of one object.
+D:  (The spell may be aborted without using up a charge.)
+J:D:それは一つのアイテムの全ての通常の(隠されていない魔法の)能力を
+J:D:明らかにする。
+J:D:(この呪文は魔力を消費することなく中断することができる。)
+
+N:327:Holiness
+J:N:聖浄
+G:_:d
+I:55:26:0
+W:70:0:50:4500
+A:70/2
+P:0:1d2:0:0:0
+D:It inflicts 120 points of damage on all evil monsters within line of
+D: sight, cures 50 points of damage, cures all stunning, heals all cut
+D: damage, neutralizes poison, removes fear, and also grants you the
+D: enchantment of protection from evil for a duration equal to 1d25 plus
+D: three times your character level.
+J:D:それは視界内の全ての邪悪なモンスターに 120 のダメージを与え、50 のダ
+J:D:メージを回復させ、それは朦朧から完全に回復させ、全ての怪我を回復させ、
+J:D:毒を中和し、恐怖を取り除き、さらに (1d25 + キャラクターのレベル x 3) 
+J:D:に等しい期間、邪悪な存在に対する結界をあなたに授ける。
+
+
+N:328:Enlightenment
+J:N:啓蒙
+G:_:d
+I:55:9:0
+W:20:0:50:750
+A:20/1
+P:0:1d2:0:0:0
+D:It maps out a portion of the level centered on you.
+J:D:それはあなたを中心にダンジョンの一部の地図を明らかにする。
+
+N:329:Healing
+J:N:体力回復
+G:_:d
+I:55:18:0
+W:70:0:50:5000
+A:70/2
+P:0:1d2:0:0:0
+D:It cures 300 points of damage, cures all stunning, and heals all cut
+D: damage.
+J:D:それは 300 のダメージを回復させ、朦朧から完全に回復させ、
+J:D:全ての怪我を回復させる。
+
+
+##### Basic Books #####
+
+N:330:[Magic for Beginners]
+J:N:[初心者用教本]
+G:?:R
+I:90:0:0
+W:5:0:30:25
+A:5/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+
+N:331:[Conjurings and Tricks]
+J:N:[魔法と奇術]
+G:?:R
+I:90:1:0
+W:10:0:30:100
+A:10/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+
+N:332:[Incantations and Illusions]
+J:N:[魔術と幻影]
+G:?:R
+I:90:2:0
+W:20:0:30:400
+A:20/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+
+N:333:[Sorcery and Evocations]
+J:N:[魔力と召喚]
+G:?:R
+I:90:3:0
+W:30:0:30:800
+A:30/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+
+N:334:[Beginners Handbook]
+J:N:[入門読本]
+G:?:G
+I:91:0:0
+W:5:0:30:25
+A:5/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+
+N:335:[Words of Wisdom]
+J:N:[賢明御詔]
+G:?:G
+I:91:1:0
+W:10:0:30:100
+A:10/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+
+N:336:[Chants and Blessings]
+J:N:[聖歌聖祝]
+G:?:G
+I:91:2:0
+W:20:0:30:300
+A:20/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+
+N:337:[Exorcism and Dispelling]
+J:N:[退魔払邪]
+G:?:G
+I:91:3:0
+W:30:0:30:900
+A:30/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+
+##### Chests #####
+
+N:338:& Small wooden chest~
+J:N:& 小さな木の箱
+G:~:s
+I:7:1:0
+W:5:0:250:20
+A:5/1
+P:0:2d3:0:0:0
+
+N:339:& Large wooden chest~
+J:N:& 大きな木の箱
+G:~:s
+I:7:5:0
+W:15:0:500:60
+A:15/1
+P:0:2d5:0:0:0
+
+N:340:& Small iron chest~
+J:N:& 小さな鉄の箱
+G:~:s
+I:7:2:0
+W:25:0:300:100
+A:25/1
+P:0:2d4:0:0:0
+
+N:341:& Large iron chest~
+J:N:& 大きな鉄の箱
+G:~:s
+I:7:6:0
+W:35:0:1000:150
+A:35/1
+P:0:2d6:0:0:0
+
+N:342:& Small steel chest~
+J:N:& 小さな鋼鉄の箱
+G:~:s
+I:7:3:0
+W:45:0:500:200
+A:45/1
+P:0:2d4:0:0:0
+
+N:343:& Large steel chest~
+J:N:& 大きな鋼鉄の箱
+G:~:s
+I:7:7:0
+W:55:0:1000:250
+A:55/1
+P:0:2d6:0:0:0
+
+N:344:& Ruined chest~
+J:N:& あばかれた箱
+G:~:s
+I:7:0:0
+W:0:0:250:0
+A:75/1
+
+
+##### Various Stuff #####
+
+N:345:& Iron Spike~
+J:N:& 鉄のくさび
+G:~:W
+I:5:0:0
+W:1:0:10:1
+A:1/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:These can be placed in doors to make them harder to open.  Multiple
+D: spikes may be used on a single door.  Each of the first 7 spikes will
+D: increase the door's resistance to bashing.  Placing more than 7
+D: spikes in one door will not have any further effect.
+J:D:それはドアに仕掛けて開きにくくすることができる。
+J:D:同じドアに対して複数のくさびを仕掛けることもできる。
+J:D:最初の 7 つまではドアの体当たりに対する抵抗力を高める。
+J:D:それ以上は同じドアにくさびを仕掛けても何の影響ももたらさない。
+
+N:346:& Wooden Torch~
+J:N:& 松明
+G:~:u
+I:39:0:4000
+W:1:0:30:2
+A:1/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It is equippable as a light source with a radius of 1 square.
+D:  It may also be used to fuel another torch, up to a maximum of 5000
+D: turns of light.
+J:D:それは半径 1 の光源として装備することができる。
+J:D:他の松明に燃料を補給することもでき、最大 5000 ターンまで増加させること
+J:D:ができる。
+
+N:347:& Brass Lantern~
+J:N:& 真鍮のランタン
+G:~:U
+I:39:1:7500
+W:3:0:50:35
+A:3/1
+P:0:1d1:0:0:0
+F:EASY_KNOW | IGNORE_FIRE
+D:It is equippable as a light source with a radius of 2 squares.
+D:  It may also be used to fuel another lantern.
+J:D:それは半径 2 の光源として装備することができる。
+J:D:他のランタンの燃料補給に使用することもできる。
+
+N:348:& Flask~ of oil
+J:N:& 油つぼ
+G:!:y
+I:77:0:7500
+W:1:0:10:3
+A:1/1
+P:0:2d6:0:0:0
+F:EASY_KNOW
+D:It can be used to fuel a brass lantern with 7500 turns of light, up to
+D: a maximum of 15000 turns of light.
+D:  When thrown, it is considered lit, so it does more than nominal
+D: damage (which occurs even against creatures resistant to fire).
+J:D:それは真鍮のランタンに 7500 ターンの燃料を補給することができ、
+J:D:最大 15000 ターンまで増加させることができる。
+J:D:投げたときには火がついているものと見なされ、通常より大きなダメージを
+J:D:(火炎耐性を持つモンスターに対しても)与えることができる。
+
+# Empty Bottles are no longer generated (no 'A'llocation line)
+# Keep the entry for savefile compatibility
+
+N:349:& Empty Bottle~
+J:N:& 空のビン
+G:!:w
+I:2:1:0
+W:0:0:2:0
+P:0:1d1:0:0:0
+F:EASY_KNOW
+
+
+##### Here are the Rods #####
+
+## XXX 350 XXX ##
+
+N:351:Door/Stair Location
+J:N:ドア/階段探知
+G:-:d
+I:66:1:70
+W:15:0:15:1000
+A:15/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It detects all secret doors and stairs in the immediate area.
+J:D:それはすぐ近くの範囲の全ての隠しドアと階段を感知する。
+
+N:352:Trap Location
+J:N:トラップ探知
+G:-:d
+I:66:0:50
+W:5:0:15:100
+A:5/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It detects all traps in the immediate area.
+J:D:それはすぐ近くの範囲の全てのトラップを感知する。
+
+N:353:Probing
+J:N:調査
+G:-:d
+I:66:7:50
+W:40:0:15:4000
+A:40/4
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It probes all monsters within line of sight, giving information both
+D: on the current hit points of the monsters and many of their
+D: characteristics and abilities (excluding melee, spellcasting, and
+D: breath attacks).
+J:D:それは視界内の全てのモンスターを調査し、現在のヒットポイントや
+J:D:モンスターの特徴と能力の情報を与える(直接攻撃、呪文、ブレスなどの
+J:D:情報を除く)。
+
+N:354:Recall
+J:N:帰還
+G:-:d
+I:66:3:60
+W:30:0:15:4000
+A:30/4
+P:0:1d1:0:0:0
+F:EASY_KNOW | IGNORE_ELEC
+D:It invokes the spell of recall.
+J:D:それは帰還の呪文を発動させる。
+
+N:355:Illumination
+J:N:イルミネーション
+G:-:d
+I:66:4:30
+W:20:0:15:1000
+A:20/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It lights up an area with a radius of 2 squares, plus the entire room
+D: if you are currently in one.
+D:  This inflicts 2d8 points of damage on any light-sensitive creatures
+D: within the radius of the spell.
+J:D:それは半径 2 の範囲を光で周囲を照らし、あなたが部屋の中にいれば
+J:D:部屋全体を照らす。
+J:D:これにより呪文の範囲内にいる光に弱いモンスターに 2d8 のダメージを
+J:D:与える。
+
+N:356:Light
+J:N:光
+G:-:d
+I:66:15:9
+W:10:0:15:500
+A:10/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It lights up a line of squares, inflicting 6d8 points of damage on any
+D: light-sensitive creatures on the line.
+J:D:それは直線上のマスを明るくし、光に弱いモンスターに 6d8 のダメージを
+J:D:与える。
+
+N:357:Lightning Bolts
+J:N:サンダー・ボルト
+G:-:d
+I:66:21:11
+W:20:0:15:2000
+A:20/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It shoots a lightning bolt that inflicts 6d6 points of damage, with a
+D: 10% chance of getting a lightning beam.
+J:D:それは稲妻の矢を発射し、 6d6 のダメージを与える。
+J:D:10% の確率で稲妻のビームになる。
+
+N:358:Frost Bolts
+J:N:アイス・ボルト
+G:-:d
+I:66:23:13
+W:25:0:15:2500
+A:25/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It shoots a frost bolt that inflicts 10d8 points of damage, with a 10%
+D: chance of getting a frost beam.
+J:D:それは冷気の矢を発射し、 10d8 のダメージを与える。
+J:D:10% の確率で冷気のビームになる。
+
+N:359:Fire Bolts
+J:N:ファイア・ボルト
+G:-:d
+I:66:22:15
+W:30:0:15:3000
+A:30/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It shoots a fire bolt that inflicts 16d8 points of damage, with a 10%
+D: chance of getting a fire beam.
+J:D:それは火炎の矢を発射し、 16d8 のダメージを与える。
+J:D:10% の確率で火炎のビームになる。
+
+N:360:Polymorph
+J:N:チェンジ・モンスター
+G:-:d
+I:66:19:25
+W:35:0:15:1200
+A:35/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It attempts to polymorph a single monster.
+D:  Uniques are unaffected.
+J:D:それは 1 体のモンスターを変化させようと試みる。
+J:D:ユニーク・モンスターは影響を受けない。
+
+N:361:Slow Monster
+J:N:スロウ・モンスター
+G:-:d
+I:66:17:20
+W:30:0:15:1500
+A:30/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It attempts to slow down a single monster.
+D:  Uniques are unaffected.
+J:D:それは 1 体のモンスターを減速させようと試みる。
+J:D:ユニーク・モンスターは影響を受けない。
+
+N:362:Sleep Monster
+J:N:スリープ・モンスター
+G:-:d
+I:66:16:18
+W:30:0:15:1500
+A:30/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It attempts to put a single monster to sleep.
+D:  Uniques are unaffected.
+J:D:それは 1 体のモンスターを眠らせようと試みる。
+J:D:ユニーク・モンスターは影響を受けない。
+
+N:363:Drain Life
+J:N:生命力吸収
+G:-:d
+I:66:18:23
+W:75:0:15:3600
+A:75/4
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It inflicts 150 points of damage on a single monster that is not
+D: undead, a demon, an elemental, a golem, or a vortex.
+J:D:それは 1 体のモンスターに 150 のダメージを与える。
+J:D:アンデッド、デーモン、エレメンタル、ゴーレム、ボルテックスは
+J:D:影響を受けない。
+
+N:364:Teleport Other
+J:N:テレポート・アウェイ
+G:-:d
+I:66:13:25
+W:45:0:15:1400
+A:45/2
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It produces a beam that teleports all monsters caught in it up to 100
+D: squares away.
+J:D:それはビームを生み出し、ビームが捕らえた全てのモンスターを
+J:D:100 マス以内の離れた場所にテレポートさせる。
+
+N:365:Disarming
+J:N:トラップ解除
+G:-:d
+I:66:14:30
+W:35:0:15:2100
+A:35/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It produces a beam that disarms all traps, unlocks all locked doors
+D: and reveals all secret doors.
+J:D:それはビームを生み出し、ビームを浴びた全てのトラップを解除し、
+J:D:全ての鍵のかかったドアを開き、隠しドアを明らかにする。
+
+N:366:Lightning Balls
+J:N:サンダー・ボール
+G:-:d
+I:66:25:23
+W:55:0:15:4000
+A:55/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It shoots a radius-2 lightning ball that inflicts 64 points of damage
+D: at its center.
+J:D:それは半径 2 の稲妻のボールを発射し、中心では 64 のダメージを
+J:D:与える。
+
+N:367:Cold Balls
+J:N:アイス・ボール
+G:-:d
+I:66:27:25
+W:60:0:15:4500
+A:60/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It shoots a radius-2 frost ball that inflicts 96 points of damage at
+D: its center.
+J:D:それは半径 2 の冷気のボールを発射し、中心では 96 のダメージを
+J:D:与える。
+
+N:368:Fire Balls
+J:N:ファイア・ボール
+G:-:d
+I:66:26:30
+W:75:0:15:5000
+A:75/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It shoots a radius-2 fire ball that inflicts 144 points of damage at
+D: its center.
+J:D:それは半径 2 の火炎のボールを発射し、中心では 144 のダメージを
+J:D:与える。
+
+N:369:Acid Balls
+J:N:アシッド・ボール
+G:-:d
+I:66:24:27
+W:70:0:15:5500
+A:70/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It shoots a radius-2 acid ball that inflicts 120 points of damage at
+D: its center.
+J:D:それは半径 2 の酸のボールを発射し、中心では 120 のダメージを
+J:D:与える。
+
+N:370:Acid Bolts
+J:N:アシッド・ボルト
+G:-:d
+I:66:20:12
+W:40:0:15:3500
+A:40/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It shoots an acid bolt that inflicts 12d8 points of damage, with a 10%
+D: chance of getting an acid beam.
+J:D:それは酸の矢を発射し、 12d8 のダメージを与える。
+J:D:10% の確率で酸のビームになる。
+
+N:371:Enlightenment
+J:N:啓蒙
+G:-:d
+I:66:5:99
+W:65:0:15:10000
+A:65/4
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It maps out a portion of the level centered on you.
+J:D:それはあなたを中心にダンジョンの一部の地図を明らかにする。
+
+N:372:Perception
+J:N:鑑識
+G:-:d
+I:66:2:10
+W:50:0:15:13000
+A:50/8
+P:0:1d1:0:0:0
+F:EASY_KNOW | IGNORE_ELEC
+D:It reveals all normal (magical but non-hidden) powers of one object.
+D:  (The spell may be aborted without using up a charge.)
+J:D:それは一つのアイテムの全ての通常の(隠されていない魔法の)能力を
+J:D:明らかにする。
+J:D:(この呪文は魔力を消費することなく中断することができる。)
+
+N:373:Curing
+J:N:癒し
+G:-:d
+I:66:8:999
+W:65:0:15:15000
+A:65/8
+P:0:1d1:0:0:0
+F:EASY_KNOW | IGNORE_ELEC
+D:It cures all stunning, heals all cut damage, neutralizes poison, and
+D: cures blindness and confusion.
+J:D:それは朦朧から完全に回復させ、全ての怪我を回復させ、毒を中和し、
+J:D:盲目と混乱を治す。
+
+N:374:Healing
+J:N:体力回復
+G:-:d
+I:66:9:999
+W:80:0:15:20000
+A:80/8
+P:0:1d1:0:0:0
+F:EASY_KNOW | IGNORE_ELEC
+D:It cures 500 points of damage, cures all stunning, and heals all cut
+D: damage.
+J:D:それは 500 のダメージを回復させ、朦朧から完全に回復させ、
+J:D:全ての怪我を回復させる。
+
+N:375:Detection
+J:N:全感知
+G:-:d
+I:66:6:99
+W:30:0:15:5000
+A:30/8
+P:0:1d1:0:0:0
+F:EASY_KNOW | IGNORE_ELEC
+D:It detects all treasure, objects, secret doors, stairs, traps, and
+D: monsters in the immediate area.
+J:D:それはすぐ近くの範囲の全ての財宝、アイテム、隠しドア、階段、トラップ、
+J:D:モンスターを感知する。
+
+N:376:Restoration
+J:N:全復活
+G:-:d
+I:66:10:999
+W:80:0:15:25000
+A:80/16
+P:0:1d1:0:0:0
+F:EASY_KNOW | IGNORE_ELEC
+D:It restores experience points and all stats to maximum if any of them
+D: are below maximum.
+J:D:それは経験値と全てのステータスが低下していれば、最大値まで回復させる。
+
+N:377:Speed
+J:N:スピード
+G:-:d
+I:66:11:99
+W:95:0:15:50000
+A:95/16
+P:0:1d1:0:0:0
+F:EASY_KNOW | IGNORE_ELEC
+D:It hastes you (+10 to speed) for 15+1d30 turns (or 5 additional turns
+D: if you already are under the effect of a temporary haste
+D: enchantment).
+J:D:それは 15+1d30 ターンの間あなたを加速(速度 +10)させる。
+J:D:すでに一時的な加速の影響を受けている場合、効果の持続時間は
+J:D: 5 ターン増えるだけである。
+
+
+##### Special Books (note resistances) #####
+
+N:379:[Resistances of Scarabtarices]
+J:N:[スカラベの耐性]
+G:?:r
+I:90:4:0
+W:40:0:30:10000
+A:40/1
+P:0:1d1:0:0:0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+F:EASY_KNOW
+
+N:380:[Raal's Tome of Destruction]
+J:N:[ラアルの破壊集大成]
+G:?:r
+I:90:5:0
+W:50:0:30:20000
+A:50/1
+P:0:1d1:0:0:0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+F:EASY_KNOW
+
+N:381:[Mordenkainen's Escapes]
+J:N:[モルデンカイネンの脱出]
+G:?:r
+I:90:6:0
+W:60:0:30:30000
+A:60/1
+P:0:1d1:0:0:0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+F:EASY_KNOW
+
+N:382:[Tenser's Transformations]
+J:N:[テンサーの変容]
+G:?:r
+I:90:7:0
+W:70:0:30:50000
+A:70/2
+P:0:1d1:0:0:0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+F:EASY_KNOW
+
+N:383:[Kelek's Grimoire of Power]
+J:N:[ケレックの力の魔道書]
+G:?:r
+I:90:8:0
+W:80:0:30:90000
+A:80/4
+P:0:1d1:0:0:0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+F:EASY_KNOW
+
+N:384:[Ethereal Openings]
+J:N:[天上開示]
+G:?:g
+I:91:4:0
+W:40:0:30:5000
+A:40/1
+P:0:1d1:0:0:0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+F:EASY_KNOW
+
+N:385:[Godly Insights]
+J:N:[神様識察]
+G:?:g
+I:91:5:0
+W:50:0:30:10000
+A:50/1
+P:0:1d1:0:0:0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+F:EASY_KNOW
+
+N:386:[Purifications and Healing]
+J:N:[浄魂癒身]
+G:?:g
+I:91:6:0
+W:60:0:30:30000
+A:60/1
+P:0:1d1:0:0:0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+F:EASY_KNOW
+
+N:387:[Holy Infusions]
+J:N:[神聖智慧]
+G:?:g
+I:91:7:0
+W:80:0:30:50000
+A:80/2
+P:0:1d1:0:0:0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+F:EASY_KNOW
+
+N:388:[Wrath of God]
+J:N:[天神怒罰]
+G:?:g
+I:91:8:0
+W:100:0:30:100000
+A:100/4
+P:0:1d1:0:0:0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+F:EASY_KNOW
+
+
+##### Junk #####
+
+# Junk items are no longer generated (no 'A'llocation lines)
+# Keep the entries for savefile compatibility
+
+N:389:& Shard~ of Pottery
+J:N:& 陶器のかけら
+G:~:r
+I:3:3:0
+W:0:0:5:0
+
+P:0:1d1:0:0:0
+F:EASY_KNOW
+
+N:390:& Broken Stick~
+J:N:& 折れた棒
+G:~:r
+I:3:6:0
+W:0:0:3:0
+P:0:1d1:0:0:0
+F:EASY_KNOW
+
+
+##### Skeletons #####
+
+# Skeleton items are no longer generated (no 'A'llocation lines)
+# Keep the entries for savefile compatibility
+
+N:391:& Broken Skull~
+J:N:& 頭蓋骨の破片
+G:~:w
+I:1:1:0
+W:0:0:1:0
+P:0:1d1:0:0:0
+F:EASY_KNOW
+
+N:392:& Broken Bone~
+J:N:& 骨の破片
+G:~:w
+I:1:2:0
+W:0:0:2:0
+P:0:1d1:0:0:0
+F:EASY_KNOW
+
+N:393:& Canine Skeleton~
+J:N:& 犬の骨
+G:~:w
+I:1:4:0
+W:1:0:10:0
+P:0:1d1:0:0:0
+F:EASY_KNOW
+
+N:394:& Rodent Skeleton~
+J:N:& ネズミの骨
+G:~:w
+I:1:3:0
+W:1:0:10:0
+P:0:1d1:0:0:0
+F:EASY_KNOW
+
+N:395:& Human Skeleton~
+J:N:& 人間の骨
+G:~:w
+I:1:8:0
+W:5:0:60:0
+P:0:1d2:0:0:0
+F:EASY_KNOW
+
+N:396:& Dwarf Skeleton~
+J:N:& ドワーフの骨
+G:~:w
+I:1:7:0
+W:5:0:50:0
+P:0:1d2:0:0:0
+F:EASY_KNOW
+
+N:397:& Elf Skeleton~
+J:N:& エルフの骨
+G:~:w
+I:1:6:0
+W:5:0:40:0
+P:0:1d2:0:0:0
+F:EASY_KNOW
+
+N:398:& Gnome Skeleton~
+J:N:& ノームの骨
+G:~:w
+I:1:5:0
+W:5:0:30:0
+P:0:1d2:0:0:0
+F:EASY_KNOW
+
+## XXX 399 XXX ##
+
+
+##### Dragon Scale Mail #####
+
+N:400:Black Dragon Scale Mail~
+J:N:ブラックドラゴン・スケイルメイル
+G:[:s
+I:38:1:0
+W:50:0:200:40000
+A:50/8
+P:30:2d4:-2:0:10
+F:RES_ACID |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+N:401:Blue Dragon Scale Mail~
+J:N:ブルードラゴン・スケイルメイル
+G:[:b
+I:38:2:0
+W:50:0:200:40000
+A:50/8
+P:30:2d4:-2:0:10
+F:RES_ELEC |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+N:402:White Dragon Scale Mail~
+J:N:ホワイトドラゴン・スケイルメイル
+G:[:w
+I:38:3:0
+W:50:0:200:40000
+A:50/8
+P:30:2d4:-2:0:10
+F:RES_COLD |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+N:403:Red Dragon Scale Mail~
+J:N:レッドドラゴン・スケイルメイル
+G:[:r
+I:38:4:0
+W:50:0:200:40000
+A:50/8
+P:30:2d4:-2:0:10
+F:RES_FIRE |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+N:404:Green Dragon Scale Mail~
+J:N:グリーンドラゴン・スケイルメイル
+G:[:g
+I:38:5:0
+W:60:0:200:60000
+A:60/8
+P:30:2d4:-2:0:10
+F:RES_POIS |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+N:405:Multi-Hued Dragon Scale Mail~
+J:N:万色ドラゴン・スケイルメイル
+G:[:v
+I:38:6:0
+W:90:0:200:150000
+A:90/32
+P:30:2d4:-2:0:10
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_POIS |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+N:406:Pseudo-Dragon Scale Mail~
+J:N:ニセドラゴン・スケイルメイル
+G:[:o
+I:38:10:0
+W:65:0:200:60000
+A:65/16
+P:30:2d4:-2:0:10
+F:RES_LITE | RES_DARK |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+N:407:Law Dragon Scale Mail~
+J:N:ロードラゴン・スケイルメイル
+G:[:B
+I:38:12:0
+W:80:0:200:80000
+A:80/16
+P:30:2d4:-2:0:10
+F:RES_SOUND | RES_SHARD |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+N:408:Bronze Dragon Scale Mail~
+J:N:ブロンズドラゴン・スケイルメイル
+G:[:U
+I:38:14:0
+W:50:0:200:40000
+A:50/8
+P:30:2d4:-2:0:10
+F:RES_CONFU |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+N:409:Gold Dragon Scale Mail~
+J:N:ゴールドドラゴン・スケイルメイル
+G:[:y
+I:38:16:0
+W:50:0:200:40000
+A:50/8
+P:30:2d4:-2:0:10
+F:RES_SOUND |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+N:410:Chaos Dragon Scale Mail~
+J:N:カオスドラゴン・スケイルメイル
+G:[:v
+I:38:18:0
+W:80:0:200:80000
+A:80/16
+P:30:2d4:-2:0:10
+F:RES_CHAOS | RES_DISEN |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+N:411:Balance Dragon Scale Mail~
+J:N:バランスドラゴン・スケイルメイル
+G:[:v
+I:38:20:0
+W:95:0:200:100000
+A:95/32
+P:30:2d4:-2:0:10
+F:RES_SOUND | RES_SHARD | RES_CHAOS | RES_DISEN |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+N:412:Power Dragon Scale Mail~
+J:N:パワードラゴン・スケイルメイル
+G:[:v
+I:38:30:0
+W:100:0:200:300000
+A:100/64
+P:40:2d4:-3:0:15
+F:RES_ACID | RES_FIRE | RES_COLD | RES_ELEC | RES_POIS |
+F:RES_CONFU | RES_DISEN | RES_SOUND | RES_SHARD | RES_BLIND | 
+F:RES_LITE | RES_DARK | RES_NEXUS | RES_NETHR | RES_CHAOS |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+## XXX 413 XXX ##
+
+## XXX 414 XXX ##
+
+
+##### Extra potions #####
+
+N:415:Death
+J:N:死
+G:!:d
+I:75:23:0
+W:55:0:4:0
+A:55/4
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It inflicts 5000 points of damage.
+D:  Death can only be avoided if you have magical invulnerability, which
+D: just happens to be unavailable in the current version of Angband.
+J:D:それは 5000 のダメージを与える。
+J:D:死を回避する唯一の方法は魔法無効化能力だけだが、現在のバージョンの
+J:D: Angband では手に入れることはできない。
+
+N:416:Ruination
+J:N:破滅
+G:!:d
+I:75:15:0
+W:40:0:4:0
+A:40/8
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It inflicts 10d10 points of damage and permanently decreases all stats
+D: (even if you have stat sustains).
+J:D:それは 10d10 のダメージを与え、全てのステータスを永遠に減少させる
+J:D:(ステータスの維持は役に立たない)。
+
+N:417:Detonations
+J:N:爆発
+G:!:d
+I:75:22:0
+W:60:0:4:10000
+A:60/8
+P:0:25d25:0:0:0
+F:EASY_KNOW
+D:It inflicts 50d20 points of damage from massive explosions, severe
+D: cuts (+5000 to the cut counter), and stunning (+75 to the stun
+D: counter).
+D:  It can also be thrown for 25d25 points of damage.
+J:D:それは大規模な爆発により 50d20 のダメージを与え、重傷を負わせ
+J:D:(負傷の計数に +5000)、朦朧とさせる(朦朧の計数に +75)。
+J:D:投げることによって 25d25 のダメージを与えることもできる。
+
+N:418:Augmentation
+J:N:増強
+G:!:d
+I:75:55:0
+W:40:0:4:60000
+A:40/16
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It first restores to maximum any stats below maximum, then permanently
+D: increases all stats.
+J:D:それは全てのステータスを最大値まで復活させ、次に全てのステータスを永遠
+J:D:に増加させる。
+
+N:419:*Healing*
+J:N:*体力回復*
+G:!:d
+I:75:38:0
+W:40:0:4:1500
+A:40/4:80/2
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It cures 1200 points of damage, cures all stunning, heals all cut
+D: damage, neutralizes poison, and cures blindness and confusion.
+J:D:それは 1200 のダメージを回復させ、朦朧から完全に回復させ、
+J:D:全ての怪我を回復させ、毒を中和し、盲目と混乱を治す。
+
+N:420:Life
+J:N:生命
+G:!:d
+I:75:39:0
+W:60:0:4:5000
+A:60/4:100/4
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It restores experience and all stats to maximum, cures 5000 points of
+D: damage, cures all stunning, heals all cut damage, neutralizes poison,
+D: stops hallucination, and cures blindness and confusion.
+J:D:それは経験値と全てのステータスを最大値まで回復させ、5000 のダメージを
+J:D:回復させ、朦朧から完全に回復させ、全ての怪我を回復させ、毒を中和し、
+J:D:盲目と混乱を治す。
+
+N:421:Self Knowledge
+J:N:自己分析
+G:!:d
+I:75:58:0
+W:40:0:4:2000
+A:40/1
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It grants knowledge of all special powers (whether intrinsic,
+D: temporary, or provided by a magical item) that you currently possess.
+J:D:それは現在持っている全ての特殊能力(生まれつき、一時的、魔法のアイテムに
+J:D:よるものを問わない)に関する知識を与える。
+
+N:422:*Enlightenment*
+J:N:*啓蒙*
+G:!:d
+I:75:57:0
+W:70:0:4:80000
+A:70/4
+P:0:1d1:0:0:0
+F:EASY_KNOW
+D:It has the powers of the Potions of Enlightenment, Intelligence,
+D: Wisdom, and Self Knowledge; also identifies all items you are
+D: carrying, and detects all treasure, objects, secret doors, stairs,
+D: and traps in the immediate area.
+J:D:それは啓蒙の薬、知能の薬、賢さの薬、自己分析の薬の能力を持ち、
+J:D:運搬している全てのアイテムを鑑定し、すぐ近くの範囲の全ての財宝、
+J:D:アイテム、隠しドア、階段、トラップ、モンスターを感知する。
+
+
+##### Items 423 to 430 are new amulets thought up by JLE #####
+
+N:423:ESP
+J:N:テレパシー
+G:":d
+I:40:13:0
+W:50:0:3:25000
+A:60/8
+F:TELEPATHY | SEARCH | 
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | 
+F:HIDE_TYPE
+
+N:424:Resistance
+J:N:耐性
+G:":d
+I:40:14:0
+W:60:0:3:20000
+A:60/8
+F:RES_FIRE | RES_ACID | RES_ELEC | RES_COLD | EASY_KNOW |
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+# Note: It looks useless at its depth. In fact, it isn't: it allows the player 
+# to now wear a combination of armor and shield, neither of which has the basic
+# four resists, without having to find Colluin or Dor-Lomin first. To have this 
+# power too early in the game would make it too easy.
+
+
+N:425:Regeneration
+J:N:急速回復
+G:":d
+I:40:15:0
+W:30:0:3:600
+A:30/3
+F:REGEN | EASY_KNOW
+
+N:426:Devotion
+J:N:信心
+G:":d
+I:40:18:0
+W:70:0:3:30000
+A:70/8
+F:WIS | CHR | SUST_WIS | SUST_CHR | LITE | 
+F:RES_DARK | RES_LITE | RES_FIRE | HOLD_LIFE | 
+F:HIDE_TYPE
+
+N:427:Weaponmastery
+J:N:武術
+G:":d
+I:40:19:0
+W:70:0:3:30000
+P:0:0d0:0:0:0
+A:70/8
+F:STR | SUST_STR | SUST_CON | FREE_ACT | 
+F:RES_FEAR | RES_DISEN | HIDE_TYPE
+
+N:428:Trickery
+J:N:奇術
+G:":d
+I:40:20:1
+W:70:0:3:30000
+A:70/8
+F:DEX | SUST_DEX | STEALTH | SPEED | SEARCH | INFRA | 
+F:RES_NEXUS | RES_POIS | HIDE_TYPE
+
+N:429:Infravision
+J:N:赤外線視力
+G:":d
+I:40:21:0
+W:10:0:3:200
+A:10/2
+F:INFRA | HIDE_TYPE
+
+N:430:Resist Lightning
+J:N:耐電
+G:":d
+I:40:22:0
+W:10:0:3:300
+A:10/1
+F:RES_ELEC | IGNORE_ELEC | EASY_KNOW
+
+### And a ring ###
+
+N:431:Lightning
+J:N:電撃
+G:=:d
+I:45:38:0
+W:50:0:2:5000
+A:50/2
+F:RES_ELEC | IGNORE_ELEC | ACTIVATE
+
+### Items 432-436 unused ###
+
+### Three new types of ammo ###
+
+N:437:& Mithril Shot~
+J:N:& ミスリルの弾
+G:{:B
+I:16:2:0
+W:40:0:4:20
+A:40/4:65/1
+P:0:2d4:5:5:0
+F:SHOW_MODS | IGNORE_ACID
+D:It can be shot with a sling.
+J:D:それはスリングで発射することができる。
+
+N:438:& Mithril Arrow~
+J:N:& ミスリルの矢
+G:{:B
+I:17:3:0
+W:55:0:2:25
+A:50/4:90/3
+P:0:3d4:0:0:0
+F:SHOW_MODS | IGNORE_ACID | IGNORE_FIRE
+D:It can be shot with a bow.
+J:D:それは弓で発射することができる。
+
+N:439:& Mithril Bolt~
+J:N:& ミスリルのクロスボウの矢
+G:{:B
+
+I:18:3:0
+W:50:0:2:30
+A:60/4:95/3
+P:0:3d5:0:0:0
+F:SHOW_MODS | IGNORE_ACID | IGNORE_FIRE
+D:It can be shot with a crossbow.
+J:D:それはクロスボウで発射することができる。
+
+##### Objects 440 - 479 are unused #####
+
+##### And here starts the gold/gems #####
+
+N:480:copper
+J:N:銅塊
+G:$:u
+I:100:1:0
+W:1:0:0:3
+
+N:481:copper
+J:N:銅塊
+G:$:u
+I:100:2:0
+W:1:0:0:4
+
+N:482:copper
+J:N:銅塊
+G:$:u
+I:100:3:0
+W:1:0:0:5
+
+N:483:silver
+J:N:銀塊
+G:$:s
+I:100:4:0
+W:1:0:0:6
+
+N:484:silver
+J:N:銀塊
+G:$:s
+I:100:5:0
+W:1:0:0:7
+
+N:485:silver
+J:N:銀塊
+G:$:s
+I:100:6:0
+W:1:0:0:8
+
+N:486:garnets
+J:N:ガーネット
+G:$:r
+I:100:7:0
+W:1:0:0:9
+
+N:487:garnets
+J:N:ガーネット
+G:$:r
+I:100:8:0
+W:1:0:0:10
+
+N:488:gold
+J:N:金塊
+G:$:y
+I:100:9:0
+W:1:0:0:12
+
+N:489:gold
+J:N:金塊
+G:$:y
+I:100:10:0
+W:1:0:0:14
+
+N:490:gold
+J:N:金塊
+G:$:y
+I:100:11:0
+W:1:0:0:16
+
+N:491:opals
+J:N:オパール
+G:$:W
+I:100:12:0
+W:1:0:0:18
+
+N:492:sapphires
+J:N:サファイア
+G:$:b
+I:100:13:0
+W:1:0:0:20
+
+N:493:rubies
+J:N:ルビー
+G:$:r
+I:100:14:0
+W:1:0:0:24
+
+N:494:diamonds
+J:N:ダイヤモンド
+G:$:w
+I:100:15:0
+W:1:0:0:28
+
+N:495:emeralds
+J:N:エメラルド
+G:$:g
+I:100:16:0
+W:1:0:0:32
+
+N:496:mithril
+J:N:ミスリル
+G:$:B
+I:100:17:0
+W:1:0:0:40
+
+N:497:adamantite
+J:N:アダマンタイト
+G:$:G
+I:100:18:0
+W:1:0:0:80
+
+
+##### Objects 498 and 499 are the "Morgoth Artifacts" #####
+
+# These objects, like objects 500 to 511, are never created
+# without being turned into artifacts.  This simplifies the
+# code for "killing the winner monster".
+
+N:498:& Mighty Hammer~
+J:N:& 冥界の大鉄杖
+G:\:D
+I:21:50:0
+W:15:0:200:1000
+P:0:3d9:0:0:0
+F:SHOW_MODS | INSTA_ART
+
+N:499:& Massive Iron Crown~
+J:N:& 堂々たる鉄冠
+G:]:D
+I:33:50:0
+W:44:0:20:1000
+P:0:1d1:0:0:0
+F:INSTA_ART
+
+
+##### Objects 500 to 514 are the "Special Artifacts" #####
+
+# These objects do not specify "full names" because the artifact name
+# is added in "obj-desc.c" based on the artifact index ("i_ptr->name1").
+#
+# These objects do specify a "base name", which is used when the object
+# is "aware" (always true for lites)
+#
+# The Lites (and the One Ring) specify "physical colors", which
+# over-ride the "flavor" colors, if any.  Note that the "One Ring"
+# also has a specific check for "unknown" in which it changes its
+# name to "a plain gold ring".  See "obj-desc.c"
+#
+# Note that ALL artifacts are given "IGNORE_ACID/ELEC/FIRE/COLD",
+# so we do not need to specify that here.
+#
+# Note that the "INSTA_ART" flag is used to prevent these objects from
+# being created without also turning them into artifacts.  This flag
+# must be specified both here and in the artifact template.
+#
+# The reason for having six different "ring" templates and three
+# different "amulet" templates is to allow each "special artifact" to
+# have a different "color" and "flavor", and also to allow the use of
+# special "base names" (such as "Necklace").
+
+
+# The Phial of Galadriel -- see artifact list
+
+#(コメント)
+#読み方は「はりびょう」だそうです
+#
+N:500:& Phial~
+J:N:& 玻璃瓶
+G:~:y
+I:39:4:0
+W:5:0:10:10000
+P:0:1d1:0:0:0
+F:INSTA_ART
+
+# The Star of Elendil -- see artifact list
+
+N:501:& Star~
+J:N:& 星
+G:~:y
+I:39:5:0
+W:30:0:5:25000
+P:0:1d1:0:0:0
+F:INSTA_ART
+
+# The Arkenstone of Thrain -- see artifact list
+
+N:502:& Arkenstone~
+J:N:& アーケン石
+G:~:y
+I:39:6:0
+W:50:0:5:50000
+P:0:1d1:0:0:0
+F:INSTA_ART
+
+# The Amulet of Carlammas -- see artifact list
+
+N:503:& Amulet~
+J:N:& アミュレット
+G:":d
+I:40:10:0
+W:50:0:3:60000
+F:INSTA_ART
+
+# The Amulet of Ingwe -- see artifact list
+
+N:504:& Amulet~
+J:N:& アミュレット
+G:":d
+I:40:11:0
+W:65:0:3:90000
+F:INSTA_ART
+
+# The Necklace of the Dwarves -- see artifact list
+
+#
+#(都々目)
+#ドワーフ族のネックレス			ドワーフの頸飾り
+#
+#＊シルマリルの物語に従う。或いは素直に『ナウグラミア』とした方が良いのかも
+#しれませんが(ドワーフの首飾りはエルフ語でナウグラミアであり、原作でも殆ど
+#こちらのほうで表記されている)、まあこれは英語版angbandに従うべきでしょうか
+#ら。
+#
+N:505:& Necklace~
+J:N:& 頸飾り
+G:":y
+I:40:12:0
+W:70:0:3:75000
+F:INSTA_ART
+
+# The Ring of Barahir -- see artifact list
+
+N:506:& Ring~
+J:N:& 指輪
+G:=:d
+I:45:32:0
+W:50:0:2:65000
+F:INSTA_ART
+
+# The Ring of Tulkas -- see artifact list
+
+N:507:& Ring~
+J:N:& 指輪
+G:=:d
+I:45:33:0
+W:70:0:2:150000
+F:INSTA_ART
+
+# The Ring of Power 'Narya' -- see artifact list
+
+N:508:& Ring~
+J:N:& 指輪
+G:=:d
+I:45:34:0
+W:70:0:2:100000
+F:INSTA_ART
+
+# The Ring of Power 'Nenya' -- see artifact list
+
+N:509:& Ring~
+J:N:& 指輪
+G:=:d
+I:45:35:0
+W:80:0:2:200000
+F:INSTA_ART
+
+# The Ring of Power 'Vilya' -- see artifact list
+
+N:510:& Ring~
+J:N:& 指輪
+G:=:d
+I:45:36:0
+W:90:0:2:300000
+F:INSTA_ART
+
+# The Ring of Power 'The One Ring' -- see artifact list
+
+N:511:& Ring~
+J:N:& 指輪
+G:=:y
+I:45:37:0
+W:100:0:2:5000000
+F:INSTA_ART
+
+# The Palantir of Westernesse -- see artifact list
+
+N:512:& Palantir~
+J:N:& パランティア
+G:~:y
+I:39:7:0
+W:75:0:200:100000
+P:0:10d10:0:0:0
+F:INSTA_ART
+
+# The Elfstone 'Elessar' -- see artifact list
+
+N:513:& Elfstone~
+J:N:& エルフ石
+G:":g
+I:40:16:0
+W:60:0:3:50000
+F:INSTA_ART
+
+# The Jewel 'Evenstar' -- see artifact list
+
+N:514:& Jewel~
+J:N:& 宝石
+G:":w
+I:40:17:0
+W:40:0:3:25000
+F:INSTA_ART
