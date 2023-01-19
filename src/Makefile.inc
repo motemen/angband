@@ -1591,7 +1591,7 @@ depgen:
   ui-input.h ui-event.h ui-term.h ui-keymap.h ui-map.h ui-mon-lore.h \
   ui-object.h ui-output.h ui-target.h
 ./ui-term.o: ui-term.c buildid.h h-basic.h ui-term.h ui-event.h z-color.h \
-  z-util.h z-virt.h i18n.h
+  z-util.h z-virt.h
 ./ui-visuals.o: ui-visuals.c angband.h h-basic.h z-bitflag.h z-form.h \
   z-virt.h z-color.h z-util.h z-rand.h i18n.h config.h game-event.h \
   z-type.h message.h list-message.h player.h guid.h obj-properties.h \

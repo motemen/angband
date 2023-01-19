@@ -20,7 +20,6 @@
 #include "angband.h"
 #include "cmd-core.h"
 #include "game-event.h"
-#include "i18n.h"
 #include "init.h"
 #include "obj-desc.h"
 #include "obj-gear.h"

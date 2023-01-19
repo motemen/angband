@@ -19,7 +19,6 @@
 #include "angband.h"
 #include "effects.h"
 #include "game-world.h"
-#include "i18n.h"
 #include "init.h"
 #include "mon-attack.h"
 #include "mon-blows.h"

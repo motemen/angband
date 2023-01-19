@@ -17,7 +17,6 @@
  */
 
 #include "angband.h"
-#include "i18n.h"
 #include "obj-chest.h"
 #include "obj-desc.h"
 #include "obj-gear.h"
