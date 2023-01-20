@@ -15,5 +15,5 @@ If:
   PathMatch: .*\.[ch]
   PathExclude: src/tests/.*
 CompileFlags:
-  Add: ["-std=c99"]
+  Add: ["-std=c99", "-Wno-format-security"]
   Remove: ["-x"]
