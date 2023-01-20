@@ -165,8 +165,8 @@ struct term_font
 				bitmapped fonts */
 	bool preset;	/* true if this is a font included in the lib/fonts
 				directory for the game */
-	bool bitmapped;	/* true if this is a bitmapped (.fon) font that can't
-				be scaled */
+	bool bitmapped;	/* true if this is a bitmapped (.fon; case-insensitive)
+				font that can't be scaled */
 };
 
 /**
@@ -2503,7 +2503,7 @@ static void SelectFileFontBrowser(sdl_Button *sender)
 		new_font.name = work;
 		new_font.preset = false;
 	}
-	if (suffix(new_font.name, ".fon")) {
+	if (suffix_i(new_font.name, ".fon")) {
 		new_font.size = 0;
 		new_font.bitmapped = true;
 	} else {
@@ -3299,7 +3299,7 @@ static void FontActivate(sdl_Button *sender)
 		}
 		sdl_ButtonCaption(button, FontList[i]);
 		sdl_ButtonVisible(button, true);
-		button->activate = (suffix(FontList[i], ".fon")) ?
+		button->activate = (suffix_i(FontList[i], ".fon")) ?
 			SelectPresetBitmappedFont : SelectPresetScalableFont;
 	}
 
@@ -4905,7 +4905,7 @@ static errr Term_text_sdl(int col, int row, int n, int a, const wchar_t *s)
 	mbstr[len] = '\0';
 
 	/* Handle background */
-	switch (a / MAX_COLORS)
+	switch (a / MULT_BG)
 	{
 		case BG_BLACK:
 			/* Default Background */
@@ -5626,7 +5626,7 @@ static int cmp_font(const void *f1, const void *f2)
 			 * Neither match the expected pattern.  Sort
 			 * alphabetically.
 			 */
-			return strcmp(f1, f2);
+			return strcmp(font1, font2);
 		}
 		/*
 		 * Put f2 first, since it matches the expected pattern.

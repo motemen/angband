@@ -662,6 +662,9 @@
     <ClInclude Include="src\list-stats.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\list-terrain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="src\list-terrain-flags.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1358,6 +1361,9 @@
       <Filter>Resource Files\gamedata</Filter>
     </Text>
     <Text Include="lib\gamedata\ui_entry_renderer.txt">
+      <Filter>Resource Files\gamedata</Filter>
+    </Text>
+    <Text Include="lib\gamedata\ui_knowledge.txt">
       <Filter>Resource Files\gamedata</Filter>
     </Text>
     <Text Include="lib\gamedata\vault.txt">

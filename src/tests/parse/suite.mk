@@ -14,6 +14,7 @@ TESTPROGS += parse/a-info \
 	parse/k-info \
 	parse/lore \
 	parse/mbase \
+	parse/mspell \
 	parse/names \
 	parse/objact \
 	parse/objbase \
@@ -31,6 +32,7 @@ TESTPROGS += parse/a-info \
 	parse/realm \
 	parse/shape \
 	parse/slay \
+	parse/ui_knowledge \
 	parse/v-info \
 	parse/world \
 	parse/z-info

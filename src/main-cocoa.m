@@ -3993,7 +3993,7 @@ static int get_background_color_index(int idx)
 {
     int ibkg = COLOUR_DARK;
 
-    switch (idx / MAX_COLORS) {
+    switch (idx / MULT_BG) {
     case BG_BLACK:
 	/* There's nothing to do. */
 	break;
@@ -4634,11 +4634,14 @@ static errr Term_curs_cocoa(int x, int y)
 static errr Term_bigcurs_cocoa(int x, int y)
 {
     AngbandContext *angbandContext = (__bridge AngbandContext*) (Term->data);
+    /* Out of paranoia, coerce to remain in bounds. */
+    int w = (x + tile_width <= angbandContext.cols) ?
+        tile_width : angbandContext.cols - x;
+    int h = (y + tile_height <= angbandContext.rows) ?
+        tile_height : angbandContext.rows - y;
 
-    [angbandContext.contents setCursorAtColumn:x row:y width:tile_width
-		   height:tile_height];
-    [angbandContext.changes markChangedBlockAtColumn:x row:y width:tile_width
-		   height:tile_height];
+    [angbandContext.contents setCursorAtColumn:x row:y width:w height:h];
+    [angbandContext.changes markChangedBlockAtColumn:x row:y width:w height:h];
 
     /* Success */
     return 0;
