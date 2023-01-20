@@ -85,7 +85,7 @@ static void textblock_resize_if_needed(textblock *tb, size_t additional_size)
 	}
 }
 
-static char *alloc_fmt_v(const char *fmt, va_list vp) {
+static char *vallocf(const char *fmt, va_list vp) {
 	size_t temp_len = TEXTBLOCK_LEN_INITIAL;
 	char *temp_space = mem_zalloc(temp_len);
 
@@ -115,7 +115,7 @@ static char *alloc_fmt_v(const char *fmt, va_list vp) {
 static void textblock_vappend_c(textblock *tb, uint8_t attr, const char *fmt,
 		va_list vp)
 {
-	char *temp_space = alloc_fmt_v(fmt, vp);
+	char *temp_space = vallocf(fmt, vp);
 	int new_length;
 
 	/* Get extent of addition in wide chars */
@@ -745,7 +745,7 @@ errr text_lines_to_file(const char *path, text_writer writer)
 void textblock_append_e(textblock *tb, const char *fmt, ...) {
 	va_list vp;
 	va_start(vp, fmt);
-	char *temp_space = alloc_fmt_v(fmt, vp);
+	char *temp_space = vallocf(fmt, vp);
 	va_end(vp);
 
 	char smallbuf[1024];
