@@ -262,11 +262,13 @@ size_t textblock_calculate_lines(textblock *tb, size_t **line_starts, size_t **l
 			current_line_length = 0;
 			current_line_width = 0;
 		}
+		#ifndef LOCALE_NO_WORD_DIVIDER
 		else if (text[text_offset] == L' ') {
 			breaking_char_offset = text_offset;
 			current_line_length++;
 			current_line_width++;
 		}
+		#endif
 		else {
 			current_line_length++;
 			current_line_width += i18n_wchar_visualwidth(text[text_offset]);
