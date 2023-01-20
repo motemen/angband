@@ -200,7 +200,7 @@ size_t vstrnfmt(char *buf, size_t max, const char *fmt, va_list vp)
 	char aux[128];
 
 	/* Resulting string */
-	char tmp[1024];
+	char tmp[2048];
 
 	assert(max);
 	assert(fmt);
@@ -441,7 +441,7 @@ size_t vstrnfmt(char *buf, size_t max, const char *fmt, va_list vp)
 			{
 				if (do_long) {
 					const wchar_t *arg;
-					char arg2[1024];
+					char arg2[2048];
 
 					/* XXX There is a big bug here: if one
 					 * passes "%.0s" to strnfmt, then really we
@@ -478,7 +478,7 @@ size_t vstrnfmt(char *buf, size_t max, const char *fmt, va_list vp)
 					break;
 				} else {
 					const char *arg;
-					char arg2[1024];
+					char arg2[2048];
 
 					/* XXX There is a big bug here: if one
 					 * passes "%.0s" to strnfmt, then really we
