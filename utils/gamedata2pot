@@ -19,9 +19,12 @@ open my $fh, "<", $file or die "Can't open $file: $!";
 my $seen = {};
 
 while (<$fh>) {
+    chomp;
+
     if (/^name:(.+)/) {
         next if $type eq 'blow_methods';
         next if $type eq 'blow_effects';
+        next if $type eq 'player_timed';
         /^name:[^:]+:(.+)/ or next if $type eq 'object_base';
 
         next if $seen->{$1}++;
@@ -41,6 +44,8 @@ while (<$fh>) {
     }
 
     if (/^desc:(.+)/) {
+        next if $type eq 'player_timed';
+
         my @msgid = ($1);
         while (<$fh>) {
             if (/^desc:(.+)/) {
@@ -63,10 +68,32 @@ while (<$fh>) {
     }
 
     if (/^slot:.+?:(.+)$/) {
-	next if $seen->{$1}++;
-	print "#: $file:$.\n";
+        next if $seen->{$1}++;
+        print "#: $file:$.\n";
         print qq(msgctxt "$type"\n);
-	print qq(msgid "$1"\n);
-	print qq(msgstr ""\n\n);
+        print qq(msgid "$1"\n);
+        print qq(msgstr ""\n\n);
     }
+
+    if (/^grade:.:\d+:([^:]+):([^:]*)(?::([^:]*))?$/) {
+        my ($grade_name, $msg1, $msg2) = ($1, $2, $3);
+
+		for ($grade_name, $msg1, $msg2) {
+            next unless length $_;
+            next if $seen->{$_}++;
+            print "#: $file:$.\n";
+            print qq(msgctxt "$type"\n);
+            print qq(msgid "$_"\n);
+            print qq(msgstr ""\n\n);
+        }
+    }
+
+    if (/^(?:on-end|on-increase):(.+)$/) {
+        next if $seen->{$1}++;
+        print "#: $file:$.\n";
+        print qq(msgctxt "$type"\n);
+        print qq(msgid "$1"\n);
+        print qq(msgstr ""\n\n);
+    }
+
 }

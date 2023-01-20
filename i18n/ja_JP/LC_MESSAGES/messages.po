@@ -1057,7 +1057,7 @@ msgstr "＄ "
 
 #: ../src/ui-display.c:305
 msgid "Cur AC "
-msgstr "現在AC "
+msgstr "AC "
 
 #: ../src/ui-display.c:319
 msgid "HP "

@@ -1251,8 +1251,8 @@ static size_t prt_tmd(int row, int col)
 				grade = grade->next;
 			}
 			if (!grade->name) continue;
-			c_put_str(grade->color, grade->name, row, col + len);
-			len += strlen(grade->name) + 1;
+			c_put_str(grade->color, _GAMEDATA_C("player_timed", grade->name), row, col + len);
+			len += strlen(_GAMEDATA_C("player_timed", grade->name)) + 1;
 
 			/* Food meter */
 			if (i == TMD_FOOD) {

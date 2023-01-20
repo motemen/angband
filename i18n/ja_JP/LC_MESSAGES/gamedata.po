@@ -9997,123 +9997,123 @@ msgctxt "blow_effects"
 msgid "inflict Black Breath"
 msgstr ""
 
-#: ../src/obj-desc.c:124
+#: ../src/obj-desc.c:125
 msgctxt "object"
 msgid "& # Amulet~"
 msgstr ""
 
-#: ../src/obj-desc.c:124
+#: ../src/obj-desc.c:125
 msgctxt "object"
 msgid "& Amulet~"
 msgstr ""
 
-#: ../src/obj-desc.c:127
+#: ../src/obj-desc.c:128
 msgctxt "object"
 msgid "& # Ring~"
 msgstr "#指輪"
 
-#: ../src/obj-desc.c:127
+#: ../src/obj-desc.c:128
 msgctxt "object"
 msgid "& Ring~"
 msgstr "指輪"
 
-#: ../src/obj-desc.c:130
+#: ../src/obj-desc.c:131
 msgctxt "object"
 msgid "& # Sta|ff|ves|"
 msgstr "#杖"
 
-#: ../src/obj-desc.c:130
+#: ../src/obj-desc.c:131
 msgctxt "object"
 msgid "& Sta|ff|ves|"
 msgstr "杖"
 
-#: ../src/obj-desc.c:133
+#: ../src/obj-desc.c:134
 msgctxt "object"
 msgid "& # Wand~"
 msgstr "#魔法棒"
 
-#: ../src/obj-desc.c:133
+#: ../src/obj-desc.c:134
 msgctxt "object"
 msgid "& Wand~"
 msgstr "魔法棒"
 
-#: ../src/obj-desc.c:136
+#: ../src/obj-desc.c:137
 msgctxt "object"
 msgid "& # Rod~"
 msgstr "#ロッド"
 
-#: ../src/obj-desc.c:136
+#: ../src/obj-desc.c:137
 msgctxt "object"
 msgid "& Rod~"
 msgstr "ロッド"
 
-#: ../src/obj-desc.c:139
+#: ../src/obj-desc.c:140
 msgctxt "object"
 msgid "& # Potion~"
 msgstr "#薬"
 
-#: ../src/obj-desc.c:139
+#: ../src/obj-desc.c:140
 msgctxt "object"
 msgid "& Potion~"
 msgstr "薬"
 
-#: ../src/obj-desc.c:142
+#: ../src/obj-desc.c:143
 msgctxt "object"
 msgid "& Scroll~ titled #"
 msgstr "#と書かれた巻物"
 
-#: ../src/obj-desc.c:142
+#: ../src/obj-desc.c:143
 msgctxt "object"
 msgid "& Scroll~"
 msgstr "巻物"
 
-#: ../src/obj-desc.c:146 ../src/obj-desc.c:152 ../src/obj-desc.c:158
-#: ../src/obj-desc.c:170
+#: ../src/obj-desc.c:147 ../src/obj-desc.c:153 ../src/obj-desc.c:159
+#: ../src/obj-desc.c:171
 msgctxt "object"
 msgid "& Book~ #"
 msgstr ""
 
-#: ../src/obj-desc.c:148
+#: ../src/obj-desc.c:149
 msgctxt "object"
 msgid "& Book~ of Magic Spells #"
 msgstr ""
 
-#: ../src/obj-desc.c:154
+#: ../src/obj-desc.c:155
 msgctxt "object"
 msgid "& Holy Book~ of Prayers #"
 msgstr ""
 
-#: ../src/obj-desc.c:160
+#: ../src/obj-desc.c:161
 msgctxt "object"
 msgid "& Book~ of Nature Magics #"
 msgstr ""
 
-#: ../src/obj-desc.c:164
+#: ../src/obj-desc.c:165
 msgctxt "object"
 msgid "& Tome~ #"
 msgstr ""
 
-#: ../src/obj-desc.c:166
+#: ../src/obj-desc.c:167
 msgctxt "object"
 msgid "& Necromantic Tome~ #"
 msgstr ""
 
-#: ../src/obj-desc.c:172
+#: ../src/obj-desc.c:173
 msgctxt "object"
 msgid "& Book of Mysteries~ #"
 msgstr ""
 
-#: ../src/obj-desc.c:175
+#: ../src/obj-desc.c:176
 msgctxt "object"
 msgid "& # Mushroom~"
 msgstr "#キノコ"
 
-#: ../src/obj-desc.c:175
+#: ../src/obj-desc.c:176
 msgctxt "object"
 msgid "& Mushroom~"
 msgstr "キノコ"
 
-#: ../src/obj-desc.c:178
+#: ../src/obj-desc.c:179
 msgctxt "object"
 msgid "(nothing)"
 msgstr ""
@@ -16383,4 +16383,1069 @@ msgstr ""
 #: ../src/list-mon-message.h:64
 msgctxt "list-mon-message"
 msgid "There is a puff of smoke!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:192
+msgctxt "player_timed"
+msgid "Haste"
+msgstr "加速"
+
+#: ../lib/gamedata/player_timed.txt:192
+msgctxt "player_timed"
+msgid "You feel yourself moving faster!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:193
+msgctxt "player_timed"
+msgid "You feel yourself slow down."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:198
+msgctxt "player_timed"
+msgid "Slow"
+msgstr "減速"
+
+#: ../lib/gamedata/player_timed.txt:198
+msgctxt "player_timed"
+msgid "You feel yourself moving slower!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:199
+msgctxt "player_timed"
+msgid "You feel yourself speed up."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:205
+msgctxt "player_timed"
+msgid "Blind"
+msgstr "盲目"
+
+#: ../lib/gamedata/player_timed.txt:205
+msgctxt "player_timed"
+msgid "You are blind."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:206
+msgctxt "player_timed"
+msgid "You blink and your eyes clear."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:212
+msgctxt "player_timed"
+msgid "Paralyzed!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:212
+msgctxt "player_timed"
+msgid "You are paralysed!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:213
+msgctxt "player_timed"
+msgid "You can move again."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:220
+msgctxt "player_timed"
+msgid "Confused"
+msgstr "混乱"
+
+#: ../lib/gamedata/player_timed.txt:220
+msgctxt "player_timed"
+msgid "You are confused!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:221
+msgctxt "player_timed"
+msgid "You are no longer confused."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:222
+msgctxt "player_timed"
+msgid "You are more confused!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:229
+msgctxt "player_timed"
+msgid "Afraid"
+msgstr "恐怖"
+
+#: ../lib/gamedata/player_timed.txt:229
+msgctxt "player_timed"
+msgid "You are terrified!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:230
+msgctxt "player_timed"
+msgid "You feel bolder now."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:231
+msgctxt "player_timed"
+msgid "You are more scared!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:237
+msgctxt "player_timed"
+msgid "Halluc"
+msgstr "幻覚"
+
+#: ../lib/gamedata/player_timed.txt:237
+msgctxt "player_timed"
+msgid "You feel drugged!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:238
+msgctxt "player_timed"
+msgid "You can see clearly again."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:239
+msgctxt "player_timed"
+msgid "You feel more drugged!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:245
+msgctxt "player_timed"
+msgid "Poisoned"
+msgstr "毒"
+
+#: ../lib/gamedata/player_timed.txt:245
+msgctxt "player_timed"
+msgid "You are poisoned!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:246
+msgctxt "player_timed"
+msgid "You are no longer poisoned."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:247
+msgctxt "player_timed"
+msgid "You are more poisoned!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:255
+msgctxt "player_timed"
+msgid "Graze"
+msgstr "かすり傷"
+
+#: ../lib/gamedata/player_timed.txt:255
+msgctxt "player_timed"
+msgid "You have been given a graze."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:256
+msgctxt "player_timed"
+msgid "Light Cut"
+msgstr "軽傷"
+
+#: ../lib/gamedata/player_timed.txt:256
+msgctxt "player_timed"
+msgid "You have been given a light cut."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:257
+msgctxt "player_timed"
+msgid "Bad Cut"
+msgstr "切り傷"
+
+#: ../lib/gamedata/player_timed.txt:257
+msgctxt "player_timed"
+msgid "You have been given a bad cut."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:258
+msgctxt "player_timed"
+msgid "Nasty Cut"
+msgstr "ひどい傷"
+
+#: ../lib/gamedata/player_timed.txt:258
+msgctxt "player_timed"
+msgid "You have been given a nasty cut."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:259
+msgctxt "player_timed"
+msgid "Severe Cut"
+msgstr "重傷"
+
+#: ../lib/gamedata/player_timed.txt:259
+msgctxt "player_timed"
+msgid "You have been given a severe cut."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:260
+msgctxt "player_timed"
+msgid "Deep Gash"
+msgstr "深手"
+
+#: ../lib/gamedata/player_timed.txt:260
+msgctxt "player_timed"
+msgid "You have been given a deep gash."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:261
+msgctxt "player_timed"
+msgid "Mortal Wound"
+msgstr "致命傷"
+
+#: ../lib/gamedata/player_timed.txt:261
+msgctxt "player_timed"
+msgid "You have been given a mortal wound."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:262
+msgctxt "player_timed"
+msgid "You are no longer bleeding."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:268
+msgctxt "player_timed"
+msgid "Stun"
+msgstr "朦朧"
+
+#: ../lib/gamedata/player_timed.txt:268
+msgctxt "player_timed"
+msgid "You have been stunned."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:269
+msgctxt "player_timed"
+msgid "Heavy Stun"
+msgstr "ひどく朦朧"
+
+#: ../lib/gamedata/player_timed.txt:269
+msgctxt "player_timed"
+msgid "You have been heavily stunned."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:270
+msgctxt "player_timed"
+msgid "Knocked Out"
+msgstr "昏倒"
+
+#: ../lib/gamedata/player_timed.txt:270
+msgctxt "player_timed"
+msgid "You have been knocked out."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:271
+msgctxt "player_timed"
+msgid "You are no longer stunned."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:278
+msgctxt "player_timed"
+msgid "Starving"
+msgstr "飢餓"
+
+#: ../lib/gamedata/player_timed.txt:278
+msgctxt "player_timed"
+msgid " "
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:278
+msgctxt "player_timed"
+msgid "You are starving!!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:279
+msgctxt "player_timed"
+msgid "Faint"
+msgstr "気絶"
+
+#: ../lib/gamedata/player_timed.txt:279
+msgctxt "player_timed"
+msgid "You are still faint."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:279
+msgctxt "player_timed"
+msgid "You are getting faint from hunger!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:280
+msgctxt "player_timed"
+msgid "Weak"
+msgstr "衰弱"
+
+#: ../lib/gamedata/player_timed.txt:280
+msgctxt "player_timed"
+msgid "You are still weak."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:280
+msgctxt "player_timed"
+msgid "You are getting weak from hunger!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:281
+msgctxt "player_timed"
+msgid "Hungry"
+msgstr "空腹"
+
+#: ../lib/gamedata/player_timed.txt:281
+msgctxt "player_timed"
+msgid "You are still hungry."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:281
+msgctxt "player_timed"
+msgid "You are getting hungry."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:282
+msgctxt "player_timed"
+msgid "Fed"
+msgstr "満腹度"
+
+#: ../lib/gamedata/player_timed.txt:282
+msgctxt "player_timed"
+msgid "You are no longer hungry."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:282
+msgctxt "player_timed"
+msgid "You are no longer full."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:283
+msgctxt "player_timed"
+msgid "Full"
+msgstr "満腹"
+
+#: ../lib/gamedata/player_timed.txt:283
+msgctxt "player_timed"
+msgid "You are full!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:289
+msgctxt "player_timed"
+msgid "ProtEvil"
+msgstr "防邪"
+
+#: ../lib/gamedata/player_timed.txt:289
+msgctxt "player_timed"
+msgid "You feel safe from evil!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:290
+msgctxt "player_timed"
+msgid "You no longer feel safe from evil."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:291
+msgctxt "player_timed"
+msgid "You feel even safer from evil!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:296
+msgctxt "player_timed"
+msgid "Invuln"
+msgstr "無敵"
+
+#: ../lib/gamedata/player_timed.txt:296
+msgctxt "player_timed"
+msgid "You feel invulnerable!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:297
+msgctxt "player_timed"
+msgid "You feel vulnerable once more."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:302
+msgctxt "player_timed"
+msgid "Hero"
+msgstr "英雄"
+
+#: ../lib/gamedata/player_timed.txt:302
+msgctxt "player_timed"
+msgid "You feel like a hero!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:303
+msgctxt "player_timed"
+msgid "You no longer feel heroic."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:304
+msgctxt "player_timed"
+msgid "You feel more like a hero!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:310
+msgctxt "player_timed"
+msgid "Berserk"
+msgstr "狂乱"
+
+#: ../lib/gamedata/player_timed.txt:310
+msgctxt "player_timed"
+msgid "You feel like a killing machine!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:311
+msgctxt "player_timed"
+msgid "You no longer feel berserk."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:312
+msgctxt "player_timed"
+msgid "You feel even more berserk!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:318
+msgctxt "player_timed"
+msgid "Shield"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:318
+msgctxt "player_timed"
+msgid "A mystic shield forms around your body!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:319
+msgctxt "player_timed"
+msgid "Your mystic shield crumbles away."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:320
+msgctxt "player_timed"
+msgid "The mystic shield strengthens."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:325
+msgctxt "player_timed"
+msgid "Blssd"
+msgstr "祝福"
+
+#: ../lib/gamedata/player_timed.txt:325
+msgctxt "player_timed"
+msgid "You feel righteous!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:326
+msgctxt "player_timed"
+msgid "The prayer has expired."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:327
+msgctxt "player_timed"
+msgid "You feel more righteous!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:332
+msgctxt "player_timed"
+msgid "SInvis"
+msgstr "透明視"
+
+#: ../lib/gamedata/player_timed.txt:332
+msgctxt "player_timed"
+msgid "Your eyes feel very sensitive!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:333
+msgctxt "player_timed"
+msgid "Your eyes no longer feel so sensitive."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:334
+msgctxt "player_timed"
+msgid "Your eyes feel more sensitive!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:340
+msgctxt "player_timed"
+msgid "Infra"
+msgstr "赤外"
+
+#: ../lib/gamedata/player_timed.txt:340
+msgctxt "player_timed"
+msgid "Your eyes begin to tingle!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:341
+msgctxt "player_timed"
+msgid "Your eyes stop tingling."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:342
+msgctxt "player_timed"
+msgid "The tingling in your eyes intensifies."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:347
+msgctxt "player_timed"
+msgid "RAcid"
+msgstr "耐酸"
+
+#: ../lib/gamedata/player_timed.txt:347
+msgctxt "player_timed"
+msgid "You feel resistant to acid!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:348
+msgctxt "player_timed"
+msgid "You are no longer resistant to acid."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:349
+msgctxt "player_timed"
+msgid "You feel more resistant to acid!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:356
+msgctxt "player_timed"
+msgid "RElec"
+msgstr "耐電"
+
+#: ../lib/gamedata/player_timed.txt:356
+msgctxt "player_timed"
+msgid "You feel resistant to electricity!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:357
+msgctxt "player_timed"
+msgid "You are no longer resistant to electricity."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:358
+msgctxt "player_timed"
+msgid "You feel more resistant to electricity!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:365
+msgctxt "player_timed"
+msgid "RFire"
+msgstr "耐火"
+
+#: ../lib/gamedata/player_timed.txt:365
+msgctxt "player_timed"
+msgid "You feel resistant to fire!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:366
+msgctxt "player_timed"
+msgid "You are no longer resistant to fire."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:367
+msgctxt "player_timed"
+msgid "You feel more resistant to fire!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:374
+msgctxt "player_timed"
+msgid "RCold"
+msgstr "耐冷"
+
+#: ../lib/gamedata/player_timed.txt:374
+msgctxt "player_timed"
+msgid "You feel resistant to cold!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:375
+msgctxt "player_timed"
+msgid "You are no longer resistant to cold."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:376
+msgctxt "player_timed"
+msgid "You feel more resistant to cold!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:383
+msgctxt "player_timed"
+msgid "RPois"
+msgstr "耐毒"
+
+#: ../lib/gamedata/player_timed.txt:383
+msgctxt "player_timed"
+msgid "You feel resistant to poison!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:384
+msgctxt "player_timed"
+msgid "You are no longer resistant to poison."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:385
+msgctxt "player_timed"
+msgid "You feel more resistant to poison!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:392
+msgctxt "player_timed"
+msgid "RConf"
+msgstr "耐混乱"
+
+#: ../lib/gamedata/player_timed.txt:392
+msgctxt "player_timed"
+msgid "You feel resistant to confusion!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:393
+msgctxt "player_timed"
+msgid "You are no longer resistant to confusion."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:394
+msgctxt "player_timed"
+msgid "You feel more resistant to confusion!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:399
+msgctxt "player_timed"
+msgid "Amnesiac"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:399
+msgctxt "player_timed"
+msgid "You feel your memories fade."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:400
+msgctxt "player_timed"
+msgid "Your memories come flooding back."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:405
+msgctxt "player_timed"
+msgid "ESP"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:405
+msgctxt "player_timed"
+msgid "Your mind expands."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:406
+msgctxt "player_timed"
+msgid "Your horizons are once more limited."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:407
+msgctxt "player_timed"
+msgid "Your mind expands further."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:413
+msgctxt "player_timed"
+msgid "Stone"
+msgstr "石化"
+
+#: ../lib/gamedata/player_timed.txt:413
+msgctxt "player_timed"
+msgid "Your skin turns to stone."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:414
+msgctxt "player_timed"
+msgid "A fleshy shade returns to your skin."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:419
+msgctxt "player_timed"
+msgid "Terror"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:419
+msgctxt "player_timed"
+msgid "You feel the need to run away and fast!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:420
+msgctxt "player_timed"
+msgid "The urge to run dissipates."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:425
+msgctxt "player_timed"
+msgid "Sprint"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:425
+msgctxt "player_timed"
+msgid "You start sprinting."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:426
+msgctxt "player_timed"
+msgid "You suddenly stop sprinting."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:433
+msgctxt "player_timed"
+msgid "Bold"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:433
+msgctxt "player_timed"
+msgid "You feel bold."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:434
+msgctxt "player_timed"
+msgid "You no longer feel bold."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:435
+msgctxt "player_timed"
+msgid "You feel even bolder!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:441
+msgctxt "player_timed"
+msgid "Scrambled"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:441
+msgctxt "player_timed"
+msgid "Your body starts to scramble..."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:442
+msgctxt "player_timed"
+msgid "Your body reasserts its true nature."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:443
+msgctxt "player_timed"
+msgid "You are more scrambled!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:451
+msgctxt "player_timed"
+msgid "TrapSafe"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:451
+msgctxt "player_timed"
+msgid "You feel safe from traps."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:452
+msgctxt "player_timed"
+msgid "You feel vulnerable to traps again."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:453
+msgctxt "player_timed"
+msgid "You feel even safer from traps!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:458
+msgctxt "player_timed"
+msgid "FastCast"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:458
+msgctxt "player_timed"
+msgid "You feel your mind accelerate."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:459
+msgctxt "player_timed"
+msgid "You feel your mind slow again."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:463
+msgctxt "player_timed"
+msgid "AttAcid"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:463
+msgctxt "player_timed"
+msgid "Your {kind} start{s} to drip with acid!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:464
+msgctxt "player_timed"
+msgid "The acid disappears from your {kind}."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:469
+msgctxt "player_timed"
+msgid "AttElec"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:469
+msgctxt "player_timed"
+msgid "Sparks gather around your {kind}!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:470
+msgctxt "player_timed"
+msgid "The sparks fade from your {kind}."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:475
+msgctxt "player_timed"
+msgid "AttFire"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:475
+msgctxt "player_timed"
+msgid "Flames surround your {kind}!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:476
+msgctxt "player_timed"
+msgid "The flames on your {kind} subside."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:481
+msgctxt "player_timed"
+msgid "AttCold"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:481
+msgctxt "player_timed"
+msgid "Your {kind} {is} covered in frost!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:482
+msgctxt "player_timed"
+msgid "The frost evaporates from your {kind}."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:487
+msgctxt "player_timed"
+msgid "AttPois"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:487
+msgctxt "player_timed"
+msgid "Your {kind} drip{s} with poison!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:488
+msgctxt "player_timed"
+msgid "The poison disappears from your {kind}."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:493
+msgctxt "player_timed"
+msgid "AttConf"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:493
+msgctxt "player_timed"
+msgid "Your hands begin to glow!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:494
+msgctxt "player_timed"
+msgid "The glow fades from your hands."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:498
+msgctxt "player_timed"
+msgid "AttEvil"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:498
+msgctxt "player_timed"
+msgid "Your {kind} {is} imbued with holy force!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:499
+msgctxt "player_timed"
+msgid "Holy force fades from your {kind}."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:504
+msgctxt "player_timed"
+msgid "AttDemon"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:504
+msgctxt "player_timed"
+msgid "Your {kind} become{s} a bane of demons!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:505
+msgctxt "player_timed"
+msgid "Your {kind} return{s} to normal."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:510
+msgctxt "player_timed"
+msgid "AttVamp"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:510
+msgctxt "player_timed"
+msgid "Your can drain life from your victims!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:511
+msgctxt "player_timed"
+msgid "Your life-draining power passes."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:515
+msgctxt "player_timed"
+msgid "Heal"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:515
+msgctxt "player_timed"
+msgid "Your metabolism speeds up!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:516
+msgctxt "player_timed"
+msgid "Your metabolism return to normal."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:520
+msgctxt "player_timed"
+msgid "Cmd"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:520
+msgctxt "player_timed"
+msgid "You focus on your target."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:521
+msgctxt "player_timed"
+msgid "Your resume control of your own body."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:525
+msgctxt "player_timed"
+msgid "HitRun"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:525
+msgctxt "player_timed"
+msgid "You tense up ready to escape!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:526
+msgctxt "player_timed"
+msgid "You relax again."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:530
+msgctxt "player_timed"
+msgid "NoTrack"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:530
+msgctxt "player_timed"
+msgid "You begin covering your tracks."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:531
+msgctxt "player_timed"
+msgid "You stop covering your tracks."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:535
+msgctxt "player_timed"
+msgid "PShot"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:535
+msgctxt "player_timed"
+msgid "You prepare to shoot powerfully!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:536
+msgctxt "player_timed"
+msgid "Your shooting power returns to normal."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:540
+msgctxt "player_timed"
+msgid "Taunt"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:540
+msgctxt "player_timed"
+msgid "You start aggravating your enemies!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:541
+msgctxt "player_timed"
+msgid "You stop aggravating your enemies."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:545
+msgctxt "player_timed"
+msgid "Bloodlust"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:545
+msgctxt "player_timed"
+msgid "A red mist descends over your eyes!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:546
+msgctxt "player_timed"
+msgid "Your thirst for blood increases!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:550
+msgctxt "player_timed"
+msgid "Your thirst for blood is insatiable!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:551
+msgctxt "player_timed"
+msgid "The mist clears."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:555
+msgctxt "player_timed"
+msgid "BlkBrth"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:555
+msgctxt "player_timed"
+msgid "You are overcome by the Black Breath."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:556
+msgctxt "player_timed"
+msgid "The Black Shadow lifts."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:560
+msgctxt "player_timed"
+msgid "Stealth"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:560
+msgctxt "player_timed"
+msgid "You feel silent!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:561
+msgctxt "player_timed"
+msgid "You feel less stealthy."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:565
+msgctxt "player_timed"
+msgid "FrAct"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:565
+msgctxt "player_timed"
+msgid "Your limbs fill with energy!"
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:566
+msgctxt "player_timed"
+msgid "Your limbs return to normal."
+msgstr ""
+
+#: ../lib/gamedata/player_timed.txt:567
+msgctxt "player_timed"
+msgid "Your limbs feel more energetic!"
 msgstr ""
