@@ -126,7 +126,7 @@ msgstr ""
 
 #: ../src/mon-desc.c:205
 msgid "the "
-msgstr "\003"
+msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-desc.c:232
@@ -977,43 +977,43 @@ msgstr ""
 
 #: ../src/ui-display.c:101
 msgid "STR: "
-msgstr ""
+msgstr "腕力:  "
 
 #: ../src/ui-display.c:101
 msgid "INT: "
-msgstr ""
+msgstr "知能:  "
 
 #: ../src/ui-display.c:101
 msgid "WIS: "
-msgstr ""
+msgstr "賢さ:  "
 
 #: ../src/ui-display.c:101
 msgid "DEX: "
-msgstr ""
+msgstr "器用:  "
 
 #: ../src/ui-display.c:101
 msgid "CON: "
-msgstr ""
+msgstr "耐久:  "
 
 #: ../src/ui-display.c:109
 msgid "Str: "
-msgstr ""
+msgstr "x腕力: "
 
 #: ../src/ui-display.c:109
 msgid "Int: "
-msgstr ""
+msgstr "知能x: "
 
 #: ../src/ui-display.c:109
 msgid "Wis: "
-msgstr ""
+msgstr "賢さx: "
 
 #: ../src/ui-display.c:109
 msgid "Dex: "
-msgstr ""
+msgstr "器用x: "
 
 #: ../src/ui-display.c:109
 msgid "Con: "
-msgstr ""
+msgstr "耐久x: "
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-display.c:179
@@ -1030,26 +1030,25 @@ msgstr "***勝利者***"
 msgid "LEVEL "
 msgstr "レベル "
 
-# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-display.c:217
 msgid "Level "
-msgstr "xレベル"
+msgstr "レベルx "
 
 #: ../src/ui-display.c:244
 msgid "EXP"
-msgstr ""
+msgstr "経験"
 
 #: ../src/ui-display.c:244
 msgid "NXT"
-msgstr ""
+msgstr "次経験"
 
 #: ../src/ui-display.c:247
 msgid "Exp"
-msgstr ""
+msgstr "x経験"
 
 #: ../src/ui-display.c:247
 msgid "Nxt"
-msgstr ""
+msgstr "x次経験"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-display.c:260
@@ -1058,7 +1057,7 @@ msgstr "＄ "
 
 #: ../src/ui-display.c:305
 msgid "Cur AC "
-msgstr ""
+msgstr "現在AC "
 
 #: ../src/ui-display.c:319
 msgid "HP "
@@ -1068,15 +1067,9 @@ msgstr ""
 msgid "SP "
 msgstr ""
 
-# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-display.c:477
-#, fuzzy
 msgid "Fast"
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"速駆\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"加速"
+msgstr "加速"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-display.c:480
@@ -1086,6 +1079,11 @@ msgstr "減速"
 #: ../src/ui-display.c:513
 msgid "Town"
 msgstr ""
+
+#: ../src/ui-display.c:515
+#, c-format
+msgid "%d' (L%d)"
+msgstr "%d' (%d階)"
 
 #: ../src/ui-display.c:585
 msgid "L:"
@@ -1101,7 +1099,7 @@ msgstr ""
 
 #: ../src/ui-display.c:638
 msgid "NXT:"
-msgstr ""
+msgstr "次経験:"
 
 #: ../src/ui-display.c:641
 msgid "exp:"
@@ -1117,7 +1115,7 @@ msgstr ""
 
 #: ../src/ui-display.c:663
 msgid "AU:"
-msgstr ""
+msgstr "$:"
 
 #: ../src/ui-display.c:674
 msgid "HP:"
@@ -1134,11 +1132,11 @@ msgstr "帰還"
 
 #: ../src/ui-display.c:933 ../src/ui-display.c:934
 msgid "Descent"
-msgstr ""
+msgstr "降下"
 
 #: ../src/ui-display.c:961
 msgid "Rest      "
-msgstr ""
+msgstr "休憩       "
 
 #: ../src/ui-display.c:999
 #, c-format
@@ -1157,7 +1155,7 @@ msgstr ""
 #: ../src/ui-display.c:1125 ../src/ui-display.c:1127
 #, c-format
 msgid "Light %d "
-msgstr ""
+msgstr "光源 %d "
 
 #: ../src/ui-display.c:1143
 #, c-format
@@ -1176,7 +1174,7 @@ msgstr ""
 #: ../src/ui-display.c:1231
 #, c-format
 msgid "Study (%d)"
-msgstr ""
+msgstr "学習 (%d)"
 
 #: ../src/ui-display.c:1275
 msgid "Unignoring"

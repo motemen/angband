@@ -512,7 +512,7 @@ static int fmt_depth(char buf[], int max)
 	if (!player->depth)
 		my_strcpy(buf, _("Town"), max);
 	else
-		strnfmt(buf, max, "%d' (L%d)",
+		strnfmt(buf, max, _("%d' (L%d)"),
 		        player->depth * 50, player->depth);
 	return strlen(buf);
 }

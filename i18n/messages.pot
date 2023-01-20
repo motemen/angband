@@ -944,6 +944,11 @@ msgstr ""
 msgid "Town"
 msgstr ""
 
+#: ../src/ui-display.c:515
+#, c-format
+msgid "%d' (L%d)"
+msgstr ""
+
 #: ../src/ui-display.c:585
 msgid "L:"
 msgstr ""
