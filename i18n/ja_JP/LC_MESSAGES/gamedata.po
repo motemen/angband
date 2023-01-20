@@ -16119,3 +16119,268 @@ msgstr ""
 msgctxt "ego_item"
 msgid "This armour is finely wrought, tough yet unencumbering."
 msgstr ""
+
+#: ../src/list-mon-message.h:12
+msgctxt "list-mon-message"
+msgid "[is|are] hurt."
+msgstr ""
+
+#: ../src/list-mon-message.h:13
+msgctxt "list-mon-message"
+msgid "die[s]."
+msgstr ""
+
+#: ../src/list-mon-message.h:14
+msgctxt "list-mon-message"
+msgid "[is|are] destroyed."
+msgstr ""
+
+#: ../src/list-mon-message.h:15
+msgctxt "list-mon-message"
+msgid "resist[s] a lot."
+msgstr ""
+
+#: ../src/list-mon-message.h:16
+msgctxt "list-mon-message"
+msgid "[is|are] hit hard."
+msgstr ""
+
+#: ../src/list-mon-message.h:17
+msgctxt "list-mon-message"
+msgid "resist[s]."
+msgstr ""
+
+#: ../src/list-mon-message.h:18
+msgctxt "list-mon-message"
+msgid "[is|are] immune."
+msgstr ""
+
+#: ../src/list-mon-message.h:19
+msgctxt "list-mon-message"
+msgid "resist[s] somewhat."
+msgstr ""
+
+#: ../src/list-mon-message.h:20
+msgctxt "list-mon-message"
+msgid "[is|are] unaffected!"
+msgstr ""
+
+#: ../src/list-mon-message.h:21
+msgctxt "list-mon-message"
+msgid "spawn[s]!"
+msgstr ""
+
+#: ../src/list-mon-message.h:22
+msgctxt "list-mon-message"
+msgid "look[s] healthier."
+msgstr ""
+
+#: ../src/list-mon-message.h:23
+msgctxt "list-mon-message"
+msgid "fall[s] asleep!"
+msgstr ""
+
+#: ../src/list-mon-message.h:24
+msgctxt "list-mon-message"
+msgid "wake[s] up."
+msgstr ""
+
+#: ../src/list-mon-message.h:25
+msgctxt "list-mon-message"
+msgid "cringe[s] from the light!"
+msgstr ""
+
+#: ../src/list-mon-message.h:26
+msgctxt "list-mon-message"
+msgid "shrivel[s] away in the light!"
+msgstr ""
+
+#: ../src/list-mon-message.h:27
+msgctxt "list-mon-message"
+msgid "lose[s] some skin!"
+msgstr ""
+
+#: ../src/list-mon-message.h:28
+msgctxt "list-mon-message"
+msgid "dissolve[s]!"
+msgstr ""
+
+#: ../src/list-mon-message.h:29
+msgctxt "list-mon-message"
+msgid "catch[es] fire!"
+msgstr ""
+
+#: ../src/list-mon-message.h:30
+msgctxt "list-mon-message"
+msgid "[is|are] badly frozen."
+msgstr ""
+
+#: ../src/list-mon-message.h:31
+msgctxt "list-mon-message"
+msgid "shudder[s]."
+msgstr ""
+
+#: ../src/list-mon-message.h:32
+msgctxt "list-mon-message"
+msgid "change[s]!"
+msgstr ""
+
+#: ../src/list-mon-message.h:33
+msgctxt "list-mon-message"
+msgid "disappear[s]!"
+msgstr ""
+
+#: ../src/list-mon-message.h:34
+msgctxt "list-mon-message"
+msgid "[is|are] even more stunned."
+msgstr ""
+
+#: ../src/list-mon-message.h:35
+msgctxt "list-mon-message"
+msgid "[is|are] stunned."
+msgstr ""
+
+#: ../src/list-mon-message.h:36
+msgctxt "list-mon-message"
+msgid "[is|are] no longer stunned."
+msgstr ""
+
+#: ../src/list-mon-message.h:37
+msgctxt "list-mon-message"
+msgid "look[s] more confused."
+msgstr ""
+
+#: ../src/list-mon-message.h:38
+msgctxt "list-mon-message"
+msgid "look[s] confused."
+msgstr ""
+
+#: ../src/list-mon-message.h:39
+msgctxt "list-mon-message"
+msgid "[is|are] no longer confused."
+msgstr ""
+
+#: ../src/list-mon-message.h:40
+msgctxt "list-mon-message"
+msgid "look[s] more slowed."
+msgstr ""
+
+#: ../src/list-mon-message.h:41
+msgctxt "list-mon-message"
+msgid "look[s] slowed."
+msgstr ""
+
+#: ../src/list-mon-message.h:42
+msgctxt "list-mon-message"
+msgid "speed[s] up."
+msgstr ""
+
+#: ../src/list-mon-message.h:43
+msgctxt "list-mon-message"
+msgid "look[s] even faster!"
+msgstr ""
+
+#: ../src/list-mon-message.h:44
+msgctxt "list-mon-message"
+msgid "start[s] moving faster."
+msgstr ""
+
+#: ../src/list-mon-message.h:45
+msgctxt "list-mon-message"
+msgid "slow[s] down."
+msgstr ""
+
+#: ../src/list-mon-message.h:46
+msgctxt "list-mon-message"
+msgid "look[s] more terrified!"
+msgstr ""
+
+#: ../src/list-mon-message.h:47
+msgctxt "list-mon-message"
+msgid "flee[s] in terror!"
+msgstr ""
+
+#: ../src/list-mon-message.h:48
+msgctxt "list-mon-message"
+msgid "[is|are] no longer afraid."
+msgstr ""
+
+#: ../src/list-mon-message.h:49
+msgctxt "list-mon-message"
+msgid "[is|are] frozen to the spot!"
+msgstr ""
+
+#: ../src/list-mon-message.h:50
+msgctxt "list-mon-message"
+msgid "can move again."
+msgstr ""
+
+#: ../src/list-mon-message.h:51
+msgctxt "list-mon-message"
+msgid "seem[s] less magical!"
+msgstr ""
+
+#: ../src/list-mon-message.h:52
+msgctxt "list-mon-message"
+msgid "seem[s] magical again."
+msgstr ""
+
+#: ../src/list-mon-message.h:53
+msgctxt "list-mon-message"
+msgid "falls under your spell!"
+msgstr ""
+
+#: ../src/list-mon-message.h:54
+msgctxt "list-mon-message"
+msgid "is no longer under your control."
+msgstr ""
+
+#: ../src/list-mon-message.h:55
+msgctxt "list-mon-message"
+msgid "shimmers for a moment."
+msgstr ""
+
+#: ../src/list-mon-message.h:56
+msgctxt "list-mon-message"
+msgid "You hear [a|several] scream[|s] of agony!"
+msgstr ""
+
+#: ../src/list-mon-message.h:57
+msgctxt "list-mon-message"
+msgid "disintegrate[s]!"
+msgstr ""
+
+#: ../src/list-mon-message.h:58
+msgctxt "list-mon-message"
+msgid "freeze[s] and shatter[s]!"
+msgstr ""
+
+#: ../src/list-mon-message.h:59
+msgctxt "list-mon-message"
+msgid "lose[s] some mana!"
+msgstr ""
+
+#: ../src/list-mon-message.h:60
+msgctxt "list-mon-message"
+msgid "look[s] briefly puzzled."
+msgstr ""
+
+#: ../src/list-mon-message.h:61
+msgctxt "list-mon-message"
+msgid "maintain[s] the same shape."
+msgstr ""
+
+#: ../src/list-mon-message.h:62
+msgctxt "list-mon-message"
+msgid "[is|are] unharmed."
+msgstr ""
+
+#: ../src/list-mon-message.h:63
+msgctxt "list-mon-message"
+msgid "appear[s]!"
+msgstr ""
+
+#: ../src/list-mon-message.h:64
+msgctxt "list-mon-message"
+msgid "There is a puff of smoke!"
+msgstr ""
