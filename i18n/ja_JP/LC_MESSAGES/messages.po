@@ -763,38 +763,37 @@ msgstr ""
 #: ../src/obj-desc.c:191
 msgctxt "random_artifact"
 msgid "the "
-msgstr ""
+msgstr "☆"
 
 #: ../src/obj-desc.c:193
 msgctxt "fixed_artifact"
 msgid "the "
-msgstr ""
+msgstr "★"
 
 #: ../src/obj-desc.c:210
 msgid "an "
-msgstr ""
+msgstr "\003"
 
 #: ../src/obj-desc.c:212
 msgid "a "
-msgstr ""
+msgstr "\003"
 
 #: ../src/obj-desc.c:341
 #, c-format
 msgctxt "named_artifact"
 msgid "%s %s"
-msgstr ""
+msgstr "%s%s"
 
 #: ../src/obj-desc.c:343
 #, c-format
 msgctxt "artifact"
 msgid "%s %s"
-msgstr ""
+msgstr "%2$s%1$s"
 
-# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/obj-desc.c:347
 #, c-format
 msgid "%s %s"
-msgstr "%s : %s"
+msgstr ""
 
 #: ../src/obj-desc.c:351
 #, c-format
@@ -804,7 +803,7 @@ msgstr ""
 #: ../src/obj-desc.c:353
 #, c-format
 msgid "%s of %s"
-msgstr ""
+msgstr "%2$sの%1$s"
 
 #: ../src/obj-desc.c:391
 #, c-format
