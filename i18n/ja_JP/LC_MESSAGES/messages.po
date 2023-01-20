@@ -16,10 +16,9 @@ msgstr ""
 msgid "There is a wall in the way!"
 msgstr ""
 
-# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-attack.c:634
 msgid "."
-msgstr "で成り立っている。"
+msgstr "。"
 
 #: ../src/mon-attack.c:644
 #, c-format
@@ -61,13 +60,8 @@ msgstr "電撃を浴びせられた！"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-blows.c:370
-#, fuzzy
 msgid "You are enveloped in flames!"
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"炎に包まれた！\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"全身が炎に包まれた！"
+msgstr "全身が炎に包まれた！"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-blows.c:372
@@ -132,7 +126,7 @@ msgstr ""
 
 #: ../src/mon-desc.c:205
 msgid "the "
-msgstr ""
+msgstr "\003"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-desc.c:232
@@ -263,7 +257,7 @@ msgstr ""
 "何か"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/mon-lore.c:718
+#: ../src/mon-lore.c:718 ../src/mon-msg.c:245
 msgid "It"
 msgstr "それ"
 
@@ -272,10 +266,9 @@ msgstr "それ"
 msgid "he"
 msgstr "彼"
 
-# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-lore.c:719
 msgid "He"
-msgstr "勇"
+msgstr "彼"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-lore.c:720
@@ -727,11 +720,15 @@ msgstr ""
 msgid " damage on each of %s turns.  "
 msgstr ""
 
-# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-msg.c:247
+#, c-format
+msgid "%d monsters"
+msgstr "%d匹のモンスター"
+
 #: ../src/mon-msg.c:254
 #, c-format
 msgid "The %s"
-msgstr "    %s"
+msgstr "%s"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-util.c:1060
@@ -10709,10 +10706,6 @@ msgstr "☆"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "alive"
 #~ msgstr "生存"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "%s - monsters"
-#~ msgstr "%s - モンスター"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Visuals"

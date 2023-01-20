@@ -242,9 +242,9 @@ static void get_subject(char *buf, size_t buflen,
 {
 	if (invisible) {
 		if (count == 1) {
-			my_strcpy(buf, "It", buflen);
+			my_strcpy(buf, _("It"), buflen);
 		} else {
-			strnfmt(buf, buflen, "%d monsters", count);
+			strnfmt(buf, buflen, _("%d monsters"), count);
 		}
 	} else {
 		/* Uniques, multiple monsters, or just one */
@@ -255,9 +255,9 @@ static void get_subject(char *buf, size_t buflen,
 		} else {
 			/* Get the plural of the race name */
 			if (race->plural != NULL) {
-				strnfmt(buf, buflen, "%d %s", count, race->plural);
+				strnfmt(buf, buflen, "%d %s", count, _GAMEDATA_C("monster", race->plural));
 			} else {
-				strnfmt(buf, buflen, "%d %s", count, race->name);
+				strnfmt(buf, buflen, "%d %s", count, _GAMEDATA_C("monster", race->name));
 				plural_aux(buf, buflen);
 			}
 		}

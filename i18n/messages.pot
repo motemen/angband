@@ -217,7 +217,7 @@ msgstr ""
 msgid "it"
 msgstr ""
 
-#: ../src/mon-lore.c:718
+#: ../src/mon-lore.c:718 ../src/mon-msg.c:245
 msgid "It"
 msgstr ""
 
@@ -609,6 +609,11 @@ msgstr ""
 #: ../src/mon-lore.c:1782
 #, c-format
 msgid " damage on each of %s turns.  "
+msgstr ""
+
+#: ../src/mon-msg.c:247
+#, c-format
+msgid "%d monsters"
 msgstr ""
 
 #: ../src/mon-msg.c:254
