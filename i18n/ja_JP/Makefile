@@ -19,6 +19,7 @@ all: \
 	LC_MESSAGES/_gamedata-p_race.po \
 	LC_MESSAGES/_gamedata-source.po \
 	LC_MESSAGES/_gamedata-terrain.po \
+	LC_MESSAGES/_gamedata-ego_item.po \
 	LC_MESSAGES/messages.po
 
 LC_MESSAGES/messages.po: messages-hengband.po
@@ -57,6 +58,9 @@ _gamedata-artifact-hengband.po: $(HENGBAND_PATH)/lib/edit/a_info.txt
 
 _gamedata-terrain-hengband.po: $(HENGBAND_PATH)/lib/edit/f_info.txt
 	cat ../_gamedata-terrain.pot | ../../utils/applytrans --mode=hengband --context=terrain $< > $@
+
+_gamedata-ego_item-hengband.po: $(HENGBAND_PATH)/lib/edit/e_info.txt
+	cat ../_gamedata-ego_item.pot | ../../utils/applytrans --mode=hengband --context=ego_item $< > $@
 
 _gamedata-artifact-angband_ja.po: $(ANGBAND_JA_PATH)/lib/edit/jp/artifact.txt
 	cat ../_gamedata-artifact.pot | ../../utils/applytrans --mode=angband_ja --context=artifact $< > $@

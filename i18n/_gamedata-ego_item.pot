@@ -1,0 +1,427 @@
+#: ../lib/gamedata/ego_item.txt:127
+msgctxt "ego_item"
+msgid "of Shadows"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:134
+msgctxt "ego_item"
+msgid "of Brightness"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:142
+msgctxt "ego_item"
+msgid "(Everburning)"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:150
+msgctxt "ego_item"
+msgid "of True Sight"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:159
+msgctxt "ego_item"
+msgid "(Holy Avenger)"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:173
+msgctxt "ego_item"
+msgid "(Defender)"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:185
+msgctxt "ego_item"
+msgid "(Blessed)"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:195
+msgctxt "ego_item"
+msgid "of Gondolin"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:211
+msgctxt "ego_item"
+msgid "of Westernesse"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:225
+msgctxt "ego_item"
+msgid "of Extra Attacks"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:235
+msgctxt "ego_item"
+msgid "of Fury"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:252
+msgctxt "ego_item"
+msgid "of Acid"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:262
+msgctxt "ego_item"
+msgid "of Lightning"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:272
+msgctxt "ego_item"
+msgid "of Flame"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:282
+msgctxt "ego_item"
+msgid "of Frost"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:292
+msgctxt "ego_item"
+msgid "of Venom"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:302
+msgctxt "ego_item"
+msgid "of Slay Animal"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:310
+msgctxt "ego_item"
+msgid "of Slay Evil"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:318
+msgctxt "ego_item"
+msgid "of Slay Undead"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:336
+msgctxt "ego_item"
+msgid "of Slay Demon"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:344
+msgctxt "ego_item"
+msgid "of Slay Orc"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:352
+msgctxt "ego_item"
+msgid "of Slay Troll"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:360
+msgctxt "ego_item"
+msgid "of Slay Giant"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:368
+msgctxt "ego_item"
+msgid "of Slay Dragon"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:378
+msgctxt "ego_item"
+msgid "of *Slay Animal*"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:389
+msgctxt "ego_item"
+msgid "of *Slay Evil*"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:400
+msgctxt "ego_item"
+msgid "of *Slay Undead*"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:421
+msgctxt "ego_item"
+msgid "of *Slay Demon*"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:432
+msgctxt "ego_item"
+msgid "of *Slay Orc*"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:443
+msgctxt "ego_item"
+msgid "of *Slay Troll*"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:454
+msgctxt "ego_item"
+msgid "of *Slay Giant*"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:465
+msgctxt "ego_item"
+msgid "of *Slay Dragon*"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:478
+msgctxt "ego_item"
+msgid "of Morgul"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:491
+msgctxt "ego_item"
+msgid "of Accuracy"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:499
+msgctxt "ego_item"
+msgid ""
+"It has no special abilities, but its to-hit value may be unusually"
+" high."
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:500
+msgctxt "ego_item"
+msgid "of Power"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:508
+msgctxt "ego_item"
+msgid ""
+"It has no special abilities, but its to-dam value may be unusually"
+" high."
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:509
+msgctxt "ego_item"
+msgid "of Lothlórien"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:519
+msgctxt "ego_item"
+msgid "of the Haradrim"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:528
+msgctxt "ego_item"
+msgid "of Extra Might"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:536
+msgctxt "ego_item"
+msgid "of Extra Shots"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:544
+msgctxt "ego_item"
+msgid "of Buckland"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:553
+msgctxt "ego_item"
+msgid "of the Nazgûl"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:629
+msgctxt "ego_item"
+msgid "of Holy Might"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:669
+msgctxt "ego_item"
+msgid "of Wounding"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:677
+msgctxt "ego_item"
+msgid ""
+"Ammunition of Wounding often has unusually high to-hit and to-dam values."
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:678
+msgctxt "ego_item"
+msgid "of Backbiting"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:690
+msgctxt "ego_item"
+msgid "of Digging"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:698
+msgctxt "ego_item"
+msgid "of Earthquakes"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:710
+msgctxt "ego_item"
+msgid "of Slow Descent"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:716
+msgctxt "ego_item"
+msgid "of Stealth"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:725
+msgctxt "ego_item"
+msgid "of Free Action"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:731
+msgctxt "ego_item"
+msgid "of Speed"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:738
+msgctxt "ego_item"
+msgid "of Stability"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:745
+msgctxt "ego_item"
+msgid "of Elvenkind"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:756
+msgctxt "ego_item"
+msgid "of Intelligence"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:764
+msgctxt "ego_item"
+msgid "of Wisdom"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:772
+msgctxt "ego_item"
+msgid "of the Magi"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:781
+msgctxt "ego_item"
+msgid "of Might"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:790
+msgctxt "ego_item"
+msgid "of Lordliness"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:799
+msgctxt "ego_item"
+msgid "of Seeing"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:807
+msgctxt "ego_item"
+msgid "of Infravision"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:814
+msgctxt "ego_item"
+msgid "of Light"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:821
+msgctxt "ego_item"
+msgid "of Telepathy"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:827
+msgctxt "ego_item"
+msgid "of Regeneration"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:833
+msgctxt "ego_item"
+msgid "of Serenity"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:840
+msgctxt "ego_item"
+msgid "of Night and Day"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:850
+msgctxt "ego_item"
+msgid "of Resist Acid"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:864
+msgctxt "ego_item"
+msgid "of Resist Lightning"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:878
+msgctxt "ego_item"
+msgid "of Resist Fire"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:892
+msgctxt "ego_item"
+msgid "of Resist Cold"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:906
+msgctxt "ego_item"
+msgid "of Resistance"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:930
+msgctxt "ego_item"
+msgid "of Permanence"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:943
+msgctxt "ego_item"
+msgid "(Dwarven)"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:956
+msgctxt "ego_item"
+msgid "of Protection"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:971
+msgctxt "ego_item"
+msgid "of Aman"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:998
+msgctxt "ego_item"
+msgid "of Slaying"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:1004
+msgctxt "ego_item"
+msgid ""
+"They boost your to-hit and to-dam values."
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:1005
+msgctxt "ego_item"
+msgid "of Agility"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:1020
+msgctxt "ego_item"
+msgid "of Thievery"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:1030
+msgctxt "ego_item"
+msgid "of Combat"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:1099
+msgctxt "ego_item"
+msgid "of Preservation"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:1112
+msgctxt "ego_item"
+msgid "of Craftsmanship"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:1119
+msgctxt "ego_item"
+msgid ""
+"This armour is finely wrought, tough yet unencumbering."
+msgstr ""
+

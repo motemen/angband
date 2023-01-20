@@ -1,0 +1,494 @@
+# ## Original comments from 変愚蛮怒 3.0.0Alpha68:
+# #JZ# Zangband 日本語訳: 板倉
+# #JZ# 「#J0#」で始まるコメントは日本語板 Angband のしとしんさんによる
+# #JZ# もので、「#JZ#」で始まるコメントは日本語版 Zangband で新たに
+# #JZ# 加わった項目です。日本語アングバンド同様、私（板倉）以外の方の
+# #JZ# コメントにはその方の名前を記載しています。
+# #JZ#
+msgid ""
+msgstr ""
+"Language: ja\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+#: ../lib/gamedata/ego_item.txt:127
+msgctxt "ego_item"
+msgid "of Shadows"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:134
+msgctxt "ego_item"
+msgid "of Brightness"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:142
+msgctxt "ego_item"
+msgid "(Everburning)"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:150
+msgctxt "ego_item"
+msgid "of True Sight"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:159
+msgctxt "ego_item"
+msgid "(Holy Avenger)"
+msgstr "(聖戦者)"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:173
+msgctxt "ego_item"
+msgid "(Defender)"
+msgstr "(防衛者)"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:185
+msgctxt "ego_item"
+msgid "(Blessed)"
+msgstr "(祝福)"
+
+#: ../lib/gamedata/ego_item.txt:195
+msgctxt "ego_item"
+msgid "of Gondolin"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:211
+msgctxt "ego_item"
+msgid "of Westernesse"
+msgstr "西方国の"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:225
+msgctxt "ego_item"
+msgid "of Extra Attacks"
+msgstr "追加攻撃の"
+
+#: ../lib/gamedata/ego_item.txt:235
+msgctxt "ego_item"
+msgid "of Fury"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:252
+msgctxt "ego_item"
+msgid "of Acid"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:262
+msgctxt "ego_item"
+msgid "of Lightning"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:272
+msgctxt "ego_item"
+msgid "of Flame"
+msgstr "火炎の"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:282
+msgctxt "ego_item"
+msgid "of Frost"
+msgstr "冷気の"
+
+# From 変愚蛮怒 3.0.0Alpha68
+# #JZ#
+#: ../lib/gamedata/ego_item.txt:292
+msgctxt "ego_item"
+msgid "of Venom"
+msgstr "毒殺の"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:302
+msgctxt "ego_item"
+msgid "of Slay Animal"
+msgstr "アニマルスレイヤーの"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:310
+msgctxt "ego_item"
+msgid "of Slay Evil"
+msgstr "滅邪の"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:318
+msgctxt "ego_item"
+msgid "of Slay Undead"
+msgstr "アンデッドスレイヤーの"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:336
+msgctxt "ego_item"
+msgid "of Slay Demon"
+msgstr "デーモンスレイヤーの"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:344
+msgctxt "ego_item"
+msgid "of Slay Orc"
+msgstr "オークスレイヤーの"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:352
+msgctxt "ego_item"
+msgid "of Slay Troll"
+msgstr "トロルスレイヤーの"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:360
+msgctxt "ego_item"
+msgid "of Slay Giant"
+msgstr "ジャイアントスレイヤーの"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:368
+msgctxt "ego_item"
+msgid "of Slay Dragon"
+msgstr "ドラゴンスレイヤーの"
+
+#: ../lib/gamedata/ego_item.txt:378
+msgctxt "ego_item"
+msgid "of *Slay Animal*"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:389
+msgctxt "ego_item"
+msgid "of *Slay Evil*"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:400
+msgctxt "ego_item"
+msgid "of *Slay Undead*"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:421
+msgctxt "ego_item"
+msgid "of *Slay Demon*"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:432
+msgctxt "ego_item"
+msgid "of *Slay Orc*"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:443
+msgctxt "ego_item"
+msgid "of *Slay Troll*"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:454
+msgctxt "ego_item"
+msgid "of *Slay Giant*"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:465
+msgctxt "ego_item"
+msgid "of *Slay Dragon*"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:478
+msgctxt "ego_item"
+msgid "of Morgul"
+msgstr "モルグルの"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:491
+msgctxt "ego_item"
+msgid "of Accuracy"
+msgstr "高精度の"
+
+#: ../lib/gamedata/ego_item.txt:499
+msgctxt "ego_item"
+msgid ""
+"It has no special abilities, but its to-hit value may be unusually high."
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:500
+msgctxt "ego_item"
+msgid "of Power"
+msgstr "腕力の"
+
+#: ../lib/gamedata/ego_item.txt:508
+msgctxt "ego_item"
+msgid ""
+"It has no special abilities, but its to-dam value may be unusually high."
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:509
+msgctxt "ego_item"
+msgid "of Lothlórien"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:519
+msgctxt "ego_item"
+msgid "of the Haradrim"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:528
+msgctxt "ego_item"
+msgid "of Extra Might"
+msgstr "強力射の"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:536
+msgctxt "ego_item"
+msgid "of Extra Shots"
+msgstr "強速射の"
+
+#: ../lib/gamedata/ego_item.txt:544
+msgctxt "ego_item"
+msgid "of Buckland"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:553
+msgctxt "ego_item"
+msgid "of the Nazgûl"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:629
+msgctxt "ego_item"
+msgid "of Holy Might"
+msgstr "聖なる"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:669
+msgctxt "ego_item"
+msgid "of Wounding"
+msgstr "殺傷の"
+
+#: ../lib/gamedata/ego_item.txt:677
+msgctxt "ego_item"
+msgid ""
+"Ammunition of Wounding often has unusually high to-hit and to-dam values."
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:678
+msgctxt "ego_item"
+msgid "of Backbiting"
+msgstr "陰口の"
+
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0#
+# #J0# 岸さんの訳です
+# #J0#
+#: ../lib/gamedata/ego_item.txt:690
+msgctxt "ego_item"
+msgid "of Digging"
+msgstr "穴掘りの"
+
+# From 変愚蛮怒 3.0.0Alpha68
+# #JZ#
+#: ../lib/gamedata/ego_item.txt:698
+msgctxt "ego_item"
+msgid "of Earthquakes"
+msgstr "地震の"
+
+#: ../lib/gamedata/ego_item.txt:710
+msgctxt "ego_item"
+msgid "of Slow Descent"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0#
+# #J0# 岸さんの訳です
+# #J0#
+#: ../lib/gamedata/ego_item.txt:716
+msgctxt "ego_item"
+msgid "of Stealth"
+msgstr "忍びの"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:725
+msgctxt "ego_item"
+msgid "of Free Action"
+msgstr "麻痺知らずの"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:731
+msgctxt "ego_item"
+msgid "of Speed"
+msgstr "スピードの"
+
+#: ../lib/gamedata/ego_item.txt:738
+msgctxt "ego_item"
+msgid "of Stability"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:745
+msgctxt "ego_item"
+msgid "of Elvenkind"
+msgstr "エルフの"
+
+#: ../lib/gamedata/ego_item.txt:756
+msgctxt "ego_item"
+msgid "of Intelligence"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:764
+msgctxt "ego_item"
+msgid "of Wisdom"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0#
+# #J0# 名前の訳は都々目さんによる
+# #J0#
+#: ../lib/gamedata/ego_item.txt:772
+msgctxt "ego_item"
+msgid "of the Magi"
+msgstr "賢者の"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:781
+msgctxt "ego_item"
+msgid "of Might"
+msgstr "力の"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:790
+msgctxt "ego_item"
+msgid "of Lordliness"
+msgstr "尊厳の"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:799
+msgctxt "ego_item"
+msgid "of Seeing"
+msgstr "鋭敏の"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:807
+msgctxt "ego_item"
+msgid "of Infravision"
+msgstr "暗視の"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:814
+msgctxt "ego_item"
+msgid "of Light"
+msgstr "光の"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:821
+msgctxt "ego_item"
+msgid "of Telepathy"
+msgstr "テレパシーの"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:827
+msgctxt "ego_item"
+msgid "of Regeneration"
+msgstr "再生の"
+
+#: ../lib/gamedata/ego_item.txt:833
+msgctxt "ego_item"
+msgid "of Serenity"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:840
+msgctxt "ego_item"
+msgid "of Night and Day"
+msgstr "光と影の"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:850
+msgctxt "ego_item"
+msgid "of Resist Acid"
+msgstr "耐酸の"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:864
+msgctxt "ego_item"
+msgid "of Resist Lightning"
+msgstr "耐電の"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:878
+msgctxt "ego_item"
+msgid "of Resist Fire"
+msgstr "耐火の"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:892
+msgctxt "ego_item"
+msgid "of Resist Cold"
+msgstr "耐冷の"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:906
+msgctxt "ego_item"
+msgid "of Resistance"
+msgstr "全耐性の"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:930
+msgctxt "ego_item"
+msgid "of Permanence"
+msgstr "永続の"
+
+#: ../lib/gamedata/ego_item.txt:943
+msgctxt "ego_item"
+msgid "(Dwarven)"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:956
+msgctxt "ego_item"
+msgid "of Protection"
+msgstr "守りの"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:971
+msgctxt "ego_item"
+msgid "of Aman"
+msgstr "至福の地アマンの"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:998
+msgctxt "ego_item"
+msgid "of Slaying"
+msgstr "殺戮の"
+
+#: ../lib/gamedata/ego_item.txt:1004
+msgctxt "ego_item"
+msgid "They boost your to-hit and to-dam values."
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/ego_item.txt:1005
+msgctxt "ego_item"
+msgid "of Agility"
+msgstr "俊敏の"
+
+#: ../lib/gamedata/ego_item.txt:1020
+msgctxt "ego_item"
+msgid "of Thievery"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:1030
+msgctxt "ego_item"
+msgid "of Combat"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:1099
+msgctxt "ego_item"
+msgid "of Preservation"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:1112
+msgctxt "ego_item"
+msgid "of Craftsmanship"
+msgstr ""
+
+#: ../lib/gamedata/ego_item.txt:1119
+msgctxt "ego_item"
+msgid "This armour is finely wrought, tough yet unencumbering."
+msgstr ""

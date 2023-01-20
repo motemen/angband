@@ -793,7 +793,7 @@ msgstr "%2$s%1$s"
 #: ../src/obj-desc.c:347
 #, c-format
 msgid "%s %s"
-msgstr ""
+msgstr "%2$s%1$s"
 
 #: ../src/obj-desc.c:351
 #, c-format
