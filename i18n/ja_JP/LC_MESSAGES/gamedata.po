@@ -10010,62 +10010,62 @@ msgstr ""
 #: ../src/obj-desc.c:127
 msgctxt "object"
 msgid "& # Ring~"
-msgstr ""
+msgstr "#指輪"
 
 #: ../src/obj-desc.c:127
 msgctxt "object"
 msgid "& Ring~"
-msgstr ""
+msgstr "指輪"
 
 #: ../src/obj-desc.c:130
 msgctxt "object"
 msgid "& # Sta|ff|ves|"
-msgstr ""
+msgstr "#杖"
 
 #: ../src/obj-desc.c:130
 msgctxt "object"
 msgid "& Sta|ff|ves|"
-msgstr ""
+msgstr "杖"
 
 #: ../src/obj-desc.c:133
 msgctxt "object"
 msgid "& # Wand~"
-msgstr ""
+msgstr "#魔法棒"
 
 #: ../src/obj-desc.c:133
 msgctxt "object"
 msgid "& Wand~"
-msgstr ""
+msgstr "魔法棒"
 
 #: ../src/obj-desc.c:136
 msgctxt "object"
 msgid "& # Rod~"
-msgstr ""
+msgstr "#ロッド"
 
 #: ../src/obj-desc.c:136
 msgctxt "object"
 msgid "& Rod~"
-msgstr ""
+msgstr "ロッド"
 
 #: ../src/obj-desc.c:139
 msgctxt "object"
 msgid "& # Potion~"
-msgstr ""
+msgstr "#薬"
 
 #: ../src/obj-desc.c:139
 msgctxt "object"
 msgid "& Potion~"
-msgstr ""
+msgstr "薬"
 
 #: ../src/obj-desc.c:142
 msgctxt "object"
 msgid "& Scroll~ titled #"
-msgstr ""
+msgstr "#と書かれた巻物"
 
 #: ../src/obj-desc.c:142
 msgctxt "object"
 msgid "& Scroll~"
-msgstr ""
+msgstr "巻物"
 
 #: ../src/obj-desc.c:146 ../src/obj-desc.c:152 ../src/obj-desc.c:158
 #: ../src/obj-desc.c:170
@@ -10106,12 +10106,12 @@ msgstr ""
 #: ../src/obj-desc.c:175
 msgctxt "object"
 msgid "& # Mushroom~"
-msgstr ""
+msgstr "#キノコ"
 
 #: ../src/obj-desc.c:175
 msgctxt "object"
 msgid "& Mushroom~"
-msgstr ""
+msgstr "キノコ"
 
 #: ../src/obj-desc.c:178
 msgctxt "object"
@@ -11168,7 +11168,7 @@ msgstr ""
 #: ../lib/gamedata/object.txt:1420
 msgctxt "object"
 msgid "& Pair~ of Leather Boots"
-msgstr ""
+msgstr "革のブーツ"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/object.txt:1430
@@ -12959,22 +12959,22 @@ msgstr "堂々たる鉄冠"
 #: ../lib/gamedata/object_base.txt:19
 msgctxt "object_base"
 msgid "Chest~"
-msgstr ""
+msgstr "箱"
 
 #: ../lib/gamedata/object_base.txt:24
 msgctxt "object_base"
 msgid "Shot~"
-msgstr ""
+msgstr "弾"
 
 #: ../lib/gamedata/object_base.txt:30
 msgctxt "object_base"
 msgid "Arrow~"
-msgstr ""
+msgstr "矢"
 
 #: ../lib/gamedata/object_base.txt:37
 msgctxt "object_base"
 msgid "Bolt~"
-msgstr ""
+msgstr "ボルト"
 
 #: ../lib/gamedata/object_base.txt:44
 msgctxt "object_base"
@@ -13004,7 +13004,7 @@ msgstr ""
 #: ../lib/gamedata/object_base.txt:73
 msgctxt "object_base"
 msgid "Boot~"
-msgstr ""
+msgstr "ブーツ"
 
 #: ../lib/gamedata/object_base.txt:78
 msgctxt "object_base"
@@ -13029,7 +13029,7 @@ msgstr ""
 #: ../lib/gamedata/object_base.txt:98
 msgctxt "object_base"
 msgid "Cloak~"
-msgstr ""
+msgstr "クローク"
 
 #: ../lib/gamedata/object_base.txt:103
 msgctxt "object_base"
@@ -13059,7 +13059,7 @@ msgstr ""
 #: ../lib/gamedata/object_base.txt:127
 msgctxt "object_base"
 msgid "Ring~"
-msgstr ""
+msgstr "指輪"
 
 #: ../lib/gamedata/object_base.txt:132
 msgctxt "object_base"
@@ -13079,12 +13079,12 @@ msgstr ""
 #: ../lib/gamedata/object_base.txt:147
 msgctxt "object_base"
 msgid "Scroll~"
-msgstr ""
+msgstr "巻物"
 
 #: ../lib/gamedata/object_base.txt:152
 msgctxt "object_base"
 msgid "Potion~"
-msgstr ""
+msgstr "薬"
 
 #: ../lib/gamedata/object_base.txt:159
 msgctxt "object_base"

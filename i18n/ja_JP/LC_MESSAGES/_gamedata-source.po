@@ -22,62 +22,62 @@ msgstr ""
 #: ../src/obj-desc.c:127
 msgctxt "object"
 msgid "& # Ring~"
-msgstr ""
+msgstr "#指輪"
 
 #: ../src/obj-desc.c:127
 msgctxt "object"
 msgid "& Ring~"
-msgstr ""
+msgstr "指輪"
 
 #: ../src/obj-desc.c:130
 msgctxt "object"
 msgid "& # Sta|ff|ves|"
-msgstr ""
+msgstr "#杖"
 
 #: ../src/obj-desc.c:130
 msgctxt "object"
 msgid "& Sta|ff|ves|"
-msgstr ""
+msgstr "杖"
 
 #: ../src/obj-desc.c:133
 msgctxt "object"
 msgid "& # Wand~"
-msgstr ""
+msgstr "#魔法棒"
 
 #: ../src/obj-desc.c:133
 msgctxt "object"
 msgid "& Wand~"
-msgstr ""
+msgstr "魔法棒"
 
 #: ../src/obj-desc.c:136
 msgctxt "object"
 msgid "& # Rod~"
-msgstr ""
+msgstr "#ロッド"
 
 #: ../src/obj-desc.c:136
 msgctxt "object"
 msgid "& Rod~"
-msgstr ""
+msgstr "ロッド"
 
 #: ../src/obj-desc.c:139
 msgctxt "object"
 msgid "& # Potion~"
-msgstr ""
+msgstr "#薬"
 
 #: ../src/obj-desc.c:139
 msgctxt "object"
 msgid "& Potion~"
-msgstr ""
+msgstr "薬"
 
 #: ../src/obj-desc.c:142
 msgctxt "object"
 msgid "& Scroll~ titled #"
-msgstr ""
+msgstr "#と書かれた巻物"
 
 #: ../src/obj-desc.c:142
 msgctxt "object"
 msgid "& Scroll~"
-msgstr ""
+msgstr "巻物"
 
 #: ../src/obj-desc.c:146 ../src/obj-desc.c:152 ../src/obj-desc.c:158
 #: ../src/obj-desc.c:170
@@ -118,12 +118,12 @@ msgstr ""
 #: ../src/obj-desc.c:175
 msgctxt "object"
 msgid "& # Mushroom~"
-msgstr ""
+msgstr "#キノコ"
 
 #: ../src/obj-desc.c:175
 msgctxt "object"
 msgid "& Mushroom~"
-msgstr ""
+msgstr "キノコ"
 
 #: ../src/obj-desc.c:178
 msgctxt "object"

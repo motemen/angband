@@ -1082,7 +1082,7 @@ msgstr ""
 #: ../lib/gamedata/object.txt:1420
 msgctxt "object"
 msgid "& Pair~ of Leather Boots"
-msgstr ""
+msgstr "革のブーツ"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/object.txt:1430

@@ -66,6 +66,7 @@ void object_kind_name(char *buf, size_t max, const struct object_kind *kind,
 static const char *obj_desc_get_modstr(const struct object_kind *kind)
 {
 	if (tval_can_have_flavor_k(kind))
+		// TODO[i18n]: should be _GAMEDATA_C("flavor") ?
 		return kind->flavor ? _GAMEDATA_C("object", kind->flavor->text) : "";
 
 	if (tval_is_book_k(kind))
@@ -290,6 +291,7 @@ size_t obj_desc_name_format(char *buf, size_t max, size_t end,
 			fmt = endmark;
 		} else if (*fmt == '#') {
 			/* Add modstr, with pluralisation if relevant */
+			// NOTE[i18n]: some languages may prefer '#' part to be placed first
 			end = obj_desc_name_format(buf, max, end, modstr, NULL,	pluralise);
 		}
 
