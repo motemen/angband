@@ -15,10 +15,14 @@ GAMEDATA_POTS = \
 		_gamedata-list-equip-slots.pot
 
 .PHONY: all
-all: $(LOCALE)/LC_MESSAGES/messages.mo $(LOCALE)/LC_MESSAGES/gamedata.mo
+all: all-pots $(LOCALE)/LC_MESSAGES/messages.mo $(LOCALE)/LC_MESSAGES/gamedata.mo
 
 .PHONY: all-pots
-all-pots: $(GAMEDATA_POTS)
+all-pots: messages.pot $(GAMEDATA_POTS)
+
+.PHONY: clean
+clean:
+	rm -f messages.pot $(GAMEDATA_POTS)
 
 %.mo: %.po
 	msgfmt $< -o $@

@@ -1,4 +1,4 @@
-# ## Original comments from Hengband 3.0.0Alpha68:
+# ## Original comments from 変愚蛮怒 3.0.0Alpha68:
 # #JZ# Zangband 日本語訳: 板倉
 # #JZ# 「#J0#」で始まるコメントは日本語板 Angband のしとしんさんによる
 # #JZ# もので、「#JZ#」で始まるコメントは日本語版 Zangband で新たに
@@ -33,8 +33,44 @@
 # #J0#      ex) スラインのアーケン石
 # #J0#          ~~~~~~~~~~
 msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
+msgstr ""
+"Language: ja\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #JZ# Zangband 日本語訳: 板倉
+# #JZ# 「#J0#」で始まるコメントは日本語板 Angband のしとしんさんによる
+# #JZ# もので、「#JZ#」で始まるコメントは日本語版 Zangband で新たに
+# #JZ# 加わった項目です。日本語アングバンド同様、私（板倉）以外の方の
+# #JZ# コメントにはその方の名前を記載しています。
+# #JZ#
+# #JZ# ＃＃＃ 以下は日本語版 Angband にあるコメントです ＃＃＃
+# #J0# 日本語訳と日本語版製作 : しとしん
+# #J0#
+# #J0# 日本語版ではオリジナルと比較して設定項目が一つ増えています。
+# #J0#
+# #J0#
+# #J0# 翻訳に際してなるべく資料を確認するようにしました。
+# #J0# p.--  とあるのは「トールキン指輪物語辞典」でのページ数、
+# #J0# wp. --とあるのは「新訳指輪物語追補編」でのページ数をあらわします。
+# #J0# Ko -- とあるのは小林健一さんに教えてもらったものです。
+# #J0# ??? --とあるのは調べがつかなかったものです。
+# #J0#
+# #J0# 伝説のアイテムの翻訳に関しては 都々目さとし さんに大変お世話になりました。
+# #J0#
+# #J0# 所々にあるコメントは 小林 さんと 都々目さとし さんのものです。かっこ内に発
+# #J0# 言者を記載しました。
+# #J0#
+# #J0#「コメント」で検索できます。
+# #J0#
+# #J0# (ゲーム中での画面出力)
+# #J0#
+# #J0# 『』で囲まれた名前はアイテム名の後につきます。
+# #J0#      ex) スモール・ソード『つらぬき丸』
+# #J0#                         ~~~~~~~~~~~~~~
+# #J0# それ以外はアイテム名の前につきます。
+# #J0#      ex) スラインのアーケン石
+# #J0#          ~~~~~~~~~~
 #: ../lib/gamedata/artifact.txt:108
 msgctxt "artifact"
 msgid "of Galadriel"
@@ -47,6 +83,15 @@ msgid ""
 "imperishable, and near it darkness cannot endure."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# (コメント)
+# #J0#
+# #J0# (都々目)
+# #J0#＊a_info.txtを読ませて頂きましたが、『少しでも親しみがわくように日本語化や
+# #J0#「王」などをいれたりとしてみました。』との事でしたが、それならこうすべきだ
+# #J0#と思います(エレンディルは丈高きエレンディルと呼ばれた)。皆に付いている『王』
+# #J0#と云う肩書きよりは親しみがわくと思います(笑)。
+# #J0#
 #: ../lib/gamedata/artifact.txt:124
 msgctxt "artifact"
 msgid "of Elendil"
@@ -60,7 +105,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:139
 msgctxt "artifact"
 msgid "of Thráin"
-msgstr "トーリン王の"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:155
 msgctxt "artifact"
@@ -73,7 +118,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:180
 msgctxt "artifact"
 msgid "'Angrist'"
-msgstr "『オルクリスト』"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:197
 msgctxt "artifact"
@@ -83,6 +128,8 @@ msgid ""
 "ordinary metal as easily as its name, \"Iron Cleaver\", suggests."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:198
 msgctxt "artifact"
 msgid "'Narthanc'"
@@ -93,6 +140,8 @@ msgctxt "artifact"
 msgid "Instead of a blade, a flame seems to emerge from this dagger's hilt."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:212
 msgctxt "artifact"
 msgid "'Nimthanc'"
@@ -103,6 +152,8 @@ msgctxt "artifact"
 msgid "From the hilt of this dagger springs not so much a blade as an icicle."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:226
 msgctxt "artifact"
 msgid "'Dethanc'"
@@ -113,11 +164,14 @@ msgctxt "artifact"
 msgid "In this dagger is bound the very force of lightning."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:240
 msgctxt "artifact"
 msgid "of Rilia"
 msgstr "リリアの"
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:256
 msgctxt "artifact"
 msgid ""
@@ -130,7 +184,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:257
 msgctxt "artifact"
 msgid "'Belangil'"
-msgstr "『リンギル』"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:272
 msgctxt "artifact"
@@ -142,7 +196,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:273
 msgctxt "artifact"
 msgid "of Azaghâl"
-msgstr "ドワーフ王アザガルの"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:289
 msgctxt "artifact"
@@ -153,6 +207,13 @@ msgid ""
 "with all his kin, and was at first believed to be mortally wounded."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# (コメント)
+# #J0#
+# #J0#
+# #J0# (都々目)
+# #J0#＊シルマリルの物語より。
+# #J0#
 #: ../lib/gamedata/artifact.txt:290
 msgctxt "artifact"
 msgid "of Maedhros"
@@ -165,6 +226,8 @@ msgid ""
 "Maedhros the Tall, who lost his right hand while escaping from Angband."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:306
 msgctxt "artifact"
 msgid "'Forasgil'"
@@ -175,6 +238,8 @@ msgctxt "artifact"
 msgid "A slender, tapered needle of ice that coldly grips its impaled prey."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:319
 msgctxt "artifact"
 msgid "'Careth Asdriag'"
@@ -187,6 +252,8 @@ msgid ""
 "dismay to creatures natural and unnatural."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# 日本語
 #: ../lib/gamedata/artifact.txt:336
 msgctxt "artifact"
 msgid "'Sting'"
@@ -213,11 +280,14 @@ msgid ""
 "Brethil."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:370
 msgctxt "artifact"
 msgid "'Gondricam'"
 msgstr "『ゴンドリカム』"
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:384
 msgctxt "artifact"
 msgid ""
@@ -240,6 +310,8 @@ msgid ""
 "\"Sickle of Harad\", and a deadly foe to the undead."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:401
 msgctxt "artifact"
 msgid "'Ringil'"
@@ -256,7 +328,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:423
 msgctxt "artifact"
 msgid "'Andúril'"
-msgstr "『アンドゥリル』"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:443
 msgctxt "artifact"
@@ -282,7 +354,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:462
 msgctxt "artifact"
 msgid "'Elvagil'"
-msgstr "『ナル=イ=バギル』"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:476
 msgctxt "artifact"
@@ -294,7 +366,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:477
 msgctxt "artifact"
 msgid "'Aranrúth'"
-msgstr "『アランルース』"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:494
 msgctxt "artifact"
@@ -304,6 +376,17 @@ msgid ""
 "lightfooted as you clasp its hilt of gold and silver inlay."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# (コメント)
+# #J0#
+# #J0#
+# #J0# (都々目)
+# #J0#『なぐり丸』 → 『グラムドリング』
+# #J0#＊『なぐり丸』はオークたちが読んでいた名で、決して正式な名ではありません。
+# #J0#ホビットの冒険でも指輪物語でもずっと『グラムドリング』と表記されているので、
+# #J0#こうすべきです。
+# #J0#
+# #J0#N:73:『なぐり丸』
 #: ../lib/gamedata/artifact.txt:495
 msgctxt "artifact"
 msgid "'Glamdring'"
@@ -329,6 +412,33 @@ msgid ""
 "eerily in the globes of light they create."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# (コメント)
+# #J0#
+# #J0# wp.218
+# #J0# 日本語
+# #J0#
+# #J0# >(しとしんのコメント)
+# #J0# > あとは「かみつき丸」とかもそうですが、とにかく指輪関係の知識がないと
+# #J0# > アーティファクト関係はカタカナの羅列で親しみがひじょうにわきにくい
+# #J0# > という欠点があります。それで翻訳は japanese.doc で書いたように
+# #J0# > 誰でも分かり易いというポリシーでしたので、少しでも親しみがわくよう
+# #J0# > に日本語化や「王」などをいれたりとしてみました。でもどうも指輪
+# #J0# > ファンには不評のようで(^_^;。どちらにも好評というのはむずかしいですね(^_^;
+# #J0#
+# #J0# (小林さんのコメント)
+# #J0# 「かみつき丸」の弱点は「カッコ良くない」ことなんですね．(;_;)
+# #J0# # オーク語じゃしょうがないか．
+# #J0# でも「つらぬき丸」はStingより「つらぬき丸」の方がいいでしょうね．
+# #J0# 悩んで下され．(^_^)
+# #J0#
+# #J0# (都々目)
+# #J0#『かみつき丸』 → 『オルクリスト』
+# #J0#＊これもグラムドリングと同じ理由です。オークごときの不粋な呼び名を当てはめ
+# #J0#るなど飛んでもない！　a_info.txtは読ませて頂きましたが、これだけは譲れませ
+# #J0#ん(笑)。
+# #J0#
+# #J0#N:75:『かみつき丸』
 #: ../lib/gamedata/artifact.txt:530
 msgctxt "artifact"
 msgid "'Orcrist'"
@@ -341,6 +451,8 @@ msgid ""
 "orcs who came to know its power all too well."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:547
 msgctxt "artifact"
 msgid "'Calris'"
@@ -356,7 +468,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:567
 msgctxt "artifact"
 msgid "of Éowyn"
-msgstr "エオウィン姫の"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:584
 msgctxt "artifact"
@@ -366,6 +478,7 @@ msgid ""
 "mortal man could hinder."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:585
 msgctxt "artifact"
 msgid "'Aglarang'"
@@ -379,6 +492,13 @@ msgid ""
 "is combat incarnate."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# (コメント)
+# #J0#
+# #J0#
+# #J0# (都々目)
+# #J0#＊シルマリルの物語ではこのように表記されています。
+# #J0#
 #: ../lib/gamedata/artifact.txt:599
 msgctxt "artifact"
 msgid "'Gurthang'"
@@ -391,6 +511,8 @@ msgid ""
 "for what worm could stand against the blade that bathed in Glaurung's blood?"
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:616
 msgctxt "artifact"
 msgid "'Zarcuthra'"
@@ -407,7 +529,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:640
 msgctxt "artifact"
 msgid "'Mormegil'"
-msgstr "『フォラスギル』"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:657
 msgctxt "artifact"
@@ -417,6 +539,8 @@ msgid ""
 "very lifeblood of its wielder."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:658
 msgctxt "artifact"
 msgid "'Crisdurian'"
@@ -430,6 +554,9 @@ msgid ""
 "both the living and undead."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# 日本語化, Ko
+# #J0#N:91:『悪運招致者』
 #: ../lib/gamedata/artifact.txt:677
 msgctxt "artifact"
 msgid "'Doomcaller'"
@@ -443,6 +570,7 @@ msgid ""
 "of death even as you inflict wounds that will not heal."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:701
 msgctxt "artifact"
 msgid "of Gothmog"
@@ -455,6 +583,7 @@ msgid ""
 "Ungoliant to heel."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:723
 msgctxt "artifact"
 msgid "of Fundin Bluecloak"
@@ -467,6 +596,8 @@ msgid ""
 "halls of Angband still."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# 日本語化
 #: ../lib/gamedata/artifact.txt:740
 msgctxt "artifact"
 msgid "'Bloodspike'"
@@ -479,6 +610,8 @@ msgid ""
 "it in the blood of your foes."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# 日本語化
 #: ../lib/gamedata/artifact.txt:757
 msgctxt "artifact"
 msgid "'Firestar'"
@@ -491,6 +624,7 @@ msgid ""
 "up in wrath."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:772
 msgctxt "artifact"
 msgid "'Totila'"
@@ -503,6 +637,8 @@ msgid ""
 "becomes a fiery comet as you bring it down."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# 日本語化
 #: ../lib/gamedata/artifact.txt:789
 msgctxt "artifact"
 msgid "'Thunderfist'"
@@ -516,6 +652,7 @@ msgid ""
 "its massive head."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:808
 msgctxt "artifact"
 msgid "'Taratol'"
@@ -529,6 +666,8 @@ msgid ""
 "and eyebrows."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:825
 msgctxt "artifact"
 msgid "'Nar-i-vagil'"
@@ -541,6 +680,8 @@ msgid ""
 "protection and thought."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:839
 msgctxt "artifact"
 msgid "'Eriril'"
@@ -570,7 +711,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:877
 msgctxt "artifact"
 msgid "of Aulë"
-msgstr "鍛冶の司アウレの"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:897
 msgctxt "artifact"
@@ -580,6 +721,8 @@ msgid ""
 "the strength of mountains to ward off the tumult of the elements."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# 日本語化
 #: ../lib/gamedata/artifact.txt:898
 msgctxt "artifact"
 msgid "'Deathwreaker'"
@@ -622,7 +765,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:963
 msgctxt "artifact"
 msgid "'Nimloth'"
-msgstr "『ニムサンク』"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:979
 msgctxt "artifact"
@@ -635,7 +778,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:980
 msgctxt "artifact"
 msgid "of Melkor"
-msgstr "丈高きマエズロスの"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:995
 msgctxt "artifact"
@@ -645,11 +788,14 @@ msgid ""
 "wounds that would not heal."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# 日本語, Ko
 #: ../lib/gamedata/artifact.txt:996
 msgctxt "artifact"
 msgid "of Wrath"
 msgstr "憤怒の"
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:1012
 msgctxt "artifact"
 msgid ""
@@ -660,6 +806,15 @@ msgstr ""
 "三本の切先がある大振りな槍で、かつてこの槍を手に邪悪な者共や冥界の者共の軍勢"
 "を刺し貫いたオスセの霊力を宿している。"
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# (コメント)
+# #J0#
+# #J0# p.309
+# #J0#(都々目)
+# #J0#海王ウルモの → 水の王ウルモの
+# #J0#＊シルマリルの物語より。オロメはあらゆる水の流れの支配者です。海だけではあ
+# #J0#りません。原作中もこのように表記されています。
+# #J0#
 #: ../lib/gamedata/artifact.txt:1013
 msgctxt "artifact"
 msgid "of Ulmo"
@@ -673,11 +828,14 @@ msgid ""
 "the undead, and is utterly in command of the Element of water."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:1031
 msgctxt "artifact"
 msgid "'Osondir'"
 msgstr "『オソンディア』"
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:1046
 msgctxt "artifact"
 msgid ""
@@ -687,6 +845,8 @@ msgstr ""
 "巨人の怒りに立ち向かうようにオソンディアは堂々として高く、構えるハルベルトは"
 "ルビー色に輝き、塚山の中でも視力を妨げない。"
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:1047
 msgctxt "artifact"
 msgid "'Til-i-arc'"
@@ -702,7 +862,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1065
 msgctxt "artifact"
 msgid "of Théoden"
-msgstr "更正せるセオデン王の"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1080
 msgctxt "artifact"
@@ -714,7 +874,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1081
 msgctxt "artifact"
 msgid "of Húrin"
-msgstr "フーリン王の"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1103
 msgctxt "artifact"
@@ -726,6 +886,25 @@ msgid ""
 "\" - \"Day shall come again!\""
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# (コメント)
+# #J0#
+# #J0#
+# #J0#(小林)
+# #J0# > >'Barukkheled'                   バルックヘレド→バルクケレド
+# #J0# こちらはクズドゥル語か暗黒語ですね．ひょっとしたら，「バルッケレド」
+# #J0# かも知れない．こちらも今度調べておきます．
+# #J0# ちなみにこれも物語中では見たことないです．"Kheled"というのはクズドゥ
+# #J0# ル語で「湖」らしい．"Bar-"は「赤」だったかな…自信ないや．
+# #J0#
+# #J0# これも，Baruk + Kheled だとしたら，クズドゥル語で「バルクヘレド」
+# #J0# でしょうね．
+# #J0#
+# #J0# 間違い．
+# #J0# Khuzdul語でのKhの発音は「ク」に近い音なので，
+# #J0# 「バルクケレド」または「バルケレド」だと思います．
+# #J0# でも「バルッケレド」の可能性は捨て切れません．
+# #J0#
 #: ../lib/gamedata/artifact.txt:1104
 msgctxt "artifact"
 msgid "'Barukkheled'"
@@ -738,6 +917,8 @@ msgid ""
 "creatures of earth."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:1121
 msgctxt "artifact"
 msgid "of Balli Stonehand"
@@ -750,6 +931,8 @@ msgid ""
 "to resist and endure lie ready for its next owner."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:1138
 msgctxt "artifact"
 msgid "'Lotharang'"
@@ -775,6 +958,8 @@ msgid ""
 "engraved upon its surface in filleted gold."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# p.342 wp.258
 #: ../lib/gamedata/artifact.txt:1170
 msgctxt "artifact"
 msgid "of Durin"
@@ -791,7 +976,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1191
 msgctxt "artifact"
 msgid "of Eönwë"
-msgstr "旗手エオンウェの"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1211
 msgctxt "artifact"
@@ -801,6 +986,8 @@ msgid ""
 "grants Maia-like powers of body and mind."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:1212
 msgctxt "artifact"
 msgid "'Avavir'"
@@ -814,6 +1001,8 @@ msgid ""
 "returning."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# 日本語化, Ko
 #: ../lib/gamedata/artifact.txt:1230
 msgctxt "artifact"
 msgid "of Pain"
@@ -829,7 +1018,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1242
 msgctxt "artifact"
 msgid "of the Eorlingas"
-msgstr "ロヒアリムの"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1258
 msgctxt "artifact"
@@ -839,6 +1028,8 @@ msgid ""
 "dire wolves."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:1259
 msgctxt "artifact"
 msgid "'Turmil'"
@@ -855,7 +1046,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1280
 msgctxt "artifact"
 msgid "of Amrod"
-msgstr "アルヴェドゥイ王の"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1292
 msgctxt "artifact"
@@ -869,6 +1060,8 @@ msgctxt "artifact"
 msgid "of Amras"
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:1307
 msgctxt "artifact"
 msgid "'Belthronding'"
@@ -882,11 +1075,13 @@ msgid ""
 "himself could draw them."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:1320
 msgctxt "artifact"
 msgid "of Bard"
 msgstr "射手バルド王の黒い"
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:1332
 msgctxt "artifact"
 msgid ""
@@ -911,7 +1106,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1346
 msgctxt "artifact"
 msgid "of Umbar"
-msgstr "水の王ウルモの"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1360
 msgctxt "artifact"
@@ -935,7 +1130,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1382
 msgctxt "artifact"
 msgid "of Náin"
-msgstr "ナインの"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1401
 msgctxt "artifact"
@@ -949,7 +1144,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1405
 msgctxt "artifact"
 msgid "of Fëanor"
-msgstr "フェアノール王の"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1421
 msgctxt "artifact"
@@ -1001,7 +1196,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1467
 msgctxt "artifact"
 msgid "of Thrór"
-msgstr "スロール王の"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1479
 msgctxt "artifact"
@@ -1025,11 +1220,14 @@ msgid ""
 "the heralds and slew them, and drove on deep into the main host."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# wp.261
 #: ../lib/gamedata/artifact.txt:1501
 msgctxt "artifact"
 msgid "of Thranduil"
 msgstr "スランドゥイル王の"
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:1513
 msgctxt "artifact"
 msgid ""
@@ -1039,6 +1237,8 @@ msgstr ""
 "レゴラスの父であり、領土の森のあらゆる事を知るスランドウィル王のハンティング"
 "帽だ。"
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# wp.261
 #: ../lib/gamedata/artifact.txt:1514
 msgctxt "artifact"
 msgid "of Thengel"
@@ -1054,7 +1254,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1527
 msgctxt "artifact"
 msgid "of Celebrimbor"
-msgstr "金髪のケレゴルムの"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1540
 msgctxt "artifact"
@@ -1067,7 +1267,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1541
 msgctxt "artifact"
 msgid "of Dor-Lómin"
-msgstr "ドル=ローミンの"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1557
 msgctxt "artifact"
@@ -1078,6 +1278,8 @@ msgid ""
 "the servants of Morgoth."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:1558
 msgctxt "artifact"
 msgid "'Holhenneth'"
@@ -1093,7 +1295,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1573
 msgctxt "artifact"
 msgid "of Gorlim"
-msgstr "バルログの長ゴスモグの"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1586
 msgctxt "artifact"
@@ -1102,6 +1304,11 @@ msgid ""
 "succor."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# (コメント)
+# #J0#
+# #J0# KOHKO-P さんに教わりました。
+# #J0#
 #: ../lib/gamedata/artifact.txt:1587
 msgctxt "artifact"
 msgid "of Hammerhand"
@@ -1119,7 +1326,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1603
 msgctxt "artifact"
 msgid "of Berúthiel"
-msgstr "ベルシエル王妃の"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1616
 msgctxt "artifact"
@@ -1131,7 +1338,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1617
 msgctxt "artifact"
 msgid "of Gondor"
-msgstr "バルログの長ゴスモグの"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1633
 msgctxt "artifact"
@@ -1143,7 +1350,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1634
 msgctxt "artifact"
 msgid "of Númenor"
-msgstr "ヌメノールの"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1649
 msgctxt "artifact"
@@ -1152,6 +1359,8 @@ msgid ""
 "once worn by the kings of ancient Númenor."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???, Ko
 #: ../lib/gamedata/artifact.txt:1653
 msgctxt "artifact"
 msgid "'Hithlomir'"
@@ -1164,6 +1373,7 @@ msgid ""
 "truly more than it appears."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:1666
 msgctxt "artifact"
 msgid "of Himring"
@@ -1176,6 +1386,8 @@ msgid ""
 "Himring, defiant fortress surrounded by the legions of Morgoth."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:1681
 msgctxt "artifact"
 msgid "'Thalkettoth'"
@@ -1188,6 +1400,13 @@ msgid ""
 "hardened leather.  Those who wear it move with agility and assurance."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# (コメント)
+# #J0#
+# #J0#(都々目)
+# #J0#＊基本的に名には肩書きを付けているようですし、アルヴェドゥイはアルノールの
+# #J0#最後の王(新版追補編p15,p21)なので。
+# #J0#
 #: ../lib/gamedata/artifact.txt:1697
 msgctxt "artifact"
 msgid "of Arvedui"
@@ -1201,11 +1420,14 @@ msgid ""
 "as you put it on."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:1711
 msgctxt "artifact"
 msgid "of Caspanion"
 msgstr "カスパニオンの"
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:1727
 msgctxt "artifact"
 msgid ""
@@ -1216,6 +1438,30 @@ msgstr ""
 "重要な部分が二重になった、手と足もカバーする鎖帷子だ。精神と肉体を強化する魔"
 "法がかかっており、いかなる障害も着用者の道を妨げることは出来ない。"
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# (コメント)
+# #J0#
+# #J0# wp.245, p.237
+# #J0#
+# #J0# (しとしんのコメント)
+# #J0# > で、固有名詞関係なのですが、例えば
+# #J0# > of the Rohirrim                 ロヒアリム→ロヒリム
+# #J0# > ですが、これは以前他の方からも「ロヒリム」だ、と指摘されたの
+# #J0# > ですが、新版指輪物語追補編 p.245 では「ロヒアリム」となって
+# #J0# > います。で、それを伝えたら、どうも翻訳者によって色々と
+# #J0# > 違うことが判明しました。すごいのになると５、６種類くらい
+# #J0# > 読み方があったり(^_^;。どうするべきか自分でも判断がつきま
+# #J0# > せんでしたので、一応新版指輪物語追補編の読み方にしておき
+# #J0# > ました。具体的には「ルシアン」とか「オロリン」とかが
+# #J0# > そうだと思います。
+# #J0#
+# #J0# (小林さんのコメント)
+# #J0# 私は新版は読んでないもので(^_^)．
+# #J0#
+# #J0# 実際の「ロヒリム」「ルシエン」「オローリン」と「ロヒアリム」「ルシ
+# #J0# アン」「オロリン」の違いは，日本語で書くと大きいけど，音としては微
+# #J0# 妙で，英国人が聞いても聞き様で変わって来ると思います．
+# #J0#
 #: ../lib/gamedata/artifact.txt:1728
 msgctxt "artifact"
 msgid "of the Rohirrim"
@@ -1229,11 +1475,14 @@ msgid ""
 "Young, matchless in combat, you feel his spirit surround you."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# wp.273
 #: ../lib/gamedata/artifact.txt:1743
 msgctxt "artifact"
 msgid "of Isildur"
 msgstr "イシルドゥアの"
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:1756
 msgctxt "artifact"
 msgid ""
@@ -1247,7 +1496,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1757
 msgctxt "artifact"
 msgid "'Belegennon'"
-msgstr "『コランノン』"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1774
 msgctxt "artifact"
@@ -1262,7 +1511,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1775
 msgctxt "artifact"
 msgid "of Celeborn"
-msgstr "金髪のケレゴルムの"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1790
 msgctxt "artifact"
@@ -1272,6 +1521,10 @@ msgid ""
 "powers to protect and banish."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# 日本語化, Ko
+# #J0#N:19:『魂保持者』
+# #J0#N:19:『守護魂』
 #: ../lib/gamedata/artifact.txt:1791
 msgctxt "artifact"
 msgid "'Soulkeeper'"
@@ -1285,11 +1538,14 @@ msgid ""
 "else can."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:1811
 msgctxt "artifact"
 msgid "'Colluin'"
 msgstr "『コルイン』"
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:1824
 msgctxt "artifact"
 msgid ""
@@ -1297,6 +1553,8 @@ msgid ""
 "Elements."
 msgstr "精霊達が争う渦中の地ヴァリノールの英雄が身に付けていたマントだ。"
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:1825
 msgctxt "artifact"
 msgid "'Holcolleth'"
@@ -1310,6 +1568,13 @@ msgid ""
 "Sindar."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# (コメント)
+# #J0#
+# #J0# wp.262 p.334
+# #J0#(都々目)
+# #J0#＊シルマリルの物語より
+# #J0#
 #: ../lib/gamedata/artifact.txt:1840
 msgctxt "artifact"
 msgid "of Thingol"
@@ -1322,6 +1587,13 @@ msgid ""
 "showing calm and clear as moonlight on still water."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# (コメント)
+# #J0#
+# #J0# wp.260
+# #J0#(都々目)
+# #J0#＊指輪物語追補編より
+# #J0#
 #: ../lib/gamedata/artifact.txt:1855
 msgctxt "artifact"
 msgid "of Thorongil"
@@ -1335,6 +1607,8 @@ msgid ""
 "sea."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:1869
 msgctxt "artifact"
 msgid "'Colannon'"
@@ -1350,7 +1624,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:1883
 msgctxt "artifact"
 msgid "of Lúthien"
-msgstr "ルシエン王女の"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:1899
 msgctxt "artifact"
@@ -1360,6 +1634,8 @@ msgid ""
 "restorative magics of Lúthien, the most beautiful being who ever knew death."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# p.342
 #: ../lib/gamedata/artifact.txt:1900
 msgctxt "artifact"
 msgid "of Tuor"
@@ -1373,11 +1649,14 @@ msgid ""
 "under my shadow\"."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???
 #: ../lib/gamedata/artifact.txt:1917
 msgctxt "artifact"
 msgid "'Cambeleg'"
 msgstr "『カンベレグ』"
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:1928
 msgctxt "artifact"
 msgid "A hero's handgear that lends great prowess in battle."
@@ -1385,6 +1664,8 @@ msgstr ""
 "「剛き掌」を意味する名を持つ、この英雄の手甲は、戦いにおける偉大なる武勇をも"
 "たらす。"
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???, Ko
 #: ../lib/gamedata/artifact.txt:1929
 msgctxt "artifact"
 msgid "'Cammithrim'"
@@ -1397,6 +1678,8 @@ msgid ""
 "magical bolts with great frequency."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???, Ko
 #: ../lib/gamedata/artifact.txt:1944
 msgctxt "artifact"
 msgid "'Paurhach'"
@@ -1407,6 +1690,7 @@ msgctxt "artifact"
 msgid "A set of gauntlets that smoulder with an unnatural heat."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:1958
 msgctxt "artifact"
 msgid "'Paurnimmen'"
@@ -1417,6 +1701,8 @@ msgctxt "artifact"
 msgid "A set of handgear, freezing with unnatural cold."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???, Ko
 #: ../lib/gamedata/artifact.txt:1973
 msgctxt "artifact"
 msgid "'Pauraegen'"
@@ -1427,6 +1713,8 @@ msgctxt "artifact"
 msgid "A set of handgear with sparks that crackle across its knuckleguards."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# ???, Ko
 #: ../lib/gamedata/artifact.txt:1986
 msgctxt "artifact"
 msgid "'Paurnen'"
@@ -1441,7 +1729,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2001
 msgctxt "artifact"
 msgid "'Camlost'"
-msgstr "『カンベレグ』"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2013
 msgctxt "artifact"
@@ -1453,7 +1741,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2014
 msgctxt "artifact"
 msgid "of Eöl"
-msgstr "旗手エオンウェの"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2028
 msgctxt "artifact"
@@ -1462,6 +1750,13 @@ msgid ""
 "magics he could channel in battle."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# (コメント)
+# #J0#
+# #J0# p.354
+# #J0#(都々目)
+# #J0#＊シルマリルの物語より。
+# #J0#
 #: ../lib/gamedata/artifact.txt:2029
 msgctxt "artifact"
 msgid "of Fingolfin"
@@ -1486,11 +1781,13 @@ msgid ""
 "the Valar, even his shield became imbued with power."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:2061
 msgctxt "artifact"
 msgid "of Thorin"
 msgstr "トーリン王の"
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:2073
 msgctxt "artifact"
 msgid ""
@@ -1500,6 +1797,12 @@ msgstr ""
 "山の下の王トーリン・オーケンシールドの強さと頑丈さを受け継いだこの小さな金属"
 "の盾は、地のエレメントに対する完全な防御を可能にする。"
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# (コメント)
+# #J0#
+# #J0#(都々目)
+# #J0#＊シルマリルの物語より
+# #J0#
 #: ../lib/gamedata/artifact.txt:2074
 msgctxt "artifact"
 msgid "of Celegorm"
@@ -1516,7 +1819,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2089
 msgctxt "artifact"
 msgid "of the Haradrim"
-msgstr "ロヒアリムの"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2104
 msgctxt "artifact"
@@ -1529,7 +1832,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2105
 msgctxt "artifact"
 msgid "of Anárion"
-msgstr "アナリオンの"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2117
 msgctxt "artifact"
@@ -1541,7 +1844,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2118
 msgctxt "artifact"
 msgid "of Eärendil"
-msgstr "航海者エアレンディルの"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2133
 msgctxt "artifact"
@@ -1550,6 +1853,7 @@ msgid ""
 "\"scored with runes to keep all wounds and harm from him\"."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:2135
 msgctxt "artifact"
 msgid "of Gil-galad"
@@ -1565,7 +1869,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2154
 msgctxt "artifact"
 msgid "of Barahir"
-msgstr "射手バルド王の黒い"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2165
 msgctxt "artifact"
@@ -1574,11 +1878,19 @@ msgid ""
 "form this ring, an ancient treasure of Isildur's house."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# (コメント)
+# #J0#
+# #J0# p.343
+# #J0# (都々目)
+# #J0#＊シルマリルの物語より。エアレンディルの項と同じ理由です。
+# #J0#
 #: ../lib/gamedata/artifact.txt:2166
 msgctxt "artifact"
 msgid "of Tulkas"
 msgstr "勇猛なるトゥルカスの"
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:2178
 msgctxt "artifact"
 msgid "The treasure of Tulkas, most fleet and wrathful of the Valar."
@@ -1587,7 +1899,7 @@ msgstr "ヴァラールの中でも最も素早くかつ勇猛なトゥルカス
 #: ../lib/gamedata/artifact.txt:2179
 msgctxt "artifact"
 msgid "'Narya'"
-msgstr "『ナルサンク』"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2197
 msgctxt "artifact"
@@ -1639,6 +1951,32 @@ msgid ""
 "wears it."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# (コメント)
+# #J0#
+# #J0#(小林)
+# #J0# > > >The Amulet of Carlammas         カルランマス→カルラマス
+# #J0# > > >'Belegennon'                    ベレゲンノン→ベレゲノン
+# #J0# > > >'Holhenneth'                    ホルヘンネス→ホルヘネス
+# #J0# > > >'Cammithrim'                    カンミスリム→カミスリム
+# #J0# > > >'Paurnimmen'                    パウルニンメン→パウアニメン
+# #J0# > 
+# #J0# > あとで，考え直してみたんだけど，-mm- や -nn- って，シンダリン語で
+# #J0# > 重音になったか，単音になったか，ちょっと今自信がないです．ひょっと
+# #J0# > したら「カルランマス」の方が原音に近いかも知れません．調べておきま
+# #J0# > す．サウロンの別名"Annatar"は「アナタール」と読んだはずですが…．
+# #J0# > ちなみに上の５つは物語中では見たことないです．
+# #J0#
+# #J0# 調べてきました．重なってる子音はシンダリン語では重音になるようです．
+# #J0# 「カルランマス」
+# #J0# 「ベレゲンノン」
+# #J0# 「ホルヘンネス」
+# #J0# 「カンミスリム」
+# #J0# 「パウアニンメン」
+# #J0# でよいようでした．記憶していた資料が間違っていたようです．
+# #J0# 失礼しました．
+# #J0# # ってことはシルマリルリオンの翻訳者が間違えたのかなあ？
+# #J0#
 #: ../lib/gamedata/artifact.txt:2267
 msgctxt "artifact"
 msgid "of Carlammas"
@@ -1653,7 +1991,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2279
 msgctxt "artifact"
 msgid "of Ingwë"
-msgstr "上級王イングウェの"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2292
 msgctxt "artifact"
@@ -1662,6 +2000,7 @@ msgid ""
 "of evil could stand."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:2293
 msgctxt "artifact"
 msgid "of the Dwarves"
@@ -1693,7 +2032,7 @@ msgstr ""
 #: ../lib/gamedata/artifact.txt:2325
 msgctxt "artifact"
 msgid "'Evenstar'"
-msgstr "『焔の星』"
+msgstr ""
 
 #: ../lib/gamedata/artifact.txt:2338
 msgctxt "artifact"
@@ -1702,11 +2041,20 @@ msgid ""
 "to the Shire."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# 日本語化
+# #J0# (コメント)
+# #J0#
+# #J0#(都々目)
+# #J0#＊Razorbackには1.ながすくじら 2.野生の豚 3.とがった背 と云う意味があるそう
+# #J0#です。とがった背～ステゴサウルスと云うことで、こういう風にしてみました(笑)。
+# #J0#
 #: ../lib/gamedata/artifact.txt:2354
 msgctxt "artifact"
 msgid "'Razorback'"
 msgstr "『剣竜の鎧』"
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/artifact.txt:2370
 msgctxt "artifact"
 msgid ""
@@ -1729,6 +2077,8 @@ msgid ""
 "mightiest wyrms of Law and Chaos fear the judgement of its wearer."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# 日本語化
 #: ../lib/gamedata/artifact.txt:2386
 msgctxt "artifact"
 msgid "'Bladeturner'"
@@ -1741,6 +2091,8 @@ msgid ""
 "and ethereal swirl around it in an inextricably intermingled nimbus."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+# #J0# Note that it takes 18/200 strength to wield Grond correctly
 #: ../lib/gamedata/artifact.txt:2406
 msgctxt "artifact"
 msgid "'Grond'"

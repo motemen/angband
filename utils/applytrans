@@ -2,15 +2,29 @@
 use strict;
 use warnings;
 use utf8;
-use open ':std' => ':utf8';
+use open ':std', OUT => ':utf8';
 use Encode;
 use Data::Dumper;
 use File::Basename qw(dirname);
 use Cwd qw(cwd);
+use Getopt::Long;
 
 # Import hengband translation to .pot files.
 #
 # usage: utils/applytrans <path/to/hengband/lib/edit/r_info.txt> < i18n/_gamedata-monster.pot > i18n/ja_JP/LC_MESSAGES/_gamedata-monster.po
+
+sub usage {
+  die "Usage: $0 --mode=(hengband|angband_ja) [--context=<context>] <path/to/hengband/lib/edit/r_info.txt> < <i18n/_gamedata-monster.pot> > <i18n/ja_JP/LC_MESSAGES/_gamedata-monster.po>\n";
+}
+
+GetOptions(
+  "mode=s" => \my $mode,
+  "context=s" => \my $context,
+) or usage();
+
+unless (defined $mode && ($mode eq 'hengband' or $mode eq 'angband_ja')) {
+  usage();
+}
 
 sub normalize {
     my $name = shift;
@@ -18,18 +32,28 @@ sub normalize {
     return lc $name;
 }
 
-my $hengband_gamedata_txt = shift or die;
+my $gamedata_txt = shift or die;
 
-open my $fh, '<', $hengband_gamedata_txt or die $!;
+open my $fh, '<', $gamedata_txt or die $!;
 
-my $hengband_version = do {
+binmode $fh, {
+  angband_ja => ':encoding(cp932)',
+  hengband   => ':utf8',
+}->{$mode};
+
+my $version = do {
   my $cwd = cwd();
-  chdir dirname($hengband_gamedata_txt) or die $!;
-  my $version = qx(git describe --always);
+  chdir dirname($gamedata_txt) or die $!;
+  my $version = qx(git describe --tags --always);
   chdir $cwd;
   chomp $version;
   $version;
 };
+
+my $source = {
+  angband_ja => 'Angband 日本語版',
+  hengband   => '変愚蛮怒',
+}->{$mode} . " $version";
 
 my ($name_en, $name_ja, @desc_en, @desc_ja, @comments);
 
@@ -37,22 +61,40 @@ my $translation = {};
 my $comments = {};
 
 while (<$fh>) {
-  if (/^#J/) {
-    push @comments, $_;
-  } elsif (/^N:\d+:(.+)/) {
-    $name_ja = $1;
-  } elsif (/^E:(.+)/) {
-    $name_en = $1;
-  } elsif (/^J:(.+)/) {
-    $name_ja = $1;
-  }
-
-  if (my ($desc) = /^D:(.+)/) {
-    if ($desc =~ /^\$(.+)/) {
-      push @desc_en, $1;
-    } else {
-      push @desc_ja, $desc;
+  if ($mode eq 'hengband') {
+    if (/^#J/) {
+      push @comments, $_;
+    } elsif (/^N:\d+:(.+)/) {
+      $name_ja = $1;
+    } elsif (/^E:(.+)/) {
+      $name_en = $1;
+    } elsif (/^J:(.+)/) {
+      $name_ja = $1;
     }
+
+    if (my ($desc) = /^D:(.+)/) {
+      if ($desc =~ /^\$(.+)/) {
+        push @desc_en, $1;
+      } else {
+        push @desc_ja, $desc;
+      }
+    }
+  } elsif ($mode eq 'angband_ja') {
+    if (/^#.*?[^[:ascii:]]/) {
+      push @comments, $_;
+    } elsif (/^J:N:(.+)/) {
+      $name_ja = $1;
+    } elsif (/^N:\d+:(.+)/) {
+      $name_en = $1;
+    }
+
+    if (/^J:D:(.+)/) {
+      push @desc_ja, $1;
+    } elsif (/^D:(.+)/) {
+      push @desc_en, $1;
+    }
+  } else {
+    die "invalid mode $mode";
   }
 
   if (/^$/) {
@@ -72,11 +114,11 @@ while (<$fh>) {
       $translation->{ normalize(join "", @desc_en) } = join "", @desc_ja;
 
       for my $i (0..$#name_en_parts) {
-        $translation->{normalize($name_en_parts[$i])} = $name_ja_parts[$i];
+        $translation->{ normalize($name_en_parts[$i]) } = $name_ja_parts[$i];
       }
 
       # Comments are for first entry
-      $comments->{uc $name_en_parts[0]} = [ @comments ];
+      $comments->{ normalize($name_en_parts[0]) } = [ @comments ];
 
       undef $name_en;
       undef $name_ja;
@@ -89,7 +131,8 @@ while (<$fh>) {
   }
 }
 
-print "### Original comments from Hengband $hengband_version:\n";
+printf "### Original comments from $source:\n";
+
 for (@{ $comments->{''} || [] }) {
   print "# $_";
 }
@@ -99,6 +142,7 @@ print <<'__HEADER__';
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
+"Language: ja\n"
 
 __HEADER__
 
@@ -129,8 +173,10 @@ while (<STDIN>) {
 
   if ($msgid && (my $trans = $translation->{normalize($msgid)})) {
     # Keep '#J0#' style message as msgmerge changes them to '# J0'
+    printf "# From $source\n";
     print "# $_" for @{ $comments->{normalize($msgid)} || [] };
     print "$_" for @comment_lines;
+    print qq(msgctxt "$context"\n) if $context;
     print $_ for @msgid_lines;
     $trans =~ s/"/\\"/g;
     print qq(msgstr "$trans"\n\n);

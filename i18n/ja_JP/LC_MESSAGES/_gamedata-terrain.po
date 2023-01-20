@@ -1,12 +1,16 @@
-# ## Original comments from Hengband 3.0.0Alpha68:
+# ## Original comments from 変愚蛮怒 3.0.0Alpha68:
 msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
+msgstr ""
+"Language: ja\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:98
 msgctxt "terrain"
 msgid "unknown grid"
 msgstr "未知の地形"
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:103
 msgctxt "terrain"
 msgid "open floor"
@@ -22,7 +26,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:110
 msgctxt "terrain"
 msgid "closed door"
-msgstr "開いたドア"
+msgstr ""
 
 #: ../lib/gamedata/terrain.txt:121
 msgctxt "terrain"
@@ -34,6 +38,7 @@ msgid ""
 "them."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:122
 msgctxt "terrain"
 msgid "open door"
@@ -46,6 +51,7 @@ msgid ""
 "through as long as it stays open."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:130
 msgctxt "terrain"
 msgid "broken door"
@@ -56,6 +62,7 @@ msgctxt "terrain"
 msgid "A door so broken that it cannot be shut."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:137
 msgctxt "terrain"
 msgid "up staircase"
@@ -66,6 +73,7 @@ msgctxt "terrain"
 msgid "A staircase up to a shallower part of the dungeon."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:144
 msgctxt "terrain"
 msgid "down staircase"
@@ -76,6 +84,7 @@ msgctxt "terrain"
 msgid "A staircase down to a deeper part of the dungeon."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:151
 msgctxt "terrain"
 msgid "General Store"
@@ -86,6 +95,7 @@ msgctxt "terrain"
 msgid "The General Store sells food, ammunition and lighting supplies."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:160
 msgctxt "terrain"
 msgid "Armoury"
@@ -121,6 +131,7 @@ msgid ""
 "A quiet, reflective place of refuge, lined with shelves of mystical tomes."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:190
 msgctxt "terrain"
 msgid "Alchemy Shop"
@@ -131,6 +142,7 @@ msgctxt "terrain"
 msgid "A dim, scented room where potions and scrolls are traded."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:199
 msgctxt "terrain"
 msgid "Magic Shop"
@@ -141,6 +153,7 @@ msgctxt "terrain"
 msgid "A shop for devices and adornments with magic trapped within."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:208
 msgctxt "terrain"
 msgid "Black Market"
@@ -153,6 +166,7 @@ msgid ""
 "haunt - and do not expect friendly service or good bargains."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:218
 msgctxt "terrain"
 msgid "Home"
@@ -165,6 +179,7 @@ msgid ""
 "apart from on your person."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:228
 msgctxt "terrain"
 msgid "secret door"
@@ -175,6 +190,7 @@ msgctxt "terrain"
 msgid "A door that appears like a granite wall to untrained eyes."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:236
 msgctxt "terrain"
 msgid "pile of rubble"
@@ -187,6 +203,7 @@ msgid ""
 "normal floor."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:245
 msgctxt "terrain"
 msgid "magma vein"
@@ -200,6 +217,7 @@ msgid ""
 "sight."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:255
 msgctxt "terrain"
 msgid "quartz vein"
@@ -213,6 +231,7 @@ msgid ""
 "sight."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:265
 msgctxt "terrain"
 msgid "magma vein with treasure"
@@ -226,6 +245,7 @@ msgid ""
 "sight.  It contains visible treasure."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:275
 msgctxt "terrain"
 msgid "quartz vein with treasure"
@@ -239,6 +259,7 @@ msgid ""
 "sight.  It contains visible treasure."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:285
 msgctxt "terrain"
 msgid "granite wall"
@@ -252,6 +273,7 @@ msgid ""
 "sight."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/terrain.txt:295
 msgctxt "terrain"
 msgid "permanent wall"
@@ -277,7 +299,7 @@ msgstr ""
 #: ../lib/gamedata/terrain.txt:317
 msgctxt "terrain"
 msgid "pile of passable rubble"
-msgstr "岩石"
+msgstr ""
 
 #: ../lib/gamedata/terrain.txt:325
 msgctxt "terrain"

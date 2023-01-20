@@ -1,120 +1,120 @@
-#: ../src/obj-desc.c:125
+#: ../src/obj-desc.c:124
 msgctxt "object"
 msgid "& # Amulet~"
 msgstr ""
 
-#: ../src/obj-desc.c:125
+#: ../src/obj-desc.c:124
 msgctxt "object"
 msgid "& Amulet~"
 msgstr ""
 
-#: ../src/obj-desc.c:128
+#: ../src/obj-desc.c:127
 msgctxt "object"
 msgid "& # Ring~"
 msgstr ""
 
-#: ../src/obj-desc.c:128
+#: ../src/obj-desc.c:127
 msgctxt "object"
 msgid "& Ring~"
 msgstr ""
 
-#: ../src/obj-desc.c:131
+#: ../src/obj-desc.c:130
 msgctxt "object"
 msgid "& # Sta|ff|ves|"
 msgstr ""
 
-#: ../src/obj-desc.c:131
+#: ../src/obj-desc.c:130
 msgctxt "object"
 msgid "& Sta|ff|ves|"
 msgstr ""
 
-#: ../src/obj-desc.c:134
+#: ../src/obj-desc.c:133
 msgctxt "object"
 msgid "& # Wand~"
 msgstr ""
 
-#: ../src/obj-desc.c:134
+#: ../src/obj-desc.c:133
 msgctxt "object"
 msgid "& Wand~"
 msgstr ""
 
-#: ../src/obj-desc.c:137
+#: ../src/obj-desc.c:136
 msgctxt "object"
 msgid "& # Rod~"
 msgstr ""
 
-#: ../src/obj-desc.c:137
+#: ../src/obj-desc.c:136
 msgctxt "object"
 msgid "& Rod~"
 msgstr ""
 
-#: ../src/obj-desc.c:140
+#: ../src/obj-desc.c:139
 msgctxt "object"
 msgid "& # Potion~"
 msgstr ""
 
-#: ../src/obj-desc.c:140
+#: ../src/obj-desc.c:139
 msgctxt "object"
 msgid "& Potion~"
 msgstr ""
 
-#: ../src/obj-desc.c:143
+#: ../src/obj-desc.c:142
 msgctxt "object"
 msgid "& Scroll~ titled #"
 msgstr ""
 
-#: ../src/obj-desc.c:143
+#: ../src/obj-desc.c:142
 msgctxt "object"
 msgid "& Scroll~"
 msgstr ""
 
-#: ../src/obj-desc.c:147 ../src/obj-desc.c:153 ../src/obj-desc.c:159
-#: ../src/obj-desc.c:171
+#: ../src/obj-desc.c:146 ../src/obj-desc.c:152 ../src/obj-desc.c:158
+#: ../src/obj-desc.c:170
 msgctxt "object"
 msgid "& Book~ #"
 msgstr ""
 
-#: ../src/obj-desc.c:149
+#: ../src/obj-desc.c:148
 msgctxt "object"
 msgid "& Book~ of Magic Spells #"
 msgstr ""
 
-#: ../src/obj-desc.c:155
+#: ../src/obj-desc.c:154
 msgctxt "object"
 msgid "& Holy Book~ of Prayers #"
 msgstr ""
 
-#: ../src/obj-desc.c:161
+#: ../src/obj-desc.c:160
 msgctxt "object"
 msgid "& Book~ of Nature Magics #"
 msgstr ""
 
-#: ../src/obj-desc.c:165
+#: ../src/obj-desc.c:164
 msgctxt "object"
 msgid "& Tome~ #"
 msgstr ""
 
-#: ../src/obj-desc.c:167
+#: ../src/obj-desc.c:166
 msgctxt "object"
 msgid "& Necromantic Tome~ #"
 msgstr ""
 
-#: ../src/obj-desc.c:173
+#: ../src/obj-desc.c:172
 msgctxt "object"
 msgid "& Book of Mysteries~ #"
 msgstr ""
 
-#: ../src/obj-desc.c:176
+#: ../src/obj-desc.c:175
 msgctxt "object"
 msgid "& # Mushroom~"
 msgstr ""
 
-#: ../src/obj-desc.c:176
+#: ../src/obj-desc.c:175
 msgctxt "object"
 msgid "& Mushroom~"
 msgstr ""
 
-#: ../src/obj-desc.c:179
+#: ../src/obj-desc.c:178
 msgctxt "object"
 msgid "(nothing)"
 msgstr ""
