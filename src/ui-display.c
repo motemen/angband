@@ -155,19 +155,28 @@ static void prt_stat(int stat, int row, int col)
 	char tmp[32];
 
 	/* Injured or healthy stat */
+	const char *hdr;
 	if (player->stat_cur[stat] < player->stat_max[stat]) {
-		put_str(_(stat_names_reduced[stat]), row, col);
+		hdr = _(stat_names_reduced[stat]);
+		put_str(hdr, row, col);
 		cnv_stat(player->state.stat_use[stat], tmp, sizeof(tmp));
 		c_put_str(COLOUR_YELLOW, tmp, row, col + 6);
 	} else {
-		put_str(_(stat_names[stat]), row, col);
+		hdr = _(stat_names[stat]);
+		put_str(hdr, row, col);
 		cnv_stat(player->state.stat_use[stat], tmp, sizeof(tmp));
 		c_put_str(COLOUR_L_GREEN, tmp, row, col + 6);
 	}
 
 	/* Indicate natural maximum */
-	if (player->stat_max[stat] == 18+100)
-		put_str("!", row, col + 3);
+	if (player->stat_max[stat] == 18+100) {
+	 	// NOTE[i18n]: Originally this code overwrote ':' by '!'
+		// Now this code puts '!' at last character of hdr,
+		// except that if last char is a space, goes one char to left
+		int pos = i18n_visualwidth(hdr);
+		if (hdr[strlen(hdr)-1] == ' ') pos--;
+		put_str("!", row, col + pos - 1);
+	}
 }
 
 static int fmt_title(char buf[], int max, bool short_mode)
@@ -916,8 +925,9 @@ struct state_info
 static size_t prt_recall(int row, int col)
 {
 	if (player->word_recall) {
-		c_put_str(COLOUR_WHITE, _("Recall"), row, col);
-		return sizeof _("Recall");
+		const char *str = _("Recall");
+		c_put_str(COLOUR_WHITE, str, row, col);
+		return i18n_visualwidth(str) + 1;
 	}
 
 	return 0;
@@ -930,8 +940,9 @@ static size_t prt_recall(int row, int col)
 static size_t prt_descent(int row, int col)
 {
 	if (player->deep_descent) {
-		c_put_str(COLOUR_WHITE, _("Descent"), row, col);
-		return sizeof _("Descent");
+		const char *str = _("Descent");
+		c_put_str(COLOUR_WHITE, str, row, col);
+		return i18n_visualwidth(str) + 1;
 	}
 
 	return 0;
@@ -1102,8 +1113,9 @@ static size_t prt_level_feeling(int row, int col)
 		strnfmt(mon_feeling_str, 5, "%d", (unsigned int) ( 10-mon_feeling ));
 
 	/* Display it */
-	c_put_str(COLOUR_WHITE, _("LF:"), row, col);
-	new_col = col + 3;
+	const char *str = _("LF:");
+	c_put_str(COLOUR_WHITE, str, row, col);
+	new_col = col + i18n_visualwidth(str);
 	c_put_str(mon_feeling_color[mon_feeling], mon_feeling_str, row, new_col);
 	new_col += strlen( mon_feeling_str );
 	c_put_str(COLOUR_WHITE, "-", row, new_col);
@@ -1121,13 +1133,14 @@ static size_t prt_light(int row, int col)
 {
 	int light = square_light(cave, player->grid);
 
+	char *str = format(_("Light %d "), light);
 	if (light > 0) {
-		c_put_str(COLOUR_YELLOW, format(_("Light %d "), light), row, col);
+		c_put_str(COLOUR_YELLOW, str, row, col);
 	} else {
-		c_put_str(COLOUR_PURPLE, format(_("Light %d "), light), row, col);
+		c_put_str(COLOUR_PURPLE, str, row, col);
 	}
 
-	return 8 + (ABS(light) > 9 ? 1 : 0) + (light < 0 ? 1 : 0);
+	return i18n_visualwidth(str);
 }
 
 /**
@@ -1140,14 +1153,17 @@ static size_t prt_moves(int row, int col)
 	/* 1 move is normal and requires no display */
 	if (i > 0) {
 		/* Display the number of moves */
-		c_put_str(COLOUR_L_TEAL, format(_("Moves +%d "), i), row, col);
+		char *str = format(_("Moves +%d "), i);
+		c_put_str(COLOUR_L_TEAL, str, row, col);
+		return i18n_visualwidth(str);
 	} else if (i < 0) {
 		/* Display the number of moves */
-		c_put_str(COLOUR_L_TEAL, format(_("Moves -%d "), ABS(i)), row, col);
+		char *str = format(_("Moves -%d "), ABS(i));
+		c_put_str(COLOUR_L_TEAL, str, row, col);
+		return i18n_visualwidth(str);
 	}
 
-	/* Shouldn't be double digits, but be paranoid */
-	return (i != 0) ? (9 + ABS(i) / 10) : 0;
+	return 0;
 }
 
 /**
@@ -1190,6 +1206,7 @@ static size_t prt_terrain(int row, int col)
 	my_strcap(buf);
 	c_put_str(attr, format("%s ", buf), row, col);
 
+	// NOTE[i18n]: this is last part so we don't need to count visual width
 	return longest_terrain_name() + 1;
 }
 
@@ -1201,12 +1218,13 @@ static size_t prt_dtrap(int row, int col)
 	/* The player is in a trap-detected grid */
 	if (square_isdtrap(cave, player->grid)) {
 		/* The player is on the border */
+		const char *str = _("DTrap ");
 		if (square_dtrap_edge(cave, player->grid))
-			c_put_str(COLOUR_YELLOW, _("DTrap "), row, col);
+			c_put_str(COLOUR_YELLOW, str, row, col);
 		else
-			c_put_str(COLOUR_L_GREEN, _("DTrap "), row, col);
+			c_put_str(COLOUR_L_GREEN, str, row, col);
 
-		return 6;
+		return i18n_visualwidth(str);
 	}
 
 	return 0;
@@ -1230,7 +1248,7 @@ static size_t prt_study(int row, int col)
 		/* Print study message */
 		text = format(_("Study (%d)"), player->upkeep->new_spells);
 		c_put_str(attr, text, row, col);
-		return strlen(text) + 1;
+		return i18n_visualwidth(text) + 1;
 	}
 
 	return 0;
@@ -1251,8 +1269,9 @@ static size_t prt_tmd(int row, int col)
 				grade = grade->next;
 			}
 			if (!grade->name) continue;
-			c_put_str(grade->color, _GAMEDATA_C("player_timed", grade->name), row, col + len);
-			len += strlen(_GAMEDATA_C("player_timed", grade->name)) + 1;
+			const char *str = _GAMEDATA_C("player_timed", grade->name);
+			c_put_str(grade->color, str, row, col + len);
+			len += i18n_visualwidth(str) + 1;
 
 			/* Food meter */
 			if (i == TMD_FOOD) {
@@ -1274,7 +1293,7 @@ static size_t prt_unignore(int row, int col)
 	if (player->unignoring) {
 		const char *str = _("Unignoring");
 		put_str(str, row, col);
-		return strlen(str) + 1;
+		return i18n_visualwidth(str) + 1;
 	}
 
 	return 0;

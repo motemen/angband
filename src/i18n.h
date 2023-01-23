@@ -56,6 +56,7 @@ extern char _gamedata_c_buf[1024];
 bool i18n_is_doublewidth(wchar_t ch);
 int i18n_wchar_visualwidth(wchar_t ch);
 int i18n_text_visualwidth(wchar_t *s);
+int i18n_visualwidth(const char *buf);
 bool i18n_text_split(const char *s, char *pre, char *post);
 
 #endif /* INCLUDED_I18N_H */
