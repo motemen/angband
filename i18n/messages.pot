@@ -884,268 +884,268 @@ msgstr ""
 msgid "Con: "
 msgstr ""
 
-#: ../src/ui-display.c:179
+#: ../src/ui-display.c:188
 msgid "[=-WIZARD-=]"
 msgstr ""
 
-#: ../src/ui-display.c:181
+#: ../src/ui-display.c:190
 msgid "***WINNER***"
 msgstr ""
 
-#: ../src/ui-display.c:214
+#: ../src/ui-display.c:223
 msgid "LEVEL "
 msgstr ""
 
-#: ../src/ui-display.c:217
+#: ../src/ui-display.c:226
 msgid "Level "
 msgstr ""
 
-#: ../src/ui-display.c:244
+#: ../src/ui-display.c:253
 msgid "EXP"
 msgstr ""
 
-#: ../src/ui-display.c:244
+#: ../src/ui-display.c:253
 msgid "NXT"
 msgstr ""
 
-#: ../src/ui-display.c:247
+#: ../src/ui-display.c:256
 msgid "Exp"
 msgstr ""
 
-#: ../src/ui-display.c:247
+#: ../src/ui-display.c:256
 msgid "Nxt"
 msgstr ""
 
-#: ../src/ui-display.c:260
+#: ../src/ui-display.c:269
 msgid "AU "
 msgstr ""
 
-#: ../src/ui-display.c:305
+#: ../src/ui-display.c:314
 msgid "Cur AC "
 msgstr ""
 
-#: ../src/ui-display.c:319
+#: ../src/ui-display.c:328
 msgid "HP "
 msgstr ""
 
-#: ../src/ui-display.c:342
+#: ../src/ui-display.c:351
 msgid "SP "
 msgstr ""
 
-#: ../src/ui-display.c:477
+#: ../src/ui-display.c:486
 msgid "Fast"
 msgstr ""
 
-#: ../src/ui-display.c:480
+#: ../src/ui-display.c:489
 msgid "Slow"
 msgstr ""
 
-#: ../src/ui-display.c:513
+#: ../src/ui-display.c:522
 msgid "Town"
 msgstr ""
 
-#: ../src/ui-display.c:515
+#: ../src/ui-display.c:524
 #, c-format
 msgid "%d' (L%d)"
 msgstr ""
 
-#: ../src/ui-display.c:585
+#: ../src/ui-display.c:594
 msgid "L:"
 msgstr ""
 
-#: ../src/ui-display.c:588
+#: ../src/ui-display.c:597
 msgid "l:"
 msgstr ""
 
-#: ../src/ui-display.c:638
+#: ../src/ui-display.c:647
 msgid "EXP:"
 msgstr ""
 
-#: ../src/ui-display.c:638
+#: ../src/ui-display.c:647
 msgid "NXT:"
 msgstr ""
 
-#: ../src/ui-display.c:641
+#: ../src/ui-display.c:650
 msgid "exp:"
 msgstr ""
 
-#: ../src/ui-display.c:641
+#: ../src/ui-display.c:650
 msgid "nxt:"
 msgstr ""
 
-#: ../src/ui-display.c:652
+#: ../src/ui-display.c:661
 msgid "AC:"
 msgstr ""
 
-#: ../src/ui-display.c:663
+#: ../src/ui-display.c:672
 msgid "AU:"
 msgstr ""
 
-#: ../src/ui-display.c:674
+#: ../src/ui-display.c:683
 msgid "HP:"
 msgstr ""
 
-#: ../src/ui-display.c:698
+#: ../src/ui-display.c:707
 msgid "SP:"
 msgstr ""
 
-#: ../src/ui-display.c:919 ../src/ui-display.c:920
+#: ../src/ui-display.c:928
 msgid "Recall"
 msgstr ""
 
-#: ../src/ui-display.c:933 ../src/ui-display.c:934
+#: ../src/ui-display.c:943
 msgid "Descent"
 msgstr ""
 
-#: ../src/ui-display.c:961
+#: ../src/ui-display.c:972
 msgid "Rest      "
 msgstr ""
 
-#: ../src/ui-display.c:999
+#: ../src/ui-display.c:1010
 #, c-format
 msgid "Rep. %3d00"
 msgstr ""
 
-#: ../src/ui-display.c:1001
+#: ../src/ui-display.c:1012
 #, c-format
 msgid "Repeat %3d"
 msgstr ""
 
-#: ../src/ui-display.c:1105
+#: ../src/ui-display.c:1116
 msgid "LF:"
 msgstr ""
 
-#: ../src/ui-display.c:1125 ../src/ui-display.c:1127
+#: ../src/ui-display.c:1136
 #, c-format
 msgid "Light %d "
 msgstr ""
 
-#: ../src/ui-display.c:1143
+#: ../src/ui-display.c:1156
 #, c-format
 msgid "Moves +%d "
 msgstr ""
 
-#: ../src/ui-display.c:1146
+#: ../src/ui-display.c:1161
 #, c-format
 msgid "Moves -%d "
 msgstr ""
 
-#: ../src/ui-display.c:1205 ../src/ui-display.c:1207
+#: ../src/ui-display.c:1221
 msgid "DTrap "
 msgstr ""
 
-#: ../src/ui-display.c:1231
+#: ../src/ui-display.c:1249
 #, c-format
 msgid "Study (%d)"
 msgstr ""
 
-#: ../src/ui-display.c:1275
+#: ../src/ui-display.c:1294
 msgid "Unignoring"
 msgstr ""
 
-#: ../src/ui-display.c:2120
+#: ../src/ui-display.c:2139
 msgid "Display inven/equip"
 msgstr ""
 
-#: ../src/ui-display.c:2121
+#: ../src/ui-display.c:2140
 msgid "Display equip/inven"
 msgstr ""
 
-#: ../src/ui-display.c:2122
+#: ../src/ui-display.c:2141
 msgid "Display player (basic)"
 msgstr ""
 
-#: ../src/ui-display.c:2123
+#: ../src/ui-display.c:2142
 msgid "Display player (extra)"
 msgstr ""
 
-#: ../src/ui-display.c:2124
+#: ../src/ui-display.c:2143
 msgid "Display player (compact)"
 msgstr ""
 
-#: ../src/ui-display.c:2125
+#: ../src/ui-display.c:2144
 msgid "Display map view"
 msgstr ""
 
-#: ../src/ui-display.c:2126
+#: ../src/ui-display.c:2145
 msgid "Display messages"
 msgstr ""
 
-#: ../src/ui-display.c:2127
+#: ../src/ui-display.c:2146
 msgid "Display overhead view"
 msgstr ""
 
-#: ../src/ui-display.c:2128
+#: ../src/ui-display.c:2147
 msgid "Display monster recall"
 msgstr ""
 
-#: ../src/ui-display.c:2129
+#: ../src/ui-display.c:2148
 msgid "Display object recall"
 msgstr ""
 
-#: ../src/ui-display.c:2130
+#: ../src/ui-display.c:2149
 msgid "Display monster list"
 msgstr ""
 
-#: ../src/ui-display.c:2131
+#: ../src/ui-display.c:2150
 msgid "Display status"
 msgstr ""
 
-#: ../src/ui-display.c:2132
+#: ../src/ui-display.c:2151
 msgid "Display item list"
 msgstr ""
 
-#: ../src/ui-display.c:2133
+#: ../src/ui-display.c:2152
 msgid "Display player (topbar)"
 msgstr ""
 
-#: ../src/ui-display.c:2371
+#: ../src/ui-display.c:2390
 msgid ""
 "The 'lib' directory is probably missing or broken.\n"
 "Perhaps the archive was not extracted correctly.\n"
 "See the 'readme.txt' file for more information."
 msgstr ""
 
-#: ../src/ui-display.c:2414
+#: ../src/ui-display.c:2433
 #, c-format
 msgid "Cannot access the '%s' file!"
 msgstr ""
 
-#: ../src/ui-display.c:2548
+#: ../src/ui-display.c:2567
 msgid "You invoke wizard mode and cheat death."
 msgstr ""
 
-#: ../src/ui-display.c:2567
+#: ../src/ui-display.c:2586
 msgid "see"
 msgstr ""
 
-#: ../src/ui-display.c:2591
+#: ../src/ui-display.c:2610
 msgid "have no room for"
 msgstr ""
 
-#: ../src/ui-display.c:2593
+#: ../src/ui-display.c:2612
 msgid "feel"
 msgstr ""
 
-#: ../src/ui-display.c:2606
+#: ../src/ui-display.c:2625
 #, c-format
 msgid "You %s %s."
 msgstr ""
 
-#: ../src/ui-display.c:2611
+#: ../src/ui-display.c:2630
 msgid "have no room for the following objects"
 msgstr ""
 
-#: ../src/ui-display.c:2613
+#: ../src/ui-display.c:2632
 msgid "feel something on the floor"
 msgstr ""
 
-#: ../src/ui-display.c:2618
+#: ../src/ui-display.c:2637
 #, c-format
 msgid "You %s: "
 msgstr ""
 
-#: ../src/ui-display.c:2690
+#: ../src/ui-display.c:2709
 msgid "Please wait..."
 msgstr ""
 

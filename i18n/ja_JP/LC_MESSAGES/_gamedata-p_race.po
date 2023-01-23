@@ -12,54 +12,54 @@ msgstr ""
 #: ../lib/gamedata/p_race.txt:67
 msgctxt "p_race"
 msgid "Human"
-msgstr ""
+msgstr "人間"
 
 #: ../lib/gamedata/p_race.txt:87
 msgctxt "p_race"
 msgid "Half-Elf"
-msgstr ""
+msgstr "ハーフエルフ"
 
 #: ../lib/gamedata/p_race.txt:108
 msgctxt "p_race"
 msgid "Elf"
-msgstr ""
+msgstr "エルフ"
 
 #: ../lib/gamedata/p_race.txt:130
 msgctxt "p_race"
 msgid "Hobbit"
-msgstr ""
+msgstr "ホビット"
 
 #: ../lib/gamedata/p_race.txt:152
 msgctxt "p_race"
 msgid "Gnome"
-msgstr ""
+msgstr "ノーム"
 
 #: ../lib/gamedata/p_race.txt:174
 msgctxt "p_race"
 msgid "Dwarf"
-msgstr ""
+msgstr "ドワーフ"
 
 #: ../lib/gamedata/p_race.txt:196
 msgctxt "p_race"
 msgid "Half-Orc"
-msgstr ""
+msgstr "ハーフオーク"
 
 #: ../lib/gamedata/p_race.txt:217
 msgctxt "p_race"
 msgid "Half-Troll"
-msgstr ""
+msgstr "ハーフトロル"
 
 #: ../lib/gamedata/p_race.txt:238
 msgctxt "p_race"
 msgid "Dunadan"
-msgstr ""
+msgstr "ドゥナダン"
 
 #: ../lib/gamedata/p_race.txt:259
 msgctxt "p_race"
 msgid "High-Elf"
-msgstr ""
+msgstr "ハイエルフ"
 
 #: ../lib/gamedata/p_race.txt:281
 msgctxt "p_race"
 msgid "Kobold"
-msgstr ""
+msgstr "コボルド"
