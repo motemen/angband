@@ -61,7 +61,7 @@ static void display_action_aux(menu_action *act, uint8_t color,
 	Term_erase(col, row, wid);
 
 	if (act->name)
-		Term_putstr(col, row, wid, color, act->name);
+		Term_putstr(col, row, wid, color, _(act->name));
 }
 
 /* ------------------------------------------------------------------------

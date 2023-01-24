@@ -45,27 +45,27 @@ const char *option_type_name(int page)
 
 	switch (page) {
 	case OP_INTERFACE:
-		result = "interface";
+		result = _("interface");
 		break;
 
 	case OP_BIRTH:
-		result = "birth";
+		result = _("birth");
 		break;
 
 	case OP_CHEAT:
-		result = "cheat";
+		result = _("cheat");
 		break;
 
 	case OP_SCORE:
-		result = "score";
+		result = _("score");
 		break;
 
 	case OP_SPECIAL:
-		result = "special";
+		result = _("special");
 		break;
 
 	default:
-		result = "unknown";
+		result = _("unknown");
 		break;
 	}
 
@@ -87,7 +87,7 @@ const char *option_name(int opt)
 const char *option_desc(int opt)
 {
 	if (opt >= OPT_MAX) return NULL;
-	return options[opt].description;
+	return _(options[opt].description);
 }
 
 /**
@@ -182,19 +182,19 @@ bool options_save_custom(struct player_options *opts, int page)
 	if (f) {
 		int opt;
 
-		if (!file_putf(f, "# These are customized defaults for the %s options.\n", page_name)) {
+		if (!file_putf(f, _("# These are customized defaults for the %s options.\n"), page_name)) {
 			success = false;
 		}
-		if (!file_put(f, "# All lines begin with \"option:\" followed by the internal option name.\n")) {
+		if (!file_put(f, _("# All lines begin with \"option:\" followed by the internal option name.\n"))) {
 			success = false;
 		}
-		if (!file_put(f, "# After the name is a colon followed by yes or no for the option's state.\n")) {
+		if (!file_put(f, _("# After the name is a colon followed by yes or no for the option's state.\n"))) {
 			success = false;
 		}
 		for (opt = 0; opt < OPT_MAX; opt++) {
 			if (options[opt].type == page) {
 				if (!file_putf(f, "# %s\n",
-						 options[opt].description)) {
+						 _(options[opt].description))) {
 					success = false;
 				}
 				if (!file_putf(f, "option:%s:%s\n",
@@ -253,7 +253,7 @@ bool options_restore_custom(struct player_options *opts, int page)
 						size_t lname;
 
 						if (opt >= OPT_MAX) {
-							msg("Unrecognized option at line %d of the customized %s options.", linenum, page_name);
+							msg(_("Unrecognized option at line %d of the customized %s options."), linenum, page_name);
 							break;
 						}
 						if (options[opt].type != page ||
@@ -271,7 +271,7 @@ bool options_restore_custom(struct player_options *opts, int page)
 							} else if (strncmp("no", buf + offset + lname + 1, 2) == 0 && contains_only_spaces(buf + offset + lname + 3)) {
 								(*opts).opt[opt] = false;
 							} else {
-								msg("Value at line %d of the customized %s options is not yes or no.", linenum, page_name);
+								msg(_("Value at line %d of the customized %s options is not yes or no."), linenum, page_name);
 							}
 							break;
 						}
@@ -280,7 +280,7 @@ bool options_restore_custom(struct player_options *opts, int page)
 				} else {
 					offset = 0;
 					if (sscanf(buf, "#%n*s", &offset) == 0 && offset == 0 && ! contains_only_spaces(buf)) {
-						msg("Line %d of the customized %s options is not parseable.", linenum, page_name);
+						msg(_("Line %d of the customized %s options is not parseable."), linenum, page_name);
 					}
 				}
 				++linenum;
