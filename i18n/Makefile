@@ -48,9 +48,9 @@ else \
   msginit --no-translator --locale ja_JP.UTF-8 --input $< --output-file $@; \
 fi
 
-messages.pot: $(wildcard ../src/*.c)
+messages.pot: $(wildcard ../src/*.c ../src/list-options.h)
 	chmod +w $@ || true
-	xgettext --omit-header -k_ -kN_ -k_C:1c,2 -o $@ ../src/*.c
+	xgettext --omit-header -k_ -kN_ -k_C:1c,2 -o $@ ../src/*.c ../src/list-options.h
 	chmod -w $@
 
 _gamedata-list-%.pot: ../src/list-%.h
