@@ -1207,6 +1207,460 @@ msgstr ""
 msgid "The "
 msgstr ""
 
+#: ../src/ui-options.c:55
+#, c-format
+msgid "%s to a pref file"
+msgstr ""
+
+#: ../src/ui-options.c:57 ../src/ui-options.c:1204
+msgid "File: "
+msgstr ""
+
+#: ../src/ui-options.c:70
+#, c-format
+msgid "Confirm writing to %s? "
+msgstr ""
+
+#: ../src/ui-options.c:94
+#, c-format
+msgid "Saved %s."
+msgstr ""
+
+#: ../src/ui-options.c:96
+#, c-format
+msgid "Failed to save %s."
+msgstr ""
+
+#: ../src/ui-options.c:238
+#, c-format
+msgid "Save as default %s options"
+msgstr ""
+
+#: ../src/ui-options.c:242
+msgid "Restore from saved defaults"
+msgstr ""
+
+#: ../src/ui-options.c:244
+msgid "Reset to factory defaults"
+msgstr ""
+
+#: ../src/ui-options.c:262
+msgid "Successfully saved.  Press any key to continue."
+msgstr ""
+
+#: ../src/ui-options.c:265
+msgid "Save failed.  Press any key to continue."
+msgstr ""
+
+#: ../src/ui-options.c:274
+msgid "Restore failed.  Press any key to continue."
+msgstr ""
+
+#: ../src/ui-options.c:321
+msgid "Set option (y/n/t), select with movement keys or index"
+msgstr ""
+
+#: ../src/ui-options.c:328
+msgid "You can only modify these options at character birth."
+msgstr ""
+
+#: ../src/ui-options.c:332
+msgid "Set option (y/n/t), 's' to save, 'r' to restore, 'x' to reset"
+msgstr ""
+
+#: ../src/ui-options.c:397
+msgid "Window flags (<dir> to move, 't'/Enter to toggle, or ESC)"
+msgstr ""
+
+#: ../src/ui-options.c:422
+msgid "(Unused option)"
+msgstr ""
+
+#: ../src/ui-options.c:573
+msgid "Dump keymaps"
+msgstr ""
+
+#: ../src/ui-options.c:593
+msgid "No keymap with that trigger.  Press any key to continue."
+msgstr ""
+
+#: ../src/ui-options.c:603 ../src/ui-options.c:623 ../src/ui-options.c:704
+msgid "Press any key to continue."
+msgstr ""
+
+#: ../src/ui-options.c:622
+msgid "The '=' key is reserved."
+msgstr ""
+
+#: ../src/ui-options.c:637
+#, c-format
+msgid "Action: %s"
+msgstr ""
+
+#: ../src/ui-options.c:639
+msgid "  Press '=' when finished."
+msgstr ""
+
+#: ../src/ui-options.c:640
+msgid "  Use 'CTRL-u' to reset."
+msgstr ""
+
+#: ../src/ui-options.c:641
+#, c-format
+msgid "(Maximum keymap length is %d keys.)"
+msgstr ""
+
+#: ../src/ui-options.c:681
+msgid "Keep this keymap? "
+msgstr ""
+
+#: ../src/ui-options.c:683
+msgid ""
+"To use in other sessions, save the keymaps to a file.  Press a key to "
+"continue."
+msgstr ""
+
+#: ../src/ui-options.c:699
+msgid "Removed."
+msgstr ""
+
+#: ../src/ui-options.c:701
+msgid "No keymap to remove!"
+msgstr ""
+
+#: ../src/ui-options.c:717
+msgid "Current action (if any) shown below:"
+msgstr ""
+
+#: ../src/ui-options.c:725 ../src/ui-options.c:801 ../src/ui-options.c:2034
+msgid "Load a user pref file"
+msgstr ""
+
+#: ../src/ui-options.c:726
+msgid "Save keymaps to file"
+msgstr ""
+
+#: ../src/ui-options.c:727
+msgid "Query a keymap"
+msgstr ""
+
+#: ../src/ui-options.c:728
+msgid "Create a keymap"
+msgstr ""
+
+#: ../src/ui-options.c:729
+msgid "Remove a keymap"
+msgstr ""
+
+#: ../src/ui-options.c:793
+msgid "Visual attr/char tables reset."
+msgstr ""
+
+#: ../src/ui-options.c:802
+msgid "Save monster attr/chars"
+msgstr ""
+
+#: ../src/ui-options.c:803
+msgid "Save object attr/chars"
+msgstr ""
+
+#: ../src/ui-options.c:804
+msgid "Save feature attr/chars"
+msgstr ""
+
+#: ../src/ui-options.c:805
+msgid "Save flavor attr/chars"
+msgstr ""
+
+#: ../src/ui-options.c:806
+msgid "Reset visuals"
+msgstr ""
+
+#: ../src/ui-options.c:833
+msgid "To edit visuals, use the knowledge menu"
+msgstr ""
+
+#: ../src/ui-options.c:872
+msgid "Command: Modify colors"
+msgstr ""
+
+#: ../src/ui-options.c:903
+#, c-format
+msgid "Color = %d, Name = %s, Index = %c"
+msgstr ""
+
+#: ../src/ui-options.c:908
+#, c-format
+msgid "K = 0x%02x / R,G,B = 0x%02x,0x%02x,0x%02x"
+msgstr ""
+
+#: ../src/ui-options.c:916
+msgid "Command (n/N/k/K/r/R/g/G/b/B): "
+msgstr ""
+
+#: ../src/ui-options.c:1057
+msgid "Command: Base Delay Factor"
+msgstr ""
+
+#: ../src/ui-options.c:1058
+msgid "New base delay factor (0-255): "
+msgstr ""
+
+#: ../src/ui-options.c:1059
+#, c-format
+msgid "Current base delay factor: %d msec"
+msgstr ""
+
+#: ../src/ui-options.c:1077
+msgid "Left"
+msgstr ""
+
+#: ../src/ui-options.c:1077
+msgid "Top"
+msgstr ""
+
+#: ../src/ui-options.c:1077
+msgid "None"
+msgstr ""
+
+#: ../src/ui-options.c:1089
+msgid "Command: Sidebar Mode"
+msgstr ""
+
+#: ../src/ui-options.c:1090
+#, c-format
+msgid "Current mode: %s"
+msgstr ""
+
+#: ../src/ui-options.c:1091
+msgid "ESC: go back, other: cycle"
+msgstr ""
+
+#: ../src/ui-options.c:1123
+msgid "Command: Hitpoint Warning"
+msgstr ""
+
+#: ../src/ui-options.c:1124
+msgid "New hitpoint warning (0-9): "
+msgstr ""
+
+#: ../src/ui-options.c:1125
+#, c-format
+msgid "Current hitpoint warning: %d (%d%%)"
+msgstr ""
+
+#: ../src/ui-options.c:1162
+msgid "Command: Movement Delay Factor"
+msgstr ""
+
+#: ../src/ui-options.c:1163
+msgid "New movement delay: "
+msgstr ""
+
+#: ../src/ui-options.c:1164
+#, c-format
+msgid "Current movement delay: %d (%d msec)"
+msgstr ""
+
+#: ../src/ui-options.c:1202
+msgid "Command: Load a user pref file"
+msgstr ""
+
+#: ../src/ui-options.c:1214
+#, c-format
+msgid "Confirm loading %s? "
+msgstr ""
+
+#: ../src/ui-options.c:1222
+#, c-format
+msgid "Failed to load '%s'!"
+msgstr ""
+
+#: ../src/ui-options.c:1226
+#, c-format
+msgid "Loaded '%s'."
+msgstr ""
+
+#: ../src/ui-options.c:1239
+msgid "Dump window settings"
+msgstr ""
+
+#: ../src/ui-options.c:1246
+msgid "Dump autoinscriptions"
+msgstr ""
+
+#: ../src/ui-options.c:1253
+msgid "Dump char screen options"
+msgstr ""
+
+#: ../src/ui-options.c:1272
+msgid ""
+"{light green}Movement keys{/} scroll the list\n"
+"{light red}ESC{/} returns to the previous menu\n"
+"{light blue}Enter{/} toggles the current setting."
+msgstr ""
+
+#: ../src/ui-options.c:1449
+msgid "Ego item ignore menu"
+msgstr ""
+
+#: ../src/ui-options.c:1622
+msgid "Quality ignore menu"
+msgstr ""
+
+#: ../src/ui-options.c:1655
+msgid "Staffs"
+msgstr ""
+
+#: ../src/ui-options.c:1656
+msgid "Wands"
+msgstr ""
+
+#: ../src/ui-options.c:1657
+msgid "Rods"
+msgstr ""
+
+#: ../src/ui-options.c:1658
+msgid "Scrolls"
+msgstr ""
+
+#: ../src/ui-options.c:1659
+msgid "Potions"
+msgstr ""
+
+#: ../src/ui-options.c:1660
+msgid "Rings"
+msgstr ""
+
+#: ../src/ui-options.c:1661
+msgid "Amulets"
+msgstr ""
+
+#: ../src/ui-options.c:1662
+msgid "Food"
+msgstr ""
+
+#: ../src/ui-options.c:1663
+msgid "Mushrooms"
+msgstr ""
+
+#: ../src/ui-options.c:1664
+msgid "Magic books"
+msgstr ""
+
+#: ../src/ui-options.c:1665
+msgid "Prayer books"
+msgstr ""
+
+#: ../src/ui-options.c:1666
+msgid "Nature books"
+msgstr ""
+
+#: ../src/ui-options.c:1667
+msgid "Shadow books"
+msgstr ""
+
+#: ../src/ui-options.c:1668
+msgid "Mystery books"
+msgstr ""
+
+#: ../src/ui-options.c:1669
+msgid "Lights"
+msgstr ""
+
+#: ../src/ui-options.c:1670
+msgid "Flasks of oil"
+msgstr ""
+
+#: ../src/ui-options.c:1671
+msgid "Money"
+msgstr ""
+
+#: ../src/ui-options.c:1838
+#, c-format
+msgid "Ignore the following %s:"
+msgstr ""
+
+#: ../src/ui-options.c:1890
+msgid "Quality ignoring options"
+msgstr ""
+
+#: ../src/ui-options.c:1891
+msgid "Ego ignoring options"
+msgstr ""
+
+#: ../src/ui-options.c:1892
+msgid "Autoinscription setup"
+msgstr ""
+
+#: ../src/ui-options.c:2018
+msgid "User interface options"
+msgstr ""
+
+#: ../src/ui-options.c:2019
+msgid "Birth (difficulty) options"
+msgstr ""
+
+#: ../src/ui-options.c:2020
+msgid "Cheat options"
+msgstr ""
+
+#: ../src/ui-options.c:2021
+msgid "Subwindow setup"
+msgstr ""
+
+#: ../src/ui-options.c:2022
+msgid "Item ignoring setup"
+msgstr ""
+
+#: ../src/ui-options.c:2023
+msgid "Auto-inscription setup"
+msgstr ""
+
+#: ../src/ui-options.c:2025
+msgid "Set base delay factor"
+msgstr ""
+
+#: ../src/ui-options.c:2026
+msgid "Set hitpoint warning"
+msgstr ""
+
+#: ../src/ui-options.c:2027
+msgid "Set movement delay"
+msgstr ""
+
+#: ../src/ui-options.c:2028
+msgid "Set sidebar mode"
+msgstr ""
+
+#: ../src/ui-options.c:2030
+msgid "Save subwindow setup to pref file"
+msgstr ""
+
+#: ../src/ui-options.c:2031
+msgid "Save autoinscriptions to pref file"
+msgstr ""
+
+#: ../src/ui-options.c:2032
+msgid "Save char screen options to pref file"
+msgstr ""
+
+#: ../src/ui-options.c:2035
+msgid "Edit keymaps (advanced)"
+msgstr ""
+
+#: ../src/ui-options.c:2036
+msgid "Edit colours (advanced)"
+msgstr ""
+
+#: ../src/ui-options.c:2037
+msgid "Save visuals (advanced)"
+msgstr ""
+
+#: ../src/ui-options.c:2051
+msgid "Options Menu"
+msgstr ""
+
 #: ../src/list-options.h:14
 msgid "Use the roguelike command keyset"
 msgstr ""
@@ -1276,6 +1730,7 @@ msgid "Automatically clear '-more-' prompts"
 msgstr ""
 
 #: ../src/list-options.h:48
+#, c-format
 msgid "Color: Player color indicates % hit points"
 msgstr ""
 

@@ -1363,6 +1363,623 @@ msgid "The "
 msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:55
+#, fuzzy, c-format
+msgid "%s to a pref file"
+msgstr "(1) ユーザー設定ファイルのロード"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:57 ../src/ui-options.c:1204
+msgid "File: "
+msgstr "ファイル: "
+
+#: ../src/ui-options.c:70
+#, c-format
+msgid "Confirm writing to %s? "
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:94
+#, fuzzy, c-format
+msgid "Saved %s."
+msgstr "%sに名前をつける。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:96
+#, fuzzy, c-format
+msgid "Failed to save %s."
+msgstr "%s を開くことができませんでした。"
+
+#: ../src/ui-options.c:238
+#, c-format
+msgid "Save as default %s options"
+msgstr ""
+
+#: ../src/ui-options.c:242
+msgid "Restore from saved defaults"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:244
+#, fuzzy
+msgid "Reset to factory defaults"
+msgstr "常に以前のターゲットを指定する"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:262
+#, fuzzy
+msgid "Successfully saved.  Press any key to continue."
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[ 何かキーを押して下さい ]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:265
+#, fuzzy
+msgid "Save failed.  Press any key to continue."
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[ 何かキーを押して下さい ]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:274
+#, fuzzy
+msgid "Restore failed.  Press any key to continue."
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[ 何かキーを押して下さい ]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]"
+
+#: ../src/ui-options.c:321
+msgid "Set option (y/n/t), select with movement keys or index"
+msgstr ""
+
+#: ../src/ui-options.c:328
+msgid "You can only modify these options at character birth."
+msgstr ""
+
+#: ../src/ui-options.c:332
+msgid "Set option (y/n/t), 's' to save, 'r' to restore, 'x' to reset"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:397
+#, fuzzy
+msgid "Window flags (<dir> to move, 't'/Enter to toggle, or ESC)"
+msgstr "ウィンドウ・フラグ (<方向>で移動, 't'でON/OFF,'s'でON(他窓OFF), ESC)"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:422
+msgid "(Unused option)"
+msgstr "(未使用)"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:573
+#, fuzzy
+msgid "Dump keymaps"
+msgstr "キー配置を追加しました。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:593
+#, fuzzy
+msgid "No keymap with that trigger.  Press any key to continue."
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[ 何かキーを押して下さい ]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:603 ../src/ui-options.c:623 ../src/ui-options.c:704
+#, fuzzy
+msgid "Press any key to continue."
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[ 何かキーを押して下さい ]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]"
+
+#: ../src/ui-options.c:622
+msgid "The '=' key is reserved."
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:637
+#, fuzzy, c-format
+msgid "Action: %s"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"マクロ行動: \n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"行動: \n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"マクロ行動: "
+
+#: ../src/ui-options.c:639
+msgid "  Press '=' when finished."
+msgstr ""
+
+#: ../src/ui-options.c:640
+msgid "  Use 'CTRL-u' to reset."
+msgstr ""
+
+#: ../src/ui-options.c:641
+#, c-format
+msgid "(Maximum keymap length is %d keys.)"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:681
+#, fuzzy
+msgid "Keep this keymap? "
+msgstr "この階を去りますか？"
+
+#: ../src/ui-options.c:683
+msgid ""
+"To use in other sessions, save the keymaps to a file.  Press a key to "
+"continue."
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:699
+#, fuzzy
+msgid "Removed."
+msgstr "マクロを削除しました。"
+
+#: ../src/ui-options.c:701
+msgid "No keymap to remove!"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:717
+msgid "Current action (if any) shown below:"
+msgstr "マクロ行動が(もしあれば)下に表示されます:"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:725 ../src/ui-options.c:801 ../src/ui-options.c:2034
+#, fuzzy
+msgid "Load a user pref file"
+msgstr "(1) ユーザー設定ファイルのロード"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:726
+#, fuzzy
+msgid "Save keymaps to file"
+msgstr "(6) ファイルにキー配置を追加"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:727
+#, fuzzy
+msgid "Query a keymap"
+msgstr "(7) キー配置の確認"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:728
+#, fuzzy
+msgid "Create a keymap"
+msgstr "(8) キー配置の作成"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:729
+#, fuzzy
+msgid "Remove a keymap"
+msgstr "キー配置を削除しました。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:793
+msgid "Visual attr/char tables reset."
+msgstr "画面上の[色/文字]を初期値にリセットしました。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:802
+#, fuzzy
+msgid "Save monster attr/chars"
+msgstr "モンスターの[色/文字]を変更します"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:803
+#, fuzzy
+msgid "Save object attr/chars"
+msgstr "アイテムの[色/文字]を変更します"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:804
+#, fuzzy
+msgid "Save feature attr/chars"
+msgstr "地形の[色/文字]を変更します"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:805
+#, fuzzy
+msgid "Save flavor attr/chars"
+msgstr "地形の[色/文字]を変更します"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:806
+#, fuzzy
+msgid "Reset visuals"
+msgstr "(R) 画面表示方法の初期化"
+
+#: ../src/ui-options.c:833
+msgid "To edit visuals, use the knowledge menu"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:872
+msgid "Command: Modify colors"
+msgstr "コマンド: カラーの設定を変更します"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:903
+#, fuzzy, c-format
+msgid "Color = %d, Name = %s, Index = %c"
+msgstr "カラー = %d, 名前 = %s"
+
+#: ../src/ui-options.c:908
+#, c-format
+msgid "K = 0x%02x / R,G,B = 0x%02x,0x%02x,0x%02x"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:916
+msgid "Command (n/N/k/K/r/R/g/G/b/B): "
+msgstr "コマンド (n/N/k/K/r/R/g/G/b/B): "
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1057
+#, fuzzy
+msgid "Command: Base Delay Factor"
+msgstr "コマンド: ウェイト量(msec)"
+
+#: ../src/ui-options.c:1058
+msgid "New base delay factor (0-255): "
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1059
+#, fuzzy, c-format
+msgid "Current base delay factor: %d msec"
+msgstr "現在ウェイト量(msec): %d"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1077
+#, fuzzy
+msgid "Left"
+msgstr "打撃修正(左手)"
+
+#: ../src/ui-options.c:1077
+msgid "Top"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1077
+msgid "None"
+msgstr "なし"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1089
+#, fuzzy
+msgid "Command: Sidebar Mode"
+msgstr "コマンド: マクロの確認"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1090
+#, fuzzy, c-format
+msgid "Current mode: %s"
+msgstr "現在のペット"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1091
+#, fuzzy
+msgid "ESC: go back, other: cycle"
+msgstr "地上に戻った。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1123
+msgid "Command: Hitpoint Warning"
+msgstr "コマンド: 低ヒットポイント警告"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1124
+#, fuzzy
+msgid "New hitpoint warning (0-9): "
+msgstr "ピンチになったときを記録する"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1125
+#, fuzzy, c-format
+msgid "Current hitpoint warning: %d (%d%%)"
+msgstr "現在の低ヒットポイント警告: %d0%%"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1162
+#, fuzzy
+msgid "Command: Movement Delay Factor"
+msgstr "コマンド: ウェイト量(msec)"
+
+#: ../src/ui-options.c:1163
+msgid "New movement delay: "
+msgstr ""
+
+#: ../src/ui-options.c:1164
+#, c-format
+msgid "Current movement delay: %d (%d msec)"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1202
+#, fuzzy
+msgid "Command: Load a user pref file"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"コマンド: ユーザー設定ファイルをロードします\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"コマンド: ユーザー設定ファイルのロード\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"コマンド: ユーザー設定ファイルのロード"
+
+#: ../src/ui-options.c:1214
+#, c-format
+msgid "Confirm loading %s? "
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1222
+#, c-format
+msgid "Failed to load '%s'!"
+msgstr "'%s'の読み込みに失敗しました！"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1226
+#, fuzzy, c-format
+msgid "Loaded '%s'."
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"%sを読み込みました。\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"%sを読み込みました。\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"'%s'を読み込みました。"
+
+#: ../src/ui-options.c:1239
+msgid "Dump window settings"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1246
+#, fuzzy
+msgid "Dump autoinscriptions"
+msgstr "オプション設定をダンプ"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1253
+#, fuzzy
+msgid "Dump char screen options"
+msgstr "オプション設定をダンプ"
+
+#: ../src/ui-options.c:1272
+msgid ""
+"{light green}Movement keys{/} scroll the list\n"
+"{light red}ESC{/} returns to the previous menu\n"
+"{light blue}Enter{/} toggles the current setting."
+msgstr ""
+
+#: ../src/ui-options.c:1449
+msgid "Ego item ignore menu"
+msgstr ""
+
+#: ../src/ui-options.c:1622
+msgid "Quality ignore menu"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1655
+msgid "Staffs"
+msgstr "杖"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1656
+msgid "Wands"
+msgstr "魔法棒"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1657
+msgid "Rods"
+msgstr "ロッド"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1658
+msgid "Scrolls"
+msgstr "巻物"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1659
+msgid "Potions"
+msgstr "薬"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1660
+msgid "Rings"
+msgstr "指輪"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1661
+msgid "Amulets"
+msgstr "アミュレット"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1662
+msgid "Food"
+msgstr "食料"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1663
+msgid "Mushrooms"
+msgstr "キノコ"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1664
+#, fuzzy
+msgid "Magic books"
+msgstr "マジック・ロケット"
+
+#: ../src/ui-options.c:1665
+msgid "Prayer books"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1666
+#, fuzzy
+msgid "Nature books"
+msgstr "自然の魔法書"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1667
+#, fuzzy
+msgid "Shadow books"
+msgstr "歌集"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1668
+#, fuzzy
+msgid "Mystery books"
+msgstr "魔法書"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1669
+#, fuzzy
+msgid "Lights"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"光\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"閃光\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"閃光\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"閃光"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:1670
+#, fuzzy
+msgid "Flasks of oil"
+msgstr "閃光"
+
+#: ../src/ui-options.c:1671
+msgid "Money"
+msgstr ""
+
+#: ../src/ui-options.c:1838
+#, c-format
+msgid "Ignore the following %s:"
+msgstr ""
+
+#: ../src/ui-options.c:1890
+msgid "Quality ignoring options"
+msgstr "品質無視設定"
+
+#: ../src/ui-options.c:1891
+msgid "Ego ignoring options"
+msgstr "エゴ無視設定"
+
+#: ../src/ui-options.c:1892
+msgid "Autoinscription setup"
+msgstr "自動刻み設定"
+
+#: ../src/ui-options.c:2018
+msgid "User interface options"
+msgstr "ユーザインタフェースオプション"
+
+#: ../src/ui-options.c:2019
+msgid "Birth (difficulty) options"
+msgstr "初期（難易度）オプション"
+
+#: ../src/ui-options.c:2020
+msgid "Cheat options"
+msgstr "チートオプション"
+
+#: ../src/ui-options.c:2021
+msgid "Subwindow setup"
+msgstr "サブウィンドウ設定"
+
+#: ../src/ui-options.c:2022
+msgid "Item ignoring setup"
+msgstr "アイテム無視設定"
+
+#: ../src/ui-options.c:2023
+msgid "Auto-inscription setup"
+msgstr "自動刻み設定"
+
+#: ../src/ui-options.c:2025
+msgid "Set base delay factor"
+msgstr "ベース遅延設定"
+
+#: ../src/ui-options.c:2026
+msgid "Set hitpoint warning"
+msgstr "HP警告設定"
+
+#: ../src/ui-options.c:2027
+msgid "Set movement delay"
+msgstr "移動遅延設定"
+
+#: ../src/ui-options.c:2028
+msgid "Set sidebar mode"
+msgstr "サイドバーモード設定"
+
+#: ../src/ui-options.c:2030
+msgid "Save subwindow setup to pref file"
+msgstr "サブウィンドウ設定をファイルに保存"
+
+#: ../src/ui-options.c:2031
+msgid "Save autoinscriptions to pref file"
+msgstr "自動刻み設定をファイルに保存"
+
+#: ../src/ui-options.c:2032
+msgid "Save char screen options to pref file"
+msgstr "キャラクター画面オプションをファイルに保存"
+
+#: ../src/ui-options.c:2035
+msgid "Edit keymaps (advanced)"
+msgstr ""
+
+#: ../src/ui-options.c:2036
+msgid "Edit colours (advanced)"
+msgstr ""
+
+#: ../src/ui-options.c:2037
+msgid "Save visuals (advanced)"
+msgstr ""
+
+#: ../src/ui-options.c:2051
+msgid "Options Menu"
+msgstr "設定メニュー"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:14
 msgid "Use the roguelike command keyset"
 msgstr "ローグ風キー配置を使用する"
@@ -1438,6 +2055,7 @@ msgid "Automatically clear '-more-' prompts"
 msgstr "キー待ちしないで連続でメッセージを表示する"
 
 #: ../src/list-options.h:48
+#, fuzzy, c-format
 msgid "Color: Player color indicates % hit points"
 msgstr "色: プレイヤーの色でHPの割合を表す"
 
@@ -2428,10 +3046,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "死体や骨"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "spellbooks"
-#~ msgstr "魔法書"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "hafted weapons"
 #~ msgstr "鈍器"
 
@@ -2470,17 +3084,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "boots"
 #~ msgstr "靴"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "Loaded '%s'."
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "%sを読み込みました。\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "%sを読み込みました。\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "'%s'を読み込みました。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Failed to reload autopick preference."
@@ -2539,10 +3142,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "The object is already registered to %s."
 #~ msgstr "そのアイテムは既に%sように設定されています。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Failed to open %s."
-#~ msgstr "%s を開くことができませんでした。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "# *Warning!* The lines below will be deleted later."
@@ -3972,10 +4571,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "階段を上った"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You go back to the surface."
-#~ msgstr "地上に戻った。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You enter a maze of up staircases."
 #~ msgstr "階段を上って新たなる迷宮へと足を踏み入れた。"
 
@@ -4158,10 +4753,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You cannot change the name of this monster!"
 #~ msgstr "そのモンスターの名前は変えられない！"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Name %s."
-#~ msgstr "%sに名前をつける。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Name: "
@@ -4676,31 +5267,12 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "[ カラーの設定 ]"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "(1) Load a user pref file"
-#~ msgstr "(1) ユーザー設定ファイルのロード"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "(2) Dump colors"
 #~ msgstr "(2) カラーの設定をファイルに書き出す"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "(3) Modify colors"
 #~ msgstr "(3) カラーの設定を変更する"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "Command: Load a user pref file"
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "コマンド: ユーザー設定ファイルをロードします\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "コマンド: ユーザー設定ファイルのロード\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "コマンド: ユーザー設定ファイルのロード"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "File: "
-#~ msgstr "ファイル: "
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Command: Dump colors"
@@ -4725,20 +5297,8 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "カラーの設定をファイルに書き出しました。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Command: Modify colors"
-#~ msgstr "コマンド: カラーの設定を変更します"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "undefined"
 #~ msgstr "未定義"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Color = %d, Name = %s"
-#~ msgstr "カラー = %d, 名前 = %s"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Command (n/N/k/K/r/R/g/G/b/B): "
-#~ msgstr "コマンド (n/N/k/K/r/R/g/G/b/B): "
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Note: "
@@ -4850,15 +5410,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #, fuzzy
-#~ msgid "Disturbance Options"
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "  行動中止関係   オプション\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "行動中止関係のオプション"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
 #~ msgid "Easy Auto-Destroyer Options"
 #~ msgstr ""
 #~ "#-#-#-#-#  -  #-#-#-#-#\n"
@@ -4873,10 +5424,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Auto-picker/destroyer editor"
 #~ msgstr "自動拾いエディタ"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Base Delay Factor"
-#~ msgstr " 基本ウェイト量 "
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Hitpoint Warning"
@@ -4899,10 +5446,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "      初期       オプション (参照のみ)"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Cheat Options"
-#~ msgstr "      詐欺       オプション"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "%s (RET to advance, y/n to set, 'F' for frequency, ESC to accept) "
 #~ msgstr "%s ( リターンで次へ, y/n でセット, F で頻度を入力, ESC で決定 ) "
 
@@ -4921,15 +5464,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "option.txt#Autosave"
 #~ msgstr "joption.txt#Autosave"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Window Flags (<dir>, <t>oggle, <s>et, ESC) "
-#~ msgstr ""
-#~ "ウィンドウ・フラグ (<方向>で移動, 't'でON/OFF,'s'でON(他窓OFF), ESC)"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "(Unused option)"
-#~ msgstr "(未使用)"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "option.txt#Window"
@@ -4970,22 +5504,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Autosave"
 #~ msgstr "自動セーブ"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Current Delay Factor(msec): %d"
-#~ msgstr "現在ウェイト量(msec): %d"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Command: Delay Factor(msec)"
-#~ msgstr "コマンド: ウェイト量(msec)"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Command: Hitpoint Warning"
-#~ msgstr "コマンド: 低ヒットポイント警告"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Current hitpoint warning: %d0%%"
-#~ msgstr "現在の低ヒットポイント警告: %d0%%"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Hitpoint Warning (0-9 or ESC to accept): "
@@ -5208,18 +5726,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "(5) マクロの削除"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "(6) Append keymaps to a file"
-#~ msgstr "(6) ファイルにキー配置を追加"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "(7) Query a keymap"
-#~ msgstr "(7) キー配置の確認"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "(8) Create a keymap"
-#~ msgstr "(8) キー配置の作成"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "(9) Remove a keymap"
 #~ msgstr "(9) キー配置の削除"
 
@@ -5232,24 +5738,12 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "標準の設定ファイル'%s'を読み込みました。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Failed to load '%s'!"
-#~ msgstr "'%s'の読み込みに失敗しました！"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Command: Append macros to a file"
 #~ msgstr "コマンド: マクロをファイルに追加する"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Appended macros."
 #~ msgstr "マクロを追加しました。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Command: Query a macro"
-#~ msgstr "コマンド: マクロの確認"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Current action (if any) shown below:"
-#~ msgstr "マクロ行動が(もしあれば)下に表示されます:"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Trigger: "
@@ -5268,17 +5762,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "コマンド: マクロの作成"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "Action: "
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "マクロ行動: \n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "行動: \n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "マクロ行動: "
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Added a macro."
 #~ msgstr "マクロを追加しました。"
 
@@ -5287,16 +5770,8 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "コマンド: マクロの削除"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Removed a macro."
-#~ msgstr "マクロを削除しました。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Command: Append keymaps to a file"
 #~ msgstr "コマンド: キー配置をファイルに追加する"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Appended keymaps."
-#~ msgstr "キー配置を追加しました。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Command: Query a keymap"
@@ -5325,10 +5800,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Command: Remove a keymap"
 #~ msgstr "コマンド: キー配置の削除"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Removed a keymap."
-#~ msgstr "キー配置を削除しました。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Command: Enter a new action"
@@ -5406,10 +5877,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Information"
 #~ msgstr "情報"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Options"
-#~ msgstr "設定"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Other commands"
@@ -6061,10 +6528,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "銘を消せるアイテムがない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "That item had no inscription to remove."
-#~ msgstr "このアイテムには消すべき銘がない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Inscription removed."
 #~ msgstr "銘を消した。"
 
@@ -6079,10 +6542,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Inscribing %s."
 #~ msgstr "%sに銘を刻む。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Inscription: "
-#~ msgstr "銘: "
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Use which item? "
@@ -6342,10 +6801,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "(9) 地形の       色/文字 を変更する (シンボルエディタ)"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "(R) Reset visuals"
-#~ msgstr "(R) 画面表示方法の初期化"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Command: %s"
 #~ msgstr "コマンド: %s"
 
@@ -6404,10 +6859,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "地形の[色/文字]をファイルに書き出しました。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Change monster attr/chars"
-#~ msgstr "モンスターの[色/文字]を変更します"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Monster = %d, Name = %-40.40s"
 #~ msgstr "モンスター = %d, 名前 = %-40.40s"
 
@@ -6424,10 +6875,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "コマンド (n/N/^N/a/A/^A/c/C/^C/v/V/^V): "
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Change object attr/chars"
-#~ msgstr "アイテムの[色/文字]を変更します"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Object = %d, Name = %-40.40s"
 #~ msgstr "アイテム = %d, 名前 = %-40.40s"
 
@@ -6440,20 +6887,12 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "現在値  色 / 文字 = %3d / %3d"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Change feature attr/chars"
-#~ msgstr "地形の[色/文字]を変更します"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Terrain = %d, Name = %s, Lighting = %s"
 #~ msgstr "地形 = %d, 名前 = %s, 明度 = %s"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Command (n/N/^N/a/A/^A/c/C/^C/l/L/^L/d/D/^D/v/V/^V): "
 #~ msgstr "コマンド (n/N/^N/a/A/^A/c/C/^C/l/L/^L/d/D/^D/v/V/^V): "
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Visual attr/char tables reset."
-#~ msgstr "画面上の[色/文字]を初期値にリセットしました。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "It was a good hit!"
@@ -6649,19 +7088,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Quantity (1-%d): "
 #~ msgstr "いくつですか (1-%d): "
-
-# From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "[Press any key to continue]"
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "[ 何かキーを押して下さい ]\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "[何かキーを押すとゲームに戻ります]\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "[何かキーを押すとゲームに戻ります]\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "[何かキーを押すとゲームに戻ります]"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "It must be between %d to %d."
@@ -8547,10 +8973,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "アイテムの売却を記録する"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Record hitpoint warning"
-#~ msgstr "ピンチになったときを記録する"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Record arena victories"
 #~ msgstr "アリーナでの勝利を記録する"
 
@@ -9849,10 +10271,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ "  [学習済みの青魔法]\n"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "None"
-#~ msgstr "なし"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "panic"
 #~ msgstr "緊急事態"
 
@@ -10004,10 +10422,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Birth options can not be changed! '%s'"
 #~ msgstr "初期オプションは変更できません! '%s'"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Ignored invalid option: %s"
-#~ msgstr "オプションの名前が正しくありません： %s"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Too many macro triggers!"
@@ -10847,10 +11261,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr " 維持コスト: %d%% MP\n"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Current Pets"
-#~ msgstr "現在のペット"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid ""
 #~ "You have defeated no enemies yet.\n"
 #~ "\n"
@@ -11146,28 +11556,8 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "暗色"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Mushrooms"
-#~ msgstr "キノコ"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Potions"
-#~ msgstr "薬"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Flasks"
 #~ msgstr "油つぼ"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Scrolls"
-#~ msgstr "巻物"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Rings"
-#~ msgstr "指輪"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Amulets"
-#~ msgstr "アミュレット"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Whistles"
@@ -11176,18 +11566,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Lanterns"
 #~ msgstr "光源"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Wands"
-#~ msgstr "魔法棒"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Staffs"
-#~ msgstr "杖"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Rods"
-#~ msgstr "ロッド"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Cards"
@@ -13461,19 +13839,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ "電撃\n"
 #~ "#-#-#-#-#  -  #-#-#-#-#\n"
 #~ "電撃"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "Light"
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "光\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "閃光\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "閃光\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "閃光"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #, fuzzy
@@ -18405,10 +18770,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Unknown activation effect: %d."
 #~ msgstr "Unknown activation effect: %d."
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Leave this level? "
-#~ msgstr "この階を去りますか？"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Are you sure? (Teleport Level)"
@@ -24118,10 +24479,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "隣接する罠と扉を破壊する。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Flash of Light"
-#~ msgstr "閃光"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Touch of Confusion"
 #~ msgstr "混乱の手"
 
@@ -24254,10 +24611,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ "現実変容\n"
 #~ "#-#-#-#-#  -  #-#-#-#-#\n"
 #~ "真実の祭壇"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Magic Rocket"
-#~ msgstr "マジック・ロケット"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Chaos Branding"
@@ -31995,10 +32348,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "打撃修正(右手)"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Left hand"
-#~ msgstr "打撃修正(左手)"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Multiplier"
 #~ msgstr "射撃武器倍率"
 
@@ -33005,10 +33354,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "オブジェクトの能力変更"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Dump current options"
-#~ msgstr "オプション設定をダンプ"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Phase door"
 #~ msgstr "ショート・テレポート"
 
@@ -33182,10 +33527,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "光源"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Food"
-#~ msgstr "食料"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Books (Life)"
 #~ msgstr "魔法書 (生命)"
 
@@ -33224,10 +33565,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Books (Crusade)"
 #~ msgstr "魔法書 (破邪)"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Song Books"
-#~ msgstr "歌集"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Books (Kendo)"
@@ -33653,10 +33990,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Sorcery Spellbook"
 #~ msgstr "仙術の魔法書"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Nature Spellbook"
-#~ msgstr "自然の魔法書"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Chaos Spellbook"
