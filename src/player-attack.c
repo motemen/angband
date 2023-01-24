@@ -679,11 +679,11 @@ static bool blow_after_effects(struct loc grid, int dmg, int splash,
 static const struct hit_types melee_hit_types[] = {
 	{ MSG_MISS, NULL },
 	{ MSG_HIT, NULL },
-	{ MSG_HIT_GOOD, "It was a good hit!" },
-	{ MSG_HIT_GREAT, "It was a great hit!" },
-	{ MSG_HIT_SUPERB, "It was a superb hit!" },
-	{ MSG_HIT_HI_GREAT, "It was a *GREAT* hit!" },
-	{ MSG_HIT_HI_SUPERB, "It was a *SUPERB* hit!" },
+	{ MSG_HIT_GOOD, N_("It was a good hit!") },
+	{ MSG_HIT_GREAT, N_("It was a great hit!") },
+	{ MSG_HIT_SUPERB, N_("It was a superb hit!") },
+	{ MSG_HIT_HI_GREAT, N_("It was a *GREAT* hit!") },
+	{ MSG_HIT_HI_SUPERB, N_("It was a *SUPERB* hit!") },
 };
 
 /**
@@ -829,7 +829,7 @@ bool py_attack_real(struct player *p, struct loc grid, bool *fear)
 		char buf[128];
 		if (melee_hit_types[i].text)
 			snprintf(buf, sizeof(buf), _("You %s %s%s. %s"), verb, m_name, dmg_text,
-					melee_hit_types[i].text);
+					_(melee_hit_types[i].text));
 		else
 			snprintf(buf, sizeof(buf), _("You %s %s%s."), verb, m_name, dmg_text);
 		msgt(msg_type, "%s", buf);
@@ -844,7 +844,7 @@ bool py_attack_real(struct player *p, struct loc grid, bool *fear)
 
 	/* Small chance of bloodlust side-effects */
 	if (p->timed[TMD_BLOODLUST] && one_in_(50)) {
-		msg("You feel something give way!");
+		msg(_("You feel something give way!"));
 		player_over_exert(p, PY_EXERT_CON, 20, 0);
 	}
 
@@ -917,14 +917,14 @@ static bool attempt_shield_bash(struct player *p, struct monster *mon, bool *fea
 	bash_dam = MIN(bash_dam, 125);
 
 	if (OPT(p, show_damage)) {
-		msgt(MSG_HIT, "You get in a shield bash! (%d)", bash_dam);
+		msgt(MSG_HIT, _("You get in a shield bash! (%d)"), bash_dam);
 	} else {
-		msgt(MSG_HIT, "You get in a shield bash!");
+		msgt(MSG_HIT, _("You get in a shield bash!"));
 	}
 
 	/* Encourage the player to keep wearing that heavy shield. */
 	if (randint1(bash_dam) > 30 + randint1(bash_dam / 2)) {
-		msgt(MSG_HIT_HI_SUPERB, "WHAMM!");
+		msgt(MSG_HIT_HI_SUPERB, _("WHAMM!"));
 	}
 
 	/* Damage, check for fear and death. */
@@ -944,7 +944,7 @@ static bool attempt_shield_bash(struct player *p, struct monster *mon, bool *fea
 	if (35 + adj_dex_th[p->state.stat_ind[STAT_DEX]] < randint1(60)) {
 		energy_lost = randint1(50) + 25;
 		/* Lose 26-75% of a turn due to stumbling after shield bash. */
-		msgt(MSG_GENERIC, "You stumble!");
+		msgt(MSG_GENERIC, _("You stumble!"));
 		p->upkeep->energy_use += energy_lost * z_info->move_energy / 100;
 	}
 
@@ -1007,9 +1007,9 @@ void py_attack(struct player *p, struct loc grid)
 static const struct hit_types ranged_hit_types[] = {
 	{ MSG_MISS, NULL },
 	{ MSG_SHOOT_HIT, NULL },
-	{ MSG_HIT_GOOD, "It was a good hit!" },
-	{ MSG_HIT_GREAT, "It was a great hit!" },
-	{ MSG_HIT_SUPERB, "It was a superb hit!" }
+	{ MSG_HIT_GOOD, N_("It was a good hit!") },
+	{ MSG_HIT_GREAT, N_("It was a great hit!") },
+	{ MSG_HIT_SUPERB, N_("It was a superb hit!") }
 };
 
 /**
@@ -1048,7 +1048,7 @@ static void ranged_helper(struct player *p,	struct object *obj, int dir,
 		if (taim > range) {
 			char msg[80];
 			strnfmt(msg, sizeof(msg),
-					"Target out of range by %d squares. Fire anyway? ",
+					_("Target out of range by %d squares. Fire anyway? "),
 				taim - range);
 			if (!get_check(msg)) return;
 		}
@@ -1094,7 +1094,7 @@ static void ranged_helper(struct player *p,	struct object *obj, int dir,
 
 			bool fear = false;
 			const char *note_dies = monster_is_destroyed(mon) ? 
-				" is destroyed." : " dies.";
+				_(" is destroyed.") : _(" dies.");
 
 			struct attack_result result = attack(p, obj, grid);
 			int dmg = result.dmg;
@@ -1124,12 +1124,12 @@ static void ranged_helper(struct player *p,	struct object *obj, int dir,
 				if (dmg <= 0) {
 					dmg = 0;
 					msg_type = MSG_MISS;
-					my_strcpy(hit_verb, "fails to harm", sizeof(hit_verb));
+					my_strcpy(hit_verb, _("fails to harm"), sizeof(hit_verb));
 				}
 
 				if (!visible) {
 					/* Invisible monster */
-					msgt(MSG_SHOOT_HIT, "The %s finds a mark.", o_name);
+					msgt(MSG_SHOOT_HIT, _("The %s finds a mark."), o_name);
 				} else {
 					for (j = 0; j < num_types; j++) {
 						char m_name[80];
@@ -1146,10 +1146,10 @@ static void ranged_helper(struct player *p,	struct object *obj, int dir,
 						monster_desc(m_name, sizeof(m_name), mon, MDESC_OBJE);
 
 						if (hit_types[j].text) {
-							msgt(msg_type, "Your %s %s %s%s. %s", o_name, 
+							msgt(msg_type, _("Your %s %s %s%s. %s"), o_name, 
 								 hit_verb, m_name, dmg_text, hit_types[j].text);
 						} else {
-							msgt(msg_type, "Your %s %s %s%s.", o_name, hit_verb,
+							msgt(msg_type, _("Your %s %s %s%s."), o_name, hit_verb,
 								 m_name, dmg_text);
 						}
 					}
@@ -1209,7 +1209,7 @@ static struct attack_result make_ranged_shot(struct player *p,
 	struct monster *mon = square_monster(cave, grid);
 	int b = 0, s = 0;
 
-	my_strcpy(hit_verb, "hits", 20);
+	my_strcpy(hit_verb, _("hits"), 20);
 
 	/* Did we hit it */
 	if (!test_hit(chance_of_missile_hit(p, ammo, bow, mon), mon->race->ac))
@@ -1246,7 +1246,7 @@ static struct attack_result make_ranged_throw(struct player *p,
 	struct monster *mon = square_monster(cave, grid);
 	int b = 0, s = 0;
 
-	my_strcpy(hit_verb, "hits", 20);
+	my_strcpy(hit_verb, _("hits"), 20);
 
 	/* If we missed then we're done */
 	if (!test_hit(chance_of_missile_hit(p, obj, NULL, mon), mon->race->ac))
@@ -1303,8 +1303,8 @@ void do_cmd_fire(struct command *cmd) {
 
 	/* Get arguments */
 	if (cmd_get_item(cmd, "item", &obj,
-			/* Prompt */ "Fire which ammunition?",
-			/* Error  */ "You have no suitable ammunition to fire.",
+			/* Prompt */ _("Fire which ammunition?"),
+			/* Error  */ _("You have no suitable ammunition to fire."),
 			/* Filter */ obj_can_fire,
 			/* Choice */ USE_INVEN | USE_QUIVER | USE_FLOOR | QUIVER_TAGS)
 		!= CMD_OK)
@@ -1312,19 +1312,19 @@ void do_cmd_fire(struct command *cmd) {
 
 	/* Require a usable launcher */
 	if (!bow || !player->state.ammo_tval) {
-		msg("You have nothing to fire with.");
+		msg(_("You have nothing to fire with."));
 		return;
 	}
 
 	/* Check the item being fired is usable by the player. */
 	if (!item_is_available(obj)) {
-		msg("That item is not within your reach.");
+		msg(_("That item is not within your reach."));
 		return;
 	}
 
 	/* Check the ammo can be used with the launcher */
 	if (obj->tval != player->state.ammo_tval) {
-		msg("That ammo cannot be fired by your current weapon.");
+		msg(_("That ammo cannot be fired by your current weapon."));
 		return;
 	}
 
@@ -1364,8 +1364,8 @@ void do_cmd_throw(struct command *cmd) {
 	if (player->upkeep->command_wrk == USE_EQUIP)
 		player->upkeep->command_wrk = USE_INVEN;
 	if (cmd_get_item(cmd, "item", &obj,
-			/* Prompt */ "Throw which item?",
-			/* Error  */ "You have nothing to throw.",
+			/* Prompt */ _("Throw which item?"),
+			/* Error  */ _("You have nothing to throw."),
 			/* Filter */ restrict_for_throwing,
 			/* Choice */ USE_EQUIP | USE_QUIVER | USE_INVEN | USE_FLOOR | SHOW_THROWING)
 		!= CMD_OK)
@@ -1398,7 +1398,7 @@ void do_cmd_fire_at_nearest(void) {
 
 	/* Require a usable launcher */
 	if (!bow || !player->state.ammo_tval) {
-		msg("You have nothing to fire with.");
+		msg(_("You have nothing to fire with."));
 		return;
 	}
 
@@ -1414,7 +1414,7 @@ void do_cmd_fire_at_nearest(void) {
 
 	/* Require usable ammo */
 	if (!ammo) {
-		msg("You have no ammunition in the quiver to fire.");
+		msg(_("You have no ammunition in the quiver to fire."));
 		return;
 	}
 
