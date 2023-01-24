@@ -1,6 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Angband 4.2.4\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -8,11 +10,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: ../lib/gamedata/blow_methods.txt:20
 msgctxt "blow_methods"
 msgid "hits {target}"
-msgstr ""
+msgstr "{target}を攻撃した"
 
 #: ../lib/gamedata/blow_methods.txt:22
 msgctxt "blow_methods"
@@ -22,7 +25,7 @@ msgstr ""
 #: ../lib/gamedata/blow_methods.txt:29
 msgctxt "blow_methods"
 msgid "touches {target}"
-msgstr ""
+msgstr "{target}に触れた"
 
 #: ../lib/gamedata/blow_methods.txt:31
 msgctxt "blow_methods"
@@ -32,7 +35,7 @@ msgstr ""
 #: ../lib/gamedata/blow_methods.txt:38
 msgctxt "blow_methods"
 msgid "punches {target}"
-msgstr ""
+msgstr "{target}を殴った"
 
 #: ../lib/gamedata/blow_methods.txt:40
 msgctxt "blow_methods"
@@ -42,7 +45,7 @@ msgstr ""
 #: ../lib/gamedata/blow_methods.txt:47
 msgctxt "blow_methods"
 msgid "kicks {target}"
-msgstr ""
+msgstr "{target}を蹴った"
 
 #: ../lib/gamedata/blow_methods.txt:49
 msgctxt "blow_methods"
@@ -52,7 +55,7 @@ msgstr ""
 #: ../lib/gamedata/blow_methods.txt:56
 msgctxt "blow_methods"
 msgid "claws {target}"
-msgstr ""
+msgstr "{target}を引っ掻いた"
 
 #: ../lib/gamedata/blow_methods.txt:58
 msgctxt "blow_methods"
@@ -62,7 +65,7 @@ msgstr ""
 #: ../lib/gamedata/blow_methods.txt:65
 msgctxt "blow_methods"
 msgid "bites {target}"
-msgstr ""
+msgstr "{target}に噛み付いた"
 
 #: ../lib/gamedata/blow_methods.txt:67
 msgctxt "blow_methods"
@@ -72,7 +75,7 @@ msgstr ""
 #: ../lib/gamedata/blow_methods.txt:74
 msgctxt "blow_methods"
 msgid "stings {target}"
-msgstr ""
+msgstr "{target}を刺した"
 
 #: ../lib/gamedata/blow_methods.txt:76
 msgctxt "blow_methods"
@@ -82,7 +85,7 @@ msgstr ""
 #: ../lib/gamedata/blow_methods.txt:83
 msgctxt "blow_methods"
 msgid "butts {target}"
-msgstr ""
+msgstr "{target}に頭突きした"
 
 #: ../lib/gamedata/blow_methods.txt:85
 msgctxt "blow_methods"
@@ -92,7 +95,7 @@ msgstr ""
 #: ../lib/gamedata/blow_methods.txt:92
 msgctxt "blow_methods"
 msgid "crushes {target}"
-msgstr ""
+msgstr "{target}を押し潰した"
 
 #: ../lib/gamedata/blow_methods.txt:94
 msgctxt "blow_methods"
@@ -102,7 +105,7 @@ msgstr ""
 #: ../lib/gamedata/blow_methods.txt:101
 msgctxt "blow_methods"
 msgid "engulfs {target}"
-msgstr ""
+msgstr "{target}を飲み込んだ"
 
 #: ../lib/gamedata/blow_methods.txt:103
 msgctxt "blow_methods"
@@ -112,7 +115,7 @@ msgstr ""
 #: ../lib/gamedata/blow_methods.txt:110
 msgctxt "blow_methods"
 msgid "crawls on {target}"
-msgstr ""
+msgstr "{target}の身体を這い回った"
 
 #: ../lib/gamedata/blow_methods.txt:112
 msgctxt "blow_methods"
@@ -122,7 +125,7 @@ msgstr ""
 #: ../lib/gamedata/blow_methods.txt:119
 msgctxt "blow_methods"
 msgid "drools on {target}"
-msgstr ""
+msgstr "{target}によだれを垂らした"
 
 #: ../lib/gamedata/blow_methods.txt:121
 msgctxt "blow_methods"
@@ -132,7 +135,7 @@ msgstr ""
 #: ../lib/gamedata/blow_methods.txt:128
 msgctxt "blow_methods"
 msgid "spits on {target}"
-msgstr ""
+msgstr "{target}に唾を吐きかけた"
 
 #: ../lib/gamedata/blow_methods.txt:130
 msgctxt "blow_methods"
@@ -142,7 +145,7 @@ msgstr ""
 #: ../lib/gamedata/blow_methods.txt:137
 msgctxt "blow_methods"
 msgid "gazes at {target}"
-msgstr ""
+msgstr "{target}を見つめた"
 
 #: ../lib/gamedata/blow_methods.txt:139
 msgctxt "blow_methods"
@@ -152,7 +155,7 @@ msgstr ""
 #: ../lib/gamedata/blow_methods.txt:146
 msgctxt "blow_methods"
 msgid "wails at {target}"
-msgstr ""
+msgstr "{target}に泣き叫んだ"
 
 #: ../lib/gamedata/blow_methods.txt:148
 msgctxt "blow_methods"
@@ -162,7 +165,7 @@ msgstr ""
 #: ../lib/gamedata/blow_methods.txt:155
 msgctxt "blow_methods"
 msgid "releases spores at {target}"
-msgstr ""
+msgstr "{target}に胞子を放出した"
 
 #: ../lib/gamedata/blow_methods.txt:157
 msgctxt "blow_methods"
@@ -172,7 +175,7 @@ msgstr ""
 #: ../lib/gamedata/blow_methods.txt:164
 msgctxt "blow_methods"
 msgid "begs {target} for money"
-msgstr ""
+msgstr "{target}に金をせがんだ"
 
 #: ../lib/gamedata/blow_methods.txt:166
 msgctxt "blow_methods"
@@ -182,42 +185,42 @@ msgstr ""
 #: ../lib/gamedata/blow_methods.txt:173
 msgctxt "blow_methods"
 msgid "insults {target}!"
-msgstr ""
+msgstr "{target}を侮辱した！"
 
 #: ../lib/gamedata/blow_methods.txt:174
 msgctxt "blow_methods"
 msgid "insults {oftarget} mother!"
-msgstr ""
+msgstr "{oftarget}母親を侮辱した！"
 
 #: ../lib/gamedata/blow_methods.txt:175
 msgctxt "blow_methods"
 msgid "gives {target} the finger!"
-msgstr ""
+msgstr "{target}に指を突き立てた！"
 
 #: ../lib/gamedata/blow_methods.txt:176
 msgctxt "blow_methods"
 msgid "humiliates {target}!"
-msgstr ""
+msgstr "{target}に恥をかかせた！"
 
 #: ../lib/gamedata/blow_methods.txt:177
 msgctxt "blow_methods"
 msgid "defiles {target}!"
-msgstr ""
+msgstr "{target}の名誉を傷つけた！"
 
 #: ../lib/gamedata/blow_methods.txt:178
 msgctxt "blow_methods"
 msgid "dances around {target}!"
-msgstr ""
+msgstr "{target}の周りで踊った！"
 
 #: ../lib/gamedata/blow_methods.txt:179
 msgctxt "blow_methods"
 msgid "makes obscene gestures!"
-msgstr ""
+msgstr "卑猥な動作をした！"
 
 #: ../lib/gamedata/blow_methods.txt:180
 msgctxt "blow_methods"
 msgid "moons {target}!!!"
-msgstr ""
+msgstr "{target}に尻を見せた!!!"
 
 #: ../lib/gamedata/blow_methods.txt:182
 msgctxt "blow_methods"
@@ -227,17 +230,17 @@ msgstr ""
 #: ../lib/gamedata/blow_methods.txt:189
 msgctxt "blow_methods"
 msgid "wants his mushrooms back"
-msgstr ""
+msgstr "キノコを取り戻したいと思っている"
 
 #: ../lib/gamedata/blow_methods.txt:190
 msgctxt "blow_methods"
 msgid "tells {target} to get off his land"
-msgstr ""
+msgstr "{target}に出ていけと言った"
 
 #: ../lib/gamedata/blow_methods.txt:191
 msgctxt "blow_methods"
 msgid "looks for his dogs"
-msgstr ""
+msgstr "犬を探している"
 
 #: ../lib/gamedata/blow_methods.txt:192
 msgctxt "blow_methods"
@@ -249,22 +252,25 @@ msgctxt "blow_methods"
 msgid "asks 'Do you want to buy any mushrooms?'"
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/blow_methods.txt:194
 msgctxt "blow_methods"
 msgid "seems sad about something"
-msgstr ""
+msgstr "何か悲しそうだ"
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/blow_methods.txt:195
 msgctxt "blow_methods"
 msgid "asks if {target} {has} seen his dogs"
-msgstr ""
+msgstr "は彼の犬を見なかったかと尋ねている"
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/blow_methods.txt:196
 msgctxt "blow_methods"
 msgid "mumbles something about mushrooms"
-msgstr ""
+msgstr "キノコがどうのとつぶやいている"
 
 #: ../lib/gamedata/blow_methods.txt:198
 msgctxt "blow_methods"
 msgid "moan"
-msgstr ""
+msgstr "うめいた"

@@ -25,14 +25,48 @@ msgstr ""
 msgid "There is a wall in the way!"
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-attack.c:460
+#, fuzzy, c-format
+msgid "%s tries to cast a spell, but fails."
+msgstr "%^sは呪文を唱えようとしたが失敗した。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-attack.c:608
+#, fuzzy, c-format
+msgid "%s is repelled."
+msgstr "%^sは殺された。"
+
 #: ../src/mon-attack.c:634
 msgid "."
 msgstr "。"
 
-#: ../src/mon-attack.c:644
+#: ../src/mon-attack.c:641
+#, c-format
+msgid "%s %s (%d)%s"
+msgstr "%sは%s(%d)%s"
+
+#: ../src/mon-attack.c:644 ../src/mon-attack.c:853
 #, c-format
 msgid "%s %s%s"
+msgstr "%sは%s%s"
+
+#: ../src/mon-attack.c:671 ../src/mon-attack.c:879
+#, c-format
+msgid "ERROR: Effect handler not found for %s."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-attack.c:745
+#, c-format
+msgid "%s misses you."
+msgstr "%sの攻撃をかわした。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-attack.c:908
+#, c-format
+msgid "%s misses %s."
+msgstr "%2$sは%1$sの攻撃をかわした。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-blows.c:131
@@ -983,9 +1017,34 @@ msgid "Line %d of the customized %s options is not parseable."
 msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:682 ../src/player-attack.c:1010
+msgid "It was a good hit!"
+msgstr "手ごたえがあった！"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:683 ../src/player-attack.c:1011
+msgid "It was a great hit!"
+msgstr "かなりの手ごたえがあった！"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:684 ../src/player-attack.c:1012
+msgid "It was a superb hit!"
+msgstr "会心の一撃だ！"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:685
+msgid "It was a *GREAT* hit!"
+msgstr "最高の会心の一撃だ！"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:686
+msgid "It was a *SUPERB* hit!"
+msgstr "比類なき最高の会心の一撃だ！"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/player-attack.c:715
 msgid "punch"
-msgstr "パンチする"
+msgstr "を殴った"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/player-attack.c:742
@@ -1000,21 +1059,153 @@ msgstr ""
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/player-attack.c:756
 msgid "hit"
-msgstr "殴る"
+msgstr "を攻撃した"
 
 #: ../src/player-attack.c:817
 msgid "fail to harm"
-msgstr ""
+msgstr "にダメージを与えられなかった"
 
 #: ../src/player-attack.c:831
 #, c-format
 msgid "You %s %s%s. %s"
-msgstr ""
+msgstr "%2$s%1$s%3$s。%4$s"
 
 #: ../src/player-attack.c:834
 #, c-format
 msgid "You %s %s%s."
+msgstr "%2$s%1$s%3$s。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:847
+#, fuzzy
+msgid "You feel something give way!"
+msgstr "何かが邪魔しています！"
+
+#: ../src/player-attack.c:920
+#, c-format
+msgid "You get in a shield bash! (%d)"
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:922
+#, fuzzy
+msgid "You get in a shield bash!"
+msgstr "磨く盾がありません。"
+
+#: ../src/player-attack.c:927
+msgid "WHAMM!"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:947
+#, fuzzy
+msgid "You stumble!"
+msgstr "%^sはよろめいた。"
+
+#: ../src/player-attack.c:1051
+#, c-format
+msgid "Target out of range by %d squares. Fire anyway? "
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:1097
+#, fuzzy
+msgid " is destroyed."
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"は倒れた。\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"は倒れた。\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"は倒れた。\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"を倒した。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:1097
+msgid " dies."
+msgstr "は死んだ。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:1127
+#, fuzzy
+msgid "fails to harm"
+msgstr "遠すぎる！"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:1132
+#, c-format
+msgid "The %s finds a mark."
+msgstr "%sが敵を捕捉した。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:1149
+#, fuzzy, c-format
+msgid "Your %s %s %s%s. %s"
+msgstr "あなたの%s%s"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:1152
+#, fuzzy, c-format
+msgid "Your %s %s %s%s."
+msgstr "あなたの%s%s"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:1212 ../src/player-attack.c:1249
+#, fuzzy
+msgid "hits"
+msgstr "%sを殴った。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:1306
+#, fuzzy
+msgid "Fire which ammunition?"
+msgstr "どれを撃ちますか? "
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:1307
+#, fuzzy
+msgid "You have no suitable ammunition to fire."
+msgstr "火炎の攻撃で傷つけられるようになった。。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:1315 ../src/player-attack.c:1401
+msgid "You have nothing to fire with."
+msgstr "射撃用の武器を持っていない。"
+
+#: ../src/player-attack.c:1321
+msgid "That item is not within your reach."
+msgstr ""
+
+#: ../src/player-attack.c:1327
+msgid "That ammo cannot be fired by your current weapon."
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:1367
+#, fuzzy
+msgid "Throw which item?"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"どのアイテムを投げますか? \n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"どの武器を投げますか? "
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:1368
+#, fuzzy
+msgid "You have nothing to throw."
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"投げるアイテムがない。\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"投げる武器がない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/player-attack.c:1417
+#, fuzzy
+msgid "You have no ammunition in the quiver to fire."
+msgstr "発射されるアイテムがありません。"
 
 #: ../src/ui-birth.c:564
 msgid ""
@@ -4710,10 +4901,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "%sから降りた。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Dismissed %s."
-#~ msgstr "%s を放した。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "'U'nnamed means all your pets except named pets and your mount."
 #~ msgstr "'U'nnamed は、乗馬以外の名前のないペットだけを全て解放します。"
 
@@ -4912,24 +5099,12 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "特殊能力はありません。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You have nothing to fire with."
-#~ msgstr "射撃用の武器を持っていない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "It's already activated."
 #~ msgstr "この武器は発動して使うもののようだ。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "It's not for firing."
 #~ msgstr "この武器で射撃はできない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Fire which item? "
-#~ msgstr "どれを撃ちますか? "
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You have nothing to fire."
-#~ msgstr "発射されるアイテムがありません。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "The weapon's recoil stuns you. "
@@ -6895,26 +7070,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "コマンド (n/N/^N/a/A/^A/c/C/^C/l/L/^L/d/D/^D/v/V/^V): "
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "It was a good hit!"
-#~ msgstr "手ごたえがあった！"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "It was a great hit!"
-#~ msgstr "かなりの手ごたえがあった！"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "It was a superb hit!"
-#~ msgstr "会心の一撃だ！"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "It was a *GREAT* hit!"
-#~ msgstr "最高の会心の一撃だ！"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "It was a *SUPERB* hit!"
-#~ msgstr "比類なき最高の会心の一撃だ！"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You critically injured %s!"
 #~ msgstr "刃が%sに深々と突き刺さった！"
 
@@ -6971,19 +7126,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "%^s is injured by holy power!"
 #~ msgstr "%^sは聖なるオーラで傷ついた！"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid " is destroyed."
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "は倒れた。\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "は倒れた。\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "は倒れた。\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "を倒した。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "%^s is injured by the Force"
@@ -7060,10 +7202,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Wall rocks were shattered."
 #~ msgstr "岩が砕け散った。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "The %s finds a mark."
-#~ msgstr "%sが敵を捕捉した。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "The %s hits %s."
@@ -13571,24 +13709,12 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "%^sは破壊された。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "%^s is killed."
-#~ msgstr "%^sは殺された。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You have been thrown off from %s!"
 #~ msgstr "%^sに振り落とされた！"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "%^s tries to cast a spell, but fails."
-#~ msgstr "%^sは呪文を唱えようとしたが失敗した。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Anti magic barrier cancels the spell which %^s casts."
 #~ msgstr "反魔法バリアが%^sの呪文をかき消した。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "hits %s."
-#~ msgstr "%sを殴った。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "touches %s."
@@ -14262,10 +14388,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Prevents any breeders on current level from breeding."
 #~ msgstr "この階の増殖するモンスターが増殖できなくなる。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "That is too far!"
-#~ msgstr "遠すぎる！"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Can not teleport to there."
@@ -15579,10 +15701,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "地面に落とされた。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid " dies."
-#~ msgstr "は死んだ。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Failed fixed escorts."
 #~ msgstr "護衛の指定生成に失敗しました。"
 
@@ -16088,10 +16206,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ "%^sはカタカタと笑った。\n"
 #~ "#-#-#-#-#  -  #-#-#-#-#\n"
 #~ "%^sはカタカタ言った。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "%^s stumbles."
-#~ msgstr "%^sはよろめいた。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "%^s staggers."
@@ -18395,10 +18509,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "いてっ！この%sはあなたの歯より硬い！"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "There's something in the way!"
-#~ msgstr "何かが邪魔しています！"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You don't like the woody taste!"
 #~ msgstr "木の味は好きじゃない！"
 
@@ -19484,24 +19594,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "The %s shatters!"
 #~ msgstr "%sは砕け散った！"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "Throw which item? "
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "どのアイテムを投げますか? \n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "どの武器を投げますか? "
-
-# From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "You have nothing to throw."
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "投げるアイテムがない。\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "投げる武器がない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "%s doesn't come back!"
@@ -23004,10 +23096,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You can feel the power of %s assault your enemies!"
 #~ msgstr "%sの力が敵を攻撃するのを感じた！"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "%s ignores you."
-#~ msgstr "%sはあなたを無視した。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "%s rewards you with a demonic servant!"
@@ -28392,10 +28480,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "鑑定するべきアイテムがない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "%^s: %s (%c)."
-#~ msgstr "%^s: %s(%c)。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "In your pack: %s (%c)."
 #~ msgstr "ザック中: %s(%c)。"
 
@@ -28664,10 +28748,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "電撃の攻撃で傷つけられるようになった。。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You are no longer immune to fire."
-#~ msgstr "火炎の攻撃で傷つけられるようになった。。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You are no longer immune to cold."
 #~ msgstr "冷気の攻撃で傷つけられるようになった。。"
 
@@ -28758,10 +28838,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Polish which shield? "
 #~ msgstr "どの盾を磨きますか？"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You have no shield to polish."
-#~ msgstr "磨く盾がありません。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Failed."
@@ -29054,10 +29130,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "glows deep, icy blue!"
 #~ msgstr "は深く冷たいブルーに輝いた！"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Your %s %s"
-#~ msgstr "あなたの%s%s"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Mighty magics rend your enemies!"

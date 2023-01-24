@@ -11,13 +11,43 @@ msgstr ""
 msgid "There is a wall in the way!"
 msgstr ""
 
+#: ../src/mon-attack.c:460
+#, c-format
+msgid "%s tries to cast a spell, but fails."
+msgstr ""
+
+#: ../src/mon-attack.c:608
+#, c-format
+msgid "%s is repelled."
+msgstr ""
+
 #: ../src/mon-attack.c:634
 msgid "."
 msgstr ""
 
-#: ../src/mon-attack.c:644
+#: ../src/mon-attack.c:641
+#, c-format
+msgid "%s %s (%d)%s"
+msgstr ""
+
+#: ../src/mon-attack.c:644 ../src/mon-attack.c:853
 #, c-format
 msgid "%s %s%s"
+msgstr ""
+
+#: ../src/mon-attack.c:671 ../src/mon-attack.c:879
+#, c-format
+msgid "ERROR: Effect handler not found for %s."
+msgstr ""
+
+#: ../src/mon-attack.c:745
+#, c-format
+msgid "%s misses you."
+msgstr ""
+
+#: ../src/mon-attack.c:908
+#, c-format
+msgid "%s misses %s."
 msgstr ""
 
 #: ../src/mon-blows.c:131
@@ -846,6 +876,26 @@ msgstr ""
 msgid "Line %d of the customized %s options is not parseable."
 msgstr ""
 
+#: ../src/player-attack.c:682 ../src/player-attack.c:1010
+msgid "It was a good hit!"
+msgstr ""
+
+#: ../src/player-attack.c:683 ../src/player-attack.c:1011
+msgid "It was a great hit!"
+msgstr ""
+
+#: ../src/player-attack.c:684 ../src/player-attack.c:1012
+msgid "It was a superb hit!"
+msgstr ""
+
+#: ../src/player-attack.c:685
+msgid "It was a *GREAT* hit!"
+msgstr ""
+
+#: ../src/player-attack.c:686
+msgid "It was a *SUPERB* hit!"
+msgstr ""
+
 #: ../src/player-attack.c:715
 msgid "punch"
 msgstr ""
@@ -875,6 +925,95 @@ msgstr ""
 #: ../src/player-attack.c:834
 #, c-format
 msgid "You %s %s%s."
+msgstr ""
+
+#: ../src/player-attack.c:847
+msgid "You feel something give way!"
+msgstr ""
+
+#: ../src/player-attack.c:920
+#, c-format
+msgid "You get in a shield bash! (%d)"
+msgstr ""
+
+#: ../src/player-attack.c:922
+msgid "You get in a shield bash!"
+msgstr ""
+
+#: ../src/player-attack.c:927
+msgid "WHAMM!"
+msgstr ""
+
+#: ../src/player-attack.c:947
+msgid "You stumble!"
+msgstr ""
+
+#: ../src/player-attack.c:1051
+#, c-format
+msgid "Target out of range by %d squares. Fire anyway? "
+msgstr ""
+
+#: ../src/player-attack.c:1097
+msgid " is destroyed."
+msgstr ""
+
+#: ../src/player-attack.c:1097
+msgid " dies."
+msgstr ""
+
+#: ../src/player-attack.c:1127
+msgid "fails to harm"
+msgstr ""
+
+#: ../src/player-attack.c:1132
+#, c-format
+msgid "The %s finds a mark."
+msgstr ""
+
+#: ../src/player-attack.c:1149
+#, c-format
+msgid "Your %s %s %s%s. %s"
+msgstr ""
+
+#: ../src/player-attack.c:1152
+#, c-format
+msgid "Your %s %s %s%s."
+msgstr ""
+
+#: ../src/player-attack.c:1212 ../src/player-attack.c:1249
+msgid "hits"
+msgstr ""
+
+#: ../src/player-attack.c:1306
+msgid "Fire which ammunition?"
+msgstr ""
+
+#: ../src/player-attack.c:1307
+msgid "You have no suitable ammunition to fire."
+msgstr ""
+
+#: ../src/player-attack.c:1315 ../src/player-attack.c:1401
+msgid "You have nothing to fire with."
+msgstr ""
+
+#: ../src/player-attack.c:1321
+msgid "That item is not within your reach."
+msgstr ""
+
+#: ../src/player-attack.c:1327
+msgid "That ammo cannot be fired by your current weapon."
+msgstr ""
+
+#: ../src/player-attack.c:1367
+msgid "Throw which item?"
+msgstr ""
+
+#: ../src/player-attack.c:1368
+msgid "You have nothing to throw."
+msgstr ""
+
+#: ../src/player-attack.c:1417
+msgid "You have no ammunition in the quiver to fire."
 msgstr ""
 
 #: ../src/ui-birth.c:564
