@@ -3,16 +3,16 @@ msgstr ""
 "Language: ja\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
-#: ../src/cmd-cave.c:1161 ../src/player-attack.c:729
+#: ../src/cmd-cave.c:1173 ../src/player-attack.c:729
 #, c-format
 msgid "You are too afraid to attack %s!"
 msgstr ""
 
-#: ../src/cmd-cave.c:1179
+#: ../src/cmd-cave.c:1191
 msgid "There is a pile of rubble in the way!"
 msgstr ""
 
-#: ../src/cmd-cave.c:1185
+#: ../src/cmd-cave.c:1197
 msgid "There is a wall in the way!"
 msgstr ""
 
@@ -1301,6 +1301,240 @@ msgid "The "
 msgstr "☆"
 
 # From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:14
+#, fuzzy
+msgid "Use the roguelike command keyset"
+msgstr "ローグ風キー配置を使用する"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:16
+#, fuzzy
+msgid "Use sound"
+msgstr "耐轟音"
+
+#: ../src/list-options.h:18
+msgid "Show damage player deals to monsters"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:20
+msgid "Use old target by default"
+msgstr "常に以前のターゲットを指定する"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:22
+#, fuzzy
+msgid "Always pickup items"
+msgstr "アイテムを拾う (現在:ON)"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:24
+#, fuzzy
+msgid "Always pickup items matching inventory"
+msgstr "持ち物の中のアイテムが多すぎる！"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:26
+#, fuzzy
+msgid "Show flavors in object descriptions"
+msgstr "アイテムの記述を簡略にする"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:28
+#, fuzzy
+msgid "Highlight target with cursor"
+msgstr "プレイヤーにカーソルを合わせる"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:30
+#, fuzzy
+msgid "Highlight player with cursor between turns"
+msgstr "プレイヤーにカーソルを合わせる"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:32
+msgid "Disturb whenever viewable monster moves"
+msgstr "視界内のモンスターが動いたら行動を中止する"
+
+#: ../src/list-options.h:34
+msgid "Show walls as solid blocks"
+msgstr ""
+
+#: ../src/list-options.h:36
+msgid "Show walls with shaded background"
+msgstr ""
+
+#: ../src/list-options.h:38
+msgid "Color: Illuminate torchlight in yellow"
+msgstr ""
+
+#: ../src/list-options.h:40
+msgid "Color: Shimmer multi-colored things"
+msgstr ""
+
+#: ../src/list-options.h:42
+msgid "Center map continuously"
+msgstr ""
+
+#: ../src/list-options.h:44
+msgid "Color: Show unique monsters in purple"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:46
+msgid "Automatically clear '-more-' prompts"
+msgstr "キー待ちしないで連続でメッセージを表示する"
+
+#: ../src/list-options.h:48
+#, c-format
+msgid "Color: Player color indicates % hit points"
+msgstr ""
+
+#: ../src/list-options.h:50
+msgid "Allow mouse clicks to move the player"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:52
+#, fuzzy
+msgid "Notify on object recharge"
+msgstr "充填する必要はありません。"
+
+#: ../src/list-options.h:54
+msgid "Show effective speed as multiplier"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:56
+#, fuzzy
+msgid "Cheat: Peek into monster creation"
+msgstr "モンスターの生成をのぞき見る"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:58
+#, fuzzy
+msgid "Score: Peek into monster creation"
+msgstr "モンスターの生成をのぞき見る"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:60
+#, fuzzy
+msgid "Cheat: Peek into dungeon creation"
+msgstr "ダンジョンの生成をのぞき見る"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:62
+#, fuzzy
+msgid "Score: Peek into dungeon creation"
+msgstr "ダンジョンの生成をのぞき見る"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:64
+#, fuzzy
+msgid "Cheat: Peek into something else"
+msgstr "その他の事をのぞき見る"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:66
+#, fuzzy
+msgid "Score: Peek into something else"
+msgstr "その他の事をのぞき見る"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:68
+#, fuzzy
+msgid "Cheat: Allow player to avoid death"
+msgstr "死を回避することを可能にする"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:70
+#, fuzzy
+msgid "Score: Allow player to avoid death"
+msgstr "死を回避することを可能にする"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:72
+#, fuzzy
+msgid "Generate a new, random artifact set"
+msgstr "ランダムアーティファクトの入手を記録する"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:74
+#, fuzzy
+msgid "Generate connected stairs"
+msgstr "下り階段生成に失敗"
+
+#: ../src/list-options.h:76
+msgid "Force player descent (never make up stairs)"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:78
+#, fuzzy
+msgid "Word of Recall has no effect"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"帰還の呪文\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"帰還の詔\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"帰還の呪文\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"帰還の呪文"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:80
+#, fuzzy
+msgid "Restrict creation of artifacts"
+msgstr "ランダムアーティファクトの入手を記録する"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:82
+#, fuzzy
+msgid "Stack objects on the floor"
+msgstr "「~」 (放置)"
+
+#: ../src/list-options.h:84
+msgid "Lose artifacts when leaving level"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:86
+#, fuzzy
+msgid "Show level feelings"
+msgstr "階の雰囲気(^f)"
+
+#: ../src/list-options.h:88
+msgid "Increase gold drops but disable selling"
+msgstr ""
+
+#: ../src/list-options.h:90
+msgid "Start with a kit of useful gear"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/list-options.h:92
+#, fuzzy
+msgid "Monsters learn from their mistakes"
+msgstr "モンスターは失敗を学習する(*)"
+
+#: ../src/list-options.h:94
+msgid "Know all runes on birth"
+msgstr ""
+
+#: ../src/list-options.h:96
+msgid "Know all flavors on birth"
+msgstr ""
+
+#: ../src/list-options.h:98
+msgid "Persistent levels (experimental)"
+msgstr ""
+
+#: ../src/list-options.h:100
+msgid "To-damage is a percentage of dice (experimental)"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "The dungeon absorbs all attempted magic!"
 #~ msgstr "ダンジョンが魔法を吸収した！"
 
@@ -1916,10 +2150,6 @@ msgstr "☆"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "'!' (Auto destroy)"
 #~ msgstr "「!」 (自動破壊)"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "'~' (Leave it on the floor)"
-#~ msgstr "「~」 (放置)"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "';' (Query to pick up)"
@@ -3967,10 +4197,6 @@ msgstr "☆"
 #~ msgstr "ドアを開ける (現在:OFF)"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "pets pick up items (now On)"
-#~ msgstr "アイテムを拾う (現在:ON)"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "pets pick up items (now Off)"
 #~ msgstr "アイテムを拾う (現在:OFF)"
 
@@ -5346,10 +5572,6 @@ msgstr "☆"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Map(L/W)"
 #~ msgstr "位置を確認(L/W)"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Level feeling(^f)"
-#~ msgstr "階の雰囲気(^f)"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Character status(C)"
@@ -7644,10 +7866,6 @@ msgstr "☆"
 #~ msgstr "部屋群の生成に失敗"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Failed to generate down stairs."
-#~ msgstr "下り階段生成に失敗"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Failed to generate up stairs."
 #~ msgstr "上り階段生成に失敗"
 
@@ -7886,10 +8104,6 @@ msgstr "☆"
 #~ msgstr "ペットを置いて広域マップに入りますか？"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Rogue-like commands"
-#~ msgstr "ローグ風キー配置を使用する"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Pick things up by default"
 #~ msgstr "常にアイテムを拾う"
 
@@ -7902,10 +8116,6 @@ msgstr "☆"
 #~ msgstr "クイック・メッセージを使用する"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Automatically clear '-more-' prompts"
-#~ msgstr "キー待ちしないで連続でメッセージを表示する"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Automatically skip all messages."
 #~ msgstr "キー待ちしないで全てのメッセージを読み飛ばす"
 
@@ -7916,10 +8126,6 @@ msgstr "☆"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Prompt for floor item selection"
 #~ msgstr "床上のアイテムを使用するときに確認する"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Use old target by default"
-#~ msgstr "常に以前のターゲットを指定する"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Repeat obvious commands"
@@ -8030,16 +8236,8 @@ msgstr "☆"
 #~ msgstr "メッセージの後に画面を再描画する"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Highlight the player with the cursor"
-#~ msgstr "プレイヤーにカーソルを合わせる"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Display actual path before shooting"
 #~ msgstr "魔法や矢の軌跡を表示する"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Plain object descriptions"
-#~ msgstr "アイテムの記述を簡略にする"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Plain pickup messages(japanese only)"
@@ -8190,10 +8388,6 @@ msgstr "☆"
 #~ msgstr "レベルの高いモンスターが動いたら行動を中止する"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Disturb whenever viewable monster moves"
-#~ msgstr "視界内のモンスターが動いたら行動を中止する"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Disturb when visible pets move"
 #~ msgstr "視界内のペットが動いたら行動を中止する"
 
@@ -8220,10 +8414,6 @@ msgstr "☆"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Alert when leaving trap detected area"
 #~ msgstr "トラップ感知範囲外に出る直前に警告する"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Monsters learn from their mistakes (*)"
-#~ msgstr "モンスターは失敗を学習する(*)"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Monsters exploit players weaknesses (*)"
@@ -8330,10 +8520,6 @@ msgstr "☆"
 #~ msgstr "固定アーティファクトの入手を記録する"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Record random artifacts"
-#~ msgstr "ランダムアーティファクトの入手を記録する"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Record when destroy unique monster"
 #~ msgstr "ユニークモンスターを倒したときを記録する"
 
@@ -8382,24 +8568,8 @@ msgstr "☆"
 #~ msgstr "アイテムの生成をのぞき見る"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Peek into monster creation"
-#~ msgstr "モンスターの生成をのぞき見る"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Peek into dungeon creation"
-#~ msgstr "ダンジョンの生成をのぞき見る"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Peek into something else"
-#~ msgstr "その他の事をのぞき見る"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Know complete monster info"
 #~ msgstr "完全なモンスターの思い出を知る"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Allow player to avoid death"
-#~ msgstr "死を回避することを可能にする"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Ask for saving death"
@@ -11247,10 +11417,6 @@ msgstr "☆"
 #~ msgstr "メッセージをロードしました"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Too many items in the inventory"
-#~ msgstr "持ち物の中のアイテムが多すぎる！"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Unable to read inventory"
 #~ msgstr "持ち物情報を読み込むことができません"
 
@@ -12790,10 +12956,6 @@ msgstr "☆"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Add how many charges for %d gold apiece? "
 #~ msgstr "一回分＄%d で何回分充填しますか？"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "No need to recharge."
-#~ msgstr "充填する必要はありません。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You need %d gold to recharge all items!"
@@ -23949,19 +24111,6 @@ msgstr "☆"
 #~ msgstr "全感知"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "Word of Recall"
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "帰還の呪文\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "帰還の詔\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "帰還の呪文\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "帰還の呪文"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Clairvoyance"
 #~ msgstr "千里眼"
 
@@ -26988,10 +27137,6 @@ msgstr "☆"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "res.confuse"
 #~ msgstr "耐混乱"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "res. sound"
-#~ msgstr "耐轟音"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "res. shard"

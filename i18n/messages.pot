@@ -1,13 +1,13 @@
-#: ../src/cmd-cave.c:1161 ../src/player-attack.c:729
+#: ../src/cmd-cave.c:1173 ../src/player-attack.c:729
 #, c-format
 msgid "You are too afraid to attack %s!"
 msgstr ""
 
-#: ../src/cmd-cave.c:1179
+#: ../src/cmd-cave.c:1191
 msgid "There is a pile of rubble in the way!"
 msgstr ""
 
-#: ../src/cmd-cave.c:1185
+#: ../src/cmd-cave.c:1197
 msgid "There is a wall in the way!"
 msgstr ""
 
@@ -1151,4 +1151,181 @@ msgstr ""
 
 #: ../src/ui-mon-lore.c:55
 msgid "The "
+msgstr ""
+
+#: ../src/list-options.h:14
+msgid "Use the roguelike command keyset"
+msgstr ""
+
+#: ../src/list-options.h:16
+msgid "Use sound"
+msgstr ""
+
+#: ../src/list-options.h:18
+msgid "Show damage player deals to monsters"
+msgstr ""
+
+#: ../src/list-options.h:20
+msgid "Use old target by default"
+msgstr ""
+
+#: ../src/list-options.h:22
+msgid "Always pickup items"
+msgstr ""
+
+#: ../src/list-options.h:24
+msgid "Always pickup items matching inventory"
+msgstr ""
+
+#: ../src/list-options.h:26
+msgid "Show flavors in object descriptions"
+msgstr ""
+
+#: ../src/list-options.h:28
+msgid "Highlight target with cursor"
+msgstr ""
+
+#: ../src/list-options.h:30
+msgid "Highlight player with cursor between turns"
+msgstr ""
+
+#: ../src/list-options.h:32
+msgid "Disturb whenever viewable monster moves"
+msgstr ""
+
+#: ../src/list-options.h:34
+msgid "Show walls as solid blocks"
+msgstr ""
+
+#: ../src/list-options.h:36
+msgid "Show walls with shaded background"
+msgstr ""
+
+#: ../src/list-options.h:38
+msgid "Color: Illuminate torchlight in yellow"
+msgstr ""
+
+#: ../src/list-options.h:40
+msgid "Color: Shimmer multi-colored things"
+msgstr ""
+
+#: ../src/list-options.h:42
+msgid "Center map continuously"
+msgstr ""
+
+#: ../src/list-options.h:44
+msgid "Color: Show unique monsters in purple"
+msgstr ""
+
+#: ../src/list-options.h:46
+msgid "Automatically clear '-more-' prompts"
+msgstr ""
+
+#: ../src/list-options.h:48
+#, c-format
+msgid "Color: Player color indicates % hit points"
+msgstr ""
+
+#: ../src/list-options.h:50
+msgid "Allow mouse clicks to move the player"
+msgstr ""
+
+#: ../src/list-options.h:52
+msgid "Notify on object recharge"
+msgstr ""
+
+#: ../src/list-options.h:54
+msgid "Show effective speed as multiplier"
+msgstr ""
+
+#: ../src/list-options.h:56
+msgid "Cheat: Peek into monster creation"
+msgstr ""
+
+#: ../src/list-options.h:58
+msgid "Score: Peek into monster creation"
+msgstr ""
+
+#: ../src/list-options.h:60
+msgid "Cheat: Peek into dungeon creation"
+msgstr ""
+
+#: ../src/list-options.h:62
+msgid "Score: Peek into dungeon creation"
+msgstr ""
+
+#: ../src/list-options.h:64
+msgid "Cheat: Peek into something else"
+msgstr ""
+
+#: ../src/list-options.h:66
+msgid "Score: Peek into something else"
+msgstr ""
+
+#: ../src/list-options.h:68
+msgid "Cheat: Allow player to avoid death"
+msgstr ""
+
+#: ../src/list-options.h:70
+msgid "Score: Allow player to avoid death"
+msgstr ""
+
+#: ../src/list-options.h:72
+msgid "Generate a new, random artifact set"
+msgstr ""
+
+#: ../src/list-options.h:74
+msgid "Generate connected stairs"
+msgstr ""
+
+#: ../src/list-options.h:76
+msgid "Force player descent (never make up stairs)"
+msgstr ""
+
+#: ../src/list-options.h:78
+msgid "Word of Recall has no effect"
+msgstr ""
+
+#: ../src/list-options.h:80
+msgid "Restrict creation of artifacts"
+msgstr ""
+
+#: ../src/list-options.h:82
+msgid "Stack objects on the floor"
+msgstr ""
+
+#: ../src/list-options.h:84
+msgid "Lose artifacts when leaving level"
+msgstr ""
+
+#: ../src/list-options.h:86
+msgid "Show level feelings"
+msgstr ""
+
+#: ../src/list-options.h:88
+msgid "Increase gold drops but disable selling"
+msgstr ""
+
+#: ../src/list-options.h:90
+msgid "Start with a kit of useful gear"
+msgstr ""
+
+#: ../src/list-options.h:92
+msgid "Monsters learn from their mistakes"
+msgstr ""
+
+#: ../src/list-options.h:94
+msgid "Know all runes on birth"
+msgstr ""
+
+#: ../src/list-options.h:96
+msgid "Know all flavors on birth"
+msgstr ""
+
+#: ../src/list-options.h:98
+msgid "Persistent levels (experimental)"
+msgstr ""
+
+#: ../src/list-options.h:100
+msgid "To-damage is a percentage of dice (experimental)"
 msgstr ""
