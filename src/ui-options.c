@@ -120,7 +120,8 @@ static void option_toggle_display(struct menu *m, int oid, bool cursor,
 	uint8_t attr = curs_attrs[CURS_KNOWN][cursor != 0];
 	bool *options = menu_priv(m);
 
-	c_prt(attr, format("%-45s: %s  (%s)", option_desc(oid),
+	const char *desc = option_desc(oid);
+	c_prt(attr, format("%-*s: %s  (%s)", (int)(45-(i18n_visualwidth(desc)-strlen(desc))), desc,
 			options[oid] ? "yes" : "no ", option_name(oid)), row, col);
 }
 

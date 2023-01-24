@@ -1,7 +1,16 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: ja\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: ../src/cmd-cave.c:1173 ../src/player-attack.c:729
 #, c-format
@@ -545,7 +554,6 @@ msgstr ""
 msgid "%s point"
 msgid_plural "%s points"
 msgstr[0] ""
-msgstr[1] ""
 
 #: ../src/mon-lore.c:1192
 #, c-format
@@ -918,6 +926,60 @@ msgstr ""
 #: ../src/obj-gear.c:1380
 #, c-format
 msgid "You no longer have %s."
+msgstr ""
+
+#: ../src/option.c:48
+msgid "interface"
+msgstr "インタフェース"
+
+#: ../src/option.c:52
+msgid "birth"
+msgstr "誕生"
+
+#: ../src/option.c:56
+msgid "cheat"
+msgstr "チート"
+
+#: ../src/option.c:60
+msgid "score"
+msgstr "スコア"
+
+#: ../src/option.c:64
+msgid "special"
+msgstr "特別"
+
+#: ../src/option.c:68
+msgid "unknown"
+msgstr "不明"
+
+#: ../src/option.c:185
+#, c-format
+msgid "# These are customized defaults for the %s options.\n"
+msgstr ""
+
+#: ../src/option.c:188
+msgid ""
+"# All lines begin with \"option:\" followed by the internal option name.\n"
+msgstr ""
+
+#: ../src/option.c:191
+msgid ""
+"# After the name is a colon followed by yes or no for the option's state.\n"
+msgstr ""
+
+#: ../src/option.c:256
+#, c-format
+msgid "Unrecognized option at line %d of the customized %s options."
+msgstr ""
+
+#: ../src/option.c:274
+#, c-format
+msgid "Value at line %d of the customized %s options is not yes or no."
+msgstr ""
+
+#: ../src/option.c:283
+#, c-format
+msgid "Line %d of the customized %s options is not parseable."
 msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
@@ -1298,23 +1360,20 @@ msgstr "お待ち下さい..."
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-mon-lore.c:55
 msgid "The "
-msgstr "☆"
+msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:14
-#, fuzzy
 msgid "Use the roguelike command keyset"
 msgstr "ローグ風キー配置を使用する"
 
-# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:16
-#, fuzzy
 msgid "Use sound"
-msgstr "耐轟音"
+msgstr "音を鳴らす"
 
 #: ../src/list-options.h:18
 msgid "Show damage player deals to monsters"
-msgstr ""
+msgstr "モンスターに与えたダメージを表示する"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:20
@@ -1323,33 +1382,26 @@ msgstr "常に以前のターゲットを指定する"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:22
-#, fuzzy
 msgid "Always pickup items"
-msgstr "アイテムを拾う (現在:ON)"
+msgstr "常にアイテムを拾う"
 
-# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:24
-#, fuzzy
 msgid "Always pickup items matching inventory"
-msgstr "持ち物の中のアイテムが多すぎる！"
+msgstr "持ち物に一致するアイテムを拾う"
 
-# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:26
-#, fuzzy
 msgid "Show flavors in object descriptions"
-msgstr "アイテムの記述を簡略にする"
+msgstr "アイテムの詳細にフレーバーテキストを表示する"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:28
-#, fuzzy
 msgid "Highlight target with cursor"
-msgstr "プレイヤーにカーソルを合わせる"
+msgstr "ターゲットにカーソルを合わせる"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:30
-#, fuzzy
 msgid "Highlight player with cursor between turns"
-msgstr "プレイヤーにカーソルを合わせる"
+msgstr "ターン間ではプレイヤーにカーソルを合わせる"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:32
@@ -1358,27 +1410,27 @@ msgstr "視界内のモンスターが動いたら行動を中止する"
 
 #: ../src/list-options.h:34
 msgid "Show walls as solid blocks"
-msgstr ""
+msgstr "壁をブロックで描画する"
 
 #: ../src/list-options.h:36
 msgid "Show walls with shaded background"
-msgstr ""
+msgstr "壁の背景を暗くする"
 
 #: ../src/list-options.h:38
 msgid "Color: Illuminate torchlight in yellow"
-msgstr ""
+msgstr "色: 明かりを黄色で描画する"
 
 #: ../src/list-options.h:40
 msgid "Color: Shimmer multi-colored things"
-msgstr ""
+msgstr "色: 多色のタイルを揺らめかせる"
 
 #: ../src/list-options.h:42
 msgid "Center map continuously"
-msgstr ""
+msgstr "常にプレイヤーをマップの中央に置く"
 
 #: ../src/list-options.h:44
 msgid "Color: Show unique monsters in purple"
-msgstr ""
+msgstr "色: ユニークモンスターを紫にする"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:46
@@ -1386,153 +1438,121 @@ msgid "Automatically clear '-more-' prompts"
 msgstr "キー待ちしないで連続でメッセージを表示する"
 
 #: ../src/list-options.h:48
-#, c-format
 msgid "Color: Player color indicates % hit points"
-msgstr ""
+msgstr "色: プレイヤーの色でHPの割合を表す"
 
 #: ../src/list-options.h:50
 msgid "Allow mouse clicks to move the player"
-msgstr ""
+msgstr "マウスのクリックでプレイヤーを移動させる"
 
-# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:52
-#, fuzzy
 msgid "Notify on object recharge"
-msgstr "充填する必要はありません。"
+msgstr "アイテムの再充填を知らせる"
 
 #: ../src/list-options.h:54
 msgid "Show effective speed as multiplier"
-msgstr ""
+msgstr "スピードを倍率で表示する"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:56
-#, fuzzy
 msgid "Cheat: Peek into monster creation"
-msgstr "モンスターの生成をのぞき見る"
+msgstr "チート: モンスターの生成をのぞき見る"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:58
-#, fuzzy
 msgid "Score: Peek into monster creation"
-msgstr "モンスターの生成をのぞき見る"
+msgstr "スコア: モンスターの生成をのぞき見る"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:60
-#, fuzzy
 msgid "Cheat: Peek into dungeon creation"
-msgstr "ダンジョンの生成をのぞき見る"
+msgstr "チート: ダンジョンの生成をのぞき見る"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:62
-#, fuzzy
 msgid "Score: Peek into dungeon creation"
-msgstr "ダンジョンの生成をのぞき見る"
+msgstr "スコア: ダンジョンの生成をのぞき見る"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:64
-#, fuzzy
 msgid "Cheat: Peek into something else"
-msgstr "その他の事をのぞき見る"
+msgstr "チート: その他の事をのぞき見る"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:66
-#, fuzzy
 msgid "Score: Peek into something else"
-msgstr "その他の事をのぞき見る"
+msgstr "スコア: その他の事をのぞき見る"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:68
-#, fuzzy
 msgid "Cheat: Allow player to avoid death"
-msgstr "死を回避することを可能にする"
+msgstr "チート: 死を回避することを可能にする"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:70
-#, fuzzy
 msgid "Score: Allow player to avoid death"
-msgstr "死を回避することを可能にする"
+msgstr "スコア: 死を回避することを可能にする"
 
-# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:72
-#, fuzzy
 msgid "Generate a new, random artifact set"
-msgstr "ランダムアーティファクトの入手を記録する"
+msgstr "新たにランダムアーティファクト集を生成する"
 
-# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:74
-#, fuzzy
 msgid "Generate connected stairs"
-msgstr "下り階段生成に失敗"
+msgstr "行き来できる階段を生成する"
 
 #: ../src/list-options.h:76
 msgid "Force player descent (never make up stairs)"
-msgstr ""
+msgstr "下りを強制する（上り階段を生成しない）"
 
-# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:78
-#, fuzzy
 msgid "Word of Recall has no effect"
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"帰還の呪文\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"帰還の詔\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"帰還の呪文\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"帰還の呪文"
+msgstr "帰還の詔を無効にする"
 
-# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:80
-#, fuzzy
 msgid "Restrict creation of artifacts"
-msgstr "ランダムアーティファクトの入手を記録する"
+msgstr "アーティファクトを生成しない"
 
-# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:82
-#, fuzzy
 msgid "Stack objects on the floor"
-msgstr "「~」 (放置)"
+msgstr "床のアイテムを積み上げる"
 
 #: ../src/list-options.h:84
 msgid "Lose artifacts when leaving level"
-msgstr ""
+msgstr "階を去るとアーティファクトを失う"
 
-# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:86
-#, fuzzy
 msgid "Show level feelings"
-msgstr "階の雰囲気(^f)"
+msgstr "階の雰囲気を表示する"
 
 #: ../src/list-options.h:88
 msgid "Increase gold drops but disable selling"
-msgstr ""
+msgstr "お金のドロップを増やすが、売却を無効にする"
 
 #: ../src/list-options.h:90
 msgid "Start with a kit of useful gear"
-msgstr ""
+msgstr "便利なアイテムを入手した状態で始める"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:92
-#, fuzzy
 msgid "Monsters learn from their mistakes"
-msgstr "モンスターは失敗を学習する(*)"
+msgstr "モンスターは失敗を学習する"
 
 #: ../src/list-options.h:94
 msgid "Know all runes on birth"
-msgstr ""
+msgstr "全てのルーンを知っている状態で始める"
 
 #: ../src/list-options.h:96
 msgid "Know all flavors on birth"
-msgstr ""
+msgstr "全てのフレーバーを知っている状態で始める"
 
 #: ../src/list-options.h:98
 msgid "Persistent levels (experimental)"
-msgstr ""
+msgstr "階を維持する（実験的）"
 
 #: ../src/list-options.h:100
 msgid "To-damage is a percentage of dice (experimental)"
-msgstr ""
+msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "The dungeon absorbs all attempted magic!"
@@ -4697,23 +4717,6 @@ msgstr ""
 #~ "\n"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "unknown"
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "未知\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "不明\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "未知の\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "未知\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "未知\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "未知"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "# Color '%s'\n"
 #~ msgstr "# カラー '%s'\n"
 
@@ -7651,10 +7654,6 @@ msgstr ""
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "excellent"
 #~ msgstr "高級品"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "special"
-#~ msgstr "特別製"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid " (Multiple Traps)"
@@ -10635,10 +10634,6 @@ msgstr ""
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid " %2d:%02d %20s reset recall level of %s to %d %s.\n"
 #~ msgstr " %2d:%02d %20s %s%sの最深階を%d階にセットした。\n"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "the surface"
-#~ msgstr "地上"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "level %d"

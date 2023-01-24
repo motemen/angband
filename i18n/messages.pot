@@ -792,6 +792,60 @@ msgstr ""
 msgid "You no longer have %s."
 msgstr ""
 
+#: ../src/option.c:48
+msgid "interface"
+msgstr ""
+
+#: ../src/option.c:52
+msgid "birth"
+msgstr ""
+
+#: ../src/option.c:56
+msgid "cheat"
+msgstr ""
+
+#: ../src/option.c:60
+msgid "score"
+msgstr ""
+
+#: ../src/option.c:64
+msgid "special"
+msgstr ""
+
+#: ../src/option.c:68
+msgid "unknown"
+msgstr ""
+
+#: ../src/option.c:185
+#, c-format
+msgid "# These are customized defaults for the %s options.\n"
+msgstr ""
+
+#: ../src/option.c:188
+msgid ""
+"# All lines begin with \"option:\" followed by the internal option name.\n"
+msgstr ""
+
+#: ../src/option.c:191
+msgid ""
+"# After the name is a colon followed by yes or no for the option's state.\n"
+msgstr ""
+
+#: ../src/option.c:256
+#, c-format
+msgid "Unrecognized option at line %d of the customized %s options."
+msgstr ""
+
+#: ../src/option.c:274
+#, c-format
+msgid "Value at line %d of the customized %s options is not yes or no."
+msgstr ""
+
+#: ../src/option.c:283
+#, c-format
+msgid "Line %d of the customized %s options is not parseable."
+msgstr ""
+
 #: ../src/player-attack.c:715
 msgid "punch"
 msgstr ""
@@ -1222,7 +1276,6 @@ msgid "Automatically clear '-more-' prompts"
 msgstr ""
 
 #: ../src/list-options.h:48
-#, c-format
 msgid "Color: Player color indicates % hit points"
 msgstr ""
 
