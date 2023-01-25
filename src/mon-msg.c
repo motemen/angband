@@ -269,8 +269,10 @@ static void get_subject(char *buf, size_t buflen,
 	if (offscreen)
 		my_strcat(buf, _(" (offscreen)"), buflen);
 
+ #ifndef LOCALE_NO_WORD_DIVIDER
 	/* Add a separator */
 	my_strcat(buf, " ", buflen);
+#endif
 }
 
 /* State machine constants for get_message_text() */
@@ -294,8 +296,9 @@ static void get_message_text(char *buf, size_t buflen,
 	assert(race->base->pain != NULL);
 
 	/* Find the appropriate message */
-	const char *source = _(msg_repository[msg_code].msg);
+	const char *source = _GAMEDATA_C("list-mon-message", msg_repository[msg_code].msg);
 	switch (msg_code) {
+		// TODO[i18n]: use _GAMEDATA_C("pain")
 		case MON_MSG_95: source = race->base->pain->messages[0]; break;
 		case MON_MSG_75: source = race->base->pain->messages[1]; break;
 		case MON_MSG_50: source = race->base->pain->messages[2]; break;

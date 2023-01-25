@@ -1,6 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Angband 4.2.4\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -8,268 +10,269 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: ../src/list-mon-message.h:12
 msgctxt "list-mon-message"
 msgid "[is|are] hurt."
-msgstr ""
+msgstr "は傷ついた。"
 
 #: ../src/list-mon-message.h:13
 msgctxt "list-mon-message"
 msgid "die[s]."
-msgstr ""
+msgstr "は死んだ。"
 
 #: ../src/list-mon-message.h:14
 msgctxt "list-mon-message"
 msgid "[is|are] destroyed."
-msgstr ""
+msgstr "は破壊された。"
 
 #: ../src/list-mon-message.h:15
 msgctxt "list-mon-message"
 msgid "resist[s] a lot."
-msgstr ""
+msgstr "にはかなり耐性がある。"
 
 #: ../src/list-mon-message.h:16
 msgctxt "list-mon-message"
 msgid "[is|are] hit hard."
-msgstr ""
+msgstr "はひどい痛手を受けた。"
 
 #: ../src/list-mon-message.h:17
 msgctxt "list-mon-message"
 msgid "resist[s]."
-msgstr ""
+msgstr "には耐性がある。"
 
 #: ../src/list-mon-message.h:18
 msgctxt "list-mon-message"
 msgid "[is|are] immune."
-msgstr ""
+msgstr "には完全な耐性がある。"
 
 #: ../src/list-mon-message.h:19
 msgctxt "list-mon-message"
 msgid "resist[s] somewhat."
-msgstr ""
+msgstr "はいくらか耐性がある。"
 
 #: ../src/list-mon-message.h:20
 msgctxt "list-mon-message"
 msgid "[is|are] unaffected!"
-msgstr ""
+msgstr "には影響がなかった！"
 
 #: ../src/list-mon-message.h:21
 msgctxt "list-mon-message"
 msgid "spawn[s]!"
-msgstr ""
+msgstr "が分裂した！"
 
 #: ../src/list-mon-message.h:22
 msgctxt "list-mon-message"
 msgid "look[s] healthier."
-msgstr ""
+msgstr "は元気になったようだ。"
 
 #: ../src/list-mon-message.h:23
 msgctxt "list-mon-message"
 msgid "fall[s] asleep!"
-msgstr ""
+msgstr "は眠ってしまった！"
 
 #: ../src/list-mon-message.h:24
 msgctxt "list-mon-message"
 msgid "wake[s] up."
-msgstr ""
+msgstr "は目を覚ました。"
 
 #: ../src/list-mon-message.h:25
 msgctxt "list-mon-message"
 msgid "cringe[s] from the light!"
-msgstr ""
+msgstr "は光に身をすくめた！"
 
 #: ../src/list-mon-message.h:26
 msgctxt "list-mon-message"
 msgid "shrivel[s] away in the light!"
-msgstr ""
+msgstr "は光を受けてしぼんでしまった！"
 
 #: ../src/list-mon-message.h:27
 msgctxt "list-mon-message"
 msgid "lose[s] some skin!"
-msgstr ""
+msgstr "の表皮が失われた！"
 
 #: ../src/list-mon-message.h:28
 msgctxt "list-mon-message"
 msgid "dissolve[s]!"
-msgstr ""
+msgstr "は溶けてしまった！"
 
 #: ../src/list-mon-message.h:29
 msgctxt "list-mon-message"
 msgid "catch[es] fire!"
-msgstr ""
+msgstr "に火がついた！"
 
 #: ../src/list-mon-message.h:30
 msgctxt "list-mon-message"
 msgid "[is|are] badly frozen."
-msgstr ""
+msgstr "は凍ってしまった。"
 
 #: ../src/list-mon-message.h:31
 msgctxt "list-mon-message"
 msgid "shudder[s]."
-msgstr ""
+msgstr "は身震いした。"
 
 #: ../src/list-mon-message.h:32
 msgctxt "list-mon-message"
 msgid "change[s]!"
-msgstr ""
+msgstr "が変身した！"
 
 #: ../src/list-mon-message.h:33
 msgctxt "list-mon-message"
 msgid "disappear[s]!"
-msgstr ""
+msgstr "の姿が消えた！"
 
 #: ../src/list-mon-message.h:34
 msgctxt "list-mon-message"
 msgid "[is|are] even more stunned."
-msgstr ""
+msgstr "はさらに朦朧としている。"
 
 #: ../src/list-mon-message.h:35
 msgctxt "list-mon-message"
 msgid "[is|are] stunned."
-msgstr ""
+msgstr "は朦朧としている。"
 
 #: ../src/list-mon-message.h:36
 msgctxt "list-mon-message"
 msgid "[is|are] no longer stunned."
-msgstr ""
+msgstr "は朦朧状態から立ち直った。"
 
 #: ../src/list-mon-message.h:37
 msgctxt "list-mon-message"
 msgid "look[s] more confused."
-msgstr ""
+msgstr "はさらに混乱したようだ。"
 
 #: ../src/list-mon-message.h:38
 msgctxt "list-mon-message"
 msgid "look[s] confused."
-msgstr ""
+msgstr "は混乱したようだ。"
 
 #: ../src/list-mon-message.h:39
 msgctxt "list-mon-message"
 msgid "[is|are] no longer confused."
-msgstr ""
+msgstr "はもう混乱していない。"
 
 #: ../src/list-mon-message.h:40
 msgctxt "list-mon-message"
 msgid "look[s] more slowed."
-msgstr ""
+msgstr "はさらに遅くなったようだ。"
 
 #: ../src/list-mon-message.h:41
 msgctxt "list-mon-message"
 msgid "look[s] slowed."
-msgstr ""
+msgstr "の動きが遅くなった。"
 
 #: ../src/list-mon-message.h:42
 msgctxt "list-mon-message"
 msgid "speed[s] up."
-msgstr ""
+msgstr "の速さが元に戻った。"
 
 #: ../src/list-mon-message.h:43
 msgctxt "list-mon-message"
 msgid "look[s] even faster!"
-msgstr ""
+msgstr "はさらに速くなったようだ！"
 
 #: ../src/list-mon-message.h:44
 msgctxt "list-mon-message"
 msgid "start[s] moving faster."
-msgstr ""
+msgstr "の動きが速くなった。"
 
 #: ../src/list-mon-message.h:45
 msgctxt "list-mon-message"
 msgid "slow[s] down."
-msgstr ""
+msgstr "の動きが遅くなった。"
 
 #: ../src/list-mon-message.h:46
 msgctxt "list-mon-message"
 msgid "look[s] more terrified!"
-msgstr ""
+msgstr "はさらに恐怖したようだ！"
 
 #: ../src/list-mon-message.h:47
 msgctxt "list-mon-message"
 msgid "flee[s] in terror!"
-msgstr ""
+msgstr "は恐怖に逃げ出した！"
 
 #: ../src/list-mon-message.h:48
 msgctxt "list-mon-message"
 msgid "[is|are] no longer afraid."
-msgstr ""
+msgstr "は恐怖から立ち直った。"
 
 #: ../src/list-mon-message.h:49
 msgctxt "list-mon-message"
 msgid "[is|are] frozen to the spot!"
-msgstr ""
+msgstr "は氷漬けにされた！"
 
 #: ../src/list-mon-message.h:50
 msgctxt "list-mon-message"
 msgid "can move again."
-msgstr ""
+msgstr "は動けるようになった。"
 
 #: ../src/list-mon-message.h:51
 msgctxt "list-mon-message"
 msgid "seem[s] less magical!"
-msgstr ""
+msgstr "の魔法の力が弱まったようだ！"
 
 #: ../src/list-mon-message.h:52
 msgctxt "list-mon-message"
 msgid "seem[s] magical again."
-msgstr ""
+msgstr "は魔法の力を取り戻した。"
 
 #: ../src/list-mon-message.h:53
 msgctxt "list-mon-message"
 msgid "falls under your spell!"
-msgstr ""
+msgstr "はあなたの言葉に従い始めた！"
 
 #: ../src/list-mon-message.h:54
 msgctxt "list-mon-message"
 msgid "is no longer under your control."
-msgstr ""
+msgstr "はもう操られていない。"
 
 #: ../src/list-mon-message.h:55
 msgctxt "list-mon-message"
 msgid "shimmers for a moment."
-msgstr ""
+msgstr "は一瞬ゆらめいた。"
 
 #: ../src/list-mon-message.h:56
 msgctxt "list-mon-message"
 msgid "You hear [a|several] scream[|s] of agony!"
-msgstr ""
+msgstr "苦痛の叫び声が聞こえてきた！"
 
 #: ../src/list-mon-message.h:57
 msgctxt "list-mon-message"
 msgid "disintegrate[s]!"
-msgstr ""
+msgstr "は崩壊した！"
 
 #: ../src/list-mon-message.h:58
 msgctxt "list-mon-message"
 msgid "freeze[s] and shatter[s]!"
-msgstr ""
+msgstr "は凍ってバラバラになった！"
 
 #: ../src/list-mon-message.h:59
 msgctxt "list-mon-message"
 msgid "lose[s] some mana!"
-msgstr ""
+msgstr "はマナを失った！"
 
 #: ../src/list-mon-message.h:60
 msgctxt "list-mon-message"
 msgid "look[s] briefly puzzled."
-msgstr ""
+msgstr "は少し困っているようだ。"
 
 #: ../src/list-mon-message.h:61
 msgctxt "list-mon-message"
 msgid "maintain[s] the same shape."
-msgstr ""
+msgstr "は姿を保っている。"
 
 #: ../src/list-mon-message.h:62
 msgctxt "list-mon-message"
 msgid "[is|are] unharmed."
-msgstr ""
+msgstr "は無傷だ。"
 
 #: ../src/list-mon-message.h:63
 msgctxt "list-mon-message"
 msgid "appear[s]!"
-msgstr ""
+msgstr "が現れた！"
 
 #: ../src/list-mon-message.h:64
 msgctxt "list-mon-message"
 msgid "There is a puff of smoke!"
-msgstr ""
+msgstr "煙が吹き出した！"

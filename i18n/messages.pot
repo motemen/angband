@@ -641,6 +641,61 @@ msgstr ""
 msgid " damage on each of %s turns.  "
 msgstr ""
 
+#: ../src/mon-move.c:1113
+msgid "stumbles"
+msgstr ""
+
+#: ../src/mon-move.c:1240
+#, c-format
+msgid "%s slams against the door."
+msgstr ""
+
+#: ../src/mon-move.c:1242
+#, c-format
+msgid "%s fiddles with the lock."
+msgstr ""
+
+#: ../src/mon-move.c:1264
+msgid "You hear a door burst open!"
+msgstr ""
+
+#: ../src/mon-move.c:1302
+msgid "The rune of protection is broken!"
+msgstr ""
+
+#: ../src/mon-move.c:1352
+#, c-format
+msgid "%s %s %s."
+msgstr ""
+
+#: ../src/mon-move.c:1352
+msgid "tramples over"
+msgstr ""
+
+#: ../src/mon-move.c:1352
+msgid "pushes past"
+msgstr ""
+
+#: ../src/mon-move.c:1426
+#, c-format
+msgid "%s tries to pick up %s, but fails."
+msgstr ""
+
+#: ../src/mon-move.c:1449
+#, c-format
+msgid "%s picks up %s."
+msgstr ""
+
+#: ../src/mon-move.c:1463
+#, c-format
+msgid "%s crushes %s."
+msgstr ""
+
+#: ../src/mon-move.c:1736
+#, c-format
+msgid "%s wakes up."
+msgstr ""
+
 #: ../src/mon-msg.c:247
 #, c-format
 msgid "%d monsters"
@@ -649,6 +704,10 @@ msgstr ""
 #: ../src/mon-msg.c:254
 #, c-format
 msgid "The %s"
+msgstr ""
+
+#: ../src/mon-msg.c:270
+msgid " (offscreen)"
 msgstr ""
 
 #: ../src/mon-util.c:1060

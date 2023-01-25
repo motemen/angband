@@ -762,6 +762,72 @@ msgstr ""
 msgid " damage on each of %s turns.  "
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-move.c:1113
+#, fuzzy
+msgid "stumbles"
+msgstr "%^sはよろめいた。"
+
+#: ../src/mon-move.c:1240
+#, c-format
+msgid "%s slams against the door."
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-move.c:1242
+#, fuzzy, c-format
+msgid "%s fiddles with the lock."
+msgstr "鍵をはずせなかった。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-move.c:1264
+msgid "You hear a door burst open!"
+msgstr "ドアを叩き開ける音がした！"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-move.c:1302
+msgid "The rune of protection is broken!"
+msgstr "守りのルーンが壊れた！"
+
+#: ../src/mon-move.c:1352
+#, fuzzy, c-format
+msgid "%s %s %s."
+msgstr "%sは%s%s"
+
+#: ../src/mon-move.c:1352
+msgid "tramples over"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-move.c:1352
+#, fuzzy
+msgid "pushes past"
+msgstr "%sを押し退けた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-move.c:1426
+#, fuzzy, c-format
+msgid "%s tries to pick up %s, but fails."
+msgstr "%^sは%sを拾おうとしたが、だめだった。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-move.c:1449
+#, fuzzy, c-format
+msgid "%s picks up %s."
+msgstr "%^sが%sを拾った。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-move.c:1463
+#, fuzzy, c-format
+msgid "%s crushes %s."
+msgstr "%sに体当りした。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-move.c:1736
+#, fuzzy, c-format
+msgid "%s wakes up."
+msgstr "%^sが目を覚ました。"
+
 #: ../src/mon-msg.c:247
 #, c-format
 msgid "%d monsters"
@@ -771,6 +837,10 @@ msgstr "%d匹のモンスター"
 #, c-format
 msgid "The %s"
 msgstr "%s"
+
+#: ../src/mon-msg.c:270
+msgid " (offscreen)"
+msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-util.c:1060
@@ -2464,10 +2534,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "それ以上先には進めない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You push past %s."
-#~ msgstr "%sを押し退けた。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You spit acid..."
 #~ msgstr "酸を吐きかけた..."
 
@@ -2529,10 +2595,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "The %s appears to be stuck."
 #~ msgstr "%sはがっちりと閉じられているようだ。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You failed to pick the lock."
-#~ msgstr "鍵をはずせなかった。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You have picked the lock."
@@ -13749,10 +13811,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "%sを角で突いた。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "crushes %s."
-#~ msgstr "%sに体当りした。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "engulfs %s."
 #~ msgstr "%sを飲み込んだ。"
 
@@ -15725,14 +15783,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "ガラスが砕ける音がした！"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You hear a door burst open!"
-#~ msgstr "ドアを叩き開ける音がした！"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "The rune of protection is broken!"
-#~ msgstr "守りのルーンが壊れた！"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "The rune explodes!"
 #~ msgstr "ルーンが爆発した！"
 
@@ -15767,14 +15817,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "%^s %s"
 #~ msgstr "%^s%s"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "%^s tries to pick up %s, but fails."
-#~ msgstr "%^sは%sを拾おうとしたが、だめだった。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "%^s picks up %s."
-#~ msgstr "%^sが%sを拾った。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "%^s destroys %s."
@@ -16303,10 +16345,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Suddenly, %s transforms!"
 #~ msgstr "突然%sが変身した。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "%^s wakes up."
-#~ msgstr "%^sが目を覚ました。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "%^s suddenly begins unruly!"
