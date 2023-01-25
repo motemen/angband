@@ -267,7 +267,7 @@ static void get_subject(char *buf, size_t buflen,
 	}
 
 	if (offscreen)
-		my_strcat(buf, " (offscreen)", buflen);
+		my_strcat(buf, _(" (offscreen)"), buflen);
 
 	/* Add a separator */
 	my_strcat(buf, " ", buflen);
