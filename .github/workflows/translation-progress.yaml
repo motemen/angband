@@ -1,0 +1,29 @@
+on:
+  push:
+    branches:
+      - ja
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - id: generate-markdown
+        run: |
+          cat i18n/ja_JP/LC_MESSAGES/gamedata.po i18n/ja_JP/LC_MESSAGES/messages.po \
+            | ./utils/translationprogress \
+            | perl -anal -e 'BEGIN { print qq(| File | Progress | % |\n| -- | -- | -- |) } printf qq(| [$F[0]](../blob/HEAD/$F[0]) | $F[1]/$F[2] | ![%.1f%%](https://progress-bar.dev/%d/) |\n), $F[1]/$F[2]*100, $F[1]/$F[2]*100' \
+            | sed -z 's/\n/\\n/g' \
+            | sed 's/^/body=/' \
+            >> $GITHUB_OUTPUT
+
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.update({
+              issue_number: 3,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '${{steps.generate-markdown.outputs.body}}'.replace(/\\n/g, '\n')
+            })
