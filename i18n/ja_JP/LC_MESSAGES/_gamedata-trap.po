@@ -1,6 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Angband 4.2.4\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -8,12 +10,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.2.2\n"
 
+# name
 #: ../lib/gamedata/trap.txt:58
 msgctxt "trap"
 msgid "no trap"
 msgstr ""
 
+# name
 #: ../lib/gamedata/trap.txt:61
 msgctxt "trap"
 msgid "glyph of warding"
@@ -24,6 +29,7 @@ msgctxt "trap"
 msgid "A magical rune which monsters cannot pass without difficulty."
 msgstr ""
 
+# name
 #: ../lib/gamedata/trap.txt:67
 msgctxt "trap"
 msgid "decoy"
@@ -34,6 +40,7 @@ msgctxt "trap"
 msgid "A magical decoy which sounds and looks like the player."
 msgstr ""
 
+# name
 #: ../lib/gamedata/trap.txt:73
 msgctxt "trap"
 msgid "door lock"
@@ -44,61 +51,68 @@ msgctxt "trap"
 msgid "A device which makes a closed door harder to open."
 msgstr ""
 
+# name
 #: ../lib/gamedata/trap.txt:79
 msgctxt "trap"
 msgid "web"
-msgstr ""
+msgstr "蜘蛛の巣"
 
 #: ../lib/gamedata/trap.txt:84
 msgctxt "trap"
 msgid "A tangle of sticky spider webs."
 msgstr ""
 
+# name
 #: ../lib/gamedata/trap.txt:89
 msgctxt "trap"
 msgid "trap door"
-msgstr ""
+msgstr "落とし戸"
 
 #: ../lib/gamedata/trap.txt:98
 msgctxt "trap"
 msgid "It looks like floor, but step incautiously and you will fall through."
 msgstr ""
 
+# name
 #: ../lib/gamedata/trap.txt:103
 msgctxt "trap"
 msgid "pit"
-msgstr ""
+msgstr "落とし穴"
 
 #: ../lib/gamedata/trap.txt:112
 msgctxt "trap"
 msgid "A hole dug to snare the unwary."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:117
 msgctxt "trap"
 msgid "spiked pit"
-msgstr ""
+msgstr "棘の落とし穴"
 
 #: ../lib/gamedata/trap.txt:130
 msgctxt "trap"
 msgid "A hole dug to snare the unwary, with spikes."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:136
 msgctxt "trap"
 msgid "poison pit"
-msgstr ""
+msgstr "毒の落とし穴"
 
 #: ../lib/gamedata/trap.txt:149
 msgctxt "trap"
 msgid "A hole dug to snare the unwary, with poisoned spikes."
 msgstr ""
 
+# name
 #: ../lib/gamedata/trap.txt:157
 msgctxt "trap"
 msgid "strange rune"
-msgstr ""
+msgstr "謎のルーン"
 
+# short description
 #: ../lib/gamedata/trap.txt:157
 msgctxt "trap"
 msgid "rune of summon foe"
@@ -109,6 +123,7 @@ msgctxt "trap"
 msgid "A magical rune which calls a monster to attack you."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:169
 msgctxt "trap"
 msgid "rune of summoning"
@@ -119,6 +134,7 @@ msgctxt "trap"
 msgid "A magical rune which calls up monsters to attack you."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:181
 msgctxt "trap"
 msgid "rune of necromancy"
@@ -129,6 +145,7 @@ msgctxt "trap"
 msgid "A magical rune which calls the undead to attack you."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:193
 msgctxt "trap"
 msgid "rune of dragonsong"
@@ -139,6 +156,7 @@ msgctxt "trap"
 msgid "A magical rune which calls dragons to attack you."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:205
 msgctxt "trap"
 msgid "hellhole"
@@ -149,6 +167,7 @@ msgctxt "trap"
 msgid "A magical rune which calls demons to attack you."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:219
 msgctxt "trap"
 msgid "teleport rune"
@@ -159,11 +178,13 @@ msgctxt "trap"
 msgid "A magical rune which teleports you to a random location."
 msgstr ""
 
+# name
 #: ../lib/gamedata/trap.txt:231
 msgctxt "trap"
 msgid "discolored spot"
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:231
 msgctxt "trap"
 msgid "fire trap"
@@ -174,6 +195,7 @@ msgctxt "trap"
 msgid "A strange coloured spot on the ground - beware its fiery attack."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:244
 msgctxt "trap"
 msgid "acid trap"
@@ -184,11 +206,13 @@ msgctxt "trap"
 msgid "A strange coloured spot on the ground - beware its acidic attack."
 msgstr ""
 
+# name
 #: ../lib/gamedata/trap.txt:257
 msgctxt "trap"
 msgid "dart trap"
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:257
 msgctxt "trap"
 msgid "slow dart"
@@ -199,6 +223,7 @@ msgctxt "trap"
 msgid "A trap which shoots slowing darts."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:272
 msgctxt "trap"
 msgid "strength loss dart"
@@ -209,21 +234,25 @@ msgctxt "trap"
 msgid "A trap which shoots damaging darts."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:286
 msgctxt "trap"
 msgid "dexterity loss dart"
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:300
 msgctxt "trap"
 msgid "constitution loss dart"
 msgstr ""
 
+# name
 #: ../lib/gamedata/trap.txt:314
 msgctxt "trap"
 msgid "gas trap"
-msgstr ""
+msgstr "ガストラップ"
 
+# short description
 #: ../lib/gamedata/trap.txt:314
 msgctxt "trap"
 msgid "blinding gas trap"
@@ -234,6 +263,7 @@ msgctxt "trap"
 msgid "A trap that releases gas to blind you."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:326
 msgctxt "trap"
 msgid "confusion gas trap"
@@ -244,6 +274,7 @@ msgctxt "trap"
 msgid "A trap that releases gas to confuse you."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:338
 msgctxt "trap"
 msgid "poison gas trap"
@@ -254,6 +285,7 @@ msgctxt "trap"
 msgid "A trap that releases gas to poison you."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:350
 msgctxt "trap"
 msgid "sleep gas trap"
@@ -264,11 +296,13 @@ msgctxt "trap"
 msgid "A trap that releases gas to put you to sleep."
 msgstr ""
 
+# name
 #: ../lib/gamedata/trap.txt:362
 msgctxt "trap"
 msgid "alarm"
-msgstr ""
+msgstr "警報"
 
+# short description
 #: ../lib/gamedata/trap.txt:362
 msgctxt "trap"
 msgid "aggravation trap"
@@ -279,6 +313,7 @@ msgctxt "trap"
 msgid "A trap that wakes nearby monsters and impels them toward you."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:375
 msgctxt "trap"
 msgid "siren"
@@ -289,11 +324,13 @@ msgctxt "trap"
 msgid "A trap that wakes nearby monsters."
 msgstr ""
 
+# name
 #: ../lib/gamedata/trap.txt:386
 msgctxt "trap"
 msgid "explosion"
-msgstr ""
+msgstr "爆発"
 
+# short description
 #: ../lib/gamedata/trap.txt:386
 msgctxt "trap"
 msgid "mine trap"
@@ -304,6 +341,7 @@ msgctxt "trap"
 msgid "A trap that blows up the floor."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:399
 msgctxt "trap"
 msgid "blast trap"
@@ -314,11 +352,13 @@ msgctxt "trap"
 msgid "A trap that creates an explosion."
 msgstr ""
 
+# name
 #: ../lib/gamedata/trap.txt:420
 msgctxt "trap"
 msgid "mind blast trap"
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:420
 msgctxt "trap"
 msgid "mind blasting trap"
@@ -329,16 +369,19 @@ msgctxt "trap"
 msgid "A trap that blasts your senses."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:437
 msgctxt "trap"
 msgid "brain smashing trap"
 msgstr ""
 
+# name
 #: ../lib/gamedata/trap.txt:460
 msgctxt "trap"
 msgid "ancient mechanism"
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:460
 msgctxt "trap"
 msgid "rock fall trap"
@@ -349,6 +392,7 @@ msgctxt "trap"
 msgid "A trap that drops a boulder on you."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:476
 msgctxt "trap"
 msgid "earthquake trap"
@@ -359,6 +403,7 @@ msgctxt "trap"
 msgid "A trap that causes an earthquake."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:488
 msgctxt "trap"
 msgid "block fall trap"
@@ -369,6 +414,7 @@ msgctxt "trap"
 msgid "A pressure plate that drops a stone block behind you."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:500
 msgctxt "trap"
 msgid "area blast trap"
@@ -379,11 +425,13 @@ msgctxt "trap"
 msgid "A trap that clears the surrounding area."
 msgstr ""
 
+# name
 #: ../lib/gamedata/trap.txt:516
 msgctxt "trap"
 msgid "trap"
-msgstr ""
+msgstr "罠"
 
+# short description
 #: ../lib/gamedata/trap.txt:516
 msgctxt "trap"
 msgid "blinding flash trap"
@@ -394,6 +442,7 @@ msgctxt "trap"
 msgid "A trap that creates a ball of light."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:529
 msgctxt "trap"
 msgid "blinding trap"
@@ -404,6 +453,7 @@ msgctxt "trap"
 msgid "A trap that envelops you in darkness."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:544
 msgctxt "trap"
 msgid "mana drain trap"
@@ -414,6 +464,7 @@ msgctxt "trap"
 msgid "A trap that drains your mana."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:559
 msgctxt "trap"
 msgid "knife trap"
@@ -424,6 +475,7 @@ msgctxt "trap"
 msgid "A trap designed to bleed you to death."
 msgstr ""
 
+# short description
 #: ../lib/gamedata/trap.txt:574
 msgctxt "trap"
 msgid "petrifying trap"
