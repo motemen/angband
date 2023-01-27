@@ -298,14 +298,13 @@ static void get_message_text(char *buf, size_t buflen,
 	/* Find the appropriate message */
 	const char *source = _GAMEDATA_C("list-mon-message", msg_repository[msg_code].msg);
 	switch (msg_code) {
-		// TODO[i18n]: use _GAMEDATA_C("pain")
-		case MON_MSG_95: source = race->base->pain->messages[0]; break;
-		case MON_MSG_75: source = race->base->pain->messages[1]; break;
-		case MON_MSG_50: source = race->base->pain->messages[2]; break;
-		case MON_MSG_35: source = race->base->pain->messages[3]; break;
-		case MON_MSG_20: source = race->base->pain->messages[4]; break;
-		case MON_MSG_10: source = race->base->pain->messages[5]; break;
-		case MON_MSG_0:  source = race->base->pain->messages[6]; break;
+		case MON_MSG_95: source = _GAMEDATA_C("pain", race->base->pain->messages[0]); break;
+		case MON_MSG_75: source = _GAMEDATA_C("pain", race->base->pain->messages[1]); break;
+		case MON_MSG_50: source = _GAMEDATA_C("pain", race->base->pain->messages[2]); break;
+		case MON_MSG_35: source = _GAMEDATA_C("pain", race->base->pain->messages[3]); break;
+		case MON_MSG_20: source = _GAMEDATA_C("pain", race->base->pain->messages[4]); break;
+		case MON_MSG_10: source = _GAMEDATA_C("pain", race->base->pain->messages[5]); break;
+		case MON_MSG_0:  source = _GAMEDATA_C("pain", race->base->pain->messages[6]); break;
 	}
 
 	int state = MSG_PARSE_NORMAL;

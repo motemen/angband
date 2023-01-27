@@ -17452,3 +17452,374 @@ msgstr ""
 msgctxt "player_timed"
 msgid "Your limbs feel more energetic!"
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:22
+msgctxt "pain"
+msgid "shrug[s] off the attack."
+msgstr "は攻撃に肩をすくめた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:23
+msgctxt "pain"
+msgid "grunt[s] with pain."
+msgstr "は痛みでうなった。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:24
+msgctxt "pain"
+msgid "cr[ies|y] out in pain."
+msgstr "は痛みで叫んだ。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:25
+msgctxt "pain"
+msgid "scream[s] in pain."
+msgstr "は痛みで絶叫した。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:26
+msgctxt "pain"
+msgid "scream[s] in agony."
+msgstr "は苦痛のあまり絶叫した。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:27
+msgctxt "pain"
+msgid "writhe[s] in agony."
+msgstr "は苦痛で身もだえした。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:28
+msgctxt "pain"
+msgid "cr[ies|y] out feebly."
+msgstr "は弱々しく叫んだ。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:31
+msgctxt "pain"
+msgid "barely notice[s]."
+msgstr "はほとんど気にとめていない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:32
+msgctxt "pain"
+msgid "flinch[es]."
+msgstr "はしり込みした。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:33
+msgctxt "pain"
+msgid "squelch[es]."
+msgstr "は縮こまった。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:34
+msgctxt "pain"
+msgid "quiver[s] in pain."
+msgstr "は痛みに震えた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:35
+msgctxt "pain"
+msgid "writhe[s] about."
+msgstr "は身もだえした。"
+
+#: ../lib/gamedata/pain.txt:37
+msgctxt "pain"
+msgid "jerk[s] limply."
+msgstr "は急にだらりとなった。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:41
+msgctxt "pain"
+msgid "snarl[s] with pain."
+msgstr "は痛みでうなった。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:42
+msgctxt "pain"
+msgid "yelp[s] in pain."
+msgstr "は痛みでキャンキャン吠えた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:43
+msgctxt "pain"
+msgid "howl[s] in pain."
+msgstr "は痛みで鳴きわめいた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:44
+msgctxt "pain"
+msgid "howl[s] in agony."
+msgstr "は苦痛のあまり鳴きわめいた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:46
+msgctxt "pain"
+msgid "yelp[s] feebly."
+msgstr "は弱々しく吠えた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:49
+msgctxt "pain"
+msgid "ignore[s] the attack."
+msgstr "は攻撃を気にとめていない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:51
+msgctxt "pain"
+msgid "squeal[s] in pain."
+msgstr "は痛みで叫んだ。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:52
+msgctxt "pain"
+msgid "shriek[s] in pain."
+msgstr "は痛みで絶叫した。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:53
+msgctxt "pain"
+msgid "shriek[s] in agony."
+msgstr "は苦痛のあまり絶叫した。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:59
+msgctxt "pain"
+msgid "hiss[es]."
+msgstr "はシーッと鳴いた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:60
+msgctxt "pain"
+msgid "rear[s] up in anger."
+msgstr "は怒って頭を上げた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:61
+msgctxt "pain"
+msgid "hiss[es] furiously."
+msgstr "は猛然と威嚇した。"
+
+#: ../lib/gamedata/pain.txt:68
+msgctxt "pain"
+msgid "snarl[s]."
+msgstr "は唸った。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:69
+msgctxt "pain"
+msgid "growl[s] angrily."
+msgstr "は怒って吠えた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:70
+msgctxt "pain"
+msgid "hiss[es] in pain."
+msgstr "は痛みでシーッと鳴いた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:71
+msgctxt "pain"
+msgid "mewl[s] in pain."
+msgstr "は痛みで弱々しく鳴いた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:72
+msgctxt "pain"
+msgid "hiss[es] in agony."
+msgstr "は苦痛にうめいた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:73
+msgctxt "pain"
+msgid "mewl[s] pitifully."
+msgstr "は哀れな鳴き声を出した。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:77
+msgctxt "pain"
+msgid "drone[s] angrily."
+msgstr "は怒って吠えた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:78
+msgctxt "pain"
+msgid "scuttle[s] about."
+msgstr "はヨロヨロ逃げ回った。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:79
+msgctxt "pain"
+msgid "twitch[es] in pain."
+msgstr "は痛みに引きつった。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:80
+msgctxt "pain"
+msgid "jerk[s] in pain."
+msgstr "は痛みに痙攣した。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:81
+msgctxt "pain"
+msgid "jerk[s] in agony."
+msgstr "は苦痛で痙攣した。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:82
+msgctxt "pain"
+msgid "jerk[s] feebly."
+msgstr "は弱々しく吠えた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:86
+msgctxt "pain"
+msgid "flap[s] angrily."
+msgstr "は怒って吠えた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:87
+msgctxt "pain"
+msgid "jeer[s] in pain."
+msgstr "は痛みに痙攣した。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:88
+msgctxt "pain"
+msgid "squawk[s] with pain."
+msgstr "は痛みに吠えた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:89
+msgctxt "pain"
+msgid "twitter[s] in agony."
+msgstr "は苦痛にさえずった。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:90
+msgctxt "pain"
+msgid "flutter[s] about."
+msgstr "は羽ばたいた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:91
+msgctxt "pain"
+msgid "chirp[s] feebly."
+msgstr "は弱々しくさえずった。"
+
+#: ../lib/gamedata/pain.txt:95
+msgctxt "pain"
+msgid "jerk[s]."
+msgstr "は引きつった。"
+
+#: ../lib/gamedata/pain.txt:96
+msgctxt "pain"
+msgid "rattle[s]."
+msgstr "はカタカタ鳴った。"
+
+#: ../lib/gamedata/pain.txt:97
+msgctxt "pain"
+msgid "clatter[s]."
+msgstr "はガタガタ鳴った。"
+
+#: ../lib/gamedata/pain.txt:98
+msgctxt "pain"
+msgid "shake[s]."
+msgstr "は揺れた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:99
+msgctxt "pain"
+msgid "stagger[s]."
+msgstr "はよろめいた。"
+
+#: ../lib/gamedata/pain.txt:100
+msgctxt "pain"
+msgid "crumple[s]."
+msgstr "はぐしゃりと潰れた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:104
+msgctxt "pain"
+msgid "grunt[s]."
+msgstr "はぶつぶつ言った。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:106
+msgctxt "pain"
+msgid "moan[s]."
+msgstr "はうめいた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:107
+msgctxt "pain"
+msgid "groan[s]."
+msgstr "はうめき声を上げた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/pain.txt:108
+msgctxt "pain"
+msgid "hesitate[s]."
+msgstr "は躊躇した。"
+
+#: ../lib/gamedata/pain.txt:113
+msgctxt "pain"
+msgid "spin[s] fiercely."
+msgstr "は鋭く回転した。"
+
+#: ../lib/gamedata/pain.txt:114
+msgctxt "pain"
+msgid "swirl[s] about."
+msgstr "は渦を巻いた。"
+
+#: ../lib/gamedata/pain.txt:115
+msgctxt "pain"
+msgid "twist[s] around."
+msgstr "は回転した。"
+
+#: ../lib/gamedata/pain.txt:116
+msgctxt "pain"
+msgid "spin[s] slowly."
+msgstr "はゆっくりと回転した。"
+
+#: ../lib/gamedata/pain.txt:117
+msgctxt "pain"
+msgid "swirl[s] weakly."
+msgstr "は弱々しく渦を巻いた。"
+
+#: ../lib/gamedata/pain.txt:118
+msgctxt "pain"
+msgid "twist[s] limply."
+msgstr "はだらりと回転した。"
+
+#: ../lib/gamedata/pain.txt:121
+msgctxt "pain"
+msgid "laugh[s] off the attack."
+msgstr "は攻撃を笑い飛ばした。"
+
+#: ../lib/gamedata/pain.txt:122
+msgctxt "pain"
+msgid "sneer[s]."
+msgstr "はせせら笑った。"
+
+#: ../lib/gamedata/pain.txt:123
+msgctxt "pain"
+msgid "scowl[s]."
+msgstr "は顔をしかめた。"
+
+#: ../lib/gamedata/pain.txt:124
+msgctxt "pain"
+msgid "bellow[s] in rage."
+msgstr "は怒りにうなった。"
+
+#: ../lib/gamedata/pain.txt:125
+msgctxt "pain"
+msgid "scream[s] in fury."
+msgstr "は激怒して叫んだ。"
+
+#: ../lib/gamedata/pain.txt:127
+msgctxt "pain"
+msgid "wince[s]."
+msgstr "はたじろいだ。"

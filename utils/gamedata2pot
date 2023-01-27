@@ -18,6 +18,30 @@ open my $fh, "<", $file or die "Can't open $file: $!";
 
 my $seen = {};
 
+sub emit_msg_entry {
+    my ($msgid) = @_;
+
+    if (ref $msgid eq 'ARRAY') {
+        next if $seen->{ join "\n", @$msgid }++;
+
+        print "#: $file:$.\n";
+        print qq(msgctxt "$type"\n);
+        print qq(msgid ""\n);
+        for (@$msgid) {
+            s/"/\\"/g;
+            print qq("$_"\n);
+        }
+        print qq(msgstr ""\n\n);
+    } else {
+        return if $seen->{$msgid}++;
+
+        print "#: $file:$.\n";
+        print qq(msgctxt "$type"\n);
+        print qq(msgid "$msgid"\n);
+        print qq(msgstr ""\n\n);
+    }
+}
+
 while (<$fh>) {
     chomp;
 
@@ -26,21 +50,12 @@ while (<$fh>) {
         next if $type eq 'blow_effects';
         next if $type eq 'player_timed';
         /^name:[^:]+:(.+)/ or next if $type eq 'object_base';
-
-        next if $seen->{$1}++;
-        print "#: $file:$.\n";
-        print qq(msgctxt "$type"\n);
-        print qq(msgid "$1"\n);
-        print qq(msgstr ""\n\n);
+		emit_msg_entry($1);
     }
 
     if (/^act:(.+)/) {
         next if $type eq 'artifact';
-        next if $seen->{$1}++;
-        print "#: $file:$.\n";
-        print qq(msgctxt "$type"\n);
-        print qq(msgid "$1"\n);
-        print qq(msgstr ""\n\n);
+		emit_msg_entry($1);
     }
 
     if (/^desc:(.+)/) {
@@ -55,24 +70,11 @@ while (<$fh>) {
             }
         }
 
-        next if $seen->{ join "\n", @msgid }++;
-
-        print "#: $file:$.\n";
-        print qq(msgctxt "$type"\n);
-        print qq(msgid ""\n);
-        for (@msgid) {
-            s/"/\\"/g;
-            print qq("$_"\n);
-        }
-        print qq(msgstr ""\n\n);
+		emit_msg_entry([@msgid]);
     }
 
     if (/^slot:.+?:(.+)$/) {
-        next if $seen->{$1}++;
-        print "#: $file:$.\n";
-        print qq(msgctxt "$type"\n);
-        print qq(msgid "$1"\n);
-        print qq(msgstr ""\n\n);
+        emit_msg_entry($1);
     }
 
     if (/^grade:.:\d+:([^:]+):([^:]*)(?::([^:]*))?$/) {
@@ -80,20 +82,15 @@ while (<$fh>) {
 
 		for ($grade_name, $msg1, $msg2) {
             next unless length $_;
-            next if $seen->{$_}++;
-            print "#: $file:$.\n";
-            print qq(msgctxt "$type"\n);
-            print qq(msgid "$_"\n);
-            print qq(msgstr ""\n\n);
+            emit_msg_entry($_);
         }
     }
 
     if (/^(?:on-end|on-increase):(.+)$/) {
-        next if $seen->{$1}++;
-        print "#: $file:$.\n";
-        print qq(msgctxt "$type"\n);
-        print qq(msgid "$1"\n);
-        print qq(msgstr ""\n\n);
+        emit_msg_entry($1);
     }
 
+    if ($type eq 'pain' && /^message:(.+)$/) {
+        emit_msg_entry($1);
+    }
 }

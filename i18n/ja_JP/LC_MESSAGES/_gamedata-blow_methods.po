@@ -95,7 +95,7 @@ msgstr ""
 #: ../lib/gamedata/blow_methods.txt:92
 msgctxt "blow_methods"
 msgid "crushes {target}"
-msgstr "{target}を押し潰した"
+msgstr "{target}にのしかかった"
 
 #: ../lib/gamedata/blow_methods.txt:94
 msgctxt "blow_methods"
