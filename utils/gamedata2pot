@@ -91,5 +91,9 @@ while (<$fh>) {
     } elsif (/^message:(.+)$/) {
         next unless $type eq 'pain';
         emit_msg_entry($1);
+    } elsif (/^title:(.+)$/) {
+        emit_msg_entry($1, "title");
+    } elsif (/^spell:([^:]+)/) {
+        emit_msg_entry($1, "spell");
     }
 }

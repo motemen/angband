@@ -29,6 +29,10 @@ LC_MESSAGES/_gamedata-pain.po: messages-hengband.po
 	# for bootstrapping, allow fuzzy matching
 	msgmerge $< $@ -o $@
 
+LC_MESSAGES/_gamedata-class.po: _hengband-strings.po
+	# for bootstrapping, allow fuzzy matching
+	msgmerge $< $@ -o $@
+
 LC_MESSAGES/_gamedata-%.po: _gamedata-%-hengband.po
 	msgmerge --no-fuzzy-matching $< $@ -o $@
 

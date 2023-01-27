@@ -3,9 +3,135 @@ msgctxt "class"
 msgid "Warrior"
 msgstr ""
 
+#: ../lib/gamedata/class.txt:159
+# title
+msgctxt "class"
+msgid "Rookie"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:160
+# title
+msgctxt "class"
+msgid "Soldier"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:161
+# title
+msgctxt "class"
+msgid "Swordsman"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:162
+# title
+msgctxt "class"
+msgid "Swashbuckler"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:163
+# title
+msgctxt "class"
+msgid "Veteran"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:164
+# title
+msgctxt "class"
+msgid "Myrmidon"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:165
+# title
+msgctxt "class"
+msgid "Commando"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:166
+# title
+msgctxt "class"
+msgid "Champion"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:167
+# title
+msgctxt "class"
+msgid "Hero"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:168
+# title
+msgctxt "class"
+msgid "Lord"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:172
 msgctxt "class"
 msgid "Mage"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:193
+# title
+msgctxt "class"
+msgid "Novice"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:194
+# title
+msgctxt "class"
+msgid "Apprentice"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:195
+# title
+msgctxt "class"
+msgid "Trickster"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:196
+# title
+msgctxt "class"
+msgid "Illusionist"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:197
+# title
+msgctxt "class"
+msgid "Spellbinder"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:198
+# title
+msgctxt "class"
+msgid "Evoker"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:199
+# title
+msgctxt "class"
+msgid "Conjurer"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:200
+# title
+msgctxt "class"
+msgid "Warlock"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:201
+# title
+msgctxt "class"
+msgid "Sorcerer"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:202
+# title
+msgctxt "class"
+msgid "Arch-Mage"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:211
+# spell
+msgctxt "class"
+msgid "Magic Missile"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:220
@@ -18,6 +144,12 @@ msgid ""
 "  The chance to get a beam goes up with your character level."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:221
+# spell
+msgctxt "class"
+msgid "Light Room"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:228
 msgctxt "class"
 msgid ""
@@ -26,16 +158,34 @@ msgid ""
 "  If you are in a room, the entire room will be lit up as well."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:229
+# spell
+msgctxt "class"
+msgid "Find Traps, Doors & Stairs"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:237
 msgctxt "class"
 msgid ""
 "Detects all traps, doors, and stairs in the immediate area."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:238
+# spell
+msgctxt "class"
+msgid "Phase Door"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:242
 msgctxt "class"
 msgid ""
 "Teleports you randomly up to 10 squares away."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:243
+# spell
+msgctxt "class"
+msgid "Electric Arc"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:250
@@ -46,6 +196,12 @@ msgid ""
 " with player level."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:251
+# spell
+msgctxt "class"
+msgid "Detect Monsters"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:256
 msgctxt "class"
 msgid ""
@@ -53,10 +209,22 @@ msgid ""
 " for one turn only."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:257
+# spell
+msgctxt "class"
+msgid "Fire Ball"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:262
 msgctxt "class"
 msgid ""
 "Shoots a radius-2 fire ball."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:267
+# spell
+msgctxt "class"
+msgid "Recharging"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:275
@@ -68,16 +236,34 @@ msgid ""
 "  A failed attempt to recharge destroys one wand or staff from the stack."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:276
+# spell
+msgctxt "class"
+msgid "Identify Rune"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:279
 msgctxt "class"
 msgid ""
 "Reveals an unknown rune on an object."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:280
+# spell
+msgctxt "class"
+msgid "Treasure Detection"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:286
 msgctxt "class"
 msgid ""
 "Detects gold and senses objects in the immediate area."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:287
+# spell
+msgctxt "class"
+msgid "Frost Bolt"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:295
@@ -89,10 +275,22 @@ msgid ""
 "  The chance to get a beam goes up with your character level."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:296
+# spell
+msgctxt "class"
+msgid "Reveal Monsters"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:302
 msgctxt "class"
 msgid ""
 "Detects all monsters in the immediate area, for one turn only."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:303
+# spell
+msgctxt "class"
+msgid "Acid Spray"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:308
@@ -101,16 +299,34 @@ msgid ""
 "Sprays acid in a 60-degree cone, hitting all monsters up to 10 grids away."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:313
+# spell
+msgctxt "class"
+msgid "Disable Traps, Destroy Doors"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:317
 msgctxt "class"
 msgid ""
 "Disables traps and destroys doors within a 1-square radius of you."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:318
+# spell
+msgctxt "class"
+msgid "Teleport Self"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:323
 msgctxt "class"
 msgid ""
 "Teleports you randomly within the current level."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:324
+# spell
+msgctxt "class"
+msgid "Teleport Other"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:330
@@ -120,10 +336,22 @@ msgid ""
 "  Distance teleported increases with player level."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:331
+# spell
+msgctxt "class"
+msgid "Resistance"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:340
 msgctxt "class"
 msgid ""
 "Grants you resistance to acid, cold, fire and lightning for 20+1d20 turns."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:341
+# spell
+msgctxt "class"
+msgid "Tap Magical Energy"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:344
@@ -132,10 +360,22 @@ msgid ""
 "Turns wand or staff energy into mana; tapping stuns the player briefly."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:345
+# spell
+msgctxt "class"
+msgid "Mana Channel"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:349
 msgctxt "class"
 msgid ""
 "Increases spellcasting speed by 33% for 5+1d5 turns."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:354
+# spell
+msgctxt "class"
+msgid "Door Creation"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:358
@@ -145,11 +385,29 @@ msgid ""
 " adjacent to you.  These doors are closed, but not locked."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:359
+# spell
+msgctxt "class"
+msgid "Mana Bolt"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:369
+# spell
+msgctxt "class"
+msgid "Teleport Level"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:373
 msgctxt "class"
 msgid ""
 "Teleports you 1 level up or 1 level down (chosen at random)."
 "  This spell may have no effect when the forced descent option is set."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:374
+# spell
+msgctxt "class"
+msgid "Detection"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:391
@@ -159,16 +417,34 @@ msgid ""
 " immediate area."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:392
+# spell
+msgctxt "class"
+msgid "Dimension Door"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:395
 msgctxt "class"
 msgid ""
 "Teleports you to (or near to) a square of your choice."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:396
+# spell
+msgctxt "class"
+msgid "Thrust Away"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:401
 msgctxt "class"
 msgid ""
 "Fires a short range beam of force."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:406
+# spell
+msgctxt "class"
+msgid "Shock Wave"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:413
@@ -179,11 +455,23 @@ msgid ""
 " each monster in the area of effect."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:414
+# spell
+msgctxt "class"
+msgid "Explosion"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:423
 msgctxt "class"
 msgid ""
 "Shoots a radius-2 shards ball and throws around anything in the area of"
 " effect."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:424
+# spell
+msgctxt "class"
+msgid "Banishment"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:429
@@ -194,12 +482,24 @@ msgid ""
 "  You take 1d4 points of damage for every monster removed."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:430
+# spell
+msgctxt "class"
+msgid "Mass Banishment"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:435
 msgctxt "class"
 msgid ""
 "Removes all monsters within 20 squares of you."
 "  Uniques are not affected."
 "  You take 1d3 points of damage for every monster removed."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:436
+# spell
+msgctxt "class"
+msgid "Mana Storm"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:442
@@ -214,10 +514,82 @@ msgctxt "class"
 msgid "Druid"
 msgstr ""
 
+#: ../lib/gamedata/class.txt:466
+# title
+msgctxt "class"
+msgid "Wanderer"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:467
+# title
+msgctxt "class"
+msgid "Tamer"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:468
+# title
+msgctxt "class"
+msgid "Nurturer"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:469
+# title
+msgctxt "class"
+msgid "Gardener"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:470
+# title
+msgctxt "class"
+msgid "Forester"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:471
+# title
+msgctxt "class"
+msgid "Creator"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:472
+# title
+msgctxt "class"
+msgid "Earth Warder"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:473
+# title
+msgctxt "class"
+msgid "Windrider"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:474
+# title
+msgctxt "class"
+msgid "Stormwielder"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:475
+# title
+msgctxt "class"
+msgid "High Mystic"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:484
+# spell
+msgctxt "class"
+msgid "Detect Life"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:488
 msgctxt "class"
 msgid ""
 "Detects all living monsters in the immediate area, for one turn only."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:489
+# spell
+msgctxt "class"
+msgid "Fox Form"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:493
@@ -227,10 +599,22 @@ msgid ""
 "  While shapechanged you cannot use items."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:494
+# spell
+msgctxt "class"
+msgid "Remove Hunger"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:498
 msgctxt "class"
 msgid ""
 "Magically renders you comfortably fed (but not satiated)."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:499
+# spell
+msgctxt "class"
+msgid "Stinking Cloud"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:504
@@ -239,10 +623,22 @@ msgid ""
 "Shoots a radius-2 poison ball."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:505
+# spell
+msgctxt "class"
+msgid "Confuse Monster"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:510
 msgctxt "class"
 msgid ""
 "Confuse a single monster; more effective against animals."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:511
+# spell
+msgctxt "class"
+msgid "Slow Monster"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:516
@@ -251,16 +647,34 @@ msgid ""
 "Slows down a monster; more effective against animals."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:521
+# spell
+msgctxt "class"
+msgid "Cure Poison"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:524
 msgctxt "class"
 msgid ""
 "Neutralizes poison."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:525
+# spell
+msgctxt "class"
+msgid "Resist Poison"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:529
 msgctxt "class"
 msgid ""
 "Grants you resistance to poison for 20+1d20 turns."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:530
+# spell
+msgctxt "class"
+msgid "Turn Stone to Mud"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:536
@@ -271,10 +685,22 @@ msgid ""
 " is susceptible to rock remover takes 20+1d30 points of damage."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:537
+# spell
+msgctxt "class"
+msgid "Sense Surroundings"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:543
 msgctxt "class"
 msgid ""
 "Maps the nearby area."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:544
+# spell
+msgctxt "class"
+msgid "Lightning Strike"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:554
@@ -285,11 +711,23 @@ msgid ""
 " no target grid will mean the player grid is hit."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:555
+# spell
+msgctxt "class"
+msgid "Earth Rising"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:561
 msgctxt "class"
 msgid ""
 "Causes shards to explode in a line out of the earth, striking objects and"
 " monsters.  Length of the line increases with player level."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:566
+# spell
+msgctxt "class"
+msgid "Trance"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:572
@@ -299,11 +737,23 @@ msgid ""
 " number of turns; animals are entranced for longer."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:573
+# spell
+msgctxt "class"
+msgid "Mass Sleep"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:579
 msgctxt "class"
 msgid ""
 "Attempts to put to sleep each monster within line of sight."
 "  Monsters that resist sleep are not affected."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:580
+# spell
+msgctxt "class"
+msgid "Become Pukel-man"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:583
@@ -312,10 +762,22 @@ msgid ""
 "Gives you the form of a statue of the Drúedain, slow but hard to hurt."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:584
+# spell
+msgctxt "class"
+msgid "Eagle's Flight"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:587
 msgctxt "class"
 msgid ""
 "Gives you the form of one of the great eagles of Manwë."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:588
+# spell
+msgctxt "class"
+msgid "Bear Form"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:592
@@ -323,6 +785,12 @@ msgctxt "class"
 msgid ""
 "Allows you to take the form of a great bear of the mountains, sweeping"
 " aside your enemies with your mighty paws."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:597
+# spell
+msgctxt "class"
+msgid "Tremor"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:604
@@ -335,16 +803,34 @@ msgid ""
 "  This spell has no effect when used in the town."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:605
+# spell
+msgctxt "class"
+msgid "Haste Self"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:610
 msgctxt "class"
 msgid ""
 "Hastes you (+10 to speed) for a level-dependent duration."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:611
+# spell
+msgctxt "class"
+msgid "Revitalize"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:619
 msgctxt "class"
 msgid ""
 "Restores all stats and experience points to maximum."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:620
+# spell
+msgctxt "class"
+msgid "Rapid Regeneration"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:625
@@ -354,11 +840,23 @@ msgid ""
 " the next 5+1d3 turns (or until hungry)."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:626
+# spell
+msgctxt "class"
+msgid "Herbal Curing"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:635
 msgctxt "class"
 msgid ""
 "Cures all cuts, poison, stunning and black breath, and leaves you"
 " well-nourished."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:640
+# spell
+msgctxt "class"
+msgid "Meteor Swarm"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:652
@@ -373,11 +871,23 @@ msgid ""
 " location, the next meteor may continue to find another target."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:653
+# spell
+msgctxt "class"
+msgid "Rift"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:659
 msgctxt "class"
 msgid ""
 "Fires a gravity beam that hurts each monster in its path"
 " and has a chance of teleporting it away."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:660
+# spell
+msgctxt "class"
+msgid "Ice Storm"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:665
@@ -386,11 +896,23 @@ msgid ""
 "Strikes every monster in line of sight with sheets of ice from above."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:666
+# spell
+msgctxt "class"
+msgid "Volcanic Eruption"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:674
 msgctxt "class"
 msgid ""
 "Creates a radius 5 ball of fire, followed by a radius 5 earthquake,"
 " around the player."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:675
+# spell
+msgctxt "class"
+msgid "River of Lightning"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:680
@@ -404,12 +926,78 @@ msgctxt "class"
 msgid "Priest"
 msgstr ""
 
+#: ../lib/gamedata/class.txt:705
+# title
+msgctxt "class"
+msgid "Believer"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:706
+# title
+msgctxt "class"
+msgid "Acolyte"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:707
+# title
+msgctxt "class"
+msgid "Devotee"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:708
+# title
+msgctxt "class"
+msgid "Adept"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:709
+# title
+msgctxt "class"
+msgid "Evangelist"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:711
+# title
+msgctxt "class"
+msgid "Elder"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:712
+# title
+msgctxt "class"
+msgid "Prophet"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:713
+# title
+msgctxt "class"
+msgid "Patriarch"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:714
+# title
+msgctxt "class"
+msgid "High Priest"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:723
+# spell
+msgctxt "class"
+msgid "Call Light"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:731
 msgctxt "class"
 msgid ""
 "Lights up all squares in a level-dependent area, and hurts"
 " all light-sensitive monsters in the area of effect."
 "  If you are in a room, the entire room will be lit up as well."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:732
+# spell
+msgctxt "class"
+msgid "Detect Evil"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:737
@@ -419,11 +1007,23 @@ msgid ""
 " for one turn only."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:738
+# spell
+msgctxt "class"
+msgid "Minor Healing"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:749
 msgctxt "class"
 msgid ""
 "Heals a level-dependent amount or percentage of hitpoints, and"
 " cures 20 points worth of cuts and of stunning."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:750
+# spell
+msgctxt "class"
+msgid "Bless"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:757
@@ -433,10 +1033,22 @@ msgid ""
 " level-dependent number of turns."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:758
+# spell
+msgctxt "class"
+msgid "Sense Invisible"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:762
 msgctxt "class"
 msgid ""
 "Enables you to see invisible monsters for 24+1d24 turns."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:763
+# spell
+msgctxt "class"
+msgid "Heroism"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:774
@@ -445,6 +1057,12 @@ msgid ""
 "Cures 10 points of damage, removes fear and, from character level 20,"
 " grants you heroism (resistance to fear, and a bonus of +12 to-hit)"
 " for a level-dependent duration."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:779
+# spell
+msgctxt "class"
+msgid "Orb of Draining"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:787
@@ -456,11 +1074,23 @@ msgid ""
 "  The bigger area of effect is attained at character level 30."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:788
+# spell
+msgctxt "class"
+msgid "Spear of Light"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:793
 msgctxt "class"
 msgid ""
 "Fires a beam that lights up each square and hurts each"
 " light-sensitive monster in its path."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:794
+# spell
+msgctxt "class"
+msgid "Dispel Undead"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:799
@@ -469,10 +1099,22 @@ msgid ""
 "Inflicts unresistable damage on each undead monster within line of sight."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:800
+# spell
+msgctxt "class"
+msgid "Dispel Evil"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:805
 msgctxt "class"
 msgid ""
 "Inflicts unresistable damage on each evil monster within line of sight."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:806
+# spell
+msgctxt "class"
+msgid "Protection from Evil"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:813
@@ -483,11 +1125,23 @@ msgid ""
 " unless the monster's level is higher than your character level."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:814
+# spell
+msgctxt "class"
+msgid "Remove Curse"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:821
 msgctxt "class"
 msgid ""
 "Attempts to remove a curse from an item, more effective at higher"
 " character levels."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:826
+# spell
+msgctxt "class"
+msgid "Portal"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:831
@@ -496,10 +1150,22 @@ msgid ""
 "Teleports you randomly over a short distance."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:832
+# spell
+msgctxt "class"
+msgid "Remembrance"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:835
 msgctxt "class"
 msgid ""
 "Restores experience points to maximum if it is currently below maximum."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:836
+# spell
+msgctxt "class"
+msgid "Word of Recall"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:845
@@ -514,6 +1180,12 @@ msgid ""
 " stairs and recall is set, unless Morgoth is dead."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:846
+# spell
+msgctxt "class"
+msgid "Healing"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:855
 msgctxt "class"
 msgid ""
@@ -521,10 +1193,22 @@ msgid ""
 " and amnesia."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:856
+# spell
+msgctxt "class"
+msgid "Restoration"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:863
 msgctxt "class"
 msgid ""
 "Restores to maximum all stats that are currently below maximum."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:864
+# spell
+msgctxt "class"
+msgid "Clairvoyance"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:868
@@ -534,10 +1218,22 @@ msgid ""
 " dungeon level."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:873
+# spell
+msgctxt "class"
+msgid "Enchant Weapon"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:877
 msgctxt "class"
 msgid ""
 "Attempts to improve the to-hit bonus and the to-dam bonus of a weapon."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:878
+# spell
+msgctxt "class"
+msgid "Enchant Armour"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:882
@@ -546,10 +1242,22 @@ msgid ""
 "Attempts to improve the armour class bonus of a piece of armour."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:883
+# spell
+msgctxt "class"
+msgid "Smite Evil"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:887
 msgctxt "class"
 msgid ""
 "Temporarily makes your melee attacks slay evil creatures."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:888
+# spell
+msgctxt "class"
+msgid "Glyph of Warding"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:897
@@ -564,16 +1272,34 @@ msgid ""
 " breaking it, or until you leave the level."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:898
+# spell
+msgctxt "class"
+msgid "Demon Bane"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:902
 msgctxt "class"
 msgid ""
 "Temporarily makes your melee attacks powerfully slay demons."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:907
+# spell
+msgctxt "class"
+msgid "Banish Evil"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:911
 msgctxt "class"
 msgid ""
 "Teleports away each evil monster within line of sight."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:912
+# spell
+msgctxt "class"
+msgid "Word of Destruction"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:920
@@ -587,6 +1313,12 @@ msgid ""
 "  This prayer has no effect when used in the town."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:921
+# spell
+msgctxt "class"
+msgid "Holy Word"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:934
 msgctxt "class"
 msgid ""
@@ -595,10 +1327,22 @@ msgid ""
 " neutralizes poison, and removes fear."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:935
+# spell
+msgctxt "class"
+msgid "Spear of Oromë"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:940
 msgctxt "class"
 msgid ""
 "Fires a beam of holy magic that does extra damage to evil creatures."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:941
+# spell
+msgctxt "class"
+msgid "Light of Manwë"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:949
@@ -613,10 +1357,76 @@ msgctxt "class"
 msgid "Necromancer"
 msgstr ""
 
+#: ../lib/gamedata/class.txt:973
+# title
+msgctxt "class"
+msgid "Curser"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:974
+# title
+msgctxt "class"
+msgid "Dark Student"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:975
+# title
+msgctxt "class"
+msgid "Initiate"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:976
+# title
+msgctxt "class"
+msgid "Slavemaster"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:977
+# title
+msgctxt "class"
+msgid "Summoner"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:978
+# title
+msgctxt "class"
+msgid "Controller"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:979
+# title
+msgctxt "class"
+msgid "Commander"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:980
+# title
+msgctxt "class"
+msgid "Dark Master"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:981
+# title
+msgctxt "class"
+msgid "Night Lord"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:990
+# spell
+msgctxt "class"
+msgid "Nether Bolt"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:995
 msgctxt "class"
 msgid ""
 "Fires a bolt of nether magic."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1001
+# spell
+msgctxt "class"
+msgid "Create Darkness"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1007
@@ -626,11 +1436,23 @@ msgid ""
 " the entire room will be darkened as well."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1008
+# spell
+msgctxt "class"
+msgid "Bat Form"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1012
 msgctxt "class"
 msgid ""
 "Changes you into the shape of a bat, weak but with excellent senses."
 "  While shapechanged you cannot use items."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1013
+# spell
+msgctxt "class"
+msgid "Read Minds"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1023
@@ -641,10 +1463,22 @@ msgid ""
 " character level."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1028
+# spell
+msgctxt "class"
+msgid "Tap Unlife"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1033
 msgctxt "class"
 msgid ""
 "Targets the nearest undead monster and damages it to gain player mana."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1034
+# spell
+msgctxt "class"
+msgid "Crush"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1044
@@ -655,11 +1489,23 @@ msgid ""
 " unharmed."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1045
+# spell
+msgctxt "class"
+msgid "Sleep Evil"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1051
 msgctxt "class"
 msgid ""
 "Attempts to put to sleep each evil monster within line of sight."
 "  Monsters that resist confusion are not affected."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1052
+# spell
+msgctxt "class"
+msgid "Shadow Shift"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1060
@@ -669,11 +1515,23 @@ msgid ""
 " dragged along."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1061
+# spell
+msgctxt "class"
+msgid "Disenchant"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1067
 msgctxt "class"
 msgid ""
 "Casts a bolt which wounds, and makes spellcasting monsters less successful"
 " in casting spells."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1072
+# spell
+msgctxt "class"
+msgid "Frighten"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1078
@@ -683,11 +1541,23 @@ msgid ""
 "  Monsters that resist fear are not affected."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1079
+# spell
+msgctxt "class"
+msgid "Vampire Strike"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1085
 msgctxt "class"
 msgid ""
 "Teleports you to the nearest living monster and drains a level-dependent"
 " number of hitpoints, healing and nourishing the player."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1086
+# spell
+msgctxt "class"
+msgid "Dispel Life"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1091
@@ -696,10 +1566,22 @@ msgid ""
 "Inflicts unresistable damage on each living monster within line of sight."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1092
+# spell
+msgctxt "class"
+msgid "Dark Spear"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1097
 msgctxt "class"
 msgid ""
 "Fires a beam of darkness."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1098
+# spell
+msgctxt "class"
+msgid "Warg Form"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1102
@@ -709,10 +1591,22 @@ msgid ""
 " strength, at the cost of some hitpoints."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1108
+# spell
+msgctxt "class"
+msgid "Banish Spirits"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1112
 msgctxt "class"
 msgid ""
 "Teleports away each monster with a spirit within line of sight."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1113
+# spell
+msgctxt "class"
+msgid "Annihilate"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1119
@@ -720,6 +1614,12 @@ msgctxt "class"
 msgid ""
 "Inflicts damage equal to four times player level on a single monster that"
 " is not undead, an elemental, a golem, or a vortex."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1120
+# spell
+msgctxt "class"
+msgid "Grond's Blow"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1128
@@ -733,11 +1633,23 @@ msgid ""
 "  This ritual has no effect when used in the town."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1129
+# spell
+msgctxt "class"
+msgid "Unleash Chaos"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1147
 msgctxt "class"
 msgid ""
 "Fires a chaos beam, arc or ball in the chosen direction, wakes everything"
 " in the area, and attempts to frighten everything in line of sight."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1148
+# spell
+msgctxt "class"
+msgid "Fume of Mordor"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1153
@@ -747,10 +1659,22 @@ msgid ""
 " dungeon level."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1154
+# spell
+msgctxt "class"
+msgid "Storm of Darkness"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1159
 msgctxt "class"
 msgid ""
 "Invokes a radius-4 darkness ball."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1165
+# spell
+msgctxt "class"
+msgid "Power Sacrifice"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1172
@@ -759,11 +1683,23 @@ msgid ""
 "Exchanges 50 hitpoints for 50 mana."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1173
+# spell
+msgctxt "class"
+msgid "Zone of Unmagic"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1179
 msgctxt "class"
 msgid ""
 "Produces a zone of disenchantment affecting the player and monsters"
 " within radius 4."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1180
+# spell
+msgctxt "class"
+msgid "Vampire Form"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1190
@@ -776,11 +1712,23 @@ msgid ""
 " to take hitpoints from living monsters with your bite attack."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1191
+# spell
+msgctxt "class"
+msgid "Curse"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1201
 msgctxt "class"
 msgid ""
 "Deals direct damage to a single monster, more the more damaged the monster"
 " is already, at the cost of 100 hitpoints."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1202
+# spell
+msgctxt "class"
+msgid "Command"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1207
@@ -795,12 +1743,72 @@ msgctxt "class"
 msgid "Paladin"
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1232
+# title
+msgctxt "class"
+msgid "Gallant"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1233
+# title
+msgctxt "class"
+msgid "Keeper"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1234
+# title
+msgctxt "class"
+msgid "Protector"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1235
+# title
+msgctxt "class"
+msgid "Defender"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1236
+# title
+msgctxt "class"
+msgid "Warder"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1237
+# title
+msgctxt "class"
+msgid "Knight"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1238
+# title
+msgctxt "class"
+msgid "Guardian"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1239
+# title
+msgctxt "class"
+msgid "Chevalier"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1241
+# title
+msgctxt "class"
+msgid "Paladin Lord"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1298
 msgctxt "class"
 msgid ""
 "Cures 10 points of damage, removes fear and, from character level 15,"
 " grants you heroism (resistance to fear, and a bonus of +12 to-hit)"
 " for a level-dependent duration."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1364
+# spell
+msgctxt "class"
+msgid "Single Combat"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1368
@@ -815,16 +1823,88 @@ msgctxt "class"
 msgid "Rogue"
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1394
+# title
+msgctxt "class"
+msgid "Vagabond"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1395
+# title
+msgctxt "class"
+msgid "Cutpurse"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1396
+# title
+msgctxt "class"
+msgid "Footpad"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1397
+# title
+msgctxt "class"
+msgid "Robber"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1398
+# title
+msgctxt "class"
+msgid "Burglar"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1399
+# title
+msgctxt "class"
+msgid "Filcher"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1400
+# title
+msgctxt "class"
+msgid "Sharper"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1402
+# title
+msgctxt "class"
+msgid "Thief"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1403
+# title
+msgctxt "class"
+msgid "Master Thief"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1420
+# spell
+msgctxt "class"
+msgid "Object Detection"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1426
 msgctxt "class"
 msgid ""
 "Detects all objects in the immediate area."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1427
+# spell
+msgctxt "class"
+msgid "Detect Stairs"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1431
 msgctxt "class"
 msgid ""
 "Detects all stairs in a wide area."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1456
+# spell
+msgctxt "class"
+msgid "Hit and Run"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1460
@@ -838,10 +1918,70 @@ msgctxt "class"
 msgid "Ranger"
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1499
+# title
+msgctxt "class"
+msgid "Runner"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1500
+# title
+msgctxt "class"
+msgid "Strider"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1501
+# title
+msgctxt "class"
+msgid "Scout"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1502
+# title
+msgctxt "class"
+msgid "Courser"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1503
+# title
+msgctxt "class"
+msgid "Tracker"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1504
+# title
+msgctxt "class"
+msgid "Guide"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1505
+# title
+msgctxt "class"
+msgid "Explorer"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1506
+# title
+msgctxt "class"
+msgid "Pathfinder"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1508
+# title
+msgctxt "class"
+msgid "Ranger Lord"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1530
 msgctxt "class"
 msgid ""
 "Cures all cuts, poison, stunning and black breath."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1553
+# spell
+msgctxt "class"
+msgid "Cover Tracks"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1559
@@ -851,6 +1991,12 @@ msgid ""
 " level-dependent duration."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1560
+# spell
+msgctxt "class"
+msgid "Create Arrows"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1564
 msgctxt "class"
 msgid ""
@@ -858,10 +2004,22 @@ msgid ""
 " depending on staff level and player level."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1571
+# spell
+msgctxt "class"
+msgid "Decoy"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1574
 msgctxt "class"
 msgid ""
 "Leaves a magical decoy that looks and sounds like the player."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1575
+# spell
+msgctxt "class"
+msgid "Brand Ammunition"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1582
@@ -879,11 +2037,83 @@ msgctxt "class"
 msgid "Blackguard"
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1610
+# title
+msgctxt "class"
+msgid "Rat"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1611
+# title
+msgctxt "class"
+msgid "Bully"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1612
+# title
+msgctxt "class"
+msgid "Thug"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1613
+# title
+msgctxt "class"
+msgid "Ruffian"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1614
+# title
+msgctxt "class"
+msgid "Brigand"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1615
+# title
+msgctxt "class"
+msgid "Raider"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1616
+# title
+msgctxt "class"
+msgid "Tormentor"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1617
+# title
+msgctxt "class"
+msgid "Marauder"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1618
+# title
+msgctxt "class"
+msgid "Destroyer"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1619
+# title
+msgctxt "class"
+msgid "Tyrant"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1625
+# spell
+msgctxt "class"
+msgid "Seek Battle"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1630
 msgctxt "class"
 msgid ""
 "Detects all monsters susceptible to fear in the immediate area,"
 " for one turn only."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1631
+# spell
+msgctxt "class"
+msgid "Berserk Strength"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1640
@@ -894,6 +2124,12 @@ msgid ""
 " over time) for a level-dependent duration."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1641
+# spell
+msgctxt "class"
+msgid "Whirlwind Attack"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1648
 msgctxt "class"
 msgid ""
@@ -902,11 +2138,23 @@ msgid ""
 " levels (2 at 20, 3 at 35, and 4 at 50)."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1649
+# spell
+msgctxt "class"
+msgid "Shatter Stone"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1654
 msgctxt "class"
 msgid ""
 "Destroys an adjacent section of wall or rubble, unless it is a permanent"
 " wall.  Deals 20+1d30 damage to monsters vulnerable to rock remover."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1655
+# spell
+msgctxt "class"
+msgid "Leap into Battle"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1662
@@ -917,11 +2165,23 @@ msgid ""
 " moved, the number of blows is reduced by 25% for each space, then rounded."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1663
+# spell
+msgctxt "class"
+msgid "Grim Purpose"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1671
 msgctxt "class"
 msgid ""
 "Your mind becomes too focused to be slowed, paralyzed or confused"
 " for 12+d12 turns."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1674
+# spell
+msgctxt "class"
+msgid "Maim Foe"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1681
@@ -932,12 +2192,24 @@ msgid ""
 " damage the enemy, it will be stunned for 6 turns."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1682
+# spell
+msgctxt "class"
+msgid "Howl of the Damned"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1689
 msgctxt "class"
 msgid ""
 "Attempts to scare every monster in line of sight for a duration dependent"
 " on player level and monster depth.  Monsters that resist fear are not"
 " affected."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1690
+# spell
+msgctxt "class"
+msgid "Relentless Taunting"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1695
@@ -947,10 +2219,22 @@ msgid ""
 " likely to use a ranged attack (including spells and innate abilities)."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1696
+# spell
+msgctxt "class"
+msgid "Venom"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1700
 msgctxt "class"
 msgid ""
 "Coats all your melee weapons with poison for 18+d18 turns."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1701
+# spell
+msgctxt "class"
+msgid "Werewolf Form"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1705
@@ -958,6 +2242,12 @@ msgctxt "class"
 msgid ""
 "With a blood-curdling cry you change into a half-man half-wolf!"
 "  In this form you move, attack, and heal faster."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1708
+# spell
+msgctxt "class"
+msgid "Bloodlust"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1714
@@ -968,10 +2258,22 @@ msgid ""
 " with dangerous side-effects."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:1715
+# spell
+msgctxt "class"
+msgid "Unholy Reprieve"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1723
 msgctxt "class"
 msgid ""
 "Restores STR, INT, CON, and experience at the cost of 66 HP."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1724
+# spell
+msgctxt "class"
+msgid "Forceful Blow"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1729
@@ -979,6 +2281,12 @@ msgctxt "class"
 msgid ""
 "Attempts a melee blow that deals additional force damage when it hits,"
 " knocking the target back with a chance to stun it."
+msgstr ""
+
+#: ../lib/gamedata/class.txt:1730
+# spell
+msgctxt "class"
+msgid "Quake"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1732

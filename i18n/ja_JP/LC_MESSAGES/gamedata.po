@@ -16,15 +16,141 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:136
 msgctxt "class"
 msgid "Warrior"
-msgstr ""
+msgstr "戦士"
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:159
+msgctxt "class"
+msgid "Rookie"
+msgstr "新参兵"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:160
+msgctxt "class"
+msgid "Soldier"
+msgstr "兵士"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:161
+msgctxt "class"
+msgid "Swordsman"
+msgstr "剣士"
+
+# title
+#: ../lib/gamedata/class.txt:162
+msgctxt "class"
+msgid "Swashbuckler"
+msgstr "勇士"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:163
+msgctxt "class"
+msgid "Veteran"
+msgstr "古参兵"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:164
+msgctxt "class"
+msgid "Myrmidon"
+msgstr "仕手"
+
+#: ../lib/gamedata/class.txt:165
+msgctxt "class"
+msgid "Commando"
+msgstr "猛士"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:166
+msgctxt "class"
+msgid "Champion"
+msgstr "闘士"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:167
+msgctxt "class"
+msgid "Hero"
+msgstr "英雄"
+
+#: ../lib/gamedata/class.txt:168
+msgctxt "class"
+msgid "Lord"
+msgstr "将軍"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:172
 msgctxt "class"
 msgid "Mage"
-msgstr ""
+msgstr "メイジ"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:193
+msgctxt "class"
+msgid "Novice"
+msgstr "見習い"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:194
+msgctxt "class"
+msgid "Apprentice"
+msgstr "練習生"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:195
+msgctxt "class"
+msgid "Trickster"
+msgstr "奇術師"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:196
+msgctxt "class"
+msgid "Illusionist"
+msgstr "幻術師"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:197
+msgctxt "class"
+msgid "Spellbinder"
+msgstr "呪術師"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:198
+msgctxt "class"
+msgid "Evoker"
+msgstr "召霊師"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:199
+msgctxt "class"
+msgid "Conjurer"
+msgstr "召魔師"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:200
+msgctxt "class"
+msgid "Warlock"
+msgstr "魔術師"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:201
+msgctxt "class"
+msgid "Sorcerer"
+msgstr "魔道師"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:202
+msgctxt "class"
+msgid "Arch-Mage"
+msgstr "大魔道師"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:211
+msgctxt "class"
+msgid "Magic Missile"
+msgstr "マジック・ミサイル"
 
 #: ../lib/gamedata/class.txt:220
 msgctxt "class"
@@ -34,6 +160,13 @@ msgid ""
 "path.  The chance to get a beam goes up with your character level."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:221
+#, fuzzy
+msgctxt "class"
+msgid "Light Room"
+msgstr "耐閃光:"
+
 #: ../lib/gamedata/class.txt:228
 msgctxt "class"
 msgid ""
@@ -42,15 +175,35 @@ msgid ""
 "room will be lit up as well."
 msgstr ""
 
+# spell
+#: ../lib/gamedata/class.txt:229
+msgctxt "class"
+msgid "Find Traps, Doors & Stairs"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:237
 msgctxt "class"
 msgid "Detects all traps, doors, and stairs in the immediate area."
-msgstr ""
+msgstr "近くの全ての扉と罠、階段を感知する。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:238
+msgctxt "class"
+msgid "Phase Door"
+msgstr "ショート・テレポート"
 
 #: ../lib/gamedata/class.txt:242
 msgctxt "class"
 msgid "Teleports you randomly up to 10 squares away."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:243
+#, fuzzy
+msgctxt "class"
+msgid "Electric Arc"
+msgstr "電撃オーラ"
 
 #: ../lib/gamedata/class.txt:250
 msgctxt "class"
@@ -59,16 +212,37 @@ msgid ""
 "items in its path.  Length of the effect increases with player level."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:251
+msgctxt "class"
+msgid "Detect Monsters"
+msgstr "モンスター感知"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:256
 msgctxt "class"
 msgid ""
 "Detects all non-invisible monsters in the immediate area, for one turn only."
-msgstr ""
+msgstr "近くの透明なモンスターを感知する。"
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:257
+msgctxt "class"
+msgid "Fire Ball"
+msgstr "ファイア・ボール"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:262
+#, fuzzy
 msgctxt "class"
 msgid "Shoots a radius-2 fire ball."
-msgstr ""
+msgstr "ファイア・ボールの呪文を唱えた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:267
+msgctxt "class"
+msgid "Recharging"
+msgstr "魔力充填"
 
 #: ../lib/gamedata/class.txt:275
 msgctxt "class"
@@ -79,15 +253,35 @@ msgid ""
 "or staff from the stack."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:276
+#, fuzzy
+msgctxt "class"
+msgid "Identify Rune"
+msgstr "真・鑑定"
+
 #: ../lib/gamedata/class.txt:279
 msgctxt "class"
 msgid "Reveals an unknown rune on an object."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:280
+#, fuzzy
+msgctxt "class"
+msgid "Treasure Detection"
+msgstr "全感知"
+
 #: ../lib/gamedata/class.txt:286
 msgctxt "class"
 msgid "Detects gold and senses objects in the immediate area."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:287
+msgctxt "class"
+msgid "Frost Bolt"
+msgstr "アイス・ボルト"
 
 #: ../lib/gamedata/class.txt:295
 msgctxt "class"
@@ -97,10 +291,26 @@ msgid ""
 "goes up with your character level."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:296
+#, fuzzy
+msgctxt "class"
+msgid "Reveal Monsters"
+msgstr "回復モンスター"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:302
+#, fuzzy
 msgctxt "class"
 msgid "Detects all monsters in the immediate area, for one turn only."
-msgstr ""
+msgstr "近くの思考することができるモンスターを感知する。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:303
+#, fuzzy
+msgctxt "class"
+msgid "Acid Spray"
+msgstr "溶解"
 
 #: ../lib/gamedata/class.txt:308
 msgctxt "class"
@@ -108,15 +318,35 @@ msgid ""
 "Sprays acid in a 60-degree cone, hitting all monsters up to 10 grids away."
 msgstr ""
 
+# spell
+#: ../lib/gamedata/class.txt:313
+msgctxt "class"
+msgid "Disable Traps, Destroy Doors"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:317
 msgctxt "class"
 msgid "Disables traps and destroys doors within a 1-square radius of you."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:318
+msgctxt "class"
+msgid "Teleport Self"
+msgstr "テレポート"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:323
+#, fuzzy
 msgctxt "class"
 msgid "Teleports you randomly within the current level."
-msgstr ""
+msgstr "中距離のテレポートをする。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:324
+msgctxt "class"
+msgid "Teleport Other"
+msgstr "テレポート・アウェイ"
 
 #: ../lib/gamedata/class.txt:330
 msgctxt "class"
@@ -125,10 +355,27 @@ msgid ""
 "teleported increases with player level."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:331
+#, fuzzy
+msgctxt "class"
+msgid "Resistance"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"全耐性\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"耐性"
+
 #: ../lib/gamedata/class.txt:340
 msgctxt "class"
 msgid ""
 "Grants you resistance to acid, cold, fire and lightning for 20+1d20 turns."
+msgstr ""
+
+# spell
+#: ../lib/gamedata/class.txt:341
+msgctxt "class"
+msgid "Tap Magical Energy"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:344
@@ -136,10 +383,24 @@ msgctxt "class"
 msgid "Turns wand or staff energy into mana; tapping stuns the player briefly."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:345
+#, fuzzy
+msgctxt "class"
+msgid "Mana Channel"
+msgstr "魔法剣"
+
 #: ../lib/gamedata/class.txt:349
 msgctxt "class"
 msgid "Increases spellcasting speed by 33% for 5+1d5 turns."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:354
+#, fuzzy
+msgctxt "class"
+msgid "Door Creation"
+msgstr "森林創造"
 
 #: ../lib/gamedata/class.txt:358
 msgctxt "class"
@@ -148,12 +409,30 @@ msgid ""
 "you.  These doors are closed, but not locked."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:359
+msgctxt "class"
+msgid "Mana Bolt"
+msgstr "魔力の矢"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:369
+msgctxt "class"
+msgid "Teleport Level"
+msgstr "テレポート・レベル"
+
 #: ../lib/gamedata/class.txt:373
 msgctxt "class"
 msgid ""
 "Teleports you 1 level up or 1 level down (chosen at random).  This spell may "
 "have no effect when the forced descent option is set."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:374
+msgctxt "class"
+msgid "Detection"
+msgstr "全感知"
 
 #: ../lib/gamedata/class.txt:391
 msgctxt "class"
@@ -162,15 +441,41 @@ msgid ""
 "immediate area."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:392
+msgctxt "class"
+msgid "Dimension Door"
+msgstr "次元の扉"
+
 #: ../lib/gamedata/class.txt:395
 msgctxt "class"
 msgid "Teleports you to (or near to) a square of your choice."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:396
+#, fuzzy
+msgctxt "class"
+msgid "Thrust Away"
+msgstr "テレポート・モンスター"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:401
+#, fuzzy
 msgctxt "class"
 msgid "Fires a short range beam of force."
 msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"炎のボルトもしくはビームを放つ。\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"火炎のボルトもしくはビームを放つ。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:406
+#, fuzzy
+msgctxt "class"
+msgid "Shock Wave"
+msgstr "衝波"
 
 #: ../lib/gamedata/class.txt:413
 msgctxt "class"
@@ -179,12 +484,26 @@ msgid ""
 "a chance to stun each monster in the area of effect."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:414
+#, fuzzy
+msgctxt "class"
+msgid "Explosion"
+msgstr "爆発のルーン"
+
 #: ../lib/gamedata/class.txt:423
 msgctxt "class"
 msgid ""
 "Shoots a radius-2 shards ball and throws around anything in the area of "
 "effect."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:424
+#, fuzzy
+msgctxt "class"
+msgid "Banishment"
+msgstr "怪物追放"
 
 #: ../lib/gamedata/class.txt:429
 msgctxt "class"
@@ -193,12 +512,26 @@ msgid ""
 "are not affected.  You take 1d4 points of damage for every monster removed."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:430
+#, fuzzy
+msgctxt "class"
+msgid "Mass Banishment"
+msgstr "怪物追放"
+
 #: ../lib/gamedata/class.txt:435
 msgctxt "class"
 msgid ""
 "Removes all monsters within 20 squares of you.  Uniques are not affected.  "
 "You take 1d3 points of damage for every monster removed."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:436
+#, fuzzy
+msgctxt "class"
+msgid "Mana Storm"
+msgstr "魔力の嵐"
 
 #: ../lib/gamedata/class.txt:442
 msgctxt "class"
@@ -210,12 +543,77 @@ msgstr ""
 #: ../lib/gamedata/class.txt:445
 msgctxt "class"
 msgid "Druid"
+msgstr "ドルイド"
+
+#: ../lib/gamedata/class.txt:466
+msgctxt "class"
+msgid "Wanderer"
+msgstr "放浪者"
+
+# title
+#: ../lib/gamedata/class.txt:467
+msgctxt "class"
+msgid "Tamer"
 msgstr ""
 
+#: ../lib/gamedata/class.txt:468
+msgctxt "class"
+msgid "Nurturer"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:469
+msgctxt "class"
+msgid "Gardener"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:470
+msgctxt "class"
+msgid "Forester"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:471
+msgctxt "class"
+msgid "Creator"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:472
+msgctxt "class"
+msgid "Earth Warder"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:473
+msgctxt "class"
+msgid "Windrider"
+msgstr ""
+
+# title
+#: ../lib/gamedata/class.txt:474
+msgctxt "class"
+msgid "Stormwielder"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:475
+msgctxt "class"
+msgid "High Mystic"
+msgstr ""
+
+#: ../lib/gamedata/class.txt:484
+msgctxt "class"
+msgid "Detect Life"
+msgstr "生命感知"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:488
 msgctxt "class"
 msgid "Detects all living monsters in the immediate area, for one turn only."
-msgstr ""
+msgstr "近くの生命のないモンスターを感知する。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:489
+#, fuzzy
+msgctxt "class"
+msgid "Fox Form"
+msgstr " a) 型を崩す"
 
 #: ../lib/gamedata/class.txt:493
 msgctxt "class"
@@ -224,35 +622,80 @@ msgid ""
 "you cannot use items."
 msgstr ""
 
+#: ../lib/gamedata/class.txt:494
+msgctxt "class"
+msgid "Remove Hunger"
+msgstr "空腹除去"
+
 #: ../lib/gamedata/class.txt:498
 msgctxt "class"
 msgid "Magically renders you comfortably fed (but not satiated)."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:499
+msgctxt "class"
+msgid "Stinking Cloud"
+msgstr "悪臭雲"
 
 #: ../lib/gamedata/class.txt:504
 msgctxt "class"
 msgid "Shoots a radius-2 poison ball."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:505
+msgctxt "class"
+msgid "Confuse Monster"
+msgstr "パニック・モンスター"
+
 #: ../lib/gamedata/class.txt:510
 msgctxt "class"
 msgid "Confuse a single monster; more effective against animals."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:511
+msgctxt "class"
+msgid "Slow Monster"
+msgstr "スロウ・モンスター"
 
 #: ../lib/gamedata/class.txt:516
 msgctxt "class"
 msgid "Slows down a monster; more effective against animals."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:521
+msgctxt "class"
+msgid "Cure Poison"
+msgstr "解毒"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:524
+#, fuzzy
 msgctxt "class"
 msgid "Neutralizes poison."
-msgstr ""
+msgstr "耐毒"
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:525
+msgctxt "class"
+msgid "Resist Poison"
+msgstr "耐毒"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:529
+#, fuzzy
 msgctxt "class"
 msgid "Grants you resistance to poison for 20+1d20 turns."
-msgstr ""
+msgstr "それは毒への耐性を授ける。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:530
+msgctxt "class"
+msgid "Turn Stone to Mud"
+msgstr "岩石溶解"
 
 #: ../lib/gamedata/class.txt:536
 msgctxt "class"
@@ -262,10 +705,24 @@ msgid ""
 "rock remover takes 20+1d30 points of damage."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:537
+msgctxt "class"
+msgid "Sense Surroundings"
+msgstr "周辺感知"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:543
 msgctxt "class"
 msgid "Maps the nearby area."
-msgstr ""
+msgstr "周辺の地形を感知する。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:544
+#, fuzzy
+msgctxt "class"
+msgid "Lightning Strike"
+msgstr "稲妻嵐"
 
 #: ../lib/gamedata/class.txt:554
 msgctxt "class"
@@ -275,12 +732,25 @@ msgid ""
 "grid will mean the player grid is hit."
 msgstr ""
 
+# spell
+#: ../lib/gamedata/class.txt:555
+msgctxt "class"
+msgid "Earth Rising"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:561
 msgctxt "class"
 msgid ""
 "Causes shards to explode in a line out of the earth, striking objects and "
 "monsters.  Length of the line increases with player level."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:566
+#, fuzzy
+msgctxt "class"
+msgid "Trance"
+msgstr "節"
 
 #: ../lib/gamedata/class.txt:572
 msgctxt "class"
@@ -289,6 +759,13 @@ msgid ""
 "turns; animals are entranced for longer."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:573
+#, fuzzy
+msgctxt "class"
+msgid "Mass Sleep"
+msgstr "周辺スリープ"
+
 #: ../lib/gamedata/class.txt:579
 msgctxt "class"
 msgid ""
@@ -296,21 +773,47 @@ msgid ""
 "resist sleep are not affected."
 msgstr ""
 
+# spell
+#: ../lib/gamedata/class.txt:580
+msgctxt "class"
+msgid "Become Pukel-man"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:583
 msgctxt "class"
 msgid "Gives you the form of a statue of the Drúedain, slow but hard to hurt."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:584
+#, fuzzy
+msgctxt "class"
+msgid "Eagle's Flight"
+msgstr "耐閃光"
 
 #: ../lib/gamedata/class.txt:587
 msgctxt "class"
 msgid "Gives you the form of one of the great eagles of Manwë."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:588
+#, fuzzy
+msgctxt "class"
+msgid "Bear Form"
+msgstr " a) 型を崩す"
+
 #: ../lib/gamedata/class.txt:592
 msgctxt "class"
 msgid ""
 "Allows you to take the form of a great bear of the mountains, sweeping aside "
 "your enemies with your mighty paws."
+msgstr ""
+
+# spell
+#: ../lib/gamedata/class.txt:597
+msgctxt "class"
+msgid "Tremor"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:604
@@ -322,15 +825,42 @@ msgid ""
 "effect when used in the town."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:605
+#, fuzzy
+msgctxt "class"
+msgid "Haste Self"
+msgstr "スピード"
+
 #: ../lib/gamedata/class.txt:610
 msgctxt "class"
 msgid "Hastes you (+10 to speed) for a level-dependent duration."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:611
+#, fuzzy
+msgctxt "class"
+msgid "Revitalize"
+msgstr "増殖阻止"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:619
+#, fuzzy
 msgctxt "class"
 msgid "Restores all stats and experience points to maximum."
+msgstr "すべてのステータスと経験値を回復する。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:620
+#, fuzzy
+msgctxt "class"
+msgid "Rapid Regeneration"
 msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"回復力強化\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"急速回復"
 
 #: ../lib/gamedata/class.txt:625
 msgctxt "class"
@@ -339,12 +869,26 @@ msgid ""
 "turns (or until hungry)."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:626
+#, fuzzy
+msgctxt "class"
+msgid "Herbal Curing"
+msgstr "強力な呪いを増やす"
+
 #: ../lib/gamedata/class.txt:635
 msgctxt "class"
 msgid ""
 "Cures all cuts, poison, stunning and black breath, and leaves you well-"
 "nourished."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:640
+#, fuzzy
+msgctxt "class"
+msgid "Meteor Swarm"
+msgstr "流星群"
 
 #: ../lib/gamedata/class.txt:652
 msgctxt "class"
@@ -356,6 +900,12 @@ msgid ""
 "location, the next meteor may continue to find another target."
 msgstr ""
 
+# spell
+#: ../lib/gamedata/class.txt:653
+msgctxt "class"
+msgid "Rift"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:659
 msgctxt "class"
 msgid ""
@@ -363,9 +913,22 @@ msgid ""
 "teleporting it away."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:660
+#, fuzzy
+msgctxt "class"
+msgid "Ice Storm"
+msgstr "%sの嵐"
+
 #: ../lib/gamedata/class.txt:665
 msgctxt "class"
 msgid "Strikes every monster in line of sight with sheets of ice from above."
+msgstr ""
+
+# spell
+#: ../lib/gamedata/class.txt:666
+msgctxt "class"
+msgid "Volcanic Eruption"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:674
@@ -375,15 +938,87 @@ msgid ""
 "the player."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:675
+#, fuzzy
+msgctxt "class"
+msgid "River of Lightning"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"耐電\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"耐電撃"
+
 #: ../lib/gamedata/class.txt:680
 msgctxt "class"
 msgid "Spews plasma in a long narrow cone from the player."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:683
 msgctxt "class"
 msgid "Priest"
-msgstr ""
+msgstr "プリースト"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:705
+msgctxt "class"
+msgid "Believer"
+msgstr "信者"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:706
+msgctxt "class"
+msgid "Acolyte"
+msgstr "侍僧"
+
+# title
+#: ../lib/gamedata/class.txt:707
+msgctxt "class"
+msgid "Devotee"
+msgstr "信奉者"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:708
+msgctxt "class"
+msgid "Adept"
+msgstr "熟練僧"
+
+#: ../lib/gamedata/class.txt:709
+msgctxt "class"
+msgid "Evangelist"
+msgstr "伝道師"
+
+# title
+#: ../lib/gamedata/class.txt:711
+msgctxt "class"
+msgid "Elder"
+msgstr "古参僧"
+
+# title
+#: ../lib/gamedata/class.txt:712
+msgctxt "class"
+msgid "Prophet"
+msgstr "預言者"
+
+# title
+#: ../lib/gamedata/class.txt:713
+msgctxt "class"
+msgid "Patriarch"
+msgstr "司教"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:714
+msgctxt "class"
+msgid "High Priest"
+msgstr "聖人"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:723
+#, fuzzy
+msgctxt "class"
+msgid "Call Light"
+msgstr "光の召喚"
 
 #: ../lib/gamedata/class.txt:731
 msgctxt "class"
@@ -393,10 +1028,25 @@ msgid ""
 "room will be lit up as well."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:732
+msgctxt "class"
+msgid "Detect Evil"
+msgstr "邪悪感知"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:737
+#, fuzzy
 msgctxt "class"
 msgid "Detects all evil monsters in the immediate area, for one turn only."
-msgstr ""
+msgstr "近くの邪悪なモンスターを感知する。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:738
+#, fuzzy
+msgctxt "class"
+msgid "Minor Healing"
+msgstr "体力回復"
 
 #: ../lib/gamedata/class.txt:749
 msgctxt "class"
@@ -405,6 +1055,12 @@ msgid ""
 "points worth of cuts and of stunning."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:750
+msgctxt "class"
+msgid "Bless"
+msgstr "祝福"
+
 #: ../lib/gamedata/class.txt:757
 msgctxt "class"
 msgid ""
@@ -412,10 +1068,25 @@ msgid ""
 "dependent number of turns."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:758
+msgctxt "class"
+msgid "Sense Invisible"
+msgstr "透明視認"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:762
+#, fuzzy
 msgctxt "class"
 msgid "Enables you to see invisible monsters for 24+1d24 turns."
-msgstr ""
+msgstr "それは透明なモンスターを見ることを可能にする。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:763
+#, fuzzy
+msgctxt "class"
+msgid "Heroism"
+msgstr "士気高揚"
 
 #: ../lib/gamedata/class.txt:774
 msgctxt "class"
@@ -425,6 +1096,13 @@ msgid ""
 "dependent duration."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:779
+#, fuzzy
+msgctxt "class"
+msgid "Orb of Draining"
+msgstr "サンダー・ボール"
+
 #: ../lib/gamedata/class.txt:787
 msgctxt "class"
 msgid ""
@@ -433,23 +1111,57 @@ msgid ""
 "bigger area of effect is attained at character level 30."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:788
+#, fuzzy
+msgctxt "class"
+msgid "Spear of Light"
+msgstr "閃光"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:793
+#, fuzzy
 msgctxt "class"
 msgid ""
 "Fires a beam that lights up each square and hurts each light-sensitive "
 "monster in its path."
-msgstr ""
+msgstr "光線を放つ。光りを嫌うモンスターに効果がある。"
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:794
+#, fuzzy
+msgctxt "class"
+msgid "Dispel Undead"
+msgstr "アンデッド退散"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:799
+#, fuzzy
 msgctxt "class"
 msgid ""
 "Inflicts unresistable damage on each undead monster within line of sight."
-msgstr ""
+msgstr "視界内の全ての敵に%sによるダメージを与える。"
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:800
+#, fuzzy
+msgctxt "class"
+msgid "Dispel Evil"
+msgstr "邪悪退散"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:805
+#, fuzzy
 msgctxt "class"
 msgid "Inflicts unresistable damage on each evil monster within line of sight."
-msgstr ""
+msgstr "視界内の全ての敵に%sによるダメージを与える。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:806
+#, fuzzy
+msgctxt "class"
+msgid "Protection from Evil"
+msgstr "対邪悪結界"
 
 #: ../lib/gamedata/class.txt:813
 msgctxt "class"
@@ -459,6 +1171,12 @@ msgid ""
 "higher than your character level."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:814
+msgctxt "class"
+msgid "Remove Curse"
+msgstr "解呪"
+
 #: ../lib/gamedata/class.txt:821
 msgctxt "class"
 msgid ""
@@ -466,15 +1184,46 @@ msgid ""
 "levels."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:826
+#, fuzzy
+msgctxt "class"
+msgid "Portal"
+msgstr "入口"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:831
+#, fuzzy
 msgctxt "class"
 msgid "Teleports you randomly over a short distance."
-msgstr ""
+msgstr "近距離のテレポートをする。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:832
+#, fuzzy
+msgctxt "class"
+msgid "Remembrance"
+msgstr "節"
 
 #: ../lib/gamedata/class.txt:835
 msgctxt "class"
 msgid "Restores experience points to maximum if it is currently below maximum."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:836
+#, fuzzy
+msgctxt "class"
+msgid "Word of Recall"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"帰還の呪文\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"帰還の詔\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"帰還の呪文\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"帰還の呪文"
 
 #: ../lib/gamedata/class.txt:845
 msgctxt "class"
@@ -487,16 +1236,37 @@ msgid ""
 "Morgoth is dead."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:846
+#, fuzzy
+msgctxt "class"
+msgid "Healing"
+msgstr "体力回復"
+
 #: ../lib/gamedata/class.txt:855
 msgctxt "class"
 msgid ""
 "Heals 2000 points of damage and cures all stunning, cuts, poison and amnesia."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:856
+#, fuzzy
+msgctxt "class"
+msgid "Restoration"
+msgstr "全復活"
+
 #: ../lib/gamedata/class.txt:863
 msgctxt "class"
 msgid "Restores to maximum all stats that are currently below maximum."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:864
+#, fuzzy
+msgctxt "class"
+msgid "Clairvoyance"
+msgstr "千里眼"
 
 #: ../lib/gamedata/class.txt:868
 msgctxt "class"
@@ -505,19 +1275,48 @@ msgid ""
 "level."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:873
+#, fuzzy
+msgctxt "class"
+msgid "Enchant Weapon"
+msgstr "武器強化"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:877
+#, fuzzy
 msgctxt "class"
 msgid "Attempts to improve the to-hit bonus and the to-dam bonus of a weapon."
-msgstr ""
+msgstr "武器の命中率修正とダメージ修正を強化する。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:878
+#, fuzzy
+msgctxt "class"
+msgid "Enchant Armour"
+msgstr "防具強化"
 
 #: ../lib/gamedata/class.txt:882
 msgctxt "class"
 msgid "Attempts to improve the armour class bonus of a piece of armour."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:883
+#, fuzzy
+msgctxt "class"
+msgid "Smite Evil"
+msgstr "邪悪飛ばし"
+
 #: ../lib/gamedata/class.txt:887
 msgctxt "class"
 msgid "Temporarily makes your melee attacks slay evil creatures."
+msgstr ""
+
+# spell
+#: ../lib/gamedata/class.txt:888
+msgctxt "class"
+msgid "Glyph of Warding"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:897
@@ -531,15 +1330,42 @@ msgid ""
 "leave the level."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:898
+#, fuzzy
+msgctxt "class"
+msgid "Demon Bane"
+msgstr "悪魔"
+
 #: ../lib/gamedata/class.txt:902
 msgctxt "class"
 msgid "Temporarily makes your melee attacks powerfully slay demons."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:907
+#, fuzzy
+msgctxt "class"
+msgid "Banish Evil"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"邪悪消滅\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"邪悪追放"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:911
+#, fuzzy
 msgctxt "class"
 msgid "Teleports away each evil monster within line of sight."
-msgstr ""
+msgstr "視界内の全ての邪悪なモンスターをテレポートさせる。抵抗されると無効。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:912
+#, fuzzy
+msgctxt "class"
+msgid "Word of Destruction"
+msgstr "破壊の言葉"
 
 #: ../lib/gamedata/class.txt:920
 msgctxt "class"
@@ -551,6 +1377,13 @@ msgid ""
 "when used in the town."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:921
+#, fuzzy
+msgctxt "class"
+msgid "Holy Word"
+msgstr "聖なる御言葉"
+
 #: ../lib/gamedata/class.txt:934
 msgctxt "class"
 msgid ""
@@ -559,9 +1392,24 @@ msgid ""
 "neutralizes poison, and removes fear."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:935
+#, fuzzy
+msgctxt "class"
+msgid "Spear of Oromë"
+msgstr "鏡の封印"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:940
+#, fuzzy
 msgctxt "class"
 msgid "Fires a beam of holy magic that does extra damage to evil creatures."
+msgstr "数ターン後にそれまで受けたダメージに応じた威力の地獄の劫火の弾を放つ。"
+
+# spell
+#: ../lib/gamedata/class.txt:941
+msgctxt "class"
+msgid "Light of Manwë"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:949
@@ -574,12 +1422,102 @@ msgstr ""
 #: ../lib/gamedata/class.txt:952
 msgctxt "class"
 msgid "Necromancer"
+msgstr "ネクロマンサー"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:973
+#, fuzzy
+msgctxt "class"
+msgid "Curser"
+msgstr "狩人"
+
+# title
+#: ../lib/gamedata/class.txt:974
+msgctxt "class"
+msgid "Dark Student"
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:975
+#, fuzzy
+msgctxt "class"
+msgid "Initiate"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"入門者\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"入門者\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"入門者\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"熟達者"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:976
+#, fuzzy
+msgctxt "class"
+msgid "Slavemaster"
+msgstr "ヘビ使い"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:977
+#, fuzzy
+msgctxt "class"
+msgid "Summoner"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"悪魔召喚\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"デーモン召喚"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:978
+#, fuzzy
+msgctxt "class"
+msgid "Controller"
+msgstr "CTRL: "
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:979
+#, fuzzy
+msgctxt "class"
+msgid "Commander"
+msgstr "拾い/破壊/放置の選択"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:980
+#, fuzzy
+msgctxt "class"
+msgid "Dark Master"
+msgstr "名人"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:981
+#, fuzzy
+msgctxt "class"
+msgid "Night Lord"
+msgstr " 光源"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:990
+#, fuzzy
+msgctxt "class"
+msgid "Nether Bolt"
+msgstr "地獄の矢"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:995
+#, fuzzy
 msgctxt "class"
 msgid "Fires a bolt of nether magic."
-msgstr ""
+msgstr "弱い魔法のビームを放つ。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1001
+#, fuzzy
+msgctxt "class"
+msgid "Create Darkness"
+msgstr "暗闇生成"
 
 #: ../lib/gamedata/class.txt:1007
 msgctxt "class"
@@ -588,12 +1526,26 @@ msgid ""
 "entire room will be darkened as well."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1008
+#, fuzzy
+msgctxt "class"
+msgid "Bat Form"
+msgstr " a) 型を崩す"
+
 #: ../lib/gamedata/class.txt:1012
 msgctxt "class"
 msgid ""
 "Changes you into the shape of a bat, weak but with excellent senses.  While "
 "shapechanged you cannot use items."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1013
+#, fuzzy
+msgctxt "class"
+msgid "Read Minds"
+msgstr "明鏡止水"
 
 #: ../lib/gamedata/class.txt:1023
 msgctxt "class"
@@ -602,10 +1554,24 @@ msgid ""
 "maps in a region around them, increasing in size with character level."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1028
+#, fuzzy
+msgctxt "class"
+msgid "Tap Unlife"
+msgstr "死"
+
 #: ../lib/gamedata/class.txt:1033
 msgctxt "class"
 msgid "Targets the nearest undead monster and damages it to gain player mana."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1034
+#, fuzzy
+msgctxt "class"
+msgid "Crush"
+msgstr "体当たりする"
 
 #: ../lib/gamedata/class.txt:1044
 msgctxt "class"
@@ -615,12 +1581,26 @@ msgid ""
 "unharmed."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1045
+#, fuzzy
+msgctxt "class"
+msgid "Sleep Evil"
+msgstr "邪悪感知"
+
 #: ../lib/gamedata/class.txt:1051
 msgctxt "class"
 msgid ""
 "Attempts to put to sleep each evil monster within line of sight.  Monsters "
 "that resist confusion are not affected."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1052
+#, fuzzy
+msgctxt "class"
+msgid "Shadow Shift"
+msgstr "シャドウ・シフト"
 
 #: ../lib/gamedata/class.txt:1060
 msgctxt "class"
@@ -629,12 +1609,26 @@ msgid ""
 "along."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1061
+#, fuzzy
+msgctxt "class"
+msgid "Disenchant"
+msgstr "劣化させる"
+
 #: ../lib/gamedata/class.txt:1067
 msgctxt "class"
 msgid ""
 "Casts a bolt which wounds, and makes spellcasting monsters less successful "
 "in casting spells."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1072
+#, fuzzy
+msgctxt "class"
+msgid "Frighten"
+msgstr "恐怖を感じない"
 
 #: ../lib/gamedata/class.txt:1078
 msgctxt "class"
@@ -643,6 +1637,13 @@ msgid ""
 "that resist fear are not affected."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1079
+#, fuzzy
+msgctxt "class"
+msgid "Vampire Strike"
+msgstr "焔の一撃"
+
 #: ../lib/gamedata/class.txt:1085
 msgctxt "class"
 msgid ""
@@ -650,16 +1651,41 @@ msgid ""
 "number of hitpoints, healing and nourishing the player."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1086
+#, fuzzy
+msgctxt "class"
+msgid "Dispel Life"
+msgstr "邪悪退散"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:1091
+#, fuzzy
 msgctxt "class"
 msgid ""
 "Inflicts unresistable damage on each living monster within line of sight."
-msgstr ""
+msgstr "視界内の全ての敵に%sによるダメージを与える。"
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1092
+#, fuzzy
+msgctxt "class"
+msgid "Dark Spear"
+msgstr "名人"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:1097
+#, fuzzy
 msgctxt "class"
 msgid "Fires a beam of darkness."
-msgstr ""
+msgstr "暗黒のボルトもしくはビームを放つ。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1098
+#, fuzzy
+msgctxt "class"
+msgid "Warg Form"
+msgstr " a) 型を崩す"
 
 #: ../lib/gamedata/class.txt:1102
 msgctxt "class"
@@ -668,16 +1694,38 @@ msgid ""
 "strength, at the cost of some hitpoints."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1108
+#, fuzzy
+msgctxt "class"
+msgid "Banish Spirits"
+msgstr "悪霊召喚"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:1112
+#, fuzzy
 msgctxt "class"
 msgid "Teleports away each monster with a spirit within line of sight."
-msgstr ""
+msgstr "視界内の全ての邪悪なモンスターをテレポートさせる。抵抗されると無効。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1113
+#, fuzzy
+msgctxt "class"
+msgid "Annihilate"
+msgstr "モンスター消滅"
 
 #: ../lib/gamedata/class.txt:1119
 msgctxt "class"
 msgid ""
 "Inflicts damage equal to four times player level on a single monster that is "
 "not undead, an elemental, a golem, or a vortex."
+msgstr ""
+
+# spell
+#: ../lib/gamedata/class.txt:1120
+msgctxt "class"
+msgid "Grond's Blow"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1128
@@ -690,12 +1738,26 @@ msgid ""
 "when used in the town."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1129
+#, fuzzy
+msgctxt "class"
+msgid "Unleash Chaos"
+msgstr "カオスのブレス"
+
 #: ../lib/gamedata/class.txt:1147
 msgctxt "class"
 msgid ""
 "Fires a chaos beam, arc or ball in the chosen direction, wakes everything in "
 "the area, and attempts to frighten everything in line of sight."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1148
+#, fuzzy
+msgctxt "class"
+msgid "Fume of Mordor"
+msgstr "鏡の封印"
 
 #: ../lib/gamedata/class.txt:1153
 msgctxt "class"
@@ -704,14 +1766,34 @@ msgid ""
 "level."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1154
+#, fuzzy
+msgctxt "class"
+msgid "Storm of Darkness"
+msgstr "闇の扉"
+
 #: ../lib/gamedata/class.txt:1159
 msgctxt "class"
 msgid "Invokes a radius-4 darkness ball."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1165
+#, fuzzy
+msgctxt "class"
+msgid "Power Sacrifice"
+msgstr "犠"
+
 #: ../lib/gamedata/class.txt:1172
 msgctxt "class"
 msgid "Exchanges 50 hitpoints for 50 mana."
+msgstr ""
+
+# spell
+#: ../lib/gamedata/class.txt:1173
+msgctxt "class"
+msgid "Zone of Unmagic"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1179
@@ -720,6 +1802,13 @@ msgid ""
 "Produces a zone of disenchantment affecting the player and monsters within "
 "radius 4."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1180
+#, fuzzy
+msgctxt "class"
+msgid "Vampire Form"
+msgstr "吸血鬼の牙"
 
 #: ../lib/gamedata/class.txt:1190
 msgctxt "class"
@@ -731,12 +1820,40 @@ msgid ""
 "monsters with your bite attack."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1191
+#, fuzzy
+msgctxt "class"
+msgid "Curse"
+msgstr "呪力"
+
 #: ../lib/gamedata/class.txt:1201
 msgctxt "class"
 msgid ""
 "Deals direct damage to a single monster, more the more damaged the monster "
 "is already, at the cost of 100 hitpoints."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1202
+#, fuzzy
+msgctxt "class"
+msgid "Command"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"コマンド:\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"コマンド: \n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"コマンド:\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"コマンド: \n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"コマンド: \n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"コマンド: \n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"コマンド:"
 
 #: ../lib/gamedata/class.txt:1207
 msgctxt "class"
@@ -745,10 +1862,63 @@ msgid ""
 "Possible actions are move, stand still, 'd'rop, 'm'agic, or 'r'elease."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:1209
 msgctxt "class"
 msgid "Paladin"
-msgstr ""
+msgstr "パラディン"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1232
+msgctxt "class"
+msgid "Gallant"
+msgstr "勇士"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1233
+msgctxt "class"
+msgid "Keeper"
+msgstr "衛士"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1234
+msgctxt "class"
+msgid "Protector"
+msgstr "保護者"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1235
+msgctxt "class"
+msgid "Defender"
+msgstr "防衛者"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1236
+msgctxt "class"
+msgid "Warder"
+msgstr "護衛者"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1237
+msgctxt "class"
+msgid "Knight"
+msgstr "騎士"
+
+#: ../lib/gamedata/class.txt:1238
+msgctxt "class"
+msgid "Guardian"
+msgstr "守護騎士"
+
+# title
+#: ../lib/gamedata/class.txt:1239
+msgctxt "class"
+msgid "Chevalier"
+msgstr "聖騎士"
+
+#: ../lib/gamedata/class.txt:1241
+msgctxt "class"
+msgid "Paladin Lord"
+msgstr "聖騎士長"
 
 #: ../lib/gamedata/class.txt:1298
 msgctxt "class"
@@ -758,6 +1928,12 @@ msgid ""
 "dependent duration."
 msgstr ""
 
+# spell
+#: ../lib/gamedata/class.txt:1364
+msgctxt "class"
+msgid "Single Combat"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1368
 msgctxt "class"
 msgid ""
@@ -765,20 +1941,110 @@ msgid ""
 "winner can emerge."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:1371
+#, fuzzy
 msgctxt "class"
 msgid "Rogue"
+msgstr "盗賊"
+
+# title
+#: ../lib/gamedata/class.txt:1394
+msgctxt "class"
+msgid "Vagabond"
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1395
+#, fuzzy
+msgctxt "class"
+msgid "Cutpurse"
+msgstr "すり"
+
+# title
+#: ../lib/gamedata/class.txt:1396
+msgctxt "class"
+msgid "Footpad"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1397
+#, fuzzy
+msgctxt "class"
+msgid "Robber"
+msgstr "追いはぎ"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1398
+#, fuzzy
+msgctxt "class"
+msgid "Burglar"
+msgstr "夜盗"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1399
+#, fuzzy
+msgctxt "class"
+msgid "Filcher"
+msgstr "こそ泥"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1400
+#, fuzzy
+msgctxt "class"
+msgid "Sharper"
+msgstr "ペテン師"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1402
+#, fuzzy
+msgctxt "class"
+msgid "Thief"
+msgstr "ロウシーフ"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1403
+#, fuzzy
+msgctxt "class"
+msgid "Master Thief"
+msgstr "マスター"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1420
+#, fuzzy
+msgctxt "class"
+msgid "Object Detection"
+msgstr "全感知"
 
 #: ../lib/gamedata/class.txt:1426
 msgctxt "class"
 msgid "Detects all objects in the immediate area."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1427
+#, fuzzy
+msgctxt "class"
+msgid "Detect Stairs"
+msgstr "周辺調査"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:1431
+#, fuzzy
 msgctxt "class"
 msgid "Detects all stairs in a wide area."
+msgstr "近くの財宝を感知する。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1456
+#, fuzzy
+msgctxt "class"
+msgid "Hit and Run"
 msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"一撃離脱\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"ヒット＆アウェイ"
 
 #: ../lib/gamedata/class.txt:1460
 msgctxt "class"
@@ -786,14 +2052,87 @@ msgid ""
 "Prepares you to teleport a short distance after stealing from a monster."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:1475
+#, fuzzy
 msgctxt "class"
 msgid "Ranger"
-msgstr ""
+msgstr "レンジャー"
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1499
+#, fuzzy
+msgctxt "class"
+msgid "Runner"
+msgstr "使い走り"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1500
+#, fuzzy
+msgctxt "class"
+msgid "Strider"
+msgstr "馳夫"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1501
+#, fuzzy
+msgctxt "class"
+msgid "Scout"
+msgstr "斥候"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1502
+#, fuzzy
+msgctxt "class"
+msgid "Courser"
+msgstr "狩人"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1503
+#, fuzzy
+msgctxt "class"
+msgid "Tracker"
+msgstr "追跡者"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1504
+#, fuzzy
+msgctxt "class"
+msgid "Guide"
+msgstr "先導者"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1505
+#, fuzzy
+msgctxt "class"
+msgid "Explorer"
+msgstr "探検家"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1506
+#, fuzzy
+msgctxt "class"
+msgid "Pathfinder"
+msgstr "探険者"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1508
+#, fuzzy
+msgctxt "class"
+msgid "Ranger Lord"
+msgstr "野伏の総領"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:1530
+#, fuzzy
 msgctxt "class"
 msgid "Cures all cuts, poison, stunning and black breath."
+msgstr "傷、毒、朦朧から全快する。"
+
+# spell
+#: ../lib/gamedata/class.txt:1553
+msgctxt "class"
+msgid "Cover Tracks"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1559
@@ -803,6 +2142,13 @@ msgid ""
 "dependent duration."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1560
+#, fuzzy
+msgctxt "class"
+msgid "Create Arrows"
+msgstr "弾/矢の製造"
+
 #: ../lib/gamedata/class.txt:1564
 msgctxt "class"
 msgid ""
@@ -810,10 +2156,23 @@ msgid ""
 "depending on staff level and player level."
 msgstr ""
 
+# spell
+#: ../lib/gamedata/class.txt:1571
+msgctxt "class"
+msgid "Decoy"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1574
 msgctxt "class"
 msgid "Leaves a magical decoy that looks and sounds like the player."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1575
+#, fuzzy
+msgctxt "class"
+msgid "Brand Ammunition"
+msgstr "酸免疫"
 
 #: ../lib/gamedata/class.txt:1582
 msgctxt "class"
@@ -824,17 +2183,99 @@ msgid ""
 "is already branded, has a slay, is broken, or is cursed."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:1585
+#, fuzzy
 msgctxt "class"
 msgid "Blackguard"
+msgstr "漆黒の刃"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1610
+#, fuzzy
+msgctxt "class"
+msgid "Rat"
+msgstr "必殺技"
+
+# title
+#: ../lib/gamedata/class.txt:1611
+msgctxt "class"
+msgid "Bully"
 msgstr ""
 
+# title
+#: ../lib/gamedata/class.txt:1612
+msgctxt "class"
+msgid "Thug"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1613
+#, fuzzy
+msgctxt "class"
+msgid "Ruffian"
+msgstr "ラフノール王"
+
+# title
+#: ../lib/gamedata/class.txt:1614
+msgctxt "class"
+msgid "Brigand"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1615
+#, fuzzy
+msgctxt "class"
+msgid "Raider"
+msgstr "蜘蛛"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1616
+#, fuzzy
+msgctxt "class"
+msgid "Tormentor"
+msgstr "我が家のアイテム"
+
+# title
+#: ../lib/gamedata/class.txt:1617
+msgctxt "class"
+msgid "Marauder"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1618
+#, fuzzy
+msgctxt "class"
+msgid "Destroyer"
+msgstr "破壊"
+
+# title
+#: ../lib/gamedata/class.txt:1619
+msgctxt "class"
+msgid "Tyrant"
+msgstr ""
+
+# spell
+#: ../lib/gamedata/class.txt:1625
+msgctxt "class"
+msgid "Seek Battle"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/class.txt:1630
+#, fuzzy
 msgctxt "class"
 msgid ""
 "Detects all monsters susceptible to fear in the immediate area, for one turn "
 "only."
-msgstr ""
+msgstr "近くの思考することができるモンスターを感知する。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1631
+#, fuzzy
+msgctxt "class"
+msgid "Berserk Strength"
+msgstr "腕力"
 
 #: ../lib/gamedata/class.txt:1640
 msgctxt "class"
@@ -844,6 +2285,13 @@ msgid ""
 "duration."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1641
+#, fuzzy
+msgctxt "class"
+msgid "Whirlwind Attack"
+msgstr "カマイタチ"
+
 #: ../lib/gamedata/class.txt:1648
 msgctxt "class"
 msgid ""
@@ -852,11 +2300,24 @@ msgid ""
 "20, 3 at 35, and 4 at 50)."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1649
+#, fuzzy
+msgctxt "class"
+msgid "Shatter Stone"
+msgstr "粉砕する"
+
 #: ../lib/gamedata/class.txt:1654
 msgctxt "class"
 msgid ""
 "Destroys an adjacent section of wall or rubble, unless it is a permanent "
 "wall.  Deals 20+1d30 damage to monsters vulnerable to rock remover."
+msgstr ""
+
+# spell
+#: ../lib/gamedata/class.txt:1655
+msgctxt "class"
+msgid "Leap into Battle"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1662
@@ -867,11 +2328,23 @@ msgid ""
 "of blows is reduced by 25% for each space, then rounded."
 msgstr ""
 
+# spell
+#: ../lib/gamedata/class.txt:1663
+msgctxt "class"
+msgid "Grim Purpose"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1671
 msgctxt "class"
 msgid ""
 "Your mind becomes too focused to be slowed, paralyzed or confused for 12+d12 "
 "turns."
+msgstr ""
+
+# spell
+#: ../lib/gamedata/class.txt:1674
+msgctxt "class"
+msgid "Maim Foe"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1681
@@ -882,11 +2355,24 @@ msgid ""
 "the enemy, it will be stunned for 6 turns."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1682
+#, fuzzy
+msgctxt "class"
+msgid "Howl of the Damned"
+msgstr "凪の刻"
+
 #: ../lib/gamedata/class.txt:1689
 msgctxt "class"
 msgid ""
 "Attempts to scare every monster in line of sight for a duration dependent on "
 "player level and monster depth.  Monsters that resist fear are not affected."
+msgstr ""
+
+# spell
+#: ../lib/gamedata/class.txt:1690
+msgctxt "class"
+msgid "Relentless Taunting"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1695
@@ -896,9 +2382,21 @@ msgid ""
 "likely to use a ranged attack (including spells and innate abilities)."
 msgstr ""
 
+# spell
+#: ../lib/gamedata/class.txt:1696
+msgctxt "class"
+msgid "Venom"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1700
 msgctxt "class"
 msgid "Coats all your melee weapons with poison for 18+d18 turns."
+msgstr ""
+
+# spell
+#: ../lib/gamedata/class.txt:1701
+msgctxt "class"
+msgid "Werewolf Form"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1705
@@ -908,6 +2406,13 @@ msgid ""
 "form you move, attack, and heal faster."
 msgstr ""
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1708
+#, fuzzy
+msgctxt "class"
+msgid "Bloodlust"
+msgstr "血の呪い"
+
 #: ../lib/gamedata/class.txt:1714
 msgctxt "class"
 msgid ""
@@ -916,9 +2421,21 @@ msgid ""
 "effects."
 msgstr ""
 
+# spell
+#: ../lib/gamedata/class.txt:1715
+msgctxt "class"
+msgid "Unholy Reprieve"
+msgstr ""
+
 #: ../lib/gamedata/class.txt:1723
 msgctxt "class"
 msgid "Restores STR, INT, CON, and experience at the cost of 66 HP."
+msgstr ""
+
+# spell
+#: ../lib/gamedata/class.txt:1724
+msgctxt "class"
+msgid "Forceful Blow"
 msgstr ""
 
 #: ../lib/gamedata/class.txt:1729
@@ -927,6 +2444,13 @@ msgid ""
 "Attempts a melee blow that deals additional force damage when it hits, "
 "knocking the target back with a chance to stun it."
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../lib/gamedata/class.txt:1730
+#, fuzzy
+msgctxt "class"
+msgid "Quake"
+msgstr "地震"
 
 #: ../lib/gamedata/class.txt:1732
 msgctxt "class"
