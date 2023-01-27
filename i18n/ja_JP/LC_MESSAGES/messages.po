@@ -2241,6 +2241,77 @@ msgid "Options Menu"
 msgstr "設定メニュー"
 
 # From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-spell.c:81
+msgid "(illegible)"
+msgstr "(判読不能)"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-spell.c:84
+#, fuzzy
+msgid " forgotten"
+msgstr "忘却"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-spell.c:93
+#, fuzzy
+msgid " untried"
+msgstr "未経験"
+
+#: ../src/ui-spell.c:97
+#, fuzzy
+msgid " unknown"
+msgstr "不明"
+
+#: ../src/ui-spell.c:100
+msgid " difficult"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-spell.c:236
+#, fuzzy
+msgid "Name                             Lv Mana Fail Info"
+msgstr "                                   Lv   MP 失率 効果"
+
+#: ../src/ui-spell.c:272
+#, c-format
+msgid "%s which %s? ('?' to toggle description)"
+msgstr ""
+
+#: ../src/ui-spell.c:293
+#, c-format
+msgid "Browsing %ss. ('?' to toggle description)"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-spell.c:314
+#, fuzzy
+msgid "You cannot browse that."
+msgstr "あなたは目が見えない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-spell.c:325
+msgid "Browse which book? "
+msgstr "どの本を読みますか? "
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-spell.c:326
+#, fuzzy
+msgid "You have no books that you can read."
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"読める書がない。\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"読める本がない。\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"読める本がない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-spell.c:375
+#, fuzzy, c-format
+msgid "%s which book?"
+msgstr "どの呪文書を使いますか? "
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/list-options.h:14
 msgid "Use the roguelike command keyset"
 msgstr "ローグ風キー配置を使用する"
@@ -4633,17 +4704,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ "どの本から学びますか? "
 
 # From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "You have no books that you can read."
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "読める書がない。\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "読める本がない。\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "読める本がない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You have learned the special attack of %s."
 #~ msgstr "%sの技を覚えた。"
 
@@ -5148,10 +5208,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "    "
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "                                   Lv   MP Fail Effect"
-#~ msgstr "                                   Lv   MP 失率 効果"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "(Powers %c-%c, *=List, /=Browse, ESC=exit) Use which power? "
 #~ msgstr ""
 #~ "(特殊能力 %c-%c, '*'で一覧, '/'で閲覧, ESCで中断) どの能力を使いますか？"
@@ -5245,10 +5301,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "本を読むことができない！"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Browse which book? "
-#~ msgstr "どの本を読みますか? "
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "browse"
 #~ msgstr "読む"
 
@@ -5295,10 +5347,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Can not cast more spells."
 #~ msgstr "これ以上新しい呪文を詠唱することはできない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Use which book? "
-#~ msgstr "どの呪文書を使いますか? "
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You have no spell books!"
@@ -22381,10 +22429,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "あなたは地獄の力への耐性を持っている。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You cannot see."
-#~ msgstr "あなたは目が見えない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You are terrified."
 #~ msgstr "あなたは恐怖に侵されている。"
 
@@ -29048,18 +29092,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Profic Lv   SP Fail Effect"
 #~ msgstr "熟練度 Lv   MP 失率 効果"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "(illegible)"
-#~ msgstr "(判読不能)"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "forgotten"
-#~ msgstr "忘却"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "untried"
-#~ msgstr "未経験"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "art"

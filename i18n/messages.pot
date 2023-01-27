@@ -1859,6 +1859,57 @@ msgstr ""
 msgid "Options Menu"
 msgstr ""
 
+#: ../src/ui-spell.c:81
+msgid "(illegible)"
+msgstr ""
+
+#: ../src/ui-spell.c:84
+msgid " forgotten"
+msgstr ""
+
+#: ../src/ui-spell.c:93
+msgid " untried"
+msgstr ""
+
+#: ../src/ui-spell.c:97
+msgid " unknown"
+msgstr ""
+
+#: ../src/ui-spell.c:100
+msgid " difficult"
+msgstr ""
+
+#: ../src/ui-spell.c:236
+msgid "Name                             Lv Mana Fail Info"
+msgstr ""
+
+#: ../src/ui-spell.c:272
+#, c-format
+msgid "%s which %s? ('?' to toggle description)"
+msgstr ""
+
+#: ../src/ui-spell.c:293
+#, c-format
+msgid "Browsing %ss. ('?' to toggle description)"
+msgstr ""
+
+#: ../src/ui-spell.c:314
+msgid "You cannot browse that."
+msgstr ""
+
+#: ../src/ui-spell.c:325
+msgid "Browse which book? "
+msgstr ""
+
+#: ../src/ui-spell.c:326
+msgid "You have no books that you can read."
+msgstr ""
+
+#: ../src/ui-spell.c:375
+#, c-format
+msgid "%s which book?"
+msgstr ""
+
 #: ../src/list-options.h:14
 msgid "Use the roguelike command keyset"
 msgstr ""

@@ -78,10 +78,10 @@ static void spell_menu_display(struct menu *m, int oid, bool cursor,
 	if (!spell) return;
 
 	if (spell->slevel >= 99) {
-		illegible = "(illegible)";
+		illegible = _("(illegible)");
 		attr = COLOUR_L_DARK;
 	} else if (player->spell_flags[spell_index] & PY_SPELL_FORGOTTEN) {
-		comment = " forgotten";
+		comment = _(" forgotten");
 		attr = COLOUR_YELLOW;
 	} else if (player->spell_flags[spell_index] & PY_SPELL_LEARNED) {
 		if (player->spell_flags[spell_index] & PY_SPELL_WORKED) {
@@ -90,19 +90,20 @@ static void spell_menu_display(struct menu *m, int oid, bool cursor,
 			comment = help;
 			attr = COLOUR_WHITE;
 		} else {
-			comment = " untried";
+			comment = _(" untried");
 			attr = COLOUR_L_GREEN;
 		}
 	} else if (spell->slevel <= player->lev) {
-		comment = " unknown";
+		comment = _(" unknown");
 		attr = COLOUR_L_BLUE;
 	} else {
-		comment = " difficult";
+		comment = _(" difficult");
 		attr = COLOUR_RED;
 	}
 
 	/* Dump the spell --(-- */
-	strnfmt(out, sizeof(out), "%-30s%2d %4d %3d%%%s", spell->name,
+	const char *spell_name = _GAMEDATA_C("class", spell->name);
+	strnfmt(out, sizeof(out), "%-*s%2d %4d %3d%%%s", (int)(30-(i18n_visualwidth(spell_name)-strlen(spell_name))), spell_name,
 			spell->slevel, spell->smana, spell_chance(spell_index), comment);
 	c_prt(attr, illegible ? illegible : out, row, col);
 }
@@ -232,7 +233,7 @@ static struct menu *spell_menu_new(const struct object *obj,
 	menu_setpriv(m, d->n_spells, d);
 
 	/* Set flags */
-	m->header = "Name                             Lv Mana Fail Info";
+	m->header = _("Name                             Lv Mana Fail Info");
 	m->flags = MN_CASELESS_TAGS;
 	m->selections = all_letters_nohjkl;
 	m->browse_hook = spell_menu_browser;
@@ -268,7 +269,7 @@ static int spell_menu_select(struct menu *m, const char *noun, const char *verb)
 	region_erase_bordered(&m->active);
 
 	/* Format, capitalise and display */
-	strnfmt(buf, sizeof buf, "%s which %s? ('?' to toggle description)",
+	strnfmt(buf, sizeof buf, _("%s which %s? ('?' to toggle description)"),
 			verb, noun);
 	my_strcap(buf);
 	prt(buf, 0, 0);
@@ -289,7 +290,7 @@ static void spell_menu_browse(struct menu *m, const char *noun)
 	screen_save();
 
 	region_erase_bordered(&m->active);
-	prt(format("Browsing %ss. ('?' to toggle description)", noun), 0, 0);
+	prt(format(_("Browsing %ss. ('?' to toggle description)"), noun), 0, 0);
 
 	d->browse = true;
 	menu_select(m, 0, true);
@@ -310,7 +311,7 @@ void textui_book_browse(const struct object *obj)
 		spell_menu_browse(m, noun);
 		spell_menu_destroy(m);
 	} else {
-		msg("You cannot browse that.");
+		msg(_("You cannot browse that."));
 	}
 }
 
@@ -321,8 +322,8 @@ void textui_spell_browse(void)
 {
 	struct object *obj;
 
-	if (!get_item(&obj, "Browse which book? ",
-				  "You have no books that you can read.",
+	if (!get_item(&obj, _("Browse which book? "),
+				  _("You have no books that you can read."),
 				  CMD_BROWSE_SPELL, obj_can_browse,
 				  (USE_INVEN | USE_FLOOR | IS_HARMLESS)))
 		return;
@@ -371,7 +372,7 @@ int textui_get_spell(struct player *p, const char *verb,
 	struct object *book;
 
 	/* Create prompt */
-	strnfmt(prompt, sizeof prompt, "%s which book?", verb);
+	strnfmt(prompt, sizeof prompt, _("%s which book?"), verb);
 	my_strcap(prompt);
 
 	if (!get_item(&book, prompt, book_error,
