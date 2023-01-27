@@ -11,6 +11,301 @@ msgstr ""
 msgid "There is a wall in the way!"
 msgstr ""
 
+#: ../src/cmd-obj.c:62
+msgid "zap the rod"
+msgstr ""
+
+#: ../src/cmd-obj.c:64
+msgid "use the wand"
+msgstr ""
+
+#: ../src/cmd-obj.c:65
+msgid "wand"
+msgstr ""
+
+#: ../src/cmd-obj.c:67
+msgid "use the staff"
+msgstr ""
+
+#: ../src/cmd-obj.c:68
+msgid "staff"
+msgstr ""
+
+#: ../src/cmd-obj.c:70
+msgid "activate it"
+msgstr ""
+
+#: ../src/cmd-obj.c:80
+#, c-format
+msgid "You failed to %s properly."
+msgstr ""
+
+#: ../src/cmd-obj.c:87
+#, c-format
+msgid "The %s has no charges left."
+msgstr ""
+
+#: ../src/cmd-obj.c:157
+msgid "Uninscribe which item?"
+msgstr ""
+
+#: ../src/cmd-obj.c:158
+msgid "You have nothing you can uninscribe."
+msgstr ""
+
+#: ../src/cmd-obj.c:164
+msgid "Inscription removed."
+msgstr ""
+
+#: ../src/cmd-obj.c:187
+msgid "Inscribe which item?"
+msgstr ""
+
+#: ../src/cmd-obj.c:188
+msgid "You have nothing to inscribe."
+msgstr ""
+
+#: ../src/cmd-obj.c:196
+#, c-format
+msgid "Inscribing %s."
+msgstr ""
+
+#: ../src/cmd-obj.c:244
+msgid "Take off or unwield which item?"
+msgstr ""
+
+#: ../src/cmd-obj.c:245
+msgid "You have nothing to take off or unwield."
+msgstr ""
+
+#: ../src/cmd-obj.c:277
+msgid "Wear or wield which item?"
+msgstr ""
+
+#: ../src/cmd-obj.c:278
+msgid "You have nothing to wear or wield."
+msgstr ""
+
+#: ../src/cmd-obj.c:298
+msgid "Replace which ring? "
+msgstr ""
+
+#: ../src/cmd-obj.c:299
+msgid "Error in do_cmd_wield(), please report."
+msgstr ""
+
+#: ../src/cmd-obj.c:312
+#, c-format
+msgid "You cannot remove the %s you are %s."
+msgstr ""
+
+#: ../src/cmd-obj.c:325
+#, c-format
+msgid "Really take off %s? "
+msgstr ""
+
+#: ../src/cmd-obj.c:334
+msgid "You were wielding"
+msgstr ""
+
+#: ../src/cmd-obj.c:337 ../src/cmd-obj.c:340
+msgid "You were holding"
+msgstr ""
+
+#: ../src/cmd-obj.c:343
+msgid "You were wearing"
+msgstr ""
+
+#: ../src/cmd-obj.c:348
+#, c-format
+msgid "%s %s (%c)."
+msgstr ""
+
+#: ../src/cmd-obj.c:366
+msgid "Drop which item?"
+msgstr ""
+
+#: ../src/cmd-obj.c:367
+msgid "You have nothing to drop."
+msgstr ""
+
+#: ../src/cmd-obj.c:374
+msgid "Hmmm, it seems to be stuck."
+msgstr ""
+
+#: ../src/cmd-obj.c:486
+msgid "You activate it."
+msgstr ""
+
+#: ../src/cmd-obj.c:684
+#, c-format
+msgid "You see %s."
+msgstr ""
+
+#: ../src/cmd-obj.c:687
+#, c-format
+msgid "You have %s (1st %c)."
+msgstr ""
+
+#: ../src/cmd-obj.c:689
+#, c-format
+msgid "You have %s (%c)."
+msgstr ""
+
+#: ../src/cmd-obj.c:742
+msgid "Read which scroll? "
+msgstr ""
+
+#: ../src/cmd-obj.c:743
+msgid "You have no scrolls to read."
+msgstr ""
+
+#: ../src/cmd-obj.c:763
+msgid "Use which staff? "
+msgstr ""
+
+#: ../src/cmd-obj.c:764
+msgid "You have no staves to use."
+msgstr ""
+
+#: ../src/cmd-obj.c:769
+msgid "That staff has no charges."
+msgstr ""
+
+#: ../src/cmd-obj.c:789
+msgid "Aim which wand? "
+msgstr ""
+
+#: ../src/cmd-obj.c:790
+msgid "You have no wands to aim."
+msgstr ""
+
+#: ../src/cmd-obj.c:795
+msgid "That wand has no charges."
+msgstr ""
+
+#: ../src/cmd-obj.c:815
+msgid "Zap which rod? "
+msgstr ""
+
+#: ../src/cmd-obj.c:816
+msgid "You have no rods to zap."
+msgstr ""
+
+#: ../src/cmd-obj.c:821
+msgid "That rod is still charging."
+msgstr ""
+
+#: ../src/cmd-obj.c:841
+msgid "Activate which item? "
+msgstr ""
+
+#: ../src/cmd-obj.c:842
+msgid "You have no items to activate."
+msgstr ""
+
+#: ../src/cmd-obj.c:847
+msgid "That item is still charging."
+msgstr ""
+
+#: ../src/cmd-obj.c:863
+msgid "Eat which food? "
+msgstr ""
+
+#: ../src/cmd-obj.c:864
+msgid "You have no food to eat."
+msgstr ""
+
+#: ../src/cmd-obj.c:884
+msgid "Quaff which potion? "
+msgstr ""
+
+#: ../src/cmd-obj.c:885
+msgid "You have no potions from which to quaff."
+msgstr ""
+
+#: ../src/cmd-obj.c:905
+msgid "Use which item? "
+msgstr ""
+
+#: ../src/cmd-obj.c:906
+msgid "You have no items to use."
+msgstr ""
+
+#: ../src/cmd-obj.c:923
+msgid "Equip the item to use it."
+msgstr ""
+
+#: ../src/cmd-obj.c:926
+msgid "The item cannot be used at the moment"
+msgstr ""
+
+#: ../src/cmd-obj.c:942
+msgid "You fuel your lamp."
+msgstr ""
+
+#: ../src/cmd-obj.c:947
+msgid "Your lamp is full."
+msgstr ""
+
+#: ../src/cmd-obj.c:1010
+msgid "You are not wielding a light."
+msgstr ""
+
+#: ../src/cmd-obj.c:1014
+msgid "Your light cannot be refilled."
+msgstr ""
+
+#: ../src/cmd-obj.c:1020
+msgid "Refuel with with fuel source? "
+msgstr ""
+
+#: ../src/cmd-obj.c:1021
+msgid "You have nothing you can refuel with."
+msgstr ""
+
+#: ../src/cmd-obj.c:1056
+msgid "cast"
+msgstr ""
+
+#: ../src/cmd-obj.c:1058
+msgid "There are no spells you can cast."
+msgstr ""
+
+#: ../src/cmd-obj.c:1060
+msgid "That book has no spells that you can cast."
+msgstr ""
+
+#: ../src/cmd-obj.c:1073
+#, c-format
+msgid "You do not have enough mana to %s this %s."
+msgstr ""
+
+#: ../src/cmd-obj.c:1079
+msgid "Attempt it anyway? "
+msgstr ""
+
+#: ../src/cmd-obj.c:1114
+msgid "study"
+msgstr ""
+
+#: ../src/cmd-obj.c:1116 ../src/cmd-obj.c:1142
+msgid "You cannot learn any new spells from the books you have."
+msgstr ""
+
+#: ../src/cmd-obj.c:1118
+msgid "That book has no spells that you can learn."
+msgstr ""
+
+#: ../src/cmd-obj.c:1141
+msgid "Study which book? "
+msgstr ""
+
+#: ../src/cmd-obj.c:1161
+#, c-format
+msgid "You cannot learn any %ss in that book."
+msgstr ""
+
 #: ../src/mon-attack.c:460
 #, c-format
 msgid "%s tries to cast a spell, but fails."

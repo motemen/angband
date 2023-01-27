@@ -25,6 +25,394 @@ msgstr ""
 msgid "There is a wall in the way!"
 msgstr ""
 
+#: ../src/cmd-obj.c:62
+msgid "zap the rod"
+msgstr "ロッドを振る"
+
+#: ../src/cmd-obj.c:64
+msgid "use the wand"
+msgstr "魔法棒を使う"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:65
+msgid "wand"
+msgstr "魔法棒"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:67
+msgid "use the staff"
+msgstr "杖を使う"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:68
+msgid "staff"
+msgstr "杖"
+
+#: ../src/cmd-obj.c:70
+#, fuzzy
+msgid "activate it"
+msgstr "始動させた..."
+
+#: ../src/cmd-obj.c:80
+#, c-format
+msgid "You failed to %s properly."
+msgstr "うまく%sを使えなかった。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:87
+#, c-format
+msgid "The %s has no charges left."
+msgstr "この%sにはもう魔力が残っていない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:157
+msgid "Uninscribe which item?"
+msgstr "どのアイテムの銘を消しますか?"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:158
+msgid "You have nothing you can uninscribe."
+msgstr "銘を消せるアイテムがない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:164
+msgid "Inscription removed."
+msgstr "銘を消した。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:187
+msgid "Inscribe which item?"
+msgstr "どのアイテムに銘を刻みますか?"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:188
+msgid "You have nothing to inscribe."
+msgstr "銘を刻めるアイテムがない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:196
+#, c-format
+msgid "Inscribing %s."
+msgstr "%sに銘を刻む。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:244
+msgid "Take off or unwield which item?"
+msgstr "どれを装備からはずしますか?"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:245
+msgid "You have nothing to take off or unwield."
+msgstr "装備可能なアイテムがない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:277
+msgid "Wear or wield which item?"
+msgstr "どれを装備しますか?"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:278
+msgid "You have nothing to wear or wield."
+msgstr "装備可能なアイテムがない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:298
+msgid "Replace which ring? "
+msgstr "どちらの指輪と取り替えますか?"
+
+#: ../src/cmd-obj.c:299
+msgid "Error in do_cmd_wield(), please report."
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:312
+#, fuzzy, c-format
+msgid "You cannot remove the %s you are %s."
+msgstr "%sをくずした。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:325
+#, fuzzy, c-format
+msgid "Really take off %s? "
+msgstr "本当に%sから抽出してよろしいですか？"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:334
+msgid "You were wielding"
+msgstr "を装備からはずした"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:337 ../src/cmd-obj.c:340
+msgid "You were holding"
+msgstr "を装備からはずした"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:343
+msgid "You were wearing"
+msgstr "を装備からはずした"
+
+#: ../src/cmd-obj.c:348
+#, fuzzy, c-format
+msgid "%s %s (%c)."
+msgstr "%sは%s%s"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:366
+msgid "Drop which item?"
+msgstr "どのアイテムを落としますか?"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:367
+msgid "You have nothing to drop."
+msgstr "落とせるアイテムを持っていない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:374
+msgid "Hmmm, it seems to be stuck."
+msgstr "ふーむ、どうやら呪われているようだ。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:486
+#, fuzzy
+msgid "You activate it."
+msgstr "始動させた..."
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:684
+#, c-format
+msgid "You see %s."
+msgstr "%sがある。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:687
+#, fuzzy, c-format
+msgid "You have %s (1st %c)."
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"%s(%c)を取った。\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"%s(%c)を手に入れた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:689
+#, fuzzy, c-format
+msgid "You have %s (%c)."
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"%s(%c)を取った。\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"%s(%c)を手に入れた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:742
+msgid "Read which scroll? "
+msgstr "どの巻物を読みますか? "
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:743
+msgid "You have no scrolls to read."
+msgstr "読める巻物がない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:763
+msgid "Use which staff? "
+msgstr "どの杖を使いますか? "
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:764
+#, fuzzy
+msgid "You have no staves to use."
+msgstr "使える杖がない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:769
+#, fuzzy
+msgid "That staff has no charges."
+msgstr "この杖にはもう魔力が残っていない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:789
+msgid "Aim which wand? "
+msgstr "どの魔法棒で狙いますか? "
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:790
+msgid "You have no wands to aim."
+msgstr "使える魔法棒がない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:795
+msgid "That wand has no charges."
+msgstr "この魔法棒にはもう魔力が残っていない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:815
+msgid "Zap which rod? "
+msgstr "どのロッドを振りますか? "
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:816
+msgid "You have no rods to zap."
+msgstr "使えるロッドがない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:821
+msgid "That rod is still charging."
+msgstr "このロッドはまだ魔力を充填している最中だ。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:841
+msgid "Activate which item? "
+msgstr "どのアイテムを始動させますか? "
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:842
+msgid "You have no items to activate."
+msgstr "始動できるアイテムを装備していない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:847
+#, fuzzy
+msgid "That item is still charging."
+msgstr "充填中のアイテムは取り込めない。"
+
+#: ../src/cmd-obj.c:863
+msgid "Eat which food? "
+msgstr "どの食糧を食べますか？"
+
+#: ../src/cmd-obj.c:864
+msgid "You have no food to eat."
+msgstr "食べられる食糧がない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:884
+msgid "Quaff which potion? "
+msgstr "どの薬を飲みますか? "
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:885
+msgid "You have no potions from which to quaff."
+msgstr "飲める薬がない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:905
+msgid "Use which item? "
+msgstr "どれを使いますか？ "
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:906
+msgid "You have no items to use."
+msgstr "使えるアイテムがない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:923
+#, fuzzy
+msgid "Equip the item to use it."
+msgstr "材料を持っていない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:926
+#, fuzzy
+msgid "The item cannot be used at the moment"
+msgstr "それは酸・電撃・火炎・冷気では傷つかない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:942
+msgid "You fuel your lamp."
+msgstr "ランプに油を注いだ。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:947
+msgid "Your lamp is full."
+msgstr "ランプの油は一杯だ。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:1010
+msgid "You are not wielding a light."
+msgstr "光源を装備していない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:1014
+msgid "Your light cannot be refilled."
+msgstr "この光源は寿命を延ばせない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:1020
+#, fuzzy
+msgid "Refuel with with fuel source? "
+msgstr "どの松明で明かりを強めますか? "
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:1021
+#, fuzzy
+msgid "You have nothing you can refuel with."
+msgstr "射撃用の武器を持っていない。"
+
+#: ../src/cmd-obj.c:1056
+msgid "cast"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:1058
+#, fuzzy
+msgid "There are no spells you can cast."
+msgstr "賞金首はもう残っていません。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:1060
+msgid "That book has no spells that you can cast."
+msgstr "読める本がない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:1073
+#, fuzzy, c-format
+msgid "You do not have enough mana to %s this %s."
+msgstr "ＭＰが足りません。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:1079
+msgid "Attempt it anyway? "
+msgstr "それでも挑戦しますか? "
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:1114
+msgid "study"
+msgstr "学ぶ"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:1116 ../src/cmd-obj.c:1142
+#, fuzzy
+msgid "You cannot learn any new spells from the books you have."
+msgstr "その本には学ぶべき%sがない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:1118
+#, fuzzy
+msgid "That book has no spells that you can learn."
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"読める書がない。\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"読める本がない。\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"読める本がない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:1141
+#, fuzzy
+msgid "Study which book? "
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"どの書から学びますか? \n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"どの本から学びますか? "
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:1161
+#, c-format
+msgid "You cannot learn any %ss in that book."
+msgstr "その本には学ぶべき%sがない。"
+
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-attack.c:460
 #, fuzzy, c-format
@@ -2557,10 +2945,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "燃料がない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You activate it..."
-#~ msgstr "始動させた..."
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Oops.  That object cannot be activated."
 #~ msgstr "おっと、このアイテムは始動できない。"
 
@@ -2770,10 +3154,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You can't tunnel through that!"
 #~ msgstr "そこは掘れない!"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You have removed the %s."
-#~ msgstr "%sをくずした。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You dig into the %s."
@@ -4687,21 +5067,8 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "何も技を知らない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You do not have enough mana to use this power."
-#~ msgstr "ＭＰが足りません。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You cannot learn any new special attacks!"
 #~ msgstr "新しい必殺技を覚えることはできない！"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "Study which book? "
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "どの書から学びますか? \n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "どの本から学びますか? "
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You have learned the special attack of %s."
@@ -4795,10 +5162,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You do not have enough hp to use this power."
 #~ msgstr "ＨＰが足りません。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Attempt it anyway? "
-#~ msgstr "それでも挑戦しますか? "
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Oh, no! Your mind has gone blank!"
@@ -5323,14 +5686,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Really, change magic realm? "
 #~ msgstr "本当に魔法の領域を変更しますか？"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "study"
-#~ msgstr "学ぶ"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You cannot learn any %ss in that book."
-#~ msgstr "その本には学ぶべき%sがない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You don't need to study this %s anymore."
@@ -6605,18 +6960,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "まずは杖を拾わなければ。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "staff"
-#~ msgstr "杖"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "wand"
-#~ msgstr "魔法棒"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "The %s has no charges left."
-#~ msgstr "この%sにはもう魔力が残っていない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You absorb mana of the %s as your energy."
 #~ msgstr "あなたは%sの魔力をエネルギー源として吸収した。"
 
@@ -6669,14 +7012,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "悪意に満ちた黒いオーラが%sをとりまいた..."
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Wear/Wield which item? "
-#~ msgstr "どれを装備しますか? "
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You have nothing you can wear or wield."
-#~ msgstr "装備可能なアイテムがない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Replace which weapon? "
 #~ msgstr "どちらの武器と取り替えますか?"
 
@@ -6691,10 +7026,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Dual wielding? "
 #~ msgstr "二刀流で戦いますか？"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Replace which ring? "
-#~ msgstr "どちらの指輪と取り替えますか?"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Really use the %s {cursed}? "
@@ -6739,25 +7070,8 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "うわ！ すさまじく冷たい！"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Take off which item? "
-#~ msgstr "どれを装備からはずしますか? "
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You are not wearing anything to take off."
 #~ msgstr "はずせる装備がない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "Hmmm, it seems to be cursed."
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "ふーむ、どうやら呪われているようだ。\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "ふーむ、どうやら呪われているようだ。\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "ふーむ、どうやら呪われているようだ。\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "ふーむ、どうやらそれは呪われているようだね。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You tore off a piece of cursed equipment by sheer strength!"
@@ -6770,19 +7084,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You couldn't remove the equipment."
 #~ msgstr "装備を外せなかった。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "Drop which item? "
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "どのアイテムを落としますか? \n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "どのアイテムを置きますか? "
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You have nothing to drop."
-#~ msgstr "落とせるアイテムを持っていない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Examine which item? "
@@ -6805,44 +7106,8 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "特に変わったところはないようだ。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Un-inscribe which item? "
-#~ msgstr "どのアイテムの銘を消しますか? "
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You have nothing to un-inscribe."
-#~ msgstr "銘を消せるアイテムがない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Inscription removed."
-#~ msgstr "銘を消した。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Inscribe which item? "
-#~ msgstr "どのアイテムに銘を刻みますか? "
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You have nothing to inscribe."
-#~ msgstr "銘を刻めるアイテムがない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Inscribing %s."
-#~ msgstr "%sに銘を刻む。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Use which item? "
-#~ msgstr "どれを使いますか？"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You have nothing to use."
 #~ msgstr "使えるものがありません。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Activate which item? "
-#~ msgstr "どのアイテムを始動させますか? "
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You have nothing to activate."
-#~ msgstr "始動できるアイテムを装備していない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Which type of magic do you browse?"
@@ -6885,22 +7150,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "呪文をうまく唱えられなかった！"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Quaff which potion? "
-#~ msgstr "どの薬を飲みますか? "
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You have no potions to quaff."
-#~ msgstr "飲める薬がない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Read which scroll? "
-#~ msgstr "どの巻物を読みますか? "
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You have no scrolls to read."
-#~ msgstr "読める巻物がない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Refill with which flask? "
 #~ msgstr "どの油つぼから注ぎますか? "
 
@@ -6909,24 +7158,12 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "油つぼがない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You fuel your lamp."
-#~ msgstr "ランプに油を注いだ。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Your lamp has gone out!"
 #~ msgstr "ランプが消えてしまった！"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Curiously, your lamp doesn't light."
 #~ msgstr "しかしランプは全く光らない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Your lamp is full."
-#~ msgstr "ランプの油は一杯だ。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Refuel with which torch? "
-#~ msgstr "どの松明で明かりを強めますか? "
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You have no extra torches."
@@ -6953,14 +7190,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "松明はいっそう明るく輝いた。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You are not wielding a light."
-#~ msgstr "光源を装備していない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Your light cannot be refilled."
-#~ msgstr "この光源は寿命を延ばせない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #, fuzzy
 #~ msgid "The dungeon trembles."
 #~ msgstr ""
@@ -6974,24 +7203,8 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "もったいない事をしたような気がする。食べ物は大切にしなくては。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Use which staff? "
-#~ msgstr "どの杖を使いますか? "
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You have no staff to use."
-#~ msgstr "使える杖がない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "A line of blue shimmering light appears."
 #~ msgstr "青く輝く光線が放たれた。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Zap which rod? "
-#~ msgstr "どのロッドを振りますか? "
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You have no rod to zap."
-#~ msgstr "使えるロッドがない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Oops.  Wand of wonder activated."
@@ -7007,14 +7220,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ "ロケットを発射した！\n"
 #~ "#-#-#-#-#  -  #-#-#-#-#\n"
 #~ "ロケット発射！"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Aim which wand? "
-#~ msgstr "どの魔法棒で狙いますか? "
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You have no wand to aim."
-#~ msgstr "使える魔法棒がない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "['c' to change name, 'f' to file, 'h' to change mode, or ESC]"
@@ -9886,23 +10091,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "ザックの中のアイテムを並べ直した。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You were wielding"
-#~ msgstr "を装備からはずした"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "You were holding"
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "を装備からはずした\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "を光源からはずした"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You were wearing"
-#~ msgstr "を装備からはずした"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Really try"
 #~ msgstr "本当に"
 
@@ -9950,10 +10138,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You have found %ld gold pieces worth of %s."
 #~ msgstr " $%ld の価値がある%sを見つけた。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You see %s."
-#~ msgstr "%sがある。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You see a pile of %d items."
@@ -11563,10 +11747,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "List of wanted monsters\n"
 #~ msgstr "賞金首リスト\n"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "There are no more wanted monster."
-#~ msgstr "賞金首はもう残っていません。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #, fuzzy
@@ -13964,10 +14144,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "どのアイテムから作りますか？ "
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You have no item to convert."
-#~ msgstr "材料を持っていない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You cannot do it when riding."
 #~ msgstr "乗馬中には無理だ。"
 
@@ -15113,10 +15289,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "鑑定されていないと取り込めない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "This item is still charging."
-#~ msgstr "充填中のアイテムは取り込めない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You absorb magic of %s."
 #~ msgstr "%sの魔力を取り込んだ。"
 
@@ -15413,10 +15585,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You have nothing you can extract from."
 #~ msgstr "抽出できるアイテムがありません。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Really extract from %s? "
-#~ msgstr "本当に%sから抽出してよろしいですか？"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You were not able to extract any essence."
@@ -19702,24 +19870,12 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "杖をうまく使えなかった。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "The staff has no charges left."
-#~ msgstr "この杖にはもう魔力が残っていない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You are too stunned to use it!"
 #~ msgstr "朦朧としていて杖を振れなかった！"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You must first pick up the rods."
 #~ msgstr "まずはロッドを拾わなければ。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You failed to use the rod properly."
-#~ msgstr "うまくロッドを使えなかった。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "The rod is still charging."
-#~ msgstr "このロッドはまだ魔力を充填している最中だ。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "The rods are all still charging."
@@ -19741,10 +19897,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You failed to use the wand properly."
 #~ msgstr "魔法棒をうまく使えなかった。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "The wand has no charges left."
-#~ msgstr "この魔法棒にはもう魔力が残っていない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Your light has gone out!"
@@ -20531,10 +20683,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "It provides up to three low rank ESPs."
 #~ msgstr "それは最大で３つまでの低級なESPを授ける。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "It cannot be harmed by the elements."
-#~ msgstr "それは酸・電撃・火炎・冷気では傷つかない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "It cannot be harmed by acid."
@@ -24869,10 +25017,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Fires an extremely powerful ball of chaos."
 #~ msgstr "非常に強力なカオスの球を放つ。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Call the Void"
-#~ msgstr "虚無召来"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Infravision"
@@ -29931,15 +30075,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "どの品物が欲しいんだい? "
 
 # From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "You have %s (%c)."
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "%s(%c)を取った。\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "%s(%c)を手に入れた。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "The shopkeeper brings out some new stock."
 #~ msgstr "店主は新たな在庫を取り出した。"
 
@@ -30636,10 +30771,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Proogdish the Youthfull"
 #~ msgstr "若きプルーグディシュ"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Lumwise the Mad"
-#~ msgstr "きちがいラムワイズ"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Muirt the Virtuous"
