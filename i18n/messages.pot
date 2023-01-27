@@ -157,7 +157,7 @@ msgstr ""
 msgid "You activate it."
 msgstr ""
 
-#: ../src/cmd-obj.c:684
+#: ../src/cmd-obj.c:684 ../src/obj-pile.c:869
 #, c-format
 msgid "You see %s."
 msgstr ""
@@ -1186,6 +1186,94 @@ msgstr ""
 #: ../src/obj-gear.c:1380
 #, c-format
 msgid "You no longer have %s."
+msgstr ""
+
+#: ../src/obj-pile.c:60
+#, c-format
+msgid ""
+"Pile integrity failure at %s:%d\n"
+"\n"
+msgstr ""
+
+#: ../src/obj-pile.c:61
+msgid ""
+"Guilty object\n"
+"=============\n"
+msgstr ""
+
+#: ../src/obj-pile.c:63 ../src/obj-pile.c:86
+#, c-format
+msgid "Name: %s\n"
+msgstr ""
+
+#: ../src/obj-pile.c:65
+msgid "Previous: "
+msgstr ""
+
+#: ../src/obj-pile.c:69 ../src/obj-pile.c:77 ../src/obj-pile.c:88
+msgid "bad object\n"
+msgstr ""
+
+#: ../src/obj-pile.c:73
+msgid "Next: "
+msgstr ""
+
+#: ../src/obj-pile.c:83
+msgid ""
+"Guilty pile\n"
+"=============\n"
+msgstr ""
+
+#: ../src/obj-pile.c:115
+#, c-format
+msgid "Failed to create file %s.new"
+msgstr ""
+
+#: ../src/obj-pile.c:117
+#, c-format
+msgid "Pile integrity failure, details written to %s"
+msgstr ""
+
+#: ../src/obj-pile.c:993
+msgid "breaks"
+msgstr ""
+
+#: ../src/obj-pile.c:993
+msgid "break"
+msgstr ""
+
+#: ../src/obj-pile.c:994
+msgid "disappears"
+msgstr ""
+
+#: ../src/obj-pile.c:994
+msgid "disappear"
+msgstr ""
+
+#: ../src/obj-pile.c:996
+#, c-format
+msgid "The %s %s."
+msgstr ""
+
+#: ../src/obj-pile.c:1145
+msgid "You feel something roll beneath your feet."
+msgstr ""
+
+#: ../src/obj-pile.c:1277
+#, c-format
+msgid "There %s %d charge%s remaining."
+msgstr ""
+
+#: ../src/obj-pile.c:1277
+msgid "are"
+msgstr ""
+
+#: ../src/obj-pile.c:1277
+msgid "is"
+msgstr ""
+
+#: ../src/obj-pile.c:1278
+msgid "s"
 msgstr ""
 
 #: ../src/option.c:48

@@ -57,35 +57,35 @@ static int fail_line;
 
 static void write_pile(ang_file *fff)
 {
-	file_putf(fff, "Pile integrity failure at %s:%d\n\n", fail_file, fail_line);
-	file_putf(fff, "Guilty object\n=============\n");
+	file_putf(fff, _("Pile integrity failure at %s:%d\n\n"), fail_file, fail_line);
+	file_putf(fff, _("Guilty object\n=============\n"));
 	if (fail_object && fail_object->kind) {
-		file_putf(fff, "Name: %s\n", fail_object->kind->name);
+		file_putf(fff, _("Name: %s\n"), fail_object->kind->name);
 		if (fail_prev) {
-			file_putf(fff, "Previous: ");
+			file_putf(fff, _("Previous: "));
 			if (fail_object->prev && fail_object->prev->kind) {
 				file_putf(fff, "%s\n", fail_object->prev->kind->name);
 			} else {
-				file_putf(fff, "bad object\n");
+				file_putf(fff, _("bad object\n"));
 			}
 		}
 		if (fail_next) {
-			file_putf(fff, "Next: ");
+			file_putf(fff, _("Next: "));
 			if (fail_object->next && fail_object->next->kind) {
 				file_putf(fff, "%s\n", fail_object->next->kind->name);
 			} else {
-				file_putf(fff, "bad object\n");
+				file_putf(fff, _("bad object\n"));
 			}
 		}
 		file_putf(fff, "\n");
 	}
 	if (fail_pile) {
-		file_putf(fff, "Guilty pile\n=============\n");
+		file_putf(fff, _("Guilty pile\n=============\n"));
 		while (fail_pile) {
 			if (fail_pile->kind) {
-				file_putf(fff, "Name: %s\n", fail_pile->kind->name);
+				file_putf(fff, _("Name: %s\n"), fail_pile->kind->name);
 			} else {
-				file_putf(fff, "bad object\n");
+				file_putf(fff, _("bad object\n"));
 			}
 			fail_pile = fail_pile->next;
 		}
@@ -112,9 +112,9 @@ static void pile_integrity_fail(struct object *pile, struct object *obj,
 	path_build(path, sizeof(path), ANGBAND_DIR_USER, "pile_error.txt");
 
 	if (text_lines_to_file(path, write_pile)) {
-		quit_fmt("Failed to create file %s.new", path);
+		quit_fmt(_("Failed to create file %s.new"), path);
 	}
-	quit_fmt("Pile integrity failure, details written to %s", path);
+	quit_fmt(_("Pile integrity failure, details written to %s"), path);
 }
 
 /**
@@ -866,7 +866,7 @@ struct object *floor_object_for_use(struct player *p, struct object *obj,
 			obj->number = num;
 
 		/* Print a message */
-		msg("You see %s.", name);
+		msg(_("You see %s."), name);
 	}
 
 	return usable;
@@ -990,10 +990,10 @@ static void floor_carry_fail(struct chunk *c, struct object *drop, bool broke)
 	if (known) {
 		char o_name[80];
 		const char *verb = broke ?
-			VERB_AGREEMENT(drop->number, "breaks", "break") :
-			VERB_AGREEMENT(drop->number, "disappears", "disappear");
+			VERB_AGREEMENT(drop->number, _("breaks"), _("break")) :
+			VERB_AGREEMENT(drop->number, _("disappears"), _("disappear"));
 		object_desc(o_name, sizeof(o_name), drop, ODESC_BASE, player);
-		msg("The %s %s.", o_name, verb);
+		msg(_("The %s %s."), o_name, verb);
 		if (!loc_is_zero(known->grid))
 			square_excise_object(player->cave, known->grid, known);
 		delist_object(player->cave, known);
@@ -1142,7 +1142,7 @@ void drop_near(struct chunk *c, struct object **dropped, int chance,
 	if (floor_carry(c, best, *dropped, &dont_ignore)) {
 		sound(MSG_DROP);
 		if (dont_ignore && (square(c, best)->mon < 0)) {
-			msg("You feel something roll beneath your feet.");
+			msg(_("You feel something roll beneath your feet."));
 		}
 	} else {
 		floor_carry_fail(c, *dropped, false);
@@ -1274,8 +1274,8 @@ void floor_item_charges(struct object *obj)
 	if (!object_flavor_is_aware(obj)) return;
 
 	/* Print a message */
-	msg("There %s %d charge%s remaining.", (obj->pval != 1) ? "are" : "is",
-	     obj->pval, (obj->pval != 1) ? "s" : "");
+	msg(_("There %s %d charge%s remaining."), (obj->pval != 1) ? _("are") : _("is"),
+	     obj->pval, (obj->pval != 1) ? _("s") : "");
 }
 
 
