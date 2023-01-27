@@ -19,12 +19,13 @@ open my $fh, "<", $file or die "Can't open $file: $!";
 my $seen = {};
 
 sub emit_msg_entry {
-    my ($msgid) = @_;
+    my ($msgid, $comment) = @_;
 
     if (ref $msgid eq 'ARRAY') {
-        next if $seen->{ join "\n", @$msgid }++;
+        return if $seen->{ join "\n", @$msgid }++;
 
         print "#: $file:$.\n";
+        print "# $comment\n" if $comment;
         print qq(msgctxt "$type"\n);
         print qq(msgid ""\n);
         for (@$msgid) {
@@ -36,6 +37,7 @@ sub emit_msg_entry {
         return if $seen->{$msgid}++;
 
         print "#: $file:$.\n";
+        print "# $comment\n" if $comment;
         print qq(msgctxt "$type"\n);
         print qq(msgid "$msgid"\n);
         print qq(msgstr ""\n\n);
@@ -49,16 +51,20 @@ while (<$fh>) {
         next if $type eq 'blow_methods';
         next if $type eq 'blow_effects';
         next if $type eq 'player_timed';
-        /^name:[^:]+:(.+)/ or next if $type eq 'object_base';
-		emit_msg_entry($1);
-    }
-
-    if (/^act:(.+)/) {
+        if ($type eq 'object_base') {
+            /^name:[^:]+:(.+)/ or next;
+		    emit_msg_entry($1);
+        } elsif ($type eq 'trap') {
+            my ($name, $short_desc) = /^name:([^:]+):(.+)/ or next;
+		    emit_msg_entry($name, "name");
+		    emit_msg_entry($short_desc, "short description");
+        } else {
+		    emit_msg_entry($1);
+        }
+    } elsif (/^act:(.+)/) {
         next if $type eq 'artifact';
 		emit_msg_entry($1);
-    }
-
-    if (/^desc:(.+)/) {
+    } elsif (/^desc:(.+)/) {
         next if $type eq 'player_timed';
 
         my @msgid = ($1);
@@ -71,26 +77,19 @@ while (<$fh>) {
         }
 
 		emit_msg_entry([@msgid]);
-    }
-
-    if (/^slot:.+?:(.+)$/) {
+    } elsif (/^slot:.+?:(.+)$/) {
         emit_msg_entry($1);
-    }
-
-    if (/^grade:.:\d+:([^:]+):([^:]*)(?::([^:]*))?$/) {
+    } elsif (/^grade:.:\d+:([^:]+):([^:]*)(?::([^:]*))?$/) {
         my ($grade_name, $msg1, $msg2) = ($1, $2, $3);
 
 		for ($grade_name, $msg1, $msg2) {
             next unless length $_;
             emit_msg_entry($_);
         }
-    }
-
-    if (/^(?:on-end|on-increase):(.+)$/) {
+    } elsif (/^(?:on-end|on-increase):(.+)$/) {
         emit_msg_entry($1);
-    }
-
-    if ($type eq 'pain' && /^message:(.+)$/) {
+    } elsif (/^message:(.+)$/) {
+        next unless $type eq 'pain';
         emit_msg_entry($1);
     }
 }

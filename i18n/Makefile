@@ -16,7 +16,8 @@ GAMEDATA_POTS = \
 		_gamedata-ego_item.pot \
 		_gamedata-list-mon-message.pot \
 		_gamedata-player_timed.pot \
-		_gamedata-pain.pot
+		_gamedata-pain.pot \
+		_gamedata-trap.pot
 
 .PHONY: all
 all: all-pots $(LOCALE)/LC_MESSAGES/messages.mo $(LOCALE)/LC_MESSAGES/gamedata.mo
