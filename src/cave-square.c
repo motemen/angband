@@ -1235,7 +1235,7 @@ void square_add_glyph(struct chunk *c, struct loc grid, int type)
 			break;
 		}
 		default: {
-			msg("Non-existent glyph requested. Please report this bug.");
+			msg(_("Non-existent glyph requested. Please report this bug."));
 			return;
 		}
 	}
@@ -1306,7 +1306,7 @@ void square_destroy_decoy(struct chunk *c, struct loc grid)
 	square_remove_all_traps(c, grid);
 	c->decoy = loc(0, 0);
 	if (los(c, player->grid, grid) && !player->timed[TMD_BLIND]){
-		msg("The decoy is destroyed!");
+		msg(_("The decoy is destroyed!"));
 	}
 }
 
@@ -1450,7 +1450,7 @@ const char *square_apparent_look_prefix(struct chunk *c, struct loc grid) {
 	const struct feature *fp = f_info[actual].mimic ?
 		f_info[actual].mimic : &f_info[actual];
 	return (fp->look_prefix) ? fp->look_prefix :
-		(is_a_vowel(fp->name[0]) ? "an " : "a ");
+		(is_a_vowel(fp->name[0]) ? _("an ") : _("a "));
 }
 
 /*
@@ -1466,7 +1466,7 @@ const char *square_apparent_look_in_preposition(struct chunk *c, struct loc grid
 	int actual = square(c, grid)->feat;
 	const struct feature *fp = f_info[actual].mimic ?
 		f_info[actual].mimic : &f_info[actual];
-	return (fp->look_in_preposition) ?  fp->look_in_preposition : "on ";
+	return (fp->look_in_preposition) ?  fp->look_in_preposition : _("on ");
 }
 
 /* Memorize the terrain */

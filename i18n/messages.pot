@@ -1,3 +1,23 @@
+#: ../src/cave-square.c:1238
+msgid "Non-existent glyph requested. Please report this bug."
+msgstr ""
+
+#: ../src/cave-square.c:1309
+msgid "The decoy is destroyed!"
+msgstr ""
+
+#: ../src/cave-square.c:1453 ../src/obj-desc.c:211
+msgid "an "
+msgstr ""
+
+#: ../src/cave-square.c:1453 ../src/obj-desc.c:213
+msgid "a "
+msgstr ""
+
+#: ../src/cave-square.c:1469
+msgid "on "
+msgstr ""
+
 #: ../src/cmd-cave.c:1173 ../src/player-attack.c:729
 #, c-format
 msgid "You are too afraid to attack %s!"
@@ -1037,14 +1057,6 @@ msgstr ""
 #: ../src/obj-desc.c:194
 msgctxt "fixed_artifact"
 msgid "the "
-msgstr ""
-
-#: ../src/obj-desc.c:211
-msgid "an "
-msgstr ""
-
-#: ../src/obj-desc.c:213
-msgid "a "
 msgstr ""
 
 #: ../src/obj-desc.c:343
