@@ -250,13 +250,11 @@ msgstr "どの杖を使いますか? "
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/cmd-obj.c:774
-#, fuzzy
 msgid "You have no staves to use."
 msgstr "使える杖がない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/cmd-obj.c:779
-#, fuzzy
 msgid "That staff has no charges."
 msgstr "この杖にはもう魔力が残っていない。"
 
@@ -300,11 +298,9 @@ msgstr "どのアイテムを始動させますか? "
 msgid "You have no items to activate."
 msgstr "始動できるアイテムを装備していない。"
 
-# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/cmd-obj.c:857
-#, fuzzy
 msgid "That item is still charging."
-msgstr "充填中のアイテムは取り込めない。"
+msgstr "このアイテムは充填中だ。"
 
 #: ../src/cmd-obj.c:873
 msgid "Eat which food? "
@@ -429,13 +425,8 @@ msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/cmd-obj.c:1151
-#, fuzzy
 msgid "Study which book? "
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"どの書から学びますか? \n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"どの本から学びますか? "
+msgstr "どの本から学びますか?"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/cmd-obj.c:1171
@@ -730,19 +721,8 @@ msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-lore.c:718
-#, fuzzy
 msgid "it"
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"それ\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"それ\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"何か\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"何か\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"何か"
+msgstr "それ"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-lore.c:718 ../src/mon-msg.c:245
@@ -765,21 +745,16 @@ msgstr "彼女"
 
 #: ../src/mon-lore.c:720
 msgid "She"
-msgstr ""
+msgstr "彼女"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-lore.c:747
-#, fuzzy
 msgid "its"
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"それの\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"何かの"
+msgstr "その"
 
 #: ../src/mon-lore.c:747
 msgid "Its"
-msgstr ""
+msgstr "その"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-lore.c:748
@@ -788,25 +763,16 @@ msgstr "彼の"
 
 #: ../src/mon-lore.c:748
 msgid "His"
-msgstr ""
+msgstr "彼の"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-lore.c:749
-#, fuzzy
 msgid "her"
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"彼女の\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"彼女\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"彼女\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"彼女の"
+msgstr "彼女の"
 
 #: ../src/mon-lore.c:749
 msgid "Her"
-msgstr ""
+msgstr "彼女の"
 
 #: ../src/mon-lore.c:792
 msgid ","
@@ -1251,27 +1217,27 @@ msgstr "%sを押し退けた。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-move.c:1426
-#, fuzzy, c-format
+#, c-format
 msgid "%s tries to pick up %s, but fails."
-msgstr "%^sは%sを拾おうとしたが、だめだった。"
+msgstr "%sは%sを拾おうとしたが、だめだった。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-move.c:1449
-#, fuzzy, c-format
+#, c-format
 msgid "%s picks up %s."
-msgstr "%^sが%sを拾った。"
+msgstr "%sが%sを拾った。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-move.c:1463
-#, fuzzy, c-format
+#, c-format
 msgid "%s crushes %s."
-msgstr "%sに体当りした。"
+msgstr "%sは%sにのしかかった。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-move.c:1736
-#, fuzzy, c-format
+#, c-format
 msgid "%s wakes up."
-msgstr "%^sが目を覚ました。"
+msgstr "%sが目を覚ました。"
 
 #: ../src/mon-msg.c:247
 #, c-format
@@ -1293,11 +1259,10 @@ msgstr ""
 msgid "You have killed %s."
 msgstr "%sを殺した。"
 
-# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-util.c:1063
 #, c-format
 msgid "You have destroyed %s."
-msgstr "%sを殺した。"
+msgstr "%sを破壊した。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-util.c:1066
@@ -1384,7 +1349,7 @@ msgstr ""
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/obj-desc.c:527
 msgid " (charging)"
-msgstr "(充填中)"
+msgstr " (充填中)"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/obj-desc.c:549
@@ -1445,19 +1410,9 @@ msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/obj-gear.c:1118
-#, fuzzy, c-format
+#, c-format
 msgid "You drop %s (%c)."
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"%s(%c)を落とした。\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"%s(%c)を落とした。\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"%sが落ちた。(%c)\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"%sを置いた。(%c)\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"%sを置いた。(%c)"
+msgstr "%s (%c)を落とした。"
 
 #: ../src/obj-gear.c:1124
 #, c-format
