@@ -648,7 +648,7 @@ size_t object_desc(char *buf, size_t max, const struct object *obj,
 
 	if (tval_is_money(obj))
 		return strnfmt(buf, max, _("%d gold pieces worth of %s%s"),
-				obj->pval, obj->kind->name,
+				obj->pval, _GAMEDATA_C("object", obj->kind->name),
 				ignore_item_ok(p, obj) ? _(" {ignore}") : "");
 
 	/* Egos and kinds whose name we know are seen */
