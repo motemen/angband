@@ -1252,7 +1252,7 @@ msgid ""
 "=============\n"
 msgstr ""
 
-#: ../src/obj-pile.c:115
+#: ../src/obj-pile.c:115 ../src/ui-player.c:1181
 #, c-format
 msgid "Failed to create file %s.new"
 msgstr ""
@@ -1559,11 +1559,11 @@ msgstr ""
 msgid "Con: "
 msgstr ""
 
-#: ../src/ui-display.c:188
+#: ../src/ui-display.c:188 ../src/ui-player.c:627
 msgid "[=-WIZARD-=]"
 msgstr ""
 
-#: ../src/ui-display.c:190
+#: ../src/ui-display.c:190 ../src/ui-player.c:629
 msgid "***WINNER***"
 msgstr ""
 
@@ -1615,11 +1615,11 @@ msgstr ""
 msgid "Slow"
 msgstr ""
 
-#: ../src/ui-display.c:522
+#: ../src/ui-display.c:522 ../src/ui-player.c:652
 msgid "Town"
 msgstr ""
 
-#: ../src/ui-display.c:524
+#: ../src/ui-display.c:524 ../src/ui-player.c:654
 #, c-format
 msgid "%d' (L%d)"
 msgstr ""
@@ -2280,6 +2280,329 @@ msgstr ""
 
 #: ../src/ui-options.c:2051
 msgid "Options Menu"
+msgstr ""
+
+#: ../src/ui-player.c:280
+msgid "Very Bad"
+msgstr ""
+
+#: ../src/ui-player.c:290
+msgid "Bad"
+msgstr ""
+
+#: ../src/ui-player.c:295
+msgid "Poor"
+msgstr ""
+
+#: ../src/ui-player.c:301
+msgid "Fair"
+msgstr ""
+
+#: ../src/ui-player.c:306
+msgid "Good"
+msgstr ""
+
+#: ../src/ui-player.c:311
+msgid "Very Good"
+msgstr ""
+
+#: ../src/ui-player.c:317
+msgid "Excellent"
+msgstr ""
+
+#: ../src/ui-player.c:326
+msgid "Superb"
+msgstr ""
+
+#: ../src/ui-player.c:334
+msgid "Heroic"
+msgstr ""
+
+#: ../src/ui-player.c:339
+msgid "Legendary"
+msgstr ""
+
+#: ../src/ui-player.c:461
+msgid "  Self"
+msgstr ""
+
+#: ../src/ui-player.c:462
+msgid " RB"
+msgstr ""
+
+#: ../src/ui-player.c:463
+msgid " CB"
+msgstr ""
+
+#: ../src/ui-player.c:464
+msgid " EB"
+msgstr ""
+
+#: ../src/ui-player.c:465
+msgid "  Best"
+msgstr ""
+
+#: ../src/ui-player.c:665
+msgid "Normal"
+msgstr ""
+
+#: ../src/ui-player.c:670
+#, c-format
+msgid "%d.%dx (%d)"
+msgstr ""
+
+#: ../src/ui-player.c:672
+#, c-format
+msgid "%d (%d.%dx)"
+msgstr ""
+
+#: ../src/ui-player.c:695
+msgid "Name"
+msgstr ""
+
+#: ../src/ui-player.c:696
+msgid "Race"
+msgstr ""
+
+#: ../src/ui-player.c:697
+msgid "Class"
+msgstr ""
+
+#: ../src/ui-player.c:698
+msgid "Title"
+msgstr ""
+
+#: ../src/ui-player.c:699
+msgid "HP"
+msgstr ""
+
+#: ../src/ui-player.c:700
+msgid "SP"
+msgstr ""
+
+#: ../src/ui-player.c:711
+msgid "Level"
+msgstr ""
+
+#: ../src/ui-player.c:713
+msgid "Cur Exp"
+msgstr ""
+
+#: ../src/ui-player.c:714
+msgid "Max Exp"
+msgstr ""
+
+#: ../src/ui-player.c:715
+msgid "Adv Exp"
+msgstr ""
+
+#: ../src/ui-player.c:717
+msgid "Gold"
+msgstr ""
+
+#: ../src/ui-player.c:718
+msgid "Burden"
+msgstr ""
+
+#: ../src/ui-player.c:720
+msgid "Overweight"
+msgstr ""
+
+#: ../src/ui-player.c:721
+msgid "Max Depth"
+msgstr ""
+
+#: ../src/ui-player.c:733
+msgid "Armor"
+msgstr ""
+
+#: ../src/ui-player.c:749
+msgid "Melee"
+msgstr ""
+
+#: ../src/ui-player.c:750 ../src/ui-player.c:762
+msgid "To-hit"
+msgstr ""
+
+#: ../src/ui-player.c:751
+msgid "Blows"
+msgstr ""
+
+#: ../src/ui-player.c:761
+msgid "Shoot to-dam"
+msgstr ""
+
+#: ../src/ui-player.c:763
+msgid "Shots"
+msgstr ""
+
+#: ../src/ui-player.c:781
+msgid "Saving Throw"
+msgstr ""
+
+#: ../src/ui-player.c:785
+msgid "Stealth"
+msgstr ""
+
+#: ../src/ui-player.c:789
+msgid "Disarm - phys."
+msgstr ""
+
+#: ../src/ui-player.c:793
+msgid "Disarm - magic"
+msgstr ""
+
+#: ../src/ui-player.c:797
+msgid "Magic Devices"
+msgstr ""
+
+#: ../src/ui-player.c:801
+msgid "Searching"
+msgstr ""
+
+#: ../src/ui-player.c:804
+msgid "Infravision"
+msgstr ""
+
+#: ../src/ui-player.c:812
+msgid "Speed"
+msgstr ""
+
+#: ../src/ui-player.c:821
+msgid "Age"
+msgstr ""
+
+#: ../src/ui-player.c:822
+msgid "Height"
+msgstr ""
+
+#: ../src/ui-player.c:823
+msgid "Weight"
+msgstr ""
+
+#: ../src/ui-player.c:824
+msgid "Turns used:"
+msgstr ""
+
+#: ../src/ui-player.c:825
+msgid "Game"
+msgstr ""
+
+#: ../src/ui-player.c:826
+msgid "Standard"
+msgstr ""
+
+#: ../src/ui-player.c:827
+msgid "Resting"
+msgstr ""
+
+#: ../src/ui-player.c:942
+#, c-format
+msgid ""
+"  [%s Character Dump]\n"
+"\n"
+msgstr ""
+
+#: ../src/ui-player.c:978
+msgid "Resistances"
+msgstr ""
+
+#: ../src/ui-player.c:978
+msgid "Abilities"
+msgstr ""
+
+#: ../src/ui-player.c:1016
+msgid "Hindrances"
+msgstr ""
+
+#: ../src/ui-player.c:1016
+msgid "Modifiers"
+msgstr ""
+
+#: ../src/ui-player.c:1058
+msgid ""
+"  [Last Messages]\n"
+"\n"
+msgstr ""
+
+#: ../src/ui-player.c:1063
+#, c-format
+msgid ""
+"\n"
+"Killed by %s.\n"
+"\n"
+msgstr ""
+
+#: ../src/ui-player.c:1068
+msgid ""
+"  [Character Equipment]\n"
+"\n"
+msgstr ""
+
+#: ../src/ui-player.c:1081
+msgid ""
+"\n"
+"\n"
+"  [Character Inventory]\n"
+"\n"
+msgstr ""
+
+#: ../src/ui-player.c:1094
+msgid ""
+"\n"
+"\n"
+"  [Character Quiver]\n"
+"\n"
+msgstr ""
+
+#: ../src/ui-player.c:1110
+msgid ""
+"  [Home Inventory]\n"
+"\n"
+msgstr ""
+
+#: ../src/ui-player.c:1132
+msgid ""
+"  [Options]\n"
+"\n"
+msgstr ""
+
+#: ../src/ui-player.c:1139
+msgid "User interface"
+msgstr ""
+
+#: ../src/ui-player.c:1140
+msgid "Birth"
+msgstr ""
+
+#: ../src/ui-player.c:1150
+msgid "yes"
+msgstr ""
+
+#: ../src/ui-player.c:1150
+msgid "no "
+msgstr ""
+
+#: ../src/ui-player.c:1163
+msgid ""
+"  [Randart seed]\n"
+"\n"
+msgstr ""
+
+#: ../src/ui-player.c:1206
+msgid "['c' to change name, 'f' to file, 'h' to change mode, or ESC]"
+msgstr ""
+
+#: ../src/ui-player.c:1227
+msgid "You are not allowed to change your name!"
+msgstr ""
+
+#: ../src/ui-player.c:1250
+msgid "Character dump successful."
+msgstr ""
+
+#: ../src/ui-player.c:1252
+msgid "Character dump failed!"
 msgstr ""
 
 #: ../src/ui-spell.c:81

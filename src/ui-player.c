@@ -277,7 +277,7 @@ static const char *likert(int x, int y, uint8_t *attr)
 	/* Negative value */
 	if (x < 0) {
 		*attr = COLOUR_RED;
-		return ("Very Bad");
+		return (_("Very Bad"));
 	}
 
 	/* Analyze the value */
@@ -287,34 +287,34 @@ static const char *likert(int x, int y, uint8_t *attr)
 		case 1:
 		{
 			*attr = COLOUR_RED;
-			return ("Bad");
+			return (_("Bad"));
 		}
 		case 2:
 		{
 			*attr = COLOUR_RED;
-			return ("Poor");
+			return (_("Poor"));
 		}
 		case 3:
 		case 4:
 		{
 			*attr = COLOUR_YELLOW;
-			return ("Fair");
+			return (_("Fair"));
 		}
 		case 5:
 		{
 			*attr = COLOUR_YELLOW;
-			return ("Good");
+			return (_("Good"));
 		}
 		case 6:
 		{
 			*attr = COLOUR_YELLOW;
-			return ("Very Good");
+			return (_("Very Good"));
 		}
 		case 7:
 		case 8:
 		{
 			*attr = COLOUR_L_GREEN;
-			return ("Excellent");
+			return (_("Excellent"));
 		}
 		case 9:
 		case 10:
@@ -323,7 +323,7 @@ static const char *likert(int x, int y, uint8_t *attr)
 		case 13:
 		{
 			*attr = COLOUR_L_GREEN;
-			return ("Superb");
+			return (_("Superb"));
 		}
 		case 14:
 		case 15:
@@ -331,12 +331,12 @@ static const char *likert(int x, int y, uint8_t *attr)
 		case 17:
 		{
 			*attr = COLOUR_L_GREEN;
-			return ("Heroic");
+			return (_("Heroic"));
 		}
 		default:
 		{
 			*attr = COLOUR_L_GREEN;
-			return ("Legendary");
+			return (_("Legendary"));
 		}
 	}
 }
@@ -458,11 +458,11 @@ void display_player_stat_info(void)
 	col = 42;
 
 	/* Print out the labels for the columns */
-	c_put_str(COLOUR_WHITE, "  Self", row-1, col+5);
-	c_put_str(COLOUR_WHITE, " RB", row-1, col+12);
-	c_put_str(COLOUR_WHITE, " CB", row-1, col+16);
-	c_put_str(COLOUR_WHITE, " EB", row-1, col+20);
-	c_put_str(COLOUR_WHITE, "  Best", row-1, col+24);
+	c_put_str(COLOUR_WHITE, _("  Self"), row-1, col+5);
+	c_put_str(COLOUR_WHITE, _(" RB"), row-1, col+12);
+	c_put_str(COLOUR_WHITE, _(" CB"), row-1, col+16);
+	c_put_str(COLOUR_WHITE, _(" EB"), row-1, col+20);
+	c_put_str(COLOUR_WHITE, _("  Best"), row-1, col+24);
 
 	/* Display the stats */
 	for (i = 0; i < STAT_MAX; i++) {
@@ -624,9 +624,9 @@ static void display_panel(const struct panel *p, bool left_adj,
 static const char *show_title(void)
 {
 	if (player->wizard)
-		return "[=-WIZARD-=]";
+		return _("[=-WIZARD-=]");
 	else if (player->total_winner || player->lev > PY_MAX_LEVEL)
-		return "***WINNER***";
+		return _("***WINNER***");
 	else
 		return player->class->title[(player->lev - 1) / 5];
 }
@@ -649,9 +649,9 @@ static const char *show_depth(void)
 {
 	static char buffer[13];
 
-	if (player->max_depth == 0) return "Town";
+	if (player->max_depth == 0) return _("Town");
 
-	strnfmt(buffer, sizeof(buffer), "%d' (L%d)",
+	strnfmt(buffer, sizeof(buffer), _("%d' (L%d)"),
 	        player->max_depth * 50, player->max_depth);
 	return buffer;
 }
@@ -662,14 +662,14 @@ static const char *show_speed(void)
 	int tmp = player->state.speed;
 	if (player->timed[TMD_FAST]) tmp -= 10;
 	if (player->timed[TMD_SLOW]) tmp += 10;
-	if (tmp == 110) return "Normal";
+	if (tmp == 110) return _("Normal");
 	int multiplier = 10 * extract_energy[tmp] / extract_energy[110];
 	int int_mul = multiplier / 10;
 	int dec_mul = multiplier % 10;
 	if (OPT(player, effective_speed))
-		strnfmt(buffer, sizeof(buffer), "%d.%dx (%d)", int_mul, dec_mul, tmp - 110);
+		strnfmt(buffer, sizeof(buffer), _("%d.%dx (%d)"), int_mul, dec_mul, tmp - 110);
 	else
-		strnfmt(buffer, sizeof(buffer), "%d (%d.%dx)", tmp - 110, int_mul, dec_mul);
+		strnfmt(buffer, sizeof(buffer), _("%d (%d.%dx)"), tmp - 110, int_mul, dec_mul);
 	return buffer;
 }
 
@@ -692,12 +692,12 @@ static const uint8_t colour_table[] =
 static struct panel *get_panel_topleft(void) {
 	struct panel *p = panel_allocate(6);
 
-	panel_line(p, COLOUR_L_BLUE, "Name", "%s", player->full_name);
-	panel_line(p, COLOUR_L_BLUE, "Race",	"%s", player->race->name);
-	panel_line(p, COLOUR_L_BLUE, "Class", "%s", player->class->name);
-	panel_line(p, COLOUR_L_BLUE, "Title", "%s", show_title());
-	panel_line(p, COLOUR_L_BLUE, "HP", "%d/%d", player->chp, player->mhp);
-	panel_line(p, COLOUR_L_BLUE, "SP", "%d/%d", player->csp, player->msp);
+	panel_line(p, COLOUR_L_BLUE, _("Name"), "%s", player->full_name);
+	panel_line(p, COLOUR_L_BLUE, _("Race"),	"%s", player->race->name);
+	panel_line(p, COLOUR_L_BLUE, _("Class"), "%s", player->class->name);
+	panel_line(p, COLOUR_L_BLUE, _("Title"), "%s", show_title());
+	panel_line(p, COLOUR_L_BLUE, _("HP"), "%d/%d", player->chp, player->mhp);
+	panel_line(p, COLOUR_L_BLUE, _("SP"), "%d/%d", player->csp, player->msp);
 
 	return p;
 }
@@ -708,17 +708,17 @@ static struct panel *get_panel_midleft(void) {
 	uint8_t attr = diff < 0 ? COLOUR_L_RED : COLOUR_L_GREEN;
 
 	panel_line(p, max_color(player->lev, player->max_lev),
-			"Level", "%d", player->lev);
+			_("Level"), "%d", player->lev);
 	panel_line(p, max_color(player->exp, player->max_exp),
-			"Cur Exp", "%d", player->exp);
-	panel_line(p, COLOUR_L_GREEN, "Max Exp", "%d", player->max_exp);
-	panel_line(p, COLOUR_L_GREEN, "Adv Exp", "%s", show_adv_exp());
+			_("Cur Exp"), "%d", player->exp);
+	panel_line(p, COLOUR_L_GREEN, _("Max Exp"), "%d", player->max_exp);
+	panel_line(p, COLOUR_L_GREEN, _("Adv Exp"), "%s", show_adv_exp());
 	panel_space(p);
-	panel_line(p, COLOUR_L_GREEN, "Gold", "%d", player->au);
-	panel_line(p, attr, "Burden", "%.1f lb",
+	panel_line(p, COLOUR_L_GREEN, _("Gold"), "%d", player->au);
+	panel_line(p, attr, _("Burden"), "%.1f lb",
 			   player->upkeep->total_weight / 10.0F);
-	panel_line(p, attr, "Overweight", "%d.%d lb", -diff / 10, abs(diff) % 10);
-	panel_line(p, COLOUR_L_GREEN, "Max Depth", "%s", show_depth());
+	panel_line(p, attr, _("Overweight"), "%d.%d lb", -diff / 10, abs(diff) % 10);
+	panel_line(p, COLOUR_L_GREEN, _("Max Depth"), "%s", show_depth());
 
 	return p;
 }
@@ -730,7 +730,7 @@ static struct panel *get_panel_combat(void) {
 	int melee_dice = 1, melee_sides = 1;
 
 	/* AC */
-	panel_line(p, COLOUR_L_BLUE, "Armor", "[%d,%+d]",
+	panel_line(p, COLOUR_L_BLUE, _("Armor"), "[%d,%+d]",
 			player->known_state.ac, player->known_state.to_a);
 
 	/* Melee */
@@ -746,9 +746,9 @@ static struct panel *get_panel_combat(void) {
 		melee_sides = obj->ds;
 	}
 
-	panel_line(p, COLOUR_L_BLUE, "Melee", "%dd%d,%+d", melee_dice, melee_sides, dam);
-	panel_line(p, COLOUR_L_BLUE, "To-hit", "%d,%+d", bth / 10, hit);
-	panel_line(p, COLOUR_L_BLUE, "Blows", "%d.%d/turn",
+	panel_line(p, COLOUR_L_BLUE, _("Melee"), "%dd%d,%+d", melee_dice, melee_sides, dam);
+	panel_line(p, COLOUR_L_BLUE, _("To-hit"), "%d,%+d", bth / 10, hit);
+	panel_line(p, COLOUR_L_BLUE, _("Blows"), "%d.%d/turn",
 			player->state.num_blows / 100, (player->state.num_blows / 10 % 10));
 
 	/* Ranged */
@@ -758,9 +758,9 @@ static struct panel *get_panel_combat(void) {
 	dam = obj ? obj->known->to_d : 0;
 
 	panel_space(p);
-	panel_line(p, COLOUR_L_BLUE, "Shoot to-dam", "%+d", dam);
-	panel_line(p, COLOUR_L_BLUE, "To-hit", "%d,%+d", bth / 10, hit);
-	panel_line(p, COLOUR_L_BLUE, "Shots", "%d.%d/turn",
+	panel_line(p, COLOUR_L_BLUE, _("Shoot to-dam"), "%+d", dam);
+	panel_line(p, COLOUR_L_BLUE, _("To-hit"), "%d,%+d", bth / 10, hit);
+	panel_line(p, COLOUR_L_BLUE, _("Shots"), "%d.%d/turn",
 			   player->state.num_shots / 10, player->state.num_shots % 10);
 
 	return p;
@@ -778,30 +778,30 @@ static struct panel *get_panel_skills(void) {
 
 	/* Saving throw */
 	skill = BOUND(player->state.skills[SKILL_SAVE], 0, 100);
-	panel_line(p, colour_table[skill / 10], "Saving Throw", "%d%%", skill);
+	panel_line(p, colour_table[skill / 10], _("Saving Throw"), "%d%%", skill);
 
 	/* Stealth */
 	desc = likert(player->state.skills[SKILL_STEALTH], 1, &attr);
-	panel_line(p, attr, "Stealth", "%s", desc);
+	panel_line(p, attr, _("Stealth"), "%s", desc);
 
 	/* Physical disarming: assume we're disarming a dungeon trap */
 	skill = BOUND(player->state.skills[SKILL_DISARM_PHYS] - depth / 5, 2, 100);
-	panel_line(p, colour_table[skill / 10], "Disarm - phys.", "%d%%", skill);
+	panel_line(p, colour_table[skill / 10], _("Disarm - phys."), "%d%%", skill);
 
 	/* Magical disarming */
 	skill = BOUND(player->state.skills[SKILL_DISARM_MAGIC] - depth / 5, 2, 100);
-	panel_line(p, colour_table[skill / 10], "Disarm - magic", "%d%%", skill);
+	panel_line(p, colour_table[skill / 10], _("Disarm - magic"), "%d%%", skill);
 
 	/* Magic devices */
 	skill = player->state.skills[SKILL_DEVICE];
-	panel_line(p, colour_table[skill / 13], "Magic Devices", "%d", skill);
+	panel_line(p, colour_table[skill / 13], _("Magic Devices"), "%d", skill);
 
 	/* Searching ability */
 	skill = BOUND(player->state.skills[SKILL_SEARCH], 0, 100);
-	panel_line(p, colour_table[skill / 10], "Searching", "%d%%", skill);
+	panel_line(p, colour_table[skill / 10], _("Searching"), "%d%%", skill);
 
 	/* Infravision */
-	panel_line(p, COLOUR_L_GREEN, "Infravision", "%d ft",
+	panel_line(p, COLOUR_L_GREEN, _("Infravision"), "%d ft",
 			player->state.see_infra * 10);
 
 	/* Speed */
@@ -809,7 +809,7 @@ static struct panel *get_panel_skills(void) {
 	if (player->timed[TMD_FAST]) skill -= 10;
 	if (player->timed[TMD_SLOW]) skill += 10;
 	attr = skill < 110 ? COLOUR_L_UMBER : COLOUR_L_GREEN;
-	panel_line(p, attr, "Speed", "%s", show_speed());
+	panel_line(p, attr, _("Speed"), "%s", show_speed());
 
 	return p;
 }
@@ -818,13 +818,13 @@ static struct panel *get_panel_misc(void) {
 	struct panel *p = panel_allocate(7);
 	uint8_t attr = COLOUR_L_BLUE;
 
-	panel_line(p, attr, "Age", "%d", player->age);
-	panel_line(p, attr, "Height", "%d'%d\"", player->ht / 12, player->ht % 12);
-	panel_line(p, attr, "Weight", "%dst %dlb", player->wt / 14, player->wt % 14);
-	panel_line(p, attr, "Turns used:", "");
-	panel_line(p, attr, "Game", "%d", turn);
-	panel_line(p, attr, "Standard", "%d", player->total_energy / 100);
-	panel_line(p, attr, "Resting", "%d", player->resting_turn);
+	panel_line(p, attr, _("Age"), "%d", player->age);
+	panel_line(p, attr, _("Height"), "%d'%d\"", player->ht / 12, player->ht % 12);
+	panel_line(p, attr, _("Weight"), "%dst %dlb", player->wt / 14, player->wt % 14);
+	panel_line(p, attr, _("Turns used:"), "");
+	panel_line(p, attr, _("Game"), "%d", turn);
+	panel_line(p, attr, _("Standard"), "%d", player->total_energy / 100);
+	panel_line(p, attr, _("Resting"), "%d", player->resting_turn);
 
 	return p;
 }
@@ -939,7 +939,7 @@ void write_character_dump(ang_file *fff)
 	buf = mem_alloc(text_wcsz() * n + 1);
 
 	/* Begin dump */
-	file_putf(fff, "  [%s Character Dump]\n\n", buildid);
+	file_putf(fff, _("  [%s Character Dump]\n\n"), buildid);
 
 	/* Display player basics */
 	display_player(0);
@@ -975,7 +975,7 @@ void write_character_dump(ang_file *fff)
 	display_player(1);
 
 	/* Print a header */
-	file_putf(fff, "%-20s%s\n", "Resistances", "Abilities");
+	file_putf(fff, "%-20s%s\n", _("Resistances"), _("Abilities"));
 
 	/* Dump part of the screen */
 	ylim = ((cached_config->n_resist_by_region[0] >
@@ -1013,7 +1013,7 @@ void write_character_dump(ang_file *fff)
 	file_putf(fff, "\n");
 
 	/* Print a header */
-	file_putf(fff, "%-20s%s\n", "Hindrances", "Modifiers");
+	file_putf(fff, "%-20s%s\n", _("Hindrances"), _("Modifiers"));
 
 	/* Dump part of the screen */
 	ylim = ((cached_config->n_resist_by_region[2] >
@@ -1055,17 +1055,17 @@ void write_character_dump(ang_file *fff)
 	if (player->is_dead) {
 		i = messages_num();
 		if (i > 15) i = 15;
-		file_putf(fff, "  [Last Messages]\n\n");
+		file_putf(fff, _("  [Last Messages]\n\n"));
 		while (i-- > 0)
 		{
 			file_putf(fff, "> %s\n", message_str((int16_t)i));
 		}
-		file_putf(fff, "\nKilled by %s.\n\n", player->died_from);
+		file_putf(fff, _("\nKilled by %s.\n\n"), player->died_from);
 	}
 
 
 	/* Dump the equipment */
-	file_putf(fff, "  [Character Equipment]\n\n");
+	file_putf(fff, _("  [Character Equipment]\n\n"));
 	for (i = 0; i < player->body.count; i++) {
 		struct object *obj = slot_object(player, i);
 		if (!obj) continue;
@@ -1078,7 +1078,7 @@ void write_character_dump(ang_file *fff)
 	file_putf(fff, "\n\n");
 
 	/* Dump the inventory */
-	file_putf(fff, "\n\n  [Character Inventory]\n\n");
+	file_putf(fff, _("\n\n  [Character Inventory]\n\n"));
 	for (i = 0; i < z_info->pack_size; i++) {
 		struct object *obj = player->upkeep->inven[i];
 		if (!obj) break;
@@ -1091,7 +1091,7 @@ void write_character_dump(ang_file *fff)
 	file_putf(fff, "\n\n");
 
 	/* Dump the quiver */
-	file_putf(fff, "\n\n  [Character Quiver]\n\n");
+	file_putf(fff, _("\n\n  [Character Quiver]\n\n"));
 	for (i = 0; i < z_info->quiver_size; i++) {
 		struct object *obj = player->upkeep->quiver[i];
 		if (!obj) continue;
@@ -1107,7 +1107,7 @@ void write_character_dump(ang_file *fff)
 	store_stock_list(home, home_list, z_info->store_inven_max);
 	if (home->stock_num) {
 		/* Header */
-		file_putf(fff, "  [Home Inventory]\n\n");
+		file_putf(fff, _("  [Home Inventory]\n\n"));
 
 		/* Dump all available items */
 		for (i = 0; i < z_info->store_inven_max; i++) {
@@ -1129,15 +1129,15 @@ void write_character_dump(ang_file *fff)
 	file_putf(fff, "\n\n");
 
 	/* Dump options */
-	file_putf(fff, "  [Options]\n\n");
+	file_putf(fff, _("  [Options]\n\n"));
 
 	/* Dump options */
 	for (i = 0; i < OP_MAX; i++) {
 		int opt;
 		const char *title = "";
 		switch (i) {
-			case OP_INTERFACE: title = "User interface"; break;
-			case OP_BIRTH: title = "Birth"; break;
+			case OP_INTERFACE: title = _("User interface"); break;
+			case OP_BIRTH: title = _("Birth"); break;
 		    default: continue;
 		}
 
@@ -1147,7 +1147,7 @@ void write_character_dump(ang_file *fff)
 
 			file_putf(fff, "%-45s: %s (%s)\n",
 			        option_desc(opt),
-			        player->opts.opt[opt] ? "yes" : "no ",
+			        player->opts.opt[opt] ? _("yes") : _("no "),
 			        option_name(opt));
 		}
 
@@ -1160,7 +1160,7 @@ void write_character_dump(ang_file *fff)
 	 * used when constructing the randart file name.
 	 */
 	if (OPT(player, birth_randarts)) {
-		file_putf(fff, "  [Randart seed]\n\n");
+		file_putf(fff, _("  [Randart seed]\n\n"));
 		file_putf(fff, "%08x\n\n", seed_randart);
 	}
 
@@ -1178,7 +1178,7 @@ void write_character_dump(ang_file *fff)
 bool dump_save(const char *path)
 {
 	if (text_lines_to_file(path, write_character_dump)) {
-		msg("Failed to create file %s.new", path);
+		msg(_("Failed to create file %s.new"), path);
 		return false;
 	}
 
@@ -1203,7 +1203,7 @@ void do_cmd_change_name(void)
 	bool more = true;
 
 	/* Prompt */
-	p = "['c' to change name, 'f' to file, 'h' to change mode, or ESC]";
+	p = _("['c' to change name, 'f' to file, 'h' to change mode, or ESC]");
 
 	/* Save screen */
 	screen_save();
@@ -1224,7 +1224,7 @@ void do_cmd_change_name(void)
 				case ESCAPE: more = false; break;
 				case 'c': {
 					if(arg_force_name)
-						msg("You are not allowed to change your name!");
+						msg(_("You are not allowed to change your name!"));
 					else {
 					char namebuf[32] = "";
 
@@ -1247,9 +1247,9 @@ void do_cmd_change_name(void)
 
 					if (get_file(fname, buf, sizeof buf)) {
 						if (dump_save(buf))
-							msg("Character dump successful.");
+							msg(_("Character dump successful."));
 						else
-							msg("Character dump failed!");
+							msg(_("Character dump failed!"));
 					}
 					break;
 				}

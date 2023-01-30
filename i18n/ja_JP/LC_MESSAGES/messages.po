@@ -1466,7 +1466,7 @@ msgid ""
 msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/obj-pile.c:115
+#: ../src/obj-pile.c:115 ../src/ui-player.c:1181
 #, fuzzy, c-format
 msgid "Failed to create file %s.new"
 msgstr "一時ファイル %s を作成できませんでした。"
@@ -1846,12 +1846,12 @@ msgid "Con: "
 msgstr "耐久x"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-display.c:188
+#: ../src/ui-display.c:188 ../src/ui-player.c:627
 msgid "[=-WIZARD-=]"
 msgstr "[ウィザード]"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-display.c:190
+#: ../src/ui-display.c:190 ../src/ui-player.c:629
 msgid "***WINNER***"
 msgstr "***勝利者***"
 
@@ -1906,11 +1906,11 @@ msgstr "加速"
 msgid "Slow"
 msgstr "減速"
 
-#: ../src/ui-display.c:522
+#: ../src/ui-display.c:522 ../src/ui-player.c:652
 msgid "Town"
 msgstr "街"
 
-#: ../src/ui-display.c:524
+#: ../src/ui-display.c:524 ../src/ui-player.c:654
 #, c-format
 msgid "%d' (L%d)"
 msgstr "%d' (%d階)"
@@ -2746,6 +2746,467 @@ msgstr ""
 #: ../src/ui-options.c:2051
 msgid "Options Menu"
 msgstr "設定メニュー"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:280
+msgid "Very Bad"
+msgstr "最低"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:290
+msgid "Bad"
+msgstr "悪い"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:295
+msgid "Poor"
+msgstr "劣る"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:301
+msgid "Fair"
+msgstr "普通"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:306
+#, fuzzy
+msgid "Good"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"中善\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"良い\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"善良"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:311
+msgid "Very Good"
+msgstr "大変良い"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:317
+msgid "Excellent"
+msgstr "卓越"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:326
+msgid "Superb"
+msgstr "超越"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:334
+msgid "Heroic"
+msgstr "英雄的"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:339
+#, fuzzy
+msgid "Legendary"
+msgstr "伝説的[%d]"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:461
+#, fuzzy
+msgid "  Self"
+msgstr "スピード"
+
+#: ../src/ui-player.c:462
+msgid " RB"
+msgstr ""
+
+#: ../src/ui-player.c:463
+msgid " CB"
+msgstr ""
+
+#: ../src/ui-player.c:464
+msgid " EB"
+msgstr ""
+
+#: ../src/ui-player.c:465
+msgid "  Best"
+msgstr ""
+
+#: ../src/ui-player.c:665
+msgid "Normal"
+msgstr ""
+
+#: ../src/ui-player.c:670
+#, fuzzy, c-format
+msgid "%d.%dx (%d)"
+msgstr "%sは%s(%d)%s"
+
+#: ../src/ui-player.c:672
+#, c-format
+msgid "%d (%d.%dx)"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:695
+msgid "Name"
+msgstr "名前"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:696
+#, fuzzy
+msgid "Race"
+msgstr "種族  :"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:697
+#, fuzzy
+msgid "Class"
+msgstr "職業  :"
+
+#: ../src/ui-player.c:698
+msgid "Title"
+msgstr ""
+
+#: ../src/ui-player.c:699
+msgid "HP"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:700
+msgid "SP"
+msgstr "MP"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:711
+msgid "Level"
+msgstr "レベル"
+
+#: ../src/ui-player.c:713
+msgid "Cur Exp"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:714
+msgid "Max Exp"
+msgstr "最大経験"
+
+#: ../src/ui-player.c:715
+msgid "Adv Exp"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:717
+msgid "Gold"
+msgstr "所持金"
+
+#: ../src/ui-player.c:718
+msgid "Burden"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:720
+#, fuzzy
+msgid "Overweight"
+msgstr "体重(ポンド)"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:721
+#, fuzzy
+msgid "Max Depth"
+msgstr "最大経験"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:733
+#, fuzzy
+msgid "Armor"
+msgstr "防具"
+
+#: ../src/ui-player.c:749
+msgid "Melee"
+msgstr ""
+
+#: ../src/ui-player.c:750 ../src/ui-player.c:762
+msgid "To-hit"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:751
+#, fuzzy
+msgid "Blows"
+msgstr "打撃回数"
+
+#: ../src/ui-player.c:761
+msgid "Shoot to-dam"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:763
+msgid "Shots"
+msgstr "弾"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:781
+#, fuzzy
+msgid "Saving Throw"
+msgstr "魔法防御  :"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:785
+#, fuzzy
+msgid "Stealth"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"隠密\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"隠密\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"隠密\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"隠密\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"隠密\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"超隠密\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"隠密"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:789
+#, fuzzy
+msgid "Disarm - phys."
+msgstr "トラップ解除(D)"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:793
+#, fuzzy
+msgid "Disarm - magic"
+msgstr "魔力消去"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:797
+#, fuzzy
+msgid "Magic Devices"
+msgstr "魔法道具  :"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:801
+msgid "Searching"
+msgstr "探索"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:804
+msgid "Infravision"
+msgstr "赤外線視力"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:812
+#, fuzzy
+msgid "Speed"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"加速\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"加速\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"スピード"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:821
+msgid "Age"
+msgstr "年齢"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:822
+msgid "Height"
+msgstr "身長"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:823
+#, fuzzy
+msgid "Weight"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"  重さ\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"  重さ\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"  重さ\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"体重"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:824
+#, fuzzy
+msgid "Turns used:"
+msgstr "パニック・アンデッド"
+
+#: ../src/ui-player.c:825
+msgid "Game"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:826
+#, fuzzy
+msgid "Standard"
+msgstr "標準色"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:827
+#, fuzzy
+msgid "Resting"
+msgstr "刺す"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:942
+#, c-format
+msgid ""
+"  [%s Character Dump]\n"
+"\n"
+msgstr ""
+"  [%s キャラクタ情報]\n"
+"\n"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:978
+#, fuzzy
+msgid "Resistances"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"全耐性\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"耐性"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:978
+#, fuzzy
+msgid "Abilities"
+msgstr "能力"
+
+#: ../src/ui-player.c:1016
+msgid "Hindrances"
+msgstr ""
+
+#: ../src/ui-player.c:1016
+msgid "Modifiers"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:1058
+#, fuzzy
+msgid ""
+"  [Last Messages]\n"
+"\n"
+msgstr ""
+"\n"
+"  [死ぬ直前のメッセージ]\n"
+"\n"
+
+#: ../src/ui-player.c:1063
+#, c-format
+msgid ""
+"\n"
+"Killed by %s.\n"
+"\n"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:1068
+msgid ""
+"  [Character Equipment]\n"
+"\n"
+msgstr ""
+"  [キャラクタの装備]\n"
+"\n"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:1081
+#, fuzzy
+msgid ""
+"\n"
+"\n"
+"  [Character Inventory]\n"
+"\n"
+msgstr ""
+"  [キャラクタの持ち物]\n"
+"\n"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:1094
+#, fuzzy
+msgid ""
+"\n"
+"\n"
+"  [Character Quiver]\n"
+"\n"
+msgstr ""
+"  [キャラクタの装備]\n"
+"\n"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:1110
+#, fuzzy
+msgid ""
+"  [Home Inventory]\n"
+"\n"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"  [我が家のアイテム]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"  [ 我が家のアイテム ]\n"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:1132
+#, fuzzy
+msgid ""
+"  [Options]\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"  [突然変異]\n"
+"\n"
+
+#: ../src/ui-player.c:1139
+#, fuzzy
+msgid "User interface"
+msgstr "インタフェース"
+
+#: ../src/ui-player.c:1140
+#, fuzzy
+msgid "Birth"
+msgstr "誕生"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:1150
+msgid "yes"
+msgstr "はい  "
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:1150
+msgid "no "
+msgstr "いいえ"
+
+#: ../src/ui-player.c:1163
+msgid ""
+"  [Randart seed]\n"
+"\n"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:1206
+msgid "['c' to change name, 'f' to file, 'h' to change mode, or ESC]"
+msgstr "['c'で名前変更, 'f'でファイルへ書出, 'h'でモード変更, ESCで終了]"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:1227
+#, fuzzy
+msgid "You are not allowed to change your name!"
+msgstr "精神を集中して気合いを溜めた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:1250
+msgid "Character dump successful."
+msgstr "キャラクタ情報のファイルへの書き出しに成功しました。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-player.c:1252
+msgid "Character dump failed!"
+msgstr "キャラクタ情報のファイルへの書き出しに失敗しました！"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-spell.c:81
@@ -3832,10 +4293,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "得意武器"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "armors"
-#~ msgstr "防具"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #, fuzzy
 #~ msgid "missiles"
 #~ msgstr ""
@@ -4155,10 +4612,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "身長(インチ)"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "weight"
-#~ msgstr "体重(ポンド)"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "social class"
 #~ msgstr "社会的地位"
 
@@ -4243,25 +4696,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Str  Int  Wis  Dex  Con  Chr   EXP "
 #~ msgstr "腕力 知能 賢さ 器用 耐久 魅力 経験 "
-
-# From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "Stealth"
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "隠密\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "隠密\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "隠密\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "隠密\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "隠密\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "超隠密\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "隠密"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Choose a class (%c-%c) ('=' for options, Gray is winner): "
@@ -5011,10 +5445,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "  > "
 #~ msgstr "  》"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Name"
-#~ msgstr "名前"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "SP Fail Info"
@@ -6193,14 +6623,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "%s ( リターンで次へ, y/n でセット, F で頻度を入力, ESC で決定 ) "
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "yes"
-#~ msgstr "はい  "
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "no "
-#~ msgstr "いいえ"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Timed autosave frequency: every %d turns"
 #~ msgstr "自動セーブの頻度： %d ターン毎"
 
@@ -6644,10 +7066,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Rest(R)"
 #~ msgstr "休息する(R)"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Disarm a trap(D)"
-#~ msgstr "トラップ解除(D)"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Search(s)"
@@ -7319,10 +7737,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ "ロケットを発射した！\n"
 #~ "#-#-#-#-#  -  #-#-#-#-#\n"
 #~ "ロケット発射！"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "['c' to change name, 'f' to file, 'h' to change mode, or ESC]"
-#~ msgstr "['c'で名前変更, 'f'でファイルへ書出, 'h'でモード変更, ESCで終了]"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Message Recall (%d-%d of %d)"
@@ -10309,16 +10723,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid ""
 #~ "\n"
-#~ "  [Last Messages]\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "  [死ぬ直前のメッセージ]\n"
-#~ "\n"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid ""
-#~ "\n"
 #~ "  [*Winning* Message]\n"
 #~ "\n"
 #~ msgstr ""
@@ -10577,45 +10981,8 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ "属性 : %s\n"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid ""
-#~ "\n"
-#~ "\n"
-#~ "  [Mutations]\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "\n"
-#~ "  [突然変異]\n"
-#~ "\n"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid ""
-#~ "  [Character Equipment]\n"
-#~ "\n"
-#~ msgstr ""
-#~ "  [キャラクタの装備]\n"
-#~ "\n"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "(wielding with two-hands)"
 #~ msgstr "(武器を両手持ち)"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid ""
-#~ "  [Character Inventory]\n"
-#~ "\n"
-#~ msgstr ""
-#~ "  [キャラクタの持ち物]\n"
-#~ "\n"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "  [Home Inventory]\n"
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "  [我が家のアイテム]\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "  [ 我が家のアイテム ]\n"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid ""
@@ -10628,14 +10995,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "  [Museum]\n"
 #~ msgstr "  [博物館のアイテム]\n"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid ""
-#~ "  [%s Character Dump]\n"
-#~ "\n"
-#~ msgstr ""
-#~ "  [%s キャラクタ情報]\n"
-#~ "\n"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid ""
@@ -10801,14 +11160,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ "現存するファイル %s に上書きしますか? \n"
 #~ "#-#-#-#-#  -  #-#-#-#-#\n"
 #~ "現存するファイルに上書きしますか? (%s)"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Character dump failed!"
-#~ msgstr "キャラクタ情報のファイルへの書き出しに失敗しました！"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Character dump successful."
-#~ msgstr "キャラクタ情報のファイルへの書き出しに成功しました。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "z_info.raw"
@@ -12047,10 +12398,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "もう撃破したユニーク・モンスター"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "standard"
-#~ msgstr "標準色"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "brightly lit"
 #~ msgstr "明色"
 
@@ -12150,10 +12497,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ "弓\n"
 #~ "#-#-#-#-#  -  #-#-#-#-#\n"
 #~ "飛び道具"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Shots"
-#~ msgstr "弾"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #, fuzzy
@@ -12384,10 +12727,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "bite"
 #~ msgstr "噛む"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "sting"
-#~ msgstr "刺す"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "slash"
@@ -15578,10 +15917,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "今は構えに集中している。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You concentrate to charge your power."
-#~ msgstr "精神を集中して気合いを溜めた。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You are not clear-headed"
 #~ msgstr "意識がはっきりとしない。"
 
@@ -17014,10 +17349,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ "叫び"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Dispel-magic"
-#~ msgstr "魔力消去"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Rocket"
 #~ msgstr "ロケット"
 
@@ -17184,17 +17515,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Sleep"
 #~ msgstr "睡眠"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "Speed"
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "加速\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "加速\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "スピード"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Hand of doom"
@@ -20858,17 +21178,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Lawful"
 #~ msgstr "大善"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "Good"
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "中善\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "良い\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "善良"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Neutral Good"
@@ -25094,10 +25403,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "非常に強力なカオスの球を放つ。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Infravision"
-#~ msgstr "赤外線視力"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Gives infravision for a while."
 #~ msgstr "一定時間、赤外線視力が増強される。"
 
@@ -25187,19 +25492,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Gives a bonus to AC for a while."
 #~ msgstr "一定時間、ACを上昇させる。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "Resistance"
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "全耐性\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "耐性"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Haste Self"
-#~ msgstr "スピード"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Hastes you for a while."
@@ -26582,10 +26874,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Sense Surroundings"
 #~ msgstr "周辺感知"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Turn Undead"
-#~ msgstr "パニック・アンデッド"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Attempts to scare undead monsters in sight."
@@ -32468,14 +32756,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "性別  :"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Race  :"
-#~ msgstr "種族  :"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Class :"
-#~ msgstr "職業  :"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Level :"
 #~ msgstr "レベル:"
 
@@ -32651,19 +32931,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ "商品の一覧"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "Weight"
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "  重さ\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "  重さ\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "  重さ\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "体重"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Price"
 #~ msgstr " 価格"
 
@@ -32688,24 +32955,12 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "ＡＣ"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Level"
-#~ msgstr "レベル"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Experience"
 #~ msgstr "経験値"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Max Exp"
-#~ msgstr "最大経験"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Exp to Adv"
 #~ msgstr "次レベル"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Gold"
-#~ msgstr "所持金"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Hit point"
@@ -32728,10 +32983,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "射撃命中  :"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "SavingThrow: "
-#~ msgstr "魔法防御  :"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Stealth    : "
 #~ msgstr "隠密行動  :"
 
@@ -32746,14 +32997,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Disarming  : "
 #~ msgstr "解除      :"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "MagicDevice: "
-#~ msgstr "魔法道具  :"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Blows/Round"
-#~ msgstr "打撃回数"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Shots/Round"
@@ -32790,14 +33033,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Patron   : "
 #~ msgstr "守護魔神 : "
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Age"
-#~ msgstr "年齢"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Height"
-#~ msgstr "身長"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Social Class"
@@ -33312,42 +33547,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "暗視"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Very Bad"
-#~ msgstr "最低"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Bad"
-#~ msgstr "悪い"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Poor"
-#~ msgstr "劣る"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Fair"
-#~ msgstr "普通"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Very Good"
-#~ msgstr "大変良い"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Excellent"
-#~ msgstr "卓越"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Superb"
-#~ msgstr "超越"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Heroic"
-#~ msgstr "英雄的"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Legendary[%d]"
-#~ msgstr "伝説的[%d]"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "% off"
 #~ msgstr "%引き"
 
@@ -33402,10 +33601,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Exp "
 #~ msgstr "x経験"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "SP"
-#~ msgstr "MP"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Surf."
@@ -33506,10 +33701,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Ability and Resistance"
 #~ msgstr "能力and耐性"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Ability"
-#~ msgstr "能力"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "(plus Resistance about 1/2)"
@@ -33962,10 +34153,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Magic Mastery"
 #~ msgstr "魔法道具使用能力"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Searching"
-#~ msgstr "探索"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Tunneling"
