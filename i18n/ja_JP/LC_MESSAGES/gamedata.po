@@ -14409,13 +14409,13 @@ msgstr ""
 #: ../lib/gamedata/object.txt:5217
 msgctxt "object"
 msgid "copper"
-msgstr "銅の"
+msgstr "銅塊"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/object.txt:5221
 msgctxt "object"
 msgid "silver"
-msgstr "銀色の"
+msgstr "銀塊"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/object.txt:5225
@@ -14463,13 +14463,13 @@ msgstr "エメラルド"
 #: ../lib/gamedata/object.txt:5253
 msgctxt "object"
 msgid "mithril"
-msgstr "ミスリルの"
+msgstr "ミスリル"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/object.txt:5257
 msgctxt "object"
 msgid "adamantite"
-msgstr "アダマンタイトの"
+msgstr "アダマンタイト"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../lib/gamedata/object.txt:5267

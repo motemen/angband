@@ -438,13 +438,12 @@ msgstr "その本には学ぶべき%sがない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/cmd-pickup.c:97
-#, fuzzy, c-format
+#, c-format
 msgid "You have found %d gold pieces worth of %s."
-msgstr " $%ld の価値がある%sを見つけた。"
+msgstr "$%dの価値がある%sを見つけた。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/cmd-pickup.c:97
-#, fuzzy
 msgid "treasures"
 msgstr "財宝"
 
@@ -456,7 +455,6 @@ msgstr "ファイル %s を開けませんでした。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/cmd-pickup.c:358
-#, fuzzy
 msgid "Get which item?"
 msgstr "どれを拾いますか？"
 
@@ -1432,7 +1430,7 @@ msgstr ""
 #: ../src/obj-desc.c:650
 #, c-format
 msgid "%d gold pieces worth of %s%s"
-msgstr ""
+msgstr "$%dの価値がある%s%s"
 
 #: ../src/obj-desc.c:652
 msgid " {ignore}"
