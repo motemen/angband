@@ -437,6 +437,35 @@ msgid "You cannot learn any %ss in that book."
 msgstr "その本には学ぶべき%sがない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-pickup.c:97
+#, fuzzy, c-format
+msgid "You have found %d gold pieces worth of %s."
+msgstr " $%ld の価値がある%sを見つけた。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-pickup.c:97
+#, fuzzy
+msgid "treasures"
+msgstr "財宝"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-pickup.c:235
+#, fuzzy, c-format
+msgid "Failed pickup of %s"
+msgstr "ファイル %s を開けませんでした。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-pickup.c:358
+#, fuzzy
+msgid "Get which item?"
+msgstr "どれを拾いますか？"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-pickup.c:359
+msgid "You see nothing there."
+msgstr "そこには何も見当たらない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-attack.c:460
 #, fuzzy, c-format
 msgid "%s tries to cast a spell, but fails."
@@ -3268,10 +3297,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "No route is found!"
 #~ msgstr "道筋が見つかりません！"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You see nothing there."
-#~ msgstr "そこには何も見当たらない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You see nothing there to tunnel."
@@ -6890,10 +6915,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "引退する(Q)"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Failed to open file %s."
-#~ msgstr "ファイル %s を開けませんでした。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Screen dump saved."
 #~ msgstr "画面(記念撮影)をファイルに書き出しました。"
 
@@ -10230,16 +10251,8 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ "ザックからアイテムがあふれてしまった！"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Get which item? "
-#~ msgstr "どれを拾いますか？"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You no longer have any room for the objects on the floor."
 #~ msgstr "もうザックには床にあるどのアイテムも入らない。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You have found %ld gold pieces worth of %s."
-#~ msgstr " $%ld の価値がある%sを見つけた。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You see a pile of %d items."
@@ -32036,10 +32049,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid " or"
 #~ msgstr "や"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid " treasure"
-#~ msgstr "財宝"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "%^s may carry"

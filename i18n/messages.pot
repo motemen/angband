@@ -326,6 +326,28 @@ msgstr ""
 msgid "You cannot learn any %ss in that book."
 msgstr ""
 
+#: ../src/cmd-pickup.c:97
+#, c-format
+msgid "You have found %d gold pieces worth of %s."
+msgstr ""
+
+#: ../src/cmd-pickup.c:97
+msgid "treasures"
+msgstr ""
+
+#: ../src/cmd-pickup.c:235
+#, c-format
+msgid "Failed pickup of %s"
+msgstr ""
+
+#: ../src/cmd-pickup.c:358
+msgid "Get which item?"
+msgstr ""
+
+#: ../src/cmd-pickup.c:359
+msgid "You see nothing there."
+msgstr ""
+
 #: ../src/mon-attack.c:460
 #, c-format
 msgid "%s tries to cast a spell, but fails."
