@@ -157,171 +157,177 @@ msgstr ""
 msgid "You activate it."
 msgstr ""
 
-#: ../src/cmd-obj.c:684 ../src/obj-pile.c:869
+#: ../src/cmd-obj.c:688
+#, c-format
+msgctxt "nomore"
+msgid "You see %s."
+msgstr ""
+
+#: ../src/cmd-obj.c:690 ../src/cmd-obj.c:693 ../src/obj-pile.c:869
 #, c-format
 msgid "You see %s."
 msgstr ""
 
-#: ../src/cmd-obj.c:687
+#: ../src/cmd-obj.c:697
 #, c-format
 msgid "You have %s (1st %c)."
 msgstr ""
 
-#: ../src/cmd-obj.c:689
+#: ../src/cmd-obj.c:699
 #, c-format
 msgid "You have %s (%c)."
 msgstr ""
 
-#: ../src/cmd-obj.c:742
+#: ../src/cmd-obj.c:752
 msgid "Read which scroll? "
 msgstr ""
 
-#: ../src/cmd-obj.c:743
+#: ../src/cmd-obj.c:753
 msgid "You have no scrolls to read."
 msgstr ""
 
-#: ../src/cmd-obj.c:763
+#: ../src/cmd-obj.c:773
 msgid "Use which staff? "
 msgstr ""
 
-#: ../src/cmd-obj.c:764
+#: ../src/cmd-obj.c:774
 msgid "You have no staves to use."
 msgstr ""
 
-#: ../src/cmd-obj.c:769
+#: ../src/cmd-obj.c:779
 msgid "That staff has no charges."
 msgstr ""
 
-#: ../src/cmd-obj.c:789
+#: ../src/cmd-obj.c:799
 msgid "Aim which wand? "
 msgstr ""
 
-#: ../src/cmd-obj.c:790
+#: ../src/cmd-obj.c:800
 msgid "You have no wands to aim."
 msgstr ""
 
-#: ../src/cmd-obj.c:795
+#: ../src/cmd-obj.c:805
 msgid "That wand has no charges."
 msgstr ""
 
-#: ../src/cmd-obj.c:815
+#: ../src/cmd-obj.c:825
 msgid "Zap which rod? "
 msgstr ""
 
-#: ../src/cmd-obj.c:816
+#: ../src/cmd-obj.c:826
 msgid "You have no rods to zap."
 msgstr ""
 
-#: ../src/cmd-obj.c:821
+#: ../src/cmd-obj.c:831
 msgid "That rod is still charging."
 msgstr ""
 
-#: ../src/cmd-obj.c:841
+#: ../src/cmd-obj.c:851
 msgid "Activate which item? "
 msgstr ""
 
-#: ../src/cmd-obj.c:842
+#: ../src/cmd-obj.c:852
 msgid "You have no items to activate."
 msgstr ""
 
-#: ../src/cmd-obj.c:847
+#: ../src/cmd-obj.c:857
 msgid "That item is still charging."
 msgstr ""
 
-#: ../src/cmd-obj.c:863
+#: ../src/cmd-obj.c:873
 msgid "Eat which food? "
 msgstr ""
 
-#: ../src/cmd-obj.c:864
+#: ../src/cmd-obj.c:874
 msgid "You have no food to eat."
 msgstr ""
 
-#: ../src/cmd-obj.c:884
+#: ../src/cmd-obj.c:894
 msgid "Quaff which potion? "
 msgstr ""
 
-#: ../src/cmd-obj.c:885
+#: ../src/cmd-obj.c:895
 msgid "You have no potions from which to quaff."
 msgstr ""
 
-#: ../src/cmd-obj.c:905
+#: ../src/cmd-obj.c:915
 msgid "Use which item? "
 msgstr ""
 
-#: ../src/cmd-obj.c:906
+#: ../src/cmd-obj.c:916
 msgid "You have no items to use."
 msgstr ""
 
-#: ../src/cmd-obj.c:923
+#: ../src/cmd-obj.c:933
 msgid "Equip the item to use it."
 msgstr ""
 
-#: ../src/cmd-obj.c:926
+#: ../src/cmd-obj.c:936
 msgid "The item cannot be used at the moment"
 msgstr ""
 
-#: ../src/cmd-obj.c:942
+#: ../src/cmd-obj.c:952
 msgid "You fuel your lamp."
 msgstr ""
 
-#: ../src/cmd-obj.c:947
+#: ../src/cmd-obj.c:957
 msgid "Your lamp is full."
 msgstr ""
 
-#: ../src/cmd-obj.c:1010
+#: ../src/cmd-obj.c:1020
 msgid "You are not wielding a light."
 msgstr ""
 
-#: ../src/cmd-obj.c:1014
+#: ../src/cmd-obj.c:1024
 msgid "Your light cannot be refilled."
 msgstr ""
 
-#: ../src/cmd-obj.c:1020
+#: ../src/cmd-obj.c:1030
 msgid "Refuel with with fuel source? "
 msgstr ""
 
-#: ../src/cmd-obj.c:1021
+#: ../src/cmd-obj.c:1031
 msgid "You have nothing you can refuel with."
 msgstr ""
 
-#: ../src/cmd-obj.c:1056
+#: ../src/cmd-obj.c:1066
 msgid "cast"
 msgstr ""
 
-#: ../src/cmd-obj.c:1058
+#: ../src/cmd-obj.c:1068
 msgid "There are no spells you can cast."
 msgstr ""
 
-#: ../src/cmd-obj.c:1060
+#: ../src/cmd-obj.c:1070
 msgid "That book has no spells that you can cast."
 msgstr ""
 
-#: ../src/cmd-obj.c:1073
+#: ../src/cmd-obj.c:1083
 #, c-format
 msgid "You do not have enough mana to %s this %s."
 msgstr ""
 
-#: ../src/cmd-obj.c:1079
+#: ../src/cmd-obj.c:1089
 msgid "Attempt it anyway? "
 msgstr ""
 
-#: ../src/cmd-obj.c:1114
+#: ../src/cmd-obj.c:1124
 msgid "study"
 msgstr ""
 
-#: ../src/cmd-obj.c:1116 ../src/cmd-obj.c:1142
+#: ../src/cmd-obj.c:1126 ../src/cmd-obj.c:1152
 msgid "You cannot learn any new spells from the books you have."
 msgstr ""
 
-#: ../src/cmd-obj.c:1118
+#: ../src/cmd-obj.c:1128
 msgid "That book has no spells that you can learn."
 msgstr ""
 
-#: ../src/cmd-obj.c:1141
+#: ../src/cmd-obj.c:1151
 msgid "Study which book? "
 msgstr ""
 
-#: ../src/cmd-obj.c:1161
+#: ../src/cmd-obj.c:1171
 #, c-format
 msgid "You cannot learn any %ss in that book."
 msgstr ""

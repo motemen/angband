@@ -201,13 +201,20 @@ msgid "You activate it."
 msgstr "始動させた..."
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:684 ../src/obj-pile.c:869
+#: ../src/cmd-obj.c:688
+#, c-format
+msgctxt "nomore"
+msgid "You see %s."
+msgstr "%sはない。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:690 ../src/cmd-obj.c:693 ../src/obj-pile.c:869
 #, c-format
 msgid "You see %s."
 msgstr "%sがある。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:687
+#: ../src/cmd-obj.c:697
 #, fuzzy, c-format
 msgid "You have %s (1st %c)."
 msgstr ""
@@ -217,7 +224,7 @@ msgstr ""
 "%s(%c)を手に入れた。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:689
+#: ../src/cmd-obj.c:699
 #, fuzzy, c-format
 msgid "You have %s (%c)."
 msgstr ""
@@ -227,189 +234,189 @@ msgstr ""
 "%s(%c)を手に入れた。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:742
+#: ../src/cmd-obj.c:752
 msgid "Read which scroll? "
 msgstr "どの巻物を読みますか? "
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:743
+#: ../src/cmd-obj.c:753
 msgid "You have no scrolls to read."
 msgstr "読める巻物がない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:763
+#: ../src/cmd-obj.c:773
 msgid "Use which staff? "
 msgstr "どの杖を使いますか? "
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:764
+#: ../src/cmd-obj.c:774
 #, fuzzy
 msgid "You have no staves to use."
 msgstr "使える杖がない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:769
+#: ../src/cmd-obj.c:779
 #, fuzzy
 msgid "That staff has no charges."
 msgstr "この杖にはもう魔力が残っていない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:789
+#: ../src/cmd-obj.c:799
 msgid "Aim which wand? "
 msgstr "どの魔法棒で狙いますか? "
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:790
+#: ../src/cmd-obj.c:800
 msgid "You have no wands to aim."
 msgstr "使える魔法棒がない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:795
+#: ../src/cmd-obj.c:805
 msgid "That wand has no charges."
 msgstr "この魔法棒にはもう魔力が残っていない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:815
+#: ../src/cmd-obj.c:825
 msgid "Zap which rod? "
 msgstr "どのロッドを振りますか? "
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:816
+#: ../src/cmd-obj.c:826
 msgid "You have no rods to zap."
 msgstr "使えるロッドがない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:821
+#: ../src/cmd-obj.c:831
 msgid "That rod is still charging."
 msgstr "このロッドはまだ魔力を充填している最中だ。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:841
+#: ../src/cmd-obj.c:851
 msgid "Activate which item? "
 msgstr "どのアイテムを始動させますか? "
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:842
+#: ../src/cmd-obj.c:852
 msgid "You have no items to activate."
 msgstr "始動できるアイテムを装備していない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:847
+#: ../src/cmd-obj.c:857
 #, fuzzy
 msgid "That item is still charging."
 msgstr "充填中のアイテムは取り込めない。"
 
-#: ../src/cmd-obj.c:863
+#: ../src/cmd-obj.c:873
 msgid "Eat which food? "
 msgstr "どの食糧を食べますか？"
 
-#: ../src/cmd-obj.c:864
+#: ../src/cmd-obj.c:874
 msgid "You have no food to eat."
 msgstr "食べられる食糧がない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:884
+#: ../src/cmd-obj.c:894
 msgid "Quaff which potion? "
 msgstr "どの薬を飲みますか? "
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:885
+#: ../src/cmd-obj.c:895
 msgid "You have no potions from which to quaff."
 msgstr "飲める薬がない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:905
+#: ../src/cmd-obj.c:915
 msgid "Use which item? "
 msgstr "どれを使いますか？ "
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:906
+#: ../src/cmd-obj.c:916
 msgid "You have no items to use."
 msgstr "使えるアイテムがない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:923
+#: ../src/cmd-obj.c:933
 #, fuzzy
 msgid "Equip the item to use it."
 msgstr "材料を持っていない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:926
+#: ../src/cmd-obj.c:936
 #, fuzzy
 msgid "The item cannot be used at the moment"
 msgstr "それは酸・電撃・火炎・冷気では傷つかない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:942
+#: ../src/cmd-obj.c:952
 msgid "You fuel your lamp."
 msgstr "ランプに油を注いだ。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:947
+#: ../src/cmd-obj.c:957
 msgid "Your lamp is full."
 msgstr "ランプの油は一杯だ。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:1010
+#: ../src/cmd-obj.c:1020
 msgid "You are not wielding a light."
 msgstr "光源を装備していない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:1014
+#: ../src/cmd-obj.c:1024
 msgid "Your light cannot be refilled."
 msgstr "この光源は寿命を延ばせない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:1020
+#: ../src/cmd-obj.c:1030
 #, fuzzy
 msgid "Refuel with with fuel source? "
 msgstr "どの松明で明かりを強めますか? "
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:1021
+#: ../src/cmd-obj.c:1031
 #, fuzzy
 msgid "You have nothing you can refuel with."
 msgstr "射撃用の武器を持っていない。"
 
-#: ../src/cmd-obj.c:1056
+#: ../src/cmd-obj.c:1066
 msgid "cast"
 msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:1058
+#: ../src/cmd-obj.c:1068
 #, fuzzy
 msgid "There are no spells you can cast."
 msgstr "賞金首はもう残っていません。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:1060
+#: ../src/cmd-obj.c:1070
 msgid "That book has no spells that you can cast."
 msgstr "読める本がない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:1073
+#: ../src/cmd-obj.c:1083
 #, fuzzy, c-format
 msgid "You do not have enough mana to %s this %s."
 msgstr "ＭＰが足りません。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:1079
+#: ../src/cmd-obj.c:1089
 msgid "Attempt it anyway? "
 msgstr "それでも挑戦しますか? "
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:1114
+#: ../src/cmd-obj.c:1124
 msgid "study"
 msgstr "学ぶ"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:1116 ../src/cmd-obj.c:1142
+#: ../src/cmd-obj.c:1126 ../src/cmd-obj.c:1152
 #, fuzzy
 msgid "You cannot learn any new spells from the books you have."
 msgstr "その本には学ぶべき%sがない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:1118
+#: ../src/cmd-obj.c:1128
 #, fuzzy
 msgid "That book has no spells that you can learn."
 msgstr ""
@@ -421,7 +428,7 @@ msgstr ""
 "読める本がない。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:1141
+#: ../src/cmd-obj.c:1151
 #, fuzzy
 msgid "Study which book? "
 msgstr ""
@@ -431,7 +438,7 @@ msgstr ""
 "どの本から学びますか? "
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:1161
+#: ../src/cmd-obj.c:1171
 #, c-format
 msgid "You cannot learn any %ss in that book."
 msgstr "その本には学ぶべき%sがない。"
@@ -1300,7 +1307,7 @@ msgstr "%sを殺した。"
 
 #: ../src/obj-desc.c:187
 msgid "no more "
-msgstr ""
+msgstr "もう"
 
 #: ../src/obj-desc.c:189
 #, c-format
