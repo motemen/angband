@@ -2769,15 +2769,8 @@ msgstr "普通"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:306
-#, fuzzy
 msgid "Good"
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"中善\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"良い\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"善良"
+msgstr "良い"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:311
@@ -2801,15 +2794,13 @@ msgstr "英雄的"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:339
-#, fuzzy
 msgid "Legendary"
-msgstr "伝説的[%d]"
+msgstr "伝説的"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:461
-#, fuzzy
 msgid "  Self"
-msgstr "スピード"
+msgstr " 自身"
 
 #: ../src/ui-player.c:462
 msgid " RB"
@@ -2832,9 +2823,9 @@ msgid "Normal"
 msgstr ""
 
 #: ../src/ui-player.c:670
-#, fuzzy, c-format
+#, c-format
 msgid "%d.%dx (%d)"
-msgstr "%sは%s(%d)%s"
+msgstr ""
 
 #: ../src/ui-player.c:672
 #, c-format
@@ -2848,19 +2839,17 @@ msgstr "名前"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:696
-#, fuzzy
 msgid "Race"
-msgstr "種族  :"
+msgstr "種族"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:697
-#, fuzzy
 msgid "Class"
-msgstr "職業  :"
+msgstr "職業"
 
 #: ../src/ui-player.c:698
 msgid "Title"
-msgstr ""
+msgstr "称号"
 
 #: ../src/ui-player.c:699
 msgid "HP"
@@ -2932,12 +2921,12 @@ msgstr "打撃回数"
 
 #: ../src/ui-player.c:761
 msgid "Shoot to-dam"
-msgstr ""
+msgstr "射撃補正"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:763
 msgid "Shots"
-msgstr "弾"
+msgstr "射撃"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:781
@@ -2947,23 +2936,8 @@ msgstr "魔法防御  :"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:785
-#, fuzzy
 msgid "Stealth"
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"隠密\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"隠密\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"隠密\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"隠密\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"隠密\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"超隠密\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"隠密"
+msgstr "隠密"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:789
@@ -2979,9 +2953,8 @@ msgstr "魔力消去"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:797
-#, fuzzy
 msgid "Magic Devices"
-msgstr "魔法道具  :"
+msgstr "魔法道具"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:801
@@ -2995,15 +2968,8 @@ msgstr "赤外線視力"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:812
-#, fuzzy
 msgid "Speed"
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"加速\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"加速\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"スピード"
+msgstr "スピード"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:821
@@ -3017,39 +2983,26 @@ msgstr "身長"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:823
-#, fuzzy
+msgctxt "ui-player"
 msgid "Weight"
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"  重さ\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"  重さ\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"  重さ\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"体重"
+msgstr "体重"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:824
-#, fuzzy
 msgid "Turns used:"
-msgstr "パニック・アンデッド"
+msgstr "経過ターン:"
 
 #: ../src/ui-player.c:825
 msgid "Game"
-msgstr ""
+msgstr "ゲーム"
 
-# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:826
-#, fuzzy
 msgid "Standard"
-msgstr "標準色"
+msgstr "標準"
 
-# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:827
-#, fuzzy
 msgid "Resting"
-msgstr "刺す"
+msgstr "休息"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:942
@@ -3063,17 +3016,11 @@ msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:978
-#, fuzzy
 msgid "Resistances"
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"全耐性\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"耐性"
+msgstr "耐性"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:978
-#, fuzzy
 msgid "Abilities"
 msgstr "能力"
 
@@ -3087,12 +3034,10 @@ msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:1058
-#, fuzzy
 msgid ""
 "  [Last Messages]\n"
 "\n"
 msgstr ""
-"\n"
 "  [死ぬ直前のメッセージ]\n"
 "\n"
 
@@ -3103,6 +3048,9 @@ msgid ""
 "Killed by %s.\n"
 "\n"
 msgstr ""
+"\n"
+"%sに殺された。\n"
+"\n"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:1068
@@ -3115,50 +3063,46 @@ msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:1081
-#, fuzzy
 msgid ""
 "\n"
 "\n"
 "  [Character Inventory]\n"
 "\n"
 msgstr ""
+"\n"
+"\n"
 "  [キャラクタの持ち物]\n"
 "\n"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:1094
-#, fuzzy
 msgid ""
 "\n"
 "\n"
 "  [Character Quiver]\n"
 "\n"
 msgstr ""
-"  [キャラクタの装備]\n"
+"\n"
+"\n"
+"  [キャラクタの矢筒]\n"
 "\n"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:1110
-#, fuzzy
 msgid ""
 "  [Home Inventory]\n"
 "\n"
 msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
 "  [我が家のアイテム]\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"  [ 我が家のアイテム ]\n"
+"\n"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-player.c:1132
-#, fuzzy
 msgid ""
 "  [Options]\n"
 "\n"
 msgstr ""
-"\n"
-"\n"
-"  [突然変異]\n"
+"  [オプション]\n"
 "\n"
 
 #: ../src/ui-player.c:1139

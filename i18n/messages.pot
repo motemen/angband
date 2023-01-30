@@ -2477,6 +2477,7 @@ msgid "Height"
 msgstr ""
 
 #: ../src/ui-player.c:823
+msgctxt "ui-player"
 msgid "Weight"
 msgstr ""
 

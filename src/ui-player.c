@@ -628,7 +628,7 @@ static const char *show_title(void)
 	else if (player->total_winner || player->lev > PY_MAX_LEVEL)
 		return _("***WINNER***");
 	else
-		return player->class->title[(player->lev - 1) / 5];
+		return _GAMEDATA_C("class", player->class->title[(player->lev - 1) / 5]);
 }
 
 static const char *show_adv_exp(void)
@@ -693,8 +693,8 @@ static struct panel *get_panel_topleft(void) {
 	struct panel *p = panel_allocate(6);
 
 	panel_line(p, COLOUR_L_BLUE, _("Name"), "%s", player->full_name);
-	panel_line(p, COLOUR_L_BLUE, _("Race"),	"%s", player->race->name);
-	panel_line(p, COLOUR_L_BLUE, _("Class"), "%s", player->class->name);
+	panel_line(p, COLOUR_L_BLUE, _("Race"),	"%s", _GAMEDATA_C("p_race", player->race->name));
+	panel_line(p, COLOUR_L_BLUE, _("Class"), "%s", _GAMEDATA_C("class", player->class->name));
 	panel_line(p, COLOUR_L_BLUE, _("Title"), "%s", show_title());
 	panel_line(p, COLOUR_L_BLUE, _("HP"), "%d/%d", player->chp, player->mhp);
 	panel_line(p, COLOUR_L_BLUE, _("SP"), "%d/%d", player->csp, player->msp);
@@ -820,7 +820,7 @@ static struct panel *get_panel_misc(void) {
 
 	panel_line(p, attr, _("Age"), "%d", player->age);
 	panel_line(p, attr, _("Height"), "%d'%d\"", player->ht / 12, player->ht % 12);
-	panel_line(p, attr, _("Weight"), "%dst %dlb", player->wt / 14, player->wt % 14);
+	panel_line(p, attr, _C("ui-player", "Weight"), "%dst %dlb", player->wt / 14, player->wt % 14);
 	panel_line(p, attr, _("Turns used:"), "");
 	panel_line(p, attr, _("Game"), "%d", turn);
 	panel_line(p, attr, _("Standard"), "%d", player->total_energy / 100);
