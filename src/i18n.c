@@ -15,7 +15,7 @@ int i18n_wchar_visualwidth(wchar_t ch) {
 	return i18n_is_doublewidth(ch) ? 2 : 1;
 }
 
-int i18n_text_visualwidth(wchar_t *s) {
+int i18n_text_visualwidth(const wchar_t *s) {
 	int w = 0;
 	for (wchar_t c = *s; c; c = *++s) {
 		w += i18n_wchar_visualwidth(c);
