@@ -4163,6 +4163,15 @@ bool init_angband(void)
 
 	event_signal(EVENT_ENTER_INIT);
 
+#ifdef USE_LOCALE
+#define __THIS_LOCALE(l) #l
+#define ___THIS_LOCALE(l) __THIS_LOCALE(l)
+	setlocale(LC_ALL, ___THIS_LOCALE(USE_LOCALE));
+	bindtextdomain("messages", ANGBAND_DIR_I18N);
+	bindtextdomain("gamedata", ANGBAND_DIR_I18N);
+	textdomain("messages");
+#endif
+
 	init_game_constants();
 
 	/* Initialise modules */

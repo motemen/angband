@@ -45,15 +45,6 @@ void textui_init(void)
 {
 	uint32_t default_window_flag[ANGBAND_TERM_MAX];
 
-#ifdef USE_LOCALE
-#define __THIS_LOCALE(l) #l
-#define ___THIS_LOCALE(l) __THIS_LOCALE(l)
-	setlocale(LC_ALL, ___THIS_LOCALE(USE_LOCALE));
-	bindtextdomain("messages", ANGBAND_DIR_I18N);
-	bindtextdomain("gamedata", ANGBAND_DIR_I18N);
-	textdomain("messages");
-#endif
-
 	/* Initialize graphics info and basic pref data */
 	event_signal_message(EVENT_INITSTATUS, 0, "Loading basic pref file...");
 	(void)process_pref_file("pref.prf", false, false);
