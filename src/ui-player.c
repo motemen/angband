@@ -248,7 +248,9 @@ static void configure_char_sheet(void)
 
 			cached_config->resists_by_region[i][j].entry = entry;
 			get_ui_entry_label(entry, cached_config->res_nlabel, true, cached_config->resists_by_region[i][j].label);
-			(void) text_mbstowcs(cached_config->resists_by_region[i][j].label + 5, ":", 1);
+			wchar_t *s = cached_config->resists_by_region[i][j].label;
+			while (*s) s++;
+			(void) text_mbstowcs(s, ":", 1);
 		}
 		release_ui_entry_iterator(ui_iter);
 
@@ -596,7 +598,7 @@ static void display_panel(const struct panel *p, bool left_adj,
 		for (i = 0; i < p->len; i++) {
 			struct panel_line *pl = &p->lines[i];
 
-			int len = pl->label ? strlen(pl->label) : 0;
+			int len = pl->label ? i18n_visualwidth(pl->label) : 0;
 			if (offset < len) offset = len;
 		}
 		offset += 2;
@@ -611,7 +613,7 @@ static void display_panel(const struct panel *p, bool left_adj,
 
 		Term_putstr(col, row, strlen(pl->label), COLOUR_WHITE, pl->label);
 
-		len = strlen(pl->value);
+		len = i18n_visualwidth(pl->value);
 		len = len < w - offset ? len : w - offset - 1;
 
 		if (left_adj)

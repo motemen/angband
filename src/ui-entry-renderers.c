@@ -636,8 +636,10 @@ static void renderer_COMPACT_RESIST_RENDERER_WITH_COMBINED_AUX(
 				p.y += 1;
 			}
 		} else {
+			int n = nlabel;
+			while (label[n-1] == L'\0') n--;
 			safe_queue_chars(details->label_position.x,
-				details->label_position.y, nlabel,
+				details->label_position.y, n,
 				info->label_colors[palette_index], label);
 		}
 	}
@@ -726,8 +728,10 @@ static void renderer_COMPACT_FLAG_RENDERER_WITH_COMBINED_AUX(
 				p.y += 1;
 			}
 		} else {
+			int n = nlabel;
+			while (label[n-1] == L'\0') n--;
 			safe_queue_chars(details->label_position.x,
-				details->label_position.y, nlabel,
+				details->label_position.y, n,
 				info->label_colors[palette_index], label);
 		}
 	}
@@ -851,8 +855,10 @@ static void renderer_COMPACT_FLAG_WITH_CANCEL_RENDERER_WITH_COMBINED_AUX(
 				p.y += 1;
 			}
 		} else {
+			int n = nlabel;
+			while (label[n-1] == L'\0') n--;
 			safe_queue_chars(details->label_position.x,
-				details->label_position.y, nlabel,
+				details->label_position.y, n,
 				info->label_colors[palette_index], label);
 		}
 	}
@@ -958,8 +964,10 @@ static void renderer_NUMERIC_AS_SIGN_RENDERER_WITH_COMBINED_AUX(
 				p.y += 1;
 			}
 		} else {
+			int n = nlabel;
+			while (label[n-1] == L'\0') n--;
 			safe_queue_chars(details->label_position.x,
-				details->label_position.y, nlabel,
+				details->label_position.y, n,
 				info->label_colors[palette_index], label);
 		}
 	}

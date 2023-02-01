@@ -323,14 +323,14 @@ void get_ui_entry_label(const struct ui_entry *entry, int length,
 		int i;
 
 		if (pad_left) {
-			for (i = 0; i < length - 1 - n; ++i) {
+			for (i = 0; i < length - 1 - i18n_text_visualwidth(src); ++i) {
 				label[i] = spc[0];
 			}
-			(void) memcpy(label + length - 1 - n, src,
+			(void) memcpy(label + length - 1 - i18n_text_visualwidth(src), src,
 				n * sizeof(*label));
 		} else {
 			(void) memcpy(label, src, n * sizeof(*label));
-			for (i = n; i < length - 1; ++i) {
+			for (i = n; i < length - 1 - i18n_text_visualwidth(src); ++i) {
 				label[i] = spc[0];
 			}
 		}
@@ -338,6 +338,14 @@ void get_ui_entry_label(const struct ui_entry *entry, int length,
 		(void) memcpy(label, src, (length - 1) * sizeof(*label));
 	}
 	label[length - 1] = spc[1];
+	int w = 0;
+	for (int i = 0; i < length - 1; i++) {
+		if (i18n_is_doublewidth(label[i])) 
+			w++;
+	}
+	for (; w >=0; w--) {
+		label[length - 1 - w] = spc[1];
+	}
 }
 
 
@@ -2045,7 +2053,7 @@ static enum parser_error parse_entry_label(struct parser *p)
 	mem_free(embryo->entry->label);
 	embryo->entry->label = mem_alloc((MAX_ENTRY_LABEL + 1) *
 		sizeof(*embryo->entry->label));
-	nw = text_mbstowcs(embryo->entry->label, name, MAX_ENTRY_LABEL);
+	nw = text_mbstowcs(embryo->entry->label, _GAMEDATA_C("ui_entry", name), MAX_ENTRY_LABEL);
 	if (nw != (size_t)-1) {
 		/* Ensure null termination. */
 		size_t nw2 = text_mbstowcs(embryo->entry->label + nw, "", 1);
@@ -2082,7 +2090,7 @@ static enum parser_error parse_entry_shortened_label(struct parser *p)
 		++n;
 	}
 	name = parser_getstr(p, format("label%d", n));
-	nw = text_mbstowcs(embryo->entry->shortened_labels[n - 1], name, n);
+	nw = text_mbstowcs(embryo->entry->shortened_labels[n - 1], _GAMEDATA_C("ui_entry", name), n);
 	if (nw != (size_t) -1) {
 		/* Ensure null termination. */
 		size_t nw2 = text_mbstowcs(
