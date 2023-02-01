@@ -19821,3 +19821,532 @@ msgstr ""
 msgctxt "trap"
 msgid "A trap that stuns you and gives you stoneskin."
 msgstr ""
+
+#: ../lib/gamedata/ui_entry.txt:82
+msgctxt "ui_entry"
+msgid ""
+"Generic UI entry for compact display of modifier and sustain information for "
+"one of the core statistics.  Given that this is linked to other entries that "
+"are hardcoded, the priority should be negative_index and this should be the "
+"only thing with stat_modifiers and CHAR_SCREEN1 as categories."
+msgstr ""
+
+#: ../lib/gamedata/ui_entry.txt:95
+msgctxt "ui_entry"
+msgid ""
+"Generic UI entry for compact display of a resistance flag with the label "
+"colored by the combined resistance across several sources.  It is used for "
+"rows in the second character screen's display of resistances.  "
+"Specializations below set the label and categories for particular screens."
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:100
+msgctxt "ui_entry"
+msgid "Acid"
+msgstr "酸"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:105
+msgctxt "ui_entry"
+msgid "Elec"
+msgstr "電撃"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:110
+msgctxt "ui_entry"
+msgid "Fire"
+msgstr "火炎"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:115
+msgctxt "ui_entry"
+msgid "Cold"
+msgstr "冷気"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:120
+msgctxt "ui_entry"
+msgid "Poison"
+msgstr "毒"
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:121
+msgctxt "ui_entry"
+msgid "Pois"
+msgstr "毒"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:126
+msgctxt "ui_entry"
+msgid "Light"
+msgstr "閃光"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:131
+msgctxt "ui_entry"
+msgid "Dark"
+msgstr "暗黒"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:136
+msgctxt "ui_entry"
+msgid "Sound"
+msgstr "轟音"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:141
+msgctxt "ui_entry"
+msgid "Shard"
+msgstr "破片"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:146
+msgctxt "ui_entry"
+msgid "Nexus"
+msgstr "因混"
+
+# label2
+#: ../lib/gamedata/ui_entry.txt:147
+msgctxt "ui_entry"
+msgid "Nx"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:152
+msgctxt "ui_entry"
+msgid "Nether"
+msgstr "地獄"
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:153
+msgctxt "ui_entry"
+msgid "Nethr"
+msgstr "地獄"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:158
+msgctxt "ui_entry"
+msgid "Chaos"
+msgstr "混沌"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:163
+msgctxt "ui_entry"
+msgid "Disenchant"
+msgstr "劣化"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:171
+msgctxt "ui_entry"
+msgid "Fear resistance"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:172
+msgctxt "ui_entry"
+msgid "pFear"
+msgstr "耐恐"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:177
+msgctxt "ui_entry"
+msgid "Blindess resistance"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:178
+msgctxt "ui_entry"
+msgid "pBlnd"
+msgstr "耐盲"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:183
+msgctxt "ui_entry"
+msgid "Confusion resistance"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:184
+msgctxt "ui_entry"
+msgid "pConf"
+msgstr "耐乱"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:189
+msgctxt "ui_entry"
+msgid "Stun resistance"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:190
+msgctxt "ui_entry"
+msgid "pStun"
+msgstr "耐朦"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:195
+msgctxt "ui_entry"
+msgid "Hold life"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:196
+msgctxt "ui_entry"
+msgid "HLife"
+msgstr "生命"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:201
+msgctxt "ui_entry"
+msgid "Regeneration"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:206
+msgctxt "ui_entry"
+msgid "ESP"
+msgstr "テレ"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:211
+msgctxt "ui_entry"
+msgid "See invisible"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:212
+msgctxt "ui_entry"
+msgid "S.Inv"
+msgstr "透明"
+
+# label2
+#: ../lib/gamedata/ui_entry.txt:213
+msgctxt "ui_entry"
+msgid "SI"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:218
+msgctxt "ui_entry"
+msgid "Free action"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:219
+msgctxt "ui_entry"
+msgid "FrAct"
+msgstr "耐痺"
+
+# label2
+#: ../lib/gamedata/ui_entry.txt:220
+msgctxt "ui_entry"
+msgid "FA"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:225
+msgctxt "ui_entry"
+msgid "Feather falling"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:226
+msgctxt "ui_entry"
+msgid "Feath"
+msgstr "浮遊"
+
+# label2
+#: ../lib/gamedata/ui_entry.txt:227
+msgctxt "ui_entry"
+msgid "Ft"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:232
+msgctxt "ui_entry"
+msgid "Slow digestion"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:233
+msgctxt "ui_entry"
+msgid "S.Dig"
+msgstr "遅消"
+
+# label2
+#: ../lib/gamedata/ui_entry.txt:234
+msgctxt "ui_entry"
+msgid "SD"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:239
+msgctxt "ui_entry"
+msgid "Trap immunity"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:240
+#, fuzzy
+msgctxt "ui_entry"
+msgid "TrpIm"
+msgstr "罠無"
+
+# label2
+#: ../lib/gamedata/ui_entry.txt:241
+msgctxt "ui_entry"
+msgid "TI"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:246
+msgctxt "ui_entry"
+msgid "Bless"
+msgstr "祝福"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:253
+msgctxt "ui_entry"
+msgid "Impaired HP recovery"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:254
+msgctxt "ui_entry"
+msgid "ImpHP"
+msgstr ""
+
+# label2
+#: ../lib/gamedata/ui_entry.txt:255
+msgctxt "ui_entry"
+msgid "IH"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:260
+msgctxt "ui_entry"
+msgid "Impaired mana recovery"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:261
+msgctxt "ui_entry"
+msgid "ImpSP"
+msgstr ""
+
+# label2
+#: ../lib/gamedata/ui_entry.txt:262
+msgctxt "ui_entry"
+msgid "IS"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:267
+msgctxt "ui_entry"
+msgid "Fear"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:272
+msgctxt "ui_entry"
+msgid "Aggravate"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:273
+msgctxt "ui_entry"
+msgid "Aggrv"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:278
+msgctxt "ui_entry"
+msgid "No teleportation"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:279
+msgctxt "ui_entry"
+msgid "NoTel"
+msgstr ""
+
+# label2
+#: ../lib/gamedata/ui_entry.txt:280
+msgctxt "ui_entry"
+msgid "NT"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:285
+msgctxt "ui_entry"
+msgid "Drain experience"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:286
+msgctxt "ui_entry"
+msgid "DrExp"
+msgstr ""
+
+# label2
+#: ../lib/gamedata/ui_entry.txt:287
+msgctxt "ui_entry"
+msgid "DE"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:292
+msgctxt "ui_entry"
+msgid "Sticky curse"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:293
+msgctxt "ui_entry"
+msgid "Stick"
+msgstr ""
+
+# label2
+#: ../lib/gamedata/ui_entry.txt:294
+msgctxt "ui_entry"
+msgid "Sy"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:299
+msgctxt "ui_entry"
+msgid "Fragile"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:300
+msgctxt "ui_entry"
+msgid "Fragl"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:307
+msgctxt "ui_entry"
+msgid "Stealth"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:308
+msgctxt "ui_entry"
+msgid "Stea."
+msgstr "隠密"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:313
+msgctxt "ui_entry"
+msgid "Search"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:314
+msgctxt "ui_entry"
+msgid "Sear."
+msgstr "探索"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:319
+msgctxt "ui_entry"
+msgid "Infravision"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:324
+msgctxt "ui_entry"
+msgid "Tunneling"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:325
+msgctxt "ui_entry"
+msgid "Tunn."
+msgstr "掘削"
+
+# label
+#: ../lib/gamedata/ui_entry.txt:330
+msgctxt "ui_entry"
+msgid "Speed"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:335
+msgctxt "ui_entry"
+msgid "Attack speed"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:336
+msgctxt "ui_entry"
+msgid "Blows"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:341
+msgctxt "ui_entry"
+msgid "Shooting speed"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:342
+msgctxt "ui_entry"
+msgid "Shots"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:347
+msgctxt "ui_entry"
+msgid "Shooting power"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:348
+msgctxt "ui_entry"
+msgid "Might"
+msgstr ""
+
+# label2
+#: ../lib/gamedata/ui_entry.txt:354
+msgctxt "ui_entry"
+msgid "Lt"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:359
+msgctxt "ui_entry"
+msgid "Damage reduction"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:360
+msgctxt "ui_entry"
+msgid "D.Red"
+msgstr ""
+
+# label2
+#: ../lib/gamedata/ui_entry.txt:361
+msgctxt "ui_entry"
+msgid "DR"
+msgstr ""
+
+# label
+#: ../lib/gamedata/ui_entry.txt:366
+msgctxt "ui_entry"
+msgid "Movement speed"
+msgstr ""
+
+# label5
+#: ../lib/gamedata/ui_entry.txt:367
+msgctxt "ui_entry"
+msgid "Moves"
+msgstr ""
+
+# label2
+#: ../lib/gamedata/ui_entry.txt:368
+msgctxt "ui_entry"
+msgid "MS"
+msgstr ""

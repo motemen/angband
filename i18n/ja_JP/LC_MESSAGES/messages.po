@@ -1466,7 +1466,7 @@ msgid ""
 msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/obj-pile.c:115 ../src/ui-player.c:1181
+#: ../src/obj-pile.c:115 ../src/ui-player.c:1184
 #, fuzzy, c-format
 msgid "Failed to create file %s.new"
 msgstr "一時ファイル %s を作成できませんでした。"
@@ -1846,12 +1846,12 @@ msgid "Con: "
 msgstr "耐久x"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-display.c:188 ../src/ui-player.c:627
+#: ../src/ui-display.c:188 ../src/ui-player.c:630
 msgid "[=-WIZARD-=]"
 msgstr "[ウィザード]"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-display.c:190 ../src/ui-player.c:629
+#: ../src/ui-display.c:190 ../src/ui-player.c:632
 msgid "***WINNER***"
 msgstr "***勝利者***"
 
@@ -1906,11 +1906,11 @@ msgstr "加速"
 msgid "Slow"
 msgstr "減速"
 
-#: ../src/ui-display.c:522 ../src/ui-player.c:652
+#: ../src/ui-display.c:522 ../src/ui-player.c:655
 msgid "Town"
 msgstr "街"
 
-#: ../src/ui-display.c:524 ../src/ui-player.c:654
+#: ../src/ui-display.c:524 ../src/ui-player.c:657
 #, c-format
 msgid "%d' (L%d)"
 msgstr "%d' (%d階)"
@@ -2748,264 +2748,263 @@ msgid "Options Menu"
 msgstr "設定メニュー"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:280
+#: ../src/ui-player.c:283
 msgid "Very Bad"
 msgstr "最低"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:290
+#: ../src/ui-player.c:293
 msgid "Bad"
 msgstr "悪い"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:295
+#: ../src/ui-player.c:298
 msgid "Poor"
 msgstr "劣る"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:301
+#: ../src/ui-player.c:304
 msgid "Fair"
 msgstr "普通"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:306
+#: ../src/ui-player.c:309
 msgid "Good"
 msgstr "良い"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:311
+#: ../src/ui-player.c:314
 msgid "Very Good"
 msgstr "大変良い"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:317
+#: ../src/ui-player.c:320
 msgid "Excellent"
 msgstr "卓越"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:326
+#: ../src/ui-player.c:329
 msgid "Superb"
 msgstr "超越"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:334
+#: ../src/ui-player.c:337
 msgid "Heroic"
 msgstr "英雄的"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:339
+#: ../src/ui-player.c:342
 msgid "Legendary"
 msgstr "伝説的"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:461
+#: ../src/ui-player.c:464
 msgid "  Self"
 msgstr " 自身"
 
-#: ../src/ui-player.c:462
+#: ../src/ui-player.c:465
 msgid " RB"
 msgstr ""
 
-#: ../src/ui-player.c:463
+#: ../src/ui-player.c:466
 msgid " CB"
 msgstr ""
 
-#: ../src/ui-player.c:464
+#: ../src/ui-player.c:467
 msgid " EB"
 msgstr ""
 
-#: ../src/ui-player.c:465
+#: ../src/ui-player.c:468
 msgid "  Best"
 msgstr ""
 
-#: ../src/ui-player.c:665
+#: ../src/ui-player.c:668
 msgid "Normal"
 msgstr ""
 
-#: ../src/ui-player.c:670
+#: ../src/ui-player.c:673
 #, c-format
 msgid "%d.%dx (%d)"
 msgstr ""
 
-#: ../src/ui-player.c:672
+#: ../src/ui-player.c:675
 #, c-format
 msgid "%d (%d.%dx)"
 msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:695
+#: ../src/ui-player.c:698
 msgid "Name"
 msgstr "名前"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:696
+#: ../src/ui-player.c:699
 msgid "Race"
 msgstr "種族"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:697
+#: ../src/ui-player.c:700
 msgid "Class"
 msgstr "職業"
 
-#: ../src/ui-player.c:698
+#: ../src/ui-player.c:701
 msgid "Title"
 msgstr "称号"
 
-#: ../src/ui-player.c:699
+#: ../src/ui-player.c:702
 msgid "HP"
 msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:700
+#: ../src/ui-player.c:703
 msgid "SP"
 msgstr "MP"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:711
+#: ../src/ui-player.c:714
 msgid "Level"
 msgstr "レベル"
 
-#: ../src/ui-player.c:713
+#: ../src/ui-player.c:716
 msgid "Cur Exp"
 msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:714
+#: ../src/ui-player.c:717
 msgid "Max Exp"
 msgstr "最大経験"
 
-#: ../src/ui-player.c:715
+#: ../src/ui-player.c:718
 msgid "Adv Exp"
 msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:717
+#: ../src/ui-player.c:720
 msgid "Gold"
 msgstr "所持金"
 
-#: ../src/ui-player.c:718
+#: ../src/ui-player.c:721
 msgid "Burden"
 msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:720
+#: ../src/ui-player.c:723
 #, fuzzy
 msgid "Overweight"
 msgstr "体重(ポンド)"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:721
+#: ../src/ui-player.c:724
 #, fuzzy
 msgid "Max Depth"
 msgstr "最大経験"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:733
+#: ../src/ui-player.c:736
 #, fuzzy
 msgid "Armor"
 msgstr "防具"
 
-#: ../src/ui-player.c:749
+#: ../src/ui-player.c:752
 msgid "Melee"
-msgstr ""
+msgstr "打撃"
 
-#: ../src/ui-player.c:750 ../src/ui-player.c:762
+#: ../src/ui-player.c:753 ../src/ui-player.c:765
 msgid "To-hit"
-msgstr ""
+msgstr "命中"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:751
-#, fuzzy
+#: ../src/ui-player.c:754
 msgid "Blows"
 msgstr "打撃回数"
 
-#: ../src/ui-player.c:761
+#: ../src/ui-player.c:764
 msgid "Shoot to-dam"
 msgstr "射撃補正"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:763
+#: ../src/ui-player.c:766
 msgid "Shots"
 msgstr "射撃"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:781
+#: ../src/ui-player.c:784
 #, fuzzy
 msgid "Saving Throw"
 msgstr "魔法防御  :"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:785
+#: ../src/ui-player.c:788
 msgid "Stealth"
 msgstr "隠密"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:789
+#: ../src/ui-player.c:792
 #, fuzzy
 msgid "Disarm - phys."
 msgstr "トラップ解除(D)"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:793
+#: ../src/ui-player.c:796
 #, fuzzy
 msgid "Disarm - magic"
 msgstr "魔力消去"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:797
+#: ../src/ui-player.c:800
 msgid "Magic Devices"
 msgstr "魔法道具"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:801
+#: ../src/ui-player.c:804
 msgid "Searching"
 msgstr "探索"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:804
+#: ../src/ui-player.c:807
 msgid "Infravision"
 msgstr "赤外線視力"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:812
+#: ../src/ui-player.c:815
 msgid "Speed"
 msgstr "スピード"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:821
+#: ../src/ui-player.c:824
 msgid "Age"
 msgstr "年齢"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:822
+#: ../src/ui-player.c:825
 msgid "Height"
 msgstr "身長"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:823
+#: ../src/ui-player.c:826
 msgctxt "ui-player"
 msgid "Weight"
 msgstr "体重"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:824
+#: ../src/ui-player.c:827
 msgid "Turns used:"
 msgstr "経過ターン:"
 
-#: ../src/ui-player.c:825
+#: ../src/ui-player.c:828
 msgid "Game"
 msgstr "ゲーム"
 
-#: ../src/ui-player.c:826
+#: ../src/ui-player.c:829
 msgid "Standard"
 msgstr "標準"
 
-#: ../src/ui-player.c:827
+#: ../src/ui-player.c:830
 msgid "Resting"
 msgstr "休息"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:942
+#: ../src/ui-player.c:945
 #, c-format
 msgid ""
 "  [%s Character Dump]\n"
@@ -3015,25 +3014,25 @@ msgstr ""
 "\n"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:978
+#: ../src/ui-player.c:981
 msgid "Resistances"
 msgstr "耐性"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:978
+#: ../src/ui-player.c:981
 msgid "Abilities"
 msgstr "能力"
 
-#: ../src/ui-player.c:1016
+#: ../src/ui-player.c:1019
 msgid "Hindrances"
 msgstr ""
 
-#: ../src/ui-player.c:1016
+#: ../src/ui-player.c:1019
 msgid "Modifiers"
 msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:1058
+#: ../src/ui-player.c:1061
 msgid ""
 "  [Last Messages]\n"
 "\n"
@@ -3041,7 +3040,7 @@ msgstr ""
 "  [死ぬ直前のメッセージ]\n"
 "\n"
 
-#: ../src/ui-player.c:1063
+#: ../src/ui-player.c:1066
 #, c-format
 msgid ""
 "\n"
@@ -3053,7 +3052,7 @@ msgstr ""
 "\n"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:1068
+#: ../src/ui-player.c:1071
 msgid ""
 "  [Character Equipment]\n"
 "\n"
@@ -3062,7 +3061,7 @@ msgstr ""
 "\n"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:1081
+#: ../src/ui-player.c:1084
 msgid ""
 "\n"
 "\n"
@@ -3075,7 +3074,7 @@ msgstr ""
 "\n"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:1094
+#: ../src/ui-player.c:1097
 msgid ""
 "\n"
 "\n"
@@ -3088,7 +3087,7 @@ msgstr ""
 "\n"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:1110
+#: ../src/ui-player.c:1113
 msgid ""
 "  [Home Inventory]\n"
 "\n"
@@ -3097,7 +3096,7 @@ msgstr ""
 "\n"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:1132
+#: ../src/ui-player.c:1135
 msgid ""
 "  [Options]\n"
 "\n"
@@ -3105,50 +3104,50 @@ msgstr ""
 "  [オプション]\n"
 "\n"
 
-#: ../src/ui-player.c:1139
+#: ../src/ui-player.c:1142
 #, fuzzy
 msgid "User interface"
 msgstr "インタフェース"
 
-#: ../src/ui-player.c:1140
+#: ../src/ui-player.c:1143
 #, fuzzy
 msgid "Birth"
 msgstr "誕生"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:1150
+#: ../src/ui-player.c:1153
 msgid "yes"
 msgstr "はい  "
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:1150
+#: ../src/ui-player.c:1153
 msgid "no "
 msgstr "いいえ"
 
-#: ../src/ui-player.c:1163
+#: ../src/ui-player.c:1166
 msgid ""
 "  [Randart seed]\n"
 "\n"
 msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:1206
+#: ../src/ui-player.c:1209
 msgid "['c' to change name, 'f' to file, 'h' to change mode, or ESC]"
 msgstr "['c'で名前変更, 'f'でファイルへ書出, 'h'でモード変更, ESCで終了]"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:1227
+#: ../src/ui-player.c:1230
 #, fuzzy
 msgid "You are not allowed to change your name!"
 msgstr "精神を集中して気合いを溜めた。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:1250
+#: ../src/ui-player.c:1253
 msgid "Character dump successful."
 msgstr "キャラクタ情報のファイルへの書き出しに成功しました。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:1252
+#: ../src/ui-player.c:1255
 msgid "Character dump failed!"
 msgstr "キャラクタ情報のファイルへの書き出しに失敗しました！"
 
