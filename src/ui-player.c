@@ -958,6 +958,9 @@ void write_character_dump(ang_file *fff)
 			n = text_wctomb(p, c);
 			if (n > 0) {
 				p += n;
+				if (i18n_is_doublewidth(c)) {
+					x++;
+				}
 			} else {
 				*p++ = ' ';
 			}
@@ -996,6 +999,9 @@ void write_character_dump(ang_file *fff)
 			n = text_wctomb(p, c);
 			if (n > 0) {
 				p += n;
+				if (i18n_is_doublewidth(c)) {
+					x++;
+				}
 			} else {
 				*p++ = ' ';
 			}
@@ -1034,6 +1040,9 @@ void write_character_dump(ang_file *fff)
 			n = text_wctomb(p, c);
 			if (n > 0) {
 				p += n;
+				if (i18n_is_doublewidth(c)) {
+					x++;
+				}
 			} else {
 				*p++ = ' ';
 			}
@@ -1147,8 +1156,10 @@ void write_character_dump(ang_file *fff)
 		for (opt = 0; opt < OPT_MAX; opt++) {
 			if (option_type(opt) != i) continue;
 
-			file_putf(fff, "%-45s: %s (%s)\n",
-			        option_desc(opt),
+			const char *desc = option_desc(opt);
+			file_putf(fff, "%-*s: %s (%s)\n",
+			        (int)(45-(i18n_visualwidth(desc)-strlen(desc))),
+			        desc,
 			        player->opts.opt[opt] ? _("yes") : _("no "),
 			        option_name(opt));
 		}
