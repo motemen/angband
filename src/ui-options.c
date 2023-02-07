@@ -124,7 +124,7 @@ static void option_toggle_display(struct menu *m, int oid, bool cursor,
 
 	const char *desc = option_desc(oid);
 	c_prt(attr, format("%-*s: %s  (%s)", (int)(45-(i18n_visualwidth(desc)-strlen(desc))), desc,
-			options[oid] ? "yes" : "no ", option_name(oid)), row, col);
+			options[oid] ? _("yes") : _("no "), option_name(oid)), row, col);
 }
 
 /**
@@ -157,9 +157,9 @@ static bool option_toggle_handle(struct menu *m, const ui_event *event,
 
 			screen_save();
 			if (options_save_custom(&player->opts, page)) {
-				get_com("Successfully saved.  Press any key to continue.", &dummy);
+				get_com(_("Successfully saved.  Press any key to continue."), &dummy);
 			} else {
-				get_com("Save failed.  Press any key to continue.", &dummy);
+				get_com(_("Save failed.  Press any key to continue."), &dummy);
 			}
 			screen_load();
 		/*
@@ -175,7 +175,7 @@ static bool option_toggle_handle(struct menu *m, const ui_event *event,
 			} else {
 				char dummy;
 
-				get_com("Restore failed.  Press any key to continue.", &dummy);
+				get_com(_("Restore failed.  Press any key to continue."), &dummy);
 				screen_load();
 			}
 		/*
