@@ -1,0 +1,490 @@
+#: ../lib/gamedata/player_property.txt:40
+msgctxt "player_property"
+msgid "Rock"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:42
+msgctxt "player_property"
+msgid ""
+"You are made of rock."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:47
+msgctxt "player_property"
+msgid "Mushroom Lore"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:49
+msgctxt "player_property"
+msgid ""
+"You easily recognize mushrooms."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:52
+msgctxt "player_property"
+msgid "Device Lore"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:54
+msgctxt "player_property"
+msgid ""
+"You easily recognize magic devices."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:57
+msgctxt "player_property"
+msgid "Miner"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:59
+msgctxt "player_property"
+msgid ""
+"You can sense ore in the walls."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:65
+msgctxt "player_property"
+msgid "Extra Shots"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:67
+msgctxt "player_property"
+msgid ""
+"Your shooting speed improves with tension bows every 10 levels."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:71
+msgctxt "player_property"
+msgid "Relentless [30]"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:73
+msgctxt "player_property"
+msgid ""
+"You become immune to fear at level 30."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:76
+msgctxt "player_property"
+msgid "Blessed Fighter"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:78
+msgctxt "player_property"
+msgid ""
+"You get improved melee with blessed or hafted weapons."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:81
+msgctxt "player_property"
+msgid "Full Spellcaster"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:83
+msgctxt "player_property"
+msgid ""
+"You may obtain a perfect success rate with magic."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:86
+msgctxt "player_property"
+msgid "Extra Spell Beaming"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:88
+msgctxt "player_property"
+msgid ""
+"Your bolt spells frequently turn into beams."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:91
+msgctxt "player_property"
+msgid "Spell Choice"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:93
+msgctxt "player_property"
+msgid ""
+"You may choose your own spells to study."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:96
+msgctxt "player_property"
+msgid "No Magic"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:98
+msgctxt "player_property"
+msgid ""
+"You cannot cast spells."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:101
+msgctxt "player_property"
+msgid "Charms"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:103
+msgctxt "player_property"
+msgid ""
+"You are extra persuasive to monsters."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:107
+msgctxt "player_property"
+msgid "Unlight"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:109
+msgctxt "player_property"
+msgid ""
+"You gain stealth in, can see in, and resist the dark."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:112
+msgctxt "player_property"
+msgid "Pickpocketing"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:114
+msgctxt "player_property"
+msgid ""
+"You can steal from monsters."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:117
+msgctxt "player_property"
+msgid "Shield Bash"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:119
+msgctxt "player_property"
+msgid ""
+"You can bash monsters with a shield in melee."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:123
+msgctxt "player_property"
+msgid "Evil"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:125
+msgctxt "player_property"
+msgid ""
+"You resist nether, but are hurt by holy attacks."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:129
+msgctxt "player_property"
+msgid "Combat Regeneration"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:137
+msgctxt "player_property"
+msgid ""
+"You draw power from the thrill of combat, represented by"
+" Spell Points (SP).  You gain SP when damaged by an enemy or"
+" when you attack in melee.  As your blood cools your power fades;"
+" you lose SP at half the rate other classes gain them."
+"  When you spend SP by casting a spell you regain some health, and"
+" fading SP replenish your health more efficiently.  The more damaged"
+" you are, the bigger these health gains will be."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:144
+msgctxt "player_property"
+msgid "Sustain Strength"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:146
+msgctxt "player_property"
+msgid ""
+"Your strength is sustained."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:150
+msgctxt "player_property"
+msgid "Sustain Intelligence"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:152
+msgctxt "player_property"
+msgid ""
+"Your intelligence is sustained."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:156
+msgctxt "player_property"
+msgid "Sustain Wisdom"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:158
+msgctxt "player_property"
+msgid ""
+"Your wisdom is sustained."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:162
+msgctxt "player_property"
+msgid "Sustain Dexterity"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:164
+msgctxt "player_property"
+msgid ""
+"Your dexterity is sustained."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:168
+msgctxt "player_property"
+msgid "Sustain Constitution"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:170
+msgctxt "player_property"
+msgid ""
+"Your constitution is sustained."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:174
+msgctxt "player_property"
+msgid "Fear Immunity"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:176
+msgctxt "player_property"
+msgid ""
+"You are immune to fear."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:180
+msgctxt "player_property"
+msgid "Blindness Immunity"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:182
+msgctxt "player_property"
+msgid ""
+"You cannot be blinded."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:186
+msgctxt "player_property"
+msgid "Confusion Immunity"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:188
+msgctxt "player_property"
+msgid ""
+"You cannot be confused."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:192
+msgctxt "player_property"
+msgid "Stun Immunity"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:194
+msgctxt "player_property"
+msgid ""
+"You cannot be stunned."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:198
+msgctxt "player_property"
+msgid "Slow Digestion"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:200
+msgctxt "player_property"
+msgid ""
+"You have slow metabolism."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:204
+msgctxt "player_property"
+msgid "Feather Falling"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:206
+msgctxt "player_property"
+msgid ""
+"You fall lightly."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:210
+msgctxt "player_property"
+msgid "Regeneration"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:212
+msgctxt "player_property"
+msgid ""
+"You regenerate quickly."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:216
+msgctxt "player_property"
+msgid "Telepathy"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:218
+msgctxt "player_property"
+msgid ""
+"You have telepathy."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:222
+msgctxt "player_property"
+msgid "See Invisible"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:224
+msgctxt "player_property"
+msgid ""
+"You can see invisible creatures."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:228
+msgctxt "player_property"
+msgid "Free Action"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:230
+msgctxt "player_property"
+msgid ""
+"You are immune to paralysis."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:234
+msgctxt "player_property"
+msgid "Hold Life"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:236
+msgctxt "player_property"
+msgid ""
+"Your life force is sustained."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:239
+msgctxt "player_property"
+msgid "Earthquakes"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:241
+msgctxt "player_property"
+msgid ""
+"You sometimes create earthquakes on impact."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:245
+msgctxt "player_property"
+msgid "Slow Regeneration"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:247
+msgctxt "player_property"
+msgid ""
+"Your hitpoint recovery is impaired."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:251
+msgctxt "player_property"
+msgid "Slow Mana Regeneration"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:253
+msgctxt "player_property"
+msgid ""
+"Your mana recovery is impaired."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:257
+msgctxt "player_property"
+msgid "Constant Fear"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:259
+msgctxt "player_property"
+msgid ""
+"You are afraid of melee, and bad at shooting and casting spells."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:263
+msgctxt "player_property"
+msgid "Teleport Ban"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:265
+msgctxt "player_property"
+msgid ""
+"You cannot teleport."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:269
+msgctxt "player_property"
+msgid "Aggravate"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:271
+msgctxt "player_property"
+msgid ""
+"You aggravate creatures nearby."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:275
+msgctxt "player_property"
+msgid "Experience Drain"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:277
+msgctxt "player_property"
+msgid ""
+"Your experience constantly drains away."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:281
+msgctxt "player_property"
+msgid "Trap Immune"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:283
+msgctxt "player_property"
+msgid ""
+"You are immune to traps."
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:288
+msgctxt "player_property"
+msgid "Resistance"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:290
+msgctxt "player_property"
+msgid ""
+"You resist"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:294
+msgctxt "player_property"
+msgid "Immunity"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:296
+msgctxt "player_property"
+msgid ""
+"You are immune to"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:300
+msgctxt "player_property"
+msgid "Vulnerability"
+msgstr ""
+
+#: ../lib/gamedata/player_property.txt:302
+msgctxt "player_property"
+msgid ""
+"You are vulnerable to"
+msgstr ""
+

@@ -18,7 +18,8 @@ GAMEDATA_POTS = \
 		_gamedata-player_timed.pot \
 		_gamedata-pain.pot \
 		_gamedata-trap.pot \
-		_gamedata-ui_entry.pot
+		_gamedata-ui_entry.pot \
+		_gamedata-player_property.pot
 
 .PHONY: all
 all: all-pots $(LOCALE)/LC_MESSAGES/messages.mo $(LOCALE)/LC_MESSAGES/gamedata.mo
