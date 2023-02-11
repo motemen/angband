@@ -953,7 +953,7 @@ msgstr ""
 msgid "%s can "
 msgstr ""
 
-#: ../src/mon-lore.c:1733
+#: ../src/mon-lore.c:1733 ../src/ui-birth.c:357
 msgid ", "
 msgstr ""
 
@@ -1498,16 +1498,95 @@ msgstr ""
 msgid "You have no ammunition in the quiver to fire."
 msgstr ""
 
-#: ../src/ui-birth.c:564
+#: ../src/ui-birth.c:225
+#, c-format
+msgid "Hit/Shoot/Throw: %+d/%+d/%+d\n"
+msgstr ""
+
+#: ../src/ui-birth.c:227
+#, c-format
+msgid "Hit die: %2d   XP mod: %d%%\n"
+msgstr ""
+
+#: ../src/ui-birth.c:228
+#, c-format
+msgid "Disarm: %+3d/%+3d   Devices: %+3d\n"
+msgstr ""
+
+#: ../src/ui-birth.c:230
+#, c-format
+msgid "Save:   %+3d   Stealth: %+3d\n"
+msgstr ""
+
+#: ../src/ui-birth.c:233
+#, c-format
+msgid "Infravision:  %d ft\n"
+msgstr ""
+
+#: ../src/ui-birth.c:234
+#, c-format
+msgid "Digging:      %+d\n"
+msgstr ""
+
+#: ../src/ui-birth.c:235
+#, c-format
+msgid "Search:       %+d"
+msgstr ""
+
+#: ../src/ui-birth.c:359
+msgid " and "
+msgstr ""
+
+#: ../src/ui-birth.c:367
+#, c-format
+msgid ""
+"\n"
+"Learns %s magic"
+msgstr ""
+
+#: ../src/ui-birth.c:434
+msgid "Show birth options"
+msgstr ""
+
+#: ../src/ui-birth.c:437
+msgid "Select one at random"
+msgstr ""
+
+#: ../src/ui-birth.c:440
+msgid "Finish with random choices"
+msgstr ""
+
+#: ../src/ui-birth.c:442 ../src/ui-birth.c:961 ../src/ui-birth.c:1236
+msgid "Quit"
+msgstr ""
+
+#: ../src/ui-birth.c:443 ../src/ui-birth.c:963
+msgid "Help"
+msgstr ""
+
+#: ../src/ui-birth.c:548
+msgid "Point-based"
+msgstr ""
+
+#: ../src/ui-birth.c:549
+msgid "Standard roller"
+msgstr ""
+
+#: ../src/ui-birth.c:565
 msgid ""
 "Race affects stats and skills, and may confer resistances and abilities."
 msgstr ""
 
-#: ../src/ui-birth.c:577
+#: ../src/ui-birth.c:578
 msgid "Class affects stats, skills, and other character traits."
 msgstr ""
 
-#: ../src/ui-birth.c:623
+#: ../src/ui-birth.c:586
+msgid ""
+"Choose how to generate your intrinsic stats. Point-based is recommended."
+msgstr ""
+
+#: ../src/ui-birth.c:624
 msgid ""
 "{light blue}Please select your character traits from the menus below:{/}\n"
 "\n"
@@ -1517,6 +1596,74 @@ msgid ""
 "selections, '{light green}ESC{/}' to step back through the birth process, "
 "'{light green}={/}' for the birth options, '{light green}?{/}' for help, or "
 "'{light green}Ctrl-X{/}' to quit."
+msgstr ""
+
+#: ../src/ui-birth.c:721
+msgid ""
+"Likely bug:  could not generate a random name that was not in use for a "
+"savefile"
+msgstr ""
+
+#: ../src/ui-birth.c:897
+msgid "['r' to reroll"
+msgstr ""
+
+#: ../src/ui-birth.c:899
+msgid ", 'p' for previous roll"
+msgstr ""
+
+#: ../src/ui-birth.c:900
+msgid " or 'Enter' to accept]"
+msgstr ""
+
+#: ../src/ui-birth.c:953
+msgid "Reroll"
+msgstr ""
+
+#: ../src/ui-birth.c:956
+msgid "Retrieve previous"
+msgstr ""
+
+#: ../src/ui-birth.c:959 ../src/ui-birth.c:1232
+msgid "Accept"
+msgstr ""
+
+#: ../src/ui-birth.c:1067
+msgid "Cost"
+msgstr ""
+
+#: ../src/ui-birth.c:1083
+#, c-format
+msgid "Total Cost: %2d/%2d"
+msgstr ""
+
+#: ../src/ui-birth.c:1089
+msgid ""
+"[up/down to move, left/right to modify, 'r' to reset, 'Enter' to accept]"
+msgstr ""
+
+#: ../src/ui-birth.c:1224
+msgid "Sell"
+msgstr ""
+
+#: ../src/ui-birth.c:1229
+msgid "Buy"
+msgstr ""
+
+#: ../src/ui-birth.c:1234
+msgid "Reset"
+msgstr ""
+
+#: ../src/ui-birth.c:1320
+msgid "A savefile for that name exists.  Overwrite it? "
+msgstr ""
+
+#: ../src/ui-birth.c:1536
+msgid "Accept character history? [y/n]"
+msgstr ""
+
+#: ../src/ui-birth.c:1570
+msgid "['ESC' to step back, 'S' to start over, or any other key to continue]"
 msgstr ""
 
 #: ../src/ui-display.c:101
@@ -1852,6 +1999,26 @@ msgstr ""
 msgid "Failed to save %s."
 msgstr ""
 
+#: ../src/ui-options.c:127 ../src/ui-player.c:1163
+msgid "yes"
+msgstr ""
+
+#: ../src/ui-options.c:127 ../src/ui-player.c:1163
+msgid "no "
+msgstr ""
+
+#: ../src/ui-options.c:160 ../src/ui-options.c:262
+msgid "Successfully saved.  Press any key to continue."
+msgstr ""
+
+#: ../src/ui-options.c:162 ../src/ui-options.c:265
+msgid "Save failed.  Press any key to continue."
+msgstr ""
+
+#: ../src/ui-options.c:178 ../src/ui-options.c:274
+msgid "Restore failed.  Press any key to continue."
+msgstr ""
+
 #: ../src/ui-options.c:238
 #, c-format
 msgid "Save as default %s options"
@@ -1863,18 +2030,6 @@ msgstr ""
 
 #: ../src/ui-options.c:244
 msgid "Reset to factory defaults"
-msgstr ""
-
-#: ../src/ui-options.c:262
-msgid "Successfully saved.  Press any key to continue."
-msgstr ""
-
-#: ../src/ui-options.c:265
-msgid "Save failed.  Press any key to continue."
-msgstr ""
-
-#: ../src/ui-options.c:274
-msgid "Restore failed.  Press any key to continue."
 msgstr ""
 
 #: ../src/ui-options.c:321
@@ -2574,14 +2729,6 @@ msgstr ""
 
 #: ../src/ui-player.c:1151
 msgid "Birth"
-msgstr ""
-
-#: ../src/ui-player.c:1163
-msgid "yes"
-msgstr ""
-
-#: ../src/ui-player.c:1163
-msgid "no "
 msgstr ""
 
 #: ../src/ui-player.c:1176

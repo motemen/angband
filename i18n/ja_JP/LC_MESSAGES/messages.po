@@ -1141,7 +1141,7 @@ msgid "%s can "
 msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/mon-lore.c:1733
+#: ../src/mon-lore.c:1733 ../src/ui-birth.c:357
 msgid ", "
 msgstr "、"
 
@@ -1784,16 +1784,113 @@ msgstr ""
 msgid "You have no ammunition in the quiver to fire."
 msgstr "発射されるアイテムがありません。"
 
-#: ../src/ui-birth.c:564
+#: ../src/ui-birth.c:225
+#, c-format
+msgid "Hit/Shoot/Throw: %+d/%+d/%+d\n"
+msgstr ""
+
+#: ../src/ui-birth.c:227
+#, c-format
+msgid "Hit die: %2d   XP mod: %d%%\n"
+msgstr ""
+
+#: ../src/ui-birth.c:228
+#, c-format
+msgid "Disarm: %+3d/%+3d   Devices: %+3d\n"
+msgstr ""
+
+#: ../src/ui-birth.c:230
+#, c-format
+msgid "Save:   %+3d   Stealth: %+3d\n"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-birth.c:233
+#, fuzzy, c-format
+msgid "Infravision:  %d ft\n"
+msgstr "赤外線視力:"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-birth.c:234
+#, fuzzy, c-format
+msgid "Digging:      %+d\n"
+msgstr "掘削      :"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-birth.c:235
+#, fuzzy, c-format
+msgid "Search:       %+d"
+msgstr "性別     : "
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-birth.c:359
+#, fuzzy
+msgid " and "
+msgstr "、"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-birth.c:367
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Learns %s magic"
+msgstr "反魔法"
+
+#: ../src/ui-birth.c:434
+#, fuzzy
+msgid "Show birth options"
+msgstr "チートオプション"
+
+#: ../src/ui-birth.c:437
+msgid "Select one at random"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-birth.c:440
+#, fuzzy
+msgid "Finish with random choices"
+msgstr "モンスターにランダムな効果を与える。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-birth.c:442 ../src/ui-birth.c:961 ../src/ui-birth.c:1236
+#, fuzzy
+msgid "Quit"
+msgstr "引退する(Q)"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-birth.c:443 ../src/ui-birth.c:963
+#, fuzzy
+msgid "Help"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"ヘルプ\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"ヘルプ表示"
+
+#: ../src/ui-birth.c:548
+msgid "Point-based"
+msgstr ""
+
+#: ../src/ui-birth.c:549
+#, fuzzy
+msgid "Standard roller"
+msgstr "標準"
+
+#: ../src/ui-birth.c:565
 msgid ""
 "Race affects stats and skills, and may confer resistances and abilities."
 msgstr ""
 
-#: ../src/ui-birth.c:577
+#: ../src/ui-birth.c:578
 msgid "Class affects stats, skills, and other character traits."
 msgstr ""
 
-#: ../src/ui-birth.c:623
+#: ../src/ui-birth.c:586
+msgid ""
+"Choose how to generate your intrinsic stats. Point-based is recommended."
+msgstr ""
+
+#: ../src/ui-birth.c:624
 msgid ""
 "{light blue}Please select your character traits from the menus below:{/}\n"
 "\n"
@@ -1804,6 +1901,91 @@ msgid ""
 "'{light green}={/}' for the birth options, '{light green}?{/}' for help, or "
 "'{light green}Ctrl-X{/}' to quit."
 msgstr ""
+
+#: ../src/ui-birth.c:721
+msgid ""
+"Likely bug:  could not generate a random name that was not in use for a "
+"savefile"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-birth.c:897
+#, fuzzy
+msgid "['r' to reroll"
+msgstr ", 'r'で思い出を見る"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-birth.c:899
+#, fuzzy
+msgid ", 'p' for previous roll"
+msgstr ", 'p' 前の数値"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-birth.c:900
+#, fuzzy
+msgid " or 'Enter' to accept]"
+msgstr ", Enter この数値に決定"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-birth.c:953
+#, fuzzy
+msgid "Reroll"
+msgstr "トロル"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-birth.c:956
+#, fuzzy
+msgid "Retrieve previous"
+msgstr ", 'p' 前の数値"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-birth.c:959 ../src/ui-birth.c:1232
+msgid "Accept"
+msgstr "決定する"
+
+#: ../src/ui-birth.c:1067
+msgid "Cost"
+msgstr ""
+
+#: ../src/ui-birth.c:1083
+#, c-format
+msgid "Total Cost: %2d/%2d"
+msgstr ""
+
+#: ../src/ui-birth.c:1089
+msgid ""
+"[up/down to move, left/right to modify, 'r' to reset, 'Enter' to accept]"
+msgstr ""
+
+#: ../src/ui-birth.c:1224
+msgid "Sell"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-birth.c:1229
+#, fuzzy
+msgid "Buy"
+msgstr "肉"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-birth.c:1234
+#, fuzzy
+msgid "Reset"
+msgstr "をセット"
+
+#: ../src/ui-birth.c:1320
+msgid "A savefile for that name exists.  Overwrite it? "
+msgstr ""
+
+#: ../src/ui-birth.c:1536
+msgid "Accept character history? [y/n]"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-birth.c:1570
+#, fuzzy
+msgid "['ESC' to step back, 'S' to start over, or any other key to continue]"
+msgstr "[ 'Q' 中断, 'S' 初めから, Enter ゲーム開始 ]"
 
 #: ../src/ui-display.c:101
 msgid "STR: "
@@ -2158,6 +2340,58 @@ msgstr "%sに名前をつける。"
 msgid "Failed to save %s."
 msgstr "%s を開くことができませんでした。"
 
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:127 ../src/ui-player.c:1163
+msgid "yes"
+msgstr "はい  "
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:127 ../src/ui-player.c:1163
+msgid "no "
+msgstr "いいえ"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:160 ../src/ui-options.c:262
+#, fuzzy
+msgid "Successfully saved.  Press any key to continue."
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[ 何かキーを押して下さい ]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:162 ../src/ui-options.c:265
+#, fuzzy
+msgid "Save failed.  Press any key to continue."
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[ 何かキーを押して下さい ]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/ui-options.c:178 ../src/ui-options.c:274
+#, fuzzy
+msgid "Restore failed.  Press any key to continue."
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[ 何かキーを押して下さい ]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"[何かキーを押すとゲームに戻ります]"
+
 #: ../src/ui-options.c:238
 #, c-format
 msgid "Save as default %s options"
@@ -2172,48 +2406,6 @@ msgstr ""
 #, fuzzy
 msgid "Reset to factory defaults"
 msgstr "常に以前のターゲットを指定する"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-options.c:262
-#, fuzzy
-msgid "Successfully saved.  Press any key to continue."
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"[ 何かキーを押して下さい ]\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"[何かキーを押すとゲームに戻ります]\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"[何かキーを押すとゲームに戻ります]\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"[何かキーを押すとゲームに戻ります]"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-options.c:265
-#, fuzzy
-msgid "Save failed.  Press any key to continue."
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"[ 何かキーを押して下さい ]\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"[何かキーを押すとゲームに戻ります]\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"[何かキーを押すとゲームに戻ります]\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"[何かキーを押すとゲームに戻ります]"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-options.c:274
-#, fuzzy
-msgid "Restore failed.  Press any key to continue."
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"[ 何かキーを押して下さい ]\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"[何かキーを押すとゲームに戻ります]\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"[何かキーを押すとゲームに戻ります]\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"[何かキーを押すとゲームに戻ります]"
 
 #: ../src/ui-options.c:321
 msgid "Set option (y/n/t), select with movement keys or index"
@@ -3114,16 +3306,6 @@ msgstr "インタフェース"
 msgid "Birth"
 msgstr "誕生"
 
-# From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:1163
-msgid "yes"
-msgstr "はい  "
-
-# From 変愚蛮怒 3.0.0Alpha68
-#: ../src/ui-player.c:1163
-msgid "no "
-msgstr "いいえ"
-
 #: ../src/ui-player.c:1176
 msgid ""
 "  [Randart seed]\n"
@@ -3864,15 +4046,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "全ての変更を破棄"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "Help"
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "ヘルプ\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "ヘルプ表示"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Move cursor"
 #~ msgstr "カーソル移動"
 
@@ -4535,10 +4708,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "         基本値  種族 職業 性格     合計値  最大値"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Accept"
-#~ msgstr "決定する"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "birth.txt#AutoRoller"
 #~ msgstr "jbirth.txt#AutoRoller"
 
@@ -4828,10 +4997,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "'r' 次の数値"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid ", 'p'revious"
-#~ msgstr ", 'p' 前の数値"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid ", 'h' Misc."
 #~ msgstr ", 'h' その他の情報"
 
@@ -4840,20 +5005,12 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr ", 'h' 生い立ちを表示"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid ", or Enter to accept"
-#~ msgstr ", Enter この数値に決定"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Round:"
 #~ msgstr "回数 :"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "(Hit ESC to stop)"
 #~ msgstr "(ESCで停止)"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "['Q'uit, 'S'tart over, or Enter to continue]"
-#~ msgstr "[ 'Q' 中断, 'S' 初めから, Enter ゲーム開始 ]"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "------- Started New Game -------"
@@ -7230,10 +7387,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Version info(V)"
 #~ msgstr "バージョン情報(V)"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Quit(Q)"
-#~ msgstr "引退する(Q)"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Screen dump saved."
@@ -12100,10 +12253,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "<dir>%s%s%s, ESC"
 #~ msgstr "<方向>%s%s%s, ESC"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid ", 'r' to recall"
-#~ msgstr ", 'r'で思い出を見る"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid ", ENTER to accept"
@@ -25169,10 +25318,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "ワンダー"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Fires something with random effects."
-#~ msgstr "モンスターにランダムな効果を与える。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Chaos Bolt"
 #~ msgstr "カオス・ボルト"
 
@@ -27878,10 +28023,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "オーク"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "troll"
-#~ msgstr "トロル"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "giant"
 #~ msgstr "巨人"
 
@@ -28169,10 +28310,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "regen."
 #~ msgstr "急速回復"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "anti magic"
-#~ msgstr "反魔法"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "perm. light"
@@ -29198,10 +29335,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "at Trump Tower"
 #~ msgstr "トランプタワーで"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "reset"
-#~ msgstr "をセット"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Reset to which level (%d-%d): "
@@ -32950,16 +33083,8 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "平均ダメージ"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Infravision: "
-#~ msgstr "赤外線視力:"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Name  : "
 #~ msgstr "名前  : "
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Sex      : "
-#~ msgstr "性別     : "
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Race     : "
@@ -32992,10 +33117,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Const to Adv"
 #~ msgstr "次レベル"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Digging    : "
-#~ msgstr "掘削      :"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Ts"
@@ -33407,10 +33528,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "ExMight"
 #~ msgstr "腕力強化"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Bu"
-#~ msgstr "肉"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "BuildUp"

@@ -222,17 +222,17 @@ static void skill_help(const int r_skills[], const int c_skills[], int mhp, int 
 	for (i = 0; i < SKILL_MAX ; ++i)
 		skills[i] = (r_skills ? r_skills[i] : 0 ) + (c_skills ? c_skills[i] : 0);
 
-	text_out_e("Hit/Shoot/Throw: %+d/%+d/%+d\n", skills[SKILL_TO_HIT_MELEE],
+	text_out_e(_("Hit/Shoot/Throw: %+d/%+d/%+d\n"), skills[SKILL_TO_HIT_MELEE],
 			   skills[SKILL_TO_HIT_BOW], skills[SKILL_TO_HIT_THROW]);
-	text_out_e("Hit die: %2d   XP mod: %d%%\n", mhp, exp);
-	text_out_e("Disarm: %+3d/%+3d   Devices: %+3d\n", skills[SKILL_DISARM_PHYS],
+	text_out_e(_("Hit die: %2d   XP mod: %d%%\n"), mhp, exp);
+	text_out_e(_("Disarm: %+3d/%+3d   Devices: %+3d\n"), skills[SKILL_DISARM_PHYS],
 			   skills[SKILL_DISARM_MAGIC], skills[SKILL_DEVICE]);
-	text_out_e("Save:   %+3d   Stealth: %+3d\n", skills[SKILL_SAVE],
+	text_out_e(_("Save:   %+3d   Stealth: %+3d\n"), skills[SKILL_SAVE],
 			   skills[SKILL_STEALTH]);
 	if (infra >= 0)
-		text_out_e("Infravision:  %d ft\n", infra * 10);
-	text_out_e("Digging:      %+d\n", skills[SKILL_DIGGING]);
-	text_out_e("Search:       %+d", skills[SKILL_SEARCH]);
+		text_out_e(_("Infravision:  %d ft\n"), infra * 10);
+	text_out_e(_("Digging:      %+d\n"), skills[SKILL_DIGGING]);
+	text_out_e(_("Search:       %+d"), skills[SKILL_SEARCH]);
 	if (infra < 0)
 		text_out_e("\n");
 }
@@ -260,12 +260,13 @@ static void race_help(int i, void *db, const region *l)
 		const char *name = stat_names_reduced[j];
 		int adj = r->r_adj[j];
 
-		text_out_e("%s%+3d", name, adj);
+		// FIXME[18n]: do not use stat_names_reduced, but stat_names
+		text_out_e("%s%+3d", _(name), adj);
 
 		if (j * 2 + 1 < STAT_MAX) {
 			name = stat_names_reduced[j + len];
 			adj = r->r_adj[j + len];
-			text_out_e("  %s%+3d", name, adj);
+			text_out_e("  %s%+3d", _(name), adj);
 		}
 
 		text_out("\n");
@@ -324,12 +325,12 @@ static void class_help(int i, void *db, const region *l)
 		const char *name = stat_names_reduced[j];
 		int adj = c->c_adj[j] + r->r_adj[j];
 
-		text_out_e("%s%+3d", name, adj);
+		text_out_e("%s%+3d", _(name), adj);
 
 		if (j*2 + 1 < STAT_MAX) {
 			name = stat_names_reduced[j + len];
 			adj = c->c_adj[j + len] + r->r_adj[j + len];
-			text_out_e("  %s%+3d", name, adj);
+			text_out_e("  %s%+3d", _(name), adj);
 		}
 
 		text_out("\n");
@@ -353,9 +354,9 @@ static void class_help(int i, void *db, const region *l)
 			while (realm) {
 				count--;
 				if (count) {
-					my_strcat(buf, ", ", sizeof(buf));
+					my_strcat(buf, _(", "), sizeof(buf));
 				} else {
-					my_strcat(buf, " and ", sizeof(buf));
+					my_strcat(buf, _(" and "), sizeof(buf));
 				}
 				my_strcat(buf, realm->name, sizeof(buf));
 				realm_next = realm->next;
@@ -363,7 +364,7 @@ static void class_help(int i, void *db, const region *l)
 				realm = realm_next;
 			}
 		}
-		text_out_e("\nLearns %s magic", buf);
+		text_out_e(_("\nLearns %s magic"), buf);
 	}
 
 	for (ability = player_abilities; ability; ability = ability->next) {
@@ -430,16 +431,16 @@ static bool use_context_menu_birth(struct menu *current_menu,
 	m = menu_dynamic_new();
 
 	m->selections = labels;
-	menu_dynamic_add_label(m, "Show birth options", '=',
+	menu_dynamic_add_label(m, _("Show birth options"), '=',
 		ACT_CTX_BIRTH_OPT, labels);
 	if (menu_data->allow_random) {
-		menu_dynamic_add_label(m, "Select one at random", '*',
+		menu_dynamic_add_label(m, _("Select one at random"), '*',
 			ACT_CTX_BIRTH_RAND, labels);
 	}
-	menu_dynamic_add_label(m, "Finish with random choices", '@',
+	menu_dynamic_add_label(m, _("Finish with random choices"), '@',
 		ACT_CTX_BIRTH_FINISH_RAND, labels);
-	menu_dynamic_add_label(m, "Quit", 'q', ACT_CTX_BIRTH_QUIT, labels);
-	menu_dynamic_add_label(m, "Help", '?', ACT_CTX_BIRTH_HELP, labels);
+	menu_dynamic_add_label(m, _("Quit"), 'q', ACT_CTX_BIRTH_QUIT, labels);
+	menu_dynamic_add_label(m, _("Help"), '?', ACT_CTX_BIRTH_HELP, labels);
 
 	screen_save();
 
@@ -544,8 +545,8 @@ static void setup_menus(void)
 	struct player_race *r;
 
 	const char *roller_choices[MAX_BIRTH_ROLLERS] = { 
-		"Point-based", 
-		"Standard roller" 
+		N_("Point-based"), 
+		N_("Standard roller")
 	};
 
 	struct birthmenu_data *mdata;
@@ -581,8 +582,8 @@ static void setup_menus(void)
 					NULL);
 	mdata = roller_menu.menu_data;
 	for (i = 0; i < MAX_BIRTH_ROLLERS; i++)
-		mdata->items[i] = roller_choices[i];
-	mdata->hint = "Choose how to generate your intrinsic stats. Point-based is recommended.";
+		mdata->items[i] = _(roller_choices[i]);
+	mdata->hint = _("Choose how to generate your intrinsic stats. Point-based is recommended.");
 }
 
 /**
@@ -717,9 +718,9 @@ static void finish_with_random_choices(enum birth_stage current)
 
 			while (1) {
 				if (ntry > 100) {
-					quit("Likely bug:  could not generate "
+					quit(_("Likely bug:  could not generate "
 						"a random name that was not "
-						"in use for a savefile");
+						"in use for a savefile"));
 				}
 				player_random_name(name, sizeof(name));
 				/*
@@ -893,10 +894,10 @@ static enum birth_stage roller_command(bool first_call)
 		prev_roll = false;
 
 	/* Prepare a prompt (must squeeze everything in) */
-	strnfcat(prompt, sizeof (prompt), &promptlen, "['r' to reroll");
+	strnfcat(prompt, sizeof (prompt), &promptlen, _("['r' to reroll"));
 	if (prev_roll) 
-		strnfcat(prompt, sizeof(prompt), &promptlen, ", 'p' for previous roll");
-	strnfcat(prompt, sizeof (prompt), &promptlen, " or 'Enter' to accept]");
+		strnfcat(prompt, sizeof(prompt), &promptlen, _(", 'p' for previous roll"));
+	strnfcat(prompt, sizeof (prompt), &promptlen, _(" or 'Enter' to accept]"));
 
 	/* Prompt for it */
 	prt(prompt, Term->hgt - 1, Term->wid / 2 - promptlen / 2);
@@ -949,17 +950,17 @@ static enum birth_stage roller_command(bool first_call)
 			struct menu *m = menu_dynamic_new();
 
 			m->selections = labels;
-			menu_dynamic_add_label(m, "Reroll", 'r',
+			menu_dynamic_add_label(m, _("Reroll"), 'r',
 				ACT_CTX_BIRTH_ROLL_REROLL, labels);
 			if (prev_roll) {
-				menu_dynamic_add_label(m, "Retrieve previous",
+				menu_dynamic_add_label(m, _("Retrieve previous"),
 					'p', ACT_CTX_BIRTH_ROLL_PREV, labels);
 			}
-			menu_dynamic_add_label(m, "Accept", 'a',
+			menu_dynamic_add_label(m, _("Accept"), 'a',
 				ACT_CTX_BIRTH_ROLL_ACCEPT, labels);
-			menu_dynamic_add_label(m, "Quit", 'q',
+			menu_dynamic_add_label(m, _("Quit"), 'q',
 				ACT_CTX_BIRTH_ROLL_QUIT, labels);
-			menu_dynamic_add_label(m, "Help", '?',
+			menu_dynamic_add_label(m, _("Help"), '?',
 				ACT_CTX_BIRTH_ROLL_HELP, labels);
 
 			screen_save();
@@ -1063,7 +1064,7 @@ static void point_based_points(game_event_type type, game_event_data *data,
 	int remaining = data->birthpoints.remaining;
 
 	/* Display the costs header */
-	put_str("Cost", COSTS_ROW - 1, COSTS_COL);
+	put_str(_("Cost"), COSTS_ROW - 1, COSTS_COL);
 	
 	for (i = 0; i < STAT_MAX; i++) {
 		/* Remember what's allowed. */
@@ -1079,13 +1080,13 @@ static void point_based_points(game_event_type type, game_event_data *data,
 		sum += spent[i];
 	}
 	
-	put_str(format("Total Cost: %2d/%2d", sum, remaining + sum),
+	put_str(format(_("Total Cost: %2d/%2d"), sum, remaining + sum),
 		COSTS_ROW + STAT_MAX, TOTAL_COL);
 }
 
 static void point_based_start(void)
 {
-	const char *prompt = "[up/down to move, left/right to modify, 'r' to reset, 'Enter' to accept]";
+	const char *prompt = _("[up/down to move, left/right to modify, 'r' to reset, 'Enter' to accept]");
 	int i;
 
 	/* Clear */
@@ -1220,19 +1221,19 @@ static enum birth_stage point_based_command(void)
 			m->selections = labels;
 			if (in.mouse.y == COSTS_ROW + stat
 					&& (buysell[stat] & 1)) {
-				menu_dynamic_add_label(m, "Sell", 's',
+				menu_dynamic_add_label(m, _("Sell"), 's',
 					ACT_CTX_BIRTH_PTS_SELL, labels);
 			}
 			if (in.mouse.y == COSTS_ROW + stat
 					&& (buysell[stat] & 2)) {
-				menu_dynamic_add_label(m, "Buy", 'b',
+				menu_dynamic_add_label(m, _("Buy"), 'b',
 					ACT_CTX_BIRTH_PTS_BUY, labels);
 			}
-			menu_dynamic_add_label(m, "Accept", 'a',
+			menu_dynamic_add_label(m, _("Accept"), 'a',
 				ACT_CTX_BIRTH_PTS_ACCEPT, labels);
-			menu_dynamic_add_label(m, "Reset", 'r',
+			menu_dynamic_add_label(m, _("Reset"), 'r',
 				ACT_CTX_BIRTH_PTS_RESET, labels);
-			menu_dynamic_add_label(m, "Quit", 'q',
+			menu_dynamic_add_label(m, _("Quit"), 'q',
 				ACT_CTX_BIRTH_PTS_QUIT, labels);
 
 			screen_save();
@@ -1316,7 +1317,7 @@ static enum birth_stage get_name_command(void)
 	} else if (get_character_name(name, sizeof(name))
 			&& (savefile[0]
 			|| !savefile_name_already_used(name, true, true)
-			|| get_check("A savefile for that name exists.  Overwrite it? "))) {
+			|| get_check(_("A savefile for that name exists.  Overwrite it? ")))) {
 		cmdq_push(CMD_NAME_CHOICE);
 		cmd_set_arg_string(cmdq_peek(), "name", name);
 		next = BIRTH_HISTORY_CHOICE;
@@ -1532,7 +1533,7 @@ static enum birth_stage get_history_command(void)
 	my_strcpy(old_history, player->history, sizeof(old_history));
 
 	/* Ask for some history */
-	prt("Accept character history? [y/n]", 0, 0);
+	prt(_("Accept character history? [y/n]"), 0, 0);
 	ke = inkey();
 
 	/* Quit, go back, change history, or accept */
@@ -1566,7 +1567,7 @@ static enum birth_stage get_history_command(void)
  * ------------------------------------------------------------------------ */
 static enum birth_stage get_confirm_command(void)
 {
-	const char *prompt = "['ESC' to step back, 'S' to start over, or any other key to continue]";
+	const char *prompt = _("['ESC' to step back, 'S' to start over, or any other key to continue]");
 	struct keypress ke;
 
 	enum birth_stage next = BIRTH_RESET;
