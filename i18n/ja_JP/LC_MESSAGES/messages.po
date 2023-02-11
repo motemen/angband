@@ -1787,40 +1787,40 @@ msgstr "発射されるアイテムがありません。"
 #: ../src/ui-birth.c:225
 #, c-format
 msgid "Hit/Shoot/Throw: %+d/%+d/%+d\n"
-msgstr ""
+msgstr "打撃/射撃/投擲: %+d/%+d/%+d\n"
 
 #: ../src/ui-birth.c:227
 #, c-format
 msgid "Hit die: %2d   XP mod: %d%%\n"
-msgstr ""
+msgstr "HPダイス: %2d    経験修正: %d%%\n"
 
 #: ../src/ui-birth.c:228
 #, c-format
 msgid "Disarm: %+3d/%+3d   Devices: %+3d\n"
-msgstr ""
+msgstr "解除: %+3d/%+3d   魔法道具: %+3d\n"
 
 #: ../src/ui-birth.c:230
 #, c-format
 msgid "Save:   %+3d   Stealth: %+3d\n"
-msgstr ""
+msgstr "抵抗:   %+3d     隠密: %+3d\n"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-birth.c:233
-#, fuzzy, c-format
+#, c-format
 msgid "Infravision:  %d ft\n"
-msgstr "赤外線視力:"
+msgstr "赤外線視力:     %d ft\n"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-birth.c:234
-#, fuzzy, c-format
+#, c-format
 msgid "Digging:      %+d\n"
-msgstr "掘削      :"
+msgstr "掘削:    %+d\n"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-birth.c:235
-#, fuzzy, c-format
+#, c-format
 msgid "Search:       %+d"
-msgstr "性別     : "
+msgstr "探索:    %+d"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/ui-birth.c:359
