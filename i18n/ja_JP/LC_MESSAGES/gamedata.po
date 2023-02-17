@@ -20364,12 +20364,12 @@ msgstr ""
 #: ../lib/gamedata/player_property.txt:47
 msgctxt "player_property"
 msgid "Mushroom Lore"
-msgstr ""
+msgstr "キノコの伝承"
 
 #: ../lib/gamedata/player_property.txt:49
 msgctxt "player_property"
 msgid "You easily recognize mushrooms."
-msgstr ""
+msgstr "キノコを容易に識別できる。"
 
 #: ../lib/gamedata/player_property.txt:52
 msgctxt "player_property"

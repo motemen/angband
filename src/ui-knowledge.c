@@ -2950,7 +2950,7 @@ static void shape_lore_append_misc_flags(textblock *tb,
 		if (streq(ability->type, "player") &&
 			pf_has(s->pflags, ability->index)) {
 			textblock_append(tb, "%s%s", (n > 0) ? "  " : "",
-				ability->desc);
+				_GAMEDATA_C("player_property", ability->desc));
 			++n;
 		}
 	}
