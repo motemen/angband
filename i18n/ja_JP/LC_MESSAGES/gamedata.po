@@ -11139,7 +11139,7 @@ msgstr "{target}を攻撃した"
 #: ../lib/gamedata/blow_methods.txt:22
 msgctxt "blow_methods"
 msgid "hit"
-msgstr ""
+msgstr "攻撃する"
 
 #: ../lib/gamedata/blow_methods.txt:29
 msgctxt "blow_methods"
@@ -11149,7 +11149,7 @@ msgstr "{target}に触れた"
 #: ../lib/gamedata/blow_methods.txt:31
 msgctxt "blow_methods"
 msgid "touch"
-msgstr ""
+msgstr "触れる"
 
 #: ../lib/gamedata/blow_methods.txt:38
 msgctxt "blow_methods"
@@ -11159,7 +11159,7 @@ msgstr "{target}を殴った"
 #: ../lib/gamedata/blow_methods.txt:40
 msgctxt "blow_methods"
 msgid "punch"
-msgstr ""
+msgstr "殴る"
 
 #: ../lib/gamedata/blow_methods.txt:47
 msgctxt "blow_methods"
@@ -11169,7 +11169,7 @@ msgstr "{target}を蹴った"
 #: ../lib/gamedata/blow_methods.txt:49
 msgctxt "blow_methods"
 msgid "kick"
-msgstr ""
+msgstr "蹴る"
 
 #: ../lib/gamedata/blow_methods.txt:56
 msgctxt "blow_methods"
@@ -11179,7 +11179,7 @@ msgstr "{target}を引っ掻いた"
 #: ../lib/gamedata/blow_methods.txt:58
 msgctxt "blow_methods"
 msgid "claw"
-msgstr ""
+msgstr "引っ掻く"
 
 #: ../lib/gamedata/blow_methods.txt:65
 msgctxt "blow_methods"
@@ -11189,7 +11189,7 @@ msgstr "{target}に噛み付いた"
 #: ../lib/gamedata/blow_methods.txt:67
 msgctxt "blow_methods"
 msgid "bite"
-msgstr ""
+msgstr "噛み付く"
 
 #: ../lib/gamedata/blow_methods.txt:74
 msgctxt "blow_methods"
@@ -11199,7 +11199,7 @@ msgstr "{target}を刺した"
 #: ../lib/gamedata/blow_methods.txt:76
 msgctxt "blow_methods"
 msgid "sting"
-msgstr ""
+msgstr "刺す"
 
 #: ../lib/gamedata/blow_methods.txt:83
 msgctxt "blow_methods"
@@ -11209,7 +11209,7 @@ msgstr "{target}に頭突きした"
 #: ../lib/gamedata/blow_methods.txt:85
 msgctxt "blow_methods"
 msgid "butt"
-msgstr ""
+msgstr "頭突きする"
 
 #: ../lib/gamedata/blow_methods.txt:92
 msgctxt "blow_methods"
@@ -11392,22 +11392,22 @@ msgstr "キノコがどうのとつぶやいている"
 #: ../lib/gamedata/blow_methods.txt:198
 msgctxt "blow_methods"
 msgid "moan"
-msgstr "うめいた"
+msgstr "うめく"
 
 #: ../lib/gamedata/blow_effects.txt:25
 msgctxt "blow_effects"
 msgid "attack"
-msgstr ""
+msgstr "ダメージを与える"
 
 #: ../lib/gamedata/blow_effects.txt:32
 msgctxt "blow_effects"
 msgid "poison"
-msgstr ""
+msgstr "毒に冒す"
 
 #: ../lib/gamedata/blow_effects.txt:42
 msgctxt "blow_effects"
 msgid "disenchant"
-msgstr ""
+msgstr "劣化させる"
 
 #: ../lib/gamedata/blow_effects.txt:52
 msgctxt "blow_effects"
@@ -11417,7 +11417,7 @@ msgstr ""
 #: ../lib/gamedata/blow_effects.txt:61
 msgctxt "blow_effects"
 msgid "steal gold"
-msgstr ""
+msgstr "お金を盗む"
 
 #: ../lib/gamedata/blow_effects.txt:70
 msgctxt "blow_effects"
@@ -11427,7 +11427,7 @@ msgstr ""
 #: ../lib/gamedata/blow_effects.txt:79
 msgctxt "blow_effects"
 msgid "eat your food"
-msgstr ""
+msgstr "食料を食べる"
 
 #: ../lib/gamedata/blow_effects.txt:88
 msgctxt "blow_effects"
@@ -11467,12 +11467,12 @@ msgstr ""
 #: ../lib/gamedata/blow_effects.txt:153
 msgctxt "blow_effects"
 msgid "terrify"
-msgstr ""
+msgstr "恐怖させる"
 
 #: ../lib/gamedata/blow_effects.txt:163
 msgctxt "blow_effects"
 msgid "paralyze"
-msgstr ""
+msgstr "麻痺させる"
 
 #: ../lib/gamedata/blow_effects.txt:173
 msgctxt "blow_effects"
@@ -20369,7 +20369,7 @@ msgstr "キノコの伝承"
 #: ../lib/gamedata/player_property.txt:49
 msgctxt "player_property"
 msgid "You easily recognize mushrooms."
-msgstr "キノコを容易に識別できる。"
+msgstr "あなたはキノコを容易に識別できる。"
 
 #: ../lib/gamedata/player_property.txt:52
 msgctxt "player_property"

@@ -669,55 +669,55 @@ msgstr "をかなり警戒しており"
 
 #: ../src/mon-lore.c:607
 msgid "incredibly quickly"
-msgstr ""
+msgstr "信じがたいほど素早く"
 
 #: ../src/mon-lore.c:608
 msgid "very quickly"
-msgstr ""
+msgstr "非常に素早く"
 
 #: ../src/mon-lore.c:609
 msgid "quickly"
-msgstr ""
+msgstr "素早く"
 
 #: ../src/mon-lore.c:610
 msgid "fairly quickly"
-msgstr ""
+msgstr "幾分素早く"
 
 #: ../src/mon-lore.c:611
 msgid "normal speed"
-msgstr ""
+msgstr "通常のスピードで"
 
 #: ../src/mon-lore.c:612
 msgid "slowly"
-msgstr ""
+msgstr "ゆっくりと"
 
 #: ../src/mon-lore.c:613
 msgid "very slowly"
-msgstr ""
+msgstr "非常にゆっくりと"
 
 #: ../src/mon-lore.c:614
 msgid "incredibly slowly"
-msgstr ""
+msgstr "信じがたいほどゆっくりと"
 
 #: ../src/mon-lore.c:627
 msgid "erroneously"
-msgstr ""
+msgstr "不規則に"
 
 #: ../src/mon-lore.c:641
 msgid "at "
-msgstr ""
+msgstr ""
 
 #: ../src/mon-lore.c:666
 msgid " normal speed, which is "
-msgstr ""
+msgstr "通常のスピード、つまり"
 
 #: ../src/mon-lore.c:685
 msgid "the same as you"
-msgstr ""
+msgstr "あなたと同速で"
 
 #: ../src/mon-lore.c:688
 msgid " your speed"
-msgstr ""
+msgstr "あなたの速さで"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-lore.c:718
@@ -844,12 +844,12 @@ msgstr "このモンスターを倒したことはない。"
 
 #: ../src/mon-lore.c:971
 msgid "This"
-msgstr ""
+msgstr "この"
 
 #: ../src/mon-lore.c:977 ../src/mon-lore.c:986
 #, c-format
 msgid " %s"
-msgstr ""
+msgstr "%s"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-lore.c:988
@@ -858,7 +858,7 @@ msgstr "モンスター"
 
 #: ../src/mon-lore.c:993
 msgid " lives in the town"
-msgstr ""
+msgstr "は街に住んでいる"
 
 #: ../src/mon-lore.c:999
 msgid " is found "
@@ -866,45 +866,33 @@ msgstr ""
 
 #: ../src/mon-lore.c:1001
 msgid " is normally found "
-msgstr ""
+msgstr "は通常"
 
 #: ../src/mon-lore.c:1004
 msgid "at depths of {}"
-msgstr ""
+msgstr "{}にいる"
 
 #: ../src/mon-lore.c:1008
 msgid " feet (level "
-msgstr ""
+msgstr "フィートの深さ ("
 
 #: ../src/mon-lore.c:1010
 msgid ")"
-msgstr ""
+msgstr "階)"
 
 #: ../src/mon-lore.c:1015
 msgid ", and moves{}"
-msgstr ""
+msgstr "、{}動いている"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-lore.c:1023
-#, fuzzy
 msgid " extremely"
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"猛烈に\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"かなり"
+msgstr "猛烈に"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-lore.c:1025
-#, fuzzy
 msgid " somewhat"
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"やや\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"やや\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"幾分"
+msgstr "やや"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-lore.c:1027
@@ -934,57 +922,38 @@ msgstr "侵入者を追跡しない"
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-lore.c:1054 ../src/mon-lore.c:1100 ../src/mon-lore.c:1470
 #: ../src/mon-lore.c:1657
-#, fuzzy
 msgid ".  "
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"。\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"。\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"を持っていることがある。\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"。\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"ことができる。\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"でダメージを与えられる。\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"の耐性を持っている。\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"。\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"ことがある。"
+msgstr "。"
 
 #: ../src/mon-lore.c:1083
 #, c-format
 msgid "%s has a"
-msgstr ""
+msgstr "%sは"
 
 #: ../src/mon-lore.c:1086
 msgid "n average"
-msgstr ""
+msgstr "平均して"
 
 #: ../src/mon-lore.c:1089
 msgid " life rating of {}"
-msgstr ""
+msgstr "{}のHPを持ち"
 
 #: ../src/mon-lore.c:1096
 msgid ", and an armor rating of {}"
-msgstr ""
+msgstr "{}の防御力を持つ"
 
 #: ../src/mon-lore.c:1107
 msgid "You have a"
-msgstr ""
+msgstr "あなたはこのモンスターを"
 
 #: ../src/mon-lore.c:1109
 msgid "n"
-msgstr ""
+msgstr ""
 
 #: ../src/mon-lore.c:1111
 #, c-format
 msgid "%% chance to hit such a creature in melee (if you can see it).  "
-msgstr ""
+msgstr "%%の確率で直接攻撃できる (視認できる場合)。"
 
 #: ../src/mon-lore.c:1141
 msgid "Killing"
@@ -1008,7 +977,7 @@ msgstr ""
 #: ../src/mon-lore.c:1329
 #, c-format
 msgid "%s can {}.  "
-msgstr ""
+msgstr "%sは{}。"
 
 #: ../src/mon-lore.c:1331 ../src/mon-lore.c:1339 ../src/mon-lore.c:1370
 #: ../src/mon-lore.c:1398
@@ -1095,16 +1064,16 @@ msgstr ""
 #: ../src/mon-lore.c:1497
 #, c-format
 msgid "%s %s intruders, which %s may notice from "
-msgstr ""
+msgstr "%sは侵入者%s、%.0s"
 
 #: ../src/mon-lore.c:1501
 msgid " feet.  "
-msgstr ""
+msgstr "フィートの距離から気付くことがある。"
 
 #: ../src/mon-lore.c:1575
 #, c-format
 msgid "%s may {}"
-msgstr ""
+msgstr "%sは{}ことがある。"
 
 #: ../src/mon-lore.c:1587
 msgid ", and may {red}breathe {/}{}"
@@ -1138,7 +1107,7 @@ msgstr "%s攻撃については何も知らない。"
 #: ../src/mon-lore.c:1730
 #, c-format
 msgid "%s can "
-msgstr ""
+msgstr "%sは"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-lore.c:1733 ../src/ui-birth.c:357
@@ -1153,25 +1122,25 @@ msgstr "、"
 #: ../src/mon-lore.c:1745
 msgctxt "mon-lore"
 msgid " to "
-msgstr ""
+msgstr "ことで"
 
 #: ../src/mon-lore.c:1777
 msgid ", averaging"
-msgstr ""
+msgstr "、平均して"
 
 #: ../src/mon-lore.c:1779
 msgid " at least"
-msgstr ""
+msgstr "最低でも"
 
 #: ../src/mon-lore.c:1781
 #, c-format
 msgid " %d"
-msgstr ""
+msgstr "%d"
 
 #: ../src/mon-lore.c:1782
 #, c-format
 msgid " damage on each of %s turns.  "
-msgstr ""
+msgstr "ダメージをターン毎に与える。%.0s"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-move.c:1113

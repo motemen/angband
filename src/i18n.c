@@ -32,7 +32,7 @@ int i18n_visualwidth(const char *buf) {
 bool i18n_text_split(const char *s, char *pre, char *post) {
 	static const char *sep = "{}";
 	char *p = strstr(s, sep);
-	if (!p) return false;
+	assert(p);
 
 	strncpy(pre, s, p - s);
 	*(pre + (p - s)) = '\0';
