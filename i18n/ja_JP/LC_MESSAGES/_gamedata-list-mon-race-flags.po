@@ -1,0 +1,228 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Angband 4.2.4\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: ../src/list-mon-race-flags.h:47
+msgctxt "list-mon-race-flags"
+msgid "invisible"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:48
+msgctxt "list-mon-race-flags"
+msgid "cold blooded"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:49
+msgctxt "list-mon-race-flags"
+msgid "not detected by telepathy"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:50
+msgctxt "list-mon-race-flags"
+msgid "rarely detected by telepathy"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:51
+msgctxt "list-mon-race-flags"
+msgid "open doors"
+msgstr "ドアを開ける"
+
+#: ../src/list-mon-race-flags.h:52
+msgctxt "list-mon-race-flags"
+msgid "bash down doors"
+msgstr "ドアを打ち破る"
+
+#: ../src/list-mon-race-flags.h:53
+msgctxt "list-mon-race-flags"
+msgid "pass through walls"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:54
+msgctxt "list-mon-race-flags"
+msgid "bore through walls"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:55
+msgctxt "list-mon-race-flags"
+msgid "smash walls"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:56
+msgctxt "list-mon-race-flags"
+msgid "push past weaker monsters"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:57
+msgctxt "list-mon-race-flags"
+msgid "destroy weaker monsters"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:58
+msgctxt "list-mon-race-flags"
+msgid "pick up objects"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:59
+msgctxt "list-mon-race-flags"
+msgid "destroy objects"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:60
+msgctxt "list-mon-race-flags"
+msgid "clear webs"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:61
+msgctxt "list-mon-race-flags"
+msgid "pass through webs"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:62
+msgctxt "list-mon-race-flags"
+msgid "orc"
+msgstr "オークの"
+
+#: ../src/list-mon-race-flags.h:63
+msgctxt "list-mon-race-flags"
+msgid "troll"
+msgstr "トロルの"
+
+#: ../src/list-mon-race-flags.h:64
+msgctxt "list-mon-race-flags"
+msgid "giant"
+msgstr "巨人の"
+
+#: ../src/list-mon-race-flags.h:65
+msgctxt "list-mon-race-flags"
+msgid "dragon"
+msgstr "ドラゴンの"
+
+#: ../src/list-mon-race-flags.h:66
+msgctxt "list-mon-race-flags"
+msgid "demon"
+msgstr "悪魔の"
+
+#: ../src/list-mon-race-flags.h:67
+msgctxt "list-mon-race-flags"
+msgid "natural"
+msgstr "自然の"
+
+#: ../src/list-mon-race-flags.h:68
+msgctxt "list-mon-race-flags"
+msgid "evil"
+msgstr "邪悪な"
+
+#: ../src/list-mon-race-flags.h:69
+msgctxt "list-mon-race-flags"
+msgid "undead"
+msgstr "アンデッドの"
+
+#: ../src/list-mon-race-flags.h:70
+msgctxt "list-mon-race-flags"
+msgid "nonliving"
+msgstr "無生物の"
+
+#: ../src/list-mon-race-flags.h:71
+msgctxt "list-mon-race-flags"
+msgid "metal"
+msgstr "金属の"
+
+#: ../src/list-mon-race-flags.h:72
+msgctxt "list-mon-race-flags"
+msgid "bright light"
+msgstr "閃光"
+
+#: ../src/list-mon-race-flags.h:73
+msgctxt "list-mon-race-flags"
+msgid "rock remover"
+msgstr "岩石除去"
+
+#: ../src/list-mon-race-flags.h:74 ../src/list-mon-race-flags.h:78
+msgctxt "list-mon-race-flags"
+msgid "fire"
+msgstr "火炎"
+
+#: ../src/list-mon-race-flags.h:75 ../src/list-mon-race-flags.h:79
+msgctxt "list-mon-race-flags"
+msgid "cold"
+msgstr "冷気"
+
+#: ../src/list-mon-race-flags.h:76
+msgctxt "list-mon-race-flags"
+msgid "acid"
+msgstr "酸"
+
+#: ../src/list-mon-race-flags.h:77
+msgctxt "list-mon-race-flags"
+msgid "lightning"
+msgstr "稲妻"
+
+#: ../src/list-mon-race-flags.h:80
+msgctxt "list-mon-race-flags"
+msgid "poison"
+msgstr "毒"
+
+#: ../src/list-mon-race-flags.h:81
+msgctxt "list-mon-race-flags"
+msgid "nether"
+msgstr "地獄"
+
+#: ../src/list-mon-race-flags.h:82
+msgctxt "list-mon-race-flags"
+msgid "water"
+msgstr "水流"
+
+#: ../src/list-mon-race-flags.h:83
+msgctxt "list-mon-race-flags"
+msgid "plasma"
+msgstr "プラズマ"
+
+#: ../src/list-mon-race-flags.h:84
+msgctxt "list-mon-race-flags"
+msgid "nexus"
+msgstr "因果混乱"
+
+#: ../src/list-mon-race-flags.h:85
+msgctxt "list-mon-race-flags"
+msgid "disenchantment"
+msgstr "劣化"
+
+#: ../src/list-mon-race-flags.h:86
+msgctxt "list-mon-race-flags"
+msgid "frightened"
+msgstr "恐怖"
+
+#: ../src/list-mon-race-flags.h:87
+msgctxt "list-mon-race-flags"
+msgid "stunned"
+msgstr "朦朧"
+
+#: ../src/list-mon-race-flags.h:88
+msgctxt "list-mon-race-flags"
+msgid "confused"
+msgstr "混乱"
+
+#: ../src/list-mon-race-flags.h:89
+msgctxt "list-mon-race-flags"
+msgid "slept"
+msgstr "睡眠"
+
+#: ../src/list-mon-race-flags.h:90
+msgctxt "list-mon-race-flags"
+msgid "held"
+msgstr "拘束"
+
+#: ../src/list-mon-race-flags.h:91
+msgctxt "list-mon-race-flags"
+msgid "slowed"
+msgstr "減速"

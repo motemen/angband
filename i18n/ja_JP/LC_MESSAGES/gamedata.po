@@ -20796,3 +20796,218 @@ msgstr ""
 msgctxt "player_property"
 msgid "You are vulnerable to"
 msgstr ""
+
+#: ../src/list-mon-race-flags.h:47
+msgctxt "list-mon-race-flags"
+msgid "invisible"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:48
+msgctxt "list-mon-race-flags"
+msgid "cold blooded"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:49
+msgctxt "list-mon-race-flags"
+msgid "not detected by telepathy"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:50
+msgctxt "list-mon-race-flags"
+msgid "rarely detected by telepathy"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:51
+msgctxt "list-mon-race-flags"
+msgid "open doors"
+msgstr "ドアを開ける"
+
+#: ../src/list-mon-race-flags.h:52
+msgctxt "list-mon-race-flags"
+msgid "bash down doors"
+msgstr "ドアを打ち破る"
+
+#: ../src/list-mon-race-flags.h:53
+msgctxt "list-mon-race-flags"
+msgid "pass through walls"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:54
+msgctxt "list-mon-race-flags"
+msgid "bore through walls"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:55
+msgctxt "list-mon-race-flags"
+msgid "smash walls"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:56
+msgctxt "list-mon-race-flags"
+msgid "push past weaker monsters"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:57
+msgctxt "list-mon-race-flags"
+msgid "destroy weaker monsters"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:58
+msgctxt "list-mon-race-flags"
+msgid "pick up objects"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:59
+msgctxt "list-mon-race-flags"
+msgid "destroy objects"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:60
+msgctxt "list-mon-race-flags"
+msgid "clear webs"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:61
+msgctxt "list-mon-race-flags"
+msgid "pass through webs"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:62
+msgctxt "list-mon-race-flags"
+msgid "orc"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:63
+msgctxt "list-mon-race-flags"
+msgid "troll"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:64
+msgctxt "list-mon-race-flags"
+msgid "giant"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:65
+msgctxt "list-mon-race-flags"
+msgid "dragon"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:66
+msgctxt "list-mon-race-flags"
+msgid "demon"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:67
+msgctxt "list-mon-race-flags"
+msgid "natural"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:68
+msgctxt "list-mon-race-flags"
+msgid "evil"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:69
+msgctxt "list-mon-race-flags"
+msgid "undead"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:70
+msgctxt "list-mon-race-flags"
+msgid "nonliving"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:71
+msgctxt "list-mon-race-flags"
+msgid "metal"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:72
+msgctxt "list-mon-race-flags"
+msgid "bright light"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:73
+msgctxt "list-mon-race-flags"
+msgid "rock remover"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:74 ../src/list-mon-race-flags.h:78
+msgctxt "list-mon-race-flags"
+msgid "fire"
+msgstr "火炎"
+
+#: ../src/list-mon-race-flags.h:75 ../src/list-mon-race-flags.h:79
+msgctxt "list-mon-race-flags"
+msgid "cold"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:76
+msgctxt "list-mon-race-flags"
+msgid "acid"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:77
+msgctxt "list-mon-race-flags"
+msgid "lightning"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:80
+msgctxt "list-mon-race-flags"
+msgid "poison"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:81
+msgctxt "list-mon-race-flags"
+msgid "nether"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:82
+msgctxt "list-mon-race-flags"
+msgid "water"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:83
+msgctxt "list-mon-race-flags"
+msgid "plasma"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:84
+msgctxt "list-mon-race-flags"
+msgid "nexus"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:85
+msgctxt "list-mon-race-flags"
+msgid "disenchantment"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:86
+msgctxt "list-mon-race-flags"
+msgid "frightened"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:87
+msgctxt "list-mon-race-flags"
+msgid "stunned"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:88
+msgctxt "list-mon-race-flags"
+msgid "confused"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:89
+msgctxt "list-mon-race-flags"
+msgid "slept"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:90
+msgctxt "list-mon-race-flags"
+msgid "held"
+msgstr ""
+
+#: ../src/list-mon-race-flags.h:91
+msgctxt "list-mon-race-flags"
+msgid "slowed"
+msgstr ""
