@@ -16,5 +16,5 @@ jobs:
 
       - run: |
           export CC=clang-14 CXX=clang++-14
-          cmake -S utils/i18nhound -B utils/i18nhound/build
+          cmake -S utils/i18nhound -B utils/i18nhound/build -DLLVM_DIR=/usr/lib/llvm-14/lib/cmake/llvm -DCLANG_DIR=/usr/lib/llvm-14/lib/cmake/clang
           cmake --build utils/i18nhound/build
