@@ -10,7 +10,6 @@ jobs:
       - uses: actions/checkout@v3
 
       - run: |
-          env
           sudo apt-get update
           sudo apt-get install -y "libclang-14-dev"
 
@@ -18,3 +17,6 @@ jobs:
           export CC=clang-14 CXX=clang++-14
           cmake -S utils/i18nhound -B utils/i18nhound/build -DCMAKE_PREFIX_PATH=/usr/lib/llvm-14
           cmake --build utils/i18nhound/build
+
+      - run: |
+          utils/i18nhound/build/i18nhound src/cmd-obj.c
