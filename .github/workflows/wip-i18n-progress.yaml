@@ -15,5 +15,6 @@ jobs:
           sudo apt-get install -y "libclang-14-dev"
 
       - run: |
+          export CC=clang-14 CXX=clang++-14
           cmake -S utils/i18nhound -B utils/i18nhound/build
           cmake --build utils/i18nhound/build
