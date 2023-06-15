@@ -1,0 +1,14 @@
+on:
+  push:
+    branches:
+      - test-i18n-progress
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - run: |
+          cmake -S utils/i18nhound -B utils/i18nhound/build
+          cmake --build utils/i18nhound/build
