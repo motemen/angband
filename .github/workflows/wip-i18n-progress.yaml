@@ -14,9 +14,18 @@ jobs:
           sudo apt-get install -y "libclang-14-dev"
 
       - run: |
+          git clone https://github.com/motemen/clang-tidy-check-extra-i18n-string
+          cd clang-tidy-check-extra-i18n-string
+          CC=clang-14 CXX=clang++-14 cmake -S . -B build -DCMAKE_PREFIX_PATH=/usr/lib/llvm-14
+          cmake --build build
+
+      - run: |
+          clang-tidy --load=clang-tidy-check-extra-i18n-string/build/libExtraI18nStringCheck.so -checks='-*,extra-i18n-string' src/mon-lore.c -- -DUSE_LOCALE
+
+      - run: |
           export CC=clang-14 CXX=clang++-14
           cmake -S utils/i18nhound -B utils/i18nhound/build -DCMAKE_PREFIX_PATH=/usr/lib/llvm-14
           cmake --build utils/i18nhound/build
 
       - run: |
-          utils/i18nhound/build/i18nhound src/cmd-obj.c
+          utils/i18nhound/build/i18nhound --extra-arg="-DUSE_LOCALE" --extra-arg="-w" $(ls src/*.c | grep -v -e main -e sdl)
