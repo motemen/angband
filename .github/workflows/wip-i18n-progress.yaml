@@ -10,14 +10,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - run: |
-          sudo apt-get update
-          sudo apt-get install -y "libclang-14-dev"
-
-      - run: |
-          git clone --depth=1 https://github.com/motemen/clang-tidy-check-extra-i18n-string
-          cd clang-tidy-check-extra-i18n-string
-          CC=clang-14 CXX=clang++-14 cmake -S . -B build -DCMAKE_PREFIX_PATH=/usr/lib/llvm-14
-          cmake --build build
+          curl -LO https://github.com/motemen/clang-tidy-check-extra-i18n-string/releases/download/v0.1.0/libExtraI18nStringCheck_14.0.0.so
 
       - id: generate-markdown
         run: |
@@ -25,7 +18,7 @@ jobs:
           echo '| -- | -- | -- |' >> "$GITHUB_OUTPUT"
           for file in src/*.c; do
             clang-tidy \
-              --load=clang-tidy-check-extra-i18n-string/build/libExtraI18nStringCheck.so \
+              --load=./libExtraI18nStringCheck_14.0.0.so \
               -checks='-*,extra-i18n-string' \
               "$file" \
               -- -DUSE_LOCALE \
@@ -33,9 +26,20 @@ jobs:
               BEGIN { $file = shift }
               /\bwarning:/ and $bad++;
               /\bremark:/ and $good++;
-              END { $good ||= 0; $total = $good + $bad; printf qq(| [$file](../blob/HEAD/$file) | $good/$total | ![%.1f%%](https://progress-bar.dev/%d/)\n), ($total ? $good/$total*100 : 100) x 2 }' "$file"
+              END {
+                $good ||= 0;
+                $total = $good + $bad;
+                printf qq(| [$file](../blob/HEAD/$file) | $good/$total | ![%.1f%%](https://progress-bar.dev/%d/)\n), ($total ? $good/$total*100 : 100) x 2
+              }' "$file"
           done >> "$GITHUB_OUTPUT"
           sed -i -z 's/\n/\\n/g;s/^/body=/' "$GITHUB_OUTPUT"
 
-      - run: |
-          echo ${{steps.generate-markdown.outputs.body}}
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.update({
+              issue_number: 4,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '${{steps.generate-markdown.outputs.body}}'.replace(/\\n/g, '\n')
+            })
