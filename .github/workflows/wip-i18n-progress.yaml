@@ -14,18 +14,28 @@ jobs:
           sudo apt-get install -y "libclang-14-dev"
 
       - run: |
-          git clone https://github.com/motemen/clang-tidy-check-extra-i18n-string
+          git clone --depth=1 https://github.com/motemen/clang-tidy-check-extra-i18n-string
           cd clang-tidy-check-extra-i18n-string
           CC=clang-14 CXX=clang++-14 cmake -S . -B build -DCMAKE_PREFIX_PATH=/usr/lib/llvm-14
           cmake --build build
 
-      - run: |
-          clang-tidy --load=clang-tidy-check-extra-i18n-string/build/libExtraI18nStringCheck.so -checks='-*,extra-i18n-string' src/mon-lore.c -- -DUSE_LOCALE
+      - id: generate-markdown
+        run: |
+          echo '| File | Progress | % |' >> "$GITHUB_OUTPUT"
+          echo '| -- | -- | -- |' >> "$GITHUB_OUTPUT"
+          for file in src/*.c; do
+            clang-tidy \
+              --load=clang-tidy-check-extra-i18n-string/build/libExtraI18nStringCheck.so \
+              -checks='-*,extra-i18n-string' \
+              "$file" \
+              -- -DUSE_LOCALE \
+            | perl -nle '
+              BEGIN { $file = shift }
+              /\bwarning:/ and $bad++;
+              /\bremark:/ and $good++;
+              END { $good ||= 0; $total = $good + $bad; printf qq(| [$file](../blob/HEAD/$file) | $good/$total | ![%.1f%%](https://progress-bar.dev/%d/)\n), ($total ? $good/$total*100 : 100) x 2 }' "$file"
+          done >> "$GITHUB_OUTPUT"
+          sed -i -z 's/\n/\\n/g;s/^/body=/' "$GITHUB_OUTPUT"
 
       - run: |
-          export CC=clang-14 CXX=clang++-14
-          cmake -S utils/i18nhound -B utils/i18nhound/build -DCMAKE_PREFIX_PATH=/usr/lib/llvm-14
-          cmake --build utils/i18nhound/build
-
-      - run: |
-          utils/i18nhound/build/i18nhound --extra-arg="-DUSE_LOCALE" --extra-arg="-w" $(ls src/*.c | grep -v -e main -e sdl)
+          echo ${{steps.generate-markdown.outputs.body}}
