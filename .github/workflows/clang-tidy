@@ -21,4 +21,4 @@ CheckOptions:
       check_for_inscrip:2;
       check_for_inscrip_with_int:2
   - key: extra-i18n-string.SkipPattern
-    value: '^$|^%s$|^[[=NUL=]]$'
+    value: '^$|^%s$|^[[=NUL=][=newline=]]$'
