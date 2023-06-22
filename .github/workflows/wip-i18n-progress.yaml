@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - run: |
-          curl -LO https://github.com/motemen/clang-tidy-check-extra-i18n-string/releases/download/v0.2.0/libExtraI18nStringCheck_14.0.0.so
+          curl -LO https://github.com/motemen/clang-tidy-check-extra-i18n-string/releases/download/test-release/libExtraI18nStringCheck_14.so
 
       - id: generate-markdown
         run: |
