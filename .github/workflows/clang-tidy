@@ -5,6 +5,7 @@ CheckOptions:
     value: true
   - key: extra-i18n-string.AllowedFunctions
     value: >
+      assert;
       _;
       N_;
       gettext;
@@ -18,6 +19,6 @@ CheckOptions:
       cmd_get_string:2;
       cmd_set_arg_number:2;
       check_for_inscrip:2;
-      assert
+      check_for_inscrip_with_int:2
   - key: extra-i18n-string.SkipPattern
     value: '^$|^%s$|^[[=NUL=]]$'
