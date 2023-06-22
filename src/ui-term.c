@@ -290,6 +290,7 @@ term *angband_term[ANGBAND_TERM_MAX];
 char angband_term_name[ANGBAND_TERM_MAX][16] =
 {
 	VERSION_NAME,
+	// NOLINTBEGIN(extra-i18n-string)
 	"Term-1",
 	"Term-2",
 	"Term-3",
@@ -297,6 +298,7 @@ char angband_term_name[ANGBAND_TERM_MAX][16] =
 	"Term-5",
 	"Term-6",
 	"Term-7"
+	// NOLINTEND(extra-i18n-string)
 };
 
 uint32_t window_flag[ANGBAND_TERM_MAX];
