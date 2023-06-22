@@ -21,6 +21,7 @@
 #include "z-color.h"
 #include "z-util.h"
 #include "z-virt.h"
+#include "i18n.h"
 
 /**
  * This file provides a generic, efficient, terminal window package,
