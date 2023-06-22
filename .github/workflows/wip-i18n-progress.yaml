@@ -19,7 +19,7 @@ jobs:
           for file in src/*.c; do
             clang-tidy \
               -load=./libExtraI18nStringCheck_14.so \
-              -config-file=.github/workflows/clang-tidy.yaml \
+              -config-file=.github/workflows/clang-tidy \
               "$file" \
               -- -DUSE_LOCALE -DUSE_DOUBLEWIDTH -DLOCALE_NO_WORD_DIVIDER \
             | perl -nle '
