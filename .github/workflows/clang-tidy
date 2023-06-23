@@ -17,8 +17,15 @@ CheckOptions:
       cmd_get_arg_item:2;
       cmd_get_quantity:2;
       cmd_get_string:2;
+      cmd_set_arg_item:2;
+      cmd_set_arg_target:2;
       cmd_set_arg_number:2;
+      cmd_set_arg_direction:2;
+      cmd_set_arg_string:2;
+      cmd_set_arg_choice:2;
       check_for_inscrip:2;
-      check_for_inscrip_with_int:2
+      check_for_inscrip_with_int:2;
+      pile_check_integrity:1;
+      path_build
   - key: extra-i18n-string.SkipPattern
-    value: '^$|^%s$|^[[=NUL=][=newline=]]$'
+    value: '^$|^%s$|^[[=NUL=][=newline=]]$|^%s[[=newline=]]$'
