@@ -99,5 +99,7 @@ while (<$fh>) {
         emit_msg_entry($1, "spell");
     } elsif (/^(label[0-9]?)?:([^:]+)/) {
         emit_msg_entry($2, $1);
+    } elsif (/^verb:(.+)$/) {
+        emit_msg_entry($1, 'verb');
     }
 }

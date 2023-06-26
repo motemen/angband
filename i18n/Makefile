@@ -20,7 +20,8 @@ GAMEDATA_POTS = \
 		_gamedata-trap.pot \
 		_gamedata-ui_entry.pot \
 		_gamedata-player_property.pot \
-		_gamedata-list-mon-race-flags.pot
+		_gamedata-list-mon-race-flags.pot \
+		_gamedata-brand.pot
 
 .PHONY: all
 all: all-pots $(LOCALE)/LC_MESSAGES/messages.mo $(LOCALE)/LC_MESSAGES/gamedata.mo

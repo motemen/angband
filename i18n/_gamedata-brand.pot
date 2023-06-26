@@ -1,0 +1,79 @@
+#: ../lib/gamedata/brand.txt:28
+msgctxt "brand"
+msgid "acid"
+msgstr ""
+
+#: ../lib/gamedata/brand.txt:29
+# verb
+msgctxt "brand"
+msgid "dissolve"
+msgstr ""
+
+#: ../lib/gamedata/brand.txt:36
+msgctxt "brand"
+msgid "lightning"
+msgstr ""
+
+#: ../lib/gamedata/brand.txt:37
+# verb
+msgctxt "brand"
+msgid "shock"
+msgstr ""
+
+#: ../lib/gamedata/brand.txt:44
+msgctxt "brand"
+msgid "fire"
+msgstr ""
+
+#: ../lib/gamedata/brand.txt:45
+# verb
+msgctxt "brand"
+msgid "burn"
+msgstr ""
+
+#: ../lib/gamedata/brand.txt:53
+msgctxt "brand"
+msgid "cold"
+msgstr ""
+
+#: ../lib/gamedata/brand.txt:54
+# verb
+msgctxt "brand"
+msgid "freeze"
+msgstr ""
+
+#: ../lib/gamedata/brand.txt:62
+msgctxt "brand"
+msgid "poison"
+msgstr ""
+
+#: ../lib/gamedata/brand.txt:71
+# verb
+msgctxt "brand"
+msgid "corrode"
+msgstr ""
+
+#: ../lib/gamedata/brand.txt:79
+# verb
+msgctxt "brand"
+msgid "zap"
+msgstr ""
+
+#: ../lib/gamedata/brand.txt:87
+# verb
+msgctxt "brand"
+msgid "singe"
+msgstr ""
+
+#: ../lib/gamedata/brand.txt:96
+# verb
+msgctxt "brand"
+msgid "chill"
+msgstr ""
+
+#: ../lib/gamedata/brand.txt:105
+# verb
+msgctxt "brand"
+msgid "sicken"
+msgstr ""
+
