@@ -20875,62 +20875,62 @@ msgstr ""
 #: ../src/list-mon-race-flags.h:62
 msgctxt "list-mon-race-flags"
 msgid "orc"
-msgstr ""
+msgstr "オークの"
 
 #: ../src/list-mon-race-flags.h:63
 msgctxt "list-mon-race-flags"
 msgid "troll"
-msgstr ""
+msgstr "トロルの"
 
 #: ../src/list-mon-race-flags.h:64
 msgctxt "list-mon-race-flags"
 msgid "giant"
-msgstr ""
+msgstr "巨人の"
 
 #: ../src/list-mon-race-flags.h:65
 msgctxt "list-mon-race-flags"
 msgid "dragon"
-msgstr ""
+msgstr "ドラゴンの"
 
 #: ../src/list-mon-race-flags.h:66
 msgctxt "list-mon-race-flags"
 msgid "demon"
-msgstr ""
+msgstr "悪魔の"
 
 #: ../src/list-mon-race-flags.h:67
 msgctxt "list-mon-race-flags"
 msgid "natural"
-msgstr ""
+msgstr "自然の"
 
 #: ../src/list-mon-race-flags.h:68
 msgctxt "list-mon-race-flags"
 msgid "evil"
-msgstr ""
+msgstr "邪悪な"
 
 #: ../src/list-mon-race-flags.h:69
 msgctxt "list-mon-race-flags"
 msgid "undead"
-msgstr ""
+msgstr "アンデッドの"
 
 #: ../src/list-mon-race-flags.h:70
 msgctxt "list-mon-race-flags"
 msgid "nonliving"
-msgstr ""
+msgstr "無生物の"
 
 #: ../src/list-mon-race-flags.h:71
 msgctxt "list-mon-race-flags"
 msgid "metal"
-msgstr ""
+msgstr "金属の"
 
 #: ../src/list-mon-race-flags.h:72
 msgctxt "list-mon-race-flags"
 msgid "bright light"
-msgstr ""
+msgstr "閃光"
 
 #: ../src/list-mon-race-flags.h:73
 msgctxt "list-mon-race-flags"
 msgid "rock remover"
-msgstr ""
+msgstr "岩石除去"
 
 #: ../src/list-mon-race-flags.h:74 ../src/list-mon-race-flags.h:78
 msgctxt "list-mon-race-flags"
@@ -20940,74 +20940,153 @@ msgstr "火炎"
 #: ../src/list-mon-race-flags.h:75 ../src/list-mon-race-flags.h:79
 msgctxt "list-mon-race-flags"
 msgid "cold"
-msgstr ""
+msgstr "冷気"
 
 #: ../src/list-mon-race-flags.h:76
 msgctxt "list-mon-race-flags"
 msgid "acid"
-msgstr ""
+msgstr "酸"
 
 #: ../src/list-mon-race-flags.h:77
 msgctxt "list-mon-race-flags"
 msgid "lightning"
-msgstr ""
+msgstr "稲妻"
 
 #: ../src/list-mon-race-flags.h:80
 msgctxt "list-mon-race-flags"
 msgid "poison"
-msgstr ""
+msgstr "毒"
 
 #: ../src/list-mon-race-flags.h:81
 msgctxt "list-mon-race-flags"
 msgid "nether"
-msgstr ""
+msgstr "地獄"
 
 #: ../src/list-mon-race-flags.h:82
 msgctxt "list-mon-race-flags"
 msgid "water"
-msgstr ""
+msgstr "水流"
 
 #: ../src/list-mon-race-flags.h:83
 msgctxt "list-mon-race-flags"
 msgid "plasma"
-msgstr ""
+msgstr "プラズマ"
 
 #: ../src/list-mon-race-flags.h:84
 msgctxt "list-mon-race-flags"
 msgid "nexus"
-msgstr ""
+msgstr "因果混乱"
 
 #: ../src/list-mon-race-flags.h:85
 msgctxt "list-mon-race-flags"
 msgid "disenchantment"
-msgstr ""
+msgstr "劣化"
 
 #: ../src/list-mon-race-flags.h:86
 msgctxt "list-mon-race-flags"
 msgid "frightened"
-msgstr ""
+msgstr "恐怖"
 
 #: ../src/list-mon-race-flags.h:87
 msgctxt "list-mon-race-flags"
 msgid "stunned"
-msgstr ""
+msgstr "朦朧"
 
 #: ../src/list-mon-race-flags.h:88
 msgctxt "list-mon-race-flags"
 msgid "confused"
-msgstr ""
+msgstr "混乱"
 
 #: ../src/list-mon-race-flags.h:89
 msgctxt "list-mon-race-flags"
 msgid "slept"
-msgstr ""
+msgstr "睡眠"
 
 #: ../src/list-mon-race-flags.h:90
 msgctxt "list-mon-race-flags"
 msgid "held"
-msgstr ""
+msgstr "拘束"
 
 #: ../src/list-mon-race-flags.h:91
 msgctxt "list-mon-race-flags"
 msgid "slowed"
+msgstr "減速"
+
+#: ../lib/gamedata/brand.txt:28
+msgctxt "brand"
+msgid "acid"
+msgstr ""
+
+# verb
+#: ../lib/gamedata/brand.txt:29
+msgctxt "brand"
+msgid "dissolve"
+msgstr ""
+
+#: ../lib/gamedata/brand.txt:36
+msgctxt "brand"
+msgid "lightning"
+msgstr ""
+
+# verb
+#: ../lib/gamedata/brand.txt:37
+msgctxt "brand"
+msgid "shock"
+msgstr ""
+
+#: ../lib/gamedata/brand.txt:44
+msgctxt "brand"
+msgid "fire"
+msgstr ""
+
+# verb
+#: ../lib/gamedata/brand.txt:45
+msgctxt "brand"
+msgid "burn"
+msgstr "は燃えた"
+
+#: ../lib/gamedata/brand.txt:53
+msgctxt "brand"
+msgid "cold"
+msgstr ""
+
+# verb
+#: ../lib/gamedata/brand.txt:54
+msgctxt "brand"
+msgid "freeze"
+msgstr ""
+
+#: ../lib/gamedata/brand.txt:62
+msgctxt "brand"
+msgid "poison"
+msgstr ""
+
+# verb
+#: ../lib/gamedata/brand.txt:71
+msgctxt "brand"
+msgid "corrode"
+msgstr ""
+
+# verb
+#: ../lib/gamedata/brand.txt:79
+msgctxt "brand"
+msgid "zap"
+msgstr ""
+
+# verb
+#: ../lib/gamedata/brand.txt:87
+msgctxt "brand"
+msgid "singe"
+msgstr ""
+
+# verb
+#: ../lib/gamedata/brand.txt:96
+msgctxt "brand"
+msgid "chill"
+msgstr ""
+
+# verb
+#: ../lib/gamedata/brand.txt:105
+msgctxt "brand"
+msgid "sicken"
 msgstr ""

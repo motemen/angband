@@ -168,12 +168,14 @@ msgstr ""
 msgid "You see %s."
 msgstr ""
 
-#: ../src/cmd-obj.c:697
+#: ../src/cmd-obj.c:697 ../src/obj-gear.c:626 ../src/obj-gear.c:914
+#: ../src/obj-gear.c:1158
 #, c-format
 msgid "You have %s (1st %c)."
 msgstr ""
 
-#: ../src/cmd-obj.c:699
+#: ../src/cmd-obj.c:699 ../src/obj-gear.c:628 ../src/obj-gear.c:917
+#: ../src/obj-gear.c:1154 ../src/obj-gear.c:1160
 #, c-format
 msgid "You have %s (%c)."
 msgstr ""
@@ -1201,14 +1203,70 @@ msgstr ""
 msgid " {ignore}"
 msgstr ""
 
+#: ../src/obj-gear.c:419
+#, c-format
+msgid "Your %s is unaffected!"
+msgstr ""
+
+#: ../src/obj-gear.c:421
+#, c-format
+msgid "Your %s is damaged!"
+msgstr ""
+
+#: ../src/obj-gear.c:623 ../src/obj-gear.c:1124
+#, c-format
+msgid "You no longer have the %s (%c)."
+msgstr ""
+
+#: ../src/obj-gear.c:796
+#, c-format
+msgid "You have %d charge%s remaining."
+msgstr ""
+
+#: ../src/obj-gear.c:881
+msgid "Mushrooms for breakfast!"
+msgstr ""
+
+#: ../src/obj-gear.c:984
+#, c-format
+msgid "You are wielding %s (%c)."
+msgstr ""
+
+#: ../src/obj-gear.c:986
+#, c-format
+msgid "You are shooting with %s (%c)."
+msgstr ""
+
+#: ../src/obj-gear.c:988
+#, c-format
+msgid "Your light source is %s (%c)."
+msgstr ""
+
+#: ../src/obj-gear.c:990
+#, c-format
+msgid "You are wearing %s (%c)."
+msgstr ""
+
+#: ../src/obj-gear.c:1002
+msgid "Oops! It feels deathly cold!"
+msgstr ""
+
 #: ../src/obj-gear.c:1118
 #, c-format
 msgid "You drop %s (%c)."
 msgstr ""
 
-#: ../src/obj-gear.c:1124
+#: ../src/obj-gear.c:1312
+msgid "You combine some items in your pack."
+msgstr ""
+
+#: ../src/obj-gear.c:1353
+msgid "Your pack overflows!"
+msgstr ""
+
+#: ../src/obj-gear.c:1373
 #, c-format
-msgid "You no longer have the %s (%c)."
+msgid "You drop %s."
 msgstr ""
 
 #: ../src/obj-gear.c:1380
@@ -1300,7 +1358,7 @@ msgstr ""
 msgid "is"
 msgstr ""
 
-#: ../src/obj-pile.c:1278
+#: ../src/obj-pile.c:1278 ../src/obj-slays.c:380
 msgid "s"
 msgstr ""
 

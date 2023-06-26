@@ -7,7 +7,9 @@ CheckOptions:
     value: >
       assert;
       _;
+      _C;
       N_;
+      _GAMEDATA_C;
       gettext;
       lookup_trap;
       equipped_item_by_slot_name:2;
@@ -28,4 +30,4 @@ CheckOptions:
       pile_check_integrity:1;
       path_build
   - key: extra-i18n-string.SkipPattern
-    value: '^$|^%s$|^[[=NUL=][=newline=]]$|^%s[[=newline=]]$'
+    value: '^$|^%s$|^[[=NUL=][=newline=]]$|^%s[[=newline=]]$|^abcdefgimnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$'

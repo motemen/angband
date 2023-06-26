@@ -375,9 +375,9 @@ void improve_attack_modifier(struct player *p, struct object *obj,
 			if (best_mult < mult) {
 				best_mult = mult;
 				*brand_used = i;
-				my_strcpy(verb, b->verb, 20);
+				my_strcpy(verb, _GAMEDATA_C("brand", b->verb), 20);
 				if (range)
-					my_strcat(verb, "s", 20);
+					my_strcat(verb, _("s"), 20);
 			}
 		}
 	}

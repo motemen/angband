@@ -214,7 +214,8 @@ msgid "You see %s."
 msgstr "%sがある。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:697
+#: ../src/cmd-obj.c:697 ../src/obj-gear.c:626 ../src/obj-gear.c:914
+#: ../src/obj-gear.c:1158
 #, fuzzy, c-format
 msgid "You have %s (1st %c)."
 msgstr ""
@@ -224,14 +225,11 @@ msgstr ""
 "%s(%c)を手に入れた。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/cmd-obj.c:699
-#, fuzzy, c-format
+#: ../src/cmd-obj.c:699 ../src/obj-gear.c:628 ../src/obj-gear.c:917
+#: ../src/obj-gear.c:1154 ../src/obj-gear.c:1160
+#, c-format
 msgid "You have %s (%c)."
-msgstr ""
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"%s(%c)を取った。\n"
-"#-#-#-#-#  -  #-#-#-#-#\n"
-"%s(%c)を手に入れた。"
+msgstr "%s(%c)を手に入れた。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/cmd-obj.c:752
@@ -1239,9 +1237,10 @@ msgstr "%sを破壊した。"
 msgid "You have slain %s."
 msgstr "%sを殺した。"
 
+# だいぶ苦しい
 #: ../src/obj-desc.c:187
 msgid "no more "
-msgstr "もう"
+msgstr "(もう持っていない)"
 
 #: ../src/obj-desc.c:189
 #, c-format
@@ -1378,15 +1377,87 @@ msgid " {ignore}"
 msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
+#: ../src/obj-gear.c:419
+#, c-format
+msgid "Your %s is unaffected!"
+msgstr "しかし%sには効果がなかった！"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/obj-gear.c:421
+#, fuzzy, c-format
+msgid "Your %s is damaged!"
+msgstr "%sが酸で腐食した！"
+
+#: ../src/obj-gear.c:623 ../src/obj-gear.c:1124
+#, c-format
+msgid "You no longer have the %s (%c)."
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/obj-gear.c:796
+#, fuzzy, c-format
+msgid "You have %d charge%s remaining."
+msgstr "この%sにはもう魔力が残っていない。"
+
+#: ../src/obj-gear.c:881
+msgid "Mushrooms for breakfast!"
+msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/obj-gear.c:984
+#, fuzzy, c-format
+msgid "You are wielding %s (%c)."
+msgstr "%s(%c)を装備した。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/obj-gear.c:986
+#, c-format
+msgid "You are shooting with %s (%c)."
+msgstr "%s(%c)を射撃用に装備した。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/obj-gear.c:988
+#, c-format
+msgid "Your light source is %s (%c)."
+msgstr "%s(%c)を光源にした。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/obj-gear.c:990
+#, c-format
+msgid "You are wearing %s (%c)."
+msgstr "%s(%c)を装備した。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/obj-gear.c:1002
+msgid "Oops! It feels deathly cold!"
+msgstr "うわ！ すさまじく冷たい！"
+
+# From 変愚蛮怒 3.0.0Alpha68
 #: ../src/obj-gear.c:1118
 #, c-format
 msgid "You drop %s (%c)."
 msgstr "%s (%c)を落とした。"
 
-#: ../src/obj-gear.c:1124
-#, c-format
-msgid "You no longer have the %s (%c)."
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/obj-gear.c:1312
+msgid "You combine some items in your pack."
+msgstr "ザックの中のアイテムをまとめ直した。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/obj-gear.c:1353
+#, fuzzy
+msgid "Your pack overflows!"
 msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"ザックからアイテムがあふれた！\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"ザックからアイテムがあふれてしまった！"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/obj-gear.c:1373
+#, fuzzy, c-format
+msgid "You drop %s."
+msgstr "%s (%c)を落とした。"
 
 #: ../src/obj-gear.c:1380
 #, c-format
@@ -1503,7 +1574,7 @@ msgstr ""
 "何かの"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/obj-pile.c:1278
+#: ../src/obj-pile.c:1278 ../src/obj-slays.c:380
 #, fuzzy
 msgid "s"
 msgstr "の"
@@ -7636,22 +7707,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "%s(%c)を両手で構えた。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You are shooting with %s (%c)."
-#~ msgstr "%s(%c)を射撃用に装備した。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Your light source is %s (%c)."
-#~ msgstr "%s(%c)を光源にした。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You are wearing %s (%c)."
-#~ msgstr "%s(%c)を装備した。"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Oops! It feels deathly cold!"
-#~ msgstr "うわ！ すさまじく冷たい！"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You are not wearing anything to take off."
 #~ msgstr "はずせる装備がない。"
 
@@ -10645,10 +10700,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "ザックに入っている"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You combine some items in your pack."
-#~ msgstr "ザックの中のアイテムをまとめ直した。"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You reorder some items in your pack."
 #~ msgstr "ザックの中のアイテムを並べ直した。"
 
@@ -10679,15 +10730,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "'/'"
 #~ msgstr "'/'"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "Your pack overflows!"
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "ザックからアイテムがあふれた！\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "ザックからアイテムがあふれてしまった！"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You no longer have any room for the objects on the floor."
@@ -23819,14 +23861,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Your %s is already fully corroded!"
 #~ msgstr "%sは既にボロボロだ！"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Your %s is unaffected!"
-#~ msgstr "しかし%sには効果がなかった！"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "Your %s is corroded!"
-#~ msgstr "%sが酸で腐食した！"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "The attack cuts your shield of invulnerability open!"

@@ -184,6 +184,9 @@ static const char *make_obj_desc_name_prefix(const struct object *obj,
 		uint16_t number)
 {
 	if (number == 0) {
+		// FIXME[i18n]: In English, message is constructed like this:
+		// "you have" + "no more" + <object name>
+		// But other languages can have different word order.
 		return _("no more ");
 	} else if (number > 1) {
 		return format(_("%u "), number);
