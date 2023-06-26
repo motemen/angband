@@ -27,6 +27,24 @@
 			"problemMatcher": [
 				"$gcc"
 			]
+		},
+		{
+			"label": "Build libExtraI18nStringCheck.so",
+			"type": "shell",
+			"group": "none",
+			"command": "mkdir -p .vscode/clang-tidy-check-extra-i18n-string && cd .vscode/clang-tidy-check-extra-i18n-string && curl -L https://github.com/motemen/clang-tidy-check-extra-i18n-string/archive/refs/tags/v0.4.0.tar.gz | tar --strip-components=1 -xvzf - && cmake -S . -B build && cmake --build build && cp -v build/libExtraI18nStringCheck_*.so libExtraI18nStringCheck.so",
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "Run clang-tidy (extra-i18n-string)",
+			"type": "shell",
+			"group": "none",
+			"command": "clang-tidy -load=.vscode/clang-tidy-check-extra-i18n-string/libExtraI18nStringCheck.so -config-file .github/workflows/clang-tidy ${file} -- -DUSE_LOCALE",
+			"problemMatcher": [
+				"$gcc"
+			]
 		}
 	]
 }
