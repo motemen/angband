@@ -1151,13 +1151,13 @@ void inven_drop(struct object *obj, int amt)
 			ODESC_PREFIX | ODESC_FULL | ODESC_ALTNUM |
 			(total << 16), player);
 		if (!first) {
-			msg(_("You have %s (%c)."), name, label);
+			msg(ngettext("You have %s (%c).", "You have %s (%c).", total), name, label);
 		} else {
 			label = gear_to_label(player, first);
 			if (total > first->number) {
 				msg(_("You have %s (1st %c)."), name, label);
 			} else {
-				msg(_("You have %s (%c)."), name, label);
+				msg(ngettext("You have %s (%c).", "You have %s (%c).", total), name, label);
 			}
 		}
 	}

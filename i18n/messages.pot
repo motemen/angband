@@ -6,11 +6,11 @@ msgstr ""
 msgid "The decoy is destroyed!"
 msgstr ""
 
-#: ../src/cave-square.c:1453 ../src/obj-desc.c:211
+#: ../src/cave-square.c:1453 ../src/obj-desc.c:214
 msgid "an "
 msgstr ""
 
-#: ../src/cave-square.c:1453 ../src/obj-desc.c:213
+#: ../src/cave-square.c:1453 ../src/obj-desc.c:216
 msgid "a "
 msgstr ""
 
@@ -124,19 +124,20 @@ msgstr ""
 msgid "Really take off %s? "
 msgstr ""
 
-#: ../src/cmd-obj.c:334
+#: ../src/cmd-obj.c:334 ../src/obj-gear.c:1045
 msgid "You were wielding"
 msgstr ""
 
-#: ../src/cmd-obj.c:337 ../src/cmd-obj.c:340
+#: ../src/cmd-obj.c:337 ../src/cmd-obj.c:340 ../src/obj-gear.c:1047
+#: ../src/obj-gear.c:1049
 msgid "You were holding"
 msgstr ""
 
-#: ../src/cmd-obj.c:343
+#: ../src/cmd-obj.c:343 ../src/obj-gear.c:1051
 msgid "You were wearing"
 msgstr ""
 
-#: ../src/cmd-obj.c:348
+#: ../src/cmd-obj.c:348 ../src/obj-gear.c:1062
 #, c-format
 msgid "%s %s (%c)."
 msgstr ""
@@ -157,179 +158,177 @@ msgstr ""
 msgid "You activate it."
 msgstr ""
 
-#: ../src/cmd-obj.c:688
-#, c-format
-msgctxt "nomore"
-msgid "You see %s."
-msgstr ""
-
-#: ../src/cmd-obj.c:690 ../src/cmd-obj.c:693 ../src/obj-pile.c:869
+#: ../src/cmd-obj.c:687 ../src/obj-pile.c:869
 #, c-format
 msgid "You see %s."
-msgstr ""
+msgid_plural "You see %s."
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../src/cmd-obj.c:697 ../src/obj-gear.c:626 ../src/obj-gear.c:914
+#: ../src/cmd-obj.c:690 ../src/obj-gear.c:626 ../src/obj-gear.c:914
 #: ../src/obj-gear.c:1158
 #, c-format
 msgid "You have %s (1st %c)."
 msgstr ""
 
-#: ../src/cmd-obj.c:699 ../src/obj-gear.c:628 ../src/obj-gear.c:917
+#: ../src/cmd-obj.c:692 ../src/obj-gear.c:628 ../src/obj-gear.c:917
 #: ../src/obj-gear.c:1154 ../src/obj-gear.c:1160
 #, c-format
 msgid "You have %s (%c)."
-msgstr ""
+msgid_plural "You have %s (%c)."
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../src/cmd-obj.c:752
+#: ../src/cmd-obj.c:745
 msgid "Read which scroll? "
 msgstr ""
 
-#: ../src/cmd-obj.c:753
+#: ../src/cmd-obj.c:746
 msgid "You have no scrolls to read."
 msgstr ""
 
-#: ../src/cmd-obj.c:773
+#: ../src/cmd-obj.c:766
 msgid "Use which staff? "
 msgstr ""
 
-#: ../src/cmd-obj.c:774
+#: ../src/cmd-obj.c:767
 msgid "You have no staves to use."
 msgstr ""
 
-#: ../src/cmd-obj.c:779
+#: ../src/cmd-obj.c:772
 msgid "That staff has no charges."
 msgstr ""
 
-#: ../src/cmd-obj.c:799
+#: ../src/cmd-obj.c:792
 msgid "Aim which wand? "
 msgstr ""
 
-#: ../src/cmd-obj.c:800
+#: ../src/cmd-obj.c:793
 msgid "You have no wands to aim."
 msgstr ""
 
-#: ../src/cmd-obj.c:805
+#: ../src/cmd-obj.c:798
 msgid "That wand has no charges."
 msgstr ""
 
-#: ../src/cmd-obj.c:825
+#: ../src/cmd-obj.c:818
 msgid "Zap which rod? "
 msgstr ""
 
-#: ../src/cmd-obj.c:826
+#: ../src/cmd-obj.c:819
 msgid "You have no rods to zap."
 msgstr ""
 
-#: ../src/cmd-obj.c:831
+#: ../src/cmd-obj.c:824
 msgid "That rod is still charging."
 msgstr ""
 
-#: ../src/cmd-obj.c:851
+#: ../src/cmd-obj.c:844
 msgid "Activate which item? "
 msgstr ""
 
-#: ../src/cmd-obj.c:852
+#: ../src/cmd-obj.c:845
 msgid "You have no items to activate."
 msgstr ""
 
-#: ../src/cmd-obj.c:857
+#: ../src/cmd-obj.c:850
 msgid "That item is still charging."
 msgstr ""
 
-#: ../src/cmd-obj.c:873
+#: ../src/cmd-obj.c:866
 msgid "Eat which food? "
 msgstr ""
 
-#: ../src/cmd-obj.c:874
+#: ../src/cmd-obj.c:867
 msgid "You have no food to eat."
 msgstr ""
 
-#: ../src/cmd-obj.c:894
+#: ../src/cmd-obj.c:887
 msgid "Quaff which potion? "
 msgstr ""
 
-#: ../src/cmd-obj.c:895
+#: ../src/cmd-obj.c:888
 msgid "You have no potions from which to quaff."
 msgstr ""
 
-#: ../src/cmd-obj.c:915
+#: ../src/cmd-obj.c:908
 msgid "Use which item? "
 msgstr ""
 
-#: ../src/cmd-obj.c:916
+#: ../src/cmd-obj.c:909
 msgid "You have no items to use."
 msgstr ""
 
-#: ../src/cmd-obj.c:933
+#: ../src/cmd-obj.c:926
 msgid "Equip the item to use it."
 msgstr ""
 
-#: ../src/cmd-obj.c:936
+#: ../src/cmd-obj.c:929
 msgid "The item cannot be used at the moment"
 msgstr ""
 
-#: ../src/cmd-obj.c:952
+#: ../src/cmd-obj.c:945
 msgid "You fuel your lamp."
 msgstr ""
 
-#: ../src/cmd-obj.c:957
+#: ../src/cmd-obj.c:950
 msgid "Your lamp is full."
 msgstr ""
 
-#: ../src/cmd-obj.c:1020
+#: ../src/cmd-obj.c:1013
 msgid "You are not wielding a light."
 msgstr ""
 
-#: ../src/cmd-obj.c:1024
+#: ../src/cmd-obj.c:1017
 msgid "Your light cannot be refilled."
 msgstr ""
 
-#: ../src/cmd-obj.c:1030
+#: ../src/cmd-obj.c:1023
 msgid "Refuel with with fuel source? "
 msgstr ""
 
-#: ../src/cmd-obj.c:1031
+#: ../src/cmd-obj.c:1024
 msgid "You have nothing you can refuel with."
 msgstr ""
 
-#: ../src/cmd-obj.c:1066
+#: ../src/cmd-obj.c:1059
 msgid "cast"
 msgstr ""
 
-#: ../src/cmd-obj.c:1068
+#: ../src/cmd-obj.c:1061
 msgid "There are no spells you can cast."
 msgstr ""
 
-#: ../src/cmd-obj.c:1070
+#: ../src/cmd-obj.c:1063
 msgid "That book has no spells that you can cast."
 msgstr ""
 
-#: ../src/cmd-obj.c:1083
+#: ../src/cmd-obj.c:1076
 #, c-format
 msgid "You do not have enough mana to %s this %s."
 msgstr ""
 
-#: ../src/cmd-obj.c:1089
+#: ../src/cmd-obj.c:1082
 msgid "Attempt it anyway? "
 msgstr ""
 
-#: ../src/cmd-obj.c:1124
+#: ../src/cmd-obj.c:1117
 msgid "study"
 msgstr ""
 
-#: ../src/cmd-obj.c:1126 ../src/cmd-obj.c:1152
+#: ../src/cmd-obj.c:1119 ../src/cmd-obj.c:1145
 msgid "You cannot learn any new spells from the books you have."
 msgstr ""
 
-#: ../src/cmd-obj.c:1128
+#: ../src/cmd-obj.c:1121
 msgid "That book has no spells that you can learn."
 msgstr ""
 
-#: ../src/cmd-obj.c:1151
+#: ../src/cmd-obj.c:1144
 msgid "Study which book? "
 msgstr ""
 
-#: ../src/cmd-obj.c:1171
+#: ../src/cmd-obj.c:1164
 #, c-format
 msgid "You cannot learn any %ss in that book."
 msgstr ""
@@ -1070,136 +1069,136 @@ msgstr ""
 msgid "You have slain %s."
 msgstr ""
 
-#: ../src/obj-desc.c:187
+#: ../src/obj-desc.c:190
 msgid "no more "
 msgstr ""
 
-#: ../src/obj-desc.c:189
+#: ../src/obj-desc.c:192
 #, c-format
 msgid "%u "
 msgstr ""
 
-#: ../src/obj-desc.c:192
+#: ../src/obj-desc.c:195
 msgctxt "random_artifact"
 msgid "the "
 msgstr ""
 
-#: ../src/obj-desc.c:194
+#: ../src/obj-desc.c:197
 msgctxt "fixed_artifact"
 msgid "the "
 msgstr ""
 
-#: ../src/obj-desc.c:343
+#: ../src/obj-desc.c:346
 #, c-format
 msgctxt "named_artifact"
 msgid "%s %s"
 msgstr ""
 
-#: ../src/obj-desc.c:345
+#: ../src/obj-desc.c:348
 #, c-format
 msgctxt "artifact"
 msgid "%s %s"
 msgstr ""
 
-#: ../src/obj-desc.c:349
+#: ../src/obj-desc.c:352
 #, c-format
 msgid "%s %s"
 msgstr ""
 
-#: ../src/obj-desc.c:353
+#: ../src/obj-desc.c:356
 #, c-format
 msgid "%s '%s'"
 msgstr ""
 
-#: ../src/obj-desc.c:355
+#: ../src/obj-desc.c:358
 #, c-format
 msgid "%s of %s"
 msgstr ""
 
-#: ../src/obj-desc.c:393
+#: ../src/obj-desc.c:396
 #, c-format
 msgid " (%s)"
 msgstr ""
 
-#: ../src/obj-desc.c:410
+#: ../src/obj-desc.c:413
 #, c-format
 msgid " (%dd%d)"
 msgstr ""
 
-#: ../src/obj-desc.c:415
+#: ../src/obj-desc.c:418
 #, c-format
 msgid " (x%d)"
 msgstr ""
 
-#: ../src/obj-desc.c:462
+#: ../src/obj-desc.c:465
 #, c-format
 msgid " (%d turns)"
 msgstr ""
 
-#: ../src/obj-desc.c:520
+#: ../src/obj-desc.c:523
 #, c-format
 msgid " (%d charge%s)"
 msgstr ""
 
-#: ../src/obj-desc.c:524
+#: ../src/obj-desc.c:527
 #, c-format
 msgid " (%d charging)"
 msgstr ""
 
-#: ../src/obj-desc.c:527
+#: ../src/obj-desc.c:530
 msgid " (charging)"
 msgstr ""
 
-#: ../src/obj-desc.c:549
+#: ../src/obj-desc.c:552
 msgid "empty"
 msgstr ""
 
-#: ../src/obj-desc.c:551
+#: ../src/obj-desc.c:554
 msgid "tried"
 msgstr ""
 
-#: ../src/obj-desc.c:556
+#: ../src/obj-desc.c:559
 msgid "cursed"
 msgstr ""
 
-#: ../src/obj-desc.c:560
+#: ../src/obj-desc.c:563
 msgid "ignore"
 msgstr ""
 
-#: ../src/obj-desc.c:564
+#: ../src/obj-desc.c:567
 msgid "??"
 msgstr ""
 
-#: ../src/obj-desc.c:591
+#: ../src/obj-desc.c:594
 msgid " {unseen}"
 msgstr ""
 
-#: ../src/obj-desc.c:593
+#: ../src/obj-desc.c:596
 msgid " {??}"
 msgstr ""
 
-#: ../src/obj-desc.c:595
+#: ../src/obj-desc.c:598
 msgid " {cursed}"
 msgstr ""
 
-#: ../src/obj-desc.c:640
+#: ../src/obj-desc.c:643
 msgid "(nothing)"
 msgstr ""
 
-#: ../src/obj-desc.c:645
+#: ../src/obj-desc.c:648
 msgid "an unknown item"
 msgstr ""
 
-#: ../src/obj-desc.c:646
+#: ../src/obj-desc.c:649
 msgid "unknown item"
 msgstr ""
 
-#: ../src/obj-desc.c:650
+#: ../src/obj-desc.c:653
 #, c-format
 msgid "%d gold pieces worth of %s%s"
 msgstr ""
 
-#: ../src/obj-desc.c:652
+#: ../src/obj-desc.c:655
 msgid " {ignore}"
 msgstr ""
 

@@ -675,23 +675,16 @@ static void use_aux(struct command *cmd, struct object *obj, enum use use,
 			 */
 			char name[80];
 
+			uint16_t effective_number = (number + ((used && use == USE_SINGLE) ?
+				-1 : 0));
 			object_desc(name, sizeof(name), work_obj,
 				ODESC_PREFIX | ODESC_FULL | ODESC_ALTNUM |
-				((number + ((used && use == USE_SINGLE) ?
-				-1 : 0)) << 16), player);
+				(effective_number << 16), player);
 			if (from_floor) {
 				/* Print a message */
 				// NOTE[i18n]: "You see no more item." cannot be directly
 				// translated in Japanese in the form same as "You see (a|N) item[s]."
-				#ifdef USE_LOCALE
-				if ((number + ((used && use == USE_SINGLE) ? -1 : 0)) == 0) {
-					msg(_C("nomore", "You see %s."), name);
-				} else {
-					msg(_("You see %s."), name);
-				}
-				#else
-				msg(_("You see %s."), name);
-				#endif
+				msg(ngettext("You see %s.", "You see %s.", effective_number), name);
 			} else if (first_remainder) {
 				label = gear_to_label(player, first_remainder);
 				msg(_("You have %s (1st %c)."), name, label);
