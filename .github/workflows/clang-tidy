@@ -11,6 +11,7 @@ CheckOptions:
       N_;
       _GAMEDATA_C;
       gettext;
+      ngettext;
       lookup_trap;
       equipped_item_by_slot_name:2;
       cmd_get_target:2;
