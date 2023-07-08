@@ -204,13 +204,13 @@ static int blow_color(struct player *p, int blow_idx)
 	}
 
 	/* Now look at what player attributes can protect from the effects */
-	if (streq(blow->effect_type, "theft")) {
+	if (streq(blow->effect_type, "theft")) { // NOLINT: extra-i18n-string
 		if (p->lev + adj_dex_safe[p->known_state.stat_ind[STAT_DEX]] >= 100) {
 			return blow->lore_attr_resist;
 		} else {
 			return blow->lore_attr;
 		}
-	} else if (streq(blow->effect_type, "drain")) {
+	} else if (streq(blow->effect_type, "drain")) { // NOLINT: extra-i18n-string
 		int i;
 		bool found = false;
 		for (i = 0; i < z_info->pack_size; i++) {
@@ -225,7 +225,7 @@ static int blow_color(struct player *p, int blow_idx)
 		} else {
 			return blow->lore_attr_resist;
 		}
-	} else if (streq(blow->effect_type, "eat-food")) {
+	} else if (streq(blow->effect_type, "eat-food")) { // NOLINT: extra-i18n-string
 		int i;
 		bool found = false;
 		for (i = 0; i < z_info->pack_size; i++) {
@@ -240,7 +240,7 @@ static int blow_color(struct player *p, int blow_idx)
 		} else {
 			return blow->lore_attr_resist;
 		}
-	} else if (streq(blow->effect_type, "eat-light")) {
+	} else if (streq(blow->effect_type, "eat-light")) { // NOLINT: extra-i18n-string
 		int light_slot = slot_by_name(p, "light");
 		struct object *obj = slot_object(p, light_slot);
 		if (obj && obj->timeout && !of_has(obj->flags, OF_NO_FUEL)) {
@@ -248,19 +248,19 @@ static int blow_color(struct player *p, int blow_idx)
 		} else {
 			return blow->lore_attr_resist;
 		}
-	} else if (streq(blow->effect_type, "element")) {
+	} else if (streq(blow->effect_type, "element")) { // NOLINT: extra-i18n-string
 		if (p->known_state.el_info[blow->resist].res_level > 0) {
 			return blow->lore_attr_resist;
 		} else {
 			return blow->lore_attr;
 		}
-	} else if (streq(blow->effect_type, "flag")) {
+	} else if (streq(blow->effect_type, "flag")) { // NOLINT: extra-i18n-string
 		if (of_has(p->known_state.flags, blow->resist)) {
 			return blow->lore_attr_resist;
 		} else {
 			return blow->lore_attr;
 		}
-	} else if (streq(blow->effect_type, "all_sustains")) {
+	} else if (streq(blow->effect_type, "all_sustains")) { // NOLINT: extra-i18n-string
 		if (of_has(p->known_state.flags, OF_SUST_STR) &&
 			of_has(p->known_state.flags, OF_SUST_INT) &&
 			of_has(p->known_state.flags, OF_SUST_WIS) &&
@@ -652,7 +652,7 @@ static void lore_adjective_speed(textblock *tb, const struct monster_race *race)
 static void lore_multiplier_speed(textblock *tb, const struct monster_race *race)
 {
 	// moves at 2.3x normal speed (0.9x your current speed)
-	textblock_append(tb, "at ");
+	textblock_append(tb, _("at "));
 
 	char buf[8] = "";
 	int multiplier = 10 * extract_energy[race->speed] / extract_energy[110];
@@ -660,7 +660,7 @@ static void lore_multiplier_speed(textblock *tb, const struct monster_race *race
 	uint8_t dec_mul = multiplier % 10;
 	uint8_t attr = COLOUR_ORANGE;
 
-	strnfmt(buf, sizeof(buf), "%d.%dx", int_mul, dec_mul);
+	strnfmt(buf, sizeof(buf), _("%d.%dx"), int_mul, dec_mul);
 	textblock_append_c(tb, COLOUR_L_BLUE, "%s", buf);
 
 	textblock_append(tb, _(" normal speed, which is "));
@@ -669,11 +669,11 @@ static void lore_multiplier_speed(textblock *tb, const struct monster_race *race
 	int_mul = multiplier / 100;
 	dec_mul = multiplier % 100;
 	if (!dec_mul) {
-		strnfmt(buf, sizeof(buf), "%dx", int_mul);
+		strnfmt(buf, sizeof(buf), _("%dx"), int_mul);
 	} else if (!(dec_mul % 10)) {
-		strnfmt(buf, sizeof(buf), "%d.%dx", int_mul, dec_mul / 10);
+		strnfmt(buf, sizeof(buf), _("%d.%dx"), int_mul, dec_mul / 10);
 	} else {
-		strnfmt(buf, sizeof(buf), "%d.%02dx", int_mul, dec_mul);
+		strnfmt(buf, sizeof(buf), _("%d.%02dx"), int_mul, dec_mul);
 	}
 
 	if (player->state.speed > race->speed) {

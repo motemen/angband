@@ -56,6 +56,7 @@ typedef enum {
 
 static blow_tag_t blow_tag_lookup(const char *tag)
 {
+	// NOLINTBEGIN(extra-i18n-string)
 	if (strncmp(tag, "target", 6) == 0)
 		return BLOW_TAG_TARGET;
 	else if (strncmp(tag, "oftarget", 8) == 0)
@@ -64,6 +65,7 @@ static blow_tag_t blow_tag_lookup(const char *tag)
 		return BLOW_TAG_HAS;
 	else
 		return BLOW_TAG_NONE;
+	// NOLINTEND(extra-i18n-string)
 }
 
 /**
@@ -74,7 +76,7 @@ static blow_tag_t blow_tag_lookup(const char *tag)
  */
 char *monster_blow_method_action(struct blow_method *method, int midx)
 {
-	const char punct[] = ".!?;:,'";
+	const char punct[] = ".!?;:,'"; // NOLINT(extra-i18n-string)
 	char buf[1024] = "\0";
 	const char *next;
 	const char *s;
@@ -101,7 +103,7 @@ char *monster_blow_method_action(struct blow_method *method, int midx)
 	next = strchr(in_cursor, '{');
 	while (next) {
 		/* Copy the text leading up to this { */
-		strnfcat(buf, 1024, &end, "%.*s", (int) (next - in_cursor),
+		strnfcat(buf, 1024, &end, "%.*s", (int) (next - in_cursor), // NOLINT(extra-i18n-string)
 			in_cursor);
 
 		s = next + 1;
@@ -145,10 +147,11 @@ char *monster_blow_method_action(struct blow_method *method, int midx)
 					break;
 				}
 				case BLOW_TAG_HAS: {
+					// NOTE[i18n]: actually this part is not always required for all languages
 					if (midx > 0) {
-						strnfcat(buf, sizeof(buf), &end, "has");
+						strnfcat(buf, sizeof(buf), &end, _("has"));
 					} else {
-						strnfcat(buf, sizeof(buf), &end, "have");
+						strnfcat(buf, sizeof(buf), &end, _("have"));
 					}
 					break;
 				}
@@ -913,7 +916,7 @@ static void melee_effect_handler_CONFUSE(melee_effect_handler_context_t *context
 static void melee_effect_handler_TERRIFY(melee_effect_handler_context_t *context)
 {
 	melee_effect_timed(context, TMD_AFRAID, 3 + randint1(context->rlev),
-					   OF_PROT_FEAR, true, "You stand your ground!");
+					   OF_PROT_FEAR, true, _("You stand your ground!"));
 }
 
 /**
@@ -926,7 +929,7 @@ static void melee_effect_handler_PARALYZE(melee_effect_handler_context_t *contex
 		context->damage = 1;
 
 	melee_effect_timed(context, TMD_PARALYZED, 3 + randint1(context->rlev),
-					   OF_FREE_ACT, true, "You resist the effects!");
+					   OF_FREE_ACT, true, _("You resist the effects!"));
 }
 
 /**
@@ -1095,6 +1098,7 @@ static void melee_effect_handler_BLACK_BREATH(melee_effect_handler_context_t *co
  * ------------------------------------------------------------------------ */
 melee_effect_handler_f melee_handler_for_blow_effect(const char *name)
 {
+	// NOLINTBEGIN(extra-i18n-string)
 	static const struct effect_handler_s {
 		const char *name;
 		melee_effect_handler_f function;
@@ -1131,6 +1135,7 @@ melee_effect_handler_f melee_handler_for_blow_effect(const char *name)
 		{ "BLACK_BREATH", melee_effect_handler_BLACK_BREATH },
 		{ NULL, NULL },
 	};
+	// NOLINTEND(extra-i18n-string)
 	const struct effect_handler_s *current = effect_handlers;
 
 	while (current->name != NULL && current->function != NULL) {

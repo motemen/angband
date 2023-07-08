@@ -197,7 +197,7 @@ void do_cmd_inscribe(struct command *cmd)
 
 	if (cmd_get_string(cmd, "inscription", &str,
 			quark_str(obj->note) /* Default */,
-			prompt, "Inscribe with what? ") != CMD_OK)
+			prompt, _("Inscribe with what? ")) != CMD_OK)
 		return;
 
 	obj->note = quark_add(str);

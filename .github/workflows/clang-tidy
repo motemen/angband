@@ -12,6 +12,7 @@ CheckOptions:
       _GAMEDATA_C;
       gettext;
       ngettext;
+      libintl_ngettext;
       lookup_trap;
       equipped_item_by_slot_name:2;
       cmd_get_target:2;
@@ -29,6 +30,9 @@ CheckOptions:
       check_for_inscrip:2;
       check_for_inscrip_with_int:2;
       pile_check_integrity:1;
-      path_build
+      path_build;
+      slot_by_name:2;
+      effect_simple:3;
+      money_kind:1
   - key: extra-i18n-string.SkipPattern
-    value: '^$|^%s$|^[[=NUL=][=newline=]]$|^%s[[=newline=]]$|^abcdefgimnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$'
+    value: '^$|^%[sdu]$|^[[=NUL=][=newline=]]$|^%s[[=newline=]]$|^abcdefgimnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$'

@@ -589,7 +589,7 @@ bool make_attack_normal(struct monster *mon, struct player *p)
 
 		/* Monster hits player */
 		assert(effect);
-		if (streq(effect->name, "NONE") ||
+		if (streq(effect->name, "NONE") || // NOLINT(extra-i18n-string)
 			check_hit(p, chance_of_monster_hit(mon, effect))) {
 			melee_effect_handler_f effect_handler;
 
@@ -633,7 +633,7 @@ bool make_attack_normal(struct monster *mon, struct player *p)
 			if (act) {
 				const char *fullstop = _(".");
 				// TODO[i18n]
-				if (suffix(act, "'") || suffix(act, "!")) {
+				if (suffix(act, _("'")) || suffix(act, _("!"))) {
 					fullstop = "";
 				}
 
@@ -823,7 +823,7 @@ bool monster_attack_monster(struct monster *mon, struct monster *t_mon)
 
 		/* Monster hits monster */
 		assert(effect);
-		if (streq(effect->name, "NONE") ||
+		if (streq(effect->name, "NONE") || // NOLINT(extra-i18n-string)
 			test_hit(chance_of_monster_hit(mon, effect), t_mon->race->ac)) {
 			melee_effect_handler_f effect_handler;
 
@@ -845,8 +845,8 @@ bool monster_attack_monster(struct monster *mon, struct monster *t_mon)
 
 			/* Message */
 			if (act) {
-				const char *fullstop = ".";
-				if (suffix(act, "'") || suffix(act, "!")) {
+				const char *fullstop = _(".");
+				if (suffix(act, _("'")) || suffix(act, _("!"))) {
 					fullstop = "";
 				}
 

@@ -46,6 +46,7 @@ typedef enum {
 
 static spell_tag_t spell_tag_lookup(const char *tag)
 {
+	// NOLINTBEGIN(extra-i18n-string)
 	if (strncmp(tag, "name", 4) == 0)
 		return SPELL_TAG_NAME;
 	else if (strncmp(tag, "pronoun", 7) == 0)
@@ -58,6 +59,7 @@ static spell_tag_t spell_tag_lookup(const char *tag)
 		return SPELL_TAG_OF_TYPE;
 	else
 		return SPELL_TAG_NONE;
+	// NOLINTEND(extra-i18n-string)
 }
 
 /**
