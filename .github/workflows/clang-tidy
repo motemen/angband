@@ -33,6 +33,8 @@ CheckOptions:
       path_build;
       slot_by_name:2;
       effect_simple:3;
-      money_kind:1
+      money_kind:1;
+      quit;
+      quit_fmt
   - key: extra-i18n-string.SkipPattern
     value: '^$|^%[sdu]$|^[[=NUL=][=newline=]]$|^%s[[=newline=]]$|^abcdefgimnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$'
