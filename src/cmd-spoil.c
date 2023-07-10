@@ -27,7 +27,7 @@
  */
 void do_cmd_spoil_artifact(struct command *cmd)
 {
-	spoil_artifact("artifact.spo");
+	spoil_artifact("artifact.spo"); // NOLINT(extra-i18n-string)
 }
 
 
@@ -36,7 +36,7 @@ void do_cmd_spoil_artifact(struct command *cmd)
  */
 void do_cmd_spoil_monster(struct command *cmd)
 {
-	spoil_mon_info("mon-info.spo");
+	spoil_mon_info("mon-info.spo"); // NOLINT(extra-i18n-string)
 }
 
 
@@ -46,7 +46,7 @@ void do_cmd_spoil_monster(struct command *cmd)
  */
 void do_cmd_spoil_monster_brief(struct command *cmd)
 {
-	spoil_mon_desc("mon-desc.spo");
+	spoil_mon_desc("mon-desc.spo"); // NOLINT(extra-i18n-string)
 }
 
 
@@ -55,5 +55,5 @@ void do_cmd_spoil_monster_brief(struct command *cmd)
  */
 void do_cmd_spoil_obj(struct command *cmd)
 {
-	spoil_obj_desc("obj-desc.spo");
+	spoil_obj_desc("obj-desc.spo"); // NOLINT(extra-i18n-string)
 }

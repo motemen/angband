@@ -1110,7 +1110,7 @@ static void monster_display_confused_move_msg(struct monster *mon,
 	if (monster_is_visible(mon) && monster_is_in_view(mon)) {
 		const char *m = square_feat(cave, new)->confused_msg;
 
-		msg("%s %s.", m_name, (m) ? _GAMEDATA_C("terrain", m) : _("stumbles"));
+		msg(_("%s %s."), m_name, (m) ? _GAMEDATA_C("terrain", m) : _("stumbles"));
 	}
 }
 
