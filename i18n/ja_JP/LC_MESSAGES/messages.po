@@ -79,7 +79,7 @@ msgstr "始動させた..."
 #: ../src/cmd-obj.c:80
 #, c-format
 msgid "You failed to %s properly."
-msgstr "うまく%sを使えなかった。"
+msgstr "うまく%sことができなかった。"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/cmd-obj.c:87
@@ -117,6 +117,12 @@ msgstr "銘を刻めるアイテムがない。"
 #, c-format
 msgid "Inscribing %s."
 msgstr "%sに銘を刻む。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/cmd-obj.c:200
+#, fuzzy
+msgid "Inscribe with what? "
+msgstr "どのアイテムに銘を刻みますか?"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/cmd-obj.c:244
@@ -222,7 +228,7 @@ msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/cmd-obj.c:692 ../src/obj-gear.c:628 ../src/obj-gear.c:917
-#: ../src/obj-gear.c:1154 ../src/obj-gear.c:1160
+#: ../src/obj-gear.c:1154 ../src/obj-gear.c:1160 ../src/obj-knowledge.c:1166
 #, c-format
 msgid "You have %s (%c)."
 msgid_plural "You have %s (%c)."
@@ -469,9 +475,19 @@ msgstr "%^sは呪文を唱えようとしたが失敗した。"
 msgid "%s is repelled."
 msgstr "%^sは殺された。"
 
-#: ../src/mon-attack.c:634
+#: ../src/mon-attack.c:634 ../src/mon-attack.c:848
 msgid "."
 msgstr "。"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-attack.c:636 ../src/mon-attack.c:849
+#, fuzzy
+msgid "'"
+msgstr "の"
+
+#: ../src/mon-attack.c:636 ../src/mon-attack.c:849
+msgid "!"
+msgstr ""
 
 #: ../src/mon-attack.c:641
 #, c-format
@@ -501,103 +517,170 @@ msgid "%s misses %s."
 msgstr "%2$sは%1$sの攻撃をかわした。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/mon-blows.c:131
+#: ../src/mon-blows.c:133
 msgid "you"
 msgstr "あなた"
 
-#: ../src/mon-blows.c:143
+#: ../src/mon-blows.c:145
 msgid "your"
 msgstr ""
 
-#: ../src/mon-blows.c:229
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-blows.c:152
+#, fuzzy
+msgid "has"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"混沌\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"カオス\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"カオス\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"混沌\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"カオス"
+
+#: ../src/mon-blows.c:154
+msgid "have"
+msgstr ""
+
+#: ../src/mon-blows.c:232
 #, c-format
 msgid "%s tries to steal %syour %s, but fails."
 msgstr ""
 
-#: ../src/mon-blows.c:230 ../src/mon-blows.c:235
+#: ../src/mon-blows.c:233 ../src/mon-blows.c:238
 msgid "one of "
 msgstr ""
 
-#: ../src/mon-blows.c:234
+#: ../src/mon-blows.c:237
 #, c-format
 msgid "%syour %s (%c) was stolen!"
 msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/mon-blows.c:366
+#: ../src/mon-blows.c:369
 msgid "You are covered in acid!"
 msgstr "酸を浴びせられた！"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/mon-blows.c:368
+#: ../src/mon-blows.c:371
 msgid "You are struck by electricity!"
 msgstr "電撃を浴びせられた！"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/mon-blows.c:370
+#: ../src/mon-blows.c:373
 msgid "You are enveloped in flames!"
 msgstr "全身が炎に包まれた！"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/mon-blows.c:372
+#: ../src/mon-blows.c:375
 msgid "You are covered with frost!"
 msgstr "全身が冷気で覆われた！"
 
-#: ../src/mon-blows.c:530
+#: ../src/mon-blows.c:533
 msgid "You keep hold of your life force!"
 msgstr ""
 
-#: ../src/mon-blows.c:535
+#: ../src/mon-blows.c:538
 msgid "You feel your life slipping away!"
 msgstr ""
 
-#: ../src/mon-blows.c:538
+#: ../src/mon-blows.c:541
 msgid "You feel your life draining away!"
 msgstr ""
 
-#: ../src/mon-blows.c:653
+#: ../src/mon-blows.c:656
 msgid "Energy drains from your pack!"
 msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/mon-blows.c:697
+#: ../src/mon-blows.c:700
 msgid "You quickly protect your money pouch!"
 msgstr "しかし素早く財布を守った！"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/mon-blows.c:708
+#: ../src/mon-blows.c:711
 msgid "Nothing was stolen."
 msgstr "しかし何も盗まれなかった。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/mon-blows.c:713
+#: ../src/mon-blows.c:716
 msgid "Your purse feels lighter."
 msgstr "財布が軽くなった気がする。"
 
-#: ../src/mon-blows.c:715
+#: ../src/mon-blows.c:718
 #, c-format
 msgid "%d coins were stolen!"
 msgstr ""
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/mon-blows.c:717
+#: ../src/mon-blows.c:720
 msgid "All of your coins were stolen!"
 msgstr "お金が全部盗まれた！"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#: ../src/mon-blows.c:765
+#: ../src/mon-blows.c:768
 msgid "You grab hold of your backpack!"
 msgstr "しかしあわててザックを取り返した！"
 
-#: ../src/mon-blows.c:816
+#: ../src/mon-blows.c:819
 #, c-format
 msgid "Your %s (%c) was eaten!"
 msgstr ""
 
-#: ../src/mon-blows.c:821
+#: ../src/mon-blows.c:824
 #, c-format
 msgid "One of your %s (%c) was eaten!"
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-blows.c:919
+msgid "You stand your ground!"
+msgstr "しかし恐怖に侵されなかった！"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-blows.c:932
+#, fuzzy
+msgid "You resist the effects!"
+msgstr ""
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"しかし効力を跳ね返した！\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"しかし効力を跳ね返した！\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"あなたは効力を跳ね返した！\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"しかし効力を跳ね返した！\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"しかし効力を跳ね返した！\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"しかし効力を跳ね返した！\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"しかし秘孔を跳ね返した！\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"しかし効力を跳ね返した！\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"しかし効力を跳ね返した！\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"しかし効力を跳ね返した！\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"しかし効力を跳ね返した！\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"しかし効力を跳ね返した！\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"しかし効力を跳ね返した！\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"しかし効力を跳ね返した！\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"しかし効力を跳ね返した！\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"しかし効力を跳ね返した！\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"しかし効力を跳ね返した！\n"
+"#-#-#-#-#  -  #-#-#-#-#\n"
+"しかし効力を跳ね返した！"
 
 #: ../src/mon-desc.c:205
 msgid "the "
@@ -699,13 +782,29 @@ msgstr "信じがたいほどゆっくりと"
 msgid "erroneously"
 msgstr "不規則に"
 
-#: ../src/mon-lore.c:641
+#: ../src/mon-lore.c:641 ../src/mon-lore.c:655
 msgid "at "
 msgstr ""
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-lore.c:663 ../src/mon-lore.c:674
+#, fuzzy, c-format
+msgid "%d.%dx"
+msgstr "%3d.%1d kg"
 
 #: ../src/mon-lore.c:666
 msgid " normal speed, which is "
 msgstr "通常のスピード、つまり"
+
+#: ../src/mon-lore.c:672
+#, fuzzy, c-format
+msgid "%dx"
+msgstr "%d"
+
+#: ../src/mon-lore.c:676
+#, c-format
+msgid "%d.%02dx"
+msgstr ""
 
 #: ../src/mon-lore.c:685
 msgid "the same as you"
@@ -1137,6 +1236,12 @@ msgstr "%d"
 #, c-format
 msgid " damage on each of %s turns.  "
 msgstr "ダメージをターン毎に与える。%.0s"
+
+# From 変愚蛮怒 3.0.0Alpha68
+#: ../src/mon-move.c:1113
+#, c-format
+msgid "%s %s."
+msgstr "%-28s : 期間 - %s "
 
 # From 変愚蛮怒 3.0.0Alpha68
 #: ../src/mon-move.c:1113
@@ -8578,47 +8683,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "%sを見つめた。"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "You resist the effects!"
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "しかし効力を跳ね返した！\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "しかし効力を跳ね返した！\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "あなたは効力を跳ね返した！\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "しかし効力を跳ね返した！\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "しかし効力を跳ね返した！\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "しかし効力を跳ね返した！\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "しかし秘孔を跳ね返した！\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "しかし効力を跳ね返した！\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "しかし効力を跳ね返した！\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "しかし効力を跳ね返した！\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "しかし効力を跳ね返した！\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "しかし効力を跳ね返した！\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "しかし効力を跳ね返した！\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "しかし効力を跳ね返した！\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "しかし効力を跳ね返した！\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "しかし効力を跳ね返した！\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "しかし効力を跳ね返した！\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "しかし効力を跳ね返した！"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid " starts moving faster."
 #~ msgstr "の動きが速くなった。"
 
@@ -14858,21 +14922,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 #~ msgstr "虚無"
 
 # From 変愚蛮怒 3.0.0Alpha68
-#, fuzzy
-#~ msgid "Chaos"
-#~ msgstr ""
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "混沌\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "カオス\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "カオス\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "混沌\n"
-#~ "#-#-#-#-#  -  #-#-#-#-#\n"
-#~ "カオス"
-
-# From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Confusion"
 #~ msgstr "混乱"
 
@@ -16431,10 +16480,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "However, you don't have eyes!"
 #~ msgstr "しかし、あなたには元々目はなかった！"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "You stand your ground!"
-#~ msgstr "しかし恐怖に侵されなかった！"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "You are unaffected!"
@@ -23340,10 +23385,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "     Your Current Magic:"
 #~ msgstr "    現在かかっている魔法     :"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "%s %s."
-#~ msgstr "%-28s : 期間 - %s "
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "Your weapon has been blessed by the gods."
@@ -32986,10 +33027,6 @@ msgstr "ダメージ修正をパーセンテージで表す（実験的）"
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "     Your Attributes:"
 #~ msgstr "        あなたの状態:"
-
-# From 変愚蛮怒 3.0.0Alpha68
-#~ msgid "%3d.%d lb"
-#~ msgstr "%3d.%1d kg"
 
 # From 変愚蛮怒 3.0.0Alpha68
 #~ msgid "        "

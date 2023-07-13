@@ -90,6 +90,10 @@ msgstr ""
 msgid "Inscribing %s."
 msgstr ""
 
+#: ../src/cmd-obj.c:200
+msgid "Inscribe with what? "
+msgstr ""
+
 #: ../src/cmd-obj.c:244
 msgid "Take off or unwield which item?"
 msgstr ""
@@ -172,7 +176,7 @@ msgid "You have %s (1st %c)."
 msgstr ""
 
 #: ../src/cmd-obj.c:692 ../src/obj-gear.c:628 ../src/obj-gear.c:917
-#: ../src/obj-gear.c:1154 ../src/obj-gear.c:1160
+#: ../src/obj-gear.c:1154 ../src/obj-gear.c:1160 ../src/obj-knowledge.c:1166
 #, c-format
 msgid "You have %s (%c)."
 msgid_plural "You have %s (%c)."
@@ -365,8 +369,16 @@ msgstr ""
 msgid "%s is repelled."
 msgstr ""
 
-#: ../src/mon-attack.c:634
+#: ../src/mon-attack.c:634 ../src/mon-attack.c:848
 msgid "."
+msgstr ""
+
+#: ../src/mon-attack.c:636 ../src/mon-attack.c:849
+msgid "'"
+msgstr ""
+
+#: ../src/mon-attack.c:636 ../src/mon-attack.c:849
+msgid "!"
 msgstr ""
 
 #: ../src/mon-attack.c:641
@@ -394,93 +406,109 @@ msgstr ""
 msgid "%s misses %s."
 msgstr ""
 
-#: ../src/mon-blows.c:131
+#: ../src/mon-blows.c:133
 msgid "you"
 msgstr ""
 
-#: ../src/mon-blows.c:143
+#: ../src/mon-blows.c:145
 msgid "your"
 msgstr ""
 
-#: ../src/mon-blows.c:229
+#: ../src/mon-blows.c:152
+msgid "has"
+msgstr ""
+
+#: ../src/mon-blows.c:154
+msgid "have"
+msgstr ""
+
+#: ../src/mon-blows.c:232
 #, c-format
 msgid "%s tries to steal %syour %s, but fails."
 msgstr ""
 
-#: ../src/mon-blows.c:230 ../src/mon-blows.c:235
+#: ../src/mon-blows.c:233 ../src/mon-blows.c:238
 msgid "one of "
 msgstr ""
 
-#: ../src/mon-blows.c:234
+#: ../src/mon-blows.c:237
 #, c-format
 msgid "%syour %s (%c) was stolen!"
 msgstr ""
 
-#: ../src/mon-blows.c:366
+#: ../src/mon-blows.c:369
 msgid "You are covered in acid!"
 msgstr ""
 
-#: ../src/mon-blows.c:368
+#: ../src/mon-blows.c:371
 msgid "You are struck by electricity!"
 msgstr ""
 
-#: ../src/mon-blows.c:370
+#: ../src/mon-blows.c:373
 msgid "You are enveloped in flames!"
 msgstr ""
 
-#: ../src/mon-blows.c:372
+#: ../src/mon-blows.c:375
 msgid "You are covered with frost!"
 msgstr ""
 
-#: ../src/mon-blows.c:530
+#: ../src/mon-blows.c:533
 msgid "You keep hold of your life force!"
 msgstr ""
 
-#: ../src/mon-blows.c:535
+#: ../src/mon-blows.c:538
 msgid "You feel your life slipping away!"
 msgstr ""
 
-#: ../src/mon-blows.c:538
+#: ../src/mon-blows.c:541
 msgid "You feel your life draining away!"
 msgstr ""
 
-#: ../src/mon-blows.c:653
+#: ../src/mon-blows.c:656
 msgid "Energy drains from your pack!"
 msgstr ""
 
-#: ../src/mon-blows.c:697
+#: ../src/mon-blows.c:700
 msgid "You quickly protect your money pouch!"
 msgstr ""
 
-#: ../src/mon-blows.c:708
+#: ../src/mon-blows.c:711
 msgid "Nothing was stolen."
 msgstr ""
 
-#: ../src/mon-blows.c:713
+#: ../src/mon-blows.c:716
 msgid "Your purse feels lighter."
 msgstr ""
 
-#: ../src/mon-blows.c:715
+#: ../src/mon-blows.c:718
 #, c-format
 msgid "%d coins were stolen!"
 msgstr ""
 
-#: ../src/mon-blows.c:717
+#: ../src/mon-blows.c:720
 msgid "All of your coins were stolen!"
 msgstr ""
 
-#: ../src/mon-blows.c:765
+#: ../src/mon-blows.c:768
 msgid "You grab hold of your backpack!"
 msgstr ""
 
-#: ../src/mon-blows.c:816
+#: ../src/mon-blows.c:819
 #, c-format
 msgid "Your %s (%c) was eaten!"
 msgstr ""
 
-#: ../src/mon-blows.c:821
+#: ../src/mon-blows.c:824
 #, c-format
 msgid "One of your %s (%c) was eaten!"
+msgstr ""
+
+#: ../src/mon-blows.c:919
+msgid "You stand your ground!"
+msgstr ""
+
+#: ../src/mon-blows.c:932
+msgid "You resist the effects!"
 msgstr ""
 
 #: ../src/mon-desc.c:205
@@ -571,12 +599,27 @@ msgstr ""
 msgid "erroneously"
 msgstr ""
 
-#: ../src/mon-lore.c:641
+#: ../src/mon-lore.c:641 ../src/mon-lore.c:655
 msgid "at "
+msgstr ""
+
+#: ../src/mon-lore.c:663 ../src/mon-lore.c:674
+#, c-format
+msgid "%d.%dx"
 msgstr ""
 
 #: ../src/mon-lore.c:666
 msgid " normal speed, which is "
+msgstr ""
+
+#: ../src/mon-lore.c:672
+#, c-format
+msgid "%dx"
+msgstr ""
+
+#: ../src/mon-lore.c:676
+#, c-format
+msgid "%d.%02dx"
 msgstr ""
 
 #: ../src/mon-lore.c:685
@@ -983,6 +1026,11 @@ msgstr ""
 #: ../src/mon-lore.c:1782
 #, c-format
 msgid " damage on each of %s turns.  "
+msgstr ""
+
+#: ../src/mon-move.c:1113
+#, c-format
+msgid "%s %s."
 msgstr ""
 
 #: ../src/mon-move.c:1113
