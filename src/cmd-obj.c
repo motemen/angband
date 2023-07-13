@@ -689,7 +689,7 @@ static void use_aux(struct command *cmd, struct object *obj, enum use use,
 				label = gear_to_label(player, first_remainder);
 				msg(_("You have %s (1st %c)."), name, label);
 			} else {
-				msg(_("You have %s (%c)."), name, label);
+				msg(ngettext("You have %s (%c).", "You have %s (%c).", effective_number), name, label);
 			}
 		} else if (used && use == USE_CHARGE) {
 			/* Describe charges */

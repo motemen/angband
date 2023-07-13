@@ -1163,7 +1163,7 @@ void player_know_object(struct player *p, struct object *obj)
 		if (object_is_carried(p, obj)) {
 			object_desc(o_name, sizeof(o_name), obj,
 				ODESC_PREFIX | ODESC_FULL, p);
-			msg("You have %s (%c).", o_name, gear_to_label(p, obj));
+			msg(ngettext("You have %s (%c).", "You have %s (%c).", obj->number), o_name, gear_to_label(p, obj));
 		} else if (cave && square_holds_object(cave, p->grid, obj)) {
 			object_desc(o_name, sizeof(o_name), obj,
 				ODESC_PREFIX | ODESC_FULL, p);

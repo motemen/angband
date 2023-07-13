@@ -625,7 +625,7 @@ struct object *gear_object_for_use(struct player *p, struct object *obj,
 			label = gear_to_label(p, first_remainder);
 			msg(_("You have %s (1st %c)."), name, label);
 		} else {
-			msg(_("You have %s (%c)."), name, label);
+			msg(ngettext("You have %s (%c).", "You have %s (%c).", 0), name, label);
 		}
 	}
 
@@ -914,7 +914,7 @@ void inven_carry(struct player *p, struct object *obj, bool absorb,
 			msg(_("You have %s (1st %c)."), o_name, label);
 		} else {
 			assert(first == obj);
-			msg(_("You have %s (%c)."), o_name, label);
+			msg(ngettext("You have %s (%c).", "You have %s (%c).", total), o_name, label);
 		}
 	}
 
