@@ -38,6 +38,7 @@ Angband is a very complex game, and it may be difficult to grasp everything at f
    version
    copying
    thanks
+   japanese-changes
 
 .. toctree::
    :maxdepth: 1
